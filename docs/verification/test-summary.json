@@ -1,0 +1,27 @@
+{
+  "vitest": {
+    "passed": 108,
+    "failed": 0,
+    "files": 26
+  },
+  "playwright": {
+    "startTime": "2026-10-21T21:08:42.863Z",
+    "duration": 100422.133,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "npmAuditKnownVulnerabilities": 0,
+  "screenshots": [
+    "01-import.png",
+    "03-measure.png",
+    "04-rectify.png",
+    "05-export.png",
+    "calibration-residual.png",
+    "list-rgb-refused.png",
+    "tablet.png",
+    "unit-overflow-controlled.png",
+    "zone-noop-controlled.png"
+  ]
+}

@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./e2e',timeout:60000,expect:{timeout:15000},workers:1,fullyParallel:false,reporter:[['list'],['html',{open:'never'}]],use:{baseURL:'http://127.0.0.1:4176',actionTimeout:15000,viewport:{width:1512,height:982},acceptDownloads:true,trace:'retain-on-failure'},webServer:{command:'node scripts/server.mjs --port 4176',url:'http://127.0.0.1:4176',reuseExistingServer:true,timeout:60000}});

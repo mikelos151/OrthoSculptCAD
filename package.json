@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "node scripts/server.mjs",
     "dev": "vite --host 127.0.0.1 --port 4174 --strictPort",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 4174 --strictPort",
@@ -11,7 +12,7 @@
     "test:e2e": "playwright test",
     "tauri": "tauri",
     "desktop:build": "tauri build --no-bundle",
-    "native:test": "cargo test --manifest-path crates/ortho-geometry/Cargo.toml"
+    "native:test": "cargo test --release --manifest-path crates/ortho-geometry/Cargo.toml"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.0.0",

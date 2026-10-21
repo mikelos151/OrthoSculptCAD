@@ -1,0 +1,8 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-local",
+  "description": "Only bounded, memory-only mesh IPC for the local main window; no plugins, file, shell, network or updater grants.",
+  "windows": ["main"],
+  "local": true,
+  "permissions": ["allow-upload-mesh", "allow-slice-mesh"]
+}

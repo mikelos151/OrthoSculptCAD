@@ -6,3 +6,4 @@ crates/ortho-geometry/target/
 playwright-report/
 test-results/
 *.log
+*.tsbuildinfo

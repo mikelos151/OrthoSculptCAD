@@ -1,7 +1,7 @@
 /** All geometry is expressed in millimetres, right-handed X lateral/Y anterior/Z proximal. */
 export type Vec3 = [number, number, number];
 export type Vec2 = [number, number];
-export interface MeshData { positions: Float32Array; indices: Uint32Array; colors?: Float32Array; uvs?: Float32Array; textureUrl?: string; name: string; }
+export interface MeshData { source?: 'synthetic' | 'imported'; positions: Float32Array; indices: Uint32Array; colors?: Float32Array; uvs?: Float32Array; textureUrl?: string; name: string; }
 export interface Bounds { min: Vec3; max: Vec3; size: Vec3; center: Vec3; }
 export interface TopologyReport { vertices: number; triangles: number; boundaryEdges: number; nonManifoldEdges: number; degenerateTriangles: number; inconsistentEdges: number; boundaryLoops: number[][]; watertight: boolean; signedVolume: number; warnings: string[]; }
 export interface SliceLoop { points: Vec2[]; closed: boolean; perimeter: number; area: number; ap: number; ml: number; }

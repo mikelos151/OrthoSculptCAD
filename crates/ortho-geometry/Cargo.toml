@@ -1,0 +1,14 @@
+[package]
+name = "ortho-geometry"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Bounded local mesh validation and indexed horizontal cross sections"
+
+[lib]
+path = "src/lib.rs"
+# All behavioral coverage lives in tests/geometry.rs; no empty lib/doc harness.
+test = false
+doctest = false
+
+[dependencies]

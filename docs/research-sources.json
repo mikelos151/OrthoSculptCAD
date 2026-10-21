@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://raw.githubusercontent.com/tauri-apps/tauri-docs/v2/src/content/docs/develop/calling-rust.mdx",
+      "title": "",
+      "accessed": "2026-10-21",
+      "quotes": [
+        {
+          "text": "This can slow down your application if you try to return a large data such as a file or a download HTTP response.",
+          "added": "2026-10-21"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://threejs.org/docs/pages/PLYLoader.html",
+      "title": "",
+      "accessed": "2026-10-21"
+    },
+    {
+      "id": 3,
+      "url": "https://github.com/mrdoob/three.js/wiki/Migration-Guide",
+      "title": "",
+      "accessed": "2026-10-21"
+    },
+    {
+      "id": 4,
+      "url": "https://threejs.org/docs/pages/WebGPURenderer.html",
+      "title": "",
+      "accessed": "2026-10-21"
+    },
+    {
+      "id": 5,
+      "url": "https://doc.cgal.org/latest/Polygon_mesh_processing/index.html",
+      "title": "",
+      "accessed": "2026-10-21"
+    },
+    {
+      "id": 6,
+      "url": "https://raw.githubusercontent.com/3MFConsortium/spec_core/master/3MF%20Core%20Specification.md",
+      "title": "",
+      "accessed": "2026-10-21",
+      "quotes": [
+        {
+          "text": "The 3MF Document format MUST use a ZIP archive for its physical model.",
+          "added": "2026-10-21"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://www.fda.gov/media/97633/download",
+      "title": "",
+      "accessed": "2026-10-21",
+      "quotes": [
+        {
+          "text": "Software also must be validated for its intended use according to an established protocol23 (i.e., software workflow).",
+          "added": "2026-10-21"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://health.ec.europa.eu/latest-updates/update-mdcg-2019-11-rev1-qualification-and-classification-software-regulation-eu-2017745-and-2025-06-17_en",
+      "title": "",
+      "accessed": "2026-10-21"
+    },
+    {
+      "id": 9,
+      "url": "https://health.ec.europa.eu/document/download/385d7e20-d8b5-49d0-abd7-8daf269bf1b8_en",
+      "title": "",
+      "accessed": "2026-10-21"
+    },
+    {
+      "id": 10,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0184498",
+      "title": "",
+      "accessed": "2026-10-21",
+      "quotes": [
+        {
+          "text": "The definition of the residual limb proximal end is based on three landmarks that could generate sections, which are not transverse to the approximate axis of the residuum shape.",
+          "added": "2026-10-21"
+        }
+      ]
+    }
+  ]
+}

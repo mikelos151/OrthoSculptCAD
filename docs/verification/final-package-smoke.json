@@ -1,0 +1,11 @@
+{
+  "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\ortho-delivery-smoke-a1c71ff104\\OrthoSculptCAD",
+  "nodeModulesAbsent": true,
+  "server": "native Node stdlib",
+  "renderer": "WebGL2",
+  "measurementRows": 13,
+  "pageErrors": [],
+  "externalRequests": [],
+  "syntheticLabel": true,
+  "passed": true
+}

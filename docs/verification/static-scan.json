@@ -1,0 +1,1 @@
+{"scope": "final staged added CODE lines; documentation/lockfiles excluded", "diffCharacters": 791291, "patterns": ["literal-secret", "shell-true", "unsafe-eval"], "findings": [], "documentationFalsePositiveTriaged": "Earlier broad scan matched the literal shell:true wording in FINAL.md, not executable code."}
