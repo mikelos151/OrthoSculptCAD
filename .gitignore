@@ -1,0 +1,8 @@
+node_modules/
+dist/
+target/
+src-tauri/target/
+crates/ortho-geometry/target/
+playwright-report/
+test-results/
+*.log
