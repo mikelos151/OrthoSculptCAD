@@ -1,0 +1,17 @@
+# OrthoSculpt0.2 — plan wykonania
+
+> Dla implementerów: strict vertical TDD. Obserwuj błąd konkretnego zachowania, wdrażaj minimalnie, wykonaj GREEN i regresje. Osobny autor i reviewer; żadnych pozornych pomiarów albo skracania scope bez jawnego zapisu.
+
+**Cel:** lokalna pracownia leja podudzia z kontrolą wersji, bezpiecznym plikiem, oceną geometrii, porównaniem i raportem do oceny protetyka.
+**Architektura:** istniejący React/TS/Three + Rust/Tauri; moduły workspace/IO/geometry/compute/reports; bez chmury.
+**Zatwierdzony zakres:** targetTT, skany/protetyk mogą zostać dostarczone, wytwarzanieSTL/3MF bezadaptera/CNC. Dokładny kontrakt w design.md i plikach typów parenta.
+
+1. Parent: rzeczywisty baseline npmtest, git/status/toolchain; zapisz v0.1 ZIP kopię; zbierz niezależny research potrzeb, audit geometrii i native feasibility. Zamknij wspólne typy.
+2. Workspace/IO owner: create/validate/append immutablejournal; strict v1/v2 save/load; actual WebCrypto encryption tamper/wrongpassword/resource tests; ciphertext contains no raw geometry identifiers; evidence in docs/verification/v02-io.md. Ownership src/workspace except types, src/io/project.ts,protectedProject.ts,cryptoLimits.ts; tests/v02-io*.test.ts.
+3. Geometry owner: explicitL/R registration with positive determinant and no reflection; consistent outward normal repair or safe rejection; bounded intersection audit with UNKNOWN onbudget/numeric limits. Regression exact invalid fixtures plus valid controls, preserveRGB/UV; docs/verification/v02-geometry.md. Ownership src/geometry audit/orientation/alignment/deformation guards + exports and tests/v02-geometry*.test.ts, no sharedtypes/UI.
+4. Compute owner: realmoduleWorker, immutable clone/transfer, bounded concurrency, actual cancellation, stalerevision fences; cached Worker slicing; safe nativebridge preservation. Unit protocol + actualbrowser Worker acceptance via parent. Ownership src/compute except sharedtypes, src/native.ts, tests/v02-compute*.test.ts, docs/verification/v02-compute.md.
+5. Parent reports: pure typed comparison/fingerprint/report HTML, no scripts/remote assets, safe escaping, limits, real measurements, clearunknown statuses. TDD tests/v02-reports*.test.ts. No edits to owner's files.
+6. UI owner after contracts: App/hooks/workspace inspector, metadata side/revision, unsavedguard, encryptiondialog, compareview, Worker ops/cancel and qualitypanel/reportdownloads. Tooltips/practicalguidance ratherthanmarketing. Tests purestate + parent real E2E. Ownership App, components/styles/main only, tests/v02-ui*.test.ts. Parent owns e2e/ newacceptances; update legacy acceptance only for legitimatechangedUX.
+7. Parent: actual E2E allfive steps+legacyv1migration+encryptedroundtrip+wrongpassword/tamper+unsavedcancel+sidechange+no stale Worker publication+qualityFAIL/UNKNOWN+reportcontent and nosensitive persistence/network. Capture real screenshots. Test synthetic largemesh responsiveness with a heartbeat whileWorker busy; report samples not guarantees.
+8. Independent spec reviewer sees originaluserrequirements and approvedv02scope, independent security+quality reviewer. Every blocker gets failtest, disjointfixer and ownrerun. Re-review max2cycles, report unresolvedexternalboundaries.
+9. Build/audit final, exactmachinecounts from JSON, actualarchiveextractionlaunch+realview/measure withoutnode_modules, manifestSHA256, preserveoldzip, deliver v0.2 withexactstate ofnative/hardware/clinicalvalidation.
