@@ -1,0 +1,151 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>SYNTHETIC geometry benchmark — no patient data</title>
+<p>Local synthetic geometry harness. No application UI or clinical acceptance claims.</p>
+<script type="module">
+import { createWorkerSliceEngine, runGeometryTask } from '/src/compute/index.ts';
+import { copyMeshForWorker } from '/src/compute/copy.ts';
+import { createCylinder, planCase, summarizeSamples, assessResponse, boundedOperation } from '/scripts/benchmark-geometry.mjs';
+
+// Native transport is observed, never replaced by an emulator or fabricated response.
+const NativeWorker = window.Worker, nativeSend = NativeWorker.prototype.postMessage, nativeTerminate = NativeWorker.prototype.terminate;
+const live = new Set();
+let created = 0, terminated = 0, maxAlive = 0, dispatches = 0, responses = 0, onDispatch;
+window.Worker = new Proxy(NativeWorker, { construct(target, args) {
+  const worker = Reflect.construct(target, args);
+  live.add(worker); created++; maxAlive = Math.max(maxAlive, live.size);
+  worker.addEventListener('message', () => responses++);
+  return worker;
+} });
+NativeWorker.prototype.postMessage = function(message, ...rest) {
+  const result = nativeSend.call(this, message, ...rest);
+  dispatches++;
+  onDispatch?.({ kind: message?.kind, op: message?.op });
+  return result;
+};
+NativeWorker.prototype.terminate = function() {
+  if (live.delete(this)) terminated++;
+  return nativeTerminate.call(this);
+};
+const workerStats = () => ({ created, terminated, maxAlive, alive: live.size, dispatches, responses });
+const errorRecord = error => ({ name: error?.name || 'Error', message: String(error?.message || error).slice(0, 1000) });
+let currentController;
+
+async function runCase(parameters, config) {
+  if (currentController) throw new Error('Only one mesh/job may run at a time');
+  const controller = new AbortController(); currentController = controller;
+  const deadline = setTimeout(() => controller.abort(), config.caseTimeoutMs);
+  const plan = planCase(parameters, config);
+  const result = { id: parameters.id, parameters, source: 'synthetic', plan, status: 'running', fixedZ: 123.4567,
+    actualVertices: null, actualTriangles: null, reference: null, topology: null, observations: [], summaries: {}, controls: null,
+    failures: [], workerStats: workerStats(), unsupported: { browserPeakRssBytes: null, browserHeapPeakBytes: null, fps: null } };
+  let engine;
+  const checkpoint = async () => { result.workerStats = workerStats(); await window.__benchmarkCheckpoint?.(result); };
+  const timed = async (stage, run, operation, assess) => {
+    const started = performance.now();
+    try {
+      const value = await boundedOperation(operation, config.timeoutMs, controller.signal);
+      const elapsedMs = performance.now() - started;
+      const outcome = assess ? assess(value) : { status: 'ok' };
+      result.observations.push({ stage, run, elapsedMs, outcome });
+      await checkpoint();
+      if (outcome.status !== 'ok') throw new Error(`Invalid physical response: ${stage}`);
+      return value;
+    } catch (error) {
+      result.failures.push({ stage, run, elapsedMs: performance.now() - started, ...errorRecord(error) });
+      await checkpoint(); throw error;
+    }
+  };
+  try {
+    await checkpoint();
+    if (!plan.admitted) { result.status = 'skipped-budget'; return result; }
+    const generatedAt = performance.now();
+    const { mesh, reference } = createCylinder(parameters);
+    result.generationMs = performance.now() - generatedAt;
+    result.reference = { kind: 'exact-discretized-Float32-polygon', units: { perimeter: 'mm', ap: 'mm', ml: 'mm', area: 'mm^2' }, ...reference };
+    result.actualVertices = mesh.positions.length / 3; result.actualTriangles = mesh.indices.length / 3;
+    result.inputBytes = mesh.positions.byteLength + mesh.indices.byteLength + mesh.colors.byteLength;
+    if (result.actualVertices !== plan.vertices || result.actualTriangles !== plan.triangles || result.inputBytes !== plan.inputBytes) throw new Error('Actual mesh/count mismatch');
+    const beforePositions = mesh.positions.slice(), beforeIndices = mesh.indices.slice(), beforeColors = mesh.colors.slice();
+    result.topology = await timed('topologyVerificationMs', 0,
+      signal => runGeometryTask('topology', { mesh }, { signal }),
+      t => ({ status: t.watertight && t.boundaryEdges === 0 && t.nonManifoldEdges === 0 && t.inconsistentEdges === 0 && t.degenerateTriangles === 0 && t.signedVolume > 0 ? 'ok' : 'invalid' }));
+    // Keep topology evidence compact: no vertex/edge dumps.
+    result.topology = { vertices: result.topology.vertices, triangles: result.topology.triangles, watertight: result.topology.watertight,
+      boundaryEdges: result.topology.boundaryEdges, nonManifoldEdges: result.topology.nonManifoldEdges, inconsistentEdges: result.topology.inconsistentEdges,
+      degenerateTriangles: result.topology.degenerateTriangles, signedVolume: result.topology.signedVolume };
+    for (let run = 0; run < config.coldRuns; run++) {
+      // Same real copy helper and appearance=false path as the slicing API; standalone, NOT subtracted from init.
+      await timed('copyGeometryOnlyMs', run, async signal => {
+        const owned = await copyMeshForWorker(mesh, false, signal);
+        if (owned.source !== 'synthetic' || owned.positions.buffer === mesh.positions.buffer || owned.colors !== undefined) throw new Error('Copy/provenance contract failed');
+      });
+      await timed('measureAtColdMs', run, signal => runGeometryTask('measureAt', { mesh, heights: [result.fixedZ] }, { signal }),
+        rows => rows.length === 1 ? assessResponse(rows[0], reference, result.fixedZ, 'measureAt') : { status: 'invalid', absoluteErrors: null });
+      engine = await timed('initCopyStartIndexMs', run, signal => createWorkerSliceEngine(mesh, { signal }));
+      await timed('firstCachedSliceMs', run, signal => engine.slice(result.fixedZ, { signal }), value => assessResponse(value, reference, result.fixedZ));
+      if (run !== config.coldRuns - 1) { engine.dispose(); engine = undefined; }
+    }
+    for (let run = 0; run < config.warmups + config.warmSamples; run++) {
+      await timed(run < config.warmups ? 'warmupSliceMs' : 'warmCachedSliceRoundTripMs', run,
+        signal => engine.slice(result.fixedZ, { signal }), value => assessResponse(value, reference, result.fixedZ));
+    }
+    engine.dispose(); engine = undefined;
+    result.inputUnchanged = beforePositions.every((v, i) => Object.is(v, mesh.positions[i])) && beforeIndices.every((v, i) => v === mesh.indices[i]) && beforeColors.every((v, i) => Object.is(v, mesh.colors[i])) && mesh.source === 'synthetic';
+    if (!result.inputUnchanged) throw new Error('Source buffers/RGB/provenance changed');
+    if (config.controls) {
+      const controls = result.controls = { cancellation: null, invalidPhysicalResponse: null, timeout: null };
+      // Abort only AFTER native dispatch. No response is injected, and the app's actual AbortSignal path terminates the job.
+      const cancellation = new AbortController();
+      let nativeDispatch = null;
+      onDispatch = event => { nativeDispatch = event; cancellation.abort(); };
+      const beforeCancel = workerStats();
+      try {
+        await boundedOperation(signal => {
+          const abort = () => cancellation.abort(); signal.addEventListener('abort', abort, { once: true });
+          return runGeometryTask('topology', { mesh }, { signal: cancellation.signal }).finally(() => signal.removeEventListener('abort', abort));
+        }, config.timeoutMs, controller.signal);
+        throw new Error('Cancellation unexpectedly resolved');
+      } catch (error) {
+        controls.cancellation = { ...errorRecord(error), nativeDispatch, terminatedDelta: terminated - beforeCancel.terminated,
+          status: error.name === 'AbortError' && nativeDispatch?.kind === 'task' && terminated > beforeCancel.terminated && live.size === 0 ? 'ok' : 'failed' };
+      } finally { onDispatch = undefined; }
+      // A real open contour; preserve invalid results from BOTH production computational APIs.
+      const band = Math.floor(result.fixedZ / 300 * (parameters.rings - 1)), cut = band * parameters.sides * 6;
+      const invalidIndices = new Uint32Array(mesh.indices.length - 3);
+      invalidIndices.set(mesh.indices.subarray(0, cut)); invalidIndices.set(mesh.indices.subarray(cut + 3), cut);
+      const invalidMesh = { ...mesh, indices: invalidIndices, name: 'SYNTHETIC intentionally open benchmark control' };
+      const row = await boundedOperation(signal => runGeometryTask('measureAt', { mesh: invalidMesh, heights: [result.fixedZ] }, { signal }), config.timeoutMs, controller.signal);
+      engine = await boundedOperation(signal => createWorkerSliceEngine(invalidMesh, { signal }), config.timeoutMs, controller.signal);
+      const badSlice = await boundedOperation(signal => engine.slice(result.fixedZ, { signal }), config.timeoutMs, controller.signal);
+      engine.dispose(); engine = undefined;
+      controls.invalidPhysicalResponse = { measureAt: assessResponse(row[0], reference, result.fixedZ, 'measureAt'), cachedSlice: assessResponse(badSlice, reference, result.fixedZ) };
+      // Deterministic timeout exercise using a real index initialization. A 1ms control deadline is NOT a performance threshold.
+      const beforeTimeout = workerStats();
+      try {
+        engine = await boundedOperation(signal => createWorkerSliceEngine(mesh, { signal }), 1, controller.signal);
+        controls.timeout = { status: 'deadline-not-triggered', note: 'Native init completed before control deadline; no invented timeout.' };
+      } catch (error) {
+        controls.timeout = { ...errorRecord(error), terminatedDelta: terminated - beforeTimeout.terminated,
+          status: error.name === 'TimeoutError' && terminated > beforeTimeout.terminated && live.size === 0 ? 'ok' : 'failed' };
+      } finally { engine?.dispose(); engine = undefined; }
+      if (controls.cancellation.status !== 'ok' || controls.invalidPhysicalResponse.measureAt.status !== 'invalid' || controls.invalidPhysicalResponse.cachedSlice.status !== 'invalid' || controls.timeout.status === 'failed') throw new Error('Native failure/cancellation control failed');
+    }
+    result.status = 'ok';
+  } catch (error) {
+    result.status = error.name === 'TimeoutError' ? 'timed-out' : error.name === 'AbortError' ? 'aborted' : 'failed';
+    result.error = errorRecord(error);
+  } finally {
+    controller.abort(); engine?.dispose(); clearTimeout(deadline); currentController = undefined;
+    for (const stage of new Set(result.observations.map(o => o.stage))) {
+      result.summaries[stage] = summarizeSamples(result.observations.filter(o => o.stage === stage && o.outcome.status === 'ok').map(o => o.elapsedMs));
+    }
+    result.summaries.warmCachedWorkerQueryMs = summarizeSamples(result.observations.filter(o => o.stage === 'warmCachedSliceRoundTripMs' && o.outcome.status === 'ok' && Number.isFinite(o.outcome.workerQueryMs)).map(o => o.outcome.workerQueryMs));
+    if (live.size !== 0) { result.status = 'failed'; result.failures.push({ stage: 'cleanup', name: 'WorkerLeak', message: 'Native workers remain alive' }); for (const worker of [...live]) worker.terminate(); }
+    await checkpoint();
+  }
+  return result;
+}
+window.__benchmark = { runCase, workerStats, cancel: () => currentController?.abort(), metadata: () => ({ hardwareConcurrency: navigator.hardwareConcurrency,
+  userAgent: navigator.userAgent, crossOriginIsolated: window.crossOriginIsolated, deviceMemoryGiB: navigator.deviceMemory ?? null }) };
+</script>

@@ -1,0 +1,15 @@
+
+Running 10 tests using 1 worker
+
+  ok  1 e2e\v021-lifecycle.spec.ts:188:1 › native pointercancel cancels captured touch and next brush is one exact undo (6.4s)
+  ok  2 e2e\v021-lifecycle.spec.ts:201:1 › native window blur cancels captured mouse and next brush is one exact undo (7.2s)
+  ok  3 e2e\v021-lifecycle.spec.ts:219:1 › two native readers release before mutation and fresh mesh audit precedes indexes including undo and New Project (7.1s)
+  ok  4 e2e\v021-lifecycle.spec.ts:268:61 › deliberate native module-load fault in topology refuses indexes and user action recovers without revision loss (5.3s)
+  ok  5 e2e\v021-lifecycle.spec.ts:268:61 › deliberate native module-load fault in analyze refuses indexes and user action recovers without revision loss (5.2s)
+  ok  6 e2e\v021-lifecycle.spec.ts:188:1 › native pointercancel cancels captured touch and next brush is one exact undo (6.3s)
+  ok  7 e2e\v021-lifecycle.spec.ts:201:1 › native window blur cancels captured mouse and next brush is one exact undo (7.1s)
+  ok  8 e2e\v021-lifecycle.spec.ts:219:1 › two native readers release before mutation and fresh mesh audit precedes indexes including undo and New Project (7.9s)
+  ok  9 e2e\v021-lifecycle.spec.ts:268:61 › deliberate native module-load fault in topology refuses indexes and user action recovers without revision loss (5.1s)
+  ok 10 e2e\v021-lifecycle.spec.ts:268:61 › deliberate native module-load fault in analyze refuses indexes and user action recovers without revision loss (5.0s)
+
+  10 passed (1.1m)

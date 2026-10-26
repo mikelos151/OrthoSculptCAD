@@ -1,0 +1,490 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/v021-lifecycle.spec.ts",
+      "--reporter=list,json",
+      "--output=docs/verification/v021-lifecycle-evidence/run-01-artifacts"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/docs/verification/v021-lifecycle-evidence/run-01-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "v021-lifecycle.spec.ts",
+      "file": "v021-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native pointercancel cancels captured touch and next brush is one exact undo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 43229,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notification')\nExpected substring: \u001b[32m\"Jedna rewizja i jedna pozycja cofania\"\u001b[39m\nReceived string:    \u001b[31m\"Pobrano kopię rewizji r2. Sprawdź plik w folderze pobierania; przeglądarka nie potwierdza trwałego zapisu na dysku.\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notification') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notification')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"status\" class=\"notification \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Pobrano kopię rewizji r2. Sprawdź plik w folderze pobierania; przeglądarka nie potwierdza trwałego zapisu na dysku.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notification')\nExpected substring: \u001b[32m\"Jedna rewizja i jedna pozycja cofania\"\u001b[39m\nReceived string:    \u001b[31m\"Pobrano kopię rewizji r2. Sprawdź plik w folderze pobierania; przeglądarka nie potwierdza trwałego zapisu na dysku.\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notification') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notification')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"status\" class=\"notification \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Pobrano kopię rewizji r2. Sprawdź plik w folderze pobierania; przeglądarka nie potwierdza trwałego zapisu na dysku.\"\u001b[22m\n\n    at cancellationPreservesAndNextWorks (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:133:47)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:194:3",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                      "column": 47,
+                      "line": 133
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 131 |\u001b[39m   \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m1\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<=\u001b[39m \u001b[35m5\u001b[39m\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) { \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m50\u001b[39m)\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(p\u001b[33m.\u001b[39mx \u001b[33m+\u001b[39m i\u001b[33m,\u001b[39m p\u001b[33m.\u001b[39my \u001b[33m-\u001b[39m i \u001b[33m*\u001b[39m \u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m }\n \u001b[90m 132 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mup()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 133 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.notification'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Jedna rewizja i jedna pozycja cofania'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 134 |\u001b[39m   \u001b[36mconst\u001b[39m painted \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m project(page)\u001b[33m;\u001b[39m\n \u001b[90m 135 |\u001b[39m   expect(painted\u001b[33m.\u001b[39mmesh\u001b[33m.\u001b[39mpositions)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoEqual(before\u001b[33m.\u001b[39mmesh\u001b[33m.\u001b[39mpositions)\u001b[33m;\u001b[39m\n \u001b[90m 136 |\u001b[39m   expect(painted\u001b[33m.\u001b[39mmesh\u001b[33m.\u001b[39mcolors)\u001b[33m.\u001b[39mtoEqual(before\u001b[33m.\u001b[39mmesh\u001b[33m.\u001b[39mcolors)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                        "column": 47,
+                        "line": 133
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.notification')\nExpected substring: \u001b[32m\"Jedna rewizja i jedna pozycja cofania\"\u001b[39m\nReceived string:    \u001b[31m\"Pobrano kopię rewizji r2. Sprawdź plik w folderze pobierania; przeglądarka nie potwierdza trwałego zapisu na dysku.\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.notification') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.notification')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"status\" class=\"notification \">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Pobrano kopię rewizji r2. Sprawdź plik w folderze pobierania; przeglądarka nie potwierdza trwałego zapisu na dysku.\"\u001b[22m\n\n\n  131 |   for (let i = 1; i <= 5; i++) { await page.waitForTimeout(50); await page.mouse.move(p.x + i, p.y - i * 2); }\n  132 |   await page.mouse.up();\n> 133 |   await expect(page.locator('.notification')).toContainText('Jedna rewizja i jedna pozycja cofania');\n      |                                               ^\n  134 |   const painted = await project(page);\n  135 |   expect(painted.mesh.positions).not.toEqual(before.mesh.positions);\n  136 |   expect(painted.mesh.colors).toEqual(before.mesh.colors);\n    at cancellationPreservesAndNextWorks (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:133:47)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:194:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:31:53.797Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-native-poin-e823b-ext-brush-is-one-exact-undo\\attachments\\native-lifecycle-evidence-7379b8df4aa2e12a8a1e6def2d4961f7a122695d.json"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-native-poin-e823b-ext-brush-is-one-exact-undo\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-native-poin-e823b-ext-brush-is-one-exact-undo\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                    "column": 47,
+                    "line": 133
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-43726b62d457c790a75e",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 184,
+          "column": 1
+        },
+        {
+          "title": "native window blur cancels captured mouse and next brush is one exact undo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 29093,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:201:97",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                      "column": 97,
+                      "line": 201
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 199 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m prepareBrush(page)\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m holdMouse(page\u001b[33m,\u001b[39m p)\u001b[33m;\u001b[39m\n \u001b[90m 200 |\u001b[39m   \u001b[36mconst\u001b[39m other \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m other\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m other\u001b[33m.\u001b[39mbringToFront()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 201 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m (\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mblurs\u001b[33m.\u001b[39mfilter((e\u001b[33m:\u001b[39m any) \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mtrusted)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 202 |\u001b[39m   expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m document\u001b[33m.\u001b[39mhasFocus()))\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 203 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mbringToFront()\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mup()\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m other\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m 204 |\u001b[39m   \u001b[36mawait\u001b[39m cancellationPreservesAndNextWorks(page\u001b[33m,\u001b[39m before\u001b[33m,\u001b[39m history)\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m clean(page)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                        "column": 97,
+                        "line": 201
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate\n\n  199 |   const p = await prepareBrush(page); await holdMouse(page, p);\n  200 |   const other = await context.newPage(); await other.goto('/'); await other.bringToFront();\n> 201 |   await expect.poll(async () => (await state(page)).blurs.filter((e: any) => e.trusted).length).toBeGreaterThan(0);\n      |                                                                                                 ^\n  202 |   expect(await page.evaluate(() => document.hasFocus())).toBe(false);\n  203 |   await page.bringToFront(); await page.mouse.up(); await other.close();\n  204 |   await cancellationPreservesAndNextWorks(page, before, history); await clean(page);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:201:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:32:39.113Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-native-wind-30e47-ext-brush-is-one-exact-undo\\attachments\\native-lifecycle-evidence-d3db1a578491687edd5b71e38585db62f9381020.json"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-native-wind-30e47-ext-brush-is-one-exact-undo\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-native-wind-30e47-ext-brush-is-one-exact-undo\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                    "column": 97,
+                    "line": 201
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-2b9422a7e3bebd5d24a0",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 197,
+          "column": 1
+        },
+        {
+          "title": "two native readers release before mutation and fresh mesh audit precedes indexes including undo and New Project",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 17281,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32mundefined\u001b[39m\nReceived: \u001b[31m[18, 0, 0, 17.65413475036621, 3.5116257667541504, 0, 16.629831314086914, 6.888301849365234, 0, 14.966453552246094, …]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32mundefined\u001b[39m\nReceived: \u001b[31m[18, 0, 0, 17.65413475036621, 3.5116257667541504, 0, 16.629831314086914, 6.888301849365234, 0, 14.966453552246094, …]\u001b[39m\n    at auditBeforeIndex (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:77:28)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:227:3",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                      "column": 28,
+                      "line": 77
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 75 |\u001b[39m     expect(i\u001b[33m,\u001b[39m \u001b[32m`${op} must run on this mesh`\u001b[39m)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m     \u001b[36mconst\u001b[39m task \u001b[33m=\u001b[39m events[i]\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m     expect(task\u001b[33m.\u001b[39mpositions)\u001b[33m.\u001b[39mtoEqual(expectedPositions)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m events\u001b[33m.\u001b[39mfindIndex((e\u001b[33m,\u001b[39m n) \u001b[33m=>\u001b[39m n \u001b[33m>\u001b[39m i \u001b[33m&&\u001b[39m e\u001b[33m.\u001b[39mtype \u001b[33m===\u001b[39m \u001b[32m'response'\u001b[39m \u001b[33m&&\u001b[39m e\u001b[33m.\u001b[39mworkerId \u001b[33m===\u001b[39m task\u001b[33m.\u001b[39mworkerId \u001b[33m&&\u001b[39m e\u001b[33m.\u001b[39mrequestId \u001b[33m===\u001b[39m task\u001b[33m.\u001b[39mrequestId \u001b[33m&&\u001b[39m e\u001b[33m.\u001b[39mok \u001b[33m===\u001b[39m \u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 79 |\u001b[39m     \u001b[36mconst\u001b[39m release \u001b[33m=\u001b[39m events\u001b[33m.\u001b[39mfindIndex((e\u001b[33m,\u001b[39m n) \u001b[33m=>\u001b[39m n \u001b[33m>\u001b[39m response \u001b[33m&&\u001b[39m e\u001b[33m.\u001b[39mtype \u001b[33m===\u001b[39m \u001b[32m'terminate'\u001b[39m \u001b[33m&&\u001b[39m e\u001b[33m.\u001b[39mworkerId \u001b[33m===\u001b[39m task\u001b[33m.\u001b[39mworkerId)\u001b[33m;\u001b[39m\n \u001b[90m 80 |\u001b[39m     expect(response)\u001b[33m.\u001b[39mtoBeGreaterThan(i)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                        "column": 28,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32mundefined\u001b[39m\nReceived: \u001b[31m[18, 0, 0, 17.65413475036621, 3.5116257667541504, 0, 16.629831314086914, 6.888301849365234, 0, 14.966453552246094, …]\u001b[39m\n\n  75 |     expect(i, `${op} must run on this mesh`).toBeGreaterThanOrEqual(0);\n  76 |     const task = events[i];\n> 77 |     expect(task.positions).toEqual(expectedPositions);\n     |                            ^\n  78 |     const response = events.findIndex((e, n) => n > i && e.type === 'response' && e.workerId === task.workerId && e.requestId === task.requestId && e.ok === true);\n  79 |     const release = events.findIndex((e, n) => n > response && e.type === 'terminate' && e.workerId === task.workerId);\n  80 |     expect(response).toBeGreaterThan(i);\n    at auditBeforeIndex (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:77:28)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:227:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:33:09.801Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-two-native--9d77c-luding-undo-and-New-Project\\attachments\\native-lifecycle-evidence-ea185917d33e71afa5386339339ca5dd31ccfc98.json"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-two-native--9d77c-luding-undo-and-New-Project\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-two-native--9d77c-luding-undo-and-New-Project\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                    "column": 28,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-d4d51149201d8cdde761",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 207,
+          "column": 1
+        },
+        {
+          "title": "deliberate native module-load fault in topology refuses indexes and user action recovers without revision loss",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15888,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:282:28",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                      "column": 28,
+                      "line": 282
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 280 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.case-label'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m`r${before.workspace.revision + 1}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 281 |\u001b[39m   \u001b[36mconst\u001b[39m changedPositions \u001b[33m=\u001b[39m faultEvents\u001b[33m.\u001b[39mfind(e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mtype \u001b[33m===\u001b[39m \u001b[32m'response'\u001b[39m \u001b[33m&&\u001b[39m e\u001b[33m.\u001b[39mpositions)\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mpositions\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 282 |\u001b[39m   expect(changedPositions)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m expect(changedPositions)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoEqual(before\u001b[33m.\u001b[39mmesh\u001b[33m.\u001b[39mpositions)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 283 |\u001b[39m   \u001b[90m// Keep fault active while taking the exact public snapshot, so the download\u001b[39m\n \u001b[90m 284 |\u001b[39m   \u001b[90m// cannot accidentally prove recovery before loading is explicitly restored.\u001b[39m\n \u001b[90m 285 |\u001b[39m   \u001b[36mconst\u001b[39m failedState \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m project(page)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                        "column": 28,
+                        "line": 282
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m\n\n  280 |   await expect(page.locator('.case-label')).toContainText(`r${before.workspace.revision + 1}`);\n  281 |   const changedPositions = faultEvents.find(e => e.type === 'response' && e.positions)?.positions;\n> 282 |   expect(changedPositions).toBeTruthy(); expect(changedPositions).not.toEqual(before.mesh.positions);\n      |                            ^\n  283 |   // Keep fault active while taking the exact public snapshot, so the download\n  284 |   // cannot accidentally prove recovery before loading is explicitly restored.\n  285 |   const failedState = await project(page);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:282:28"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:33:28.394Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-deliberate--3ba79-overs-without-revision-loss\\attachments\\native-lifecycle-evidence-59b8c8a4cb2c624b5db82985c6097d5bc6bb7ef3.json"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-deliberate--3ba79-overs-without-revision-loss\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-deliberate--3ba79-overs-without-revision-loss\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                    "column": 28,
+                    "line": 282
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-5545c7f056920ad9dab7",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 253,
+          "column": 61
+        },
+        {
+          "title": "deliberate native module-load fault in analyze refuses indexes and user action recovers without revision loss",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15687,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:282:28",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                      "column": 28,
+                      "line": 282
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 280 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.case-label'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m`r${before.workspace.revision + 1}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 281 |\u001b[39m   \u001b[36mconst\u001b[39m changedPositions \u001b[33m=\u001b[39m faultEvents\u001b[33m.\u001b[39mfind(e \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mtype \u001b[33m===\u001b[39m \u001b[32m'response'\u001b[39m \u001b[33m&&\u001b[39m e\u001b[33m.\u001b[39mpositions)\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mpositions\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 282 |\u001b[39m   expect(changedPositions)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m expect(changedPositions)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoEqual(before\u001b[33m.\u001b[39mmesh\u001b[33m.\u001b[39mpositions)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 283 |\u001b[39m   \u001b[90m// Keep fault active while taking the exact public snapshot, so the download\u001b[39m\n \u001b[90m 284 |\u001b[39m   \u001b[90m// cannot accidentally prove recovery before loading is explicitly restored.\u001b[39m\n \u001b[90m 285 |\u001b[39m   \u001b[36mconst\u001b[39m failedState \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m project(page)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                        "column": 28,
+                        "line": 282
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mundefined\u001b[39m\n\n  280 |   await expect(page.locator('.case-label')).toContainText(`r${before.workspace.revision + 1}`);\n  281 |   const changedPositions = faultEvents.find(e => e.type === 'response' && e.positions)?.positions;\n> 282 |   expect(changedPositions).toBeTruthy(); expect(changedPositions).not.toEqual(before.mesh.positions);\n      |                            ^\n  283 |   // Keep fault active while taking the exact public snapshot, so the download\n  284 |   // cannot accidentally prove recovery before loading is explicitly restored.\n  285 |   const failedState = await project(page);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:282:28"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:33:45.546Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-deliberate--1604b-overs-without-revision-loss\\attachments\\native-lifecycle-evidence-5074c6b4f4ead9defc1c75db2f63cd1ae45ab7b9.json"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-deliberate--1604b-overs-without-revision-loss\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-01-artifacts\\v021-lifecycle-deliberate--1604b-overs-without-revision-loss\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                    "column": 28,
+                    "line": 282
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-8480e6e5a8b5879c7421",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 253,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T18:31:53.026Z",
+    "duration": 129067.178,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

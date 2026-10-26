@@ -1,0 +1,521 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/v021-lifecycle.spec.ts",
+      "--repeat-each=2",
+      "--reporter=list,json",
+      "--output=docs/verification/v021-lifecycle-evidence/final-artifacts"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/docs/verification/v021-lifecycle-evidence/final-artifacts",
+        "repeatEach": 2,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts",
+        "repeatEach": 2,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "v021-lifecycle.spec.ts",
+      "file": "v021-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native pointercancel cancels captured touch and next brush is one exact undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:40:31.498Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-native-poin-e823b-ext-brush-is-one-exact-undo\\attachments\\native-lifecycle-evidence-7379b8df4aa2e12a8a1e6def2d4961f7a122695d.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-43726b62d457c790a75e",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 188,
+          "column": 1
+        },
+        {
+          "title": "native window blur cancels captured mouse and next brush is one exact undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7178,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:40:38.185Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-native-wind-30e47-ext-brush-is-one-exact-undo\\attachments\\native-lifecycle-evidence-d3db1a578491687edd5b71e38585db62f9381020.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-2b9422a7e3bebd5d24a0",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 201,
+          "column": 1
+        },
+        {
+          "title": "two native readers release before mutation and fresh mesh audit precedes indexes including undo and New Project",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7084,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:40:45.377Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-two-native--9d77c-luding-undo-and-New-Project\\attachments\\native-lifecycle-evidence-ea185917d33e71afa5386339339ca5dd31ccfc98.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-d4d51149201d8cdde761",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 219,
+          "column": 1
+        },
+        {
+          "title": "deliberate native module-load fault in topology refuses indexes and user action recovers without revision loss",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5288,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:40:52.474Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-deliberate--3ba79-overs-without-revision-loss\\attachments\\native-lifecycle-evidence-59b8c8a4cb2c624b5db82985c6097d5bc6bb7ef3.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-5545c7f056920ad9dab7",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 268,
+          "column": 61
+        },
+        {
+          "title": "deliberate native module-load fault in analyze refuses indexes and user action recovers without revision loss",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5240,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:40:57.775Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-deliberate--1604b-overs-without-revision-loss\\attachments\\native-lifecycle-evidence-5074c6b4f4ead9defc1c75db2f63cd1ae45ab7b9.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-8480e6e5a8b5879c7421",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 268,
+          "column": 61
+        },
+        {
+          "title": "native pointercancel cancels captured touch and next brush is one exact undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:41:03.934Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-native-poin-e823b-ext-brush-is-one-exact-undo-repeat1\\attachments\\native-lifecycle-evidence-7379b8df4aa2e12a8a1e6def2d4961f7a122695d.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-d68162debde768eb03a7",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 188,
+          "column": 1
+        },
+        {
+          "title": "native window blur cancels captured mouse and next brush is one exact undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7051,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:41:10.529Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-native-wind-30e47-ext-brush-is-one-exact-undo-repeat1\\attachments\\native-lifecycle-evidence-d3db1a578491687edd5b71e38585db62f9381020.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-28ebf52dc8f1790637e6",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 201,
+          "column": 1
+        },
+        {
+          "title": "two native readers release before mutation and fresh mesh audit precedes indexes including undo and New Project",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7871,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:41:17.597Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-two-native--9d77c-luding-undo-and-New-Project-repeat1\\attachments\\native-lifecycle-evidence-ea185917d33e71afa5386339339ca5dd31ccfc98.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-81162b65281b199f6963",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 219,
+          "column": 1
+        },
+        {
+          "title": "deliberate native module-load fault in topology refuses indexes and user action recovers without revision loss",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5067,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:41:25.485Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-deliberate--3ba79-overs-without-revision-loss-repeat1\\attachments\\native-lifecycle-evidence-59b8c8a4cb2c624b5db82985c6097d5bc6bb7ef3.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-23abc36179f0f6527d8b",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 268,
+          "column": 61
+        },
+        {
+          "title": "deliberate native module-load fault in analyze refuses indexes and user action recovers without revision loss",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5041,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:41:30.568Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\final-artifacts\\v021-lifecycle-deliberate--1604b-overs-without-revision-loss-repeat1\\attachments\\native-lifecycle-evidence-5074c6b4f4ead9defc1c75db2f63cd1ae45ab7b9.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-22f6f99fa9d6669bcbc8",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 268,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T18:40:30.841Z",
+    "duration": 65244.395,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

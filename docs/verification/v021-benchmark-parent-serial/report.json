@@ -1,0 +1,2853 @@
+{
+  "schemaVersion": 1,
+  "status": "completed",
+  "startedAt": "2026-10-26T18:45:51.033Z",
+  "completedAt": "2026-10-26T18:45:54.322Z",
+  "mode": "serial-performance",
+  "config": {
+    "port": 4182,
+    "headless": true,
+    "coldRuns": 3,
+    "warmSamples": 10,
+    "warmups": 2,
+    "timeoutMs": 30000,
+    "caseTimeoutMs": 120000,
+    "totalTimeoutMs": 300000,
+    "maxVertices": 150002,
+    "maxInputBytes": 33554432,
+    "maxEstimatedWorkingBytes": 268435456,
+    "mode": "serial-performance",
+    "cases": [
+      {
+        "id": "1k",
+        "rings": 16,
+        "sides": 64
+      },
+      {
+        "id": "10k",
+        "rings": 100,
+        "sides": 100
+      },
+      {
+        "id": "50k",
+        "rings": 250,
+        "sides": 200
+      },
+      {
+        "id": "100k",
+        "rings": 500,
+        "sides": 200
+      },
+      {
+        "id": "400k-budget-control",
+        "rings": 2000,
+        "sides": 200
+      }
+    ],
+    "out": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-benchmark-parent-serial"
+  },
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64",
+    "headless": true,
+    "browserVersion": "156.0.8078.4",
+    "hardwareConcurrency": 24,
+    "repositoryCommit": "5fc4dbe95a617e317197305126a9474a2d5fc0be",
+    "sourceFingerprintSha256": "be1bc6e468513da308fd7cfe06918342d023f6a6332367f400f38cc497de1f0e",
+    "fingerprintFiles": [
+      "package-lock.json",
+      "scripts/benchmark-geometry.mjs",
+      "tests/fixtures/benchmark-harness.html",
+      "src/compute/client.ts",
+      "src/compute/copy.ts",
+      "src/compute/execute.ts",
+      "src/compute/index.ts",
+      "src/compute/measureAt.ts",
+      "src/compute/protocol.ts",
+      "src/compute/service.ts",
+      "src/compute/sliceEngine.ts",
+      "src/compute/types.ts",
+      "src/compute/worker.ts",
+      "src/geometry/alignment.ts",
+      "src/geometry/audit.ts",
+      "src/geometry/auditTypes.ts",
+      "src/geometry/calibration.ts",
+      "src/geometry/core.ts",
+      "src/geometry/deformation.ts",
+      "src/geometry/demo.ts",
+      "src/geometry/index.ts",
+      "src/geometry/intersections.ts",
+      "src/geometry/measurement.ts",
+      "src/geometry/orientation.ts",
+      "src/geometry/planar.ts",
+      "src/geometry/repair.ts",
+      "src/geometry/slicing.ts"
+    ],
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+    "crossOriginIsolated": false,
+    "deviceMemoryGiB": 32
+  },
+  "memory": {
+    "scope": "Node benchmark driver ONLY, including in-process Vite; NOT Chromium or Workers",
+    "sampledDriverPeakRssBytes": 550096896,
+    "sampledDriverPeakHeapUsedBytes": 118870720,
+    "samplingIntervalMs": 500,
+    "browserPeakRssBytes": null,
+    "browserHeapPeakBytes": null
+  },
+  "externalRequestsBlocked": 0,
+  "pageErrors": [],
+  "cases": [
+    {
+      "id": "1k",
+      "parameters": {
+        "id": "1k",
+        "rings": 16,
+        "sides": 64
+      },
+      "source": "synthetic",
+      "plan": {
+        "vertices": 1026,
+        "triangles": 2048,
+        "inputBytes": 49200,
+        "estimatedWorkingBytes": 1442368,
+        "admitted": true,
+        "reasons": []
+      },
+      "status": "ok",
+      "fixedZ": 123.4567,
+      "actualVertices": 1026,
+      "actualTriangles": 2048,
+      "reference": {
+        "kind": "exact-discretized-Float32-polygon",
+        "units": {
+          "perimeter": "mm",
+          "ap": "mm",
+          "ml": "mm",
+          "area": "mm^2"
+        },
+        "perimeter": 251.22649299344292,
+        "area": 5018.47760233466,
+        "ap": 80,
+        "ml": 80
+      },
+      "topology": {
+        "vertices": 1026,
+        "triangles": 2048,
+        "watertight": true,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentEdges": 0,
+        "degenerateTriangles": 0,
+        "signedVolume": 1505543.2807003888
+      },
+      "observations": [
+        {
+          "stage": "topologyVerificationMs",
+          "run": 0,
+          "elapsedMs": 28.700000000186265,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 0,
+          "elapsedMs": 0.10000000055879354,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 0,
+          "elapsedMs": 25.09999999962747,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 0,
+          "elapsedMs": 19.200000000186265,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 0,
+          "elapsedMs": 1.1000000005587935,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.599999999627471
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 1,
+          "elapsedMs": 0,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 1,
+          "elapsedMs": 19.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 1,
+          "elapsedMs": 16.399999999441206,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 1,
+          "elapsedMs": 1.1000000005587935,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.6999999992549419
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 2,
+          "elapsedMs": 0,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 2,
+          "elapsedMs": 20,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 2,
+          "elapsedMs": 19,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 2,
+          "elapsedMs": 1.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.8999999994412065
+          }
+        },
+        {
+          "stage": "warmupSliceMs",
+          "run": 0,
+          "elapsedMs": 0.8999999994412065,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.7000000001862645
+          }
+        },
+        {
+          "stage": "warmupSliceMs",
+          "run": 1,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 2,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.30000000074505806
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 3,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.2999999998137355
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 4,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.30000000074505806
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 5,
+          "elapsedMs": 0.7999999998137355,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.09999999962747097
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 6,
+          "elapsedMs": 0.39999999944120646,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.10000000055879354
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 7,
+          "elapsedMs": 0.40000000037252903,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 8,
+          "elapsedMs": 0.40000000037252903,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 9,
+          "elapsedMs": 0.40000000037252903,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.09999999962747097
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 10,
+          "elapsedMs": 0.39999999944120646,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 11,
+          "elapsedMs": 0.30000000074505806,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.22649299344292,
+              "ap": 80,
+              "ml": 80,
+              "area": 5018.477602334659
+            },
+            "absoluteErrors": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        }
+      ],
+      "summaries": {
+        "topologyVerificationMs": {
+          "count": 1,
+          "samplesMs": [
+            28.700000000186265
+          ],
+          "medianMs": 28.700000000186265,
+          "p95Ms": 28.700000000186265
+        },
+        "copyGeometryOnlyMs": {
+          "count": 3,
+          "samplesMs": [
+            0.10000000055879354,
+            0,
+            0
+          ],
+          "medianMs": 0,
+          "p95Ms": 0.10000000055879354
+        },
+        "measureAtColdMs": {
+          "count": 3,
+          "samplesMs": [
+            25.09999999962747,
+            19.5,
+            20
+          ],
+          "medianMs": 20,
+          "p95Ms": 25.09999999962747
+        },
+        "initCopyStartIndexMs": {
+          "count": 3,
+          "samplesMs": [
+            19.200000000186265,
+            16.399999999441206,
+            19
+          ],
+          "medianMs": 19,
+          "p95Ms": 19.200000000186265
+        },
+        "firstCachedSliceMs": {
+          "count": 3,
+          "samplesMs": [
+            1.1000000005587935,
+            1.1000000005587935,
+            1.5
+          ],
+          "medianMs": 1.1000000005587935,
+          "p95Ms": 1.5
+        },
+        "warmupSliceMs": {
+          "count": 2,
+          "samplesMs": [
+            0.8999999994412065,
+            0.5
+          ],
+          "medianMs": 0.6999999997206032,
+          "p95Ms": 0.8999999994412065
+        },
+        "warmCachedSliceRoundTripMs": {
+          "count": 10,
+          "samplesMs": [
+            0.5,
+            0.5,
+            0.5,
+            0.7999999998137355,
+            0.39999999944120646,
+            0.40000000037252903,
+            0.40000000037252903,
+            0.40000000037252903,
+            0.39999999944120646,
+            0.30000000074505806
+          ],
+          "medianMs": 0.40000000037252903,
+          "p95Ms": 0.7999999998137355
+        },
+        "warmCachedWorkerQueryMs": {
+          "count": 10,
+          "samplesMs": [
+            0.30000000074505806,
+            0.2999999998137355,
+            0.30000000074505806,
+            0.09999999962747097,
+            0.10000000055879354,
+            0.20000000018626451,
+            0.20000000018626451,
+            0.09999999962747097,
+            0.20000000018626451,
+            0.20000000018626451
+          ],
+          "medianMs": 0.20000000018626451,
+          "p95Ms": 0.30000000074505806
+        }
+      },
+      "controls": {
+        "cancellation": {
+          "name": "AbortError",
+          "message": "Obliczenie anulowane.",
+          "nativeDispatch": {
+            "kind": "task",
+            "op": "topology"
+          },
+          "terminatedDelta": 1,
+          "status": "ok"
+        },
+        "invalidPhysicalResponse": {
+          "measureAt": {
+            "status": "invalid",
+            "reportedValid": false,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "absoluteErrors": null,
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          },
+          "cachedSlice": {
+            "status": "invalid",
+            "reportedValid": false,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 0,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "absoluteErrors": null,
+            "warnings": [
+              "Open contour"
+            ],
+            "loopCount": 1,
+            "workerQueryMs": 0.6000000005587935
+          }
+        },
+        "timeout": {
+          "name": "TimeoutError",
+          "message": "Benchmark operation deadline exceeded",
+          "terminatedDelta": 1,
+          "status": "ok"
+        }
+      },
+      "failures": [],
+      "workerStats": {
+        "created": 11,
+        "terminated": 11,
+        "maxAlive": 1,
+        "alive": 0,
+        "dispatches": 27,
+        "responses": 25
+      },
+      "unsupported": {
+        "browserPeakRssBytes": null,
+        "browserHeapPeakBytes": null,
+        "fps": null
+      },
+      "generationMs": 0.6000000005587935,
+      "inputBytes": 49200,
+      "inputUnchanged": true
+    },
+    {
+      "id": "10k",
+      "parameters": {
+        "id": "10k",
+        "rings": 100,
+        "sides": 100
+      },
+      "source": "synthetic",
+      "plan": {
+        "vertices": 10002,
+        "triangles": 20000,
+        "inputBytes": 480048,
+        "estimatedWorkingBytes": 14080576,
+        "admitted": true,
+        "reasons": []
+      },
+      "status": "ok",
+      "fixedZ": 123.4567,
+      "actualVertices": 10002,
+      "actualTriangles": 20000,
+      "reference": {
+        "kind": "exact-discretized-Float32-polygon",
+        "units": {
+          "perimeter": "mm",
+          "ap": "mm",
+          "ml": "mm",
+          "area": "mm^2"
+        },
+        "perimeter": 251.28607292801613,
+        "area": 5023.24157445606,
+        "ap": 80,
+        "ml": 80
+      },
+      "topology": {
+        "vertices": 10002,
+        "triangles": 20000,
+        "watertight": true,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentEdges": 0,
+        "degenerateTriangles": 0,
+        "signedVolume": 1506972.4723367696
+      },
+      "observations": [
+        {
+          "stage": "topologyVerificationMs",
+          "run": 0,
+          "elapsedMs": 49.69999999925494,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 0,
+          "elapsedMs": 0.30000000074505806,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 0,
+          "elapsedMs": 38.59999999962747,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 0,
+          "elapsedMs": 34.799999999813735,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 0,
+          "elapsedMs": 1.7000000001862645,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.900000000372529
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 1,
+          "elapsedMs": 0.2999999998137355,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 1,
+          "elapsedMs": 34.299999999813735,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 1,
+          "elapsedMs": 31.899999999441206,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 1,
+          "elapsedMs": 1.599999999627471,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 1
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 2,
+          "elapsedMs": 0.20000000018626451,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 2,
+          "elapsedMs": 32.700000000186265,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 2,
+          "elapsedMs": 31.40000000037253,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 2,
+          "elapsedMs": 1.3999999994412065,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.7999999998137355
+          }
+        },
+        {
+          "stage": "warmupSliceMs",
+          "run": 0,
+          "elapsedMs": 0.6999999992549419,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.40000000037252903
+          }
+        },
+        {
+          "stage": "warmupSliceMs",
+          "run": 1,
+          "elapsedMs": 0.7000000001862645,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.40000000037252903
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 2,
+          "elapsedMs": 0.6000000005587935,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.2999999998137355
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 3,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.2999999998137355
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 4,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 5,
+          "elapsedMs": 0.40000000037252903,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 6,
+          "elapsedMs": 0.40000000037252903,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.19999999925494194
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 7,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 8,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 9,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.2999999998137355
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 10,
+          "elapsedMs": 0.7000000001862645,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 11,
+          "elapsedMs": 0.599999999627471,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.28607292801647,
+              "ap": 80,
+              "ml": 80,
+              "area": 5023.241574456061
+            },
+            "absoluteErrors": {
+              "perimeter": 3.410605131648481e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 9.094947017729282e-13
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.20000000018626451
+          }
+        }
+      ],
+      "summaries": {
+        "topologyVerificationMs": {
+          "count": 1,
+          "samplesMs": [
+            49.69999999925494
+          ],
+          "medianMs": 49.69999999925494,
+          "p95Ms": 49.69999999925494
+        },
+        "copyGeometryOnlyMs": {
+          "count": 3,
+          "samplesMs": [
+            0.30000000074505806,
+            0.2999999998137355,
+            0.20000000018626451
+          ],
+          "medianMs": 0.2999999998137355,
+          "p95Ms": 0.30000000074505806
+        },
+        "measureAtColdMs": {
+          "count": 3,
+          "samplesMs": [
+            38.59999999962747,
+            34.299999999813735,
+            32.700000000186265
+          ],
+          "medianMs": 34.299999999813735,
+          "p95Ms": 38.59999999962747
+        },
+        "initCopyStartIndexMs": {
+          "count": 3,
+          "samplesMs": [
+            34.799999999813735,
+            31.899999999441206,
+            31.40000000037253
+          ],
+          "medianMs": 31.899999999441206,
+          "p95Ms": 34.799999999813735
+        },
+        "firstCachedSliceMs": {
+          "count": 3,
+          "samplesMs": [
+            1.7000000001862645,
+            1.599999999627471,
+            1.3999999994412065
+          ],
+          "medianMs": 1.599999999627471,
+          "p95Ms": 1.7000000001862645
+        },
+        "warmupSliceMs": {
+          "count": 2,
+          "samplesMs": [
+            0.6999999992549419,
+            0.7000000001862645
+          ],
+          "medianMs": 0.6999999997206032,
+          "p95Ms": 0.7000000001862645
+        },
+        "warmCachedSliceRoundTripMs": {
+          "count": 10,
+          "samplesMs": [
+            0.6000000005587935,
+            0.5,
+            0.5,
+            0.40000000037252903,
+            0.40000000037252903,
+            0.5,
+            0.5,
+            0.5,
+            0.7000000001862645,
+            0.599999999627471
+          ],
+          "medianMs": 0.5,
+          "p95Ms": 0.7000000001862645
+        },
+        "warmCachedWorkerQueryMs": {
+          "count": 10,
+          "samplesMs": [
+            0.2999999998137355,
+            0.2999999998137355,
+            0.20000000018626451,
+            0.20000000018626451,
+            0.19999999925494194,
+            0.20000000018626451,
+            0.20000000018626451,
+            0.2999999998137355,
+            0.20000000018626451,
+            0.20000000018626451
+          ],
+          "medianMs": 0.20000000018626451,
+          "p95Ms": 0.2999999998137355
+        }
+      },
+      "controls": null,
+      "failures": [],
+      "workerStats": {
+        "created": 18,
+        "terminated": 18,
+        "maxAlive": 1,
+        "alive": 0,
+        "dispatches": 49,
+        "responses": 47
+      },
+      "unsupported": {
+        "browserPeakRssBytes": null,
+        "browserHeapPeakBytes": null,
+        "fps": null
+      },
+      "generationMs": 1.8999999994412065,
+      "inputBytes": 480048,
+      "inputUnchanged": true
+    },
+    {
+      "id": "50k",
+      "parameters": {
+        "id": "50k",
+        "rings": 250,
+        "sides": 200
+      },
+      "source": "synthetic",
+      "plan": {
+        "vertices": 50002,
+        "triangles": 100000,
+        "inputBytes": 2400048,
+        "estimatedWorkingBytes": 70400576,
+        "admitted": true,
+        "reasons": []
+      },
+      "status": "ok",
+      "fixedZ": 123.4567,
+      "actualVertices": 50002,
+      "actualTriangles": 100000,
+      "reference": {
+        "kind": "exact-discretized-Float32-polygon",
+        "units": {
+          "perimeter": "mm",
+          "ap": "mm",
+          "ml": "mm",
+          "area": "mm^2"
+        },
+        "perimeter": 251.31707770721033,
+        "area": 5025.72148121455,
+        "ap": 80,
+        "ml": 80
+      },
+      "topology": {
+        "vertices": 50002,
+        "triangles": 100000,
+        "watertight": true,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentEdges": 0,
+        "degenerateTriangles": 0,
+        "signedVolume": 1507716.4443641638
+      },
+      "observations": [
+        {
+          "stage": "topologyVerificationMs",
+          "run": 0,
+          "elapsedMs": 170.1000000005588,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 0,
+          "elapsedMs": 0.7000000001862645,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 0,
+          "elapsedMs": 91.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 0,
+          "elapsedMs": 81.29999999981374,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 0,
+          "elapsedMs": 2,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 1.2000000001862645
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 1,
+          "elapsedMs": 0.7999999998137355,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 1,
+          "elapsedMs": 79.40000000037253,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 1,
+          "elapsedMs": 78.90000000037253,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 1,
+          "elapsedMs": 1.900000000372529,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 1.2000000001862645
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 2,
+          "elapsedMs": 0.7999999998137355,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 2,
+          "elapsedMs": 74.20000000018626,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 2,
+          "elapsedMs": 80.8999999994412,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 2,
+          "elapsedMs": 2.400000000372529,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 1.5
+          }
+        },
+        {
+          "stage": "warmupSliceMs",
+          "run": 0,
+          "elapsedMs": 1.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.8999999994412065
+          }
+        },
+        {
+          "stage": "warmupSliceMs",
+          "run": 1,
+          "elapsedMs": 1,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.7000000001862645
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 2,
+          "elapsedMs": 1.099999999627471,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.599999999627471
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 3,
+          "elapsedMs": 1.099999999627471,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.5
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 4,
+          "elapsedMs": 1,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.599999999627471
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 5,
+          "elapsedMs": 0.7000000001862645,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.5
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 6,
+          "elapsedMs": 0.7000000001862645,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.2999999998137355
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 7,
+          "elapsedMs": 0.8999999994412065,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.2999999998137355
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 8,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.30000000074505806
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 9,
+          "elapsedMs": 0.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.2999999998137355
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 10,
+          "elapsedMs": 0.7999999998137355,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.5
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 11,
+          "elapsedMs": 0.7000000001862645,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721087,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.72148121455
+            },
+            "absoluteErrors": {
+              "perimeter": 5.400124791776761e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 0
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.2999999998137355
+          }
+        }
+      ],
+      "summaries": {
+        "topologyVerificationMs": {
+          "count": 1,
+          "samplesMs": [
+            170.1000000005588
+          ],
+          "medianMs": 170.1000000005588,
+          "p95Ms": 170.1000000005588
+        },
+        "copyGeometryOnlyMs": {
+          "count": 3,
+          "samplesMs": [
+            0.7000000001862645,
+            0.7999999998137355,
+            0.7999999998137355
+          ],
+          "medianMs": 0.7999999998137355,
+          "p95Ms": 0.7999999998137355
+        },
+        "measureAtColdMs": {
+          "count": 3,
+          "samplesMs": [
+            91.5,
+            79.40000000037253,
+            74.20000000018626
+          ],
+          "medianMs": 79.40000000037253,
+          "p95Ms": 91.5
+        },
+        "initCopyStartIndexMs": {
+          "count": 3,
+          "samplesMs": [
+            81.29999999981374,
+            78.90000000037253,
+            80.8999999994412
+          ],
+          "medianMs": 80.8999999994412,
+          "p95Ms": 81.29999999981374
+        },
+        "firstCachedSliceMs": {
+          "count": 3,
+          "samplesMs": [
+            2,
+            1.900000000372529,
+            2.400000000372529
+          ],
+          "medianMs": 2,
+          "p95Ms": 2.400000000372529
+        },
+        "warmupSliceMs": {
+          "count": 2,
+          "samplesMs": [
+            1.5,
+            1
+          ],
+          "medianMs": 1.25,
+          "p95Ms": 1.5
+        },
+        "warmCachedSliceRoundTripMs": {
+          "count": 10,
+          "samplesMs": [
+            1.099999999627471,
+            1.099999999627471,
+            1,
+            0.7000000001862645,
+            0.7000000001862645,
+            0.8999999994412065,
+            0.5,
+            0.5,
+            0.7999999998137355,
+            0.7000000001862645
+          ],
+          "medianMs": 0.75,
+          "p95Ms": 1.099999999627471
+        },
+        "warmCachedWorkerQueryMs": {
+          "count": 10,
+          "samplesMs": [
+            0.599999999627471,
+            0.5,
+            0.599999999627471,
+            0.5,
+            0.2999999998137355,
+            0.2999999998137355,
+            0.30000000074505806,
+            0.2999999998137355,
+            0.5,
+            0.2999999998137355
+          ],
+          "medianMs": 0.40000000037252903,
+          "p95Ms": 0.599999999627471
+        }
+      },
+      "controls": null,
+      "failures": [],
+      "workerStats": {
+        "created": 25,
+        "terminated": 25,
+        "maxAlive": 1,
+        "alive": 0,
+        "dispatches": 71,
+        "responses": 69
+      },
+      "unsupported": {
+        "browserPeakRssBytes": null,
+        "browserHeapPeakBytes": null,
+        "fps": null
+      },
+      "generationMs": 3.7000000001862645,
+      "inputBytes": 2400048,
+      "inputUnchanged": true
+    },
+    {
+      "id": "100k",
+      "parameters": {
+        "id": "100k",
+        "rings": 500,
+        "sides": 200
+      },
+      "source": "synthetic",
+      "plan": {
+        "vertices": 100002,
+        "triangles": 200000,
+        "inputBytes": 4800048,
+        "estimatedWorkingBytes": 140800576,
+        "admitted": true,
+        "reasons": []
+      },
+      "status": "ok",
+      "fixedZ": 123.4567,
+      "actualVertices": 100002,
+      "actualTriangles": 200000,
+      "reference": {
+        "kind": "exact-discretized-Float32-polygon",
+        "units": {
+          "perimeter": "mm",
+          "ap": "mm",
+          "ml": "mm",
+          "area": "mm^2"
+        },
+        "perimeter": 251.31707770721033,
+        "area": 5025.72148121455,
+        "ap": 80,
+        "ml": 80
+      },
+      "topology": {
+        "vertices": 100002,
+        "triangles": 200000,
+        "watertight": true,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "inconsistentEdges": 0,
+        "degenerateTriangles": 0,
+        "signedVolume": 1507716.4443649638
+      },
+      "observations": [
+        {
+          "stage": "topologyVerificationMs",
+          "run": 0,
+          "elapsedMs": 273.90000000037253,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 0,
+          "elapsedMs": 1.5,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 0,
+          "elapsedMs": 152,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 0,
+          "elapsedMs": 173.20000000018626,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 0,
+          "elapsedMs": 4,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 1.599999999627471
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 1,
+          "elapsedMs": 1.7999999998137355,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 1,
+          "elapsedMs": 162,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 1,
+          "elapsedMs": 138.90000000037253,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 1,
+          "elapsedMs": 7,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 2.300000000745058
+          }
+        },
+        {
+          "stage": "copyGeometryOnlyMs",
+          "run": 2,
+          "elapsedMs": 2.1000000005587935,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "measureAtColdMs",
+          "run": 2,
+          "elapsedMs": 164.70000000018626,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": null,
+            "workerQueryMs": null
+          }
+        },
+        {
+          "stage": "initCopyStartIndexMs",
+          "run": 2,
+          "elapsedMs": 154.8999999994412,
+          "outcome": {
+            "status": "ok"
+          }
+        },
+        {
+          "stage": "firstCachedSliceMs",
+          "run": 2,
+          "elapsedMs": 2.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 1.5
+          }
+        },
+        {
+          "stage": "warmupSliceMs",
+          "run": 0,
+          "elapsedMs": 1.400000000372529,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.8999999994412065
+          }
+        },
+        {
+          "stage": "warmupSliceMs",
+          "run": 1,
+          "elapsedMs": 1.1000000005587935,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.7000000001862645
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 2,
+          "elapsedMs": 1.199999999254942,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.7000000001862645
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 3,
+          "elapsedMs": 1,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.6000000005587935
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 4,
+          "elapsedMs": 1.199999999254942,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.7000000001862645
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 5,
+          "elapsedMs": 1,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.5
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 6,
+          "elapsedMs": 1.099999999627471,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.5
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 7,
+          "elapsedMs": 1,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.5
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 8,
+          "elapsedMs": 1,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.599999999627471
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 9,
+          "elapsedMs": 1.099999999627471,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.599999999627471
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 10,
+          "elapsedMs": 1.2000000001862645,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.599999999627471
+          }
+        },
+        {
+          "stage": "warmCachedSliceRoundTripMs",
+          "run": 11,
+          "elapsedMs": 1.5,
+          "outcome": {
+            "status": "ok",
+            "reportedValid": true,
+            "z": 123.4567,
+            "metrics": {
+              "perimeter": 251.31707770721079,
+              "ap": 80,
+              "ml": 80,
+              "area": 5025.721481214552
+            },
+            "absoluteErrors": {
+              "perimeter": 4.547473508864641e-13,
+              "ap": 0,
+              "ml": 0,
+              "area": 1.8189894035458565e-12
+            },
+            "warnings": [],
+            "loopCount": 1,
+            "workerQueryMs": 0.6999999992549419
+          }
+        }
+      ],
+      "summaries": {
+        "topologyVerificationMs": {
+          "count": 1,
+          "samplesMs": [
+            273.90000000037253
+          ],
+          "medianMs": 273.90000000037253,
+          "p95Ms": 273.90000000037253
+        },
+        "copyGeometryOnlyMs": {
+          "count": 3,
+          "samplesMs": [
+            1.5,
+            1.7999999998137355,
+            2.1000000005587935
+          ],
+          "medianMs": 1.7999999998137355,
+          "p95Ms": 2.1000000005587935
+        },
+        "measureAtColdMs": {
+          "count": 3,
+          "samplesMs": [
+            152,
+            162,
+            164.70000000018626
+          ],
+          "medianMs": 162,
+          "p95Ms": 164.70000000018626
+        },
+        "initCopyStartIndexMs": {
+          "count": 3,
+          "samplesMs": [
+            173.20000000018626,
+            138.90000000037253,
+            154.8999999994412
+          ],
+          "medianMs": 154.8999999994412,
+          "p95Ms": 173.20000000018626
+        },
+        "firstCachedSliceMs": {
+          "count": 3,
+          "samplesMs": [
+            4,
+            7,
+            2.5
+          ],
+          "medianMs": 4,
+          "p95Ms": 7
+        },
+        "warmupSliceMs": {
+          "count": 2,
+          "samplesMs": [
+            1.400000000372529,
+            1.1000000005587935
+          ],
+          "medianMs": 1.2500000004656613,
+          "p95Ms": 1.400000000372529
+        },
+        "warmCachedSliceRoundTripMs": {
+          "count": 10,
+          "samplesMs": [
+            1.199999999254942,
+            1,
+            1.199999999254942,
+            1,
+            1.099999999627471,
+            1,
+            1,
+            1.099999999627471,
+            1.2000000001862645,
+            1.5
+          ],
+          "medianMs": 1.099999999627471,
+          "p95Ms": 1.5
+        },
+        "warmCachedWorkerQueryMs": {
+          "count": 10,
+          "samplesMs": [
+            0.7000000001862645,
+            0.6000000005587935,
+            0.7000000001862645,
+            0.5,
+            0.5,
+            0.5,
+            0.599999999627471,
+            0.599999999627471,
+            0.599999999627471,
+            0.6999999992549419
+          ],
+          "medianMs": 0.599999999627471,
+          "p95Ms": 0.7000000001862645
+        }
+      },
+      "controls": null,
+      "failures": [],
+      "workerStats": {
+        "created": 32,
+        "terminated": 32,
+        "maxAlive": 1,
+        "alive": 0,
+        "dispatches": 93,
+        "responses": 91
+      },
+      "unsupported": {
+        "browserPeakRssBytes": null,
+        "browserHeapPeakBytes": null,
+        "fps": null
+      },
+      "generationMs": 5.2999999998137355,
+      "inputBytes": 4800048,
+      "inputUnchanged": true
+    },
+    {
+      "id": "400k-budget-control",
+      "parameters": {
+        "id": "400k-budget-control",
+        "rings": 2000,
+        "sides": 200
+      },
+      "source": "synthetic",
+      "plan": {
+        "vertices": 400002,
+        "triangles": 800000,
+        "inputBytes": 19200048,
+        "estimatedWorkingBytes": 563200576,
+        "admitted": false,
+        "reasons": [
+          "vertex-budget",
+          "estimated-working-budget"
+        ]
+      },
+      "status": "skipped-budget",
+      "actualVertices": null,
+      "actualTriangles": null
+    }
+  ],
+  "fatalError": null,
+  "cleanup": {
+    "browserClosed": true,
+    "serverClosed": true
+  },
+  "limitations": [
+    "Synthetic straight closed indexed cylinders only; not patient scans, clinical validation or manufacturing acceptance.",
+    "Init aggregates actual API preflight/copy/native-worker startup/transport/index snapshot and build; component internals are not separately instrumented.",
+    "Standalone geometry-only copy uses the actual helper; not subtracted from init. RGB exists and input remains unchanged, but slicing and measureAt intentionally omit appearance in transport.",
+    "Cold means a new engine/job, NOT an empty OS/module/network cache. Warm samples reuse one initialized Worker/index at the same interior Z.",
+    "Checkpoints persist compact results between queries; checkpoint overhead is outside measured calls and may influence scheduling.",
+    "No GC forcing, FPS, clinical tolerance, real-browser peak RSS or worst-case no-OOM claim. Working-set admission is a heuristic, not measured memory.",
+    "Caller must ensure serial execution without competing browser work; no contention isolation is claimed."
+  ],
+  "counts": {
+    "requested": 5,
+    "recorded": 5,
+    "successful": 4,
+    "skippedBudget": 1,
+    "unsuccessful": 0,
+    "unexpectedBudgetSkips": 0,
+    "complete": true
+  },
+  "elapsedDriverMs": 3287.8103
+}

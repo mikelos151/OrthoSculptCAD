@@ -1,0 +1,435 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/v021-lifecycle.spec.ts",
+      "--reporter=list,json",
+      "--output=docs/verification/v021-lifecycle-evidence/run-03-artifacts"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/docs/verification/v021-lifecycle-evidence/run-03-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "v021-lifecycle.spec.ts",
+      "file": "v021-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native pointercancel cancels captured touch and next brush is one exact undo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1,
+                  "error": {
+                    "message": "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\sandr\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\\Users\\sandr\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-fHQkhI --remote-debugging-pipe --no-startup-window\n<launched> pid=62644\nCall log:\n\u001b[2m  - <launching> C:\\Users\\sandr\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\\Users\\sandr\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-fHQkhI --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=62644\u001b[22m\n\u001b[2m  - [pid=62644] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=62644] <kill>\u001b[22m\n\u001b[2m  - [pid=62644] <will force kill>\u001b[22m\n\u001b[2m  - [pid=62644] <process did exit: exitCode=3236495362, signal=null>\u001b[22m\n\u001b[2m  - [pid=62644] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=62644] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=62644] <gracefully close end>\u001b[22m\n",
+                    "stack": "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\sandr\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\\Users\\sandr\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-fHQkhI --remote-debugging-pipe --no-startup-window\n<launched> pid=62644\nCall log:\n\u001b[2m  - <launching> C:\\Users\\sandr\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\\Users\\sandr\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-fHQkhI --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=62644\u001b[22m\n\u001b[2m  - [pid=62644] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=62644] <kill>\u001b[22m\n\u001b[2m  - [pid=62644] <will force kill>\u001b[22m\n\u001b[2m  - [pid=62644] <process did exit: exitCode=3236495362, signal=null>\u001b[22m\n\u001b[2m  - [pid=62644] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=62644] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=62644] <gracefully close end>\u001b[22m\n"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> C:\\Users\\sandr\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\\Users\\sandr\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-fHQkhI --remote-debugging-pipe --no-startup-window\n<launched> pid=62644\nCall log:\n\u001b[2m  - <launching> C:\\Users\\sandr\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=C:\\Users\\sandr\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-fHQkhI --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=62644\u001b[22m\n\u001b[2m  - [pid=62644] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=62644] <kill>\u001b[22m\n\u001b[2m  - [pid=62644] <will force kill>\u001b[22m\n\u001b[2m  - [pid=62644] <process did exit: exitCode=3236495362, signal=null>\u001b[22m\n\u001b[2m  - [pid=62644] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=62644] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=62644] <gracefully close end>\u001b[22m\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:35:16.320Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-native-poin-e823b-ext-brush-is-one-exact-undo\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-native-poin-e823b-ext-brush-is-one-exact-undo\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-43726b62d457c790a75e",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 185,
+          "column": 1
+        },
+        {
+          "title": "native window blur cancels captured mouse and next brush is one exact undo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 23104,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:202:97",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                      "column": 97,
+                      "line": 202
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 200 |\u001b[39m   \u001b[36mconst\u001b[39m p \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m prepareBrush(page)\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m holdMouse(page\u001b[33m,\u001b[39m p)\u001b[33m;\u001b[39m\n \u001b[90m 201 |\u001b[39m   \u001b[36mconst\u001b[39m other \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m other\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m other\u001b[33m.\u001b[39mbringToFront()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 202 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m (\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mblurs\u001b[33m.\u001b[39mfilter((e\u001b[33m:\u001b[39m any) \u001b[33m=>\u001b[39m e\u001b[33m.\u001b[39mtrusted)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 203 |\u001b[39m   expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m document\u001b[33m.\u001b[39mhasFocus()))\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 204 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mbringToFront()\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mup()\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m other\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m 205 |\u001b[39m   \u001b[36mawait\u001b[39m cancellationPreservesAndNextWorks(page\u001b[33m,\u001b[39m before\u001b[33m,\u001b[39m history)\u001b[33m;\u001b[39m \u001b[36mawait\u001b[39m clean(page)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                        "column": 97,
+                        "line": 202
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate\n\n  200 |   const p = await prepareBrush(page); await holdMouse(page, p);\n  201 |   const other = await context.newPage(); await other.goto('/'); await other.bringToFront();\n> 202 |   await expect.poll(async () => (await state(page)).blurs.filter((e: any) => e.trusted).length).toBeGreaterThan(0);\n      |                                                                                                 ^\n  203 |   expect(await page.evaluate(() => document.hasFocus())).toBe(false);\n  204 |   await page.bringToFront(); await page.mouse.up(); await other.close();\n  205 |   await cancellationPreservesAndNextWorks(page, before, history); await clean(page);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:202:97"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:35:19.725Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-native-wind-30e47-ext-brush-is-one-exact-undo\\attachments\\native-lifecycle-evidence-d3db1a578491687edd5b71e38585db62f9381020.json"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-native-wind-30e47-ext-brush-is-one-exact-undo\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-native-wind-30e47-ext-brush-is-one-exact-undo\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                    "column": 97,
+                    "line": 202
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-2b9422a7e3bebd5d24a0",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 198,
+          "column": 1
+        },
+        {
+          "title": "two native readers release before mutation and fresh mesh audit precedes indexes including undo and New Project",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:36:00.775Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-two-native--9d77c-luding-undo-and-New-Project\\attachments\\native-lifecycle-evidence-ea185917d33e71afa5386339339ca5dd31ccfc98.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-d4d51149201d8cdde761",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 208,
+          "column": 1
+        },
+        {
+          "title": "deliberate native module-load fault in topology refuses indexes and user action recovers without revision loss",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4441,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"zone\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mscale-\u001b[27mzone\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"zone\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mscale-\u001b[27mzone\"\u001b[39m\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:292:52",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                      "column": 52,
+                      "line": 292
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 290 |\u001b[39m   expect(failedState\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mrevision)\u001b[33m.\u001b[39mtoBe(before\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mrevision \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 291 |\u001b[39m   expect(failedState\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mevents\u001b[33m.\u001b[39mslice(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[33m-\u001b[39m\u001b[35m1\u001b[39m))\u001b[33m.\u001b[39mtoEqual(before\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mevents)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 292 |\u001b[39m   expect(failedState\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mevents\u001b[33m.\u001b[39mat(\u001b[33m-\u001b[39m\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mkind)\u001b[33m.\u001b[39mtoBe(\u001b[32m'zone'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 293 |\u001b[39m   expect(\u001b[36mawait\u001b[39m undoCount(page))\u001b[33m.\u001b[39mtoBe(history \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 294 |\u001b[39m   \u001b[90m// Wait for the download-triggered audit attempt to fail before recovery.\u001b[39m\n \u001b[90m 295 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m blocked)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                        "column": 52,
+                        "line": 292
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"zone\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mscale-\u001b[27mzone\"\u001b[39m\n\n  290 |   expect(failedState.workspace.revision).toBe(before.workspace.revision + 1);\n  291 |   expect(failedState.workspace.events.slice(0, -1)).toEqual(before.workspace.events);\n> 292 |   expect(failedState.workspace.events.at(-1).kind).toBe('zone');\n      |                                                    ^\n  293 |   expect(await undoCount(page)).toBe(history + 1);\n  294 |   // Wait for the download-triggered audit attempt to fail before recovery.\n  295 |   await expect.poll(() => blocked).toBeGreaterThan(1);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:292:52"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:36:06.767Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-deliberate--3ba79-overs-without-revision-loss\\attachments\\native-lifecycle-evidence-59b8c8a4cb2c624b5db82985c6097d5bc6bb7ef3.json"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-deliberate--3ba79-overs-without-revision-loss\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-deliberate--3ba79-overs-without-revision-loss\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                    "column": 52,
+                    "line": 292
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-5545c7f056920ad9dab7",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 254,
+          "column": 61
+        },
+        {
+          "title": "deliberate native module-load fault in analyze refuses indexes and user action recovers without revision loss",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4252,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"zone\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mscale-\u001b[27mzone\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"zone\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mscale-\u001b[27mzone\"\u001b[39m\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:292:52",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                      "column": 52,
+                      "line": 292
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 290 |\u001b[39m   expect(failedState\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mrevision)\u001b[33m.\u001b[39mtoBe(before\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mrevision \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 291 |\u001b[39m   expect(failedState\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mevents\u001b[33m.\u001b[39mslice(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[33m-\u001b[39m\u001b[35m1\u001b[39m))\u001b[33m.\u001b[39mtoEqual(before\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mevents)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 292 |\u001b[39m   expect(failedState\u001b[33m.\u001b[39mworkspace\u001b[33m.\u001b[39mevents\u001b[33m.\u001b[39mat(\u001b[33m-\u001b[39m\u001b[35m1\u001b[39m)\u001b[33m.\u001b[39mkind)\u001b[33m.\u001b[39mtoBe(\u001b[32m'zone'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 293 |\u001b[39m   expect(\u001b[36mawait\u001b[39m undoCount(page))\u001b[33m.\u001b[39mtoBe(history \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 294 |\u001b[39m   \u001b[90m// Wait for the download-triggered audit attempt to fail before recovery.\u001b[39m\n \u001b[90m 295 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m blocked)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                        "column": 52,
+                        "line": 292
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"zone\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mscale-\u001b[27mzone\"\u001b[39m\n\n  290 |   expect(failedState.workspace.revision).toBe(before.workspace.revision + 1);\n  291 |   expect(failedState.workspace.events.slice(0, -1)).toEqual(before.workspace.events);\n> 292 |   expect(failedState.workspace.events.at(-1).kind).toBe('zone');\n      |                                                    ^\n  293 |   expect(await undoCount(page)).toBe(history + 1);\n  294 |   // Wait for the download-triggered audit attempt to fail before recovery.\n  295 |   await expect.poll(() => blocked).toBeGreaterThan(1);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts:292:52"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T18:36:12.812Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-lifecycle-evidence",
+                      "contentType": "application/json",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-deliberate--1604b-overs-without-revision-loss\\attachments\\native-lifecycle-evidence-5074c6b4f4ead9defc1c75db2f63cd1ae45ab7b9.json"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-deliberate--1604b-overs-without-revision-loss\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v021-lifecycle-evidence\\run-03-artifacts\\v021-lifecycle-deliberate--1604b-overs-without-revision-loss\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v021-lifecycle.spec.ts",
+                    "column": 52,
+                    "line": 292
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f22da6b95ae556599a80-8480e6e5a8b5879c7421",
+          "file": "v021-lifecycle.spec.ts",
+          "line": 254,
+          "column": 61
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T18:35:15.742Z",
+    "duration": 62270.568,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}
