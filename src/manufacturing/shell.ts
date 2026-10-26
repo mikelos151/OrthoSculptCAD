@@ -1,11 +1,12 @@
 import type { MeshData, ShellOptions } from '../types';
-import { getBounds, validateMesh } from '../geometry/index';
+import type { AuditOptions } from '../geometry/auditTypes';
+import { getBounds, validateMesh, auditMesh } from '../geometry/index';
 import { assertMesh, finite, LIMITS, requireCondition as check } from '../io/validation';
 import { assertVertexFans } from './manifold';
 import { readProximalPlane, removeProximalCap } from './proximal';
 
 /** Research-only normal offset, not an exact solid offset or a strength calculation. */
-export function buildShell(input: MeshData, options: ShellOptions): { mesh: MeshData; warnings: string[] } {
+export function buildShell(input: MeshData, options: ShellOptions, auditOptions?: AuditOptions): { mesh: MeshData; warnings: string[] } {
   assertMesh(input);
   check(input.positions.length / 3 * 2 <= LIMITS.vertices && input.indices.length / 3 * 2 <= LIMITS.triangles, 'Powłoka przekroczyłaby limit siatki.');
   check(options && [options.thickness, options.flareAngle, options.flareRadius].every(Number.isFinite), 'Nieprawidłowe parametry powłoki.');
@@ -32,6 +33,9 @@ export function buildShell(input: MeshData, options: ShellOptions): { mesh: Mesh
   check(report.nonManifoldEdges === 0 && report.inconsistentEdges === 0 && report.degenerateTriangles === 0 && report.boundaryLoops.length === 1 && report.boundaryEdges === report.boundaryLoops[0].length, 'Wymagany jeden otwarty pierścień proksymalny i zamknięty koniec dystalny.');
   const loop = report.boundaryLoops[0];
   assertVertexFans(surface.indices, surface.positions.length / 3);
+  const inputAudit = auditMesh(input, auditOptions);
+  check(inputAudit.complete && inputAudit.intersections.length === 0 && inputAudit.checks.filter(c => ['components', 'vertex-manifold', 'self-intersections'].includes(c.id)).every(c => c.status === 'pass'), 'Audit 3D wejścia nie potwierdził braku samoprzecięć (FAIL/UNKNOWN); powłoka zablokowana.');
+  warnings.push('Odległość przesunięcia wierzchołków wzdłuż normalnych NIE jest gwarantowaną minimalną grubością ściany; wymagana niezależna kontrola grubości.');
   const plane = readProximalPlane(surface, loop, bounds);
   const n = p.length / 3;
   check(n * 2 <= LIMITS.vertices && faces.length / 3 * 2 + loop.length * 2 <= LIMITS.triangles, 'Powłoka przekroczyłaby limit siatki.');
@@ -85,8 +89,22 @@ export function buildShell(input: MeshData, options: ShellOptions): { mesh: Mesh
   const indices = new Uint32Array(faces.length * 2 + rim.length * 6); let cursor = 0;
   for (let t = 0; t < faces.length; t += 3) { const [a, b, c] = faces.slice(t, t + 3); indices.set([a, c, b, a + n, b + n, c + n], cursor); cursor += 6; }
   for (const [a, b] of rim) { indices.set([b + n, a + n, a, b + n, a, b], cursor); cursor += 6; }
-  const mesh = { positions, indices, ...(input.source ? { source: input.source } : {}), name: `${input.name.slice(0, 180)} — powłoka badawcza` };
+  const attributes: Pick<MeshData, 'colors' | 'uvs' | 'textureUrl'> = {};
+  for (const [key, stride] of [['colors', 3], ['uvs', 2]] as const) {
+    const source = input[key];
+    if (!source) continue;
+    const target = new Float32Array(n * stride * 2);
+    for (let i = 0; i < used.length; i++) if (used[i]) {
+      target.set(source.subarray(i * stride, (i + 1) * stride), remap[i] * stride);
+      target.set(source.subarray(i * stride, (i + 1) * stride), (n + remap[i]) * stride);
+    }
+    attributes[key] = target;
+  }
+  if (input.textureUrl) attributes.textureUrl = input.textureUrl;
+  const mesh: MeshData = { positions, indices, ...attributes, ...(input.source ? { source: input.source } : {}), name: `${input.name.slice(0, 180)} — powłoka badawcza` };
   assertMesh(mesh); const final = validateMesh(mesh); check(final.watertight && final.signedVolume > 0, 'Offset dał niepoprawną topologię/objętość; eksport przerwany.');
-  if (input.colors || input.textureUrl || input.uvs) warnings.push('Powłoka wytwórcza zawiera tylko geometrię; kolory/tekstura pozostają w projekcie źródłowym.');
+  const finalAudit = auditMesh(mesh, auditOptions);
+  check(finalAudit.complete && finalAudit.orientation === 'outward' && finalAudit.intersections.length === 0, 'Audit 3D offsetu: samoprzecięcia lub wynik UNKNOWN; powłoka i jej eksport zablokowane.');
+  if (input.colors || input.textureUrl || input.uvs) warnings.push('RGB/UV/tekstura zachowane na obu warstwach modelu powłoki; STL i eksport geometryczny nie gwarantują przeniesienia tych atrybutów do CAM. Zachowaj projekt źródłowy.');
   return { mesh, warnings };
 }

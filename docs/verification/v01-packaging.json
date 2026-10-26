@@ -1,0 +1,15 @@
+{
+  "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\ortho-final-preflight-352f5f4396\\extracted\\OrthoSculptCAD",
+  "nodeModulesAbsent": true,
+  "server": "native Node stdlib",
+  "renderer": "WebGL2",
+  "measurementRows": 13,
+  "pageErrors": [],
+  "externalRequests": [],
+  "syntheticLabel": true,
+  "passed": true,
+  "bundleHashes": {
+    "index-DXBcVluP.js": "26aea78c66d07a2a3c898f19478acad94cf2c55334f1a164d207f31c4d38c0cb"
+  },
+  "preflightArchiveEntriesVerified": 130
+}

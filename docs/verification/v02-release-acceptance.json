@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "scope": "local technical/research TT browser application; not clinical or native EXE acceptance",
+  "codeAccepted": true,
+  "unit": {
+    "passed": 326,
+    "failed": 0,
+    "skipped": 0,
+    "files": 53,
+    "report": "v02-release-unit-serial.json",
+    "realChromiumWorkers": true,
+    "realReportPDFs": true,
+    "concurrency": "maxWorkers=1; unchanged test timeouts/assertions"
+  },
+  "e2e": {
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "unchangedBundle": true,
+    "report": "../screenshots/v02-e2e/candidate-final-summary.json"
+  },
+  "nativeCore": {
+    "geometryPassed": 20,
+    "statePassed": 5,
+    "securityConfigPassed": 2,
+    "nativeExeAvailable": false,
+    "WebViewIPCVerified": false,
+    "blocker": "Windows AppControl os error 4551 during actual Tauri build"
+  },
+  "npmAuditKnownVulnerabilities": 0,
+  "print": {
+    "variants": 4,
+    "pages": 21,
+    "minimumFontPt": 12.0,
+    "independentPassed": true,
+    "report": "v02-report-print-re-review.json"
+  },
+  "workerRace": {
+    "independentPassed": true,
+    "report": "v02-worker-budget-re-review.json"
+  },
+  "bundle": {
+    "asset": "/assets/index-Ct_H4HMR.js",
+    "sha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "App.tsx": "f697dcc4a34a02dbe58b94e700eb9c2ce644ee3fc098e3e34b5161f7bfcdce17"
+  },
+  "nonPassingHistoricalAttempt": "v02-release-unit.json contains the retained parallel run with timeouts; the complete serial rerun above passed without raised timeouts or skipped tests.",
+  "releaseArchiveAcceptance": "Final full-source ZIP acceptance is recorded separately in OrthoSculptCAD-0.2.0-lokalny.verification.json, distributed beside the archive and its SHA-256.",
+  "clinicalAcceptance": "pending real authorized scans, independent measurements and prosthetist evaluation; no manufacturing/thickness/strength/fit guarantee"
+}

@@ -4,6 +4,7 @@ export interface ComputePayloads {
   analyze: { mesh: MeshData; options?: AuditOptions };
   topology: { mesh: MeshData };
   measure: { mesh: MeshData; interval: number };
+  measureAt: { mesh: MeshData; heights: number[] };
   repair: { mesh: MeshData };
   orient: { mesh: MeshData };
   pca: { mesh: MeshData };
@@ -16,6 +17,7 @@ export interface ComputeResults {
   analyze: MeshAudit;
   topology: TopologyReport;
   measure: MeasurementRow[];
+  measureAt: MeasurementRow[];
   repair: { mesh: MeshData; report: TopologyReport };
   orient: { mesh: MeshData; changed: boolean; warnings: string[] };
   pca: MeshData;

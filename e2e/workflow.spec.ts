@@ -1,6 +1,7 @@
 import {test,expect} from '@playwright/test';
 import {readFile} from 'node:fs/promises';
 import {unzipSync,strFromU8} from 'fflate';
+import {project,savePlainDownload,replaceSyntheticProject,undoCount,evidence} from './helpers';
 
 test('synthetic five-step workflow uses real geometry and exports round-trippable files',async({page},testInfo)=>{
  test.setTimeout(150000);
@@ -19,12 +20,12 @@ test('synthetic five-step workflow uses real geometry and exports round-trippabl
  await page.screenshot({path:testInfo.outputPath('01-import.png'),fullPage:true});
  await page.getByRole('button',{name:'Dalej: Orientacja'}).click();
  await page.getByRole('button',{name:'Wyrównaj główne osie (PCA)'}).click();
- await expect(page.getByText(/Wyrównano główne osie/)).toBeVisible();
+ await expect(page.getByText(/Wyrównano osie geometryczne, nie anatomię/)).toBeVisible();
  await page.getByRole('button',{name:'Dalej: Pomiary'}).click();
  await page.getByRole('button',{name:'Oblicz tabelę przekrojów'}).click();
  await expect(page.locator('tbody tr').first()).toBeVisible();
  expect(await page.locator('tbody tr').count()).toBeGreaterThan(3);
- await expect(page.locator('.engine-caption')).toContainText('TypeScript');
+ await expect(page.locator('.engine-caption')).toContainText('Web Worker');
  await expect(page.locator('.renderer-status')).toContainText(/WebGPU|WebGL2/);
  await page.getByLabel('Wysokość przekroju Z',{exact:true}).fill('100');
  await expect(page.locator('.engine-caption')).toContainText('ms');
@@ -46,34 +47,33 @@ test('synthetic five-step workflow uses real geometry and exports round-trippabl
  await page.locator('.step-button').nth(2).click();
  // Exercise a real calibration, then regenerate invalidated measurements.
  await page.getByRole('button',{name:'Kalibruj skalę z taśm'}).click();
- await expect(page.getByText(/Skalibrowano model/)).toBeVisible();
+ await expect(page.getByText(/Skalibrowano przybliżenie/)).toBeVisible();
  await expect(page.locator('tbody tr')).toHaveCount(0);
  await page.getByRole('button',{name:'Oblicz tabelę przekrojów'}).click();
  await expect(page.locator('tbody tr').first()).toBeVisible();
  await page.getByRole('button',{name:'Dalej: Rektyfikacja'}).click();
- async function project(){const event=page.waitForEvent('download');await page.getByRole('button',{name:'Zapisz projekt',exact:true}).click();const download=await event;return JSON.parse(await readFile((await download.path())!,'utf8'));}
- const before=await project();
+ const before=await project(page); const historyBefore=await undoCount(page);
  await page.getByLabel('Zmiana obwodu · %').fill('-4');
  await page.getByRole('button',{name:'Zastosuj korektę strefy'}).click();
- await expect(page.getByRole('button',{name:/Cofnij \(1\)/})).toBeEnabled();
- const after=await project();
+ await expect(page.getByRole('button',{name:`Cofnij (${historyBefore+1})`,exact:true})).toBeEnabled();
+ const after=await project(page);
  expect(JSON.stringify(after)).not.toBe(JSON.stringify(before));
  await page.getByLabel('Podpisana mapa deformacji').check();
  await page.screenshot({path:testInfo.outputPath('04-rectify.png'),fullPage:true});
- await page.getByRole('button',{name:/Cofnij \(1\)/}).click();
- const restored=await project();
+ await page.getByRole('button',{name:`Cofnij (${historyBefore+1})`,exact:true}).click();
+ const restored=await project(page);
  expect(restored.mesh.positions).toEqual(before.mesh.positions);
  await page.getByRole('button',{name:'Widok z przodu',exact:true}).click();
  await page.getByRole('button',{name:'Włącz pędzel na modelu'}).click();
  const canvas=page.locator('.three-viewport canvas').first(); const box=await canvas.boundingBox();expect(box).not.toBeNull();
  await canvas.click({position:{x:box!.width/2,y:box!.height/2}});
- await expect(page.getByRole('button',{name:/Cofnij \(1\)/})).toBeEnabled();
- const brushed=await project();
+ await expect(page.getByRole('button',{name:`Cofnij (${historyBefore+1})`,exact:true})).toBeEnabled();
+ const brushed=await project(page);
  expect(brushed.mesh.positions).not.toEqual(before.mesh.positions);
  expect(brushed.originalPositions).toEqual(before.originalPositions);
- await page.getByRole('button',{name:/Cofnij \(1\)/}).click();
+ await page.getByRole('button',{name:`Cofnij (${historyBefore+1})`,exact:true}).click();
  await page.getByRole('button',{name:'Dalej: Eksport'}).click();
- await expect(page.getByText('Nie zaimplementowano.',{exact:false}).first()).toBeVisible();
+ await expect(page.getByText(/Zakres przekazania: pliki STL \/ 3MF/)).toBeVisible();
  await expect(page.getByRole('button',{name:'Generuj powłokę'})).toBeDisabled();
  await page.getByLabel('Rozumiem ograniczenia i wykonam niezależną walidację modelu.').check();
  await page.getByRole('button',{name:'Generuj powłokę'}).click();
@@ -81,8 +81,10 @@ test('synthetic five-step workflow uses real geometry and exports round-trippabl
  const stlPromise=page.waitForEvent('download');await page.getByRole('button',{name:'STL leja',exact:true}).click();const stl=await stlPromise;const stlBytes=await readFile((await stl.path())!);const triangles=stlBytes.readUInt32LE(80);expect(triangles).toBeGreaterThan(0);expect(stlBytes.length).toBe(84+triangles*50);
  const mfPromise=page.waitForEvent('download');await page.getByRole('button',{name:'3MF leja',exact:true}).click();const mf=await mfPromise;const parts=unzipSync(await readFile((await mf.path())!));const model=strFromU8(parts['3D/3dmodel.model']);expect(model).toContain('unit="millimeter"');expect(model).toContain('<triangle ');expect(parts['_rels/.rels']).toBeTruthy();
  await page.screenshot({path:testInfo.outputPath('05-export.png'),fullPage:true});
- const savePromise=page.waitForEvent('download');await page.getByRole('button',{name:'Zapisz projekt',exact:true}).click();const saved=await savePromise;
+ await evidence(page,testInfo,'five-step-export.png');
+ const saved=await savePlainDownload(page);
  await page.getByLabel('Wybierz zapisany projekt',{exact:true}).setInputFiles((await saved.path())!);
+ await replaceSyntheticProject(page);
  await expect(page.getByRole('heading',{name:'Import i kontrola',exact:true})).toBeVisible();
  await expect(page.getByText('Dane syntetyczne',{exact:true})).toBeVisible();
  expect(errors).toEqual([]);expect(external).toEqual([]);

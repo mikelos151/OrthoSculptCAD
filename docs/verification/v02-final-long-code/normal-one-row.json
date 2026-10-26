@@ -1,0 +1,53 @@
+{
+  "browser": "156.0.8078.4",
+  "caseCode": "DEMO-TT-REVIEW",
+  "measurementRows": 1,
+  "validMeasurementRows": 1,
+  "manualTapeCount": 0,
+  "geometrySha256": "dab325f3c4d0158fe94a772e0caec6becd1b98b61df2af24dbe4007fff4f8a65",
+  "overflow": [
+    {
+      "width": 1400,
+      "scroll": 1400,
+      "overflow": false
+    },
+    {
+      "width": 1032,
+      "scroll": 1032,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "pdf": {
+    "pageCount": 3,
+    "pages": [
+      {
+        "page": 1,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 32.0390625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      },
+      {
+        "page": 2,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 60.5390625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      },
+      {
+        "page": 3,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 292.2890625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      }
+    ],
+    "issues": [],
+    "literalHeading": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "checkedOn": "2026-10-26",
+  "command": "cargo build --release --locked --offline --manifest-path src-tauri/Cargo.toml",
+  "exitCode": 101,
+  "status": "blocked",
+  "primaryBlocker": "generic-array v0.14.7 build-script-build: Windows AppControl os error 4551",
+  "additionalCompilerExitCodesObserved": ["0xc000009a", "0xc0e90002"],
+  "securityPolicyChanged": false,
+  "nativeExecutableVerified": false,
+  "realWebViewIPCVerified": false,
+  "isolatedCoreTests": {"geometry": 20, "state": 5, "securityConfig": 2, "passed": true},
+  "note": "Core/state/config tests were independently executed after the failed full build. They do not establish a working Tauri executable."
+}

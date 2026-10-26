@@ -1,12 +1,18 @@
 import {invoke, isTauri} from '@tauri-apps/api/core';
 import type {MeshData,SliceResult} from './types';
 import {packMesh,unpackSlice} from './nativeProtocol';
-export interface SliceEngine {kind:'rust'|'typescript';slice:(z:number)=>Promise<SliceResult>}
+export interface SliceEngine {kind:'rust'|'typescript'|'worker';slice:(z:number)=>Promise<SliceResult>;dispose?:()=>void}
 export interface EngineDependencies {native:boolean;invoke:(command:string,args:unknown)=>Promise<unknown>}
 /** Both modes operate on the same imported mesh. There is never a synthetic fallback. */
 export async function createSliceEngine(mesh:MeshData,dependencies?:EngineDependencies):Promise<SliceEngine>{
   const native=dependencies?.native ?? isTauri();
   if(!native){
+    // Browser errors are surfaced, never silently moved onto the UI thread.
+    if(typeof window!=='undefined' || typeof Worker!=='undefined'){
+      const {createWorkerSliceEngine}=await import('./compute');
+      return createWorkerSliceEngine(mesh);
+    }
+    // Explicit Node/unit-test adapter: real TypeScript geometry, not browser Worker evidence.
     const {SliceIndex}=await import('./geometry');
     const index=new SliceIndex(mesh);
     return {kind:'typescript',slice:async(z)=>index.slice(z)};

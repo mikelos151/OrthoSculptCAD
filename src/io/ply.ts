@@ -32,14 +32,26 @@ export function parsePLY(bytes: Uint8Array, name = 'PLY'): MeshData {
   check(vertex && face && elements.indexOf(vertex) < elements.indexOf(face), 'PLY wymaga wierzchołków przed ścianami.');
   check(['x', 'y', 'z'].every(p => vertex.properties.some(q => q.name === p && !q.list)), 'Brak współrzędnych PLY.');
   check(face.properties.some(p => ['vertex_indices', 'vertex_index'].includes(p.name) && p.list), 'Brak indeksów PLY.');
-  const rgbProps = ['red', 'green', 'blue'].map(p => vertex.properties.find(q => q.name === p));
-  check(rgbProps.every(Boolean) || rgbProps.every(p => !p), 'Niekompletny RGB.');
-  check(rgbProps.every(p => !p || !p.list), 'RGB PLY wymaga trzech właściwości skalarnych; listowe kanały kolorów nie są obsługiwane.');
+  const rgbChannels = ['red', 'green', 'blue'];
+  for (const el of elements) {
+    const props = rgbChannels.map(name => el.properties.find(p => p.name === name));
+    check(props.every(Boolean) || props.every(p => !p), 'Niekompletny RGB PLY; zapisz trzy kanały red/green/blue.');
+    check(props.every(p => !p || !p.list), 'RGB PLY wymaga trzech właściwości skalarnych; listowe kanały kolorów nie są obsługiwane.');
+    check(!props.some(Boolean) || el === vertex || el === face, 'RGB PLY jest obsługiwany tylko dla vertex lub face; przekonwertuj kolory do wierzchołków.');
+    check(!el.properties.some(p => p.name === 'alpha'), 'Kanał alpha PLY nie jest obsługiwany; zapisz nieprzezroczysty RGB bez alpha.');
+  }
+  const vertexRGB = vertex.properties.some(p => p.name === 'red');
+  const faceRGB = face.properties.some(p => p.name === 'red');
+  check(!(vertexRGB && faceRGB), 'Niejednoznaczny RGB PLY: kolory vertex i face jednocześnie; zapisz tylko jedno źródło RGB.');
+
   let cursor = new TextEncoder().encode(prefix.slice(0, match.index + match[0].length)).length;
   const minimum = elements.reduce((sum, el) => sum + el.count * el.properties.reduce((s, p) => s + (format === 'ascii' ? 2 : sizes[p.list ?? p.type]), 0), 0);
   check(bytes.length - cursor >= minimum - (format === 'ascii' ? 1 : 0), 'Rozmiar PLY nie odpowiada zadeklarowanej liczbie elementów.');
   const positions = new Float32Array(vertex.count * 3);
-  const colors = rgbProps.every(Boolean) ? new Float32Array(vertex.count * 3) : undefined;
+  const colors = vertexRGB ? new Float32Array(vertex.count * 3) : undefined;
+  // Keep original topology. Compare incident face RGB before Float32 rounding;
+  // conflicting colours require an explicit vertex-RGB export, not seam splits.
+  const faceColors = faceRGB ? new Float64Array(vertex.count * 3).fill(-1) : undefined;
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength); const little = format !== 'binary_big_endian';
   const text = format === 'ascii' ? new TextDecoder().decode(bytes.subarray(cursor)) : ''; let token = 0;
   function read(type: string): number {
@@ -69,6 +81,7 @@ export function parsePLY(bytes: Uint8Array, name = 'PLY'): MeshData {
   const indices: number[] = [];
   for (const el of elements) for (let i = 0; i < el.count; i++) {
     let polygon: number[] | undefined;
+    const faceColor = el === face && faceRGB ? [0, 0, 0] : undefined;
     for (const p of el.properties) {
       if (p.list) {
         const length = count(read(p.list), 10_000, 'Lista PLY');
@@ -84,17 +97,27 @@ export function parsePLY(bytes: Uint8Array, name = 'PLY'): MeshData {
       } else {
         const value = read(p.type);
         if (el === vertex) {
-          const xyz = ['x', 'y', 'z'].indexOf(p.name); if (xyz >= 0) positions[i * 3 + xyz] = value;
-          const rgb = ['red', 'green', 'blue'].indexOf(p.name);
-          if (colors && rgb >= 0) {
-            const normalized = value / (['uchar', 'uint8'].includes(p.type) ? 255 : ['ushort', 'uint16'].includes(p.type) ? 65535 : 1);
-            check(normalized >= 0 && normalized <= 1, 'RGB PLY poza zakresem 0–1.'); colors[i * 3 + rgb] = normalized;
-          }
+          const xyz = ['x', 'y', 'z'].indexOf(p.name);
+          if (xyz >= 0) positions[i * 3 + xyz] = finite(Math.fround(value), 'Pozycja Float32 PLY');
+        }
+        const rgb = ['red', 'green', 'blue'].indexOf(p.name);
+        if ((el === vertex && colors || el === face && faceColors) && rgb >= 0) {
+          const normalized = value / (['uchar', 'uint8'].includes(p.type) ? 255 : ['ushort', 'uint16'].includes(p.type) ? 65535 : 1);
+          check(normalized >= 0 && normalized <= 1, 'RGB PLY poza zakresem 0–1.');
+          if (el === vertex) colors![i * 3 + rgb] = normalized;
+          else faceColor![rgb] = normalized;
         }
       }
     }
-    if (polygon) indices.push(...polygon);
+    if (polygon) {
+      if (faceColor) for (const id of polygon) for (let channel = 0; channel < 3; channel++) {
+        const offset = id * 3 + channel, previous = faceColors![offset];
+        check(previous === -1 || previous === faceColor[channel], 'Sprzeczne RGB ścian PLY przy wspólnym wierzchołku; wyeksportuj RGB vertex (kolory wierzchołków). Import nie rozdziela topologii dla szwów kolorów.');
+        faceColors![offset] = faceColor[channel];
+      }
+      indices.push(...polygon);
+    }
   }
-  const mesh: MeshData = { positions, indices: new Uint32Array(indices), colors, name, source: 'imported' };
+  const mesh: MeshData = { positions, indices: new Uint32Array(indices), colors: faceColors ? Float32Array.from(faceColors, x => x < 0 ? 0 : x) : colors, name, source: 'imported' };
   assertMesh(mesh); return mesh;
 }

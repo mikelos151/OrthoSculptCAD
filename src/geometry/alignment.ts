@@ -14,8 +14,20 @@ export function registerLandmarks(
   mesh: MeshData,
   points: { anterior: Vec3; lateral: Vec3; distal: Vec3 },
   flexionDegrees = 0,
+  side: 'left' | 'right' = 'right',
 ): MeshData {
+  return registerLandmarksDetailed(mesh, points, flexionDegrees, side).mesh;
+}
+
+/** Proper rigid transform, column-major, mapping the input mesh into patient coordinates. */
+export function registerLandmarksDetailed(
+  mesh: MeshData,
+  points: { anterior: Vec3; lateral: Vec3; distal: Vec3 },
+  flexionDegrees = 0,
+  side: 'left' | 'right' = 'right',
+): { mesh: MeshData; matrix: number[] } {
   assertMesh(mesh);
+  if (side !== 'left' && side !== 'right') throw new Error('Explicit left/right side required for laterality');
   for (const p of Object.values(points))
     if (p.length !== 3 || p.some((x) => !Number.isFinite(x)))
       throw new Error("Landmarks must be finite 3D points");
@@ -41,7 +53,8 @@ export function registerLandmarks(
     anterior = transverse(sub(points.anterior, points.distal));
   if (Math.hypot(...lateral) < 1e-6 || Math.hypot(...anterior) < 1e-6)
     throw new Error("Coincident/collinear projected landmarks");
-  const x = unit(lateral),
+  const lateralDirection = unit(lateral);
+  const x: Vec3 = side === 'left' ? [-lateralDirection[0], -lateralDirection[1], -lateralDirection[2]] : lateralDirection,
     projection = dot(anterior, x),
     orthogonal: Vec3 = [
       anterior[0] - projection * x[0],
@@ -59,13 +72,18 @@ export function registerLandmarks(
     c = Math.cos(r),
     s = Math.sin(r);
   const result = copyMesh(mesh);
+  const rowY: Vec3 = y.map((v, k) => c * v - s * z[k]) as Vec3;
+  const rowZ: Vec3 = y.map((v, k) => s * v + c * z[k]) as Vec3;
+  const matrix = [x[0], rowY[0], rowZ[0], 0, x[1], rowY[1], rowZ[1], 0, x[2], rowY[2], rowZ[2], 0,
+    -dot(points.distal, x), -dot(points.distal, rowY), -dot(points.distal, rowZ), 1];
   for (let i = 0; i < mesh.positions.length / 3; i++) {
     const d = sub(vertex(mesh, i), points.distal),
       dy = dot(d, y),
       dz = dot(d, z);
     result.positions.set([dot(d, x), c * dy - s * dz, s * dy + c * dz], i * 3);
   }
-  return result;
+  assertMesh(result);
+  return { mesh: result, matrix };
 }
 
 function orient(axis: Vec3): Vec3 {
@@ -73,25 +91,34 @@ function orient(axis: Vec3): Vec3 {
   for (let i = 1; i < 3; i++) if (Math.abs(axis[i]) > Math.abs(axis[k])) k = i;
   return axis[k] < 0 ? [-axis[0], -axis[1], -axis[2]] : axis;
 }
-/** Jacobi eigensolver on the actual symmetric vertex covariance matrix. No anatomical inference. */
+/** Exact area-integrated triangle moments: invariant to subdivision of the same surface. */
 function principalFrame(mesh: MeshData) {
   assertMesh(mesh);
-  const n = mesh.positions.length / 3;
+  // Relative coordinates avoid cancellation on translated scans.
+  const origin = vertex(mesh, mesh.indices[0]);
   const center: Vec3 = [0, 0, 0];
-  for (let i = 0; i < n; i++) {
-    const p = vertex(mesh, i);
-    for (let k = 0; k < 3; k++) center[k] += p[k] / n;
+  let area = 0;
+  for (let t = 0; t < mesh.indices.length; t += 3) {
+    const points = [0, 1, 2].map(k => sub(vertex(mesh, mesh.indices[t + k]), origin));
+    const weight = Math.hypot(...cross(sub(points[1], points[0]), sub(points[2], points[0]))) / 2;
+    area += weight;
+    for (let k = 0; k < 3; k++) center[k] += weight * (points[0][k] + points[1][k] + points[2][k]) / 3;
   }
+  if (!Number.isFinite(area) || area <= 1e-20) throw new Error('PCA needs non-degenerate surface area');
+  for (let k = 0; k < 3; k++) center[k] = center[k] / area + origin[k];
   const a = Array.from({ length: 3 }, () => [0, 0, 0]),
     v = [
       [1, 0, 0],
       [0, 1, 0],
       [0, 0, 1],
     ];
-  for (let i = 0; i < n; i++) {
-    const d = sub(vertex(mesh, i), center);
+  for (let t = 0; t < mesh.indices.length; t += 3) {
+    const d = [0, 1, 2].map(k => sub(vertex(mesh, mesh.indices[t + k]), center));
+    const weight = Math.hypot(...cross(sub(d[1], d[0]), sub(d[2], d[0]))) / (2 * area);
+    const sum = [0, 1, 2].map(k => d[0][k] + d[1][k] + d[2][k]);
     for (let j = 0; j < 3; j++)
-      for (let k = 0; k < 3; k++) a[j][k] += (d[j] * d[k]) / n;
+      for (let k = 0; k < 3; k++)
+        a[j][k] += weight * (sum[j] * sum[k] + d.reduce((s, p) => s + p[j] * p[k], 0)) / 12;
   }
   for (let iteration = 0; iteration < 64; iteration++) {
     let p = 0,
@@ -139,7 +166,10 @@ function principalFrame(mesh: MeshData) {
   return { x, y, z, center, eigenvalues: order.map((i) => a[i][i]) };
 }
 export function alignPCA(mesh: MeshData): MeshData {
-  const { x, y, z, center } = principalFrame(mesh);
+  const frame = principalFrame(mesh);
+  if (frame.eigenvalues[0] <= frame.eigenvalues[1] * 1.05)
+    throw new Error('Principal axis is ambiguous: insufficient elongation for proximal-axis inference');
+  const { x, y, z, center } = frame;
   const n = mesh.positions.length / 3;
   const result = copyMesh(mesh);
   for (let i = 0; i < n; i++) {
@@ -149,5 +179,6 @@ export function alignPCA(mesh: MeshData): MeshData {
   const min = getBounds(result).min[2];
   for (let i = 2; i < result.positions.length; i += 3)
     result.positions[i] -= min;
+  assertMesh(result);
   return result;
 }

@@ -1,0 +1,2677 @@
+{
+  "origin": {
+    "baseURL": "http://127.0.0.1:4176",
+    "indexSha256": "cada3026f94cfe647346bccbaabf83b39d6efa0266ba03c8424848ea28e1ed15",
+    "asset": "/assets/index-Ct_H4HMR.js",
+    "sha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "chromium": "156.0.8078.4"
+  },
+  "result": {
+    "session": 2,
+    "downloads": 5,
+    "events": 134,
+    "constructors": 20,
+    "maxComputeAlive": 2,
+    "maxDisplayAlive": 0,
+    "alerts": [],
+    "checkpoints": [
+      {
+        "label": "before-download-1",
+        "t": 6769
+      },
+      {
+        "label": "after-contours-1",
+        "t": 12854.900000035763
+      },
+      {
+        "label": "before-download-2",
+        "t": 13336.900000035763
+      },
+      {
+        "label": "after-contours-2",
+        "t": 19925.900000035763
+      },
+      {
+        "label": "before-download-3",
+        "t": 20596
+      },
+      {
+        "label": "after-contours-3",
+        "t": 27427.30000001192
+      },
+      {
+        "label": "before-download-4",
+        "t": 28079.600000023842
+      },
+      {
+        "label": "after-contours-4",
+        "t": 33883.90000003576
+      },
+      {
+        "label": "before-download-5",
+        "t": 34513.19999998808
+      },
+      {
+        "label": "after-contours-5",
+        "t": 41017.40000003576
+      }
+    ],
+    "privacy": {
+      "errors": [],
+      "external": [],
+      "violations": [],
+      "workers": [
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+        "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js"
+      ]
+    }
+  },
+  "events": [
+    {
+      "t": 1072.6000000238419,
+      "type": "constructor-attempt",
+      "workerId": 1,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at O (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:11496)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94650\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94775",
+      "alive": []
+    },
+    {
+      "t": 1072.800000011921,
+      "type": "constructor",
+      "workerId": 1,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 1,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 1073,
+      "type": "postMessage",
+      "workerId": 1,
+      "kind": "task",
+      "op": "topology",
+      "requestId": 1,
+      "generation": 1,
+      "alive": [
+        {
+          "workerId": 1,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 1
+        }
+      ]
+    },
+    {
+      "t": 1202.699999988079,
+      "type": "response",
+      "workerId": 1,
+      "requestId": 1,
+      "generation": 1,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 1,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 1
+        }
+      ]
+    },
+    {
+      "t": 1202.800000011921,
+      "type": "terminate",
+      "workerId": 1,
+      "alive": []
+    },
+    {
+      "t": 1202.9000000357628,
+      "type": "constructor-attempt",
+      "workerId": 2,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at O (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:11496)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94699",
+      "alive": []
+    },
+    {
+      "t": 1203.199999988079,
+      "type": "constructor",
+      "workerId": 2,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 2,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 1203.300000011921,
+      "type": "postMessage",
+      "workerId": 2,
+      "kind": "task",
+      "op": "analyze",
+      "requestId": 1,
+      "generation": 2,
+      "alive": [
+        {
+          "workerId": 2,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 2
+        }
+      ]
+    },
+    {
+      "t": 1336.9000000357628,
+      "type": "response",
+      "workerId": 2,
+      "requestId": 1,
+      "generation": 2,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 2,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 2
+        }
+      ]
+    },
+    {
+      "t": 1337,
+      "type": "terminate",
+      "workerId": 2,
+      "alive": []
+    },
+    {
+      "t": 1670.800000011921,
+      "type": "constructor-attempt",
+      "workerId": 3,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at O (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:11496)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94650\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94775",
+      "alive": []
+    },
+    {
+      "t": 1670.9000000357628,
+      "type": "constructor",
+      "workerId": 3,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 3,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 1671,
+      "type": "postMessage",
+      "workerId": 3,
+      "kind": "task",
+      "op": "topology",
+      "requestId": 1,
+      "generation": 3,
+      "alive": [
+        {
+          "workerId": 3,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 3
+        }
+      ]
+    },
+    {
+      "t": 1800.699999988079,
+      "type": "response",
+      "workerId": 3,
+      "requestId": 1,
+      "generation": 3,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 3,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 3
+        }
+      ]
+    },
+    {
+      "t": 1800.800000011921,
+      "type": "terminate",
+      "workerId": 3,
+      "alive": []
+    },
+    {
+      "t": 1800.9000000357628,
+      "type": "constructor-attempt",
+      "workerId": 4,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at O (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:11496)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94699",
+      "alive": []
+    },
+    {
+      "t": 1801,
+      "type": "constructor",
+      "workerId": 4,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 4,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 1801.1000000238419,
+      "type": "postMessage",
+      "workerId": 4,
+      "kind": "task",
+      "op": "analyze",
+      "requestId": 1,
+      "generation": 4,
+      "alive": [
+        {
+          "workerId": 4,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 4
+        }
+      ]
+    },
+    {
+      "t": 1930,
+      "type": "response",
+      "workerId": 4,
+      "requestId": 1,
+      "generation": 4,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 4,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 4
+        }
+      ]
+    },
+    {
+      "t": 1930.1000000238419,
+      "type": "terminate",
+      "workerId": 4,
+      "alive": []
+    },
+    {
+      "t": 2144.199999988079,
+      "type": "constructor-attempt",
+      "workerId": 5,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95292",
+      "alive": []
+    },
+    {
+      "t": 2144.300000011921,
+      "type": "constructor",
+      "workerId": 5,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 2144.400000035763,
+      "type": "postMessage",
+      "workerId": 5,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 5,
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 5
+        }
+      ]
+    },
+    {
+      "t": 2278.300000011921,
+      "type": "response",
+      "workerId": 5,
+      "requestId": 1,
+      "generation": 5,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 5
+        }
+      ]
+    },
+    {
+      "t": 2412.900000035763,
+      "type": "postMessage",
+      "workerId": 5,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 5,
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 5
+        }
+      ]
+    },
+    {
+      "t": 2445.100000023842,
+      "type": "response",
+      "workerId": 5,
+      "requestId": 2,
+      "generation": 5,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 5
+        }
+      ]
+    },
+    {
+      "t": 2815.199999988079,
+      "type": "terminate",
+      "workerId": 5,
+      "alive": []
+    },
+    {
+      "t": 2960.400000035763,
+      "type": "constructor-attempt",
+      "workerId": 6,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at O (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:11496)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:103634\n    at ur (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:93107)",
+      "alive": []
+    },
+    {
+      "t": 2960.600000023842,
+      "type": "constructor",
+      "workerId": 6,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 6,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 2960.800000011921,
+      "type": "postMessage",
+      "workerId": 6,
+      "kind": "task",
+      "op": "zone",
+      "requestId": 1,
+      "generation": 6,
+      "alive": [
+        {
+          "workerId": 6,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "zone",
+          "requestId": 1,
+          "generation": 6
+        }
+      ]
+    },
+    {
+      "t": 3074.100000023842,
+      "type": "response",
+      "workerId": 6,
+      "requestId": 1,
+      "generation": 6,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 6,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "zone",
+          "requestId": 1,
+          "generation": 6
+        }
+      ]
+    },
+    {
+      "t": 3074.199999988079,
+      "type": "terminate",
+      "workerId": 6,
+      "alive": []
+    },
+    {
+      "t": 3270.900000035763,
+      "type": "constructor-attempt",
+      "workerId": 7,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at O (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:11496)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94650\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94775",
+      "alive": []
+    },
+    {
+      "t": 3271.199999988079,
+      "type": "constructor",
+      "workerId": 7,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 7,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 3271.199999988079,
+      "type": "postMessage",
+      "workerId": 7,
+      "kind": "task",
+      "op": "topology",
+      "requestId": 1,
+      "generation": 7,
+      "alive": [
+        {
+          "workerId": 7,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "t": 3331.600000023842,
+      "type": "response",
+      "workerId": 7,
+      "requestId": 1,
+      "generation": 7,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 7,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "t": 3331.699999988079,
+      "type": "terminate",
+      "workerId": 7,
+      "alive": []
+    },
+    {
+      "t": 3331.699999988079,
+      "type": "constructor-attempt",
+      "workerId": 8,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at O (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:11496)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:94699",
+      "alive": []
+    },
+    {
+      "t": 3331.900000035763,
+      "type": "constructor",
+      "workerId": 8,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 8,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 3332,
+      "type": "postMessage",
+      "workerId": 8,
+      "kind": "task",
+      "op": "analyze",
+      "requestId": 1,
+      "generation": 8,
+      "alive": [
+        {
+          "workerId": 8,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 8
+        }
+      ]
+    },
+    {
+      "t": 3514.100000023842,
+      "type": "response",
+      "workerId": 8,
+      "requestId": 1,
+      "generation": 8,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 8,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 8
+        }
+      ]
+    },
+    {
+      "t": 3514.199999988079,
+      "type": "terminate",
+      "workerId": 8,
+      "alive": []
+    },
+    {
+      "t": 3693.5,
+      "type": "constructor-attempt",
+      "workerId": 9,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95292",
+      "alive": []
+    },
+    {
+      "t": 3693.800000011921,
+      "type": "constructor",
+      "workerId": 9,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 3694,
+      "type": "postMessage",
+      "workerId": 9,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 9,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 3884.600000023842,
+      "type": "response",
+      "workerId": 9,
+      "requestId": 1,
+      "generation": 9,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 4119.600000023842,
+      "type": "postMessage",
+      "workerId": 9,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 9,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 4176.5,
+      "type": "response",
+      "workerId": 9,
+      "requestId": 2,
+      "generation": 9,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 5142.199999988079,
+      "type": "constructor-attempt",
+      "workerId": 10,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95824\n    at Tl (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:95232)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118519)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:119736)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118565)",
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 5142.300000011921,
+      "type": "constructor",
+      "workerId": 10,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 5142.400000035763,
+      "type": "postMessage",
+      "workerId": 10,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 10,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 5414.300000011921,
+      "type": "response",
+      "workerId": 10,
+      "requestId": 1,
+      "generation": 10,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 5414.600000023842,
+      "type": "postMessage",
+      "workerId": 10,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 10,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 5469.199999988079,
+      "type": "response",
+      "workerId": 10,
+      "requestId": 2,
+      "generation": 10,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 6769,
+      "type": "checkpoint",
+      "label": "before-download-1",
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 10748.199999988079,
+      "type": "terminate",
+      "workerId": 9,
+      "alive": [
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 10748.199999988079,
+      "type": "terminate",
+      "workerId": 10,
+      "alive": []
+    },
+    {
+      "t": 11019.699999988079,
+      "type": "constructor-attempt",
+      "workerId": 11,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95824\n    at Tl (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:95232)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118519)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:119736)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118565)",
+      "alive": []
+    },
+    {
+      "t": 11020.100000023842,
+      "type": "constructor",
+      "workerId": 11,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 11020.300000011921,
+      "type": "postMessage",
+      "workerId": 11,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 11,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 11
+        }
+      ]
+    },
+    {
+      "t": 11250.100000023842,
+      "type": "constructor-attempt",
+      "workerId": 12,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95292",
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 11
+        }
+      ]
+    },
+    {
+      "t": 11250.400000035763,
+      "type": "constructor",
+      "workerId": 12,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 11250.5,
+      "type": "postMessage",
+      "workerId": 12,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 12,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 11405.199999988079,
+      "type": "response",
+      "workerId": 11,
+      "requestId": 1,
+      "generation": 11,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 11405.400000035763,
+      "type": "postMessage",
+      "workerId": 11,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 11,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 11480,
+      "type": "response",
+      "workerId": 11,
+      "requestId": 2,
+      "generation": 11,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 11557.800000011921,
+      "type": "response",
+      "workerId": 12,
+      "requestId": 1,
+      "generation": 12,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 11807.400000035763,
+      "type": "postMessage",
+      "workerId": 12,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 12,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 11860.400000035763,
+      "type": "response",
+      "workerId": 12,
+      "requestId": 2,
+      "generation": 12,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 12854.900000035763,
+      "type": "checkpoint",
+      "label": "after-contours-1",
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 13336.900000035763,
+      "type": "checkpoint",
+      "label": "before-download-2",
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 11
+        },
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 16912.80000001192,
+      "type": "terminate",
+      "workerId": 12,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 11
+        }
+      ]
+    },
+    {
+      "t": 16912.80000001192,
+      "type": "terminate",
+      "workerId": 11,
+      "alive": []
+    },
+    {
+      "t": 17191.5,
+      "type": "constructor-attempt",
+      "workerId": 13,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95824\n    at Tl (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:95232)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118519)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:119736)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118565)",
+      "alive": []
+    },
+    {
+      "t": 17191.80000001192,
+      "type": "constructor",
+      "workerId": 13,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 17192,
+      "type": "postMessage",
+      "workerId": 13,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 13,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 13
+        }
+      ]
+    },
+    {
+      "t": 17324.19999998808,
+      "type": "constructor-attempt",
+      "workerId": 14,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95292",
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 13
+        }
+      ]
+    },
+    {
+      "t": 17324.5,
+      "type": "constructor",
+      "workerId": 14,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 17324.600000023842,
+      "type": "postMessage",
+      "workerId": 14,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 14,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 17565.600000023842,
+      "type": "response",
+      "workerId": 13,
+      "requestId": 1,
+      "generation": 13,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 17565.69999998808,
+      "type": "postMessage",
+      "workerId": 13,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 13,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 17645.900000035763,
+      "type": "response",
+      "workerId": 13,
+      "requestId": 2,
+      "generation": 13,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 17646.19999998808,
+      "type": "response",
+      "workerId": 14,
+      "requestId": 1,
+      "generation": 14,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 17956.5,
+      "type": "postMessage",
+      "workerId": 14,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 14,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 18031.69999998808,
+      "type": "response",
+      "workerId": 14,
+      "requestId": 2,
+      "generation": 14,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 19925.900000035763,
+      "type": "checkpoint",
+      "label": "after-contours-2",
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 20596,
+      "type": "checkpoint",
+      "label": "before-download-3",
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 13
+        },
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 24752.80000001192,
+      "type": "terminate",
+      "workerId": 14,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 13
+        }
+      ]
+    },
+    {
+      "t": 24752.80000001192,
+      "type": "terminate",
+      "workerId": 13,
+      "alive": []
+    },
+    {
+      "t": 25031.5,
+      "type": "constructor-attempt",
+      "workerId": 15,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95824\n    at Tl (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:95232)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118519)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:119736)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118565)",
+      "alive": []
+    },
+    {
+      "t": 25031.69999998808,
+      "type": "constructor",
+      "workerId": 15,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 25031.900000035763,
+      "type": "postMessage",
+      "workerId": 15,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 15,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 25240.5,
+      "type": "constructor-attempt",
+      "workerId": 16,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95292",
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 25241,
+      "type": "constructor",
+      "workerId": 16,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 25241.100000023842,
+      "type": "postMessage",
+      "workerId": 16,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 16,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 25401.100000023842,
+      "type": "response",
+      "workerId": 15,
+      "requestId": 1,
+      "generation": 15,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 25401.30000001192,
+      "type": "postMessage",
+      "workerId": 15,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 15,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 25475.400000035763,
+      "type": "response",
+      "workerId": 15,
+      "requestId": 2,
+      "generation": 15,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 25554.30000001192,
+      "type": "response",
+      "workerId": 16,
+      "requestId": 1,
+      "generation": 16,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 25851.69999998808,
+      "type": "postMessage",
+      "workerId": 16,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 16,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 25906.5,
+      "type": "response",
+      "workerId": 16,
+      "requestId": 2,
+      "generation": 16,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 27427.30000001192,
+      "type": "checkpoint",
+      "label": "after-contours-3",
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 28079.600000023842,
+      "type": "checkpoint",
+      "label": "before-download-4",
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        },
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 31713,
+      "type": "terminate",
+      "workerId": 16,
+      "alive": [
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 31713.100000023842,
+      "type": "terminate",
+      "workerId": 15,
+      "alive": []
+    },
+    {
+      "t": 31981.600000023842,
+      "type": "constructor-attempt",
+      "workerId": 17,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95824\n    at Tl (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:95232)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118519)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:119736)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118565)",
+      "alive": []
+    },
+    {
+      "t": 31981.900000035763,
+      "type": "constructor",
+      "workerId": 17,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 31982,
+      "type": "postMessage",
+      "workerId": 17,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 17,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 17
+        }
+      ]
+    },
+    {
+      "t": 32127,
+      "type": "constructor-attempt",
+      "workerId": 18,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95292",
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 17
+        }
+      ]
+    },
+    {
+      "t": 32127.400000035763,
+      "type": "constructor",
+      "workerId": 18,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 32127.69999998808,
+      "type": "postMessage",
+      "workerId": 18,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 18,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 32203.69999998808,
+      "type": "response",
+      "workerId": 17,
+      "requestId": 1,
+      "generation": 17,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 32203.900000035763,
+      "type": "postMessage",
+      "workerId": 17,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 17,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 32280,
+      "type": "response",
+      "workerId": 17,
+      "requestId": 2,
+      "generation": 17,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 32399.19999998808,
+      "type": "response",
+      "workerId": 18,
+      "requestId": 1,
+      "generation": 18,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 32607.100000023842,
+      "type": "postMessage",
+      "workerId": 18,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 18,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 32657.100000023842,
+      "type": "response",
+      "workerId": 18,
+      "requestId": 2,
+      "generation": 18,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 33883.90000003576,
+      "type": "checkpoint",
+      "label": "after-contours-4",
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 34513.19999998808,
+      "type": "checkpoint",
+      "label": "before-download-5",
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 17
+        },
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 18
+        }
+      ]
+    },
+    {
+      "t": 38153.80000001192,
+      "type": "terminate",
+      "workerId": 18,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 17
+        }
+      ]
+    },
+    {
+      "t": 38154,
+      "type": "terminate",
+      "workerId": 17,
+      "alive": []
+    },
+    {
+      "t": 38421.5,
+      "type": "constructor-attempt",
+      "workerId": 19,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95824\n    at Tl (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:95232)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118519)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:119736)\n    at Gu (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118292)\n    at Ku (http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:9:118565)",
+      "alive": []
+    },
+    {
+      "t": 38421.80000001192,
+      "type": "constructor",
+      "workerId": 19,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 38422,
+      "type": "postMessage",
+      "workerId": 19,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 19,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 19
+        }
+      ]
+    },
+    {
+      "t": 38627.69999998808,
+      "type": "constructor-attempt",
+      "workerId": 20,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new T (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:8498)\n    at E (http://127.0.0.1:4176/assets/compute-BkH7aCPZ.js:2:10234)\n    at http://127.0.0.1:4176/assets/index-Ct_H4HMR.js:4773:95292",
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 19
+        }
+      ]
+    },
+    {
+      "t": 38627.90000003576,
+      "type": "constructor",
+      "workerId": 20,
+      "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 38628,
+      "type": "postMessage",
+      "workerId": 20,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 20,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 38771.10000002384,
+      "type": "response",
+      "workerId": 19,
+      "requestId": 1,
+      "generation": 19,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 38771.30000001192,
+      "type": "postMessage",
+      "workerId": 19,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 19,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 38831.40000003576,
+      "type": "response",
+      "workerId": 19,
+      "requestId": 2,
+      "generation": 19,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 38831.60000002384,
+      "type": "response",
+      "workerId": 20,
+      "requestId": 1,
+      "generation": 20,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 39078.5,
+      "type": "postMessage",
+      "workerId": 20,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 20,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 39152.69999998808,
+      "type": "response",
+      "workerId": 20,
+      "requestId": 2,
+      "generation": 20,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 41017.40000003576,
+      "type": "checkpoint",
+      "label": "after-contours-5",
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 19
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        }
+      ]
+    }
+  ]
+}

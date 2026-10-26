@@ -1,0 +1,1061 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--reporter=line,json",
+      "--output=docs/screenshots/v02-e2e/candidate-final-results",
+      "--global-timeout=900000"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 900000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/docs/screenshots/v02-e2e/candidate-final-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "import-security.spec.ts",
+      "file": "import-security.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "coloured PLY import preserves RGB through project download and blocks invalid input",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5717,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:50:35.182Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-b369de2ba1f4c515d642",
+          "file": "import-security.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "OBJ references cannot trigger external texture requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1812,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:50:41.028Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-47be64e5d42eab7231d6",
+          "file": "import-security.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "oversized project metadata is rejected before File.text is called",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1277,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:50:42.901Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-5fc985613d2c4a45a895",
+          "file": "import-security.spec.ts",
+          "line": 44,
+          "column": 1
+        },
+        {
+          "title": "tablet layout does not overflow viewport and retains all five stages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1658,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:50:44.186Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-7aed83aaed849101d7e5",
+          "file": "import-security.spec.ts",
+          "line": 58,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "review-fixes.spec.ts",
+      "file": "review-fixes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "overflowing meter conversion keeps the original UI and unconfirmed model without pageerror",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4748,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:50:45.985Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-8c3e33119b872e1db70b",
+          "file": "review-fixes.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "empty and zero-percent zones warn without changing geometry, baseline, measurements or undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32368,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:50:50.743Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "empty-zone-generic-error.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\attachments\\empty-zone-generic-error-png-2205f3ea7c60400934b7944d7730c7f0b908e258.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-7bea35c9ed364d6ba6d6",
+          "file": "review-fixes.spec.ts",
+          "line": 70,
+          "column": 1
+        },
+        {
+          "title": "list RGB PLY is refused visibly and preserves the current project",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12451,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:51:23.225Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-673c998961f1d04c4fde",
+          "file": "review-fixes.spec.ts",
+          "line": 113,
+          "column": 1
+        },
+        {
+          "title": "coarse calibration reports numeric residual and retains manual tape evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14426,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:51:35.690Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-d842caa315712d48de93",
+          "file": "review-fixes.spec.ts",
+          "line": 130,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v02-gesture-isolation.spec.ts",
+      "file": "v02-gesture-isolation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "held brush then keyboard Undo must not restore the undone zone geometry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23932,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:51:50.140Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-state",
+                      "contentType": "application/json",
+                      "body": "eyJwcml2YWN5Ijp7ImVycm9ycyI6W10sImV4dGVybmFsIjpbXX0sImV2aWRlbmNlIjp7InN0YXJ0cyI6MSwicmVsZWFzZXMiOjE1LCJzdHJva2VzIjowLCJwb2ludGVySWQiOjF9LCJmYXJYIjoyMCwicmV2aXNpb24iOjQsImtpbmRzIjpbInN0YXJ0IiwiaW1wb3J0IiwidW5pdHMiLCJzY2FsZS16b25lIiwidW5kbyJdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7c39e8edac6af0d5f48e-3c879c9c798acd910f71",
+          "file": "v02-gesture-isolation.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "held brush then keyboard New Project and confirm must never resurrect the old scan",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13674,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:52:14.083Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-state",
+                      "contentType": "application/json",
+                      "body": "eyJwcml2YWN5Ijp7ImVycm9ycyI6W10sImV4dGVybmFsIjpbXX0sImV2aWRlbmNlIjp7InN0YXJ0cyI6MSwicmVsZWFzZXMiOjYsInN0cm9rZXMiOjAsInBvaW50ZXJJZCI6MX0sImhlYWRlciI6IlBSWkVTVFJaRcWDIFJPQk9DWkFcbkNBU0UgwrcgcjAgwrcgTm93eSBwcm9qZWt0In0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7c39e8edac6af0d5f48e-8f78d5c0f831bcf77b1d",
+          "file": "v02-gesture-isolation.spec.ts",
+          "line": 77,
+          "column": 1
+        },
+        {
+          "title": "native capture loss cancels without history; next multi-dab gesture remains one exact undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 40279,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:52:27.774Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-state",
+                      "contentType": "application/json",
+                      "body": "eyJwcml2YWN5Ijp7ImVycm9ycyI6W10sImV4dGVybmFsIjpbXX0sImV2aWRlbmNlIjp7InN0YXJ0cyI6MiwicmVsZWFzZXMiOjIxLCJzdHJva2VzIjoxLCJwb2ludGVySWQiOjF9LCJkYWJzIjo3fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7c39e8edac6af0d5f48e-e00aefdd6ca55dfcbb59",
+          "file": "v02-gesture-isolation.spec.ts",
+          "line": 102,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v02-privacy-revisions.spec.ts",
+      "file": "v02-privacy-revisions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "encrypted browser download authenticates independently, wrong password and tamper retain the previous mesh, correct password restores RGB, baseline and metadata",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 54946,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:53:08.083Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "encrypted-wrong-password.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-encr-d62d8-s-RGB-baseline-and-metadata\\attachments\\encrypted-wrong-password-png-fdc3357f7ce2a2af01c7efa641d66f96ef0b6bfb.png"
+                    },
+                    {
+                      "name": "encrypted-restored-rgb.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-encr-d62d8-s-RGB-baseline-and-metadata\\attachments\\encrypted-restored-rgb-png-829cd369db1ff9803e38ab7a1f722f795f7e22e6.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-b2bbcc08695b80d52764",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "unsaved replacement supports Stay and Escape after copy download, and real beforeunload dismiss preserves work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28195,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:54:03.042Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "unsaved-replacement-guard.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-unsa-cebd8-load-dismiss-preserves-work\\attachments\\unsaved-replacement-guard-png-9d03c89f493b64f381c343b1846dec340ec75c0f.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-972fc83a7faeda241d2d",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 102,
+          "column": 1
+        },
+        {
+          "title": "v1 migration discloses unknown history, saved left registration is invalidated by right metadata without reflection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29422,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:54:31.252Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "metadata-side-no-reflection.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-v1-m-96c80-metadata-without-reflection\\attachments\\metadata-side-no-reflection-png-5bdd77916b7407e526c025fbee328ec2cf8ce8d2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-25034c8ad1e0595a32ec",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 134,
+          "column": 1
+        },
+        {
+          "title": "downloaded review report has exact current geometry hash and revision, absent tape evidence and restrictive CSP with zero external requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14144,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:55:00.689Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "review-report-current-revision.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-down-33d80-with-zero-external-requests\\attachments\\review-report-current-revision-png-5b261d2355d0104102e4c398cabd52215d6e6916.png"
+                    },
+                    {
+                      "name": "report-fingerprint",
+                      "contentType": "application/json",
+                      "body": "eyJyZXZpc2lvbiI6NCwiaGFzaCI6IjA3NDk2NmE4MDM5ZDgzY2UzMGRhZTNkNWFiMGNmNmZlNWU4MzM0MjYwNzk4ZTBlM2FlYmZmM2E4MDcyNDc3M2UiLCJ0YXBlQ291bnQiOjAsImV4dGVybmFsUmVxdWVzdHMiOltdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-523b176743b305b7e5d9",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 172,
+          "column": 1
+        },
+        {
+          "title": "all five stages render without document overflow at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6383,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:55:14.848Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "layout-1024-step-1.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-1-png-fa8aad63b64d9d8372f96ed0260b334be9457d0f.png"
+                    },
+                    {
+                      "name": "layout-1024-step-2.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-2-png-f189388eab269cd9a032cd1833ee61b69a7094df.png"
+                    },
+                    {
+                      "name": "layout-1024-step-3.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-3-png-3b48b1afd0312043dc7a72ef483ae08156677a12.png"
+                    },
+                    {
+                      "name": "layout-1024-step-4.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-4-png-afabe1e627ee8c98897fc60a1cae7f00be54809d.png"
+                    },
+                    {
+                      "name": "layout-1024-step-5.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-5-png-75d10b51aa22bb355cbd3d5f3224bbc858897ef7.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-917f9dd245dedc675eea",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 215,
+          "column": 34
+        },
+        {
+          "title": "all five stages render without document overflow at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6030,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:55:21.246Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "layout-390-step-1.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-1-png-29a1d30f739d1cd0ef2c9eb6689717af9237f543.png"
+                    },
+                    {
+                      "name": "layout-390-step-2.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-2-png-004a2e33217c8a5fa38741274c4b3e0e6afbad15.png"
+                    },
+                    {
+                      "name": "layout-390-step-3.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-3-png-804c1baf16fd95e2a7fe6875aa7d284748f74a83.png"
+                    },
+                    {
+                      "name": "layout-390-step-4.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-4-png-6f0ccccf4fcd2f9b45481ecc7d362b83415c4d5e.png"
+                    },
+                    {
+                      "name": "layout-390-step-5.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-5-png-715f12f3f828aafcd2baae6876c5ac845671da9e.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-017ea0d9cc7037810ef4",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 215,
+          "column": 34
+        }
+      ]
+    },
+    {
+      "title": "v02-workbench.spec.ts",
+      "file": "v02-workbench.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real multi-point RGB brush stroke is one journal event and undo entry, heatmap preserves source RGB, undo restores exact baseline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:55:27.303Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "brush-real-stroke-source-rgb.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-workbench-real-multi-p-5f706-ndo-restores-exact-baseline\\attachments\\brush-real-stroke-source-rgb-png-5432d86acd69b5bc9eaafa86f2b1ba716a1915e9.png"
+                    },
+                    {
+                      "name": "real-worker-observations",
+                      "contentType": "application/json",
+                      "body": "eyJjc3AiOiJkZWZhdWx0LXNyYyAnc2VsZic7IHNjcmlwdC1zcmMgJ3NlbGYnOyBzdHlsZS1zcmMgJ3NlbGYnICd1bnNhZmUtaW5saW5lJzsgaW1nLXNyYyAnc2VsZicgZGF0YTogYmxvYjo7IGZvbnQtc3JjICdzZWxmJzsgY29ubmVjdC1zcmMgJ3NlbGYnOyB3b3JrZXItc3JjICdzZWxmJyBibG9iOjsgb2JqZWN0LXNyYyAnbm9uZSc7IGZyYW1lLXNyYyAnbm9uZSc7IGJhc2UtdXJpICdzZWxmJzsgZm9ybS1hY3Rpb24gJ25vbmUnIiwiZXJyb3JzIjpbXSwiZXh0ZXJuYWwiOltdLCJ2aW9sYXRpb25zIjpbXSwid29ya2VycyI6WyJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL2Rpc3BsYXkud29ya2VyLURuVXM5YUI2LmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL2Rpc3BsYXkud29ya2VyLURuVXM5YUI2LmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIl0sInN0cm9rZURhYnMiOjl9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-09fe0bf966ec63893a17",
+          "file": "v02-workbench.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "comparison renders distinct same-Z reference and current SVG geometry plus real 3D viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 30767,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:56:05.895Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "comparison-actual-2d-and-3d.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-workbench-comparison-r-38dfd-metry-plus-real-3D-viewport\\attachments\\comparison-actual-2d-and-3d-png-0dcc9a2cb0f8491301506a98692cfcf5aeb888b1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-ac4b22c5aaae556c983e",
+          "file": "v02-workbench.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "app cancellation after actual Worker dispatch terminates the task and prevents cancelled geometry or revision publication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20009,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:56:36.677Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "cancelled-real-worker-no-publication.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\v02-workbench-app-cancella-51ab8-try-or-revision-publication\\attachments\\cancelled-real-worker-no-publication-png-1ab951bd925c212ed1443080dd6fbd032f9d09f6.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-9918c0f4bbcff3b1aa89",
+          "file": "v02-workbench.spec.ts",
+          "line": 96,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v02-worker-budget.spec.ts",
+      "file": "v02-worker-budget.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "E2E-02: project download with active comparison never exhausts native compute Worker budget",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 189284,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:56:56.901Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "worker-budget-summary",
+                      "contentType": "application/json",
+                      "body": "eyJvcmlnaW4iOnsiYmFzZVVSTCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDE3NiIsImluZGV4U2hhMjU2IjoiY2FkYTMwMjZmOTRjZmU2NDczNDZiY2NiYWFiZjgzYjM5ZDZlZmEwMjY2YmEwM2M4NDI0ODQ4ZWEyOGUxZWQxNSIsImFzc2V0IjoiL2Fzc2V0cy9pbmRleC1DdF9INEhNUi5qcyIsInNoYTI1NiI6IjA4YjgzNGExYjE4ZjczZWMxOGU5MDE3ZGFjYTY3YTI3MWRiYWI0NGQxZTc0OTJlZWQ1YzVhYjMyMDI5M2QzZGQiLCJjaHJvbWl1bSI6IjE1Ni4wLjgwNzguNCJ9LCJmcmVzaENvbnRleHRzIjo0LCJkb3dubG9hZHMiOjIwLCJyZXN1bHRzIjpbeyJzZXNzaW9uIjoxLCJkb3dubG9hZHMiOjUsImV2ZW50cyI6MTM0LCJjb25zdHJ1Y3RvcnMiOjIwLCJtYXhDb21wdXRlQWxpdmUiOjIsIm1heERpc3BsYXlBbGl2ZSI6MCwiYWxlcnRzIjpbXSwiY2hlY2twb2ludHMiOlt7ImxhYmVsIjoiYmVmb3JlLWRvd25sb2FkLTEiLCJ0Ijo3NTQ5LjM5OTk5OTk3NjE1OH0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTEiLCJ0IjoxMzE0OS41OTk5OTk5NjQyMzd9LHsibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMiIsInQiOjEzNjExLjc5OTk5OTk1MjMxNn0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTIiLCJ0IjoxOTA0Mi44OTk5OTk5NzYxNTh9LHsibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMyIsInQiOjE5NDQ0LjU5OTk5OTk2NDIzN30seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTMiLCJ0IjoyNDU0Mi41fSx7ImxhYmVsIjoiYmVmb3JlLWRvd25sb2FkLTQiLCJ0IjoyNTIxMi42OTk5OTk5ODgwOH0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTQiLCJ0IjozMjEwMC41fSx7ImxhYmVsIjoiYmVmb3JlLWRvd25sb2FkLTUiLCJ0IjozMjYwMS44OTk5OTk5NzYxNTh9LHsibGFiZWwiOiJhZnRlci1jb250b3Vycy01IiwidCI6MzY2Mjl9XSwicHJpdmFjeSI6eyJlcnJvcnMiOltdLCJleHRlcm5hbCI6W10sInZpb2xhdGlvbnMiOltdLCJ3b3JrZXJzIjpbImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiXX19LHsic2Vzc2lvbiI6MiwiZG93bmxvYWRzIjo1LCJldmVudHMiOjEzNCwiY29uc3RydWN0b3JzIjoyMCwibWF4Q29tcHV0ZUFsaXZlIjoyLCJtYXhEaXNwbGF5QWxpdmUiOjAsImFsZXJ0cyI6W10sImNoZWNrcG9pbnRzIjpbeyJsYWJlbCI6ImJlZm9yZS1kb3dubG9hZC0xIiwidCI6Njc2OX0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTEiLCJ0IjoxMjg1NC45MDAwMDAwMzU3NjN9LHsibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMiIsInQiOjEzMzM2LjkwMDAwMDAzNTc2M30seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTIiLCJ0IjoxOTkyNS45MDAwMDAwMzU3NjN9LHsibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMyIsInQiOjIwNTk2fSx7ImxhYmVsIjoiYWZ0ZXItY29udG91cnMtMyIsInQiOjI3NDI3LjMwMDAwMDAxMTkyfSx7ImxhYmVsIjoiYmVmb3JlLWRvd25sb2FkLTQiLCJ0IjoyODA3OS42MDAwMDAwMjM4NDJ9LHsibGFiZWwiOiJhZnRlci1jb250b3Vycy00IiwidCI6MzM4ODMuOTAwMDAwMDM1NzZ9LHsibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtNSIsInQiOjM0NTEzLjE5OTk5OTk4ODA4fSx7ImxhYmVsIjoiYWZ0ZXItY29udG91cnMtNSIsInQiOjQxMDE3LjQwMDAwMDAzNTc2fV0sInByaXZhY3kiOnsiZXJyb3JzIjpbXSwiZXh0ZXJuYWwiOltdLCJ2aW9sYXRpb25zIjpbXSwid29ya2VycyI6WyJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIl19fSx7InNlc3Npb24iOjMsImRvd25sb2FkcyI6NSwiZXZlbnRzIjoxMzQsImNvbnN0cnVjdG9ycyI6MjAsIm1heENvbXB1dGVBbGl2ZSI6MiwibWF4RGlzcGxheUFsaXZlIjowLCJhbGVydHMiOltdLCJjaGVja3BvaW50cyI6W3sibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMSIsInQiOjExNDI5Ljg5OTk5OTk3NjE1OH0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTEiLCJ0IjoxODQ1NC4xOTk5OTk5ODgwOH0seyJsYWJlbCI6ImJlZm9yZS1kb3dubG9hZC0yIiwidCI6MTkxMzkuNjk5OTk5OTg4MDh9LHsibGFiZWwiOiJhZnRlci1jb250b3Vycy0yIiwidCI6MjYyMjguNX0seyJsYWJlbCI6ImJlZm9yZS1kb3dubG9hZC0zIiwidCI6MjY4OTcuNX0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTMiLCJ0IjozNDMzMi4wOTk5OTk5NjQyNH0seyJsYWJlbCI6ImJlZm9yZS1kb3dubG9hZC00IiwidCI6MzUwMDkuMDk5OTk5OTY0MjR9LHsibGFiZWwiOiJhZnRlci1jb250b3Vycy00IiwidCI6NDIyNTAuNzk5OTk5OTUyMzE2fSx7ImxhYmVsIjoiYmVmb3JlLWRvd25sb2FkLTUiLCJ0Ijo0MjkzMH0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTUiLCJ0Ijo1MDEyOC4xOTk5OTk5ODgwOH1dLCJwcml2YWN5Ijp7ImVycm9ycyI6W10sImV4dGVybmFsIjpbXSwidmlvbGF0aW9ucyI6W10sIndvcmtlcnMiOlsiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyJdfX0seyJzZXNzaW9uIjo0LCJkb3dubG9hZHMiOjUsImV2ZW50cyI6MTM0LCJjb25zdHJ1Y3RvcnMiOjIwLCJtYXhDb21wdXRlQWxpdmUiOjIsIm1heERpc3BsYXlBbGl2ZSI6MCwiYWxlcnRzIjpbXSwiY2hlY2twb2ludHMiOlt7ImxhYmVsIjoiYmVmb3JlLWRvd25sb2FkLTEiLCJ0IjoxMTM5Ny45MDAwMDAwMzU3NjN9LHsibGFiZWwiOiJhZnRlci1jb250b3Vycy0xIiwidCI6MTc2MDEuMTAwMDAwMDIzODQyfSx7ImxhYmVsIjoiYmVmb3JlLWRvd25sb2FkLTIiLCJ0IjoxODA3Ni4xOTk5OTk5ODgwOH0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTIiLCJ0IjoyMzI0MS45MDAwMDAwMzU3NjN9LHsibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMyIsInQiOjIzNzczLjkwMDAwMDAzNTc2M30seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTMiLCJ0IjozMDYxMS4xMDAwMDAwMjM4NDJ9LHsibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtNCIsInQiOjMxMjU0LjYwMDAwMDAyMzg0Mn0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTQiLCJ0IjozODA2NC42OTk5OTk5ODgwOH0seyJsYWJlbCI6ImJlZm9yZS1kb3dubG9hZC01IiwidCI6Mzg2OTMuMzAwMDAwMDExOTJ9LHsibGFiZWwiOiJhZnRlci1jb250b3Vycy01IiwidCI6NDQ1NDd9XSwicHJpdmFjeSI6eyJlcnJvcnMiOltdLCJleHRlcm5hbCI6W10sInZpb2xhdGlvbnMiOltdLCJ3b3JrZXJzIjpbImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiXX19XSwiZmFpbHVyZXMiOltdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3f9098daee24a37c3475-5fa891d3755075ed5692",
+          "file": "v02-worker-budget.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workflow.spec.ts",
+      "file": "workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "synthetic five-step workflow uses real geometry and exports round-trippable files",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 73862,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T11:00:06.332Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "five-step-export.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\candidate-final-results\\workflow-synthetic-five-st-2ac34-ports-round-trippable-files\\attachments\\five-step-export-png-0377c6bd8be39513e4372d26589c8bbf5aee82a3.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-cb3130c7558a454a28f7",
+          "file": "workflow.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T10:50:34.691Z",
+    "duration": 669129.9890000001,
+    "expected": 22,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

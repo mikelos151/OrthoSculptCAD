@@ -1,0 +1,11 @@
+{
+  "scope": [
+    "src/reports",
+    "tests/v02-reports.test.ts",
+    "tests/v02-reports-validation.test.ts",
+    "tests/v02-reports-html.test.ts"
+  ],
+  "findings": [],
+  "addedLines": 236,
+  "note": "Static patterns only; not proof of security."
+}

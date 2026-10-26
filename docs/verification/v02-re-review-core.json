@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "delegation": "deleg_33750ed0",
+  "scope": ["sliver intersection ambiguity", "unknown heatmap baseline", "PLY face RGB topology", "owned Worker transfers and scalar preflight", "dense workspace serialization"],
+  "independentTests": {"passed": 109, "files": 10, "skipped": 0, "typecheckExitCode": 0},
+  "parentFollowup": "The parent independently ran 52 focused tests including real Chromium before this re-review; all passed.",
+  "additionalIndependentPerturbations": {"overlaps": 36, "legalEdges": 18, "unknownBaselines": 9, "planeControls": 6, "uniformPLYColors": 4, "conflictingPLYSeams": 4, "incompleteJournals": 18},
+  "security_concerns": [],
+  "logic_errors": [],
+  "limits": "Acceptance only for the named corrections. This is not acceptance of UI gesture isolation, all report printing, the native EXE, manufacture or clinical use."
+}

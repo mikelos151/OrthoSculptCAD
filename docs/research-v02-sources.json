@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://qwadra.com/solution/canfit-design-software",
+      "title": "",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Every measurement and clinical correction is accurately captured, and patient changes can be tracked over time.",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://academy.vorum.com/courses/LaunchPAD-Canfit-Basics",
+      "title": "",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Sticky Measurements and Tapes",
+          "added": "2026-10-22"
+        },
+        {
+          "text": "Canfit Additional Tools and Features - Reporting Reporting Tool",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://doi.org/10.1080/09638288.2023.2258345",
+      "title": "",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 4,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10443522",
+      "title": "",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 5,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11014038",
+      "title": "",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 6,
+      "url": "https://doi.org/10.3390/prosthesis6030048",
+      "title": "",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": 7,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12370269/fullTextXML",
+      "title": "",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Both quantitative and qualitative results indicated how clinician input remains essential and is valued by prosthesis users.",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11014038/fullTextXML",
+      "title": "",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "Therefore, future research should describe a standardized method for the definition of coordinate systems of residual limbs.",
+          "added": "2026-10-22"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=34932511&retmode=xml",
+      "title": "",
+      "accessed": "2026-10-22",
+      "quotes": [
+        {
+          "text": "For measuring residual limb volume in TT amputees, Omega software (state version 12.2) combined with the Rodin4D scanner was more usable and reliable than the Rodin 4D or Biosculptor systems, when operated by staff with limited experience and training.",
+          "added": "2026-10-22"
+        }
+      ]
+    }
+  ]
+}

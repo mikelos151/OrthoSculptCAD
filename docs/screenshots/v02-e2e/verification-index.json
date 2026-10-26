@@ -1,0 +1,410 @@
+{
+  "reports": [
+    {
+      "file": "legacy-baseline.json",
+      "stats": {
+        "startTime": "2026-10-26T09:29:10.950Z",
+        "duration": 141246.906,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 7,
+        "flaky": 0
+      },
+      "collectedTests": 9,
+      "failures": [
+        {
+          "file": "import-security.spec.ts",
+          "line": 21,
+          "title": "coloured PLY import preserves RGB through project download and blocks invalid input",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  24 |  await expect(page.getByText('SYNTHETIC-rgb.ply',{exact:true}).first()).toBeVisible();\n  25 |  await page.getByRole('button',{name:'Potwierdź i przelicz na mm'}).click();\n> 26 |  const event=page.waitForEvent('download');await page.getByRole('button',{name:'Zapisz projekt',exact:true}).click();const download=await event;const data=JSON.parse(await readFile((await download.path())!,'utf8'));\n     |                   ^\n  27 |  expect(data.mesh.colors).toEqual([1,0,0,0,1,0,0,0,1]);\n  28 |  expect(data.mesh.positions).toEqual([0,0,0,40,0,0,0,40,40]);\n  29 |  await page.getByLabel('Wybierz skan i lokalne tekstury').setInputFiles({name:'bad.ply',mimeType:'application/octet-stream',buffer:Buffer.from(ply.replace('40 0 0','NaN 0 0'))});\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts:26:19"
+              ],
+              "attachments": [
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\import-security-coloured-P-f53fe-ad-and-blocks-invalid-input\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\import-security-coloured-P-f53fe-ad-and-blocks-invalid-input\\trace.zip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "import-security.spec.ts",
+          "line": 42,
+          "title": "oversized project metadata is rejected before File.text is called",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"przekracza limit 128 MiB\"\u001b[39m\nReceived string:    \u001b[31m\"Projekt jest pusty lub przekracza limit odczytu. Nie odczytano zawartości.\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    32 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Projekt jest pusty lub przekracza limit odczytu. Nie odczytano zawartości.\"\u001b[22m\n\n\n  51 |   input.files=transfer.files;input.dispatchEvent(new Event('change',{bubbles:true}));\n  52 |  });\n> 53 |  await expect(page.getByRole('alert')).toContainText('przekracza limit 128 MiB');\n     |                                        ^\n  54 |  expect(await page.evaluate(()=>(globalThis as unknown as {projectReads:number}).projectReads)).toBe(0);\n  55 | });\n  56 | test('tablet layout does not overflow viewport and retains all five stages',async({page},testInfo)=>{\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts:53:40"
+              ],
+              "attachments": [
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\import-security-oversized--b7d57--before-File-text-is-called\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\import-security-oversized--b7d57--before-File-text-is-called\\trace.zip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "review-fixes.spec.ts",
+          "line": 20,
+          "title": "overflowing meter conversion keeps the original UI and unconfirmed model without pageerror",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.case-label strong')\nExpected: \u001b[32m\"\u001b[7mSYNTHETIC-huge.pl\u001b[27my\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCASE · r1 · Skan lokaln\u001b[27my\"\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.case-label strong') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.case-label strong')\u001b[22m\n\u001b[2m    32 × locator resolved to <strong>CASE · r1 · Skan lokalny</strong>\u001b[22m\n\u001b[2m       - unexpected value \"CASE · r1 · Skan lokalny\"\u001b[22m\n\n\n  25 |     name: \"SYNTHETIC-huge.ply\", mimeType: \"application/octet-stream\", buffer: Buffer.from(hugePLY),\n  26 |   });\n> 27 |   await expect(page.locator(\".case-label strong\")).toHaveText(\"SYNTHETIC-huge.ply\");\n     |                                                    ^\n  28 |   const dimensions = await page.locator(\".metrics-list\").innerText();\n  29 |   await page.getByLabel(\"Jednostka pliku\", { exact: true }).selectOption(\"m\");\n  30 |   await page.getByRole(\"button\", { name: \"Potwierdź i przelicz na mm\" }).click();\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:27:52"
+              ],
+              "attachments": [
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-overflowing-m-7fcd2-med-model-without-pageerror\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-overflowing-m-7fcd2-med-model-without-pageerror\\trace.zip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "review-fixes.spec.ts",
+          "line": 77,
+          "title": "empty and zero-percent zones warn without changing geometry, baseline, measurements or undo",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  69 |\n  70 | async function project(page: Page) {\n> 71 |   const pending = page.waitForEvent(\"download\");\n     |                        ^\n  72 |   await page.getByRole(\"button\", { name: \"Zapisz projekt\", exact: true }).click();\n  73 |   const download = await pending;\n  74 |   return JSON.parse(await readFile((await download.path())!, \"utf8\"));\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:81:24"
+              ],
+              "attachments": [
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\trace.zip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "review-fixes.spec.ts",
+          "line": 116,
+          "title": "list RGB PLY is refused visibly and preserves the current project",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  69 |\n  70 | async function project(page: Page) {\n> 71 |   const pending = page.waitForEvent(\"download\");\n     |                        ^\n  72 |   await page.getByRole(\"button\", { name: \"Zapisz projekt\", exact: true }).click();\n  73 |   const download = await pending;\n  74 |   return JSON.parse(await readFile((await download.path())!, \"utf8\"));\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:120:24"
+              ],
+              "attachments": [
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-list-RGB-PLY--28048-eserves-the-current-project\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-list-RGB-PLY--28048-eserves-the-current-project\\trace.zip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "review-fixes.spec.ts",
+          "line": 132,
+          "title": "coarse calibration reports numeric residual and retains manual tape evidence",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  69 |\n  70 | async function project(page: Page) {\n> 71 |   const pending = page.waitForEvent(\"download\");\n     |                        ^\n  72 |   await page.getByRole(\"button\", { name: \"Zapisz projekt\", exact: true }).click();\n  73 |   const download = await pending;\n  74 |   return JSON.parse(await readFile((await download.path())!, \"utf8\"));\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:136:24"
+              ],
+              "attachments": [
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-coarse-calibr-659a7-etains-manual-tape-evidence\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-coarse-calibr-659a7-etains-manual-tape-evidence\\trace.zip"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "workflow.spec.ts",
+          "line": 5,
+          "title": "synthetic five-step workflow uses real geometry and exports round-trippable files",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Wyrównano główne osie/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/Wyrównano główne osie/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Wyrównano główne osie/)\u001b[22m\n\n\n  20 |  await page.getByRole('button',{name:'Dalej: Orientacja'}).click();\n  21 |  await page.getByRole('button',{name:'Wyrównaj główne osie (PCA)'}).click();\n> 22 |  await expect(page.getByText(/Wyrównano główne osie/)).toBeVisible();\n     |                                                        ^\n  23 |  await page.getByRole('button',{name:'Dalej: Pomiary'}).click();\n  24 |  await page.getByRole('button',{name:'Oblicz tabelę przekrojów'}).click();\n  25 |  await expect(page.locator('tbody tr').first()).toBeVisible();\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\workflow.spec.ts:22:56"
+              ],
+              "attachments": [
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\workflow-synthetic-five-st-2ac34-ports-round-trippable-files\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\workflow-synthetic-five-st-2ac34-ports-round-trippable-files\\trace.zip"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "legacy-updated.json",
+      "stats": {
+        "startTime": "2026-10-26T09:35:01.632Z",
+        "duration": 143771.81399999998,
+        "expected": 8,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "collectedTests": 9,
+      "failures": [
+        {
+          "file": "review-fixes.spec.ts",
+          "line": 70,
+          "title": "empty and zero-percent zones warn without changing geometry, baseline, measurements or undo",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    30 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n\n\n  82 |   await page.getByLabel(\"Zmiana obwodu · %\", { exact: true }).fill(\"-10\");\n  83 |   await page.getByRole(\"button\", { name: \"Zastosuj korektę strefy\" }).click();\n> 84 |   await expect(page.getByRole(\"alert\")).toContainText(\"nie zmieniła żadnych współrzędnych\");\n     |                                         ^\n  85 |   expect(await undoCount(page)).toBe(historyBefore);\n  86 |   await expect(page.getByText(/Zastosowano zmianę obwodu/)).toHaveCount(0);\n  87 |   expect(await project(page)).toEqual(before);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:84:41"
+              ],
+              "attachments": [
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\test-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\test-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\trace.zip"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "privacy-revisions-first.json",
+      "stats": {
+        "startTime": "2026-10-26T09:39:04.922Z",
+        "duration": 128234.833,
+        "expected": 6,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "collectedTests": 6,
+      "failures": []
+    },
+    {
+      "file": "workbench-first.json",
+      "stats": {
+        "startTime": "2026-10-26T09:42:58.218Z",
+        "duration": 88334.25200000001,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "collectedTests": 3,
+      "failures": []
+    },
+    {
+      "file": "final.json",
+      "stats": {
+        "startTime": "2026-10-26T09:45:45.188Z",
+        "duration": 384783.54199999996,
+        "expected": 17,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "collectedTests": 18,
+      "failures": [
+        {
+          "file": "review-fixes.spec.ts",
+          "line": 70,
+          "title": "empty and zero-percent zones warn without changing geometry, baseline, measurements or undo",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n\n\n  82 |   await page.getByLabel(\"Zmiana obwodu · %\", { exact: true }).fill(\"-10\");\n  83 |   await page.getByRole(\"button\", { name: \"Zastosuj korektę strefy\" }).click();\n> 84 |   await expect.soft(page.getByRole(\"alert\")).toContainText(\"nie zmieniła żadnych współrzędnych\");\n     |                                              ^\n  85 |   await evidence(page,testInfo,'empty-zone-generic-error.png');\n  86 |   expect(await undoCount(page)).toBe(historyBefore);\n  87 |   await expect(page.getByText(/Zastosowano zmianę obwodu|Zmieniono obwód/)).toHaveCount(0);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:84:46",
+                "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n\n\n  94 |   await page.getByLabel(\"Zmiana obwodu · %\", { exact: true }).fill(\"0\");\n  95 |   await page.getByRole(\"button\", { name: \"Zastosuj korektę strefy\" }).click();\n> 96 |   await expect.soft(page.getByRole(\"alert\")).toContainText(\"nie zmieniła żadnych współrzędnych\");\n     |                                              ^\n  97 |   expect(await undoCount(page)).toBe(historyBefore);\n  98 |   await page.screenshot({ path: testInfo.outputPath(\"zone-noop-controlled.png\"), fullPage: true });\n  99 |   // A real vertex edit still works and undo restores exact coordinates.\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:96:46",
+                "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                "Error: locator.check: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Zapisz kopię projektu', exact: true }).getByLabel('Rozumiem ryzyko jawnego zapisu', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n   at helpers.ts:19\n\n  17 |   await dialog.getByLabel('Ochrona pliku', { exact: true }).selectOption('plain');\n  18 |   await expect(dialog.getByRole('button', { name: 'Pobierz nieszyfrowany JSON' })).toBeDisabled();\n> 19 |   await dialog.getByLabel('Rozumiem ryzyko jawnego zapisu', { exact: true }).check();\n     |                                                                              ^\n  20 |   const pending = page.waitForEvent('download');\n  21 |   await dialog.getByRole('button', { name: 'Pobierz nieszyfrowany JSON', exact: true }).click();\n  22 |   const download = await pending;\n    at savePlainDownload (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\helpers.ts:19:78)\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\helpers.ts:28:20)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:107:11"
+              ],
+              "attachments": [
+                {
+                  "name": "empty-zone-generic-error.png",
+                  "contentType": "image/png",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\attachments\\empty-zone-generic-error-png-2205f3ea7c60400934b7944d7730c7f0b908e258.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\trace.zip"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "final-focused.json",
+      "stats": {
+        "startTime": "2026-10-26T10:04:47.773Z",
+        "duration": 103341.72200000001,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "collectedTests": 2,
+      "failures": [
+        {
+          "file": "review-fixes.spec.ts",
+          "line": 70,
+          "title": "empty and zero-percent zones warn without changing geometry, baseline, measurements or undo",
+          "status": "unexpected",
+          "attempts": [
+            {
+              "status": "failed",
+              "errors": [
+                "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n\n\n  84 |   await page.getByLabel(\"Zmiana obwodu · %\", { exact: true }).fill(\"-10\");\n  85 |   await page.getByRole(\"button\", { name: \"Zastosuj korektę strefy\" }).click();\n> 86 |   await expect.soft(page.getByRole(\"alert\")).toContainText(\"nie zmieniła żadnych współrzędnych\");\n     |                                              ^\n  87 |   await evidence(page,testInfo,'empty-zone-generic-error.png');\n  88 |   expect(await undoCount(page)).toBe(historyBefore);\n  89 |   await expect(page.getByText(/Zastosowano zmianę obwodu|Zmieniono obwód/)).toHaveCount(0);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:86:46",
+                "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    30 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n\n\n   96 |   await page.getByLabel(\"Zmiana obwodu · %\", { exact: true }).fill(\"0\");\n   97 |   await page.getByRole(\"button\", { name: \"Zastosuj korektę strefy\" }).click();\n>  98 |   await expect.soft(page.getByRole(\"alert\")).toContainText(\"nie zmieniła żadnych współrzędnych\");\n      |                                              ^\n   99 |   expect(await undoCount(page)).toBe(historyBefore);\n  100 |   await page.screenshot({ path: testInfo.outputPath(\"zone-noop-controlled.png\"), fullPage: true });\n  101 |   // A real vertex edit still works and undo restores exact coordinates.\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:98:46"
+              ],
+              "attachments": [
+                {
+                  "name": "empty-zone-generic-error.png",
+                  "contentType": "image/png",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-focused-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\attachments\\empty-zone-generic-error-png-2205f3ea7c60400934b7944d7730c7f0b908e258.png"
+                },
+                {
+                  "name": "error-context",
+                  "contentType": "text/markdown",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-focused-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\error-context.md"
+                },
+                {
+                  "name": "trace",
+                  "contentType": "application/zip",
+                  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-focused-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\trace.zip"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "runner-smoke.json",
+      "stats": {
+        "startTime": "2026-10-26T09:55:07.328Z",
+        "duration": 1853.48,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "collectedTests": 1,
+      "failures": []
+    }
+  ],
+  "workerObservations": [
+    {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'",
+      "errors": [],
+      "external": [],
+      "violations": [],
+      "workers": [
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/display.worker-DnUs9aB6.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/display.worker-DnUs9aB6.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js"
+      ],
+      "strokeDabs": 9
+    }
+  ]
+}

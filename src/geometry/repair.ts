@@ -12,6 +12,7 @@ import {
   vertex,
 } from "./core";
 
+import { orientMesh } from "./orientation";
 import { orientation, simplePolygon } from "./planar";
 /** Conservative earcut planar caps, not Liepa/Delaunay or general mesh healing. */
 export function repairMesh(input: MeshData) {
@@ -134,7 +135,8 @@ export function repairMesh(input: MeshData) {
     }
   }
   mesh.indices = new Uint32Array(kept);
-  const result = validateMesh(mesh);
-  warnings.push(...result.warnings);
-  return { mesh, report: result, warnings };
+  const oriented = orientMesh(mesh);
+  const result = validateMesh(oriented.mesh);
+  warnings.push(...oriented.warnings, ...result.warnings);
+  return { mesh: oriented.mesh, report: result, warnings };
 }

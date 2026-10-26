@@ -1,0 +1,410 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/v02-privacy-revisions.spec.ts",
+      "--reporter=line,json",
+      "--output=docs/screenshots/v02-e2e/new-results"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/docs/screenshots/v02-e2e/new-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "v02-privacy-revisions.spec.ts",
+      "file": "v02-privacy-revisions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "encrypted browser download authenticates independently, wrong password and tamper retain the previous mesh, correct password restores RGB, baseline and metadata",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 49396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:39:05.328Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "encrypted-wrong-password.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-encr-d62d8-s-RGB-baseline-and-metadata\\attachments\\encrypted-wrong-password-png-fdc3357f7ce2a2af01c7efa641d66f96ef0b6bfb.png"
+                    },
+                    {
+                      "name": "encrypted-restored-rgb.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-encr-d62d8-s-RGB-baseline-and-metadata\\attachments\\encrypted-restored-rgb-png-829cd369db1ff9803e38ab7a1f722f795f7e22e6.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-b2bbcc08695b80d52764",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "unsaved replacement supports Stay and Escape after copy download, and real beforeunload dismiss preserves work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26440,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:39:54.816Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "unsaved-replacement-guard.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-unsa-cebd8-load-dismiss-preserves-work\\attachments\\unsaved-replacement-guard-png-9d03c89f493b64f381c343b1846dec340ec75c0f.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-972fc83a7faeda241d2d",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 102,
+          "column": 1
+        },
+        {
+          "title": "v1 migration discloses unknown history, saved left registration is invalidated by right metadata without reflection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26163,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:40:21.270Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "metadata-side-no-reflection.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-v1-m-96c80-metadata-without-reflection\\attachments\\metadata-side-no-reflection-png-5bdd77916b7407e526c025fbee328ec2cf8ce8d2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-25034c8ad1e0595a32ec",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 134,
+          "column": 1
+        },
+        {
+          "title": "downloaded review report has exact current geometry hash and revision, absent tape evidence and restrictive CSP with zero external requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12902,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:40:47.443Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "review-report-current-revision.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-down-33d80-with-zero-external-requests\\attachments\\review-report-current-revision-png-5b261d2355d0104102e4c398cabd52215d6e6916.png"
+                    },
+                    {
+                      "name": "report-fingerprint",
+                      "contentType": "application/json",
+                      "body": "eyJyZXZpc2lvbiI6NCwiaGFzaCI6IjA3NDk2NmE4MDM5ZDgzY2UzMGRhZTNkNWFiMGNmNmZlNWU4MzM0MjYwNzk4ZTBlM2FlYmZmM2E4MDcyNDc3M2UiLCJ0YXBlQ291bnQiOjAsImV4dGVybmFsUmVxdWVzdHMiOltdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-523b176743b305b7e5d9",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 172,
+          "column": 1
+        },
+        {
+          "title": "all five stages render without document overflow at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6244,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:41:00.354Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "layout-1024-step-1.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-1-png-fa8aad63b64d9d8372f96ed0260b334be9457d0f.png"
+                    },
+                    {
+                      "name": "layout-1024-step-2.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-2-png-f189388eab269cd9a032cd1833ee61b69a7094df.png"
+                    },
+                    {
+                      "name": "layout-1024-step-3.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-3-png-3b48b1afd0312043dc7a72ef483ae08156677a12.png"
+                    },
+                    {
+                      "name": "layout-1024-step-4.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-4-png-afabe1e627ee8c98897fc60a1cae7f00be54809d.png"
+                    },
+                    {
+                      "name": "layout-1024-step-5.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-5-png-75d10b51aa22bb355cbd3d5f3224bbc858897ef7.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-917f9dd245dedc675eea",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 215,
+          "column": 34
+        },
+        {
+          "title": "all five stages render without document overflow at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6168,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:41:06.610Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "layout-390-step-1.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-1-png-29a1d30f739d1cd0ef2c9eb6689717af9237f543.png"
+                    },
+                    {
+                      "name": "layout-390-step-2.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-2-png-004a2e33217c8a5fa38741274c4b3e0e6afbad15.png"
+                    },
+                    {
+                      "name": "layout-390-step-3.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-3-png-804c1baf16fd95e2a7fe6875aa7d284748f74a83.png"
+                    },
+                    {
+                      "name": "layout-390-step-4.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-4-png-6f0ccccf4fcd2f9b45481ecc7d362b83415c4d5e.png"
+                    },
+                    {
+                      "name": "layout-390-step-5.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\new-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-5-png-715f12f3f828aafcd2baae6876c5ac845671da9e.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-017ea0d9cc7037810ef4",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 215,
+          "column": 34
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T09:39:04.922Z",
+    "duration": 128234.833,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

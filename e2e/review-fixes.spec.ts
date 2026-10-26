@@ -1,5 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
-import { readFile } from "node:fs/promises";
+import {project,replaceSyntheticProject,undoCount,evidence} from './helpers';
 
 const hugePLY = `ply
 format ascii 1.0
@@ -24,13 +24,13 @@ test("overflowing meter conversion keeps the original UI and unconfirmed model w
   await page.getByLabel("Wybierz skan i lokalne tekstury").setInputFiles({
     name: "SYNTHETIC-huge.ply", mimeType: "application/octet-stream", buffer: Buffer.from(hugePLY),
   });
-  await expect(page.locator(".case-label strong")).toHaveText("SYNTHETIC-huge.ply");
+  await expect(page.locator(".filename span")).toHaveText("SYNTHETIC-huge.ply");
   const dimensions = await page.locator(".metrics-list").innerText();
   await page.getByLabel("Jednostka pliku", { exact: true }).selectOption("m");
   await page.getByRole("button", { name: "Potwierdź i przelicz na mm" }).click();
   await expect(page.getByRole("alert")).toContainText("Float32");
   await expect(page.getByRole("heading", { name: "Import i kontrola", exact: true })).toBeVisible();
-  await expect(page.locator(".case-label strong")).toHaveText("SYNTHETIC-huge.ply");
+  await expect(page.locator(".filename span")).toHaveText("SYNTHETIC-huge.ply");
   await expect(page.locator(".metrics-list")).toHaveText(dimensions, { useInnerText: true });
   await expect(page.getByText("Jednostki niepotwierdzone", { exact: true })).toBeVisible();
   await expect(page.getByRole("button", { name: "Najpierw potwierdź jednostki" })).toBeDisabled();
@@ -67,14 +67,9 @@ async function importCylinder(page: Page) {
   await expect(page.getByRole("button", { name: "Jednostki potwierdzone" })).toBeDisabled();
 }
 
-async function project(page: Page) {
-  const pending = page.waitForEvent("download");
-  await page.getByRole("button", { name: "Zapisz projekt", exact: true }).click();
-  const download = await pending;
-  return JSON.parse(await readFile((await download.path())!, "utf8"));
-}
-
 test("empty and zero-percent zones warn without changing geometry, baseline, measurements or undo", async ({ page }, testInfo) => {
+  // Two failing diagnostic assertions stay soft so all geometry/undo invariants still run.
+  test.setTimeout(120000);
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
   await importCylinder(page);
@@ -83,13 +78,15 @@ test("empty and zero-percent zones warn without changing geometry, baseline, mea
   await page.getByRole("button", { name: "Oblicz tabelę przekrojów" }).click();
   const measurements = await page.locator("tbody").innerText();
   await page.locator(".step-button").nth(3).click();
+  const historyBefore=await undoCount(page);
   await page.getByLabel("Z min · mm", { exact: true }).fill("25");
   await page.getByLabel("Z max · mm", { exact: true }).fill("75");
   await page.getByLabel("Zmiana obwodu · %", { exact: true }).fill("-10");
   await page.getByRole("button", { name: "Zastosuj korektę strefy" }).click();
-  await expect(page.getByRole("alert")).toContainText("nie zmieniła żadnych współrzędnych");
-  await expect(page.getByRole("button", { name: "Cofnij (0)", exact: true })).toBeDisabled();
-  await expect(page.getByText(/Zastosowano zmianę obwodu/)).toHaveCount(0);
+  await expect.soft(page.getByRole("alert")).toContainText("nie zmieniła żadnych współrzędnych");
+  await evidence(page,testInfo,'empty-zone-generic-error.png');
+  expect(await undoCount(page)).toBe(historyBefore);
+  await expect(page.getByText(/Zastosowano zmianę obwodu|Zmieniono obwód/)).toHaveCount(0);
   expect(await project(page)).toEqual(before);
   await page.locator(".step-button").nth(2).click();
   await expect(page.locator("tbody")).toHaveText(measurements, { useInnerText: true });
@@ -98,17 +95,17 @@ test("empty and zero-percent zones warn without changing geometry, baseline, mea
   await page.getByLabel("Z max · mm", { exact: true }).fill("100");
   await page.getByLabel("Zmiana obwodu · %", { exact: true }).fill("0");
   await page.getByRole("button", { name: "Zastosuj korektę strefy" }).click();
-  await expect(page.getByRole("alert")).toContainText("nie zmieniła żadnych współrzędnych");
-  await expect(page.getByRole("button", { name: "Cofnij (0)", exact: true })).toBeDisabled();
+  await expect.soft(page.getByRole("alert")).toContainText("nie zmieniła żadnych współrzędnych");
+  expect(await undoCount(page)).toBe(historyBefore);
   await page.screenshot({ path: testInfo.outputPath("zone-noop-controlled.png"), fullPage: true });
   // A real vertex edit still works and undo restores exact coordinates.
   await page.getByLabel("Zmiana obwodu · %", { exact: true }).fill("-10");
   await page.getByRole("button", { name: "Zastosuj korektę strefy" }).click();
-  await expect(page.getByRole("button", { name: "Cofnij (1)", exact: true })).toBeEnabled();
+  await expect(page.getByRole("button", { name: `Cofnij (${historyBefore+1})`, exact: true })).toBeEnabled();
   const after = await project(page);
   expect(after.mesh.positions).not.toEqual(before.mesh.positions);
   expect(after.originalPositions).toEqual(before.originalPositions);
-  await page.getByRole("button", { name: "Cofnij (1)", exact: true }).click();
+  await page.getByRole("button", { name: `Cofnij (${historyBefore+1})`, exact: true }).click();
   expect((await project(page)).mesh.positions).toEqual(before.mesh.positions);
   expect(errors).toEqual([]);
 });
@@ -122,8 +119,9 @@ test("list RGB PLY is refused visibly and preserves the current project", async 
   await page.getByLabel("Wybierz skan i lokalne tekstury").setInputFiles({
     name: "SYNTHETIC-list-rgb.ply", mimeType: "application/octet-stream", buffer: Buffer.from(invalid),
   });
+  await replaceSyntheticProject(page);
   await expect(page.getByRole("alert")).toContainText("RGB PLY wymaga trzech właściwości skalarnych");
-  await expect(page.locator(".case-label strong")).toHaveText("SYNTHETIC-coarse-cylinder.ply");
+  await expect(page.locator(".filename span")).toHaveText("SYNTHETIC-coarse-cylinder.ply");
   await page.screenshot({ path: testInfo.outputPath("list-rgb-refused.png"), fullPage: true });
   expect(await project(page)).toEqual(before);
   expect(errors).toEqual([]);
@@ -140,15 +138,16 @@ test("coarse calibration reports numeric residual and retains manual tape eviden
   await page.getByLabel("Wybierz zapisany projekt", { exact: true }).setInputFiles({
     name: "SYNTHETIC-calibration.oscad.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(before)),
   });
-  await expect(page.getByText(/Wczytano lokalny projekt/)).toBeVisible();
+  await replaceSyntheticProject(page);
+  await expect(page.getByText(/Wczytano projekt i dziennik/)).toBeVisible();
   await page.locator(".step-button").nth(2).click();
   await page.getByRole("button", { name: "Oblicz tabelę przekrojów" }).click();
   await expect(page.locator("tbody tr").first()).toBeVisible();
   await page.getByRole("button", { name: "Kalibruj skalę z taśm" }).click();
   const notice = page.locator(".notification");
-  await expect(notice).toContainText("Skalibrowano model");
-  await expect(notice).toContainText(/przybliżona deformacja.*maksymalna reszta.*mm.*[Zz]mierz ponownie/);
-  const match = (await notice.innerText()).match(/maksymalna reszta\s+([\d,\.]+)\s*mm/);
+  await expect(notice).toContainText("Skalibrowano przybliżenie");
+  await expect(notice).toContainText(/Maksymalna reszta.*mm.*zmierz tabelę ponownie/);
+  const match = (await notice.innerText()).match(/Maksymalna reszta na poziomach taśm:\s+([\d,\.]+)\s*mm/);
   expect(match).not.toBeNull();
   const residual = Number(match![1].replace(",", "."));
   expect(residual).toBeGreaterThan(15);

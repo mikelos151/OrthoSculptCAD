@@ -1,0 +1,194 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/v02-worker-budget.spec.ts",
+      "--reporter=line,json",
+      "--output=docs/verification/v02-worker-budget-parent-red-artifacts"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/docs/verification/v02-worker-budget-parent-red-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v02-worker-budget-parent-red-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "v02-worker-budget.spec.ts",
+      "file": "v02-worker-budget.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "E2E-02: project download with active comparison never exhausts native compute Worker budget",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 150139,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 54\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"session 1, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    32 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 2, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 3, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 4, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 54\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"session 1, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    32 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 2, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 3, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 4, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v02-worker-budget.spec.ts:73:20",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v02-worker-budget.spec.ts",
+                      "column": 20,
+                      "line": 73
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 71 |\u001b[39m   \u001b[36mawait\u001b[39m writeFile(\u001b[32m`${folder}/summary.json`\u001b[39m\u001b[33m,\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(summary\u001b[33m,\u001b[39m \u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 72 |\u001b[39m   \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'worker-budget-summary'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(summary)\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 73 |\u001b[39m   expect(failures)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 74 |\u001b[39m   expect(summary\u001b[33m.\u001b[39mdownloads)\u001b[33m.\u001b[39mtoBe(\u001b[35m20\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 75 |\u001b[39m   \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m result \u001b[36mof\u001b[39m results) {\n \u001b[90m 76 |\u001b[39m     expect(result\u001b[33m.\u001b[39mprivacy\u001b[33m.\u001b[39merrors)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v02-worker-budget.spec.ts",
+                        "column": 20,
+                        "line": 73
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 54\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"session 1, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    32 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 2, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 3, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+   \"session 4, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[31m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[31m\u001b[2m)\u001b[22m failed\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Locator:  getByRole('alert')\u001b[39m\n\u001b[31m+ Expected: \u001b[32m0\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Received: \u001b[31m1\u001b[39m\u001b[31m\u001b[39m\n\u001b[31m+ Timeout:  15000ms\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ Call log:\u001b[39m\n\u001b[31m+ \u001b[2m  - Expect \\\"toHaveCount\\\" getByRole('alert') with timeout 15000ms\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m  - waiting for getByRole('alert')\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m    31 × locator resolved to 1 element\u001b[22m\u001b[39m\n\u001b[31m+ \u001b[2m       - unexpected value \\\"1\\\"\u001b[22m\u001b[39m\n\u001b[31m+ \",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  71 |   await writeFile(`${folder}/summary.json`, JSON.stringify(summary, null, 2));\n  72 |   await info.attach('worker-budget-summary', { body: JSON.stringify(summary), contentType: 'application/json' });\n> 73 |   expect(failures).toEqual([]);\n     |                    ^\n  74 |   expect(summary.downloads).toBe(20);\n  75 |   for (const result of results) {\n  76 |     expect(result.privacy.errors).toEqual([]);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v02-worker-budget.spec.ts:73:20"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T10:36:49.089Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "worker-budget-summary",
+                      "contentType": "application/json",
+                      "body": "eyJvcmlnaW4iOnsiYmFzZVVSTCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDE3NiIsImluZGV4U2hhMjU2IjoiYTk4MTIwNjcyYjlkMjJkZjc0YmQ4YmJkODc1YWYzYmIxN2JkMDJmMzgxNGY1YzhjZWY0YjM5OWQ0NjdjMDI2MiIsImFzc2V0IjoiL2Fzc2V0cy9pbmRleC1CYkdWaHpXSS5qcyIsInNoYTI1NiI6IjdkODZlYTc0MDg0N2RmMWEyNjBiZjAxMWRlZDAxNjUyODMwNWRhODVlNWZhZTFkYTRiZTZlMDA0ZmVhNTdjZGMiLCJjaHJvbWl1bSI6IjE1Ni4wLjgwNzguNCJ9LCJmcmVzaENvbnRleHRzIjo0LCJkb3dubG9hZHMiOjQsInJlc3VsdHMiOlt7InNlc3Npb24iOjEsImRvd25sb2FkcyI6MSwiZXZlbnRzIjo4NSwiY29uc3RydWN0b3JzIjoxNSwibWF4Q29tcHV0ZUFsaXZlIjoyLCJtYXhEaXNwbGF5QWxpdmUiOjAsImFsZXJ0cyI6W3sidCI6MTM4ODYuMzAwMDAwMDExOTIxLCJ0eXBlIjoiYWxlcnQiLCJ0ZXh0IjoiRXJyb3I6IFNpbG5payB6YWrEmXR5OiBvc2nEhWduacSZdG8gbGltaXQgb2JsaWN6ZcWELiIsImFsaXZlIjpbeyJ3b3JrZXJJZCI6MTIsInVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiY2F0ZWdvcnkiOiJjb21wdXRlIiwiYWxpdmUiOnRydWUsImtpbmQiOiJ0YXNrIiwib3AiOiJ0b3BvbG9neSIsInJlcXVlc3RJZCI6MSwiZ2VuZXJhdGlvbiI6MTJ9XX1dLCJjaGVja3BvaW50cyI6W3sibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMSIsInQiOjkxNzkuNDAwMDAwMDM1NzYzfSx7ImxhYmVsIjoiYWZ0ZXItY29udG91cnMtMSIsInQiOjE3NzQ3LjcwMDAwMDA0NzY4NH1dLCJwcml2YWN5Ijp7ImVycm9ycyI6W10sImV4dGVybmFsIjpbXSwidmlvbGF0aW9ucyI6W10sIndvcmtlcnMiOlsiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyJdfX0seyJzZXNzaW9uIjoyLCJkb3dubG9hZHMiOjEsImV2ZW50cyI6ODksImNvbnN0cnVjdG9ycyI6MTYsIm1heENvbXB1dGVBbGl2ZSI6MiwibWF4RGlzcGxheUFsaXZlIjowLCJhbGVydHMiOlt7InQiOjE1NzQ2LjYwMDAwMDAyMzg0MiwidHlwZSI6ImFsZXJ0IiwidGV4dCI6IkVycm9yOiBTaWxuaWsgemFqxJl0eTogb3NpxIVnbmnEmXRvIGxpbWl0IG9ibGljemXFhC4iLCJhbGl2ZSI6W3sid29ya2VySWQiOjEzLCJ1cmwiOiJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImNhdGVnb3J5IjoiY29tcHV0ZSIsImFsaXZlIjp0cnVlLCJraW5kIjoidGFzayIsIm9wIjoidG9wb2xvZ3kiLCJyZXF1ZXN0SWQiOjEsImdlbmVyYXRpb24iOjEzfV19XSwiY2hlY2twb2ludHMiOlt7ImxhYmVsIjoiYmVmb3JlLWRvd25sb2FkLTEiLCJ0IjoxMTQwMi4zMDAwMDAwMTE5MjF9LHsibGFiZWwiOiJhZnRlci1jb250b3Vycy0xIiwidCI6MTkzODguMTAwMDAwMDIzODQyfV0sInByaXZhY3kiOnsiZXJyb3JzIjpbXSwiZXh0ZXJuYWwiOltdLCJ2aW9sYXRpb25zIjpbXSwid29ya2VycyI6WyJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIl19fSx7InNlc3Npb24iOjMsImRvd25sb2FkcyI6MSwiZXZlbnRzIjo4NSwiY29uc3RydWN0b3JzIjoxNSwibWF4Q29tcHV0ZUFsaXZlIjoyLCJtYXhEaXNwbGF5QWxpdmUiOjAsImFsZXJ0cyI6W3sidCI6MTYyOTUuNTk5OTk5OTY0MjM3LCJ0eXBlIjoiYWxlcnQiLCJ0ZXh0IjoiRXJyb3I6IFNpbG5payB6YWrEmXR5OiBvc2nEhWduacSZdG8gbGltaXQgb2JsaWN6ZcWELiIsImFsaXZlIjpbeyJ3b3JrZXJJZCI6MTIsInVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiY2F0ZWdvcnkiOiJjb21wdXRlIiwiYWxpdmUiOnRydWUsImtpbmQiOiJ0YXNrIiwib3AiOiJ0b3BvbG9neSIsInJlcXVlc3RJZCI6MSwiZ2VuZXJhdGlvbiI6MTJ9XX1dLCJjaGVja3BvaW50cyI6W3sibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMSIsInQiOjExNTU2LjgwMDAwMDAxMTkyMX0seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTEiLCJ0IjoyMDEyMC41fV0sInByaXZhY3kiOnsiZXJyb3JzIjpbXSwiZXh0ZXJuYWwiOltdLCJ2aW9sYXRpb25zIjpbXSwid29ya2VycyI6WyJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIl19fSx7InNlc3Npb24iOjQsImRvd25sb2FkcyI6MSwiZXZlbnRzIjo4NSwiY29uc3RydWN0b3JzIjoxNSwibWF4Q29tcHV0ZUFsaXZlIjoyLCJtYXhEaXNwbGF5QWxpdmUiOjAsImFsZXJ0cyI6W3sidCI6MTY1NDMuODk5OTk5OTc2MTU4LCJ0eXBlIjoiYWxlcnQiLCJ0ZXh0IjoiRXJyb3I6IFNpbG5payB6YWrEmXR5OiBvc2nEhWduacSZdG8gbGltaXQgb2JsaWN6ZcWELiIsImFsaXZlIjpbeyJ3b3JrZXJJZCI6MTIsInVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiY2F0ZWdvcnkiOiJjb21wdXRlIiwiYWxpdmUiOnRydWUsImtpbmQiOiJ0YXNrIiwib3AiOiJ0b3BvbG9neSIsInJlcXVlc3RJZCI6MSwiZ2VuZXJhdGlvbiI6MTJ9XX1dLCJjaGVja3BvaW50cyI6W3sibGFiZWwiOiJiZWZvcmUtZG93bmxvYWQtMSIsInQiOjExODExLjU5OTk5OTk2NDIzN30seyJsYWJlbCI6ImFmdGVyLWNvbnRvdXJzLTEiLCJ0IjoyMDMzOC41OTk5OTk5NjQyMzd9XSwicHJpdmFjeSI6eyJlcnJvcnMiOltdLCJleHRlcm5hbCI6W10sInZpb2xhdGlvbnMiOltdLCJ3b3JrZXJzIjpbImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1hN0NodnhXci5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLWE3Q2h2eFdyLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItYTdDaHZ4V3IuanMiXX19XSwiZmFpbHVyZXMiOlsic2Vzc2lvbiAxLCBjb21wbGV0ZWQgZG93bmxvYWRzIDE6IEVycm9yOiBcdTAwMWJbMm1leHBlY3QoXHUwMDFiWzIybVx1MDAxYlszMW1sb2NhdG9yXHUwMDFiWzM5bVx1MDAxYlsybSkuXHUwMDFiWzIybXRvSGF2ZUNvdW50XHUwMDFiWzJtKFx1MDAxYlsyMm1cdTAwMWJbMzJtZXhwZWN0ZWRcdTAwMWJbMzltXHUwMDFiWzJtKVx1MDAxYlsyMm0gZmFpbGVkXG5cbkxvY2F0b3I6ICBnZXRCeVJvbGUoJ2FsZXJ0JylcbkV4cGVjdGVkOiBcdTAwMWJbMzJtMFx1MDAxYlszOW1cblJlY2VpdmVkOiBcdTAwMWJbMzFtMVx1MDAxYlszOW1cblRpbWVvdXQ6ICAxNTAwMG1zXG5cbkNhbGwgbG9nOlxuXHUwMDFiWzJtICAtIEV4cGVjdCBcInRvSGF2ZUNvdW50XCIgZ2V0QnlSb2xlKCdhbGVydCcpIHdpdGggdGltZW91dCAxNTAwMG1zXHUwMDFiWzIybVxuXHUwMDFiWzJtICAtIHdhaXRpbmcgZm9yIGdldEJ5Um9sZSgnYWxlcnQnKVx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAzMiDDlyBsb2NhdG9yIHJlc29sdmVkIHRvIDEgZWxlbWVudFx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAgICAtIHVuZXhwZWN0ZWQgdmFsdWUgXCIxXCJcdTAwMWJbMjJtXG4iLCJzZXNzaW9uIDIsIGNvbXBsZXRlZCBkb3dubG9hZHMgMTogRXJyb3I6IFx1MDAxYlsybWV4cGVjdChcdTAwMWJbMjJtXHUwMDFiWzMxbWxvY2F0b3JcdTAwMWJbMzltXHUwMDFiWzJtKS5cdTAwMWJbMjJtdG9IYXZlQ291bnRcdTAwMWJbMm0oXHUwMDFiWzIybVx1MDAxYlszMm1leHBlY3RlZFx1MDAxYlszOW1cdTAwMWJbMm0pXHUwMDFiWzIybSBmYWlsZWRcblxuTG9jYXRvcjogIGdldEJ5Um9sZSgnYWxlcnQnKVxuRXhwZWN0ZWQ6IFx1MDAxYlszMm0wXHUwMDFiWzM5bVxuUmVjZWl2ZWQ6IFx1MDAxYlszMW0xXHUwMDFiWzM5bVxuVGltZW91dDogIDE1MDAwbXNcblxuQ2FsbCBsb2c6XG5cdTAwMWJbMm0gIC0gRXhwZWN0IFwidG9IYXZlQ291bnRcIiBnZXRCeVJvbGUoJ2FsZXJ0Jykgd2l0aCB0aW1lb3V0IDE1MDAwbXNcdTAwMWJbMjJtXG5cdTAwMWJbMm0gIC0gd2FpdGluZyBmb3IgZ2V0QnlSb2xlKCdhbGVydCcpXHUwMDFiWzIybVxuXHUwMDFiWzJtICAgIDMxIMOXIGxvY2F0b3IgcmVzb2x2ZWQgdG8gMSBlbGVtZW50XHUwMDFiWzIybVxuXHUwMDFiWzJtICAgICAgIC0gdW5leHBlY3RlZCB2YWx1ZSBcIjFcIlx1MDAxYlsyMm1cbiIsInNlc3Npb24gMywgY29tcGxldGVkIGRvd25sb2FkcyAxOiBFcnJvcjogXHUwMDFiWzJtZXhwZWN0KFx1MDAxYlsyMm1cdTAwMWJbMzFtbG9jYXRvclx1MDAxYlszOW1cdTAwMWJbMm0pLlx1MDAxYlsyMm10b0hhdmVDb3VudFx1MDAxYlsybShcdTAwMWJbMjJtXHUwMDFiWzMybWV4cGVjdGVkXHUwMDFiWzM5bVx1MDAxYlsybSlcdTAwMWJbMjJtIGZhaWxlZFxuXG5Mb2NhdG9yOiAgZ2V0QnlSb2xlKCdhbGVydCcpXG5FeHBlY3RlZDogXHUwMDFiWzMybTBcdTAwMWJbMzltXG5SZWNlaXZlZDogXHUwMDFiWzMxbTFcdTAwMWJbMzltXG5UaW1lb3V0OiAgMTUwMDBtc1xuXG5DYWxsIGxvZzpcblx1MDAxYlsybSAgLSBFeHBlY3QgXCJ0b0hhdmVDb3VudFwiIGdldEJ5Um9sZSgnYWxlcnQnKSB3aXRoIHRpbWVvdXQgMTUwMDBtc1x1MDAxYlsyMm1cblx1MDAxYlsybSAgLSB3YWl0aW5nIGZvciBnZXRCeVJvbGUoJ2FsZXJ0JylcdTAwMWJbMjJtXG5cdTAwMWJbMm0gICAgMzEgw5cgbG9jYXRvciByZXNvbHZlZCB0byAxIGVsZW1lbnRcdTAwMWJbMjJtXG5cdTAwMWJbMm0gICAgICAgLSB1bmV4cGVjdGVkIHZhbHVlIFwiMVwiXHUwMDFiWzIybVxuIiwic2Vzc2lvbiA0LCBjb21wbGV0ZWQgZG93bmxvYWRzIDE6IEVycm9yOiBcdTAwMWJbMm1leHBlY3QoXHUwMDFiWzIybVx1MDAxYlszMW1sb2NhdG9yXHUwMDFiWzM5bVx1MDAxYlsybSkuXHUwMDFiWzIybXRvSGF2ZUNvdW50XHUwMDFiWzJtKFx1MDAxYlsyMm1cdTAwMWJbMzJtZXhwZWN0ZWRcdTAwMWJbMzltXHUwMDFiWzJtKVx1MDAxYlsyMm0gZmFpbGVkXG5cbkxvY2F0b3I6ICBnZXRCeVJvbGUoJ2FsZXJ0JylcbkV4cGVjdGVkOiBcdTAwMWJbMzJtMFx1MDAxYlszOW1cblJlY2VpdmVkOiBcdTAwMWJbMzFtMVx1MDAxYlszOW1cblRpbWVvdXQ6ICAxNTAwMG1zXG5cbkNhbGwgbG9nOlxuXHUwMDFiWzJtICAtIEV4cGVjdCBcInRvSGF2ZUNvdW50XCIgZ2V0QnlSb2xlKCdhbGVydCcpIHdpdGggdGltZW91dCAxNTAwMG1zXHUwMDFiWzIybVxuXHUwMDFiWzJtICAtIHdhaXRpbmcgZm9yIGdldEJ5Um9sZSgnYWxlcnQnKVx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAzMSDDlyBsb2NhdG9yIHJlc29sdmVkIHRvIDEgZWxlbWVudFx1MDAxYlsyMm1cblx1MDAxYlsybSAgICAgICAtIHVuZXhwZWN0ZWQgdmFsdWUgXCIxXCJcdTAwMWJbMjJtXG4iXX0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v02-worker-budget-parent-red-artifacts\\v02-worker-budget-E2E-02-p-02948-ative-compute-Worker-budget\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\verification\\v02-worker-budget-parent-red-artifacts\\v02-worker-budget-E2E-02-p-02948-ative-compute-Worker-budget\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\v02-worker-budget.spec.ts",
+                    "column": 20,
+                    "line": 73
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3f9098daee24a37c3475-5fa891d3755075ed5692",
+          "file": "v02-worker-budget.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T10:36:48.652Z",
+    "duration": 154233.012,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

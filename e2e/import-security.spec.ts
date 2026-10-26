@@ -1,5 +1,6 @@
 import {test,expect} from '@playwright/test';
 import {readFile} from 'node:fs/promises';
+import {savePlainDownload,replaceSyntheticProject} from './helpers';
 const ply=`ply
 format ascii 1.0
 comment SYNTHETIC engineering test triangle, units millimeter
@@ -23,12 +24,13 @@ test('coloured PLY import preserves RGB through project download and blocks inva
  await page.getByLabel('Wybierz skan i lokalne tekstury').setInputFiles({name:'SYNTHETIC-rgb.ply',mimeType:'application/octet-stream',buffer:Buffer.from(ply)});
  await expect(page.getByText('SYNTHETIC-rgb.ply',{exact:true}).first()).toBeVisible();
  await page.getByRole('button',{name:'Potwierdź i przelicz na mm'}).click();
- const event=page.waitForEvent('download');await page.getByRole('button',{name:'Zapisz projekt',exact:true}).click();const download=await event;const data=JSON.parse(await readFile((await download.path())!,'utf8'));
+ const download=await savePlainDownload(page);const data=JSON.parse(await readFile((await download.path())!,'utf8'));
  expect(data.mesh.colors).toEqual([1,0,0,0,1,0,0,0,1]);
  expect(data.mesh.positions).toEqual([0,0,0,40,0,0,0,40,40]);
  await page.getByLabel('Wybierz skan i lokalne tekstury').setInputFiles({name:'bad.ply',mimeType:'application/octet-stream',buffer:Buffer.from(ply.replace('40 0 0','NaN 0 0'))});
+ await replaceSyntheticProject(page);
  await expect(page.getByRole('alert')).toBeVisible();
- await expect(page.locator('.case-label strong')).toContainText('SYNTHETIC-rgb.ply');
+ await expect(page.locator('.filename')).toContainText('SYNTHETIC-rgb.ply');
 });
 test('OBJ references cannot trigger external texture requests',async({page})=>{
  const remote:string[]=[];page.on('request',r=>{if(r.url().includes('malicious.invalid'))remote.push(r.url());});
@@ -50,7 +52,7 @@ test('oversized project metadata is rejected before File.text is called',async({
   const input=document.querySelector('input[aria-label="Wybierz zapisany projekt"]') as HTMLInputElement;
   input.files=transfer.files;input.dispatchEvent(new Event('change',{bubbles:true}));
  });
- await expect(page.getByRole('alert')).toContainText('przekracza limit 128 MiB');
+ await expect(page.getByRole('alert')).toContainText('przekracza limit odczytu');
  expect(await page.evaluate(()=>(globalThis as unknown as {projectReads:number}).projectReads)).toBe(0);
 });
 test('tablet layout does not overflow viewport and retains all five stages',async({page},testInfo)=>{

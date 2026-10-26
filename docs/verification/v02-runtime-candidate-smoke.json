@@ -1,0 +1,11 @@
+{
+  "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\ortho-v02-runtime\\extracted\\OrthoSculptCAD",
+  "nodeModulesAbsent": true,
+  "server": "native Node stdlib",
+  "renderer": "WebGL2",
+  "measurementRows": 13,
+  "pageErrors": [],
+  "externalRequests": [],
+  "syntheticLabel": true,
+  "passed": true
+}

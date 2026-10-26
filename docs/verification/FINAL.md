@@ -1,53 +1,57 @@
-# OrthoSculpt CAD 0.1 — odbiór techniczny
+# OrthoSculpt CAD 0.2.0 — odbiór techniczny
 
-## Co dostarczono
+## Status i zakres
 
-Działającą wersję lokalną React/Three.js, gotowy bundle `dist/`, serwer statyczny Node bez dodatkowych zależności do normalnego uruchomienia, źródła Rust/Tauri, testy, instrukcję, research i macierz braków. To wersja badawcza/inżynierska, **nie pełny produkt production-grade ani zwalidowane oprogramowanie kliniczne**.
+Lokalna, polskojęzyczna pracownia TT: import kolorowego skanu, orientacja, pomiary i taśmy, rektyfikacja z referencją, kontrolowane rewizje, szyfrowany projekt, raport oraz STL/3MF do dalszego CAM. Dostawa zawiera gotowy dist, serwer Node stdlib, kod i testy. Nie wymaga kont ani internetu do normalnego uruchomienia.
 
-## Własne wykonanie parenta po poprawkach
+**Zaakceptowano wskazany zakres techniczno-badawczy. Nie jest to gotowy wyrób kliniczny, zwalidowany proces produkcji ani aplikacja natywna EXE.** Macierz pełnego briefu i odstępstwa: `../REQUIREMENTS.md`.
 
-| Polecenie / próba | Rzeczywisty wynik |
-|---|---|
-| `npm test` | 108/108;26 plików;0 niepowodzeń |
-| `npm run build` | TypeScript/Vite exit0;bundle `index-DXBcVluP.js` |
-| `npx playwright test --reporter=list,json` | 9/9, produkcyjny dist i rzeczywisty lokalny serwer |
-| `cargo test --release --manifest-path crates/ortho-geometry/Cargo.toml` | 20/20, realny harness Windows |
-| `cargo test --release --manifest-path src-tauri/state-tests/Cargo.toml` | 5/5, stan/generacje/nawigacja/syntetyczny smoke rdzenia |
-| `python src-tauri/tests/security_config.py` | 2/2 |
-| `npm audit --json` | 0 zgłoszonych znanych podatności w zainstalowanym drzewie; nie jest to audyt kompletnego bezpieczeństwa |
-| Skan dodanych linii kodu: sekrety literalne, wykonanie powłoki i eval | Brak dopasowań w sprawdzonych wzorcach; nie zastępuje review |
+## Końcowe wykonanie rodzica
 
-Raporty maszynowe: `vitest.json`, `playwright.json`, `test-summary.json`, `npm-audit.json`, `static-scan.json`. Liczby pochodzą z wykonania, nie ze zliczania nazw testów w opisie.
+| Próba | Wynik | Raport |
+|---|---|---|
+| Pełny Vitest, rzeczywiste Chromium Workers i PDF, maxWorkers=1 | **326 PASS, 0 FAIL, 0 SKIP; 53 pliki** | `v02-release-unit-serial.json` |
+| Pełny Playwright na zamrożonym produkcyjnym buildzie | **22 PASS, 0 FAIL, 0 SKIP, 0 flaky** | `../screenshots/v02-e2e/candidate-final-summary.json` |
+| TypeScript / Vite build | exit 0; WebGL2 sprawdzony w działaniu | bundle poniżej |
+| Rust geometry / native state / security config | **20 / 5 / 2 PASS**, osobne harnessy | rzeczywiste cargo test i security_config.py |
+| npm audit | 0 zgłoszonych znanych podatności | `v02-final-npm-audit.json` |
+| Cztery rzeczywiste PDF, w tym maksymalny kod 40×W | 21 stron; minimum 12pt; identyfikacja każdej strony; bez overflow | `v02-report-print-re-review.json` |
 
-### Zakres przeglądarki
+Nie sumujemy historycznych testów subagentów z wynikiem pełnego przebiegu. Maszynowy punkt wejścia: `v02-release-acceptance.json`.
 
-Sprawdzono PLY RGB i odrzucenie NaN/listowego RGB, blokadę zewnętrznej tekstury OBJ, granicę File.size przed File.text, tablet1024px, kontrolowany błąd overflow jednostek bez pageerror i utraty UI, pustą strefę bez mutacji/historii, reszty przybliżonej kalibracji z zachowaniem ręcznych taśm oraz pełną ścieżkę: demo→mm→repair→PCA→pomiary→taśma→CSV→kalibracja→strefa/undo→rzeczywisty pędzel/undo→powłoka→STL/3MF→projekt/reload. Test pełnej ścieżki sprawdza brak zewnętrznych żądań HTTP i pageerror. Backend rzeczywiście działający w sprawdzonym Chromium: **WebGL2**.
+Równoległe powtórzenie pełnego zestawu miało timeouty i jest zachowane w `v02-release-unit.json`. Kompletny kolejny przebieg, bez równoległego E2E i z jednym procesem testującym, przeszedł bez pominięć. Nie zwiększano limitów czasowych ani nie osłabiano asercji. Przyczyna sprzętowa nie została osobno dowiedziona; do powtarzalnego odbioru zalecamy uruchomienie sekwencyjne.
 
-Zrzuty w `docs/screenshots/` pochodzą z uruchomionej aplikacji. Nie są makietami ani dowodem klinicznej poprawności kształtu.
+## Co rzeczywiście sprawdzono
 
-### Zakres Rust
+- Import RGB i topologia, bez rozcinania wspólnych indeksów dla zgodnych face-RGB; konflikty są odrzucane jawnie. Niepewne cienkie nakładanie nie otrzymuje PASS, nieznana baza mapy nie staje się zielonym zerem.
+- Parametry zadań odrzucane przed konstrukcją Workera i kopiowaniem; wyłącznie własne bufory transferowe. Rzeczywiste Chromium: oryginalne bufory pozostają podłączone i niezmienione.
+- Pseudonimowy projekt i dziennik; migracja v1 bez wymyślonej historii; błędne i dziurawe dane odrzucane przed Blob/KDF.
+- Szyfrowany download/reload, niezależne Node crypto, błędne hasło i tamper bez utraty poprzedniego projektu. Stay/Escape i rzeczywisty beforeunload, także po pobraniu kopii.
+- Aktywny gest + keyboard Undo/Nowy projekt nie odtwarza starej geometrii. Utrata capture anuluje gest; poprawny gest ma jeden wpis/rewizję/undo, zachowuje RGB i bazę.
+- Pomiary/taśmy/kalibracja z rzeczywistymi resztami, przekroje CAD i referencji na tym samym Z, rzeczywisty canvas 3D. Anulowanie kończy natywnego Workera i nie publikuje starego wyniku.
+- Konflikt audytu i indeksów po zapisie: odtworzony RED w 4 kontekstach; po poprawce niezmieniona regresja obejmuje 20 pobrań, maksymalnie 2 Workery compute, bez chwilowych lub trwałych alertów. Niezależny reviewer powtórzył stres i dodatkowy lifecycle.
+- Raport ma faktyczny hash geometrii i rewizję, ograniczoną listę parametrów dziennika, ścisłe statusy, ochronę przed niepełnym audytem; PDF sprawdzony również dla szerokiego maksymalnego kodu.
+- Rzeczywiste pliki STL/3MF, poprawny kontener/relacje/jednostki 3MF, reload projektu; CSP, brak zewnętrznych żądań i błędów strony w badanych scenariuszach; pięć etapów bez overflow przy 1024/390 px.
 
-Oprócz walca, uporządkowanych konturów, BVH i protokołu sprawdzono dokładne regresje review: samoprzecinający się obrys o niezerowym polu, powielone/przeciwnie nawinięte/nieweldowane ściany, nieprzyległe dotykanie/nakładanie oraz poprawne współdzielone krawędzie płaszczyzny. Kontrola prostoty ma jawny budżet pracy; po jego wyczerpaniu wynik jest nieważny, a nie pozornie prawidłowy.
+## Niezależne odbiory
 
-## Niezależne review
+`v02-re-review-core.json`, `v02-gesture-re-review.json`, `v02-worker-budget-re-review.json` i `v02-report-print-re-review.json` potwierdzają poszczególne poprawki. Brak findingów w ich zakresie nie jest globalną gwarancją bezpieczeństwa. Zalecenia nieblokujące, m.in. dodatkowe trwałe testy blur/pointercancel i awarii audytu, są zachowane w raportach.
 
-Pierwszy przegląd dał FAIL/PARTIAL i odtworzył błędy; poprawki nie były kosmetyczne. Ich reprodukcje RED→GREEN i zakres opisują `REVIEW.md`, `native-review-fixes.md`, `frontend-review-fixes.md`. Parent powtórzył końcowe polecenia powyżej.
+Aktualny entry: `index-Ct_H4HMR.js`; SHA-256: `08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd`. Maszynowe zestawy manifestów potwierdzają niezmienność bundla podczas całego E2E.
 
-Status końcowego ponownego przeglądu: **PASS w ścisłym zakresie poprawek**. Niezależnie wykonano108/108 Vitest,20/20 rdzenia Rust,5/5 stanu,2/2 konfiguracji i TypeScript --noEmit. Dodatkowo sprawdzono maksymalny pakiet250000 konturów/500000 punktów/18000032 bajtów oraz odrzucanie przekroczeń. Nie zgłoszono dalszych błędów lub obaw bezpieczeństwa w tym zakresie. Szczegóły: `re-review.json`. To nie certyfikat całego produktu, kliniczności lub niezweryfikowanego Tauri.
+## Paczka i uruchomienie
 
-## Pakowanie
+Rozpakuj cały ZIP i uruchom `Uruchom-OrthoSculpt.cmd`; wymagany Node.js 22+ (sprawdzony Node 24). Adres domyślny: `http://127.0.0.1:4174`. Nie trzeba npm install ani Rust. Kontrola rzeczywistego rozpakowanego runtime ZIP bez node_modules: model WebGL2, 13 wierszy tabeli pomiarowej, jawny przykład syntetyczny, zero błędów strony i zewnętrznych żądań (`packaging.json`).
 
-Wstępny rzeczywisty ZIP został rozpakowany do odrębnego katalogu scratch. Bez `node_modules` uruchomiono dołączony serwer Node i prawdziwy Chromium: model syntetyczny, WebGL2, tabela przekrojów, brak pageerror i żądań zewnętrznych. Po wszystkich poprawkach powtórzono tę próbę na nowym, rozpakowanym ZIP-ie: PASS,13 rzeczywistych wierszy pomiarowych, WebGL2, brak pageerror i zewnętrznych żądań. Dokładny wynik i SHA256 badanego bundla zapisuje `packaging.json`; końcowy ZIP dystrybucyjny jest dodatkowo sprawdzany względem tych samych bajtów bundla.
+Odbiór finalnego pełnego ZIP jest zapisywany po jego rozpakowaniu w osobnym pliku `OrthoSculptCAD-0.2.0-lokalny.verification.json`, dostarczanym obok archiwum i SHA-256. Ten sidecar wiąże wynik z dokładnymi bajtami archiwum; nie należy utożsamiać kontroli checkoutu z kontrolą dowolnego późniejszego ZIP. Kod, notices i instrukcja są dołączone; node_modules, target, .git, instalatory, prywatne wejścia i nieistniejący EXE nie są pakowane.
 
-Nie pakuje się `node_modules`, Cargo target, instalatorów/toolchainów, `.git`, prywatnych dokumentów wejściowych ani nieistniejącego exe. Gotowy dist i notices licencji są dołączane. Zapis JSON/STL/3MF/CSV nie jest szyfrowany.
+## Pozostające granice
 
-## Blokery i granice pozostające po odbiorze
+- **Brak EXE i testu rzeczywistego WebView IPC.** Ostatnia odnotowana próba Tauri zakończyła się AppControl 4551, m.in. generic-array build-script. Nie wyłączano ochrony Windows. Potrzebne zatwierdzone środowisko build/signing; metadata Cargo 0.2.0 nie oznaczają udanego buildu.
+- Bez zweryfikowanego sprzętowego WebGPU, 60FPS, <0,5ms lub benchmarku milionowych skanów. Build nadal ostrzega o dużym głównym chuncku.
+- Audyt ma budżety i UNKNOWN; nie ma globalnej gwarancji braku przecięć, minimalnej grubości, solid-offset, wytrzymałości czy dopasowania. Nie ma pełnego Liepa/Delaunay, ogólnego remeshingu ani dowolnego trimline.
+- Gest oblicza się po zwolnieniu, bez live-deform preview. PCA/rejestracja nie rozpoznają anatomii; kalibracja jest przybliżona, powłoka eksperymentalna.
+- Adapter/CNC są poza uzgodnionym zakresem 0.2. Projekty i raport nie stanowią podpisu cyfrowego, pełnego replay wszystkich siatek ani certyfikatu.
+- Nie otrzymano reprezentatywnych uprawnionych skanów ani oceny protetyka. Odbiór kliniczny, metrologiczny, mechaniczny i regulacyjny pozostaje otwarty.
 
-- **Nie ma gotowego .exe.** Parent i reviewerzy odtworzyli Windows AppControl4551 przy uruchomieniu skryptu budowania `camino` (także inne zależności w trybie debug). Zainstalowano i niezależnie wykryto Rust/MSVC/SDK/WebView2, ale pełnego Tauri nie skompilowano/nie uruchomiono. Nie zmieniano ochrony systemu. Realny WebView IPC i natywne pobrania Blob nie są zweryfikowane.
-- Sprzętowe WebGPU,60FPS,<0,5ms, milionowe skany i zużycie pamięci nie zostały potwierdzone benchmarkami. Operacje TS są synchroniczne. Build ma ostrzeżenia o dużym chuncku i niewydzielanym dynamicznym imporcie.
-- Nie ma pełnego Liepa/Delaunay, ogólnej naprawy/weld/remeshingu z transferem atrybutów, globalnej kontroli samoprzecięć3D, minimalnej grubości i zwalidowanego shellingu.
-- Nie ma adaptera producenta, boolean jego połączenia ani G-code CNC. Nie dostarczono potrzebnych danych komponentu i maszyny; UI jawnie blokuje te ścieżki.
-- Rejestracja i propozycja PCA nie potwierdzają anatomii lub obu stron kończyny. Kalibracja jest przybliżeniem na istniejących wierzchołkach i pokazuje reszty. Powłoka normal-offset pozostaje eksperymentalna.
-- Nie wykonano prób na reprezentatywnym uprawnionym zbiorze skanów pacjentów ani walidacji metrologicznej/klinicznej/mechanicznej/regulacyjnej. Testy syntetyczne potwierdzają kod dla badanych przypadków, nie bezpieczeństwo protezy.
-
-Szczegóły: `README.md`, `docs/REQUIREMENTS.md`, `docs/RESEARCH.md`. Ta jawna lista luk jest częścią dostawy, nie deklaracją wykonania pełnego pierwotnego zakresu.
+Historyczny raport 0.1 zachowano jako `FINAL-v01.md`; nie opisuje aktualnego wydania.

@@ -1,0 +1,2044 @@
+{
+  "origin": {
+    "baseURL": "http://127.0.0.1:4176",
+    "asset": "/assets/index-DVLn8Ywk.js",
+    "sha256": "29957c9161f8c19e54da05d52cee2712e51c11946973fba28319e0aa2325c581",
+    "chromium": "156.0.8078.4"
+  },
+  "result": {
+    "session": 4,
+    "downloads": 2,
+    "events": 115,
+    "constructors": 20,
+    "maxComputeAlive": 2,
+    "maxDisplayAlive": 0,
+    "alerts": [
+      {
+        "t": 25109.399999976158,
+        "type": "alert",
+        "text": "Error: Silnik zajęty: osiągnięto limit obliczeń.",
+        "alive": [
+          {
+            "workerId": 17,
+            "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+            "category": "compute",
+            "alive": true,
+            "kind": "task",
+            "op": "topology",
+            "requestId": 1,
+            "generation": 17
+          }
+        ]
+      }
+    ],
+    "checkpoints": [
+      {
+        "label": "before-download-1",
+        "t": 11590.099999964237
+      },
+      {
+        "label": "after-contours-1",
+        "t": 19861.30000001192
+      },
+      {
+        "label": "before-download-2",
+        "t": 20522.69999998808
+      },
+      {
+        "label": "after-contours-2",
+        "t": 28700.5
+      }
+    ],
+    "privacy": {
+      "errors": [],
+      "external": [],
+      "violations": [],
+      "workers": [
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+        "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js"
+      ]
+    }
+  },
+  "events": [
+    {
+      "t": 1372.699999988079,
+      "type": "constructor-attempt",
+      "workerId": 1,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93631\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93751",
+      "alive": []
+    },
+    {
+      "t": 1372.800000011921,
+      "type": "constructor",
+      "workerId": 1,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 1,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 1373.0999999642372,
+      "type": "postMessage",
+      "workerId": 1,
+      "kind": "task",
+      "op": "topology",
+      "requestId": 1,
+      "generation": 1,
+      "alive": [
+        {
+          "workerId": 1,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 1
+        }
+      ]
+    },
+    {
+      "t": 1729.800000011921,
+      "type": "response",
+      "workerId": 1,
+      "requestId": 1,
+      "generation": 1,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 1,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 1
+        }
+      ]
+    },
+    {
+      "t": 1730.199999988079,
+      "type": "terminate",
+      "workerId": 1,
+      "alive": []
+    },
+    {
+      "t": 1730.199999988079,
+      "type": "constructor-attempt",
+      "workerId": 2,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93680",
+      "alive": []
+    },
+    {
+      "t": 1730.5999999642372,
+      "type": "constructor",
+      "workerId": 2,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 2,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 1730.699999988079,
+      "type": "postMessage",
+      "workerId": 2,
+      "kind": "task",
+      "op": "analyze",
+      "requestId": 1,
+      "generation": 2,
+      "alive": [
+        {
+          "workerId": 2,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 2
+        }
+      ]
+    },
+    {
+      "t": 2038.5999999642372,
+      "type": "response",
+      "workerId": 2,
+      "requestId": 1,
+      "generation": 2,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 2,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 2
+        }
+      ]
+    },
+    {
+      "t": 2038.699999988079,
+      "type": "terminate",
+      "workerId": 2,
+      "alive": []
+    },
+    {
+      "t": 2810,
+      "type": "constructor-attempt",
+      "workerId": 3,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93631\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93751",
+      "alive": []
+    },
+    {
+      "t": 2810.300000011921,
+      "type": "constructor",
+      "workerId": 3,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 3,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 2810.399999976158,
+      "type": "postMessage",
+      "workerId": 3,
+      "kind": "task",
+      "op": "topology",
+      "requestId": 1,
+      "generation": 3,
+      "alive": [
+        {
+          "workerId": 3,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 3
+        }
+      ]
+    },
+    {
+      "t": 2902.099999964237,
+      "type": "response",
+      "workerId": 3,
+      "requestId": 1,
+      "generation": 3,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 3,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 3
+        }
+      ]
+    },
+    {
+      "t": 2902.199999988079,
+      "type": "terminate",
+      "workerId": 3,
+      "alive": []
+    },
+    {
+      "t": 2902.399999976158,
+      "type": "constructor-attempt",
+      "workerId": 4,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93680",
+      "alive": []
+    },
+    {
+      "t": 2902.599999964237,
+      "type": "constructor",
+      "workerId": 4,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 4,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 2902.800000011921,
+      "type": "postMessage",
+      "workerId": 4,
+      "kind": "task",
+      "op": "analyze",
+      "requestId": 1,
+      "generation": 4,
+      "alive": [
+        {
+          "workerId": 4,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 4
+        }
+      ]
+    },
+    {
+      "t": 3125.199999988079,
+      "type": "response",
+      "workerId": 4,
+      "requestId": 1,
+      "generation": 4,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 4,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 4
+        }
+      ]
+    },
+    {
+      "t": 3125.199999988079,
+      "type": "terminate",
+      "workerId": 4,
+      "alive": []
+    },
+    {
+      "t": 3681.899999976158,
+      "type": "constructor-attempt",
+      "workerId": 5,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94259",
+      "alive": []
+    },
+    {
+      "t": 3682.199999988079,
+      "type": "constructor",
+      "workerId": 5,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 3682.5,
+      "type": "postMessage",
+      "workerId": 5,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 5,
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 5
+        }
+      ]
+    },
+    {
+      "t": 3856.899999976158,
+      "type": "response",
+      "workerId": 5,
+      "requestId": 1,
+      "generation": 5,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 5
+        }
+      ]
+    },
+    {
+      "t": 4086.300000011921,
+      "type": "postMessage",
+      "workerId": 5,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 5,
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 5
+        }
+      ]
+    },
+    {
+      "t": 4166.199999988079,
+      "type": "response",
+      "workerId": 5,
+      "requestId": 2,
+      "generation": 5,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 5,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 5
+        }
+      ]
+    },
+    {
+      "t": 5194,
+      "type": "terminate",
+      "workerId": 5,
+      "alive": []
+    },
+    {
+      "t": 5418.5,
+      "type": "constructor-attempt",
+      "workerId": 6,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:102188\n    at Bn (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:92148)",
+      "alive": []
+    },
+    {
+      "t": 5418.599999964237,
+      "type": "constructor",
+      "workerId": 6,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 6,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 5418.800000011921,
+      "type": "postMessage",
+      "workerId": 6,
+      "kind": "task",
+      "op": "zone",
+      "requestId": 1,
+      "generation": 6,
+      "alive": [
+        {
+          "workerId": 6,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "zone",
+          "requestId": 1,
+          "generation": 6
+        }
+      ]
+    },
+    {
+      "t": 5660.599999964237,
+      "type": "response",
+      "workerId": 6,
+      "requestId": 1,
+      "generation": 6,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 6,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "zone",
+          "requestId": 1,
+          "generation": 6
+        }
+      ]
+    },
+    {
+      "t": 5660.599999964237,
+      "type": "terminate",
+      "workerId": 6,
+      "alive": []
+    },
+    {
+      "t": 5858.199999988079,
+      "type": "constructor-attempt",
+      "workerId": 7,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93631\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93751",
+      "alive": []
+    },
+    {
+      "t": 5858.399999976158,
+      "type": "constructor",
+      "workerId": 7,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 7,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 5858.5,
+      "type": "postMessage",
+      "workerId": 7,
+      "kind": "task",
+      "op": "topology",
+      "requestId": 1,
+      "generation": 7,
+      "alive": [
+        {
+          "workerId": 7,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "t": 6212.099999964237,
+      "type": "response",
+      "workerId": 7,
+      "requestId": 1,
+      "generation": 7,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 7,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 7
+        }
+      ]
+    },
+    {
+      "t": 6212.300000011921,
+      "type": "terminate",
+      "workerId": 7,
+      "alive": []
+    },
+    {
+      "t": 6212.300000011921,
+      "type": "constructor-attempt",
+      "workerId": 8,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93680",
+      "alive": []
+    },
+    {
+      "t": 6212.800000011921,
+      "type": "constructor",
+      "workerId": 8,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 8,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 6212.899999976158,
+      "type": "postMessage",
+      "workerId": 8,
+      "kind": "task",
+      "op": "analyze",
+      "requestId": 1,
+      "generation": 8,
+      "alive": [
+        {
+          "workerId": 8,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 8
+        }
+      ]
+    },
+    {
+      "t": 6514.800000011921,
+      "type": "response",
+      "workerId": 8,
+      "requestId": 1,
+      "generation": 8,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 8,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 8
+        }
+      ]
+    },
+    {
+      "t": 6514.800000011921,
+      "type": "terminate",
+      "workerId": 8,
+      "alive": []
+    },
+    {
+      "t": 6863.300000011921,
+      "type": "constructor-attempt",
+      "workerId": 9,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94259",
+      "alive": []
+    },
+    {
+      "t": 6863.599999964237,
+      "type": "constructor",
+      "workerId": 9,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 6863.800000011921,
+      "type": "postMessage",
+      "workerId": 9,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 9,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 7108.5,
+      "type": "response",
+      "workerId": 9,
+      "requestId": 1,
+      "generation": 9,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 7334.899999976158,
+      "type": "postMessage",
+      "workerId": 9,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 9,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 7385.099999964237,
+      "type": "response",
+      "workerId": 9,
+      "requestId": 2,
+      "generation": 9,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 8679.099999964237,
+      "type": "constructor-attempt",
+      "workerId": 10,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94779\n    at Tl (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:95253)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118539)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:119756)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118585)",
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        }
+      ]
+    },
+    {
+      "t": 8679.399999976158,
+      "type": "constructor",
+      "workerId": 10,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 8679.699999988079,
+      "type": "postMessage",
+      "workerId": 10,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 10,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 9213.899999976158,
+      "type": "response",
+      "workerId": 10,
+      "requestId": 1,
+      "generation": 10,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 9214.199999988079,
+      "type": "postMessage",
+      "workerId": 10,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 10,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 9291.099999964237,
+      "type": "response",
+      "workerId": 10,
+      "requestId": 2,
+      "generation": 10,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 11590.099999964237,
+      "type": "checkpoint",
+      "label": "before-download-1",
+      "alive": [
+        {
+          "workerId": 9,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 9
+        },
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 15848,
+      "type": "terminate",
+      "workerId": 9,
+      "alive": [
+        {
+          "workerId": 10,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 10
+        }
+      ]
+    },
+    {
+      "t": 15848.199999988079,
+      "type": "terminate",
+      "workerId": 10,
+      "alive": []
+    },
+    {
+      "t": 16126.399999976158,
+      "type": "constructor-attempt",
+      "workerId": 11,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94779\n    at Tl (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:95253)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118539)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:119756)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118585)",
+      "alive": []
+    },
+    {
+      "t": 16126.699999988079,
+      "type": "constructor",
+      "workerId": 11,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 16126.899999976158,
+      "type": "postMessage",
+      "workerId": 11,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 11,
+      "alive": [
+        {
+          "workerId": 11,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 11
+        }
+      ]
+    },
+    {
+      "t": 16129.899999976158,
+      "type": "terminate",
+      "workerId": 11,
+      "alive": []
+    },
+    {
+      "t": 16259.5,
+      "type": "constructor-attempt",
+      "workerId": 12,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93631\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93751",
+      "alive": []
+    },
+    {
+      "t": 16259.699999988079,
+      "type": "constructor",
+      "workerId": 12,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 16259.800000011921,
+      "type": "postMessage",
+      "workerId": 12,
+      "kind": "task",
+      "op": "topology",
+      "requestId": 1,
+      "generation": 12,
+      "alive": [
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 16572.399999976158,
+      "type": "response",
+      "workerId": 12,
+      "requestId": 1,
+      "generation": 12,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 12,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 12
+        }
+      ]
+    },
+    {
+      "t": 16572.5,
+      "type": "terminate",
+      "workerId": 12,
+      "alive": []
+    },
+    {
+      "t": 16572.599999964237,
+      "type": "constructor-attempt",
+      "workerId": 13,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93680",
+      "alive": []
+    },
+    {
+      "t": 16573,
+      "type": "constructor",
+      "workerId": 13,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 16573.19999998808,
+      "type": "postMessage",
+      "workerId": 13,
+      "kind": "task",
+      "op": "analyze",
+      "requestId": 1,
+      "generation": 13,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 13
+        }
+      ]
+    },
+    {
+      "t": 16874.69999998808,
+      "type": "response",
+      "workerId": 13,
+      "requestId": 1,
+      "generation": 13,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 13,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 13
+        }
+      ]
+    },
+    {
+      "t": 16874.80000001192,
+      "type": "terminate",
+      "workerId": 13,
+      "alive": []
+    },
+    {
+      "t": 17033.80000001192,
+      "type": "constructor-attempt",
+      "workerId": 14,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94779\n    at Tl (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:95253)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118539)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:119756)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118585)",
+      "alive": []
+    },
+    {
+      "t": 17034,
+      "type": "constructor",
+      "workerId": 14,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 17034.19999998808,
+      "type": "postMessage",
+      "workerId": 14,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 14,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 17265.899999976158,
+      "type": "constructor-attempt",
+      "workerId": 15,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94259",
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 17266.099999964237,
+      "type": "constructor",
+      "workerId": 15,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 17266.30000001192,
+      "type": "postMessage",
+      "workerId": 15,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 15,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 17340.399999976158,
+      "type": "response",
+      "workerId": 14,
+      "requestId": 1,
+      "generation": 14,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 17340.399999976158,
+      "type": "postMessage",
+      "workerId": 14,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 14,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 17415.5,
+      "type": "response",
+      "workerId": 14,
+      "requestId": 2,
+      "generation": 14,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 17570.099999964237,
+      "type": "response",
+      "workerId": 15,
+      "requestId": 1,
+      "generation": 15,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 17797.30000001192,
+      "type": "postMessage",
+      "workerId": 15,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 15,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 17876.099999964237,
+      "type": "response",
+      "workerId": 15,
+      "requestId": 2,
+      "generation": 15,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 19861.30000001192,
+      "type": "checkpoint",
+      "label": "after-contours-1",
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 20522.69999998808,
+      "type": "checkpoint",
+      "label": "before-download-2",
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        },
+        {
+          "workerId": 15,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 15
+        }
+      ]
+    },
+    {
+      "t": 24648.599999964237,
+      "type": "terminate",
+      "workerId": 15,
+      "alive": [
+        {
+          "workerId": 14,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 14
+        }
+      ]
+    },
+    {
+      "t": 24648.69999998808,
+      "type": "terminate",
+      "workerId": 14,
+      "alive": []
+    },
+    {
+      "t": 24894.69999998808,
+      "type": "constructor-attempt",
+      "workerId": 16,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94779\n    at Tl (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:95253)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118539)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:119756)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118585)",
+      "alive": []
+    },
+    {
+      "t": 24894.899999976158,
+      "type": "constructor",
+      "workerId": 16,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 24895.099999964237,
+      "type": "postMessage",
+      "workerId": 16,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 16,
+      "alive": [
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 25027.69999998808,
+      "type": "constructor-attempt",
+      "workerId": 17,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93631\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93751",
+      "alive": [
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        }
+      ]
+    },
+    {
+      "t": 25027.899999976158,
+      "type": "constructor",
+      "workerId": 17,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        },
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 25028,
+      "type": "postMessage",
+      "workerId": 17,
+      "kind": "task",
+      "op": "topology",
+      "requestId": 1,
+      "generation": 17,
+      "alive": [
+        {
+          "workerId": 16,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 16
+        },
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 17
+        }
+      ]
+    },
+    {
+      "t": 25106.899999976158,
+      "type": "terminate",
+      "workerId": 16,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 17
+        }
+      ]
+    },
+    {
+      "t": 25109.399999976158,
+      "type": "alert",
+      "text": "Error: Silnik zajęty: osiągnięto limit obliczeń.",
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 17
+        }
+      ]
+    },
+    {
+      "t": 25337.599999964237,
+      "type": "response",
+      "workerId": 17,
+      "requestId": 1,
+      "generation": 17,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 17,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "topology",
+          "requestId": 1,
+          "generation": 17
+        }
+      ]
+    },
+    {
+      "t": 25337.80000001192,
+      "type": "terminate",
+      "workerId": 17,
+      "alive": []
+    },
+    {
+      "t": 25338,
+      "type": "constructor-attempt",
+      "workerId": 18,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at S (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:10353)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:93680",
+      "alive": []
+    },
+    {
+      "t": 25338.19999998808,
+      "type": "constructor",
+      "workerId": 18,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 25338.30000001192,
+      "type": "postMessage",
+      "workerId": 18,
+      "kind": "task",
+      "op": "analyze",
+      "requestId": 1,
+      "generation": 19,
+      "alive": [
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 19
+        }
+      ]
+    },
+    {
+      "t": 25633.19999998808,
+      "type": "response",
+      "workerId": 18,
+      "requestId": 1,
+      "generation": 19,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 18,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "task",
+          "op": "analyze",
+          "requestId": 1,
+          "generation": 19
+        }
+      ]
+    },
+    {
+      "t": 25633.30000001192,
+      "type": "terminate",
+      "workerId": 18,
+      "alive": []
+    },
+    {
+      "t": 25780.899999976158,
+      "type": "constructor-attempt",
+      "workerId": 19,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94779\n    at Tl (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:95253)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118539)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:119756)\n    at Gu (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118312)\n    at Ku (http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:9:118585)",
+      "alive": []
+    },
+    {
+      "t": 25781.099999964237,
+      "type": "constructor",
+      "workerId": 19,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 25781.30000001192,
+      "type": "postMessage",
+      "workerId": 19,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 20,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 25937,
+      "type": "constructor-attempt",
+      "workerId": 20,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "stack": "Error\n    at Object.construct (<anonymous>:50:16)\n    at new p (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:4427)\n    at b (http://127.0.0.1:4176/assets/compute-CycYmv1L.js:2:9091)\n    at http://127.0.0.1:4176/assets/index-DVLn8Ywk.js:4773:94259",
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        }
+      ]
+    },
+    {
+      "t": 25937.19999998808,
+      "type": "constructor",
+      "workerId": 20,
+      "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true
+        }
+      ]
+    },
+    {
+      "t": 25937.399999976158,
+      "type": "postMessage",
+      "workerId": 20,
+      "kind": "init",
+      "requestId": 1,
+      "generation": 21,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 21
+        }
+      ]
+    },
+    {
+      "t": 26081.69999998808,
+      "type": "response",
+      "workerId": 19,
+      "requestId": 1,
+      "generation": 20,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 21
+        }
+      ]
+    },
+    {
+      "t": 26081.80000001192,
+      "type": "postMessage",
+      "workerId": 19,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 20,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 21
+        }
+      ]
+    },
+    {
+      "t": 26154,
+      "type": "response",
+      "workerId": 19,
+      "requestId": 2,
+      "generation": 20,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 21
+        }
+      ]
+    },
+    {
+      "t": 26227.19999998808,
+      "type": "response",
+      "workerId": 20,
+      "requestId": 1,
+      "generation": 21,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "init",
+          "requestId": 1,
+          "generation": 21
+        }
+      ]
+    },
+    {
+      "t": 26525.399999976158,
+      "type": "postMessage",
+      "workerId": 20,
+      "kind": "slice",
+      "requestId": 2,
+      "generation": 21,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 21
+        }
+      ]
+    },
+    {
+      "t": 26602.099999964237,
+      "type": "response",
+      "workerId": 20,
+      "requestId": 2,
+      "generation": 21,
+      "ok": true,
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 21
+        }
+      ]
+    },
+    {
+      "t": 28700.5,
+      "type": "checkpoint",
+      "label": "after-contours-2",
+      "alive": [
+        {
+          "workerId": 19,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 20
+        },
+        {
+          "workerId": 20,
+          "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "category": "compute",
+          "alive": true,
+          "kind": "slice",
+          "requestId": 2,
+          "generation": 21
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,17 @@
 import type { Vec2 } from "../types";
 
+const MAX_CONTOUR_SEGMENTS = 250_000;
+const MAX_SIMPLICITY_WORK = 4_000_000;
+
 export function orientation(a: Vec2, b: Vec2, c: Vec2): number {
   return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0]);
 }
-/** Sweep on x extents; rejects non-adjacent crossings, touches, overlaps and zero-length edges. */
-export function simplePolygon(points: Vec2[]): boolean {
+/** Bounded x sweep; false also means unvalidated/over-budget, never proof of simplicity. */
+export function simplePolygon(points: Vec2[], maxWork = MAX_SIMPLICITY_WORK): boolean {
   const n = points.length;
-  if (n < 3) return false;
+  if (n < 3 || n > MAX_CONTOUR_SEGMENTS ||
+      !Number.isSafeInteger(maxWork) || maxWork < 0 || maxWork > MAX_SIMPLICITY_WORK) return false;
+  if (points.some(p => !Number.isFinite(p[0]) || !Number.isFinite(p[1]))) return false;
   const segments = points
     .map((a, i) => {
       const b = points[(i + 1) % n];
@@ -21,11 +26,23 @@ export function simplePolygon(points: Vec2[]): boolean {
       };
     })
     .sort((a, b) => a.lo - b.lo);
-  let active: typeof segments = [];
+  const active: typeof segments = [];
+  let work = 0;
   for (const s of segments) {
     if (s.a[0] === s.b[0] && s.a[1] === s.b[1]) return false;
-    active = active.filter((t) => t.hi >= s.lo);
-    for (const t of active) {
+    let k = 0;
+    while (k < active.length) {
+      // Charge every visit, including expired, adjacent and Y-disjoint edges,
+      // like Rust MAX_SIMPLICITY_WORK. Counting intersections alone is unbounded.
+      if (work === maxWork) return false;
+      work++;
+      const t = active[k];
+      if (t.hi < s.lo) {
+        active[k] = active[active.length - 1];
+        active.pop();
+        continue;
+      }
+      k++;
       const delta = Math.abs(s.i - t.i);
       if (
         delta === 1 ||

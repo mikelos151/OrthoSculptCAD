@@ -1,0 +1,77 @@
+{
+  "browser": "156.0.8078.4",
+  "caseCode": "DEMO-TT-REVIEW",
+  "measurementRows": 25,
+  "validMeasurementRows": 24,
+  "manualTapeCount": 0,
+  "geometrySha256": "ba4d91b59f1173d98c402ab390d1c727244e11d068f762edfa365f42934214bf",
+  "overflow": [
+    {
+      "width": 1400,
+      "scroll": 1400,
+      "overflow": false
+    },
+    {
+      "width": 1032,
+      "scroll": 1032,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "pdf": {
+    "pageCount": 6,
+    "pages": [
+      {
+        "page": 1,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 32.0390625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      },
+      {
+        "page": 2,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 37.2890625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      },
+      {
+        "page": 3,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 45.5390625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      },
+      {
+        "page": 4,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 40.2890625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      },
+      {
+        "page": 5,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 29.0390625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      },
+      {
+        "page": 6,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerBodyGapPt": 286.2890625,
+        "inPageBounds": true,
+        "badGlyphs": 0
+      }
+    ],
+    "issues": [],
+    "literalHeading": true
+  }
+}

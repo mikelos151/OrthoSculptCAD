@@ -1,0 +1,13 @@
+# E2E-02 — confirmed on the integrated pre-fix build
+
+The parent rebuilt dist from the current source after the gesture, report heading and diagnostic changes. The native Chromium regression still failed in all four fresh browser contexts, after the first project download in each. Both real same-height SVG contours and the 3D model were checked before the unexpected alert. Evidence: `v02-worker-budget-parent-red.json` and `v02-worker-budget-parent-red-artifacts/`; original earlier evidence is preserved separately in `v02-worker-budget-red-legacy/`.
+
+## Narrow correction to evaluate
+
+Make background-audit completion explicitly belong to a particular mesh object. Derive slicing readiness from that identity, rather than relying on a `checking` boolean whose previous render value can admit audit and index startup together. Invalidate readiness whenever publishing/replacing geometry; allow valid completed diagnostics (including FAIL/UNKNOWN) to be reused after a download that does not change geometry. This is computation completion, not a PASS or clinical acceptance flag. Start both comparison indexes only after the current mesh audit has completed. Keep existing cancellation and stale-result guards.
+
+The Worker limit remains two; do not suppress its errors, skip audits, weaken actual contour assertions, manufacture replies, or alter source RGB/baseline/history. Require the unchanged stress regression to complete all 20 downloads in four fresh contexts, with real Worker observations and no current or transient alerts. Then rerun integrated unit/browser regressions and independently review the exact correction.
+
+The correction is now implemented narrowly in App.tsx. Slicing readiness is keyed to the completed audit's mesh identity, invalidated when publishing geometry or clearing the project; unchanged downloads reuse the current audit, including legitimate FAIL/UNKNOWN diagnostics. Both slicing effects wait for the current mesh's completed audit. No Worker limit, error suppression, geometry function or gesture-fence change was made.
+
+The parent rebuilt the bundle and ran the unchanged native Chromium stress regression: PASS, all 20 downloads in four fresh contexts, with real same-height contours and no current/transient alerts. See `v02-worker-budget-parent-green.json` and `v02-worker-budget-evidence/`. The entire 325-test suite, including real Chromium Workers and four printed PDF variants, passed again without skips; Rust geometry20/state5/security-config2 passed separately. A final independent review and full integrated E2E are still running; these results do not yet constitute acceptance of the release ZIP.

@@ -1,0 +1,493 @@
+{
+  "command": "node scripts/v02-ui-acceptance.mjs --global-timeout=900000",
+  "gitHead": null,
+  "gitStatus": null,
+  "nodeVersion": "v24.19.0",
+  "playwrightVersion": "1.64.1",
+  "baseURL": "http://127.0.0.1:4176",
+  "buildWasRunByThisScript": false,
+  "distUnchangedDuringTests": true,
+  "distBefore": [
+    {
+      "path": "dist/assets/alignment-Cws1kJE_.js",
+      "sha256": "6d917c26031716c0b5a440d012dcf9f480c22b5e9c0f53378d6763d49f667712"
+    },
+    {
+      "path": "dist/assets/audit-CG4T1Oa-.js",
+      "sha256": "b17ee8bd0706636c5e7833b02b4af69434265d4f2648f88161dd08fd91beddaa"
+    },
+    {
+      "path": "dist/assets/calibration-CR__oMLl.js",
+      "sha256": "f6f0555fb98789b0682caa72a22adb34666eee8f4b78a440b87ea1fd306cf5c0"
+    },
+    {
+      "path": "dist/assets/compute-BkH7aCPZ.js",
+      "sha256": "a53e4fb4472ed9f0273b495d0815b47f6c61098d85048dce87dae5b5b4459b2f"
+    },
+    {
+      "path": "dist/assets/core-CkcAWOVc.js",
+      "sha256": "ae7f3223962025acabf2441b404ddb223c1ca992957aae94905a127d2efdba22"
+    },
+    {
+      "path": "dist/assets/deformation-BA2bzOW7.js",
+      "sha256": "53c83b9cec575eb63bc1d1f89e82166bc22980d2315998a61365fb3fb556e2e2"
+    },
+    {
+      "path": "dist/assets/display.worker-DnUs9aB6.js",
+      "sha256": "f7191533e9e2bcd6d92d0be58b843d1750127aa4dbdd18b3f136654eab5e82c8"
+    },
+    {
+      "path": "dist/assets/geometry-DvZZjROl.js",
+      "sha256": "d695ccb0f4cad67699049261dde30a9a51019861d06552e2b2d64fcdf323edd9"
+    },
+    {
+      "path": "dist/assets/index-Ct_H4HMR.js",
+      "sha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd"
+    },
+    {
+      "path": "dist/assets/index-GcgfCfHi.css",
+      "sha256": "aaab44fbb87e14d48599ee37d6b4b6c0dc4acaa251c3fb4893e189771ea108cd"
+    },
+    {
+      "path": "dist/assets/measureAt-B0QrsLj1.js",
+      "sha256": "25eaa6b4cf6af77ab881e1b21f0649c7e1622ff8939102182271689b8bea7d7d"
+    },
+    {
+      "path": "dist/assets/measurement-D2NR2RNt.js",
+      "sha256": "828dd8fd1dd2d7f0f2a16160d90b34c89555c9dd7050432ca47d72d731dc3807"
+    },
+    {
+      "path": "dist/assets/orientation-DAA0BTib.js",
+      "sha256": "216e3860c764bd106a2c08932046edb2009569b637b8b0b8a1f3f363664cd564"
+    },
+    {
+      "path": "dist/assets/planar-CrYIVfgZ.js",
+      "sha256": "305d87d8bb292140c672cd53125b6f24ed009db32558e552b73a07c4f35092f4"
+    },
+    {
+      "path": "dist/assets/repair-DI4ATIa9.js",
+      "sha256": "685a3ed35c81e4f7a7f02f9927406673ee57718b6ae3d4a9b25511dc0452dc67"
+    },
+    {
+      "path": "dist/assets/rolldown-runtime-4tVxZq34.js",
+      "sha256": "e1a1c25cf197ccd96571062973f07d34fb794a4745cd7284f8f64c63be00c578"
+    },
+    {
+      "path": "dist/assets/shell-BJIIQZo4.js",
+      "sha256": "f46d2a9941a6854fcb3d573cbe4d0db7199f4f9e3fe989eda51dc9f0b9af9163"
+    },
+    {
+      "path": "dist/assets/slicing-zw1rhvdn.js",
+      "sha256": "b28d85a796b2ec199c0367a9373d38063c1d495a0b5e02ddc625883f58523039"
+    },
+    {
+      "path": "dist/assets/worker-a7ChvxWr.js",
+      "sha256": "b2c5fa13415dae2a4a0c8d80466b841ee1b5e4c4bd29b7af8f179d2feee9122b"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "cada3026f94cfe647346bccbaabf83b39d6efa0266ba03c8424848ea28e1ed15"
+    }
+  ],
+  "distAfter": [
+    {
+      "path": "dist/assets/alignment-Cws1kJE_.js",
+      "sha256": "6d917c26031716c0b5a440d012dcf9f480c22b5e9c0f53378d6763d49f667712"
+    },
+    {
+      "path": "dist/assets/audit-CG4T1Oa-.js",
+      "sha256": "b17ee8bd0706636c5e7833b02b4af69434265d4f2648f88161dd08fd91beddaa"
+    },
+    {
+      "path": "dist/assets/calibration-CR__oMLl.js",
+      "sha256": "f6f0555fb98789b0682caa72a22adb34666eee8f4b78a440b87ea1fd306cf5c0"
+    },
+    {
+      "path": "dist/assets/compute-BkH7aCPZ.js",
+      "sha256": "a53e4fb4472ed9f0273b495d0815b47f6c61098d85048dce87dae5b5b4459b2f"
+    },
+    {
+      "path": "dist/assets/core-CkcAWOVc.js",
+      "sha256": "ae7f3223962025acabf2441b404ddb223c1ca992957aae94905a127d2efdba22"
+    },
+    {
+      "path": "dist/assets/deformation-BA2bzOW7.js",
+      "sha256": "53c83b9cec575eb63bc1d1f89e82166bc22980d2315998a61365fb3fb556e2e2"
+    },
+    {
+      "path": "dist/assets/display.worker-DnUs9aB6.js",
+      "sha256": "f7191533e9e2bcd6d92d0be58b843d1750127aa4dbdd18b3f136654eab5e82c8"
+    },
+    {
+      "path": "dist/assets/geometry-DvZZjROl.js",
+      "sha256": "d695ccb0f4cad67699049261dde30a9a51019861d06552e2b2d64fcdf323edd9"
+    },
+    {
+      "path": "dist/assets/index-Ct_H4HMR.js",
+      "sha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd"
+    },
+    {
+      "path": "dist/assets/index-GcgfCfHi.css",
+      "sha256": "aaab44fbb87e14d48599ee37d6b4b6c0dc4acaa251c3fb4893e189771ea108cd"
+    },
+    {
+      "path": "dist/assets/measureAt-B0QrsLj1.js",
+      "sha256": "25eaa6b4cf6af77ab881e1b21f0649c7e1622ff8939102182271689b8bea7d7d"
+    },
+    {
+      "path": "dist/assets/measurement-D2NR2RNt.js",
+      "sha256": "828dd8fd1dd2d7f0f2a16160d90b34c89555c9dd7050432ca47d72d731dc3807"
+    },
+    {
+      "path": "dist/assets/orientation-DAA0BTib.js",
+      "sha256": "216e3860c764bd106a2c08932046edb2009569b637b8b0b8a1f3f363664cd564"
+    },
+    {
+      "path": "dist/assets/planar-CrYIVfgZ.js",
+      "sha256": "305d87d8bb292140c672cd53125b6f24ed009db32558e552b73a07c4f35092f4"
+    },
+    {
+      "path": "dist/assets/repair-DI4ATIa9.js",
+      "sha256": "685a3ed35c81e4f7a7f02f9927406673ee57718b6ae3d4a9b25511dc0452dc67"
+    },
+    {
+      "path": "dist/assets/rolldown-runtime-4tVxZq34.js",
+      "sha256": "e1a1c25cf197ccd96571062973f07d34fb794a4745cd7284f8f64c63be00c578"
+    },
+    {
+      "path": "dist/assets/shell-BJIIQZo4.js",
+      "sha256": "f46d2a9941a6854fcb3d573cbe4d0db7199f4f9e3fe989eda51dc9f0b9af9163"
+    },
+    {
+      "path": "dist/assets/slicing-zw1rhvdn.js",
+      "sha256": "b28d85a796b2ec199c0367a9373d38063c1d495a0b5e02ddc625883f58523039"
+    },
+    {
+      "path": "dist/assets/worker-a7ChvxWr.js",
+      "sha256": "b2c5fa13415dae2a4a0c8d80466b841ee1b5e4c4bd29b7af8f179d2feee9122b"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "cada3026f94cfe647346bccbaabf83b39d6efa0266ba03c8424848ea28e1ed15"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-10-26T10:50:34.691Z",
+    "duration": 669129.9890000001,
+    "expected": 22,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "collectedTests": 22,
+  "tests": [
+    {
+      "file": "import-security.spec.ts",
+      "line": 22,
+      "title": "coloured PLY import preserves RGB through project download and blocks invalid input",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 5717,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "import-security.spec.ts",
+      "line": 35,
+      "title": "OBJ references cannot trigger external texture requests",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 1812,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "import-security.spec.ts",
+      "line": 44,
+      "title": "oversized project metadata is rejected before File.text is called",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 1277,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "import-security.spec.ts",
+      "line": 58,
+      "title": "tablet layout does not overflow viewport and retains all five stages",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 1658,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "review-fixes.spec.ts",
+      "line": 20,
+      "title": "overflowing meter conversion keeps the original UI and unconfirmed model without pageerror",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 4748,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "review-fixes.spec.ts",
+      "line": 70,
+      "title": "empty and zero-percent zones warn without changing geometry, baseline, measurements or undo",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 32368,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "review-fixes.spec.ts",
+      "line": 113,
+      "title": "list RGB PLY is refused visibly and preserves the current project",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 12451,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "review-fixes.spec.ts",
+      "line": 130,
+      "title": "coarse calibration reports numeric residual and retains manual tape evidence",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 14426,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-gesture-isolation.spec.ts",
+      "line": 49,
+      "title": "held brush then keyboard Undo must not restore the undone zone geometry",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 23932,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-gesture-isolation.spec.ts",
+      "line": 77,
+      "title": "held brush then keyboard New Project and confirm must never resurrect the old scan",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 13674,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-gesture-isolation.spec.ts",
+      "line": 102,
+      "title": "native capture loss cancels without history; next multi-dab gesture remains one exact undo",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 40279,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-privacy-revisions.spec.ts",
+      "line": 29,
+      "title": "encrypted browser download authenticates independently, wrong password and tamper retain the previous mesh, correct password restores RGB, baseline and metadata",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 54946,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-privacy-revisions.spec.ts",
+      "line": 102,
+      "title": "unsaved replacement supports Stay and Escape after copy download, and real beforeunload dismiss preserves work",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 28195,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-privacy-revisions.spec.ts",
+      "line": 134,
+      "title": "v1 migration discloses unknown history, saved left registration is invalidated by right metadata without reflection",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 29422,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-privacy-revisions.spec.ts",
+      "line": 172,
+      "title": "downloaded review report has exact current geometry hash and revision, absent tape evidence and restrictive CSP with zero external requests",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 14144,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-privacy-revisions.spec.ts",
+      "line": 215,
+      "title": "all five stages render without document overflow at 1024px",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 6383,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-privacy-revisions.spec.ts",
+      "line": 215,
+      "title": "all five stages render without document overflow at 390px",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 6030,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-workbench.spec.ts",
+      "line": 4,
+      "title": "real multi-point RGB brush stroke is one journal event and undo entry, heatmap preserves source RGB, undo restores exact baseline",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 38580,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-workbench.spec.ts",
+      "line": 59,
+      "title": "comparison renders distinct same-Z reference and current SVG geometry plus real 3D viewport",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 30767,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-workbench.spec.ts",
+      "line": 96,
+      "title": "app cancellation after actual Worker dispatch terminates the task and prevents cancelled geometry or revision publication",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 20009,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "v02-worker-budget.spec.ts",
+      "line": 8,
+      "title": "E2E-02: project download with active comparison never exhausts native compute Worker budget",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 189284,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "file": "workflow.spec.ts",
+      "line": 6,
+      "title": "synthetic five-step workflow uses real geometry and exports round-trippable files",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 73862,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

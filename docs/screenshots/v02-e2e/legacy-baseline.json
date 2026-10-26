@@ -1,0 +1,685 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--reporter=line,json"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "import-security.spec.ts",
+      "file": "import-security.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "coloured PLY import preserves RGB through project download and blocks invalid input",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 17387,
+                  "error": {
+                    "message": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================",
+                    "stack": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts:26:19",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts",
+                      "column": 19,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'SYNTHETIC-rgb.ply'\u001b[39m\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Potwierdź i przelicz na mm'\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m  \u001b[36mconst\u001b[39m event\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'download'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Zapisz projekt'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m download\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m event\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m data\u001b[33m=\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(\u001b[36mawait\u001b[39m readFile((\u001b[36mawait\u001b[39m download\u001b[33m.\u001b[39mpath())\u001b[33m!\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  expect(data\u001b[33m.\u001b[39mmesh\u001b[33m.\u001b[39mcolors)\u001b[33m.\u001b[39mtoEqual([\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m1\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m  expect(data\u001b[33m.\u001b[39mmesh\u001b[33m.\u001b[39mpositions)\u001b[33m.\u001b[39mtoEqual([\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m40\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m40\u001b[39m\u001b[33m,\u001b[39m\u001b[35m40\u001b[39m])\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Wybierz skan i lokalne tekstury'\u001b[39m)\u001b[33m.\u001b[39msetInputFiles({name\u001b[33m:\u001b[39m\u001b[32m'bad.ply'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'application/octet-stream'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39m\u001b[36mfrom\u001b[39m(ply\u001b[33m.\u001b[39mreplace(\u001b[32m'40 0 0'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'NaN 0 0'\u001b[39m))})\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts",
+                        "column": 19,
+                        "line": 26
+                      },
+                      "message": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  24 |  await expect(page.getByText('SYNTHETIC-rgb.ply',{exact:true}).first()).toBeVisible();\n  25 |  await page.getByRole('button',{name:'Potwierdź i przelicz na mm'}).click();\n> 26 |  const event=page.waitForEvent('download');await page.getByRole('button',{name:'Zapisz projekt',exact:true}).click();const download=await event;const data=JSON.parse(await readFile((await download.path())!,'utf8'));\n     |                   ^\n  27 |  expect(data.mesh.colors).toEqual([1,0,0,0,1,0,0,0,1]);\n  28 |  expect(data.mesh.positions).toEqual([0,0,0,40,0,0,0,40,40]);\n  29 |  await page.getByLabel('Wybierz skan i lokalne tekstury').setInputFiles({name:'bad.ply',mimeType:'application/octet-stream',buffer:Buffer.from(ply.replace('40 0 0','NaN 0 0'))});\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts:26:19"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:29:11.383Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\import-security-coloured-P-f53fe-ad-and-blocks-invalid-input\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\import-security-coloured-P-f53fe-ad-and-blocks-invalid-input\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts",
+                    "column": 19,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-b369de2ba1f4c515d642",
+          "file": "import-security.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "OBJ references cannot trigger external texture requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 914,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:29:29.498Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-47be64e5d42eab7231d6",
+          "file": "import-security.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "oversized project metadata is rejected before File.text is called",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16113,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"przekracza limit 128 MiB\"\u001b[39m\nReceived string:    \u001b[31m\"Projekt jest pusty lub przekracza limit odczytu. Nie odczytano zawartości.\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    32 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Projekt jest pusty lub przekracza limit odczytu. Nie odczytano zawartości.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"przekracza limit 128 MiB\"\u001b[39m\nReceived string:    \u001b[31m\"Projekt jest pusty lub przekracza limit odczytu. Nie odczytano zawartości.\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    32 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Projekt jest pusty lub przekracza limit odczytu. Nie odczytano zawartości.\"\u001b[22m\n\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts:53:40",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts",
+                      "column": 40,
+                      "line": 53
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m   input\u001b[33m.\u001b[39mfiles\u001b[33m=\u001b[39mtransfer\u001b[33m.\u001b[39mfiles\u001b[33m;\u001b[39minput\u001b[33m.\u001b[39mdispatchEvent(\u001b[36mnew\u001b[39m \u001b[33mEvent\u001b[39m(\u001b[32m'change'\u001b[39m\u001b[33m,\u001b[39m{bubbles\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m;\u001b[39m\n \u001b[90m 52 |\u001b[39m  })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'alert'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'przekracza limit 128 MiB'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m  expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m(globalThis \u001b[36mas\u001b[39m unknown \u001b[36mas\u001b[39m {projectReads\u001b[33m:\u001b[39mnumber})\u001b[33m.\u001b[39mprojectReads))\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m test(\u001b[32m'tablet layout does not overflow viewport and retains all five stages'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page}\u001b[33m,\u001b[39mtestInfo)\u001b[33m=>\u001b[39m{\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts",
+                        "column": 40,
+                        "line": 53
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"przekracza limit 128 MiB\"\u001b[39m\nReceived string:    \u001b[31m\"Projekt jest pusty lub przekracza limit odczytu. Nie odczytano zawartości.\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    32 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Projekt jest pusty lub przekracza limit odczytu. Nie odczytano zawartości.\"\u001b[22m\n\n\n  51 |   input.files=transfer.files;input.dispatchEvent(new Event('change',{bubbles:true}));\n  52 |  });\n> 53 |  await expect(page.getByRole('alert')).toContainText('przekracza limit 128 MiB');\n     |                                        ^\n  54 |  expect(await page.evaluate(()=>(globalThis as unknown as {projectReads:number}).projectReads)).toBe(0);\n  55 | });\n  56 | test('tablet layout does not overflow viewport and retains all five stages',async({page},testInfo)=>{\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts:53:40"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:29:30.523Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\import-security-oversized--b7d57--before-File-text-is-called\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\import-security-oversized--b7d57--before-File-text-is-called\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\import-security.spec.ts",
+                    "column": 40,
+                    "line": 53
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-5fc985613d2c4a45a895",
+          "file": "import-security.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "tablet layout does not overflow viewport and retains all five stages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1031,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:29:47.370Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-7aed83aaed849101d7e5",
+          "file": "import-security.spec.ts",
+          "line": 56,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "review-fixes.spec.ts",
+      "file": "review-fixes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "overflowing meter conversion keeps the original UI and unconfirmed model without pageerror",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16187,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.case-label strong')\nExpected: \u001b[32m\"\u001b[7mSYNTHETIC-huge.pl\u001b[27my\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCASE · r1 · Skan lokaln\u001b[27my\"\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.case-label strong') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.case-label strong')\u001b[22m\n\u001b[2m    32 × locator resolved to <strong>CASE · r1 · Skan lokalny</strong>\u001b[22m\n\u001b[2m       - unexpected value \"CASE · r1 · Skan lokalny\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.case-label strong')\nExpected: \u001b[32m\"\u001b[7mSYNTHETIC-huge.pl\u001b[27my\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCASE · r1 · Skan lokaln\u001b[27my\"\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.case-label strong') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.case-label strong')\u001b[22m\n\u001b[2m    32 × locator resolved to <strong>CASE · r1 · Skan lokalny</strong>\u001b[22m\n\u001b[2m       - unexpected value \"CASE · r1 · Skan lokalny\"\u001b[22m\n\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:27:52",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                      "column": 52,
+                      "line": 27
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 25 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m\"SYNTHETIC-huge.ply\"\u001b[39m\u001b[33m,\u001b[39m mimeType\u001b[33m:\u001b[39m \u001b[32m\"application/octet-stream\"\u001b[39m\u001b[33m,\u001b[39m buffer\u001b[33m:\u001b[39m \u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39m\u001b[36mfrom\u001b[39m(hugePLY)\u001b[33m,\u001b[39m\n \u001b[90m 26 |\u001b[39m   })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\".case-label strong\"\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m\"SYNTHETIC-huge.ply\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m   \u001b[36mconst\u001b[39m dimensions \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\".metrics-list\"\u001b[39m)\u001b[33m.\u001b[39minnerText()\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Jednostka pliku\"\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mselectOption(\u001b[32m\"m\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Potwierdź i przelicz na mm\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                        "column": 52,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.case-label strong')\nExpected: \u001b[32m\"\u001b[7mSYNTHETIC-huge.pl\u001b[27my\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCASE · r1 · Skan lokaln\u001b[27my\"\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.case-label strong') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.case-label strong')\u001b[22m\n\u001b[2m    32 × locator resolved to <strong>CASE · r1 · Skan lokalny</strong>\u001b[22m\n\u001b[2m       - unexpected value \"CASE · r1 · Skan lokalny\"\u001b[22m\n\n\n  25 |     name: \"SYNTHETIC-huge.ply\", mimeType: \"application/octet-stream\", buffer: Buffer.from(hugePLY),\n  26 |   });\n> 27 |   await expect(page.locator(\".case-label strong\")).toHaveText(\"SYNTHETIC-huge.ply\");\n     |                                                    ^\n  28 |   const dimensions = await page.locator(\".metrics-list\").innerText();\n  29 |   await page.getByLabel(\"Jednostka pliku\", { exact: true }).selectOption(\"m\");\n  30 |   await page.getByRole(\"button\", { name: \"Potwierdź i przelicz na mm\" }).click();\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:27:52"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:29:48.502Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-overflowing-m-7fcd2-med-model-without-pageerror\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-overflowing-m-7fcd2-med-model-without-pageerror\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                    "column": 52,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-8c3e33119b872e1db70b",
+          "file": "review-fixes.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "empty and zero-percent zones warn without changing geometry, baseline, measurements or undo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22271,
+                  "error": {
+                    "message": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================",
+                    "stack": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:81:24",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                      "column": 24,
+                      "line": 71
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 69 |\u001b[39m\n \u001b[90m 70 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m project(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m   \u001b[36mconst\u001b[39m pending \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m\"download\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Zapisz projekt\"\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 73 |\u001b[39m   \u001b[36mconst\u001b[39m download \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m pending\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(\u001b[36mawait\u001b[39m readFile((\u001b[36mawait\u001b[39m download\u001b[33m.\u001b[39mpath())\u001b[33m!\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"utf8\"\u001b[39m))\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                        "column": 24,
+                        "line": 71
+                      },
+                      "message": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  69 |\n  70 | async function project(page: Page) {\n> 71 |   const pending = page.waitForEvent(\"download\");\n     |                        ^\n  72 |   await page.getByRole(\"button\", { name: \"Zapisz projekt\", exact: true }).click();\n  73 |   const download = await pending;\n  74 |   return JSON.parse(await readFile((await download.path())!, \"utf8\"));\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:81:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:30:05.424Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                    "column": 24,
+                    "line": 71
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-7bea35c9ed364d6ba6d6",
+          "file": "review-fixes.spec.ts",
+          "line": 77,
+          "column": 1
+        },
+        {
+          "title": "list RGB PLY is refused visibly and preserves the current project",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 17780,
+                  "error": {
+                    "message": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================",
+                    "stack": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:120:24",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                      "column": 24,
+                      "line": 71
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 69 |\u001b[39m\n \u001b[90m 70 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m project(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m   \u001b[36mconst\u001b[39m pending \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m\"download\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Zapisz projekt\"\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 73 |\u001b[39m   \u001b[36mconst\u001b[39m download \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m pending\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(\u001b[36mawait\u001b[39m readFile((\u001b[36mawait\u001b[39m download\u001b[33m.\u001b[39mpath())\u001b[33m!\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"utf8\"\u001b[39m))\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                        "column": 24,
+                        "line": 71
+                      },
+                      "message": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  69 |\n  70 | async function project(page: Page) {\n> 71 |   const pending = page.waitForEvent(\"download\");\n     |                        ^\n  72 |   await page.getByRole(\"button\", { name: \"Zapisz projekt\", exact: true }).click();\n  73 |   const download = await pending;\n  74 |   return JSON.parse(await readFile((await download.path())!, \"utf8\"));\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:120:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:30:30.813Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-list-RGB-PLY--28048-eserves-the-current-project\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-list-RGB-PLY--28048-eserves-the-current-project\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                    "column": 24,
+                    "line": 71
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-673c998961f1d04c4fde",
+          "file": "review-fixes.spec.ts",
+          "line": 116,
+          "column": 1
+        },
+        {
+          "title": "coarse calibration reports numeric residual and retains manual tape evidence",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 17150,
+                  "error": {
+                    "message": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================",
+                    "stack": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:136:24",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                      "column": 24,
+                      "line": 71
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 69 |\u001b[39m\n \u001b[90m 70 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m project(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m   \u001b[36mconst\u001b[39m pending \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m\"download\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Zapisz projekt\"\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 73 |\u001b[39m   \u001b[36mconst\u001b[39m download \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m pending\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m   \u001b[36mreturn\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mparse(\u001b[36mawait\u001b[39m readFile((\u001b[36mawait\u001b[39m download\u001b[33m.\u001b[39mpath())\u001b[33m!\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"utf8\"\u001b[39m))\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                        "column": 24,
+                        "line": 71
+                      },
+                      "message": "TimeoutError: page.waitForEvent: Timeout 15000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  69 |\n  70 | async function project(page: Page) {\n> 71 |   const pending = page.waitForEvent(\"download\");\n     |                        ^\n  72 |   await page.getByRole(\"button\", { name: \"Zapisz projekt\", exact: true }).click();\n  73 |   const download = await pending;\n  74 |   return JSON.parse(await readFile((await download.path())!, \"utf8\"));\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:71:24)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:136:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:30:50.460Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-coarse-calibr-659a7-etains-manual-tape-evidence\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\review-fixes-coarse-calibr-659a7-etains-manual-tape-evidence\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                    "column": 24,
+                    "line": 71
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-d842caa315712d48de93",
+          "file": "review-fixes.spec.ts",
+          "line": 132,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workflow.spec.ts",
+      "file": "workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "synthetic five-step workflow uses real geometry and exports round-trippable files",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22589,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Wyrównano główne osie/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/Wyrównano główne osie/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Wyrównano główne osie/)\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Wyrównano główne osie/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/Wyrównano główne osie/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Wyrównano główne osie/)\u001b[22m\n\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\workflow.spec.ts:22:56",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\workflow.spec.ts",
+                      "column": 56,
+                      "line": 22
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Dalej: Orientacja'\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Wyrównaj główne osie (PCA)'\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Wyrównano główne osie/\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Dalej: Pomiary'\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Oblicz tabelę przekrojów'\u001b[39m})\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'tbody tr'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\workflow.spec.ts",
+                        "column": 56,
+                        "line": 22
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/Wyrównano główne osie/)\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/Wyrównano główne osie/) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Wyrównano główne osie/)\u001b[22m\n\n\n  20 |  await page.getByRole('button',{name:'Dalej: Orientacja'}).click();\n  21 |  await page.getByRole('button',{name:'Wyrównaj główne osie (PCA)'}).click();\n> 22 |  await expect(page.getByText(/Wyrównano główne osie/)).toBeVisible();\n     |                                                        ^\n  23 |  await page.getByRole('button',{name:'Dalej: Pomiary'}).click();\n  24 |  await page.getByRole('button',{name:'Oblicz tabelę przekrojów'}).click();\n  25 |  await expect(page.locator('tbody tr').first()).toBeVisible();\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\workflow.spec.ts:22:56"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:31:08.789Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\workflow-synthetic-five-st-2ac34-ports-round-trippable-files\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\test-results\\workflow-synthetic-five-st-2ac34-ports-round-trippable-files\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\workflow.spec.ts",
+                    "column": 56,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-cb3130c7558a454a28f7",
+          "file": "workflow.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T09:29:10.950Z",
+    "duration": 141246.906,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 7,
+    "flaky": 0
+  }
+}

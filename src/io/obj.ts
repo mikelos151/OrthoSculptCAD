@@ -67,6 +67,7 @@ export function parseOBJ(text: string, assets: ReadonlyMap<string, Uint8Array> =
         const vi = resolve(tokens[0], vertices.length); const ti = tokens[1] ? resolve(tokens[1], texcoords.length) : -1;
         if (tokens[2]) resolve(tokens[2], normals.length);
         if (ti < 0) missingUV = true; else anyUV = true;
+        check(!(anyUV && missingUV), 'Niekompletne UV OBJ: przypisz UV wszystkim narożnikom ścian albo usuń wszystkie referencje UV przed importem.');
         const key = `${vi}/${ti}/${[...mats.values()].indexOf(current)}`;
         let id = mapped.get(key);
         if (id === undefined) {

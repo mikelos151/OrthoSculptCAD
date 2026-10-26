@@ -1,0 +1,199 @@
+{
+  "command": "node scripts/v02-ui-acceptance.mjs --grep OBJ references",
+  "gitHead": null,
+  "gitStatus": null,
+  "nodeVersion": "v24.19.0",
+  "playwrightVersion": "1.64.1",
+  "baseURL": "http://127.0.0.1:4176",
+  "buildWasRunByThisScript": false,
+  "distUnchangedDuringTests": true,
+  "distBefore": [
+    {
+      "path": "dist/assets/alignment-Cws1kJE_.js",
+      "sha256": "6d917c26031716c0b5a440d012dcf9f480c22b5e9c0f53378d6763d49f667712"
+    },
+    {
+      "path": "dist/assets/audit-CG4T1Oa-.js",
+      "sha256": "b17ee8bd0706636c5e7833b02b4af69434265d4f2648f88161dd08fd91beddaa"
+    },
+    {
+      "path": "dist/assets/calibration-CR__oMLl.js",
+      "sha256": "f6f0555fb98789b0682caa72a22adb34666eee8f4b78a440b87ea1fd306cf5c0"
+    },
+    {
+      "path": "dist/assets/compute-CycYmv1L.js",
+      "sha256": "95da1133852c6a1f641713443ce43dd67cd28d09ee559cf44ea37ebb5e585724"
+    },
+    {
+      "path": "dist/assets/core-CkcAWOVc.js",
+      "sha256": "ae7f3223962025acabf2441b404ddb223c1ca992957aae94905a127d2efdba22"
+    },
+    {
+      "path": "dist/assets/deformation-BA2bzOW7.js",
+      "sha256": "53c83b9cec575eb63bc1d1f89e82166bc22980d2315998a61365fb3fb556e2e2"
+    },
+    {
+      "path": "dist/assets/display.worker-DnUs9aB6.js",
+      "sha256": "f7191533e9e2bcd6d92d0be58b843d1750127aa4dbdd18b3f136654eab5e82c8"
+    },
+    {
+      "path": "dist/assets/geometry-DvZZjROl.js",
+      "sha256": "d695ccb0f4cad67699049261dde30a9a51019861d06552e2b2d64fcdf323edd9"
+    },
+    {
+      "path": "dist/assets/index-BuA0WR6K.css",
+      "sha256": "8cedfa1cb3cf6e52bdb6ecfe9d0d491535bb8aa7166cfa5102c180b9ec734734"
+    },
+    {
+      "path": "dist/assets/index-DVLn8Ywk.js",
+      "sha256": "29957c9161f8c19e54da05d52cee2712e51c11946973fba28319e0aa2325c581"
+    },
+    {
+      "path": "dist/assets/measureAt-B0QrsLj1.js",
+      "sha256": "25eaa6b4cf6af77ab881e1b21f0649c7e1622ff8939102182271689b8bea7d7d"
+    },
+    {
+      "path": "dist/assets/measurement-D2NR2RNt.js",
+      "sha256": "828dd8fd1dd2d7f0f2a16160d90b34c89555c9dd7050432ca47d72d731dc3807"
+    },
+    {
+      "path": "dist/assets/orientation-DAA0BTib.js",
+      "sha256": "216e3860c764bd106a2c08932046edb2009569b637b8b0b8a1f3f363664cd564"
+    },
+    {
+      "path": "dist/assets/planar-CrYIVfgZ.js",
+      "sha256": "305d87d8bb292140c672cd53125b6f24ed009db32558e552b73a07c4f35092f4"
+    },
+    {
+      "path": "dist/assets/repair-DI4ATIa9.js",
+      "sha256": "685a3ed35c81e4f7a7f02f9927406673ee57718b6ae3d4a9b25511dc0452dc67"
+    },
+    {
+      "path": "dist/assets/rolldown-runtime-4tVxZq34.js",
+      "sha256": "e1a1c25cf197ccd96571062973f07d34fb794a4745cd7284f8f64c63be00c578"
+    },
+    {
+      "path": "dist/assets/shell-BJIIQZo4.js",
+      "sha256": "f46d2a9941a6854fcb3d573cbe4d0db7199f4f9e3fe989eda51dc9f0b9af9163"
+    },
+    {
+      "path": "dist/assets/slicing-zw1rhvdn.js",
+      "sha256": "b28d85a796b2ec199c0367a9373d38063c1d495a0b5e02ddc625883f58523039"
+    },
+    {
+      "path": "dist/assets/worker-D6uiTdBI.js",
+      "sha256": "908f0af4179ba82c5e8ce4b98fa064d2b819289959419c645e5b22b3b7f68c20"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "a985dc1bba97dbe369ed8627092e658656cfe7cdeb684e862ee48a0db250a91b"
+    }
+  ],
+  "distAfter": [
+    {
+      "path": "dist/assets/alignment-Cws1kJE_.js",
+      "sha256": "6d917c26031716c0b5a440d012dcf9f480c22b5e9c0f53378d6763d49f667712"
+    },
+    {
+      "path": "dist/assets/audit-CG4T1Oa-.js",
+      "sha256": "b17ee8bd0706636c5e7833b02b4af69434265d4f2648f88161dd08fd91beddaa"
+    },
+    {
+      "path": "dist/assets/calibration-CR__oMLl.js",
+      "sha256": "f6f0555fb98789b0682caa72a22adb34666eee8f4b78a440b87ea1fd306cf5c0"
+    },
+    {
+      "path": "dist/assets/compute-CycYmv1L.js",
+      "sha256": "95da1133852c6a1f641713443ce43dd67cd28d09ee559cf44ea37ebb5e585724"
+    },
+    {
+      "path": "dist/assets/core-CkcAWOVc.js",
+      "sha256": "ae7f3223962025acabf2441b404ddb223c1ca992957aae94905a127d2efdba22"
+    },
+    {
+      "path": "dist/assets/deformation-BA2bzOW7.js",
+      "sha256": "53c83b9cec575eb63bc1d1f89e82166bc22980d2315998a61365fb3fb556e2e2"
+    },
+    {
+      "path": "dist/assets/display.worker-DnUs9aB6.js",
+      "sha256": "f7191533e9e2bcd6d92d0be58b843d1750127aa4dbdd18b3f136654eab5e82c8"
+    },
+    {
+      "path": "dist/assets/geometry-DvZZjROl.js",
+      "sha256": "d695ccb0f4cad67699049261dde30a9a51019861d06552e2b2d64fcdf323edd9"
+    },
+    {
+      "path": "dist/assets/index-BuA0WR6K.css",
+      "sha256": "8cedfa1cb3cf6e52bdb6ecfe9d0d491535bb8aa7166cfa5102c180b9ec734734"
+    },
+    {
+      "path": "dist/assets/index-DVLn8Ywk.js",
+      "sha256": "29957c9161f8c19e54da05d52cee2712e51c11946973fba28319e0aa2325c581"
+    },
+    {
+      "path": "dist/assets/measureAt-B0QrsLj1.js",
+      "sha256": "25eaa6b4cf6af77ab881e1b21f0649c7e1622ff8939102182271689b8bea7d7d"
+    },
+    {
+      "path": "dist/assets/measurement-D2NR2RNt.js",
+      "sha256": "828dd8fd1dd2d7f0f2a16160d90b34c89555c9dd7050432ca47d72d731dc3807"
+    },
+    {
+      "path": "dist/assets/orientation-DAA0BTib.js",
+      "sha256": "216e3860c764bd106a2c08932046edb2009569b637b8b0b8a1f3f363664cd564"
+    },
+    {
+      "path": "dist/assets/planar-CrYIVfgZ.js",
+      "sha256": "305d87d8bb292140c672cd53125b6f24ed009db32558e552b73a07c4f35092f4"
+    },
+    {
+      "path": "dist/assets/repair-DI4ATIa9.js",
+      "sha256": "685a3ed35c81e4f7a7f02f9927406673ee57718b6ae3d4a9b25511dc0452dc67"
+    },
+    {
+      "path": "dist/assets/rolldown-runtime-4tVxZq34.js",
+      "sha256": "e1a1c25cf197ccd96571062973f07d34fb794a4745cd7284f8f64c63be00c578"
+    },
+    {
+      "path": "dist/assets/shell-BJIIQZo4.js",
+      "sha256": "f46d2a9941a6854fcb3d573cbe4d0db7199f4f9e3fe989eda51dc9f0b9af9163"
+    },
+    {
+      "path": "dist/assets/slicing-zw1rhvdn.js",
+      "sha256": "b28d85a796b2ec199c0367a9373d38063c1d495a0b5e02ddc625883f58523039"
+    },
+    {
+      "path": "dist/assets/worker-D6uiTdBI.js",
+      "sha256": "908f0af4179ba82c5e8ce4b98fa064d2b819289959419c645e5b22b3b7f68c20"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "a985dc1bba97dbe369ed8627092e658656cfe7cdeb684e862ee48a0db250a91b"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-10-26T09:55:07.328Z",
+    "duration": 1853.48,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "collectedTests": 1,
+  "tests": [
+    {
+      "file": "import-security.spec.ts",
+      "line": 35,
+      "title": "OBJ references cannot trigger external texture requests",
+      "status": "expected",
+      "expectedStatus": "passed",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 986,
+          "errors": []
+        }
+      ]
+    }
+  ]
+}

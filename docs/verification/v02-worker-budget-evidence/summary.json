@@ -1,0 +1,326 @@
+{
+  "origin": {
+    "baseURL": "http://127.0.0.1:4176",
+    "indexSha256": "cada3026f94cfe647346bccbaabf83b39d6efa0266ba03c8424848ea28e1ed15",
+    "asset": "/assets/index-Ct_H4HMR.js",
+    "sha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "chromium": "156.0.8078.4"
+  },
+  "freshContexts": 4,
+  "downloads": 20,
+  "results": [
+    {
+      "session": 1,
+      "downloads": 5,
+      "events": 134,
+      "constructors": 20,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": [],
+      "checkpoints": [
+        {
+          "label": "before-download-1",
+          "t": 7549.399999976158
+        },
+        {
+          "label": "after-contours-1",
+          "t": 13149.599999964237
+        },
+        {
+          "label": "before-download-2",
+          "t": 13611.799999952316
+        },
+        {
+          "label": "after-contours-2",
+          "t": 19042.899999976158
+        },
+        {
+          "label": "before-download-3",
+          "t": 19444.599999964237
+        },
+        {
+          "label": "after-contours-3",
+          "t": 24542.5
+        },
+        {
+          "label": "before-download-4",
+          "t": 25212.69999998808
+        },
+        {
+          "label": "after-contours-4",
+          "t": 32100.5
+        },
+        {
+          "label": "before-download-5",
+          "t": 32601.899999976158
+        },
+        {
+          "label": "after-contours-5",
+          "t": 36629
+        }
+      ],
+      "privacy": {
+        "errors": [],
+        "external": [],
+        "violations": [],
+        "workers": [
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js"
+        ]
+      }
+    },
+    {
+      "session": 2,
+      "downloads": 5,
+      "events": 134,
+      "constructors": 20,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": [],
+      "checkpoints": [
+        {
+          "label": "before-download-1",
+          "t": 6769
+        },
+        {
+          "label": "after-contours-1",
+          "t": 12854.900000035763
+        },
+        {
+          "label": "before-download-2",
+          "t": 13336.900000035763
+        },
+        {
+          "label": "after-contours-2",
+          "t": 19925.900000035763
+        },
+        {
+          "label": "before-download-3",
+          "t": 20596
+        },
+        {
+          "label": "after-contours-3",
+          "t": 27427.30000001192
+        },
+        {
+          "label": "before-download-4",
+          "t": 28079.600000023842
+        },
+        {
+          "label": "after-contours-4",
+          "t": 33883.90000003576
+        },
+        {
+          "label": "before-download-5",
+          "t": 34513.19999998808
+        },
+        {
+          "label": "after-contours-5",
+          "t": 41017.40000003576
+        }
+      ],
+      "privacy": {
+        "errors": [],
+        "external": [],
+        "violations": [],
+        "workers": [
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js"
+        ]
+      }
+    },
+    {
+      "session": 3,
+      "downloads": 5,
+      "events": 134,
+      "constructors": 20,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": [],
+      "checkpoints": [
+        {
+          "label": "before-download-1",
+          "t": 11429.899999976158
+        },
+        {
+          "label": "after-contours-1",
+          "t": 18454.19999998808
+        },
+        {
+          "label": "before-download-2",
+          "t": 19139.69999998808
+        },
+        {
+          "label": "after-contours-2",
+          "t": 26228.5
+        },
+        {
+          "label": "before-download-3",
+          "t": 26897.5
+        },
+        {
+          "label": "after-contours-3",
+          "t": 34332.09999996424
+        },
+        {
+          "label": "before-download-4",
+          "t": 35009.09999996424
+        },
+        {
+          "label": "after-contours-4",
+          "t": 42250.799999952316
+        },
+        {
+          "label": "before-download-5",
+          "t": 42930
+        },
+        {
+          "label": "after-contours-5",
+          "t": 50128.19999998808
+        }
+      ],
+      "privacy": {
+        "errors": [],
+        "external": [],
+        "violations": [],
+        "workers": [
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js"
+        ]
+      }
+    },
+    {
+      "session": 4,
+      "downloads": 5,
+      "events": 134,
+      "constructors": 20,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": [],
+      "checkpoints": [
+        {
+          "label": "before-download-1",
+          "t": 11397.900000035763
+        },
+        {
+          "label": "after-contours-1",
+          "t": 17601.100000023842
+        },
+        {
+          "label": "before-download-2",
+          "t": 18076.19999998808
+        },
+        {
+          "label": "after-contours-2",
+          "t": 23241.900000035763
+        },
+        {
+          "label": "before-download-3",
+          "t": 23773.900000035763
+        },
+        {
+          "label": "after-contours-3",
+          "t": 30611.100000023842
+        },
+        {
+          "label": "before-download-4",
+          "t": 31254.600000023842
+        },
+        {
+          "label": "after-contours-4",
+          "t": 38064.69999998808
+        },
+        {
+          "label": "before-download-5",
+          "t": 38693.30000001192
+        },
+        {
+          "label": "after-contours-5",
+          "t": 44547
+        }
+      ],
+      "privacy": {
+        "errors": [],
+        "external": [],
+        "violations": [],
+        "workers": [
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js",
+          "http://127.0.0.1:4176/assets/worker-a7ChvxWr.js"
+        ]
+      }
+    }
+  ],
+  "failures": []
+}

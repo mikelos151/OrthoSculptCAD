@@ -1,5 +1,18 @@
 import type { BrushOptions, MeshData } from "../types";
-import { assertMesh, copyMesh, cross, getBounds, sub, vertex } from "./core";
+import { assertMesh, copyMesh, cross, dot, getBounds, sub, unit, vertex } from "./core";
+import { auditMesh } from "./audit";
+
+/** A plane supports a mathematical signed normal, not an anatomical outward claim. UI still requires outward audit. */
+function normalDirection(mesh: MeshData): 'outward' | 'plane' | 'unconfirmed' {
+  const audit = auditMesh(mesh);
+  if (audit.orientation === 'outward') return 'outward';
+  if (audit.orientation === 'inward' || audit.orientation === 'inconsistent')
+    throw new Error('Outward orientation required: repair/reorient the mesh before signed relief or compression');
+  const n = unit(cross(sub(vertex(mesh, mesh.indices[1]), vertex(mesh, mesh.indices[0])), sub(vertex(mesh, mesh.indices[2]), vertex(mesh, mesh.indices[0]))));
+  const origin = vertex(mesh, mesh.indices[0]), size = Math.max(...getBounds(mesh).size, 1);
+  const planar = Array.from({ length: mesh.positions.length / 3 }, (_, i) => Math.abs(dot(sub(vertex(mesh, i), origin), n))).every(d => d <= size * 1e-9);
+  return planar && audit.complete && audit.checks.filter(c => ['components', 'vertex-manifold', 'winding', 'degenerate-triangles', 'self-intersections'].includes(c.id)).every(c => c.status === 'pass') ? 'plane' : 'unconfirmed';
+}
 
 /** Percent is radial/circumference change, never a volume-percent conversion. */
 export function scaleZone(
@@ -77,6 +90,9 @@ export function deformationColors(
     throw new Error("Heatmap baseline must have matching vertices");
   for (const x of originalPositions)
     if (!Number.isFinite(x)) throw new Error("Non-finite heatmap baseline");
+  const direction = normalDirection({ ...mesh, positions: originalPositions });
+  if (direction === 'unconfirmed')
+    throw new Error('Heatmap baseline orientation is unknown: signed displacement colours cannot be computed; repair/reorient the baseline first');
   const normals = vertexNormals({ ...mesh, positions: originalPositions }),
     colors = new Float32Array(mesh.positions.length),
     neutral = [0.12, 0.75, 0.12];
@@ -111,6 +127,8 @@ export function applyBrush(mesh: MeshData, options: BrushOptions): MeshData {
     );
   if (mode !== "relief" && mode !== "compress" && mode !== "smooth")
     throw new Error("Unknown brush mode");
+  if (mode !== 'smooth' && normalDirection(mesh) === 'unconfirmed')
+    throw new Error('Outward orientation is unknown: signed relief/compression blocked; planar mathematical API fixtures are not clinical outward confirmation');
   const result = copyMesh(mesh),
     normals = mode === "smooth" ? undefined : vertexNormals(mesh);
   const neighbours =

@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "synthetic": true,
+  "manualTapeCount": 0,
+  "revision": 2,
+  "measurementRows": 25,
+  "validMeasurementRows": 24,
+  "vertices": 5857,
+  "triangles": 11710,
+  "geometrySha256": "ba4d91b59f1173d98c402ab390d1c727244e11d068f762edfa365f42934214bf",
+  "auditComplete": true,
+  "checks": [
+    {
+      "id": "edge-manifold",
+      "label": "Edge manifold",
+      "status": "pass",
+      "detail": "0 non-manifold edge(s); 0 boundary edge(s)"
+    },
+    {
+      "id": "watertight",
+      "label": "Closed edge topology",
+      "status": "pass",
+      "detail": "Closed edges alone do not prove absence of intersections"
+    },
+    {
+      "id": "vertex-manifold",
+      "label": "Vertex manifold",
+      "status": "pass",
+      "detail": "0 invalid or isolated vertex link(s)"
+    },
+    {
+      "id": "components",
+      "label": "Single edge-connected surface",
+      "status": "pass",
+      "detail": "1 edge-connected component(s)"
+    },
+    {
+      "id": "degenerate-triangles",
+      "label": "Non-degenerate faces",
+      "status": "pass",
+      "detail": "0 degenerate triangle(s)"
+    },
+    {
+      "id": "winding",
+      "label": "Consistent winding",
+      "status": "pass",
+      "detail": "0 inconsistently oriented edge(s)"
+    },
+    {
+      "id": "self-intersections",
+      "label": "3D self-intersections",
+      "status": "pass",
+      "detail": "Complete bounded triangle/triangle audit; 0 witness pair(s), 234492 candidate tests"
+    },
+    {
+      "id": "outward",
+      "label": "Outward orientation",
+      "status": "pass",
+      "detail": "outward"
+    },
+    {
+      "id": "minimum-thickness",
+      "label": "Minimum thickness",
+      "status": "unknown",
+      "detail": "Not computed. Normal-offset distance is not a minimum-wall-thickness guarantee."
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "overflow": false,
+  "pdfInspection": {
+    "pageCount": 6,
+    "pages": [
+      {
+        "page": 1,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerTop": 545.05078125,
+        "bodyBottom": 513.01171875
+      },
+      {
+        "page": 2,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerTop": 545.05078125,
+        "bodyBottom": 507.76171875
+      },
+      {
+        "page": 3,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerTop": 545.05078125,
+        "bodyBottom": 499.51171875
+      },
+      {
+        "page": 4,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerTop": 545.05078125,
+        "bodyBottom": 504.76171875
+      },
+      {
+        "page": 5,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerTop": 545.05078125,
+        "bodyBottom": 516.01171875
+      },
+      {
+        "page": 6,
+        "minimumFontPt": 12,
+        "identity": true,
+        "footerTop": 545.05078125,
+        "bodyBottom": 258.76171875
+      }
+    ]
+  }
+}

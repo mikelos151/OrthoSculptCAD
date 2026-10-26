@@ -1,0 +1,937 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--reporter=line,json",
+      "--output=docs/screenshots/v02-e2e/final-results"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/docs/screenshots/v02-e2e/final-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "import-security.spec.ts",
+      "file": "import-security.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "coloured PLY import preserves RGB through project download and blocks invalid input",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5789,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:45:45.709Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-b369de2ba1f4c515d642",
+          "file": "import-security.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "OBJ references cannot trigger external texture requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1619,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:45:51.621Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-47be64e5d42eab7231d6",
+          "file": "import-security.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "oversized project metadata is rejected before File.text is called",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1197,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:45:53.259Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-5fc985613d2c4a45a895",
+          "file": "import-security.spec.ts",
+          "line": 44,
+          "column": 1
+        },
+        {
+          "title": "tablet layout does not overflow viewport and retains all five stages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1667,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:45:54.469Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "077231b21c23c30c31d2-7aed83aaed849101d7e5",
+          "file": "import-security.spec.ts",
+          "line": 58,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "review-fixes.spec.ts",
+      "file": "review-fixes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "overflowing meter conversion keeps the original UI and unconfirmed model without pageerror",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5541,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:45:56.171Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-8c3e33119b872e1db70b",
+          "file": "review-fixes.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "empty and zero-percent zones warn without changing geometry, baseline, measurements or undo",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 62515,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:84:46",
+                    "location": {
+                      "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                      "column": 46,
+                      "line": 84
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 82 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Zmiana obwodu · %\"\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m\"-10\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 83 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Zastosuj korektę strefy\"\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 84 |\u001b[39m   \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39msoft(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"alert\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"nie zmieniła żadnych współrzędnych\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 85 |\u001b[39m   \u001b[36mawait\u001b[39m evidence(page\u001b[33m,\u001b[39mtestInfo\u001b[33m,\u001b[39m\u001b[32m'empty-zone-generic-error.png'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 86 |\u001b[39m   expect(\u001b[36mawait\u001b[39m undoCount(page))\u001b[33m.\u001b[39mtoBe(historyBefore)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Zastosowano zmianę obwodu|Zmieniono obwód/\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                        "column": 46,
+                        "line": 84
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n\n\n  82 |   await page.getByLabel(\"Zmiana obwodu · %\", { exact: true }).fill(\"-10\");\n  83 |   await page.getByRole(\"button\", { name: \"Zastosuj korektę strefy\" }).click();\n> 84 |   await expect.soft(page.getByRole(\"alert\")).toContainText(\"nie zmieniła żadnych współrzędnych\");\n     |                                              ^\n  85 |   await evidence(page,testInfo,'empty-zone-generic-error.png');\n  86 |   expect(await undoCount(page)).toBe(historyBefore);\n  87 |   await expect(page.getByText(/Zastosowano zmianę obwodu|Zmieniono obwód/)).toHaveCount(0);\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:84:46"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                        "column": 46,
+                        "line": 96
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"\u001b[7mn\u001b[27mie \u001b[7mzmi\u001b[27meni\u001b[7mł\u001b[27ma \u001b[7mżadnych współrzędnych\u001b[27m\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7mN\u001b[27mie \u001b[7mudało się wykonać oblicz\u001b[27menia \u001b[7mgeometrii.\u001b[27m\"\u001b[39m\nTimeout: 15000ms\n\nCall log:\n\u001b[2m  - Expect \"soft toContainText\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to <div role=\"alert\" class=\"notification error\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"Nie udało się wykonać obliczenia geometrii.\"\u001b[22m\n\n\n  94 |   await page.getByLabel(\"Zmiana obwodu · %\", { exact: true }).fill(\"0\");\n  95 |   await page.getByRole(\"button\", { name: \"Zastosuj korektę strefy\" }).click();\n> 96 |   await expect.soft(page.getByRole(\"alert\")).toContainText(\"nie zmieniła żadnych współrzędnych\");\n     |                                              ^\n  97 |   expect(await undoCount(page)).toBe(historyBefore);\n  98 |   await page.screenshot({ path: testInfo.outputPath(\"zone-noop-controlled.png\"), fullPage: true });\n  99 |   // A real vertex edit still works and undo restores exact coordinates.\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:96:46"
+                    },
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\helpers.ts",
+                        "column": 78,
+                        "line": 19
+                      },
+                      "message": "Error: locator.check: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Zapisz kopię projektu', exact: true }).getByLabel('Rozumiem ryzyko jawnego zapisu', { exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n   at helpers.ts:19\n\n  17 |   await dialog.getByLabel('Ochrona pliku', { exact: true }).selectOption('plain');\n  18 |   await expect(dialog.getByRole('button', { name: 'Pobierz nieszyfrowany JSON' })).toBeDisabled();\n> 19 |   await dialog.getByLabel('Rozumiem ryzyko jawnego zapisu', { exact: true }).check();\n     |                                                                              ^\n  20 |   const pending = page.waitForEvent('download');\n  21 |   await dialog.getByRole('button', { name: 'Pobierz nieszyfrowany JSON', exact: true }).click();\n  22 |   const download = await pending;\n    at savePlainDownload (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\helpers.ts:19:78)\n    at project (C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\helpers.ts:28:20)\n    at C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts:107:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:46:01.722Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "empty-zone-generic-error.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\attachments\\empty-zone-generic-error-png-2205f3ea7c60400934b7944d7730c7f0b908e258.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\review-fixes-empty-and-zer-ec4ea-seline-measurements-or-undo\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e\\review-fixes.spec.ts",
+                    "column": 46,
+                    "line": 84
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-7bea35c9ed364d6ba6d6",
+          "file": "review-fixes.spec.ts",
+          "line": 70,
+          "column": 1
+        },
+        {
+          "title": "list RGB PLY is refused visibly and preserves the current project",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:47:06.180Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-673c998961f1d04c4fde",
+          "file": "review-fixes.spec.ts",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "coarse calibration reports numeric residual and retains manual tape evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13674,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:47:19.155Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-d842caa315712d48de93",
+          "file": "review-fixes.spec.ts",
+          "line": 128,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v02-privacy-revisions.spec.ts",
+      "file": "v02-privacy-revisions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "encrypted browser download authenticates independently, wrong password and tamper retain the previous mesh, correct password restores RGB, baseline and metadata",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 45737,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:47:32.871Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "encrypted-wrong-password.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-encr-d62d8-s-RGB-baseline-and-metadata\\attachments\\encrypted-wrong-password-png-fdc3357f7ce2a2af01c7efa641d66f96ef0b6bfb.png"
+                    },
+                    {
+                      "name": "encrypted-restored-rgb.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-encr-d62d8-s-RGB-baseline-and-metadata\\attachments\\encrypted-restored-rgb-png-829cd369db1ff9803e38ab7a1f722f795f7e22e6.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-b2bbcc08695b80d52764",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "unsaved replacement supports Stay and Escape after copy download, and real beforeunload dismiss preserves work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23547,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:48:18.622Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "unsaved-replacement-guard.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-unsa-cebd8-load-dismiss-preserves-work\\attachments\\unsaved-replacement-guard-png-9d03c89f493b64f381c343b1846dec340ec75c0f.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-972fc83a7faeda241d2d",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 102,
+          "column": 1
+        },
+        {
+          "title": "v1 migration discloses unknown history, saved left registration is invalidated by right metadata without reflection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23644,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:48:42.182Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "metadata-side-no-reflection.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-v1-m-96c80-metadata-without-reflection\\attachments\\metadata-side-no-reflection-png-5bdd77916b7407e526c025fbee328ec2cf8ce8d2.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-25034c8ad1e0595a32ec",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 134,
+          "column": 1
+        },
+        {
+          "title": "downloaded review report has exact current geometry hash and revision, absent tape evidence and restrictive CSP with zero external requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14329,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:49:05.838Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "review-report-current-revision.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-down-33d80-with-zero-external-requests\\attachments\\review-report-current-revision-png-5b261d2355d0104102e4c398cabd52215d6e6916.png"
+                    },
+                    {
+                      "name": "report-fingerprint",
+                      "contentType": "application/json",
+                      "body": "eyJyZXZpc2lvbiI6NCwiaGFzaCI6IjA3NDk2NmE4MDM5ZDgzY2UzMGRhZTNkNWFiMGNmNmZlNWU4MzM0MjYwNzk4ZTBlM2FlYmZmM2E4MDcyNDc3M2UiLCJ0YXBlQ291bnQiOjAsImV4dGVybmFsUmVxdWVzdHMiOltdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-523b176743b305b7e5d9",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 172,
+          "column": 1
+        },
+        {
+          "title": "all five stages render without document overflow at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5899,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:49:20.178Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "layout-1024-step-1.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-1-png-fa8aad63b64d9d8372f96ed0260b334be9457d0f.png"
+                    },
+                    {
+                      "name": "layout-1024-step-2.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-2-png-f189388eab269cd9a032cd1833ee61b69a7094df.png"
+                    },
+                    {
+                      "name": "layout-1024-step-3.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-3-png-3b48b1afd0312043dc7a72ef483ae08156677a12.png"
+                    },
+                    {
+                      "name": "layout-1024-step-4.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-4-png-afabe1e627ee8c98897fc60a1cae7f00be54809d.png"
+                    },
+                    {
+                      "name": "layout-1024-step-5.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--8063f-document-overflow-at-1024px\\attachments\\layout-1024-step-5-png-75d10b51aa22bb355cbd3d5f3224bbc858897ef7.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-917f9dd245dedc675eea",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 215,
+          "column": 34
+        },
+        {
+          "title": "all five stages render without document overflow at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5013,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:49:26.091Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "layout-390-step-1.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-1-png-29a1d30f739d1cd0ef2c9eb6689717af9237f543.png"
+                    },
+                    {
+                      "name": "layout-390-step-2.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-2-png-004a2e33217c8a5fa38741274c4b3e0e6afbad15.png"
+                    },
+                    {
+                      "name": "layout-390-step-3.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-3-png-804c1baf16fd95e2a7fe6875aa7d284748f74a83.png"
+                    },
+                    {
+                      "name": "layout-390-step-4.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-4-png-6f0ccccf4fcd2f9b45481ecc7d362b83415c4d5e.png"
+                    },
+                    {
+                      "name": "layout-390-step-5.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-privacy-revisions-all--787d1--document-overflow-at-390px\\attachments\\layout-390-step-5-png-715f12f3f828aafcd2baae6876c5ac845671da9e.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4255aa62d2bdb4f01863-017ea0d9cc7037810ef4",
+          "file": "v02-privacy-revisions.spec.ts",
+          "line": 215,
+          "column": 34
+        }
+      ]
+    },
+    {
+      "title": "v02-workbench.spec.ts",
+      "file": "v02-workbench.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real multi-point RGB brush stroke is one journal event and undo entry, heatmap preserves source RGB, undo restores exact baseline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34612,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:49:31.143Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "brush-real-stroke-source-rgb.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-workbench-real-multi-p-5f706-ndo-restores-exact-baseline\\attachments\\brush-real-stroke-source-rgb-png-5432d86acd69b5bc9eaafa86f2b1ba716a1915e9.png"
+                    },
+                    {
+                      "name": "real-worker-observations",
+                      "contentType": "application/json",
+                      "body": "eyJjc3AiOiJkZWZhdWx0LXNyYyAnc2VsZic7IHNjcmlwdC1zcmMgJ3NlbGYnOyBzdHlsZS1zcmMgJ3NlbGYnICd1bnNhZmUtaW5saW5lJzsgaW1nLXNyYyAnc2VsZicgZGF0YTogYmxvYjo7IGZvbnQtc3JjICdzZWxmJzsgY29ubmVjdC1zcmMgJ3NlbGYnOyB3b3JrZXItc3JjICdzZWxmJyBibG9iOjsgb2JqZWN0LXNyYyAnbm9uZSc7IGZyYW1lLXNyYyAnbm9uZSc7IGJhc2UtdXJpICdzZWxmJzsgZm9ybS1hY3Rpb24gJ25vbmUnIiwiZXJyb3JzIjpbXSwiZXh0ZXJuYWwiOltdLCJ2aW9sYXRpb25zIjpbXSwid29ya2VycyI6WyJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy9kaXNwbGF5Lndvcmtlci1EblVzOWFCNi5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvZGlzcGxheS53b3JrZXItRG5VczlhQjYuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIl0sInN0cm9rZURhYnMiOjl9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-09fe0bf966ec63893a17",
+          "file": "v02-workbench.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "comparison renders distinct same-Z reference and current SVG geometry plus real 3D viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:50:05.768Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "comparison-actual-2d-and-3d.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-workbench-comparison-r-38dfd-metry-plus-real-3D-viewport\\attachments\\comparison-actual-2d-and-3d-png-0dcc9a2cb0f8491301506a98692cfcf5aeb888b1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-ac4b22c5aaae556c983e",
+          "file": "v02-workbench.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "app cancellation after actual Worker dispatch terminates the task and prevents cancelled geometry or revision publication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23827,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:50:32.161Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "cancelled-real-worker-no-publication.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\v02-workbench-app-cancella-51ab8-try-or-revision-publication\\attachments\\cancelled-real-worker-no-publication-png-1ab951bd925c212ed1443080dd6fbd032f9d09f6.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-9918c0f4bbcff3b1aa89",
+          "file": "v02-workbench.spec.ts",
+          "line": 95,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workflow.spec.ts",
+      "file": "workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "synthetic five-step workflow uses real geometry and exports round-trippable files",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 73151,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:50:56.026Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "five-step-export.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\final-results\\workflow-synthetic-five-st-2ac34-ports-round-trippable-files\\attachments\\five-step-export-png-0377c6bd8be39513e4372d26589c8bbf5aee82a3.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-cb3130c7558a454a28f7",
+          "file": "workflow.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T09:45:45.188Z",
+    "duration": 384783.54199999996,
+    "expected": 17,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\ortho-final-preflight-352f5f4396\\extracted\\OrthoSculptCAD",
+  "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\ortho-v02-runtime\\extracted\\OrthoSculptCAD",
   "nodeModulesAbsent": true,
   "server": "native Node stdlib",
   "renderer": "WebGL2",
@@ -9,7 +9,27 @@
   "syntheticLabel": true,
   "passed": true,
   "bundleHashes": {
-    "index-DXBcVluP.js": "26aea78c66d07a2a3c898f19478acad94cf2c55334f1a164d207f31c4d38c0cb"
+    "alignment-Cws1kJE_.js": "6d917c26031716c0b5a440d012dcf9f480c22b5e9c0f53378d6763d49f667712",
+    "audit-CG4T1Oa-.js": "b17ee8bd0706636c5e7833b02b4af69434265d4f2648f88161dd08fd91beddaa",
+    "calibration-CR__oMLl.js": "f6f0555fb98789b0682caa72a22adb34666eee8f4b78a440b87ea1fd306cf5c0",
+    "compute-BkH7aCPZ.js": "a53e4fb4472ed9f0273b495d0815b47f6c61098d85048dce87dae5b5b4459b2f",
+    "core-CkcAWOVc.js": "ae7f3223962025acabf2441b404ddb223c1ca992957aae94905a127d2efdba22",
+    "deformation-BA2bzOW7.js": "53c83b9cec575eb63bc1d1f89e82166bc22980d2315998a61365fb3fb556e2e2",
+    "display.worker-DnUs9aB6.js": "f7191533e9e2bcd6d92d0be58b843d1750127aa4dbdd18b3f136654eab5e82c8",
+    "geometry-DvZZjROl.js": "d695ccb0f4cad67699049261dde30a9a51019861d06552e2b2d64fcdf323edd9",
+    "index-Ct_H4HMR.js": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "index-GcgfCfHi.css": "aaab44fbb87e14d48599ee37d6b4b6c0dc4acaa251c3fb4893e189771ea108cd",
+    "measureAt-B0QrsLj1.js": "25eaa6b4cf6af77ab881e1b21f0649c7e1622ff8939102182271689b8bea7d7d",
+    "measurement-D2NR2RNt.js": "828dd8fd1dd2d7f0f2a16160d90b34c89555c9dd7050432ca47d72d731dc3807",
+    "orientation-DAA0BTib.js": "216e3860c764bd106a2c08932046edb2009569b637b8b0b8a1f3f363664cd564",
+    "planar-CrYIVfgZ.js": "305d87d8bb292140c672cd53125b6f24ed009db32558e552b73a07c4f35092f4",
+    "repair-DI4ATIa9.js": "685a3ed35c81e4f7a7f02f9927406673ee57718b6ae3d4a9b25511dc0452dc67",
+    "rolldown-runtime-4tVxZq34.js": "e1a1c25cf197ccd96571062973f07d34fb794a4745cd7284f8f64c63be00c578",
+    "shell-BJIIQZo4.js": "f46d2a9941a6854fcb3d573cbe4d0db7199f4f9e3fe989eda51dc9f0b9af9163",
+    "slicing-zw1rhvdn.js": "b28d85a796b2ec199c0367a9373d38063c1d495a0b5e02ddc625883f58523039",
+    "worker-a7ChvxWr.js": "b2c5fa13415dae2a4a0c8d80466b841ee1b5e4c4bd29b7af8f179d2feee9122b"
   },
-  "preflightArchiveEntriesVerified": 130
+  "preflightArchiveEntriesVerified": 25,
+  "appVersion": "0.2.0",
+  "scope": "Extracted real runtime candidate ZIP. Full source release ZIP still requires final E2E/review and its own extracted-archive smoke."
 }

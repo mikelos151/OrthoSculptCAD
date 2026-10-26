@@ -5,5 +5,8 @@ src-tauri/target/
 crates/ortho-geometry/target/
 playwright-report/
 test-results/
+test-results*/
+docs/screenshots/v02-e2e/*-results/
+docs/verification/*-artifacts/
 *.log
 *.tsbuildinfo

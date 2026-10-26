@@ -2178,6 +2178,45 @@ tr:hover td {
     margin-right: 2px;
   }
 }
+/* Workbench v0.2: denser inspection, explicit quality, native dialogs. */
+.inspector-content { border: 0; margin: 0; min-inline-size: 0; }
+textarea { width: 100%; min-height: 88px; resize: vertical; font: inherit; padding: 10px 12px; border: 1px solid #344352; border-radius: 6px; background: #101a24; color: var(--text); }
+textarea:focus-visible, summary:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
+summary { display: list-item; cursor: pointer; min-height: 44px; padding: 14px 0; line-height: 1.5; font-size: 11px; color: #c5d3dd; }
+.workspace-summary, .quality-summary { border-bottom: 1px solid var(--line); }
+.workspace-summary > .inspector-section, .quality-summary > .inspector-section { padding-top: 4px; padding-bottom: 18px; }
+.workspace-panel > .section-title { margin-bottom: 7px; }
+.workspace-panel .text-button { font-size: 10px; }
+.workspace-panel form > .secondary { margin-top: 10px; }
+.workspace-panel .small, .quality-panel .small { font-size: 11px; }
+.revision-journal ol { list-style: none; padding: 0; margin: 0; max-height: 230px; overflow: auto; }
+.revision-journal li { padding: 10px 0; border-bottom: 1px solid var(--line); display: grid; gap: 4px; font-size: 10px; overflow-wrap: anywhere; }
+.revision-journal small { color: var(--muted); font-size: 10px; }
+.quality-list { list-style: none; padding: 0; margin: 0 0 12px; }
+.quality-list li { display: grid; grid-template-columns: 66px minmax(0, 1fr); gap: 7px; align-items: start; padding: 8px 0; border-bottom: 1px solid #23323e; }
+.quality-list strong { font-size: 11px; font-weight: 500; }
+.quality-list small { display: block; color: var(--muted); font-size: 10px; line-height: 1.5; margin-top: 4px; overflow-wrap: anywhere; }
+.quality-status { border: 1px solid #5b5140; color: var(--amber); background: #30291e; border-radius: 4px; padding: 4px; font-size: 9px; text-align: center; font-family: Consolas, monospace; }
+.quality-status.pass { color: #bdebd4; background: #1a352b; border-color: #416553; }
+.quality-status.fail { color: #ffc7ba; background: #3d2724; border-color: #865047; }
+.quality-panel > .button-row { margin: 12px 0; }
+.project-dialog { width: min(560px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); overflow: auto; margin: auto; padding: 24px; border: 1px solid #435963; border-radius: 10px; background: #15232e; color: var(--text); box-shadow: 0 25px 100px #0008; }
+.project-dialog::backdrop { background: #050c12d9; }
+.project-dialog h2 { font-size: 19px; margin-bottom: 18px; font-weight: 550; }
+.project-dialog p { line-height: 1.7; margin: 12px 0; }
+.project-dialog .field, .project-dialog .checkbox-label { font-size: 12px; }
+.dialog-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; margin-top: 24px; }
+.dialog-actions button { min-height: 44px; }
+.section-view .reference-contour { fill: none; stroke: var(--amber); stroke-dasharray: 5 3; stroke-width: 1.7; }
+.comparison-legend { padding: 8px 12px 12px; display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 10px; line-height: 1.6; }
+.comparison-legend > span:first-child { color: var(--mint); }
+.comparison-legend > span:nth-child(2) { color: var(--amber); }
+.comparison-legend p { flex-basis: 100%; color: #c5d3dd; }
+.busy-overlay { flex-wrap: wrap; align-content: center; padding: 20px; }
+.busy-overlay .secondary { min-height: 44px; }
+.working-status { display: block; font-size: 10px; color: var(--amber); margin-top: 4px; }
+@media (max-width: 760px) { .project-dialog { padding: 20px; } .dialog-actions { flex-direction: column-reverse; } .dialog-actions button { width: 100%; } }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

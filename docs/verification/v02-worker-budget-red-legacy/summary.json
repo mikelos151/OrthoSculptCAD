@@ -1,0 +1,286 @@
+{
+  "origin": {
+    "baseURL": "http://127.0.0.1:4176",
+    "asset": "/assets/index-DVLn8Ywk.js",
+    "sha256": "29957c9161f8c19e54da05d52cee2712e51c11946973fba28319e0aa2325c581",
+    "chromium": "156.0.8078.4"
+  },
+  "freshContexts": 4,
+  "downloads": 7,
+  "results": [
+    {
+      "session": 1,
+      "downloads": 1,
+      "events": 85,
+      "constructors": 15,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": [
+        {
+          "t": 13756.399999976158,
+          "type": "alert",
+          "text": "Error: Silnik zajęty: osiągnięto limit obliczeń.",
+          "alive": [
+            {
+              "workerId": 12,
+              "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+              "category": "compute",
+              "alive": true,
+              "kind": "task",
+              "op": "topology",
+              "requestId": 1,
+              "generation": 12
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "before-download-1",
+          "t": 9206.600000023842
+        },
+        {
+          "label": "after-contours-1",
+          "t": 17529.899999976158
+        }
+      ],
+      "privacy": {
+        "errors": [],
+        "external": [],
+        "violations": [],
+        "workers": [
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js"
+        ]
+      }
+    },
+    {
+      "session": 2,
+      "downloads": 1,
+      "events": 89,
+      "constructors": 16,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": [
+        {
+          "t": 15140.399999976158,
+          "type": "alert",
+          "text": "Error: Silnik zajęty: osiągnięto limit obliczeń.",
+          "alive": [
+            {
+              "workerId": 13,
+              "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+              "category": "compute",
+              "alive": true,
+              "kind": "task",
+              "op": "topology",
+              "requestId": 1,
+              "generation": 13
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "before-download-1",
+          "t": 11538.5
+        },
+        {
+          "label": "after-contours-1",
+          "t": 18765.19999998808
+        }
+      ],
+      "privacy": {
+        "errors": [],
+        "external": [],
+        "violations": [],
+        "workers": [
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js"
+        ]
+      }
+    },
+    {
+      "session": 3,
+      "downloads": 3,
+      "events": 145,
+      "constructors": 25,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": [
+        {
+          "t": 27585.899999976158,
+          "type": "alert",
+          "text": "Error: Silnik zajęty: osiągnięto limit obliczeń.",
+          "alive": [
+            {
+              "workerId": 22,
+              "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+              "category": "compute",
+              "alive": true,
+              "kind": "task",
+              "op": "topology",
+              "requestId": 1,
+              "generation": 22
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "before-download-1",
+          "t": 11172.800000011921
+        },
+        {
+          "label": "after-contours-1",
+          "t": 17077.100000023842
+        },
+        {
+          "label": "before-download-2",
+          "t": 17812
+        },
+        {
+          "label": "after-contours-2",
+          "t": 24092.399999976158
+        },
+        {
+          "label": "before-download-3",
+          "t": 24452.19999998808
+        },
+        {
+          "label": "after-contours-3",
+          "t": 30529.80000001192
+        }
+      ],
+      "privacy": {
+        "errors": [],
+        "external": [],
+        "violations": [],
+        "workers": [
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js"
+        ]
+      }
+    },
+    {
+      "session": 4,
+      "downloads": 2,
+      "events": 115,
+      "constructors": 20,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": [
+        {
+          "t": 25109.399999976158,
+          "type": "alert",
+          "text": "Error: Silnik zajęty: osiągnięto limit obliczeń.",
+          "alive": [
+            {
+              "workerId": 17,
+              "url": "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+              "category": "compute",
+              "alive": true,
+              "kind": "task",
+              "op": "topology",
+              "requestId": 1,
+              "generation": 17
+            }
+          ]
+        }
+      ],
+      "checkpoints": [
+        {
+          "label": "before-download-1",
+          "t": 11590.099999964237
+        },
+        {
+          "label": "after-contours-1",
+          "t": 19861.30000001192
+        },
+        {
+          "label": "before-download-2",
+          "t": 20522.69999998808
+        },
+        {
+          "label": "after-contours-2",
+          "t": 28700.5
+        }
+      ],
+      "privacy": {
+        "errors": [],
+        "external": [],
+        "violations": [],
+        "workers": [
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js",
+          "http://127.0.0.1:4176/assets/worker-D6uiTdBI.js"
+        ]
+      }
+    }
+  ],
+  "failures": [
+    "session 1, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('alert')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+    "session 2, completed downloads 1: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('alert')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+    "session 3, completed downloads 3: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('alert')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+    "session 4, completed downloads 2: Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('alert')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('alert') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\u001b[2m    31 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n"
+  ]
+}

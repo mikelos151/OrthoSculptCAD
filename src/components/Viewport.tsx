@@ -8,6 +8,7 @@ import { buildDisplayGeometry } from "./meshView";
 type Renderer = THREE.WebGPURenderer | WebGLRenderer;
 export interface ViewportProps {
   mesh: MeshData | null;
+  reference?: MeshData | null;
   slice: SliceResult | null;
   colors?: Float32Array;
   markers: Vec3[];
@@ -18,7 +19,9 @@ export interface ViewportProps {
   wireframe: boolean;
   onBackend: (label: string) => void;
   onPick: (point: Vec3) => void;
-  onStrokeStart: () => void;
+  onStrokeStart: () => boolean | void;
+  onStrokeEnd?: () => void;
+  onStrokeCancel?: () => void;
   onBrush: (point: Vec3) => void;
 }
 interface Stage {
@@ -29,6 +32,7 @@ interface Stage {
   object: THREE.Mesh | null;
   overlay: THREE.Group;
   grid: THREE.GridHelper;
+  cancelStroke?: () => void;
 }
 function disposeObject(object: THREE.Object3D) {
   object.traverse((child) => {
@@ -144,8 +148,7 @@ export function Viewport(props: ViewportProps) {
       resize();
       const raycaster = new THREE.Raycaster();
       const pointer = new THREE.Vector2();
-      let sculpting = false,
-        lastBrush = 0;
+      let sculpting = false, pointerId: number | null = null, lastBrush = 0;
       const hit = (event: PointerEvent): Vec3 | null => {
         const object = stage.current?.object;
         if (!object) return null;
@@ -160,6 +163,7 @@ export function Viewport(props: ViewportProps) {
       };
       const down = (event: PointerEvent) => {
         if (
+          sculpting ||
           event.button !== 0 ||
           (!latest.current.brushActive && !latest.current.picking)
         )
@@ -169,16 +173,17 @@ export function Viewport(props: ViewportProps) {
         event.preventDefault();
         event.stopImmediatePropagation();
         if (latest.current.brushActive) {
+          if (latest.current.onStrokeStart() === false) return;
           sculpting = true;
+          pointerId = event.pointerId;
           controls.enabled = false;
           canvas.setPointerCapture(event.pointerId);
-          latest.current.onStrokeStart();
           latest.current.onBrush(point);
           lastBrush = performance.now();
         } else latest.current.onPick(point);
       };
       const move = (event: PointerEvent) => {
-        if (!sculpting) return;
+        if (!sculpting || event.pointerId !== pointerId) return;
         event.stopImmediatePropagation();
         if (performance.now() - lastBrush < 35) return;
         const point = hit(event);
@@ -188,23 +193,40 @@ export function Viewport(props: ViewportProps) {
         }
       };
       const up = (event: PointerEvent) => {
-        if (!sculpting) return;
+        if (!sculpting || event.pointerId !== pointerId) return;
         sculpting = false;
+        pointerId = null;
         controls.enabled = true;
         if (canvas.hasPointerCapture(event.pointerId))
           canvas.releasePointerCapture(event.pointerId);
+        latest.current.onStrokeEnd?.();
       };
+      const cancelStroke = () => {
+        if (!sculpting) return;
+        const captured = pointerId;
+        sculpting = false;
+        pointerId = null;
+        controls.enabled = true;
+        // Invalidate App's transaction before releasing native capture.
+        latest.current.onStrokeCancel?.();
+        if (captured !== null && canvas.hasPointerCapture(captured)) canvas.releasePointerCapture(captured);
+      };
+      const cancel = (event: PointerEvent) => { if (event.pointerId === pointerId) cancelStroke(); };
+      stage.current.cancelStroke = cancelStroke;
       canvas.addEventListener("pointerdown", down, true);
       canvas.addEventListener("pointermove", move, true);
       canvas.addEventListener("pointerup", up, true);
-      canvas.addEventListener("pointercancel", up, true);
-      canvas.addEventListener("lostpointercapture", up, true);
+      canvas.addEventListener("pointercancel", cancel, true);
+      canvas.addEventListener("lostpointercapture", cancel, true);
+      window.addEventListener("blur", cancelStroke);
       removeEvents = () => {
+        cancelStroke();
         canvas.removeEventListener("pointerdown", down, true);
         canvas.removeEventListener("pointermove", move, true);
         canvas.removeEventListener("pointerup", up, true);
-        canvas.removeEventListener("pointercancel", up, true);
-        canvas.removeEventListener("lostpointercapture", up, true);
+        canvas.removeEventListener("pointercancel", cancel, true);
+        canvas.removeEventListener("lostpointercapture", cancel, true);
+        window.removeEventListener("blur", cancelStroke);
       };
       renderer.setAnimationLoop(() => {
         if (disposed) return;
@@ -234,6 +256,9 @@ export function Viewport(props: ViewportProps) {
       }
     };
   }, []);
+  useEffect(() => {
+    stage.current?.cancelStroke?.();
+  }, [props.mesh, props.brushActive]);
   useEffect(() => {
     const current = stage.current;
     if (current)
@@ -296,6 +321,21 @@ export function Viewport(props: ViewportProps) {
       active = false;
     };
   }, [props.mesh, props.colors, props.wireframe, ready]);
+  useEffect(() => {
+    const current = stage.current;
+    if (!current || !props.reference) return;
+    const geometry = buildDisplayGeometry(props.reference);
+    // Reference is a display-only overlay, never the raycast/sculpting target.
+    geometry.deleteAttribute('color');
+    const object = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
+      color: 0xe9bf7e, transparent: true, opacity: 0.22,
+      side: THREE.DoubleSide, depthWrite: false,
+      polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1,
+    }));
+    object.renderOrder = 2;
+    current.scene.add(object);
+    return () => { current.scene.remove(object); disposeObject(object); };
+  }, [props.reference, ready]);
   useEffect(() => {
     const current = stage.current;
     if (!current?.object) return;

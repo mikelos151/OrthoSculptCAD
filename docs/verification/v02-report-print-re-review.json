@@ -1,0 +1,228 @@
+{
+  "passed": true,
+  "issues": [],
+  "totalPages": 21,
+  "totalSpans": 1200,
+  "h1": "h1{font-size:28pt;margin:6px 0;overflow-wrap:anywhere}",
+  "scopeSHA256": {
+    "src/reports/reviewReport.ts": "d184936b8693d5c978fc04d712b66b2187beb1abadc1931a3a2c243f644e12dc",
+    "tests/v02-reports-long-code.test.ts": "6c1d3b04893cd24e2562ac3d4248c01d56da2a8ff4cbfc2b1f5c6f1f81df48c0"
+  },
+  "variants": [
+    {
+      "name": "normal",
+      "passed": true,
+      "pages": 6,
+      "spansInspected": 371,
+      "minimumFontPt": 12.0,
+      "minimumFooterBodyGapPt": 29.0390625,
+      "completeLiteralHeading": true,
+      "measurementRows": 25,
+      "validCADRows": 24,
+      "rowsFoundInPDF": 25,
+      "lineOverlapCount": 0,
+      "perPage": [
+        {
+          "page": 1,
+          "minPt": 12.0,
+          "gapPt": 32.0390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 2,
+          "minPt": 12.0,
+          "gapPt": 37.2890625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 3,
+          "minPt": 12.0,
+          "gapPt": 45.5390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 4,
+          "minPt": 12.0,
+          "gapPt": 40.2890625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 5,
+          "minPt": 12.0,
+          "gapPt": 29.0390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 6,
+          "minPt": 12.0,
+          "gapPt": 286.2890625,
+          "bounds": true,
+          "identity": true
+        }
+      ],
+      "htmlSHA256": "f155796243d0d9d98a064bf540845bf1a6e4d53bc12a06d171d1ef084f8bbc86",
+      "pdfSHA256": "390f0098b4edfb25626c6556911fa8ef20c92fedc66010c47586016afa6d9dfe"
+    },
+    {
+      "name": "wide39",
+      "passed": true,
+      "pages": 6,
+      "spansInspected": 372,
+      "minimumFontPt": 12.0,
+      "minimumFooterBodyGapPt": 29.0390625,
+      "completeLiteralHeading": true,
+      "measurementRows": 25,
+      "validCADRows": 24,
+      "rowsFoundInPDF": 25,
+      "lineOverlapCount": 0,
+      "perPage": [
+        {
+          "page": 1,
+          "minPt": 12.0,
+          "gapPt": 38.0390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 2,
+          "minPt": 12.0,
+          "gapPt": 47.7890625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 3,
+          "minPt": 12.0,
+          "gapPt": 39.5390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 4,
+          "minPt": 12.0,
+          "gapPt": 29.0390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 5,
+          "minPt": 12.0,
+          "gapPt": 85.2890625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 6,
+          "minPt": 12.0,
+          "gapPt": 191.7890625,
+          "bounds": true,
+          "identity": true
+        }
+      ],
+      "htmlSHA256": "f051e13258bbaeda801396458c359f259d6b2f3eea3e5ce7b47d15ea941275fd",
+      "pdfSHA256": "34b9cf34dea3e6d184ffc6500adc7afbe41c69de52283ab0f4a1ce8cdb14fafb"
+    },
+    {
+      "name": "wide40",
+      "passed": true,
+      "pages": 6,
+      "spansInspected": 372,
+      "minimumFontPt": 12.0,
+      "minimumFooterBodyGapPt": 29.0390625,
+      "completeLiteralHeading": true,
+      "measurementRows": 25,
+      "validCADRows": 24,
+      "rowsFoundInPDF": 25,
+      "lineOverlapCount": 0,
+      "perPage": [
+        {
+          "page": 1,
+          "minPt": 12.0,
+          "gapPt": 38.0390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 2,
+          "minPt": 12.0,
+          "gapPt": 47.7890625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 3,
+          "minPt": 12.0,
+          "gapPt": 39.5390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 4,
+          "minPt": 12.0,
+          "gapPt": 29.0390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 5,
+          "minPt": 12.0,
+          "gapPt": 85.2890625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 6,
+          "minPt": 12.0,
+          "gapPt": 191.7890625,
+          "bounds": true,
+          "identity": true
+        }
+      ],
+      "htmlSHA256": "7dd5b69d50b520f71db62e9e7625530a3bff850aeb3e22b6c787918c905e55d8",
+      "pdfSHA256": "b6ec79854925db88c430976c603b8fccac0d7da70896ff3d0e18dbc9830b07ff"
+    },
+    {
+      "name": "normal-one-row",
+      "passed": true,
+      "pages": 3,
+      "spansInspected": 85,
+      "minimumFontPt": 12.0,
+      "minimumFooterBodyGapPt": 32.0390625,
+      "completeLiteralHeading": true,
+      "measurementRows": 1,
+      "validCADRows": 1,
+      "rowsFoundInPDF": 1,
+      "lineOverlapCount": 0,
+      "perPage": [
+        {
+          "page": 1,
+          "minPt": 12.0,
+          "gapPt": 32.0390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 2,
+          "minPt": 12.0,
+          "gapPt": 60.5390625,
+          "bounds": true,
+          "identity": true
+        },
+        {
+          "page": 3,
+          "minPt": 12.0,
+          "gapPt": 292.2890625,
+          "bounds": true,
+          "identity": true
+        }
+      ],
+      "htmlSHA256": "d123f762e8a698df404fed518ea67b41d0f4f07df665f8adc4fdbe6dea1f5892",
+      "pdfSHA256": "aac40d64532458e09edb8f499bb17f3e7337a6c689a9e7699fcd11f1906dd7b2"
+    }
+  ]
+}

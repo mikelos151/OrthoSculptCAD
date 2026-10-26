@@ -7,7 +7,7 @@ if exist "OrthoSculptCAD.exe" (
 )
 where node >nul 2>nul
 if errorlevel 1 (
-  echo Brak Node.js. Uruchom dostarczony plik OrthoSculptCAD.exe albo zainstaluj Node.js LTS.
+  echo Brak Node.js. Ta paczka nie zawiera pliku .exe. Zainstaluj Node.js 22 lub nowszy i uruchom ponownie.
   pause
   exit /b 1
 )

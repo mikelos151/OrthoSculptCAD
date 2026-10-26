@@ -7,8 +7,9 @@ export const number = (value: number, digits = 1) =>
         minimumFractionDigits: digits,
       })
     : "—";
-export function SectionView({ slice }: { slice: SliceResult | null }) {
-  const points = slice?.loops.flatMap((loop) => loop.points) ?? [];
+export function SectionView({ slice, reference = null }: { slice: SliceResult | null; reference?: SliceResult | null }) {
+  const paired = slice && reference && slice.z === reference.z ? reference : null;
+  const points = [...(slice?.loops.flatMap(loop => loop.points) ?? []), ...(paired?.loops.flatMap(loop => loop.points) ?? [])];
   const extent = points.reduce(
     (box, point) => ({
       minX: Math.min(box.minX, point[0]),
@@ -34,6 +35,7 @@ export function SectionView({ slice }: { slice: SliceResult | null }) {
         aria-label="Rzeczywisty przekrój poprzeczny modelu"
       >
         <g transform={`translate(0 ${minY + maxY}) scale(1 -1)`}>
+          {paired?.loops.map((loop, i) => loop.closed ? <polygon className="reference-contour" key={`ref-${i}`} points={loop.points.map(point => point.join(',')).join(' ')} /> : <polyline className="reference-contour" key={`ref-${i}`} points={loop.points.map(point => point.join(',')).join(' ')} />)}
           {slice?.loops.map((loop, i) =>
             loop.closed ? (
               <polygon
@@ -49,6 +51,7 @@ export function SectionView({ slice }: { slice: SliceResult | null }) {
           )}
         </g>
       </svg>
+      {paired && <div className="comparison-legend"><span>CAD — mięta</span><span>Referencja robocza — bursztyn</span><p>{slice?.valid && paired.valid ? `Δ obwodu: ${number(slice.perimeter - paired.perimeter)} mm · ref ${number(paired.perimeter)} mm` : 'Różnica niedostępna — co najmniej jeden kontur jest nieważny.'}</p></div>}
       {!slice && <p className="muted">Wybierz wysokość na modelu.</p>}
       {slice && !slice.valid && (
         <p className="warning-text">

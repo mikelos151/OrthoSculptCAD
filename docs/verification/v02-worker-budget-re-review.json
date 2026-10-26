@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    "Non-blocking: promote the scratch lifecycle regression into the maintained suite, with isolated output paths; it verifies reader release at mutation dispatch, fresh audit before changed-mesh/undo indexing, UNKNOWN preservation and reader release on New Project.",
+    "Aborted/failed audit admission was reviewed in actual source rather than fault-injected in the native browser. Add dedicated failure/abort coverage without weakening the existing real-Worker stress regression."
+  ],
+  "summary": "PASS for the scoped E2E-02 App.tsx audit/slice race correction: independent unchanged-assertion native Chromium stress run completed 20 downloads in four fresh contexts, and an additional lifecycle regression passed; no scope-blocking security or logic findings.",
+  "scope": {
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "source": "src/App.tsx:182,197,318-348,400-415,422-477,536-541; mutation callers, source-unit conversion, undo and transport cancellation dependencies read directly",
+    "reviewedNotModified": [
+      "src/App.tsx",
+      "src/compute/client.ts",
+      "src/compute/index.ts",
+      "src/compute/sliceEngine.ts",
+      "src/compute/copy.ts",
+      "src/compute/service.ts",
+      "src/hooks/workbenchState.ts",
+      "src/components/WorkspacePanel.tsx",
+      "e2e/v02-worker-budget.spec.ts",
+      "e2e/helpers.ts",
+      "scripts/v02-worker-budget-probe.mjs"
+    ],
+    "noBuildNoServerRestartNoStageNoCommit": true,
+    "noRepositorySourceTestOrEvidenceWrites": true,
+    "noClinicalOrEXEGuarantee": true
+  },
+  "findings": [
+    "auditReady is mesh !== null && auditedMesh === mesh. This rejects the first render of a new mesh independently of the previous checking value; both current and reference index effects require it.",
+    "updateMesh invalidates auditedMesh, audit and report. Import, protected/unprotected project load, synthetic install, source-unit scaling, repair, changed orientation, PCA, registration, calibration, stroke, zone, reset and undo publish through updateMesh. New Project independently clears the mesh and audit identity. Source-unit selection does not mutate coordinates; confirmation publishes a new scaled mesh. Case metadata does not change geometry and appropriately does not discard its audit.",
+    "Only successful topology followed by successful analyze, with a non-aborted controller, publishes audit readiness. Errors do not set auditedMesh. Cleanup aborts old work. Explicit analyze/report actions do not authorize indexing by themselves.",
+    "Unchanged-geometry downloads reuse completion rather than launching another audit beside two read engines. Independently observed all five download cycles per context: only two init and two slice requests per cycle, with no topology/analyze rerun.",
+    "run synchronously aborts every background controller and disposes the interactive engine before its asynchronous mutation action. Both read engines register controllers; abort disposes the real client and decrements the worker budget synchronously. Native lifecycle evidence confirms two readers beforehand and only the zone mutation worker alive at dispatch.",
+    "Readiness means computation completed, not quality PASS. qualitySummary and QualityPanel preserve FAIL/UNKNOWN; the native lifecycle check retained UNKNOWN with active contours.",
+    "MAX_WORKERS remains 2. Admission errors remain thrown; no fake Worker responses or suppressed budget errors were introduced by this scoped correction. The observational probe forwards actual native construction, dispatch and termination.",
+    "The independent copied stress test is identical to the repository test after normalizing only import paths and output directory. Real distinct current/reference SVG polygons at Z 50 mm, delta -12.5 mm, live 3D canvas, current and latched alerts and privacy assertions remain intact."
+  ],
+  "verification": {
+    "stressCommand": "node node_modules/@playwright/test/cli.js test --config C:/Users/sandr/AppData/Local/hermes/cache/scratch/e2e02-independent-final/config.mjs",
+    "stress": {
+      "passedTests": 1,
+      "freshContexts": 4,
+      "downloads": 20,
+      "constructorsPerContext": 20,
+      "maxComputeAlive": 2,
+      "maxDisplayAlive": 0,
+      "alerts": 0,
+      "privacyErrors": 0,
+      "externalRequests": 0,
+      "cspViolations": 0,
+      "durationApproxMinutes": 3.1
+    },
+    "lifecycleCommand": "node node_modules/@playwright/test/cli.js test --config C:/Users/sandr/AppData/Local/hermes/cache/scratch/e2e02-independent-final/lifecycle-config.mjs",
+    "lifecycle": {
+      "passedTests": 1,
+      "durationSeconds": 17.7,
+      "nativeConstructors": 15,
+      "maxComputeAlive": 2,
+      "alerts": 0,
+      "checks": [
+        "two live readers before mutation",
+        "only mutation worker at zone dispatch",
+        "successful topology and analyze responses and termination before changed-mesh init",
+        "fresh audit before undo init",
+        "undo restores original contour",
+        "UNKNOWN remains UNKNOWN",
+        "New Project releases all readers"
+      ]
+    },
+    "unitCommand": "node node_modules/vitest/vitest.mjs run tests/v02-compute-browser.test.ts tests/v02-compute-transport.test.ts tests/v02-compute-review-fixes.test.ts tests/v02-gesture-isolation.test.ts tests/v02-ui-state.test.ts tests/v02-ui-worker.test.ts tests/v02-worker-diagnostics.test.ts --reporter=json --outputFile=C:/Users/sandr/AppData/Local/hermes/cache/scratch/e2e02-independent-final/unit.json",
+    "units": {
+      "files": 7,
+      "totalTests": 60,
+      "passedTests": 57,
+      "failedTests": 0,
+      "pendingTests": 3,
+      "note": "Browser-gated unit cases are pending in Node; the two independent Playwright regressions above exercised actual Chromium Workers. This is not a claim that the entire parent suite was rerun here."
+    },
+    "parentEvidenceRead": "docs/verification/v02-worker-budget-evidence/summary.json: parsed four contexts and 20 downloads with no failures; parent red JSON reports unexpected=1 and parent green reports expected=1. Independent evidence is stored separately."
+  },
+  "hashes": {
+    "servedIndexSha256": "cada3026f94cfe647346bccbaabf83b39d6efa0266ba03c8424848ea28e1ed15",
+    "servedAsset": "/assets/index-Ct_H4HMR.js",
+    "servedAssetSha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "chromium": "156.0.8078.4",
+    "src/App.tsx": "f697dcc4a34a02dbe58b94e700eb9c2ce644ee3fc098e3e34b5161f7bfcdce17",
+    "src/compute/client.ts": "d129131af2ddc2f08700d53360ea2338cb06b45e616231c74c1a7bf9287c5296",
+    "e2e/v02-worker-budget.spec.ts": "3d822585772658d882814abcb979b1f79114a0ef154f418172b68f3eadd441d5",
+    "scripts/v02-worker-budget-probe.mjs": "8ea5c4855eaff48841c90cb991a3d2c82a3876ee6f33ef38c5e7692e7f53992c"
+  },
+  "evidenceRoot": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/e2e02-independent-final",
+  "createdFiles": [
+    "budget.spec.ts",
+    "config.mjs",
+    "evidence/summary.json",
+    "evidence/session-1.json",
+    "evidence/session-2.json",
+    "evidence/session-3.json",
+    "evidence/session-4.json",
+    "run.json",
+    "unit.json",
+    "lifecycle.spec.ts",
+    "lifecycle-config.mjs",
+    "lifecycle.json",
+    "lifecycle-run.json",
+    "review.json"
+  ],
+  "toolingIssuesResolved": [
+    "TMPDIR exposed Local/Temp instead of the declared Hermes scratch directory: initial scratch files were moved into the declared scratch directory before execution; no product change.",
+    "Playwright does not accept --test-match: used a separate lifecycle config with testMatch instead; final lifecycle execution passed."
+  ],
+  "proceduralMemoryUpdated": "Default-profile requesting-code-review skill: added isolated concurrent browser evidence and mutation-dispatch Worker observation lessons. No other profile modified."
+}

@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "verdict": "PASS",
+  "issue": "HIGH UI-STATE-01",
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    "Promote the reviewer-only side-change, metadata-revision and unit-confirmation Undo E2E cases from scratch into the permanent regression suite.",
+    "Add dedicated native pointercancel/window-blur browser coverage; this review re-executed native capture loss and reviewed pointercancel/blur cleanup in source, rather than claiming independent native execution of those two event types."
+  ],
+  "summary": "Independent current-source review and isolated production-build execution passed: 9 focused unit assertions and 6 real Chromium keyboard/pointer scenarios, zero failures/skips, no old geometry/project resurrection, no browser page errors or external HTTP(S) requests observed.",
+  "scope": {
+    "productionFilesReadOnly": ["src/App.tsx", "src/components/Viewport.tsx", "src/hooks/workbenchState.ts"],
+    "testFilesReadOnly": ["tests/v02-gesture-isolation.test.ts", "e2e/v02-gesture-isolation.spec.ts"],
+    "repositoryProductionOrTestsModified": false,
+    "repositoryFileCreated": "docs/verification/v02-gesture-re-review.json",
+    "notAssessed": ["Whole release readiness", "Clinical validation", "EXE/native acceptance", "Other investigator's worker-pool race E2E-02"],
+    "frozenDist4176UsedAsLatest": false,
+    "full325TestSuiteClaimedAsOwnRun": false,
+    "realWorkers": true,
+    "workerResponsesStubbed": false,
+    "applicationStateInjected": false,
+    "data": "PUBLIC SYNTHETIC RGB engineering cylinder only"
+  },
+  "source": {
+    "gitHead": "b21c2ecae7e9608bb511c449e36eddba0299ad62",
+    "workingTree": "Pre-existing staged, unstaged and untracked changes; reviewed actual current files, not HEAD alone.",
+    "sha256": {
+      "src/App.tsx": "75ebfa66feeb48e839a981f11a969b31f7749915490b1099b19e36d4a903e7d8",
+      "src/components/Viewport.tsx": "c29b66212fda22c48a59b89994c1cc0bdfb56039932035bd47beccb69e8e12c7",
+      "src/hooks/workbenchState.ts": "051884f6b8a9c57143b3da5d66443f9ef12dc7e4416d7b113b1fc81a60727cf7",
+      "tests/v02-gesture-isolation.test.ts": "fd6ed2d4523b11b50dc8fb99b22df519d6fd8d09f35e8c11b78fc5c0ded922a3",
+      "e2e/v02-gesture-isolation.spec.ts": "799ab9fd67e0b8c77b870357dafec7d9eef891f4065586a16e9fa1c78550e5dc"
+    },
+    "hashesUnchangedAfterBothBrowserRuns": true
+  },
+  "manualSourceReview": [
+    {
+      "location": "src/hooks/workbenchState.ts:40-66",
+      "finding": "Stroke fence accepts one active ticket by identity. current checks projectEpoch, revision, exact mesh identity, unit and confirmed-unit state. finish(oldTicket) cannot finish a newer ticket. cancel invalidates synchronously; missing mesh/unconfirmed units cannot begin."
+    },
+    {
+      "location": "src/App.tsx:251-319,357-387,530-550,639-709",
+      "finding": "Source refs and project epoch are used instead of stale render captures. Recording cancellation precedes workspace publication, mesh replacement, guardReplacement, Undo, task cancellation and new project/install. Case-side updates journal a revision and synchronously cancel recording. Physical-unit changes are source-fenced; unit selector is disabled after confirmation and Undo revocation cancels before restoring unit state."
+    },
+    {
+      "location": "src/App.tsx:289-313,649-683",
+      "finding": "Fence checked at pointer-up, run entry, after asynchronous scheduling immediately before Worker dispatch, and in publication closure after Worker resolution. Task gate separately excludes concurrent tasks and rejects cancelled task commits. Recording path only appends copied points, never edits positions, RGB, baseline or undo history. No-op stroke does not append history/revision."
+    },
+    {
+      "location": "src/components/Viewport.tsx:151-229,259-261",
+      "finding": "Move/up/cancel events are scoped to active pointerId. On pointer-up local sculpting/pointerId are cleared before native capture release and onStrokeEnd, so ensuing lostpointercapture cannot cancel pending publication. Cancellation invalidates App transaction before releasing capture; controls are re-enabled. Mesh/brush changes, capture loss, pointercancel, blur and cleanup use cancellation rather than completion. Stale non-active-pointer events are ignored; no deferred old-stroke publication callback exists in Viewport."
+    },
+    {
+      "location": "src/App.tsx:1074-1089; src/hooks/workbenchState.ts:25-34",
+      "finding": "Brush entry remains gated by outward-normal audit and confirmed units. The review does not convert quality UNKNOWN into PASS and does not confer clinical validation. Narrow static scan of the three production files found no hardcoded credential assignment, eval/exec or HTTP(S) literal."
+    }
+  ],
+  "execution": {
+    "node": "C:/Program Files/nodejs/node.exe (v24.19.0)",
+    "scratch": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v02-gesture-re-review",
+    "build": {
+      "exitCode": 0,
+      "modulesTransformed": 1629,
+      "isolatedOutDir": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v02-gesture-re-review/bundle",
+      "warning": "Vite main chunk exceeds 500 kB; non-blocking for the gesture regression scope.",
+      "entry": "assets/index-BbGVhzWI.js",
+      "entrySha256": "7d86ea740847df1a260bf011ded016528305da85e5fae1da4be6e004fea57cdc",
+      "displayWorker": "assets/display.worker-DnUs9aB6.js",
+      "displayWorkerSha256": "f7191533e9e2bcd6d92d0be58b843d1750127aa4dbdd18b3f136654eab5e82c8",
+      "geometryWorker": "assets/worker-a7ChvxWr.js",
+      "geometryWorkerSha256": "b2c5fa13415dae2a4a0c8d80466b841ee1b5e4c4bd29b7af8f179d2feee9122b",
+      "servedProof": "HTTP-read index, referenced assets and both Worker assets from 4188; all 13 downloaded resources matched isolated on-disk bytes. Full hashes in scratch/bundle-proof.json."
+    },
+    "server": {
+      "baseURL": "http://127.0.0.1:4188",
+      "implementation": "createStaticServer(isolatedOutDir), imported from repository scripts/server.mjs",
+      "ownedSession": "proc_c071ae28cefc",
+      "nodePid": 60016,
+      "stoppedAfterReview": true,
+      "postStopConnectEx": 10035,
+      "otherServersStopped": false
+    },
+    "commands": [
+      "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/sandr/OrthoSculptCAD/node_modules/vite/bin/vite.js\" build --outDir \"C:/Users/sandr/AppData/Local/hermes/cache/scratch/v02-gesture-re-review/bundle\" --emptyOutDir",
+      "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs\" run tests/v02-gesture-isolation.test.ts --reporter=json --outputFile=\"C:/Users/sandr/AppData/Local/hermes/cache/scratch/v02-gesture-unit.json\"",
+      "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/sandr/AppData/Local/hermes/cache/scratch/v02-gesture-re-review/server.mjs\"",
+      "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/sandr/OrthoSculptCAD/node_modules/@playwright/test/cli.js\" test --config=\"C:/Users/sandr/AppData/Local/hermes/cache/scratch/v02-gesture-re-review/playwright.config.mjs\"",
+      "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/sandr/OrthoSculptCAD/node_modules/@playwright/test/cli.js\" test --config=\"C:/Users/sandr/AppData/Local/hermes/cache/scratch/v02-gesture-re-review/extra.config.mjs\""
+    ],
+    "counts": {
+      "unitPassed": 9,
+      "unitFailed": 0,
+      "unitSkipped": 0,
+      "existingGestureE2EPassed": 3,
+      "reviewerScratchE2EPassed": 3,
+      "browserFailed": 0,
+      "browserSkipped": 0,
+      "browserFlaky": 0,
+      "browserPageErrors": 0,
+      "externalHttpRequests": 0
+    }
+  },
+  "actualBrowserResults": [
+    {"scenario": "Held brush + keyboard Undo + mouseup", "passed": true, "farVertex": {"z": 90, "xAfterZone": 18, "xAfterUndo": 20}, "revisionAfterUndo": 4, "lastEvent": "undo", "strokeWorkerDispatches": 0, "meshRGBBaselineExact": true, "undoCountRestored": true},
+    {"scenario": "Held brush + keyboard New Project + keyboard confirmation + mouseup", "passed": true, "header": "CASE · r0 · Nowy projekt", "emptyViewport": true, "saveDisabled": true, "dirtyWorkingStatusAbsent": true, "strokeWorkerDispatches": 0},
+    {"scenario": "Native releasePointerCapture while held, then legitimate multi-dab gesture and one Undo", "passed": true, "cancelledGestureNoHistoryOrGeometryChange": true, "captures": 2, "strokeWorkerDispatches": 1, "legitimateDabs": 7, "addedRevisions": 1, "addedEvents": 1, "addedUndoEntries": 1, "rgbAndBaselinePreserved": true, "oneUndoRestoresExactMeshBaselineTapes": true},
+    {"scenario": "Held brush + keyboard apply side left + mouseup", "passed": true, "revision": 3, "strokeWorkerDispatches": 0, "lastEvent": "case-update", "meshRGBBaselineExact": true, "undoCount": 1},
+    {"scenario": "Held brush + keyboard apply pseudonym metadata revision + mouseup", "passed": true, "caseCode": "REVIEW_PUBLIC", "revision": 3, "strokeWorkerDispatches": 0, "lastEvent": "case-update", "meshRGBBaselineExact": true, "undoCount": 1},
+    {"scenario": "Held brush + keyboard Undo of unit confirmation + mouseup", "passed": true, "saveDisabledAfterUndo": true, "unitsRequireReconfirmation": true, "strokeWorkerDispatches": 0, "meshRGBBaselineExactAfterReconfirmation": true, "eventKinds": ["start", "import", "units", "undo", "units"]}
+  ],
+  "evidence": [
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v02-gesture-unit.json",
+    "scratch/build.log",
+    "scratch/source-hashes-before.json",
+    "scratch/bundle-proof.json",
+    "scratch/e2e.json",
+    "scratch/e2e-actual-summary.json",
+    "scratch/results/*/*.png",
+    "scratch/extra.spec.ts",
+    "scratch/extra.config.mjs",
+    "scratch/extra.json",
+    "scratch/extra-actual-summary.json"
+  ],
+  "limitations": [
+    "This is a focused gesture-state review, not a rerun or certification of the entire suite or release.",
+    "Unit fence covers physical unit changes and mesh/epoch/revision invalidation; actual browser execution additionally covers Undo revocation. Direct mm-to-cm mutation during an active confirmed brush is not available through the UI because its unit selector is disabled.",
+    "Source-fence checks at both asynchronous boundaries were inspected in actual source; browser scenarios use real native ordering and Workers without manufactured stale Worker responses."
+  ]
+}

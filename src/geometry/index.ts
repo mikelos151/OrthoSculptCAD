@@ -1,7 +1,10 @@
+export { orientMesh } from "./orientation";
+export { auditMesh } from "./audit";
+export type { AuditOptions, MeshAudit, QualityCheck, QualityStatus, RegistrationResult } from "./auditTypes";
 export { SliceIndex } from "./slicing";
 export { getBounds, validateMesh } from "./core";
 export { repairMesh } from "./repair";
-export { alignPCA, registerLandmarks } from "./alignment";
+export { alignPCA, registerLandmarks, registerLandmarksDetailed } from "./alignment";
 export { measureMesh } from "./measurement";
 export { calibrateMesh } from "./calibration";
 export { applyBrush, scaleZone, deformationColors } from "./deformation";

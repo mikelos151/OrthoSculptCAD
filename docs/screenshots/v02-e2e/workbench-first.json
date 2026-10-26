@@ -1,0 +1,245 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/v02-workbench.spec.ts",
+      "--reporter=line,json",
+      "--output=docs/screenshots/v02-e2e/workbench-results"
+    ],
+    "configFile": "C:\\Users\\sandr\\OrthoSculptCAD\\playwright.config.ts",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sandr/OrthoSculptCAD/docs/screenshots/v02-e2e/workbench-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sandr/OrthoSculptCAD/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\workbench-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "snapshotDir": "C:\\Users\\sandr\\OrthoSculptCAD\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "actionTimeout": 15000,
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "acceptDownloads": true,
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/server.mjs --port 4176",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "v02-workbench.spec.ts",
+      "file": "v02-workbench.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real multi-point RGB brush stroke is one journal event and undo entry, heatmap preserves source RGB, undo restores exact baseline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33572,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:42:58.631Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "brush-real-stroke-source-rgb.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\workbench-results\\v02-workbench-real-multi-p-5f706-ndo-restores-exact-baseline\\attachments\\brush-real-stroke-source-rgb-png-5432d86acd69b5bc9eaafa86f2b1ba716a1915e9.png"
+                    },
+                    {
+                      "name": "real-worker-observations",
+                      "contentType": "application/json",
+                      "body": "eyJjc3AiOiJkZWZhdWx0LXNyYyAnc2VsZic7IHNjcmlwdC1zcmMgJ3NlbGYnOyBzdHlsZS1zcmMgJ3NlbGYnICd1bnNhZmUtaW5saW5lJzsgaW1nLXNyYyAnc2VsZicgZGF0YTogYmxvYjo7IGZvbnQtc3JjICdzZWxmJzsgY29ubmVjdC1zcmMgJ3NlbGYnOyB3b3JrZXItc3JjICdzZWxmJyBibG9iOjsgb2JqZWN0LXNyYyAnbm9uZSc7IGZyYW1lLXNyYyAnbm9uZSc7IGJhc2UtdXJpICdzZWxmJzsgZm9ybS1hY3Rpb24gJ25vbmUnIiwiZXJyb3JzIjpbXSwiZXh0ZXJuYWwiOltdLCJ2aW9sYXRpb25zIjpbXSwid29ya2VycyI6WyJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy9kaXNwbGF5Lndvcmtlci1EblVzOWFCNi5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvZGlzcGxheS53b3JrZXItRG5VczlhQjYuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyIsImh0dHA6Ly8xMjcuMC4wLjE6NDE3Ni9hc3NldHMvd29ya2VyLUQ2dWlUZEJJLmpzIiwiaHR0cDovLzEyNy4wLjAuMTo0MTc2L2Fzc2V0cy93b3JrZXItRDZ1aVRkQkkuanMiLCJodHRwOi8vMTI3LjAuMC4xOjQxNzYvYXNzZXRzL3dvcmtlci1ENnVpVGRCSS5qcyJdLCJzdHJva2VEYWJzIjo5fQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-09fe0bf966ec63893a17",
+          "file": "v02-workbench.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "comparison renders distinct same-Z reference and current SVG geometry plus real 3D viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:43:32.304Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "comparison-actual-2d-and-3d.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\workbench-results\\v02-workbench-comparison-r-38dfd-metry-plus-real-3D-viewport\\attachments\\comparison-actual-2d-and-3d-png-0dcc9a2cb0f8491301506a98692cfcf5aeb888b1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-ac4b22c5aaae556c983e",
+          "file": "v02-workbench.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "app cancellation after actual Worker dispatch terminates the task and prevents cancelled geometry or revision publication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 27191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-26T09:43:59.057Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "cancelled-real-worker-no-publication.png",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\screenshots\\v02-e2e\\workbench-results\\v02-workbench-app-cancella-51ab8-try-or-revision-publication\\attachments\\cancelled-real-worker-no-publication-png-1ab951bd925c212ed1443080dd6fbd032f9d09f6.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4740c99332e5462df50-9918c0f4bbcff3b1aa89",
+          "file": "v02-workbench.spec.ts",
+          "line": 92,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-26T09:42:58.218Z",
+    "duration": 88334.25200000001,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
