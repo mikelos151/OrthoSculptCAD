@@ -1,0 +1,215 @@
+{
+  "passed": true,
+  "spec": {
+    "passed": true,
+    "security_concerns": [],
+    "logic_errors": [],
+    "suggestions": [
+      "Nieblokujące: przenieść do stałej regresji sprawdzone tutaj off-plane mutanty dla chartów XZ i YZ oraz testy exact signed-permutation/rational-similarity całego złożonego dowodu."
+    ],
+    "summary": "Niezależny read-only spec/math/interop review M0c2: brak blokerów. Forward affine hull, autentykacja 21 skalarów przed geometrią, kolejność błędów, immutable snapshoty i jeden caller ctx są zgodne z planem. Referencja odzyskuje wagi przez pierwszy podpisany minor XY/XZ/YZ, sprawdza trzecią oś i exact zgodność zadeklarowanych wag, a niezmieniony publiczny verifier M0c1 wywołuje raz na pełnej projekcji; oba budżety zachowują UNKNOWN. PASS dotyczy wyłącznie supplied-single-triangle containment i złożonej aproksymacji, nie source identity, seams, regularity, simplicity, cut/shell ani produktu. Nie zmieniono repo; wszystkie własne pliki wyłącznie we wskazanym scratch. Pełnej suity, przeglądarki ani benchmarków nie uruchamiano.",
+    "actual_tests": {
+      "focused_typescript": {
+        "passed": 19,
+        "failed": 0,
+        "pending": 0,
+        "exit_code": 0
+      },
+      "new_python_and_real_interop": {
+        "passed": 39,
+        "failed": 0,
+        "exit_code": 0
+      },
+      "fresh_untouched_ts_producer_new_cli": {
+        "exit_code": 0,
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27,
+        "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+        "byte_identical_to_repo_fixture": true
+      },
+      "independent_cross_dot_inverse": {
+        "root_controls_equal_declared": 24,
+        "world_points_in_simplex": 135,
+        "exact_bernstein_sample_identities": 27
+      },
+      "metamorphic_transformed_bundles_not_producer_exports": {
+        "passed_bundles": 18
+      },
+      "canonical_weight_mutants": {
+        "old_approximation_pass_new_cli_exit1_FAIL": 6
+      },
+      "offplane_unused_axis_mutants_XY_XZ_YZ": {
+        "old_approximation_pass_new_cli_exit1_FAIL": 3
+      },
+      "separate_inverse_and_old_budget_refusals": {
+        "new_cli_exit2_UNKNOWN_no_PASS": 2
+      },
+      "shared_schema": {
+        "identical_to_frozen_plan": true,
+        "validates_real_export": true
+      },
+      "security_primitive_scan_matches": [],
+      "reviewed_source_and_fixture_hashes_unchanged_after_execution": true
+    },
+    "evidence_paths": {
+      "directory": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-face-cubic-spec-review/",
+      "focused_commands_logs_hashes": "focused-report.json",
+      "typescript_machine_results": "typescript-results.json",
+      "python_verbose_results": "python.stderr.log",
+      "fresh_real_export": "untouched-real-ts.json",
+      "independent_checks_and_mutant_cli_results": "independent-witness-results.json",
+      "reproduction_scripts": [
+        "run_focused.py",
+        "independent_witness.py"
+      ],
+      "final_count_and_hash_check": "final-verification.json"
+    }
+  },
+  "quality": {
+    "passed": true,
+    "security_concerns": [],
+    "logic_errors": [],
+    "suggestions": [],
+    "summary": "No blocking quality/security/resource defect found within the exact supplied-triangle M0c2 boundary.",
+    "evidence": {
+      "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-quality-review",
+      "focused_typescript": "focused-typescript.json",
+      "focused_python": "focused-python.json",
+      "commands": "commands.json",
+      "input_hashes": "input-hashes.json",
+      "canonical_mutations": "canonical-mutation-results.json",
+      "fresh_real_ts": "fresh-real-ts.json",
+      "node_adversarial": {
+        "randomMappedCases": 128,
+        "realConstantProofs": 32,
+        "scalarAssertions": 21,
+        "shapeAssertions": 21,
+        "getterHits": 0,
+        "customPrototypesAccepted": true
+      },
+      "random_fraction_oracle_cases": 128,
+      "random_real_constant_cli": {
+        "passed": true,
+        "cases": 32,
+        "leaves": 32,
+        "samples": 64
+      },
+      "metamorphic_composed_bundles": 12,
+      "canonical_rejected_scalar_mutations": 33,
+      "malformed_cli_cases": 6,
+      "reference_budget_cli_unknowns": 2,
+      "aggregate_20000_admitted_20001_rejected_before_rat": true,
+      "unchanged_input_files": 11,
+      "fresh_export_equals_repo_fixture": true
+    },
+    "limitations": [
+      "Focused/bounded audit only; parent owns full-suite/typecheck/browser acceptance.",
+      "Algorithmic limits do not promise process RSS/wall time, and JS Proxy traps are outside the ordinary-container no-getter guarantee.",
+      "Containment is only relative to one supplied triangle; no source provenance, full surface, cut/shell, or clinical certification."
+    ]
+  },
+  "files": [
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/verdict.json",
+      "sha256": "b125674fddc0a4e8f22a3a56f133fc2b9c6cefcd16c5f28d07955df1135a9a33",
+      "bytes": 2754
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/focused-report.json",
+      "sha256": "efa4bb722d598fbc24b80edec86534fae95e8f6b780eb00620300fc771f5ac57",
+      "bytes": 8959
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/typescript-results.json",
+      "sha256": "fb7f15a91e88ae67027b06e2f6fb284b1d9cd727f51c2f25c709b2d7f26b0653",
+      "bytes": 4982
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/python.stderr.log",
+      "sha256": "14ebb58f6d31fd1f6f72407c6766a42fca480e072b334780e59a442af1720fcc",
+      "bytes": 6426
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/untouched-real-ts.json",
+      "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+      "bytes": 63817
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/independent-witness-results.json",
+      "sha256": "a6451af3285ef519a01b982fe6b1f146fcfb8016df4409331021c85a50495e10",
+      "bytes": 10779
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/run_focused.py",
+      "sha256": "402504b60c4495db4183836afefd13d1a1949025c08bf5e72147fac5bb934c59",
+      "bytes": 2445
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/independent_witness.py",
+      "sha256": "a722a2dd96da7b32b45c7070cd83bf26a96cb34e2c8fbbeaa53fe844ee2d51d5",
+      "bytes": 7729
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/spec/final-verification.json",
+      "sha256": "b1c629aa36addd5c8d6ff41cf448614d7a16844c35975cfc7059cb3031a4369f",
+      "bytes": 590
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/quality/verdict.json",
+      "sha256": "014fc73afe919f20eb7d63bf57a71cf5d1bc5a456ceaee7b3813ae250b234350",
+      "bytes": 1716
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/quality/commands.json",
+      "sha256": "2ef035b48faf00af8b601e0ad9c905a21ca0dcb64d69a52052818df69ac0c1f5",
+      "bytes": 14235
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/quality/audit.py",
+      "sha256": "bc1dc36076c083e3058651c2879f5925c7e1031a8f7fad194981ff59d5924ec3",
+      "bytes": 10843
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/quality/adversarial-node.mjs",
+      "sha256": "5cae5831df11aa4394f605aee673ae37e9fd5710ba93318186bdb21fe865d591",
+      "bytes": 3232
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/quality/fresh-real-ts.json",
+      "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+      "bytes": 63817
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/quality/random-constant-proofs.json",
+      "sha256": "075ca206326d0a609bf309889633bd472bdaf131ca3a036e4a3ae41231154144",
+      "bytes": 48125
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/quality/canonical-mutation-results.json",
+      "sha256": "84baf5dc15052226f489454c603b1e8be3ddbcc91d1c427afb60b9016b916c30",
+      "bytes": 3600
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-independent-evidence/quality/input-hashes.json",
+      "sha256": "9819360dd2646abcb5767bc6c46ad7294b562d6e3bb718e0bc16346495403d7d",
+      "bytes": 1229
+    }
+  ],
+  "reviewedInputHashes": {
+    "src/trimline/face-cubic.ts": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1",
+    "src/trimline/numerics.ts": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25",
+    "src/trimline/bezier.ts": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e",
+    "tests/v03-face-cubic.test.ts": "b03a33a71ee480a838b125f93e8ef810f1335966e2067957ed0a2895dbfbb5ae",
+    "tests/reference/v03_face_cubic_verify.py": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df",
+    "tests/reference/test_v03_face_cubic_verify.py": "2133e64e575a1a425402e51c0b7e7679819bdb3a35ea109b76a50c5adc27d111",
+    "tests/reference/test_v03_face_cubic_interop.py": "b858f6ec6897af72559df648a62533416f50b2504dde68463ce38470d1a0a9f2",
+    "tests/reference/v03_bezier_verify.py": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c",
+    "tests/fixtures/v03-face-cubic-proof-actual.json": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+    "tests/fixtures/v03-face-cubic-proof.schema.json": "65bb939886c79cfb6292ceeabc2c895f1f4f3c3cb8522a97497ec84490328bdb",
+    "docs/plans/v03-face-cubic-containment.md": "692ebe317eec27178ab6334ed479f0dacf90746b3d57d5dc0423cad3597aaa5e"
+  },
+  "archivedFiles": 17,
+  "optionalRegressionSuggestion": "Non-blocking extra-chart off-plane and exact similarity checks preserved in runnable independent harness; not promoted to the default unit suite in this slice."
+}

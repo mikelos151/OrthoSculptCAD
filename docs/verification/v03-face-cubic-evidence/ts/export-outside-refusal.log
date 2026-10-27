@@ -1,0 +1,38 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1 -t "exports untouched real face cubic proofs"
+ORTHO_FACE_CUBIC_EVIDENCE_OUT='C:\\Users\\sandr\\OrthoSculptCAD\\v03-face-cubic-must-not-write.json'
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (19 tests | 1 failed | 18 skipped) 19ms
+   × exports untouched real face cubic proofs 18ms
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 18 skipped (19)
+   Start at  16:08:48
+   Duration  248ms (transform 59ms, setup 0ms, import 74ms, tests 19ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > exports untouched real face cubic proofs
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ writeProofEvidence tests/v03-face-cubic.test.ts:392:82
+    390|   const targetParent = realpathSync(dirname(output));
+    391|   const inside = relative(scratch, targetParent);
+    392|   expect(isAbsolute(inside) || inside === '..' || inside.startsWith(`.…
+       |                                                                                  ^
+    393|   // Use the resolved parent for creation too; wx refuses existing fil…
+    394|   const target = join(targetParent, basename(output));
+ ❯ tests/v03-face-cubic.test.ts:413:3
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT: 1

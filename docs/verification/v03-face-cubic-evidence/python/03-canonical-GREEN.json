@@ -1,0 +1,23 @@
+{
+  "label": "03-canonical-GREEN",
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_face_cubic_verify.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_inverse_integer_canonicality (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_integer_canonicality) ... ok\ntest_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition) ... ok\ntest_rejects_nonliteral_schema (test_v03_face_cubic_verify.FaceCubicTests.test_rejects_nonliteral_schema) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.003s\n\nOK\n",
+  "files": {
+    "v03_face_cubic_verify.py": "393d12548ed49bd114ab52615b2155367e1d0ae9fa1008471b5fa268e089a03c",
+    "test_v03_face_cubic_verify.py": "ed73ab86341472f957c271f878390aad7e21b6d1f6917f98b9b9eee011a70587"
+  }
+}

@@ -1,0 +1,42 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (12 tests | 1 failed) 27ms
+   × preserves phase error ownership 5ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > preserves phase error ownership
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "INVALID_INPUT",
+-   "name": "NumericsError",
++ FaceCubicError {
++   "message": "DEGENERATE_TRIANGLE",
++   "code": "DEGENERATE_TRIANGLE",
++   "name": "FaceCubicError",
+  }
+
+ ❯ tests/v03-face-cubic.test.ts:192:121
+    190|   for (let i = 0; i < 4; i++) for (let axis = 0; axis < 3; axis++) {
+    191|     const w = weights.map(p => [...p]); w[i][axis] = { n: 0n, d: 1n };
+    192|     expect(() => faceCubic.certifyFaceCubic(degenerate, w as unknown a…
+       |                                                                                                                         ^
+    193|   }
+    194|   const invalidW: faceCubic.CubicBarycentricControls = [[q(-1n), q(2n)…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 passed (12)
+   Start at  16:02:02
+   Duration  258ms (transform 37ms, setup 0ms, import 50ms, tests 27ms, environment 0ms)
+
+
+EXIT: 1

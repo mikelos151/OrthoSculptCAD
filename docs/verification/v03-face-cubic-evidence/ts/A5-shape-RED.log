@@ -1,0 +1,41 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (10 tests | 1 failed) 14ms
+   × snapshots owned dense tuples without getters 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > snapshots owned dense tuples without getters
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "INVALID_INPUT",
+-   "message": "INVALID_INPUT",
+-   "name": "FaceCubicError",
++ TypeError {
++   "message": "Cannot read properties of null (reading '1')",
+  }
+
+ ❯ tests/v03-face-cubic.test.ts:121:101
+    119|       (which === 'weights' ? input : weights) as faceCubic.CubicBaryce…
+    120|     for (const input of [null, undefined, {}, { length: source.length …
+    121|       [...source, source[0]], source.slice(1), new Array(source.length…
+       |                                                                                                     ^
+    122|     for (let row = 0; row < source.length; row++) {
+    123|       for (const bad of [null, {}, [], new Array(3), [source[0][0]], […
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 passed (10)
+   Start at  16:00:32
+   Duration  172ms (transform 30ms, setup 0ms, import 40ms, tests 14ms, environment 0ms)
+
+
+EXIT: 1

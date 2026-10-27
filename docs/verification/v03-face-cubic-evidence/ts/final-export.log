@@ -1,0 +1,13 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1 -t "exports untouched real face cubic proofs"
+ORTHO_FACE_CUBIC_EVIDENCE_OUT='C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-ts-agent\\finalproof-delivery.json'
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 18 skipped (19)
+   Start at  16:08:46
+   Duration  202ms (transform 44ms, setup 0ms, import 60ms, tests 26ms, environment 0ms)
+
+
+EXIT: 0

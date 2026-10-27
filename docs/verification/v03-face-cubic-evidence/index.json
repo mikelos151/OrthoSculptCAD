@@ -1,0 +1,569 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A1-GREEN.log",
+      "sha256": "c8c0820eacb82940020219e5166b43905c6c7870cec5deb6199bef23e4c2a3ba",
+      "bytes": 324
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A1-RED.log",
+      "sha256": "9dbc175755b7254b3035c84ecb7c39936ab043101919a0bc2a65605e1328d1e6",
+      "bytes": 1233
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A3-degenerate-GREEN.log",
+      "sha256": "1f752743e4169eee275725e77f0eb57c94dcee280ebd8488f2a0a64f0ee479ed",
+      "bytes": 324
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A3-degenerate-RED.log",
+      "sha256": "62016c8995463643897310ed7679ed4d5fb7ada8fade30b0764e57943bcc84d6",
+      "bytes": 1206
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A4-forgery-COVERAGE.log",
+      "sha256": "0015a8050358e95674354d9d410d2c704f2297481a204309dbfb4897ae271c23",
+      "bytes": 325
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A4-negative-GREEN.log",
+      "sha256": "82ef6f1f403a01022fea81b140e67657ee8a60db12f42468f148f62de4c581cc",
+      "bytes": 324
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A4-negative-RED.log",
+      "sha256": "d0fc16ce3d98c7c35097c95f4d216e39de2fb8989e494b7bf5d3185486a74378",
+      "bytes": 1210
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A4-sum-GREEN.log",
+      "sha256": "5a8806bed62d0ad67c6460b3f1f44b20fbc503adb542f513bd63392015a5971e",
+      "bytes": 325
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A4-sum-RED.log",
+      "sha256": "3f7b690676d93fc22e9959aa122acea3d7ebfc9e6c15bdaa3f188d207a6d614e",
+      "bytes": 1157
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A5-budget-COVERAGE.log",
+      "sha256": "5f144ee790b59450726c7e4ea46cc5fbd4814601de4f2d7e790ec1533a55dd43",
+      "bytes": 327
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A5-immutable-GREEN.log",
+      "sha256": "3a1d72f90bb75a22b778c3749b7bedb2a1de8bcc9aa737b135c166f00f7f94b7",
+      "bytes": 327
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A5-immutable-RED.log",
+      "sha256": "9dc7a3447ff0fd1628921bc1936c3337a62dc0a9f4a70c0d6f6dbc19cd2dff15",
+      "bytes": 1253
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A5-phase-GREEN.log",
+      "sha256": "f545e862b0ad27fa5ad8078355ba10110292536156fcbceb1e80f689c1475180",
+      "bytes": 327
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A5-phase-RED.log",
+      "sha256": "0ab51fab764d5f55d39b2f35b753ce2c82c803db8e5a3f3b0e5e26317b95ae59",
+      "bytes": 1484
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A5-shape-GREEN.log",
+      "sha256": "0b2148ac238dc4dfac0910df158872147d9376ca58e0c3f338d78dd2b3cf3f5c",
+      "bytes": 327
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A5-shape-RED.log",
+      "sha256": "167326a29bf966040f4847a2070ad372ef0038eed75d2d24d76a428e00690af7",
+      "bytes": 1532
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A6-compose-COVERAGE.log",
+      "sha256": "a25aba462a4f55092a6a2998417f1cb015ec90256a3e447cf648dd9ac58e7fea",
+      "bytes": 327
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A6-cumulative-COVERAGE.log",
+      "sha256": "bee313647100bf4575e23a17802f2e4b2164cbd4d6f2d2c48ae3e6dce187674f",
+      "bytes": 327
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A6-refusal-COVERAGE.log",
+      "sha256": "f81ba3295477a868da558ca506bd38db02f917b97a3ea1af94c9784ad53b471c",
+      "bytes": 327
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A6-worldmetric-COVERAGE.log",
+      "sha256": "afb2059003e83e1bf39cc5026121c7c8914cf1e083d4a1e691f606e2c3e90089",
+      "bytes": 327
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A7-export-GREEN.log",
+      "sha256": "8c5fa6e2bb54eaf36d1387b8a66ef36add302c498e8d68fffbebf0cff8608d0e",
+      "bytes": 385
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A7-export-RED.log",
+      "sha256": "d24ad64bec9836a506c028ac8217652d35bbc0c7c8eb5a650942e8921b7ad17e",
+      "bytes": 1278
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A7-producer-assertion-RED.log",
+      "sha256": "241c3c0f39ca76dc529db43bcf9257d8144139accbab2211d1765e3d63979fc2",
+      "bytes": 1288
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A7-producer-GREEN.log",
+      "sha256": "d40867023aa292ee8c5529d8a953f96b23193bb9d111f5c8c5454669546d3e96",
+      "bytes": 328
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/A7-producer-RED.log",
+      "sha256": "1ed2192fa5b054b2ad78f608de5aa101eed13f69cc28ad4d4532cddd26ab0735",
+      "bytes": 1066
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/delivery-summary.json",
+      "sha256": "6d6f73541a4aec2ecd3c5ef66de01a3ba2bf57a53c230f7eb2d5b5919de1ae69",
+      "bytes": 906
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/export-cycle.json",
+      "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+      "bytes": 63817
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/export-exclusive-refusal.log",
+      "sha256": "fee7f3004d47af4712476ddf3fd274f999e5fdc8341bce247db7e63139691735",
+      "bytes": 1444
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/export-outside-refusal.log",
+      "sha256": "b5c761f8b21c2e6759cfae61bc77399dc260bf2f86183aedc41bb49f0b45b80e",
+      "bytes": 1509
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/export-relative-refusal.log",
+      "sha256": "dfe351f033c1d420f23ae16a20934ce1484a0865bad386c64b70d73271321fc0",
+      "bytes": 1359
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/final-default-focused.log",
+      "sha256": "8cbca715727efc6174c2ca4f905d8b76cca49edb159cebd4a580bbb2548e1f12",
+      "bytes": 363
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/final-export.log",
+      "sha256": "5ffb9236d35456673b861ff2ffad1a9fd9b1bb204894ad0a5df5229aa195a89b",
+      "bytes": 526
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/finalproof-delivery.json",
+      "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+      "bytes": 63817
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/frozen-module-diff.log",
+      "sha256": "298efae0b98a561fd92c2fe3c10dd347640d4f873259c480efbc9d888408dd9a",
+      "bytes": 9
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/HANDOFF.md",
+      "sha256": "0b1b998173a1d6ac3edcffbd8688659f77b9321dba3b4f01e7bf20d5af860cd8",
+      "bytes": 7929
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/run.py",
+      "sha256": "d545f3040215508f38759593e041bc1b77fdcac09809955e42ffa0766398b95e",
+      "bytes": 692
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/scope-final.log",
+      "sha256": "867f0533f0611ef219521aa1768a9a543d7a4b7beea90e6f6637bab0407241cd",
+      "bytes": 164
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/tsc-01.log",
+      "sha256": "f7762d9f5dfd9b0765ff51b8a66435f1527f7f0001c98cd8711844bbc373fa60",
+      "bytes": 65
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/tsc-final.log",
+      "sha256": "f7762d9f5dfd9b0765ff51b8a66435f1527f7f0001c98cd8711844bbc373fa60",
+      "bytes": 65
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/ts/verify_delivery.py",
+      "sha256": "6b1e3ae65f1dafc4ad865184512674c1050e711095fb9f34b3d93fea73046156",
+      "bytes": 3845
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/01-public-GREEN.json",
+      "sha256": "a1225255f7f84156c8914653f6c46ad6f917177275bed12b15a4f7625c2115b7",
+      "bytes": 895
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/01-public-RED.json",
+      "sha256": "eb9d128ba7f8d4887530a87d2fe591634cea39e3a907246fd8cab8397e05729d",
+      "bytes": 1727
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/02-schema-GREEN.json",
+      "sha256": "d70949d9099f896df04710178674152c1d356dadedfbf512a1412714a05615b0",
+      "bytes": 1010
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/02-schema-RED.json",
+      "sha256": "2f0848b880f1eb02069e40b19a742e363e88fc153f0ba15bd837e49ed968c530",
+      "bytes": 9478
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/03-canonical-GREEN.json",
+      "sha256": "7ef65ad786ebbd27d1c46c6a89cc3397d1c5bbcb9598f376ce48d066ee602398",
+      "bytes": 1133
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/03-canonical-RED.json",
+      "sha256": "48e1660232652022b806e054e6f03f4f72f05fdc3764d0c0291e4bc34f332968",
+      "bytes": 15570
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/04-inverse-budget-GREEN.json",
+      "sha256": "cca132be6913e5e30af84a23d3e0446e8652adedad3ccbd9af9369e0b03e0b34",
+      "bytes": 1314
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/04-inverse-budget-RED.json",
+      "sha256": "daf0caff562e605d8e8d974de1f3c24882356427d6db063efd7e7443f6e76852",
+      "bytes": 1997
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/05-intermediate-GREEN.json",
+      "sha256": "b5aaf7bcfba3efc1acde0ea14617fd7b0ff9f95461af3ee1efdb7d966249afa6",
+      "bytes": 1478
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/05-intermediate-RED.json",
+      "sha256": "3709e66221e74a7549dda63d401fa11fc469646f8ff8ffec65adc482b6d31cd0",
+      "bytes": 2980
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/06-numeric-chars-GREEN.json",
+      "sha256": "cb6d8ce83592b33bff0ddb2fdb554474c2b6d11b823040c171365ea83bb762dd",
+      "bytes": 1625
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/06-numeric-chars-RED.json",
+      "sha256": "6bf1a06594c176e5ca15c190c0fe3b28cd639853a60b46a1f6655f7430a355f2",
+      "bytes": 3104
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/07-limb-work-GREEN.json",
+      "sha256": "b0549f3a245972b65d8bc9762c24f4548faf882b2dad8f3be08e28a086869bc0",
+      "bytes": 1793
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/07-limb-work-RED.json",
+      "sha256": "abb2531391668e472eb201942f25fb8b7fee9e315de57ac312ed0518526a2b5e",
+      "bytes": 3324
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/08-cli-GREEN.json",
+      "sha256": "925ec9ae02dfe8e9cf6828d6992fdd1f64ec79353c1560f0bd6bbe4ee8bdc18b",
+      "bytes": 1917
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/08-cli-RED.json",
+      "sha256": "4f76685409dd61ebbb691c92539e6bc1e84634b6c24bbebf0e86323c0025320e",
+      "bytes": 2629
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/09-json-GREEN.json",
+      "sha256": "c3d6b2cf6564fd3e28f815ab8006781df56f9c458fad5c5011d6dc49e34d10a1",
+      "bytes": 2018
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/09-json-RED.json",
+      "sha256": "cc861a199871fabd3dce08c4ed371625eef9b75039a709da74daf01c79a501cd",
+      "bytes": 6645
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/10-file-size-GREEN.json",
+      "sha256": "3b5a74ef20aa405e5eece10542a7239354ffeff181c2b37616fd0f1bf6bfbcb2",
+      "bytes": 2156
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/10-file-size-RED.json",
+      "sha256": "9b37db9369758e4957145ef8d803fbfe2b77d1fff5eadb0e00554d27835edc9c",
+      "bytes": 2753
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/11-degenerate-COVERAGE.json",
+      "sha256": "18fa994b9018337ce2516dad4ad4c3d85d40d48351fe4d3a379090372f7d94da",
+      "bytes": 2296
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/12-thin-COVERAGE.json",
+      "sha256": "3bc63e583c3be3fe61cb8c37738ded5e70f7b6d4b0f2d35769fabb38b3de9289",
+      "bytes": 2440
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/13-chart-selection-COVERAGE.json",
+      "sha256": "2b3b07360b104ef4320ac87bcc1cab1c1113bc7996ed99eeaf414c1db442c42a",
+      "bytes": 2571
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/14-signed-D-COVERAGE.json",
+      "sha256": "68d9990a14edf937b8d9bfb5690ab3ea9407fae5c8775c31842139b28eac9cbf",
+      "bytes": 2736
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/15-offplane-COVERAGE.json",
+      "sha256": "60caee5800b2901914f5ddb0b0e363e274225b1f13affec865b43226a7d40213",
+      "bytes": 2916
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/16-weight-mutant-COVERAGE.json",
+      "sha256": "d329e92af1c8b73c5eeba60c18a4e9fb540418406ef4371c66e224bf8142d23a",
+      "bytes": 3113
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/17-simplex-COVERAGE.json",
+      "sha256": "799eb06c0e7c24ecdc74993194a9e04f15c5e397b0fd5e9c465280cd819f5faa",
+      "bytes": 3273
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/18-old-real-corruptions-COVERAGE.json",
+      "sha256": "2834d3e414d0c731c670d3d24432d8fec570fa5aaf49ed092e6c50ca80a80865",
+      "bytes": 3448
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/19-single-old-call-COVERAGE.json",
+      "sha256": "6099a7842985bf743b731778ff07b3ae1d1eb754a44d7ba1c064ec4c067b608e",
+      "bytes": 3611
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/20-case-count-COVERAGE.json",
+      "sha256": "4d0bd9032ea64afeb2cb0588d9b9fdd73a73a63a6ca513c6b55f83bce89022be",
+      "bytes": 3744
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/21-aggregate-count-COVERAGE.json",
+      "sha256": "65768978872107478ef3f76cbb119e3dd77b03aa3688153afb36730cebd29bef",
+      "bytes": 3925
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/22-sample-count-COVERAGE.json",
+      "sha256": "7c000b332552761b4438c1091bf0018ac347211b3c5c8891da1c674be25ae732",
+      "bytes": 4088
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/23-integer-boundaries-COVERAGE.json",
+      "sha256": "0cfef3e2da9ea8e05722c45758076385b0f77d7171fd42032b957d48cd4b040d",
+      "bytes": 4256
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/24-cumulative-inverse-COVERAGE.json",
+      "sha256": "3427acef829464955390803061826b232c076cfbbf7d225390e88ccb2311e0a2",
+      "bytes": 4440
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/25-cli-inverse-UNKNOWN-COVERAGE.json",
+      "sha256": "70a09112f893c190abd94165a0d4e085fff7f2ca7fb055e51e5c9d52a6b2eaf7",
+      "bytes": 4605
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/26-cli-old-UNKNOWN-COVERAGE.json",
+      "sha256": "c297eef98b353224ade4c1313c8627f488e436eaa253c32ee4a0346a7e08f17d",
+      "bytes": 4757
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/27-loader-growth-COVERAGE.json",
+      "sha256": "78e942bafbbca1d19b25276f323d23101a0630dc8d794202d02eb6049c9826ff",
+      "bytes": 4947
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/28-structural-budget-GREEN-attempt1.json",
+      "sha256": "f2c66773fb977b42596dae25dfd81812f089ef77eb0c1f4a7936543272344eaa",
+      "bytes": 6939
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/28-structural-budget-GREEN-attempt2.json",
+      "sha256": "fdf9248d475812e2eb68d5ff52f6246b6e1440d1da3bdbbacba89d8174b453fe",
+      "bytes": 5133
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/28-structural-budget-RED.json",
+      "sha256": "59e71e8026a2a9898b10dc448741046aa431a7a5c59dd9d944cd4c33def752de",
+      "bytes": 5808
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/28-structural-budget-REFACTOR.json",
+      "sha256": "09fbea37cd2ee7a6c7fd6e2ecba0201a4151e7f1c1d9727db8ec790982026eda",
+      "bytes": 5127
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/29-approximation-root-COVERAGE.json",
+      "sha256": "362417cac19896c72c70bef6208d44a95c4a242758878062aba5ac84dcef2efe",
+      "bytes": 5308
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/30-continuous-bound-COVERAGE.json",
+      "sha256": "624dfdc2ee4fc82dd8b3284c5201a54d7e5620f8e4ad55676c1a4fb5d0be5323",
+      "bytes": 5466
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/31-schema-shapes-COVERAGE.json",
+      "sha256": "309b0889c43c1806fc974b9e6e171cb0f00b888d3b0abb134c50c5f7e9c22b2b",
+      "bytes": 5627
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/32-finite-budget-boundaries-COVERAGE.json",
+      "sha256": "fc5b752236d36d9558604e5f9c754aa8cea7f285fbc7df7edce5a26431a1467c",
+      "bytes": 5816
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/33-cli-rejection-COVERAGE.json",
+      "sha256": "f3651f32aaf18c6e23f42a4515c91a4ae5820294e9c1a237d2dc727a0fccb0a3",
+      "bytes": 5969
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/34-format-reciprocity-COVERAGE.json",
+      "sha256": "99de4e1aa53f136abb629d6bd77cc5e835b440da33dd256d253688eb28b435cb",
+      "bytes": 6124
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/35-empty-counts-and-tolerance-COVERAGE.json",
+      "sha256": "328984933313ab4bafc6c4886a32168105e72cea6847954dd1325ff1820b94d4",
+      "bytes": 6276
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/36-gcd-preflight-COVERAGE.json",
+      "sha256": "183937f563ca1834eb92632a9b06c799ca74d447c9939461c5f7f6712653f5c4",
+      "bytes": 6453
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/collect_evidence.py",
+      "sha256": "ec4ef1382ec5d5ee3903b62abce0055183942f3db0cf4bc8897e555082f17169",
+      "bytes": 10690
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/collector-attempt1-error.json",
+      "sha256": "5401b1bada19fdfdd49cbd22e2a26ce805e6650680d7547062f4db7038b3b61e",
+      "bytes": 757
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/FINAL-focused-run.json",
+      "sha256": "2c074ef326eb3a8110b418e84561c2d35baac8f0b421d14f404bbb5fa824e7d1",
+      "bytes": 6170
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/finish_handoff.py",
+      "sha256": "2f44eefca07dab5f0024b2c19306661f81d306bc67c48b301e9f95cb69569af5",
+      "bytes": 8777
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/git-observations.json",
+      "sha256": "dcbb7fd03d5f0d73ca5639d61019cb22890a24aa02ada8c20629ce640c5fac0a",
+      "bytes": 802
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/handoff.json",
+      "sha256": "138af9883b108e7765322a0bb929cf0809a898686d6f6fed8a9661e332bb9e44",
+      "bytes": 26776
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/HANDOFF.md",
+      "sha256": "61fa5cb09e47e3e9d8c3af4c20f6848d307b73f2ca852bedd34e6ec57ada13b8",
+      "bytes": 2105
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/REAL-synthetic-cli-runs.json",
+      "sha256": "723e89a44d7a13561a269c72211a532b5701c2acbad0c35849fbc713df2ba35b",
+      "bytes": 3909
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/run_cycle.py",
+      "sha256": "c8119405bd7edf465f1d5c977c778ba60efa3979c1c8a7ee20219c2640801c22",
+      "bytes": 1167
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/synthetic-canonical-offplane-mutant-NOT-TS.json",
+      "sha256": "db1be1837d1b157c3686dddef95ff50078382087659e55851601e8e0fc623840",
+      "bytes": 5778
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/synthetic-canonical-weight-mutant-NOT-TS.json",
+      "sha256": "831332403986560d85b3a91ed49a99e6312cff88575ced059a7495dd29a2ff28",
+      "bytes": 5726
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/synthetic-math-edge-linear-NOT-TS.json",
+      "sha256": "b18e0bec5ae2e68281dd83f9ba2d4eda93557428f10c1c9ca53dab459554f858",
+      "bytes": 5726
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/python/synthetic-two-cases-NOT-TS.json",
+      "sha256": "be1a419a4ec8d20e0439812e63226087440a3aea7eb31a678f2dacb147d59a46",
+      "bytes": 11365
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/parent-cli/offplane-canonical-mutant.json",
+      "sha256": "89a1ad171e3293d9d99e7f6358b1ba9b732c76d89fd4026bb93fcb5c967f536c",
+      "bytes": 18507
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/parent-cli/results.json",
+      "sha256": "4c4e5d8dea7a63940cdde47c42b9f30de713d88333ab58d08fca634e4ad8b7e7",
+      "bytes": 1397
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/parent-cli/weight-canonical-mutant.json",
+      "sha256": "017a415ed5e2be2e66cceed0f6be40fc0fa3681b36e9a56b523f6f77f45529f8",
+      "bytes": 18007
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/parent/v03-face-cubic-parent-cli-probe.py",
+      "sha256": "d176f8750f4f661b989d859872a7a134d2762755a3c79d682908e2f73232d323",
+      "bytes": 3683
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-evidence/parent/v03-face-cubic-parent-real.json",
+      "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+      "bytes": 63817
+    }
+  ],
+  "excluded": [],
+  "manifest": [
+    {
+      "path": "src/trimline/face-cubic.ts",
+      "sha256": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1"
+    },
+    {
+      "path": "tests/v03-face-cubic.test.ts",
+      "sha256": "b03a33a71ee480a838b125f93e8ef810f1335966e2067957ed0a2895dbfbb5ae"
+    },
+    {
+      "path": "tests/reference/v03_face_cubic_verify.py",
+      "sha256": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df"
+    },
+    {
+      "path": "tests/reference/test_v03_face_cubic_verify.py",
+      "sha256": "2133e64e575a1a425402e51c0b7e7679819bdb3a35ea109b76a50c5adc27d111"
+    },
+    {
+      "path": "tests/reference/test_v03_face_cubic_interop.py",
+      "sha256": "b858f6ec6897af72559df648a62533416f50b2504dde68463ce38470d1a0a9f2"
+    },
+    {
+      "path": "tests/fixtures/v03-face-cubic-proof-actual.json",
+      "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393"
+    }
+  ],
+  "tddPythonLogsPreserved": 49,
+  "evidenceCount": 107,
+  "evidenceBytes": 556085
+}

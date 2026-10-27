@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    "Nieblokujące: przenieść do stałej regresji sprawdzone tutaj off-plane mutanty dla chartów XZ i YZ oraz testy exact signed-permutation/rational-similarity całego złożonego dowodu."
+  ],
+  "summary": "Niezależny read-only spec/math/interop review M0c2: brak blokerów. Forward affine hull, autentykacja 21 skalarów przed geometrią, kolejność błędów, immutable snapshoty i jeden caller ctx są zgodne z planem. Referencja odzyskuje wagi przez pierwszy podpisany minor XY/XZ/YZ, sprawdza trzecią oś i exact zgodność zadeklarowanych wag, a niezmieniony publiczny verifier M0c1 wywołuje raz na pełnej projekcji; oba budżety zachowują UNKNOWN. PASS dotyczy wyłącznie supplied-single-triangle containment i złożonej aproksymacji, nie source identity, seams, regularity, simplicity, cut/shell ani produktu. Nie zmieniono repo; wszystkie własne pliki wyłącznie we wskazanym scratch. Pełnej suity, przeglądarki ani benchmarków nie uruchamiano.",
+  "actual_tests": {
+    "focused_typescript": {"passed": 19, "failed": 0, "pending": 0, "exit_code": 0},
+    "new_python_and_real_interop": {"passed": 39, "failed": 0, "exit_code": 0},
+    "fresh_untouched_ts_producer_new_cli": {"exit_code": 0, "passed": true, "cases": 6, "leaves": 21, "samples": 27, "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393", "byte_identical_to_repo_fixture": true},
+    "independent_cross_dot_inverse": {"root_controls_equal_declared": 24, "world_points_in_simplex": 135, "exact_bernstein_sample_identities": 27},
+    "metamorphic_transformed_bundles_not_producer_exports": {"passed_bundles": 18},
+    "canonical_weight_mutants": {"old_approximation_pass_new_cli_exit1_FAIL": 6},
+    "offplane_unused_axis_mutants_XY_XZ_YZ": {"old_approximation_pass_new_cli_exit1_FAIL": 3},
+    "separate_inverse_and_old_budget_refusals": {"new_cli_exit2_UNKNOWN_no_PASS": 2},
+    "shared_schema": {"identical_to_frozen_plan": true, "validates_real_export": true},
+    "security_primitive_scan_matches": [],
+    "reviewed_source_and_fixture_hashes_unchanged_after_execution": true
+  },
+  "evidence_paths": {
+    "directory": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-face-cubic-spec-review/",
+    "focused_commands_logs_hashes": "focused-report.json",
+    "typescript_machine_results": "typescript-results.json",
+    "python_verbose_results": "python.stderr.log",
+    "fresh_real_export": "untouched-real-ts.json",
+    "independent_checks_and_mutant_cli_results": "independent-witness-results.json",
+    "reproduction_scripts": ["run_focused.py", "independent_witness.py"],
+    "final_count_and_hash_check": "final-verification.json"
+  }
+}

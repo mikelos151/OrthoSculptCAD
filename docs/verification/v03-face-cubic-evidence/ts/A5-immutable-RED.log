@@ -1,0 +1,38 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (11 tests | 1 failed) 23ms
+   × returns a deeply immutable owned certificate 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > returns a deeply immutable owned certificate
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ visit tests/v03-face-cubic.test.ts:155:36
+    153|   const visit = (value: unknown): void => {
+    154|     if (typeof value !== 'object' || value === null) return;
+    155|     expect(Object.isFrozen(value)).toBe(true);
+       |                                    ^
+    156|     for (const child of Object.values(value)) visit(child);
+    157|   };
+ ❯ visit tests/v03-face-cubic.test.ts:156:47
+ ❯ tests/v03-face-cubic.test.ts:158:3
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 passed (11)
+   Start at  16:01:13
+   Duration  203ms (transform 41ms, setup 0ms, import 52ms, tests 23ms, environment 0ms)
+
+
+EXIT: 1

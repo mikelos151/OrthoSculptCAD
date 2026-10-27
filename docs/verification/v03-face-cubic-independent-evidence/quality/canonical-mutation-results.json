@@ -1,0 +1,200 @@
+[
+  {
+    "field": "triangle",
+    "row": 0,
+    "axis": 0,
+    "reason": "negative simplex weight"
+  },
+  {
+    "field": "triangle",
+    "row": 0,
+    "axis": 1,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "triangle",
+    "row": 0,
+    "axis": 2,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "triangle",
+    "row": 1,
+    "axis": 0,
+    "reason": "inverse weight mismatch"
+  },
+  {
+    "field": "triangle",
+    "row": 1,
+    "axis": 1,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "triangle",
+    "row": 1,
+    "axis": 2,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "triangle",
+    "row": 2,
+    "axis": 0,
+    "reason": "inverse weight mismatch"
+  },
+  {
+    "field": "triangle",
+    "row": 2,
+    "axis": 1,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "triangle",
+    "row": 2,
+    "axis": 2,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 0,
+    "axis": 0,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 0,
+    "axis": 1,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 0,
+    "axis": 2,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 1,
+    "axis": 0,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 1,
+    "axis": 1,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 1,
+    "axis": 2,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 2,
+    "axis": 0,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 2,
+    "axis": 1,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 2,
+    "axis": 2,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 3,
+    "axis": 0,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 3,
+    "axis": 1,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "barycentricControls",
+    "row": 3,
+    "axis": 2,
+    "reason": "nonunit simplex sum"
+  },
+  {
+    "field": "controls",
+    "row": 0,
+    "axis": 0,
+    "reason": "negative simplex weight"
+  },
+  {
+    "field": "controls",
+    "row": 0,
+    "axis": 1,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "controls",
+    "row": 0,
+    "axis": 2,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "controls",
+    "row": 1,
+    "axis": 0,
+    "reason": "inverse weight mismatch"
+  },
+  {
+    "field": "controls",
+    "row": 1,
+    "axis": 1,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "controls",
+    "row": 1,
+    "axis": 2,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "controls",
+    "row": 2,
+    "axis": 0,
+    "reason": "inverse weight mismatch"
+  },
+  {
+    "field": "controls",
+    "row": 2,
+    "axis": 1,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "controls",
+    "row": 2,
+    "axis": 2,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "controls",
+    "row": 3,
+    "axis": 0,
+    "reason": "negative simplex weight"
+  },
+  {
+    "field": "controls",
+    "row": 3,
+    "axis": 1,
+    "reason": "off-plane control"
+  },
+  {
+    "field": "controls",
+    "row": 3,
+    "axis": 2,
+    "reason": "off-plane control"
+  }
+]

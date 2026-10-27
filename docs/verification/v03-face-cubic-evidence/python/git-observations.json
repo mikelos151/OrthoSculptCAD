@@ -1,0 +1,10 @@
+{
+  "source": "Real terminal tool execution, not a synthesized Git response",
+  "command": "git -C C:/Users/sandr/OrthoSculptCAD status --short && git -C C:/Users/sandr/OrthoSculptCAD rev-parse HEAD && git -C C:/Users/sandr/OrthoSculptCAD diff -- tests/reference/v03_bezier_verify.py && git -C C:/Users/sandr/OrthoSculptCAD diff --cached --name-only",
+  "cwd": "C:/Users/sandr/OrthoSculptCAD",
+  "exit_code": 0,
+  "stdout": "?? src/trimline/face-cubic.ts\n?? tests/reference/test_v03_face_cubic_verify.py\n?? tests/reference/v03_face_cubic_verify.py\n?? tests/v03-face-cubic.test.ts\nf4182e308a9a5ccb582bc661d57e1d9d4c583cc4",
+  "old_verifier_diff_empty": true,
+  "cached_diff_names_empty": true,
+  "note": "Only names of new TS files were observed; no new TS contents or author evidence were read."
+}

@@ -1,0 +1,23 @@
+{
+  "label": "06-numeric-chars-GREEN",
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_face_cubic_verify.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_inverse_integer_canonicality (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_integer_canonicality) ... ok\ntest_inverse_operation_refusal_is_old_public_budget_exception (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_operation_refusal_is_old_public_budget_exception) ... ok\ntest_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition) ... ok\ntest_numeric_char_budget_before_integer_or_gcd (test_v03_face_cubic_verify.FaceCubicTests.test_numeric_char_budget_before_integer_or_gcd) ... ok\ntest_rejects_nonliteral_schema (test_v03_face_cubic_verify.FaceCubicTests.test_rejects_nonliteral_schema) ... ok\ntest_unreduced_intermediate_preflight_including_division (test_v03_face_cubic_verify.FaceCubicTests.test_unreduced_intermediate_preflight_including_division) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.006s\n\nOK\n",
+  "files": {
+    "v03_face_cubic_verify.py": "290c08c6abf16f0ca9925c70067d2d93397002409433519c1c46cc96c0b15203",
+    "test_v03_face_cubic_verify.py": "b4245623ed14df86990be94494963d3536aa9eb412739d8abdfc89f14ddd81c0"
+  }
+}

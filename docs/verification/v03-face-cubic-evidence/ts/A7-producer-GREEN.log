@@ -1,0 +1,12 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+
+ Test Files  1 passed (1)
+      Tests  18 passed (18)
+   Start at  16:05:41
+   Duration  343ms (transform 70ms, setup 0ms, import 90ms, tests 121ms, environment 0ms)
+
+
+EXIT: 0

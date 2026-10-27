@@ -1,0 +1,23 @@
+{
+  "label": "24-cumulative-inverse-COVERAGE",
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_face_cubic_verify.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_accepts_exactly_nondegenerate_thin_triangle (test_v03_face_cubic_verify.FaceCubicTests.test_accepts_exactly_nondegenerate_thin_triangle) ... ok\ntest_aggregate_leaf_count_20000_20001_before_rational_payload (test_v03_face_cubic_verify.FaceCubicTests.test_aggregate_leaf_count_20000_20001_before_rational_payload) ... ok\ntest_canonical_sum_one_weight_mismatch_old_approximation_still_passes (test_v03_face_cubic_verify.FaceCubicTests.test_canonical_sum_one_weight_mismatch_old_approximation_still_passes) ... ok\ntest_case_count_64_65_and_unique_ascii_ids (test_v03_face_cubic_verify.FaceCubicTests.test_case_count_64_65_and_unique_ascii_ids) ... ok\ntest_corrupted_approximation_reaches_real_old_verifier (test_v03_face_cubic_verify.FaceCubicTests.test_corrupted_approximation_reaches_real_old_verifier) ... ok\ntest_file_exact_16mib_and_one_byte_over (test_v03_face_cubic_verify.FaceCubicTests.test_file_exact_16mib_and_one_byte_over) ... ok\ntest_first_nonzero_minor_xy_xz_yz (test_v03_face_cubic_verify.FaceCubicTests.test_first_nonzero_minor_xy_xz_yz) ... ok\ntest_input_integer_4096_4097_bits_and_1234_1235_digits (test_v03_face_cubic_verify.FaceCubicTests.test_input_integer_4096_4097_bits_and_1234_1235_digits) ... ok\ntest_inverse_integer_canonicality (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_integer_canonicality) ... ok\ntest_inverse_operation_refusal_is_old_public_budget_exception (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_operation_refusal_is_old_public_budget_exception) ... ok\ntest_limb_work_preflight_before_gcd_and_fraction_operations (test_v03_face_cubic_verify.FaceCubicTests.test_limb_work_preflight_before_gcd_and_fraction_operations) ... ok\ntest_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition) ... ok\ntest_negative_signed_determinant_swapped_bc_preserves_world (test_v03_face_cubic_verify.FaceCubicTests.test_negative_signed_determinant_swapped_bc_preserves_world) ... ok\ntest_numeric_char_budget_before_integer_or_gcd (test_v03_face_cubic_verify.FaceCubicTests.test_numeric_char_budget_before_integer_or_gcd) ... ok\ntest_offplane_same_xy_projection_old_approximation_still_passes (test_v03_face_cubic_verify.FaceCubicTests.test_offplane_same_xy_projection_old_approximation_still_passes) ... ok\ntest_old_public_verifier_called_once_for_whole_projection (test_v03_face_cubic_verify.FaceCubicTests.test_old_public_verifier_called_once_for_whole_projection) ... ok\ntest_real_cli_on_synthetic_math_not_ts (test_v03_face_cubic_verify.FaceCubicTests.test_real_cli_on_synthetic_math_not_ts) ... ok\ntest_rejects_exactly_degenerate_triangles (test_v03_face_cubic_verify.FaceCubicTests.test_rejects_exactly_degenerate_triangles) ... ok\ntest_rejects_nonliteral_schema (test_v03_face_cubic_verify.FaceCubicTests.test_rejects_nonliteral_schema) ... ok\ntest_samples_equal_leaves_plus_one_before_rational_parse (test_v03_face_cubic_verify.FaceCubicTests.test_samples_equal_leaves_plus_one_before_rational_parse) ... ok\ntest_strict_json_loader (test_v03_face_cubic_verify.FaceCubicTests.test_strict_json_loader) ... ok\ntest_tiny_negative_and_nonunit_weights_without_underflow (test_v03_face_cubic_verify.FaceCubicTests.test_tiny_negative_and_nonunit_weights_without_underflow) ... ok\ntest_two_cases_individually_pass_but_joint_inverse_budget_unknown (test_v03_face_cubic_verify.FaceCubicTests.test_two_cases_individually_pass_but_joint_inverse_budget_unknown) ... ok\ntest_unreduced_intermediate_preflight_including_division (test_v03_face_cubic_verify.FaceCubicTests.test_unreduced_intermediate_preflight_including_division) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.316s\n\nOK\n",
+  "files": {
+    "v03_face_cubic_verify.py": "d8d1247d2745bc1bbc5714d48669a3d76db28a61443ec63a352fa683a960e2a4",
+    "test_v03_face_cubic_verify.py": "0e598e447fdeed862f0c871ef6a37ff3e5d095ab3ae4fa0defee21db3d8fcdcd"
+  }
+}

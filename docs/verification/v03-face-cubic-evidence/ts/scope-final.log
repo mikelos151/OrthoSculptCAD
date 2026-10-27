@@ -1,0 +1,6 @@
+?? src/trimline/face-cubic.ts
+?? tests/reference/test_v03_face_cubic_verify.py
+?? tests/reference/v03_face_cubic_verify.py
+?? tests/v03-face-cubic.test.ts
+
+EXIT: 0

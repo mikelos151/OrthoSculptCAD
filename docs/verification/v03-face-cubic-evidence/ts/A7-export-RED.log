@@ -1,0 +1,36 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1 -t "exports untouched real face cubic proofs"
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (18 tests | 1 failed | 17 skipped) 32ms
+   × exports untouched real face cubic proofs 30ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > exports untouched real face cubic proofs
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/v03-face-cubic.test.ts:404:30
+    402|   if (output === undefined) return; // No default file writes.
+    403|   writeProofEvidence(output, bundle);
+    404|   expect(existsSync(output)).toBe(true);
+       |                              ^
+    405|   expect(JSON.parse(readFileSync(output, 'utf8'))).toEqual(JSON.parse(…
+    406|     (_key, value: unknown) => typeof value === 'bigint' ? value.toStri…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 17 skipped (18)
+   Start at  16:06:15
+   Duration  306ms (transform 64ms, setup 0ms, import 84ms, tests 32ms, environment 0ms)
+
+
+EXIT: 1

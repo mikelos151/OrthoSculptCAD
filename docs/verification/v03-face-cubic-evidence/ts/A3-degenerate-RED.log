@@ -1,0 +1,29 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (3 tests | 1 failed) 5ms
+   × rejects an exactly degenerate triangle 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > rejects an exactly degenerate triangle
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-face-cubic.test.ts:32:63
+     30|   const collinear: faceCubic.ExactTriangle3 = [[q(0n), q(0n), q(0n)], …
+     31|   for (const t of [[triangle[0], triangle[0], triangle[2]] as const, c…
+     32|     expect(() => faceCubic.certifyFaceCubic(t, weights, ctx)).toThrowE…
+       |                                                               ^
+     33|       expect.objectContaining({ name: 'FaceCubicError', code: 'DEGENER…
+     34|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed (3)
+   Start at  15:58:24
+   Duration  171ms (transform 32ms, setup 0ms, import 42ms, tests 5ms, environment 0ms)
+
+
+EXIT: 1

@@ -1,0 +1,38 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1 -t "exports untouched real face cubic proofs"
+ORTHO_FACE_CUBIC_EVIDENCE_OUT='v03-face-cubic-must-not-write.json'
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (19 tests | 1 failed | 18 skipped) 20ms
+   × exports untouched real face cubic proofs 19ms
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 18 skipped (19)
+   Start at  16:08:47
+   Duration  194ms (transform 44ms, setup 0ms, import 57ms, tests 20ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > exports untouched real face cubic proofs
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ writeProofEvidence tests/v03-face-cubic.test.ts:388:30
+    386|
+    387| function writeProofEvidence(output: string, bundle: ReturnType<typeof …
+    388|   expect(isAbsolute(output)).toBe(true);
+       |                              ^
+    389|   const scratch = realpathSync(resolve(process.env.LOCALAPPDATA ?? joi…
+    390|   const targetParent = realpathSync(dirname(output));
+ ❯ tests/v03-face-cubic.test.ts:413:3
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT: 1

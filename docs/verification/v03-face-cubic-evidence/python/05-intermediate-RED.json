@@ -1,0 +1,23 @@
+{
+  "label": "05-intermediate-RED",
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_face_cubic_verify.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_inverse_integer_canonicality (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_integer_canonicality) ... ok\ntest_inverse_operation_refusal_is_old_public_budget_exception (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_operation_refusal_is_old_public_budget_exception) ... ok\ntest_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition) ... ok\ntest_rejects_nonliteral_schema (test_v03_face_cubic_verify.FaceCubicTests.test_rejects_nonliteral_schema) ... ok\ntest_unreduced_intermediate_preflight_including_division (test_v03_face_cubic_verify.FaceCubicTests.test_unreduced_intermediate_preflight_including_division) ... FAIL\n\n======================================================================\nFAIL: test_unreduced_intermediate_preflight_including_division (test_v03_face_cubic_verify.FaceCubicTests.test_unreduced_intermediate_preflight_including_division)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_face_cubic_verify.py\", line 89, in test_unreduced_intermediate_preflight_including_division\n    verifier._InverseBudget().calculate(\"div\", left, right)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py\", line 93, in calculate\n    return left / right\n           ~~~~~^~~~~~~\n  File \"C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\Lib\\unittest\\mock.py\", line 1176, in __call__\n    return self._mock_call(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\Lib\\unittest\\mock.py\", line 1180, in _mock_call\n    return self._execute_mock_call(*args, **kwargs)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\Lib\\unittest\\mock.py\", line 1241, in _execute_mock_call\n    raise effect\nAssertionError: allocated division\n\n----------------------------------------------------------------------\nRan 5 tests in 0.006s\n\nFAILED (failures=1)\n",
+  "files": {
+    "v03_face_cubic_verify.py": "023c8641a237e256b90b0adb6f4783e5e96586fb85728d5345cb6df16026712d",
+    "test_v03_face_cubic_verify.py": "d498a9e99c7569791a1b70dceeef06d4a573a7f24e2a66beef152689f0db12f3"
+  }
+}

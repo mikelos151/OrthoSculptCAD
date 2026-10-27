@@ -1,0 +1,113 @@
+{
+  "scope": "M0c2 supplied single-triangle cubic containment + existing sampler; not source binding, global curve, cut/shell/UI/clinical acceptance",
+  "unit": {
+    "numTotalTests": 1188,
+    "numPassedTests": 1188,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "success": true
+  },
+  "python": {
+    "passed": 64,
+    "failed": 0,
+    "exitCode": 0,
+    "command": "python -m unittest discover -s tests/reference -p test_v03_*.py -v"
+  },
+  "typeScriptExitCode": 0,
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "actualProducer": {
+    "cases": 6,
+    "leaves": 21,
+    "samples": 27
+  },
+  "producerSha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+  "cliNegativeControls": {
+    "scope": "Actual TS producer interop negative controls; not complete CAD acceptance",
+    "producerSha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+    "inputUnchanged": true,
+    "negativeControls": [
+      {
+        "kind": "weight",
+        "schemaValid": true,
+        "oldProjection": {
+          "passed": true,
+          "cases": 6,
+          "leaves": 21,
+          "samples": 27
+        },
+        "newCliExitCode": 1,
+        "newCliResult": {
+          "passed": false,
+          "status": "FAIL",
+          "error": "certificate rejected"
+        },
+        "mutantPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-parent-cli\\weight-canonical-mutant.json"
+      },
+      {
+        "kind": "offplane",
+        "schemaValid": true,
+        "oldProjection": {
+          "passed": true,
+          "cases": 6,
+          "leaves": 21,
+          "samples": 27
+        },
+        "newCliExitCode": 1,
+        "newCliResult": {
+          "passed": false,
+          "status": "FAIL",
+          "error": "certificate rejected"
+        },
+        "mutantPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-parent-cli\\offplane-canonical-mutant.json"
+      }
+    ],
+    "reducedBudgetCli": {
+      "exitCode": 2,
+      "result": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    }
+  },
+  "manifest": [
+    {
+      "path": "src/trimline/face-cubic.ts",
+      "sha256": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1"
+    },
+    {
+      "path": "tests/v03-face-cubic.test.ts",
+      "sha256": "b03a33a71ee480a838b125f93e8ef810f1335966e2067957ed0a2895dbfbb5ae"
+    },
+    {
+      "path": "tests/reference/v03_face_cubic_verify.py",
+      "sha256": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df"
+    },
+    {
+      "path": "tests/reference/test_v03_face_cubic_verify.py",
+      "sha256": "2133e64e575a1a425402e51c0b7e7679819bdb3a35ea109b76a50c5adc27d111"
+    },
+    {
+      "path": "tests/reference/test_v03_face_cubic_interop.py",
+      "sha256": "b858f6ec6897af72559df648a62533416f50b2504dde68463ce38470d1a0a9f2"
+    },
+    {
+      "path": "tests/fixtures/v03-face-cubic-proof-actual.json",
+      "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393"
+    }
+  ],
+  "evidenceIndex": "docs/verification/v03-face-cubic-evidence/index.json",
+  "releaseUnchanged": {
+    "bundleSha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "zipSha256": "d4c22a1bb0128b2c9e58c5a11822a0f8f5b21102c268ca935eaba15824246736"
+  },
+  "independentReview": {"passed": true, "delegation": "deleg_e3a1d52f", "specMath": "PASS", "qualitySecurity": "PASS", "sourceHashesVerified": true, "evidenceIndex": "docs/verification/v03-face-cubic-independent-evidence/index.json", "optionalCoverage": "Non-blocking extra-chart off-plane and exact similarity checks preserved in runnable independent harness; not promoted to the default unit suite in this slice."},
+  "byteTransportEvidence": "docs/verification/v03-face-cubic-byte-roundtrip.json"
+}

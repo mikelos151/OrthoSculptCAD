@@ -2,6 +2,18 @@
 # LF inputs stay exact; already-normalized CRLF logs have explicit CRLF checkout.
 # New M0c1 artifacts are staged raw before any newline normalization.
 # M0c2 contract and design evidence are byte-exact before first staging.
+# M0c2 implementation and immutable evidence before first staging.
+src/trimline/face-cubic.ts -text
+tests/v03-face-cubic.test.ts -text
+tests/reference/v03_face_cubic_verify.py -text
+tests/reference/test_v03_face_cubic_verify.py -text
+tests/reference/test_v03_face_cubic_interop.py -text
+tests/fixtures/v03-face-cubic-proof-actual.json -text
+docs/verification/v03-face-cubic-*.json -text
+docs/verification/v03-face-cubic-evidence/** -text whitespace=cr-at-eol
+docs/verification/v03-face-cubic-independent-evidence/** -text whitespace=cr-at-eol
+docs/verification/v03-face-cubic-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/verification/v03-face-cubic-independent-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 docs/plans/v03-face-cubic-containment.md -text
 tests/fixtures/v03-face-cubic-proof.schema.json -text
 docs/verification/v03-face-cubic-design-*.json -text

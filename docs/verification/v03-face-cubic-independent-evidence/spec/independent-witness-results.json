@@ -1,0 +1,427 @@
+{
+  "passed": true,
+  "source_sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+  "independent_cross_dot_counts": {
+    "root_controls_equal_declared": 24,
+    "world_points_in_simplex": 135,
+    "exact_bernstein_sample_identity": 27
+  },
+  "witness_counts": {
+    "rational_similarity_not_producer": 18,
+    "canonical_weight_mutant": 6,
+    "offplane_unused_axis": 3,
+    "budget_unknown": 2
+  },
+  "schema_matches_frozen_plan": true,
+  "schema_validates_real_export": true,
+  "security_scan_matches": [],
+  "records": [
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        0,
+        1,
+        2
+      ],
+      "scale": "1",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        0,
+        1,
+        2
+      ],
+      "scale": "1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        0,
+        1,
+        2
+      ],
+      "scale": "-1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        0,
+        2,
+        1
+      ],
+      "scale": "1",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        0,
+        2,
+        1
+      ],
+      "scale": "1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        0,
+        2,
+        1
+      ],
+      "scale": "-1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        1,
+        0,
+        2
+      ],
+      "scale": "1",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        1,
+        0,
+        2
+      ],
+      "scale": "1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        1,
+        0,
+        2
+      ],
+      "scale": "-1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        1,
+        2,
+        0
+      ],
+      "scale": "1",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        1,
+        2,
+        0
+      ],
+      "scale": "1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        1,
+        2,
+        0
+      ],
+      "scale": "-1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        2,
+        0,
+        1
+      ],
+      "scale": "1",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        2,
+        0,
+        1
+      ],
+      "scale": "1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        2,
+        0,
+        1
+      ],
+      "scale": "-1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        2,
+        1,
+        0
+      ],
+      "scale": "1",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        2,
+        1,
+        0
+      ],
+      "scale": "1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "rational_similarity_not_producer",
+      "axes": [
+        2,
+        1,
+        0
+      ],
+      "scale": "-1/2",
+      "result": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      }
+    },
+    {
+      "kind": "canonical_weight_mutant",
+      "case": "nonaxis-curved",
+      "old_passed": true,
+      "rejection": "inverse weight mismatch",
+      "cli": {
+        "name": "weight-mutant-0",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\weight-mutant-0.json"
+      }
+    },
+    {
+      "kind": "canonical_weight_mutant",
+      "case": "edge-linear",
+      "old_passed": true,
+      "rejection": "inverse weight mismatch",
+      "cli": {
+        "name": "weight-mutant-1",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\weight-mutant-1.json"
+      }
+    },
+    {
+      "kind": "canonical_weight_mutant",
+      "case": "vertex-constant",
+      "old_passed": true,
+      "rejection": "inverse weight mismatch",
+      "cli": {
+        "name": "weight-mutant-2",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\weight-mutant-2.json"
+      }
+    },
+    {
+      "kind": "canonical_weight_mutant",
+      "case": "xz-chart",
+      "old_passed": true,
+      "rejection": "inverse weight mismatch",
+      "cli": {
+        "name": "weight-mutant-3",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\weight-mutant-3.json"
+      }
+    },
+    {
+      "kind": "canonical_weight_mutant",
+      "case": "yz-chart",
+      "old_passed": true,
+      "rejection": "inverse weight mismatch",
+      "cli": {
+        "name": "weight-mutant-4",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\weight-mutant-4.json"
+      }
+    },
+    {
+      "kind": "canonical_weight_mutant",
+      "case": "thin-constant",
+      "old_passed": true,
+      "rejection": "inverse weight mismatch",
+      "cli": {
+        "name": "weight-mutant-5",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\weight-mutant-5.json"
+      }
+    },
+    {
+      "kind": "offplane_unused_axis",
+      "case": "nonaxis-curved",
+      "axis": 2,
+      "old_passed": true,
+      "cli": {
+        "name": "offplane-nonaxis-curved",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\offplane-nonaxis-curved.json"
+      }
+    },
+    {
+      "kind": "offplane_unused_axis",
+      "case": "xz-chart",
+      "axis": 1,
+      "old_passed": true,
+      "cli": {
+        "name": "offplane-xz-chart",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\offplane-xz-chart.json"
+      }
+    },
+    {
+      "kind": "offplane_unused_axis",
+      "case": "yz-chart",
+      "axis": 0,
+      "old_passed": true,
+      "cli": {
+        "name": "offplane-yz-chart",
+        "exit_code": 1,
+        "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\offplane-yz-chart.json"
+      }
+    },
+    {
+      "kind": "budget_unknown",
+      "cli": {
+        "name": "inverse-budget-unknown",
+        "exit_code": 2,
+        "stdout": "{\"passed\": false, \"status\": \"UNKNOWN\", \"error\": \"verification budget exhausted\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\inverse-budget-unknown.json"
+      }
+    },
+    {
+      "kind": "budget_unknown",
+      "cli": {
+        "name": "old-budget-unknown",
+        "exit_code": 2,
+        "stdout": "{\"passed\": false, \"status\": \"UNKNOWN\", \"error\": \"verification budget exhausted\"}\n",
+        "stderr": "",
+        "evidence_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-spec-review\\old-budget-unknown.json"
+      }
+    }
+  ]
+}

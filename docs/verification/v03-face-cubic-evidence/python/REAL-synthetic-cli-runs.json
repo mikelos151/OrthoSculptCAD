@@ -1,0 +1,77 @@
+[
+  {
+    "command": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+      "--input",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-math-edge-linear-NOT-TS.json"
+    ],
+    "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "exit_code": 0,
+    "stdout": "{\"passed\": true, \"cases\": 1, \"leaves\": 1, \"samples\": 2}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+      "--input",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-canonical-weight-mutant-NOT-TS.json"
+    ],
+    "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "exit_code": 1,
+    "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+      "--input",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-canonical-offplane-mutant-NOT-TS.json"
+    ],
+    "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "exit_code": 1,
+    "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-c",
+      "import sys; sys.path.insert(0, 'C:\\\\Users\\\\sandr\\\\OrthoSculptCAD\\\\tests\\\\reference'); import v03_face_cubic_verify as v; v.MAX_OPERATIONS = 0; sys.exit(v.main([\"--input\", 'C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-face-cubic-py-agent\\\\synthetic-math-edge-linear-NOT-TS.json']))"
+    ],
+    "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "exit_code": 2,
+    "stdout": "{\"passed\": false, \"status\": \"UNKNOWN\", \"error\": \"verification budget exhausted\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-c",
+      "import sys; sys.path.insert(0, 'C:\\\\Users\\\\sandr\\\\OrthoSculptCAD\\\\tests\\\\reference'); import v03_face_cubic_verify as v; v.bezier.MAX_OPERATIONS = 0; sys.exit(v.main([\"--input\", 'C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-face-cubic-py-agent\\\\synthetic-math-edge-linear-NOT-TS.json']))"
+    ],
+    "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "exit_code": 2,
+    "stdout": "{\"passed\": false, \"status\": \"UNKNOWN\", \"error\": \"verification budget exhausted\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-c",
+      "import sys; sys.path.insert(0, 'C:\\\\Users\\\\sandr\\\\OrthoSculptCAD\\\\tests\\\\reference'); import v03_face_cubic_verify as v; v.MAX_OPERATIONS = 225; sys.exit(v.main([\"--input\", 'C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-face-cubic-py-agent\\\\synthetic-two-cases-NOT-TS.json']))"
+    ],
+    "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "exit_code": 2,
+    "stdout": "{\"passed\": false, \"status\": \"UNKNOWN\", \"error\": \"verification budget exhausted\"}\n",
+    "stderr": ""
+  }
+]

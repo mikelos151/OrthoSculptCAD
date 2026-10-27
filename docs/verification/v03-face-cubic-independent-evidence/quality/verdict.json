@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [],
+  "summary": "No blocking quality/security/resource defect found within the exact supplied-triangle M0c2 boundary.",
+  "evidence": {
+    "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-quality-review",
+    "focused_typescript": "focused-typescript.json",
+    "focused_python": "focused-python.json",
+    "commands": "commands.json",
+    "input_hashes": "input-hashes.json",
+    "canonical_mutations": "canonical-mutation-results.json",
+    "fresh_real_ts": "fresh-real-ts.json",
+    "node_adversarial": {
+      "randomMappedCases": 128,
+      "realConstantProofs": 32,
+      "scalarAssertions": 21,
+      "shapeAssertions": 21,
+      "getterHits": 0,
+      "customPrototypesAccepted": true
+    },
+    "random_fraction_oracle_cases": 128,
+    "random_real_constant_cli": {
+      "passed": true,
+      "cases": 32,
+      "leaves": 32,
+      "samples": 64
+    },
+    "metamorphic_composed_bundles": 12,
+    "canonical_rejected_scalar_mutations": 33,
+    "malformed_cli_cases": 6,
+    "reference_budget_cli_unknowns": 2,
+    "aggregate_20000_admitted_20001_rejected_before_rat": true,
+    "unchanged_input_files": 11,
+    "fresh_export_equals_repo_fixture": true
+  },
+  "limitations": [
+    "Focused/bounded audit only; parent owns full-suite/typecheck/browser acceptance.",
+    "Algorithmic limits do not promise process RSS/wall time, and JS Proxy traps are outside the ordinary-container no-getter guarantee.",
+    "Containment is only relative to one supplied triangle; no source provenance, full surface, cut/shell, or clinical certification."
+  ]
+}

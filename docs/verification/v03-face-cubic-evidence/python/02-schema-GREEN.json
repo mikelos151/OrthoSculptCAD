@@ -1,0 +1,23 @@
+{
+  "label": "02-schema-GREEN",
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_face_cubic_verify.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition) ... ok\ntest_rejects_nonliteral_schema (test_v03_face_cubic_verify.FaceCubicTests.test_rejects_nonliteral_schema) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.002s\n\nOK\n",
+  "files": {
+    "v03_face_cubic_verify.py": "e2205af289e5ef52dfda8a7c26560e58ef2b13a3a7ccbd859f4d4c52f7bcda17",
+    "test_v03_face_cubic_verify.py": "c35b49019c5e6fc0bff168f82df694c1f59cbedf3a7b6852b26af0d1ed109f52"
+  }
+}

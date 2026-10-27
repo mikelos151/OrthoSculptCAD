@@ -1,0 +1,43 @@
+{
+  "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-ts-agent\\finalproof-delivery.json",
+  "sha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+  "bytes": 63817,
+  "cases": 6,
+  "leaves": 21,
+  "samples": 27,
+  "per_case": [
+    {
+      "id": "nonaxis-curved",
+      "leaves": 16,
+      "samples": 17
+    },
+    {
+      "id": "edge-linear",
+      "leaves": 1,
+      "samples": 2
+    },
+    {
+      "id": "vertex-constant",
+      "leaves": 1,
+      "samples": 2
+    },
+    {
+      "id": "xz-chart",
+      "leaves": 1,
+      "samples": 2
+    },
+    {
+      "id": "yz-chart",
+      "leaves": 1,
+      "samples": 2
+    },
+    {
+      "id": "thin-constant",
+      "leaves": 1,
+      "samples": 2
+    }
+  ],
+  "schema_valid": true,
+  "default_nondestructive": true,
+  "exclusive_refusal_preserved_bytes": true
+}

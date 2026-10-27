@@ -1,0 +1,23 @@
+{
+  "label": "08-cli-RED",
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_face_cubic_verify.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_inverse_integer_canonicality (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_integer_canonicality) ... ok\ntest_inverse_operation_refusal_is_old_public_budget_exception (test_v03_face_cubic_verify.FaceCubicTests.test_inverse_operation_refusal_is_old_public_budget_exception) ... ok\ntest_limb_work_preflight_before_gcd_and_fraction_operations (test_v03_face_cubic_verify.FaceCubicTests.test_limb_work_preflight_before_gcd_and_fraction_operations) ... ok\ntest_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition) ... ok\ntest_numeric_char_budget_before_integer_or_gcd (test_v03_face_cubic_verify.FaceCubicTests.test_numeric_char_budget_before_integer_or_gcd) ... ok\ntest_real_cli_on_synthetic_math_not_ts (test_v03_face_cubic_verify.FaceCubicTests.test_real_cli_on_synthetic_math_not_ts) ... FAIL\ntest_rejects_nonliteral_schema (test_v03_face_cubic_verify.FaceCubicTests.test_rejects_nonliteral_schema) ... ok\ntest_unreduced_intermediate_preflight_including_division (test_v03_face_cubic_verify.FaceCubicTests.test_unreduced_intermediate_preflight_including_division) ... ok\n\n======================================================================\nFAIL: test_real_cli_on_synthetic_math_not_ts (test_v03_face_cubic_verify.FaceCubicTests.test_real_cli_on_synthetic_math_not_ts)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_face_cubic_verify.py\", line 54, in test_real_cli_on_synthetic_math_not_ts\n    self.assertTrue(callable(getattr(verifier, \"main\", None)), \"public main required\")\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : public main required\n\n----------------------------------------------------------------------\nRan 8 tests in 0.006s\n\nFAILED (failures=1)\n",
+  "files": {
+    "v03_face_cubic_verify.py": "89098834ba29ab5ef30ab3535680808cc7260cc48e6704e376cdb3e662f5ab7c",
+    "test_v03_face_cubic_verify.py": "92cd30c0da15e893ca8a341f0bc8564138803f299c3e1bc78774e188df707ce2"
+  }
+}

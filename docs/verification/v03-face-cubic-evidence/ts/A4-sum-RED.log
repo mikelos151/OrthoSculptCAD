@@ -1,0 +1,29 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (8 tests | 1 failed) 7ms
+   × rejects a nonunit exact sum 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > rejects a nonunit exact sum
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-face-cubic.test.ts:83:121
+     81|       const w = weights.map(r => [...r]);
+     82|       w[i] = row;
+     83|       expect(() => faceCubic.certifyFaceCubic(triangle, w as unknown a…
+       |                                                                                                                         ^
+     84|         expect.objectContaining({ name: 'FaceCubicError', code: 'INVAL…
+     85|     }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 passed (8)
+   Start at  15:59:38
+   Duration  176ms (transform 28ms, setup 0ms, import 39ms, tests 7ms, environment 0ms)
+
+
+EXIT: 1

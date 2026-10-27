@@ -1,0 +1,516 @@
+{
+  "scope": "Implementer B: independent Python inverse chart + bounded unchanged public M0c1 composition only",
+  "provenance": "ALL fixtures are hand-derived synthetic mathematical certificates; NONE is TS output.",
+  "producer_interop": "NOT performed; parent must feed untouched real producer export after both authors finish.",
+  "repo": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "head": "f4182e308a9a5ccb582bc661d57e1d9d4c583cc4",
+  "owned_files": [
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_face_cubic_verify.py"
+  ],
+  "focused_tests": {
+    "passed": true,
+    "test_count": 36,
+    "log": "FINAL-focused-run.json"
+  },
+  "synthetic_summary": {
+    "passed": true,
+    "cases": 1,
+    "leaves": 1,
+    "samples": 2
+  },
+  "synthetic_counts": {
+    "cases": 1,
+    "leaves": 1,
+    "samples": 2
+  },
+  "inverse_counters_one_synthetic_case": {
+    "operations": 225,
+    "numeric_chars": 69,
+    "limb_work": 258
+  },
+  "inverse_budget_instances_observed": 1,
+  "old_real_public_verify_calls_observed": 1,
+  "containment_negative_controls_old_projection": {
+    "weight-mutant": {
+      "passed": true,
+      "cases": 1,
+      "leaves": 1,
+      "samples": 2
+    },
+    "offplane-mutant": {
+      "passed": true,
+      "cases": 1,
+      "leaves": 1,
+      "samples": 2
+    }
+  },
+  "two_individually_passing_cases_joint_inverse_unknown": true,
+  "cli_runs": [
+    {
+      "command": [
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+        "--input",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-math-edge-linear-NOT-TS.json"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"cases\": 1, \"leaves\": 1, \"samples\": 2}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+        "--input",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-canonical-weight-mutant-NOT-TS.json"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "exit_code": 1,
+      "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+        "--input",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-canonical-offplane-mutant-NOT-TS.json"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "exit_code": 1,
+      "stdout": "{\"passed\": false, \"status\": \"FAIL\", \"error\": \"certificate rejected\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+        "-c",
+        "import sys; sys.path.insert(0, 'C:\\\\Users\\\\sandr\\\\OrthoSculptCAD\\\\tests\\\\reference'); import v03_face_cubic_verify as v; v.MAX_OPERATIONS = 0; sys.exit(v.main([\"--input\", 'C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-face-cubic-py-agent\\\\synthetic-math-edge-linear-NOT-TS.json']))"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "exit_code": 2,
+      "stdout": "{\"passed\": false, \"status\": \"UNKNOWN\", \"error\": \"verification budget exhausted\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+        "-c",
+        "import sys; sys.path.insert(0, 'C:\\\\Users\\\\sandr\\\\OrthoSculptCAD\\\\tests\\\\reference'); import v03_face_cubic_verify as v; v.bezier.MAX_OPERATIONS = 0; sys.exit(v.main([\"--input\", 'C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-face-cubic-py-agent\\\\synthetic-math-edge-linear-NOT-TS.json']))"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "exit_code": 2,
+      "stdout": "{\"passed\": false, \"status\": \"UNKNOWN\", \"error\": \"verification budget exhausted\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+        "-c",
+        "import sys; sys.path.insert(0, 'C:\\\\Users\\\\sandr\\\\OrthoSculptCAD\\\\tests\\\\reference'); import v03_face_cubic_verify as v; v.MAX_OPERATIONS = 225; sys.exit(v.main([\"--input\", 'C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-face-cubic-py-agent\\\\synthetic-two-cases-NOT-TS.json']))"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "exit_code": 2,
+      "stdout": "{\"passed\": false, \"status\": \"UNKNOWN\", \"error\": \"verification budget exhausted\"}\n",
+      "stderr": ""
+    }
+  ],
+  "tdd_cycle_logs": [
+    {
+      "file": "01-public-GREEN.json",
+      "label": "01-public-GREEN",
+      "exit_code": 0,
+      "test_count": 1
+    },
+    {
+      "file": "01-public-RED.json",
+      "label": "01-public-RED",
+      "exit_code": 1,
+      "test_count": 1
+    },
+    {
+      "file": "02-schema-GREEN.json",
+      "label": "02-schema-GREEN",
+      "exit_code": 0,
+      "test_count": 2
+    },
+    {
+      "file": "02-schema-RED.json",
+      "label": "02-schema-RED",
+      "exit_code": 1,
+      "test_count": 2
+    },
+    {
+      "file": "03-canonical-GREEN.json",
+      "label": "03-canonical-GREEN",
+      "exit_code": 0,
+      "test_count": 3
+    },
+    {
+      "file": "03-canonical-RED.json",
+      "label": "03-canonical-RED",
+      "exit_code": 1,
+      "test_count": 3
+    },
+    {
+      "file": "04-inverse-budget-GREEN.json",
+      "label": "04-inverse-budget-GREEN",
+      "exit_code": 0,
+      "test_count": 4
+    },
+    {
+      "file": "04-inverse-budget-RED.json",
+      "label": "04-inverse-budget-RED",
+      "exit_code": 1,
+      "test_count": 4
+    },
+    {
+      "file": "05-intermediate-GREEN.json",
+      "label": "05-intermediate-GREEN",
+      "exit_code": 0,
+      "test_count": 5
+    },
+    {
+      "file": "05-intermediate-RED.json",
+      "label": "05-intermediate-RED",
+      "exit_code": 1,
+      "test_count": 5
+    },
+    {
+      "file": "06-numeric-chars-GREEN.json",
+      "label": "06-numeric-chars-GREEN",
+      "exit_code": 0,
+      "test_count": 6
+    },
+    {
+      "file": "06-numeric-chars-RED.json",
+      "label": "06-numeric-chars-RED",
+      "exit_code": 1,
+      "test_count": 6
+    },
+    {
+      "file": "07-limb-work-GREEN.json",
+      "label": "07-limb-work-GREEN",
+      "exit_code": 0,
+      "test_count": 7
+    },
+    {
+      "file": "07-limb-work-RED.json",
+      "label": "07-limb-work-RED",
+      "exit_code": 1,
+      "test_count": 7
+    },
+    {
+      "file": "08-cli-GREEN.json",
+      "label": "08-cli-GREEN",
+      "exit_code": 0,
+      "test_count": 8
+    },
+    {
+      "file": "08-cli-RED.json",
+      "label": "08-cli-RED",
+      "exit_code": 1,
+      "test_count": 8
+    },
+    {
+      "file": "09-json-GREEN.json",
+      "label": "09-json-GREEN",
+      "exit_code": 0,
+      "test_count": 9
+    },
+    {
+      "file": "09-json-RED.json",
+      "label": "09-json-RED",
+      "exit_code": 1,
+      "test_count": 9
+    },
+    {
+      "file": "10-file-size-GREEN.json",
+      "label": "10-file-size-GREEN",
+      "exit_code": 0,
+      "test_count": 10
+    },
+    {
+      "file": "10-file-size-RED.json",
+      "label": "10-file-size-RED",
+      "exit_code": 1,
+      "test_count": 10
+    },
+    {
+      "file": "11-degenerate-COVERAGE.json",
+      "label": "11-degenerate-COVERAGE",
+      "exit_code": 0,
+      "test_count": 11
+    },
+    {
+      "file": "12-thin-COVERAGE.json",
+      "label": "12-thin-COVERAGE",
+      "exit_code": 0,
+      "test_count": 12
+    },
+    {
+      "file": "13-chart-selection-COVERAGE.json",
+      "label": "13-chart-selection-COVERAGE",
+      "exit_code": 0,
+      "test_count": 13
+    },
+    {
+      "file": "14-signed-D-COVERAGE.json",
+      "label": "14-signed-D-COVERAGE",
+      "exit_code": 0,
+      "test_count": 14
+    },
+    {
+      "file": "15-offplane-COVERAGE.json",
+      "label": "15-offplane-COVERAGE",
+      "exit_code": 0,
+      "test_count": 15
+    },
+    {
+      "file": "16-weight-mutant-COVERAGE.json",
+      "label": "16-weight-mutant-COVERAGE",
+      "exit_code": 0,
+      "test_count": 16
+    },
+    {
+      "file": "17-simplex-COVERAGE.json",
+      "label": "17-simplex-COVERAGE",
+      "exit_code": 0,
+      "test_count": 17
+    },
+    {
+      "file": "18-old-real-corruptions-COVERAGE.json",
+      "label": "18-old-real-corruptions-COVERAGE",
+      "exit_code": 0,
+      "test_count": 18
+    },
+    {
+      "file": "19-single-old-call-COVERAGE.json",
+      "label": "19-single-old-call-COVERAGE",
+      "exit_code": 0,
+      "test_count": 19
+    },
+    {
+      "file": "20-case-count-COVERAGE.json",
+      "label": "20-case-count-COVERAGE",
+      "exit_code": 0,
+      "test_count": 20
+    },
+    {
+      "file": "21-aggregate-count-COVERAGE.json",
+      "label": "21-aggregate-count-COVERAGE",
+      "exit_code": 0,
+      "test_count": 21
+    },
+    {
+      "file": "22-sample-count-COVERAGE.json",
+      "label": "22-sample-count-COVERAGE",
+      "exit_code": 0,
+      "test_count": 22
+    },
+    {
+      "file": "23-integer-boundaries-COVERAGE.json",
+      "label": "23-integer-boundaries-COVERAGE",
+      "exit_code": 0,
+      "test_count": 23
+    },
+    {
+      "file": "24-cumulative-inverse-COVERAGE.json",
+      "label": "24-cumulative-inverse-COVERAGE",
+      "exit_code": 0,
+      "test_count": 24
+    },
+    {
+      "file": "25-cli-inverse-UNKNOWN-COVERAGE.json",
+      "label": "25-cli-inverse-UNKNOWN-COVERAGE",
+      "exit_code": 0,
+      "test_count": 25
+    },
+    {
+      "file": "26-cli-old-UNKNOWN-COVERAGE.json",
+      "label": "26-cli-old-UNKNOWN-COVERAGE",
+      "exit_code": 0,
+      "test_count": 26
+    },
+    {
+      "file": "27-loader-growth-COVERAGE.json",
+      "label": "27-loader-growth-COVERAGE",
+      "exit_code": 0,
+      "test_count": 27
+    },
+    {
+      "file": "28-structural-budget-GREEN-attempt1.json",
+      "label": "28-structural-budget-GREEN-attempt1",
+      "exit_code": 1,
+      "test_count": 28
+    },
+    {
+      "file": "28-structural-budget-GREEN-attempt2.json",
+      "label": "28-structural-budget-GREEN-attempt2",
+      "exit_code": 0,
+      "test_count": 28
+    },
+    {
+      "file": "28-structural-budget-RED.json",
+      "label": "28-structural-budget-RED",
+      "exit_code": 1,
+      "test_count": 28
+    },
+    {
+      "file": "28-structural-budget-REFACTOR.json",
+      "label": "28-structural-budget-REFACTOR",
+      "exit_code": 0,
+      "test_count": 28
+    },
+    {
+      "file": "29-approximation-root-COVERAGE.json",
+      "label": "29-approximation-root-COVERAGE",
+      "exit_code": 0,
+      "test_count": 29
+    },
+    {
+      "file": "30-continuous-bound-COVERAGE.json",
+      "label": "30-continuous-bound-COVERAGE",
+      "exit_code": 0,
+      "test_count": 30
+    },
+    {
+      "file": "31-schema-shapes-COVERAGE.json",
+      "label": "31-schema-shapes-COVERAGE",
+      "exit_code": 0,
+      "test_count": 31
+    },
+    {
+      "file": "32-finite-budget-boundaries-COVERAGE.json",
+      "label": "32-finite-budget-boundaries-COVERAGE",
+      "exit_code": 0,
+      "test_count": 32
+    },
+    {
+      "file": "33-cli-rejection-COVERAGE.json",
+      "label": "33-cli-rejection-COVERAGE",
+      "exit_code": 0,
+      "test_count": 33
+    },
+    {
+      "file": "34-format-reciprocity-COVERAGE.json",
+      "label": "34-format-reciprocity-COVERAGE",
+      "exit_code": 0,
+      "test_count": 34
+    },
+    {
+      "file": "35-empty-counts-and-tolerance-COVERAGE.json",
+      "label": "35-empty-counts-and-tolerance-COVERAGE",
+      "exit_code": 0,
+      "test_count": 35
+    },
+    {
+      "file": "36-gcd-preflight-COVERAGE.json",
+      "label": "36-gcd-preflight-COVERAGE",
+      "exit_code": 0,
+      "test_count": 36
+    }
+  ],
+  "tdd_notes": [
+    "First callable-namespace assertion RED retained in 01-public-RED.json.",
+    "One behavior was added and run before the next. Already-green math/negative/count coverage is labeled COVERAGE, not fabricated RED.",
+    "02-schema-RED and 03-canonical-RED include missing-validation assertions plus genuine missing-validation exceptions, not typo/import failures.",
+    "28-structural-budget-GREEN-attempt1 failed: earlier threshold probe omitted structural work; retained intact. Attempt2 observes the full real public path and exactly one inverse budget."
+  ],
+  "issues": [
+    "Initial evidence collector completed real CLI/focused runs but native subprocess Git execution failed with WindowsApps PermissionError. Original logs retained; real Bash terminal Git observations used by finish_handoff.py."
+  ],
+  "git_observations": {
+    "source": "Real terminal tool execution, not a synthesized Git response",
+    "command": "git -C C:/Users/sandr/OrthoSculptCAD status --short && git -C C:/Users/sandr/OrthoSculptCAD rev-parse HEAD && git -C C:/Users/sandr/OrthoSculptCAD diff -- tests/reference/v03_bezier_verify.py && git -C C:/Users/sandr/OrthoSculptCAD diff --cached --name-only",
+    "cwd": "C:/Users/sandr/OrthoSculptCAD",
+    "exit_code": 0,
+    "stdout": "?? src/trimline/face-cubic.ts\n?? tests/reference/test_v03_face_cubic_verify.py\n?? tests/reference/v03_face_cubic_verify.py\n?? tests/v03-face-cubic.test.ts\nf4182e308a9a5ccb582bc661d57e1d9d4c583cc4",
+    "old_verifier_diff_empty": true,
+    "cached_diff_names_empty": true,
+    "note": "Only names of new TS files were observed; no new TS contents or author evidence were read."
+  },
+  "sha256": {
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_face_cubic_verify.py": "2133e64e575a1a425402e51c0b7e7679819bdb3a35ea109b76a50c5adc27d111",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\fixtures\\v03-face-cubic-proof.schema.json": "65bb939886c79cfb6292ceeabc2c895f1f4f3c3cb8522a97497ec84490328bdb",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\v03-face-cubic-containment.md": "692ebe317eec27178ab6334ed479f0dacf90746b3d57d5dc0423cad3597aaa5e",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\01-public-GREEN.json": "a1225255f7f84156c8914653f6c46ad6f917177275bed12b15a4f7625c2115b7",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\01-public-RED.json": "eb9d128ba7f8d4887530a87d2fe591634cea39e3a907246fd8cab8397e05729d",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\02-schema-GREEN.json": "d70949d9099f896df04710178674152c1d356dadedfbf512a1412714a05615b0",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\02-schema-RED.json": "2f0848b880f1eb02069e40b19a742e363e88fc153f0ba15bd837e49ed968c530",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\03-canonical-GREEN.json": "7ef65ad786ebbd27d1c46c6a89cc3397d1c5bbcb9598f376ce48d066ee602398",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\03-canonical-RED.json": "48e1660232652022b806e054e6f03f4f72f05fdc3764d0c0291e4bc34f332968",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\04-inverse-budget-GREEN.json": "cca132be6913e5e30af84a23d3e0446e8652adedad3ccbd9af9369e0b03e0b34",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\04-inverse-budget-RED.json": "daf0caff562e605d8e8d974de1f3c24882356427d6db063efd7e7443f6e76852",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\05-intermediate-GREEN.json": "b5aaf7bcfba3efc1acde0ea14617fd7b0ff9f95461af3ee1efdb7d966249afa6",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\05-intermediate-RED.json": "3709e66221e74a7549dda63d401fa11fc469646f8ff8ffec65adc482b6d31cd0",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\06-numeric-chars-GREEN.json": "cb6d8ce83592b33bff0ddb2fdb554474c2b6d11b823040c171365ea83bb762dd",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\06-numeric-chars-RED.json": "6bf1a06594c176e5ca15c190c0fe3b28cd639853a60b46a1f6655f7430a355f2",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\07-limb-work-GREEN.json": "b0549f3a245972b65d8bc9762c24f4548faf882b2dad8f3be08e28a086869bc0",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\07-limb-work-RED.json": "abb2531391668e472eb201942f25fb8b7fee9e315de57ac312ed0518526a2b5e",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\08-cli-GREEN.json": "925ec9ae02dfe8e9cf6828d6992fdd1f64ec79353c1560f0bd6bbe4ee8bdc18b",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\08-cli-RED.json": "4f76685409dd61ebbb691c92539e6bc1e84634b6c24bbebf0e86323c0025320e",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\09-json-GREEN.json": "c3d6b2cf6564fd3e28f815ab8006781df56f9c458fad5c5011d6dc49e34d10a1",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\09-json-RED.json": "cc861a199871fabd3dce08c4ed371625eef9b75039a709da74daf01c79a501cd",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\10-file-size-GREEN.json": "3b5a74ef20aa405e5eece10542a7239354ffeff181c2b37616fd0f1bf6bfbcb2",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\10-file-size-RED.json": "9b37db9369758e4957145ef8d803fbfe2b77d1fff5eadb0e00554d27835edc9c",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\11-degenerate-COVERAGE.json": "18fa994b9018337ce2516dad4ad4c3d85d40d48351fe4d3a379090372f7d94da",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\12-thin-COVERAGE.json": "3bc63e583c3be3fe61cb8c37738ded5e70f7b6d4b0f2d35769fabb38b3de9289",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\13-chart-selection-COVERAGE.json": "2b3b07360b104ef4320ac87bcc1cab1c1113bc7996ed99eeaf414c1db442c42a",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\14-signed-D-COVERAGE.json": "68d9990a14edf937b8d9bfb5690ab3ea9407fae5c8775c31842139b28eac9cbf",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\15-offplane-COVERAGE.json": "60caee5800b2901914f5ddb0b0e363e274225b1f13affec865b43226a7d40213",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\16-weight-mutant-COVERAGE.json": "d329e92af1c8b73c5eeba60c18a4e9fb540418406ef4371c66e224bf8142d23a",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\17-simplex-COVERAGE.json": "799eb06c0e7c24ecdc74993194a9e04f15c5e397b0fd5e9c465280cd819f5faa",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\18-old-real-corruptions-COVERAGE.json": "2834d3e414d0c731c670d3d24432d8fec570fa5aaf49ed092e6c50ca80a80865",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\19-single-old-call-COVERAGE.json": "6099a7842985bf743b731778ff07b3ae1d1eb754a44d7ba1c064ec4c067b608e",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\20-case-count-COVERAGE.json": "4d0bd9032ea64afeb2cb0588d9b9fdd73a73a63a6ca513c6b55f83bce89022be",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\21-aggregate-count-COVERAGE.json": "65768978872107478ef3f76cbb119e3dd77b03aa3688153afb36730cebd29bef",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\22-sample-count-COVERAGE.json": "7c000b332552761b4438c1091bf0018ac347211b3c5c8891da1c674be25ae732",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\23-integer-boundaries-COVERAGE.json": "0cfef3e2da9ea8e05722c45758076385b0f77d7171fd42032b957d48cd4b040d",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\24-cumulative-inverse-COVERAGE.json": "3427acef829464955390803061826b232c076cfbbf7d225390e88ccb2311e0a2",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\25-cli-inverse-UNKNOWN-COVERAGE.json": "70a09112f893c190abd94165a0d4e085fff7f2ca7fb055e51e5c9d52a6b2eaf7",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\26-cli-old-UNKNOWN-COVERAGE.json": "c297eef98b353224ade4c1313c8627f488e436eaa253c32ee4a0346a7e08f17d",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\27-loader-growth-COVERAGE.json": "78e942bafbbca1d19b25276f323d23101a0630dc8d794202d02eb6049c9826ff",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\28-structural-budget-GREEN-attempt1.json": "f2c66773fb977b42596dae25dfd81812f089ef77eb0c1f4a7936543272344eaa",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\28-structural-budget-GREEN-attempt2.json": "fdf9248d475812e2eb68d5ff52f6246b6e1440d1da3bdbbacba89d8174b453fe",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\28-structural-budget-RED.json": "59e71e8026a2a9898b10dc448741046aa431a7a5c59dd9d944cd4c33def752de",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\28-structural-budget-REFACTOR.json": "09fbea37cd2ee7a6c7fd6e2ecba0201a4151e7f1c1d9727db8ec790982026eda",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\29-approximation-root-COVERAGE.json": "362417cac19896c72c70bef6208d44a95c4a242758878062aba5ac84dcef2efe",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\30-continuous-bound-COVERAGE.json": "624dfdc2ee4fc82dd8b3284c5201a54d7e5620f8e4ad55676c1a4fb5d0be5323",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\31-schema-shapes-COVERAGE.json": "309b0889c43c1806fc974b9e6e171cb0f00b888d3b0abb134c50c5f7e9c22b2b",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\32-finite-budget-boundaries-COVERAGE.json": "fc5b752236d36d9558604e5f9c754aa8cea7f285fbc7df7edce5a26431a1467c",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\33-cli-rejection-COVERAGE.json": "f3651f32aaf18c6e23f42a4515c91a4ae5820294e9c1a237d2dc727a0fccb0a3",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\34-format-reciprocity-COVERAGE.json": "99de4e1aa53f136abb629d6bd77cc5e835b440da33dd256d253688eb28b435cb",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\35-empty-counts-and-tolerance-COVERAGE.json": "328984933313ab4bafc6c4886a32168105e72cea6847954dd1325ff1820b94d4",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\36-gcd-preflight-COVERAGE.json": "183937f563ca1834eb92632a9b06c799ca74d447c9939461c5f7f6712653f5c4",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\collect_evidence.py": "ec4ef1382ec5d5ee3903b62abce0055183942f3db0cf4bc8897e555082f17169",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\collector-attempt1-error.json": "5401b1bada19fdfdd49cbd22e2a26ce805e6650680d7547062f4db7038b3b61e",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\FINAL-focused-run.json": "2c074ef326eb3a8110b418e84561c2d35baac8f0b421d14f404bbb5fa824e7d1",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\finish_handoff.py": "2f44eefca07dab5f0024b2c19306661f81d306bc67c48b301e9f95cb69569af5",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\git-observations.json": "dcbb7fd03d5f0d73ca5639d61019cb22890a24aa02ada8c20629ce640c5fac0a",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\REAL-synthetic-cli-runs.json": "723e89a44d7a13561a269c72211a532b5701c2acbad0c35849fbc713df2ba35b",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\run_cycle.py": "c8119405bd7edf465f1d5c977c778ba60efa3979c1c8a7ee20219c2640801c22",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-canonical-offplane-mutant-NOT-TS.json": "db1be1837d1b157c3686dddef95ff50078382087659e55851601e8e0fc623840",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-canonical-weight-mutant-NOT-TS.json": "831332403986560d85b3a91ed49a99e6312cff88575ced059a7495dd29a2ff28",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-math-edge-linear-NOT-TS.json": "b18e0bec5ae2e68281dd83f9ba2d4eda93557428f10c1c9ca53dab459554f858",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-py-agent\\synthetic-two-cases-NOT-TS.json": "be1a419a4ec8d20e0439812e63226087440a3aea7eb31a678f2dacb147d59a46"
+  },
+  "remaining": [
+    "Parent untouched real producer export interoperability, canonical weight/off-plane mutants on that export.",
+    "Parent fresh independent math/spec and quality/security review; later serial regressions."
+  ],
+  "limitations": [
+    "Supplied closed triangle only: no source identity, global CAD, clinical or release/exe claim.",
+    "Two algorithmic reference budgets are not process RSS or wall-time guarantees."
+  ]
+}

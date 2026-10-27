@@ -1,0 +1,23 @@
+{
+  "label": "01-public-GREEN",
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_face_cubic_verify.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+  "files": {
+    "v03_face_cubic_verify.py": "d98b943c3258146bf836f076329d3f2cdb8052acaf9fb6430fdbb7b5781a8cdd",
+    "test_v03_face_cubic_verify.py": "1c3d788b6dd936a8f842f14bca90e0ded8f5be1ef65dbaf03fe7e8088d0bc44a"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-face-cubic-py-agent/collect_evidence.py",
+  "exit_code": 1,
+  "phase": "Git provenance collection after all real synthetic CLI runs and final focused suite had completed and their files were saved",
+  "exception": "PermissionError: [WinError 5] Odmowa dostępu",
+  "blocked_call": "subprocess.run(['git', '-C', str(ROOT), 'rev-parse', 'HEAD'])",
+  "discovery": "shutil.which('git') resolved a WindowsApps packaged git.EXE; the terminal's Bash git runs successfully. No substitute Git output was fabricated.",
+  "recovery": "Retain all produced evidence and run finish_handoff.py using separate real terminal Git observations in git-observations.json."
+}

@@ -1,0 +1,13 @@
+{
+  "src/trimline/face-cubic.ts": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1",
+  "src/trimline/numerics.ts": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25",
+  "src/trimline/bezier.ts": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e",
+  "tests/v03-face-cubic.test.ts": "b03a33a71ee480a838b125f93e8ef810f1335966e2067957ed0a2895dbfbb5ae",
+  "tests/reference/v03_face_cubic_verify.py": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df",
+  "tests/reference/test_v03_face_cubic_verify.py": "2133e64e575a1a425402e51c0b7e7679819bdb3a35ea109b76a50c5adc27d111",
+  "tests/reference/test_v03_face_cubic_interop.py": "b858f6ec6897af72559df648a62533416f50b2504dde68463ce38470d1a0a9f2",
+  "tests/reference/v03_bezier_verify.py": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c",
+  "tests/fixtures/v03-face-cubic-proof-actual.json": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+  "tests/fixtures/v03-face-cubic-proof.schema.json": "65bb939886c79cfb6292ceeabc2c895f1f4f3c3cb8522a97497ec84490328bdb",
+  "docs/plans/v03-face-cubic-containment.md": "692ebe317eec27178ab6334ed479f0dacf90746b3d57d5dc0423cad3597aaa5e"
+}

@@ -1,0 +1,19 @@
+{
+  "python_tests": 39,
+  "typescript_tests": {
+    "numTotalTests": 19,
+    "numPassedTests": 19,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "success": true
+  },
+  "reviewed_files_unchanged_since_test": {
+    "src/trimline/face-cubic.ts": true,
+    "tests/v03-face-cubic.test.ts": true,
+    "tests/reference/v03_face_cubic_verify.py": true,
+    "tests/reference/test_v03_face_cubic_verify.py": true,
+    "tests/reference/test_v03_face_cubic_interop.py": true,
+    "tests/fixtures/v03-face-cubic-proof-actual.json": true
+  },
+  "witness_count_verified": true
+}

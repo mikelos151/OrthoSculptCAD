@@ -1,0 +1,36 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (18 tests | 1 failed) 85ms
+   × exports untouched real face cubic proofs 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > exports untouched real face cubic proofs
+AssertionError: expected [Function] to not throw an error but 'Error: not implemented' was thrown
+
+- Expected:
+undefined
+
++ Received:
+"Error: not implemented"
+
+ ❯ tests/v03-face-cubic.test.ts:366:58
+    364| it('exports untouched real face cubic proofs', () => {
+    365|   let produced: ReturnType<typeof produceProofBundle> | undefined;
+    366|   expect(() => { produced = produceProofBundle(); }).not.toThrow();
+       |                                                          ^
+    367|   const bundle = produced!;
+    368|   expect(bundle.format).toBe('OrthoSculptFaceCubicProof');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 17 passed (18)
+   Start at  16:05:20
+   Duration  264ms (transform 45ms, setup 0ms, import 57ms, tests 85ms, environment 0ms)
+
+
+EXIT: 1

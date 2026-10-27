@@ -1,0 +1,30 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (18 tests | 1 failed) 79ms
+   × exports untouched real face cubic proofs 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > exports untouched real face cubic proofs
+Error: not implemented
+ ❯ produceProofBundle tests/v03-face-cubic.test.ts:361:9
+    359| function produceProofBundle(): { format: 'OrthoSculptFaceCubicProof'; …
+    360|   cases: { id: string; tolerance: Rational; containment: faceCubic.Fac…
+    361|   throw new Error('not implemented');
+       |         ^
+    362| }
+    363|
+ ❯ tests/v03-face-cubic.test.ts:365:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 17 passed (18)
+   Start at  16:05:05
+   Duration  264ms (transform 44ms, setup 0ms, import 55ms, tests 79ms, environment 0ms)
+
+
+EXIT: 1

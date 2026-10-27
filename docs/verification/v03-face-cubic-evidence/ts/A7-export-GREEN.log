@@ -1,0 +1,12 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1 -t "exports untouched real face cubic proofs"
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 17 skipped (18)
+   Start at  16:06:40
+   Duration  273ms (transform 49ms, setup 0ms, import 65ms, tests 27ms, environment 0ms)
+
+
+EXIT: 0

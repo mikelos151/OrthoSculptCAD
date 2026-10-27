@@ -1,0 +1,47 @@
+{
+  "scope": "305-byte-path M0 kernel/evidence subset export, not full repository/GUI or release ZIP",
+  "results": [
+    {
+      "temporaryAutocrlf": "true",
+      "checks": [
+        {
+          "export": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-export-e6yjc7g8",
+          "bytePathsVerified": 305,
+          "pythonPassed": 64,
+          "exitCode": 0
+        },
+        {
+          "passed": true,
+          "cases": 1,
+          "leaves": 16,
+          "samples": 17
+        }
+      ],
+      "exitCode": 0
+    },
+    {
+      "temporaryAutocrlf": "false",
+      "checks": [
+        {
+          "export": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-export-7h8tpm65",
+          "bytePathsVerified": 305,
+          "pythonPassed": 64,
+          "exitCode": 0
+        },
+        {
+          "passed": true,
+          "cases": 1,
+          "leaves": 16,
+          "samples": 17
+        }
+      ],
+      "exitCode": 0
+    }
+  ],
+  "unchanged": {
+    "preexistingIndexEntriesUnchangedExceptIntentionalAttributes": 667,
+    "worktreeBytePathsUnchanged": 305,
+    "globalAutocrlfUnchanged": true
+  },
+  "acceptance": "M0c2 supplied triangle core only; both independent reviews PASS; no surface-source provenance or whole trimline/cut/shell claim"
+}

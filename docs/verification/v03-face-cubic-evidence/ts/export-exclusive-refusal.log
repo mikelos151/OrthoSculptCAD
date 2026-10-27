@@ -1,0 +1,31 @@
+COMMAND: node node_modules/vitest/vitest.mjs run tests/v03-face-cubic.test.ts --maxWorkers=1 -t "exports untouched real face cubic proofs"
+ORTHO_FACE_CUBIC_EVIDENCE_OUT='C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-ts-agent\\finalproof-delivery.json'
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-face-cubic.test.ts (19 tests | 1 failed | 18 skipped) 20ms
+   × exports untouched real face cubic proofs 19ms
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 18 skipped (19)
+   Start at  16:08:47
+   Duration  186ms (transform 36ms, setup 0ms, import 49ms, tests 20ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-face-cubic.test.ts > exports untouched real face cubic proofs
+Error: EEXIST: file already exists, open 'C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-face-cubic-ts-agent\finalproof-delivery.json'
+ ❯ writeProofEvidence tests/v03-face-cubic.test.ts:395:3
+    393|   // Use the resolved parent for creation too; wx refuses existing fil…
+    394|   const target = join(targetParent, basename(output));
+    395|   writeFileSync(target, JSON.stringify(bundle,
+       |   ^
+    396|     (_key, value: unknown) => typeof value === 'bigint' ? value.toStri…
+    397| }
+ ❯ tests/v03-face-cubic.test.ts:413:3
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+EXIT: 1

@@ -1,0 +1,23 @@
+{
+  "label": "01-public-RED",
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_face_cubic_verify.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition) ... FAIL\n\n======================================================================\nFAIL: test_mathematical_edge_linear_composition (test_v03_face_cubic_verify.FaceCubicTests.test_mathematical_edge_linear_composition)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_face_cubic_verify.py\", line 38, in test_mathematical_edge_linear_composition\n    self.assertTrue(callable(getattr(verifier, \"verify_bundle\", None)),\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                    \"public verify_bundle must be callable\")\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : public verify_bundle must be callable\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nFAILED (failures=1)\n",
+  "files": {
+    "v03_face_cubic_verify.py": "75574b4295bd1ef1882653758444cac38e43def7cc0e3be93f5b06c033b8031c",
+    "test_v03_face_cubic_verify.py": "1c3d788b6dd936a8f842f14bca90e0ded8f5be1ef65dbaf03fe7e8088d0bc44a"
+  }
+}

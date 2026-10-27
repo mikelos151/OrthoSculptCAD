@@ -1,0 +1,49 @@
+{
+  "scope": "Actual TS producer interop negative controls; not complete CAD acceptance",
+  "producerSha256": "5166cdf3504d2bbecb0ff0fb6ea67fa9561988a4f31fbf133009e3db09f5c393",
+  "inputUnchanged": true,
+  "negativeControls": [
+    {
+      "kind": "weight",
+      "schemaValid": true,
+      "oldProjection": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      },
+      "newCliExitCode": 1,
+      "newCliResult": {
+        "passed": false,
+        "status": "FAIL",
+        "error": "certificate rejected"
+      },
+      "mutantPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-parent-cli\\weight-canonical-mutant.json"
+    },
+    {
+      "kind": "offplane",
+      "schemaValid": true,
+      "oldProjection": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 21,
+        "samples": 27
+      },
+      "newCliExitCode": 1,
+      "newCliResult": {
+        "passed": false,
+        "status": "FAIL",
+        "error": "certificate rejected"
+      },
+      "mutantPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-face-cubic-parent-cli\\offplane-canonical-mutant.json"
+    }
+  ],
+  "reducedBudgetCli": {
+    "exitCode": 2,
+    "result": {
+      "passed": false,
+      "status": "UNKNOWN",
+      "error": "verification budget exhausted"
+    }
+  }
+}
