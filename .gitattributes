@@ -1,0 +1,97 @@
+# Byte-bound M0 source and evidence: preserve recorded working bytes.
+# LF inputs stay exact; already-normalized CRLF logs have explicit CRLF checkout.
+# New M0c1 artifacts are staged raw before any newline normalization.
+# Captured terminal whitespace is evidence, not source formatting to repair.
+docs/verification/v03-bezier-evidence/** whitespace=cr-at-eol
+docs/verification/v03-bezier-independent-evidence/** whitespace=cr-at-eol
+docs/verification/v03-bezier-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/verification/v03-bezier-independent-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+/.gitattributes -text
+docs/verification/v03-bezier-evidence/** -text
+docs/verification/v03-bezier-independent-evidence/** -text
+docs/verification/v03-bezier-*.json -text
+docs/verification/v03-byte-checkout.json -text
+src/trimline/bezier.ts -text
+tests/v03-bezier.test.ts -text
+tests/fixtures/v03-bezier-proof-actual.json -text
+tests/reference/v03_bezier_verify.py -text
+tests/reference/test_v03_bezier_verify.py -text
+tests/reference/test_v03_bezier_interop.py -text
+tests/reference/test_v03_bezier_aliases.py -text
+docs/verification/v03-m0-evidence/index.json -text
+docs/verification/v03-m0-evidence/numerics/01-construction-red.log -text
+docs/verification/v03-m0-evidence/numerics/02-construction-green.log -text
+docs/verification/v03-m0-evidence/numerics/03-validation-red.log -text
+docs/verification/v03-m0-evidence/numerics/04-validation-green.log -text
+docs/verification/v03-m0-evidence/numerics/05-operations-red.log -text
+docs/verification/v03-m0-evidence/numerics/06-operations-green.log -text
+docs/verification/v03-m0-evidence/numerics/07-budget-red.log -text
+docs/verification/v03-m0-evidence/numerics/08-budget-green.log -text
+docs/verification/v03-m0-evidence/numerics/09-forge-red.log -text
+docs/verification/v03-m0-evidence/numerics/10-forge-green.log -text
+docs/verification/v03-m0-evidence/numerics/11-decode-red.log -text
+docs/verification/v03-m0-evidence/numerics/12-decode-green.log -text
+docs/verification/v03-m0-evidence/numerics/13-rounding-red.log -text
+docs/verification/v03-m0-evidence/numerics/14-rounding-green.log -text
+docs/verification/v03-m0-evidence/numerics/15-subnormal-red.log -text
+docs/verification/v03-m0-evidence/numerics/16-subnormal-green.log -text
+docs/verification/v03-m0-evidence/numerics/17-overflow-red.log -text
+docs/verification/v03-m0-evidence/numerics/18-overflow-green.log -text
+docs/verification/v03-m0-evidence/numerics/19-properties-green.log -text
+docs/verification/v03-m0-evidence/numerics/20-tsc.log -text
+docs/verification/v03-m0-evidence/numerics/21-final-tests.log -text
+docs/verification/v03-m0-evidence/numerics/22-final-tsc.log -text
+docs/verification/v03-m0-evidence/numerics/23-final-tests.log -text
+docs/verification/v03-m0-evidence/numerics/24-final-tsc.log -text
+docs/verification/v03-m0-evidence/numerics/EVIDENCE.md -text
+docs/verification/v03-m0-independent-evidence/index.json -text
+docs/verification/v03-m0-independent-evidence/quality/additional-cases.json -text
+docs/verification/v03-m0-independent-evidence/quality/additional-results.json -text
+docs/verification/v03-m0-independent-evidence/quality/additional-review.log -text
+docs/verification/v03-m0-independent-evidence/quality/additional_review.mjs -text
+docs/verification/v03-m0-independent-evidence/quality/independent_audit.py -text
+docs/verification/v03-m0-independent-evidence/quality/numerics.review.mjs -text
+docs/verification/v03-m0-independent-evidence/quality/regenerated-fixture.json -text
+docs/verification/v03-m0-independent-evidence/quality/targeted-vitest.log -text
+docs/verification/v03-m0-independent-evidence/quality/typescript.log -text
+docs/verification/v03-m0-independent-evidence/spec/inputs.json -text
+docs/verification/v03-m0-independent-evidence/spec/outputs.json -text
+docs/verification/v03-m0-independent-evidence/spec/regenerated-fixture.json -text
+docs/verification/v03-m0-independent-evidence/spec/review.py -text
+src/trimline/numerics.ts -text
+tests/fixtures/v03-f32-oracle.json -text
+tests/reference/test_v03_f32_oracle.py -text
+tests/reference/v03_f32_oracle.py -text
+tests/v03-numerics-oracle.test.ts -text
+tests/v03-numerics.test.ts -text
+docs/verification/v03-m0-evidence/oracle/01-double-round-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/01-double-round-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/02-sign-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/02-sign-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/03-overflow-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/03-overflow-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/04-parse-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/04-parse-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/05-parse-bounds-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/05-parse-bounds-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/06-fraction-validation-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/06-fraction-validation-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/07-fixture-schema-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/07-fixture-schema-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/08-default-cases-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/08-default-cases-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/09-cli-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/09-cli-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/10-repository-fixture-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/10-repository-fixture-red.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/11-final-green.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/fixture-interval-audit.log text eol=crlf
+docs/verification/v03-m0-evidence/oracle/generator.log text eol=crlf
+docs/verification/v03-m0-independent-evidence/quality/independent-audit.json text eol=crlf
+docs/verification/v03-m0-independent-evidence/quality/independent-audit.log text eol=crlf
+docs/verification/v03-m0-independent-evidence/quality/python-unittest.log text eol=crlf
+docs/verification/v03-m0-independent-evidence/spec/focused-tests.log text eol=crlf
+docs/verification/v03-m0-independent-evidence/spec/generator.log text eol=crlf
+docs/verification/v03-m0-independent-evidence/spec/harness-node.log text eol=crlf
+docs/verification/v03-m0-independent-evidence/spec/harness-summary.json text eol=crlf
+docs/verification/v03-m0-independent-evidence/spec/python-unittest.log text eol=crlf

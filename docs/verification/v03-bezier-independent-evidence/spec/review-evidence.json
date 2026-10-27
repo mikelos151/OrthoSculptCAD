@@ -1,0 +1,207 @@
+{
+  "focused_python_tests": 11,
+  "fresh_ts": {
+    "passed": true,
+    "cases": 6,
+    "leaves": 97,
+    "samples": 103
+  },
+  "fixture": {
+    "passed": true,
+    "cases": 6,
+    "leaves": 97,
+    "samples": 103
+  },
+  "fresh_export_sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa",
+  "fixture_sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa",
+  "fresh_matches_fixture_semantically": true,
+  "independent_hermite_bernstein_product_cases": [
+    {
+      "passed": true,
+      "cases": 40,
+      "leaves": 120,
+      "samples": 160
+    },
+    {
+      "passed": true,
+      "cases": 40,
+      "leaves": 120,
+      "samples": 160
+    }
+  ],
+  "exact_whole_interval_product_comparisons": 240,
+  "formal_coefficient_identities": 4,
+  "negative_controls": [
+    {
+      "label": "legacy alias controls4x3Rat",
+      "result": "REJECT",
+      "reason": "invalid object shape"
+    },
+    {
+      "label": "legacy alias toleranceRat",
+      "result": "REJECT",
+      "reason": "invalid object shape"
+    },
+    {
+      "label": "legacy alias point3Rat",
+      "result": "REJECT",
+      "reason": "invalid object shape"
+    },
+    {
+      "label": "legacy alias upperSquaredRat",
+      "result": "REJECT",
+      "reason": "invalid object shape"
+    },
+    {
+      "label": "legacy alias maxUpperSquaredRat",
+      "result": "REJECT",
+      "reason": "invalid object shape"
+    },
+    {
+      "label": "leaf interior +1 with unchanged endpoints",
+      "result": "REJECT",
+      "reason": "subcurve polynomial mismatch"
+    },
+    {
+      "label": "real curved leaf zero underclaim",
+      "result": "REJECT",
+      "reason": "continuous bound not certified"
+    },
+    {
+      "label": "gap",
+      "result": "REJECT",
+      "reason": "invalid parameter coverage"
+    },
+    {
+      "label": "overlap",
+      "result": "REJECT",
+      "reason": "invalid parameter coverage"
+    },
+    {
+      "label": "maximum",
+      "result": "REJECT",
+      "reason": "maximum upper bound mismatch"
+    },
+    {
+      "label": "sample",
+      "result": "REJECT",
+      "reason": "sample point mismatch"
+    }
+  ],
+  "cli_negative_controls": [
+    "duplicate-key",
+    "nonfinite",
+    "deep-nesting",
+    "utf8",
+    "oversize-before-open"
+  ],
+  "budget_unknown_controls": [
+    {
+      "limit": "MAX_OPERATIONS",
+      "exit_code": 2,
+      "result": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    },
+    {
+      "limit": "MAX_WEIGHTED_WORK",
+      "exit_code": 2,
+      "result": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    },
+    {
+      "limit": "MAX_NUMERIC_CHARS",
+      "exit_code": 2,
+      "result": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    },
+    {
+      "limit": "MAX_INTERMEDIATE_BITS",
+      "exit_code": 2,
+      "result": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    }
+  ],
+  "source_files_unchanged": true,
+  "static_scan": {
+    "secrets": [],
+    "shell": [],
+    "eval_exec_pickle": [],
+    "network": []
+  },
+  "commands": [
+    {
+      "command": "node node_modules/vitest/vitest.mjs run tests/v03-bezier.test.ts --configLoader native --cache false --maxWorkers 1 --no-file-parallelism --reporter verbose",
+      "environment": {
+        "ORTHO_BEZIER_EVIDENCE_OUT": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\actual-ts-export.json"
+      },
+      "exit_code": 0,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\targeted-vitest.log"
+    },
+    {
+      "command": "python -B run_review.py [unittest.VerifierTests excluding hard-coded-directory CLI test + ActualTypeScriptInteropTests]",
+      "tests_run": 11,
+      "success": true,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\focused-python.log"
+    },
+    {
+      "command": "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe -B C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py --input C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\actual-ts-export.json",
+      "environment": {},
+      "exit_code": 0,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\fresh-cli.log"
+    },
+    {
+      "command": "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe -B C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py --input C:\\Users\\sandr\\OrthoSculptCAD\\tests\\fixtures\\v03-bezier-proof-actual.json",
+      "environment": {},
+      "exit_code": 0,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\fixture-cli.log"
+    },
+    {
+      "command": "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe -B C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py --input C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\mutated-controls.json",
+      "environment": {},
+      "exit_code": 1,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\mutated-cli.log"
+    },
+    {
+      "command": "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe -B C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py --input C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\duplicate-key.json",
+      "environment": {},
+      "exit_code": 1,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\duplicate-key-cli.log"
+    },
+    {
+      "command": "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe -B C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py --input C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\nonfinite.json",
+      "environment": {},
+      "exit_code": 1,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\nonfinite-cli.log"
+    },
+    {
+      "command": "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe -B C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py --input C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\deep-nesting.json",
+      "environment": {},
+      "exit_code": 1,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\deep-nesting-cli.log"
+    },
+    {
+      "command": "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe -B C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py --input C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\utf8.json",
+      "environment": {},
+      "exit_code": 1,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\utf8-cli.log"
+    },
+    {
+      "command": "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe -B C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py --input C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\oversize.json",
+      "environment": {},
+      "exit_code": 1,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-bezier-spec-review\\oversize-cli.log"
+    }
+  ]
+}

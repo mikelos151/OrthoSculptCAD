@@ -1,0 +1,37 @@
+[
+  {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\bezier.ts",
+    "bytes": 6895,
+    "sha256": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e"
+  },
+  {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\v03-bezier.test.ts",
+    "bytes": 21229,
+    "sha256": "0a694b4a641a675e48eb9dc0c1d51a8a8c1d57536dea23fb41965f1f06ec2547"
+  },
+  {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py",
+    "bytes": 14479,
+    "sha256": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c"
+  },
+  {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_bezier_verify.py",
+    "bytes": 20466,
+    "sha256": "1a863b6c41809e373c9637122d91235b5dee203f7cba7b224ce262f07d5edaf1"
+  },
+  {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_bezier_interop.py",
+    "bytes": 1904,
+    "sha256": "ef5af078e30685fa311ea85bb1b70f75272fa6c838d5937f0ed0ab17667f2770"
+  },
+  {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\fixtures\\v03-bezier-proof-actual.json",
+    "bytes": 208240,
+    "sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa"
+  },
+  {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\2026-10-27-v03-bezier-certification.md",
+    "bytes": 10733,
+    "sha256": "c473b6dc5bba5f6de86638f397e76d6119daf8adb73f027e8efd83841661313c"
+  }
+]

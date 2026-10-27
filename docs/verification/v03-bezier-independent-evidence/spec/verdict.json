@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [],
+  "summary": "Niezależny spec/math review M0c1 PASS: bieżące TS i Python realizują zamrożony kontrakt lokalnej aproksymacji cubic3D; brak wykrytych blokerów. To nie jest certyfikat prostoty, osadzenia na powierzchni, cut/shell ani dopuszczenie kliniczne.",
+  "math_review": [
+    "bezier.ts:63-84: B(u)-L(u)=sum Bernstein3_i(u) D_i; nieujemne wagi sumujące się do 1 i wypukłość normy kwadratowej dają całoprzedziałowe U=max(||D1||²,||D2||²). Nie używa się próbek ani Float64 do decyzji.",
+    "bezier.ts:87-99,119-141: dokładny de Casteljau zachowuje ograniczenie root do przedziału; DFS left-first pokrywa [0,1] bez luk. Każdy punkt krzywej i każdy punkt odpowiedniej cięciwy ma partnera przy tym samym parametrze lokalnym, co ogranicza oba kierunki Hausdorffa, także dla zero-chord i stałej krzywej.",
+    "v03_bezier_verify.py:200-274: niezależna baza potęgowa, dokładne podstawienie t=t0+(t1-t0)u i tożsamość wszystkich współczynników odrzucają fałszywe liście nawet przy dobrych endpointach. Kwadrat normy stopnia <=6 i poprawna konwersja b_k=sum c_j*binom(k,j)/binom(6,j) certyfikują cały przedział.",
+    "Sprawdzone samples/leaves, ciągłość, końce, maxUpperSquared jako maksimum zgłoszonych U, zakres tolerance, rezerwacja dwóch dzieci i minimalnej liczby przyszłych liści, jeden kumulatywny ctx oraz brak częściowego wyniku po odmowie.",
+    "Weryfikator przyjmuje wyłącznie controls/tolerance/point/upperSquared/maxUpperSquared. Każdy z pięciu aliasów sprawdzony oddzielnym skażeniem i odrzucony. Wyczerpanie każdego z czterech sprawdzanych budżetów daje exit2/UNKNOWN, nie PASS."
+  ],
+  "verification": {
+    "workdir": "C:/Users/sandr/OrthoSculptCAD",
+    "driver_command": "python -B C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-spec-review/run_review.py",
+    "driver_exit_code": 0,
+    "vitest_command": "node node_modules/vitest/vitest.mjs run tests/v03-bezier.test.ts --configLoader native --cache false --maxWorkers 1 --no-file-parallelism --reporter verbose",
+    "vitest_environment": "ORTHO_BEZIER_EVIDENCE_OUT=C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-spec-review/actual-ts-export.json",
+    "vitest_result": "exit0; 21/21 PASS",
+    "python_unittest_result": "11/11 PASS; istniejący test CLI z cudzym hard-coded katalogiem pominięty w runnerze; własne próby CLI wykonane niezależnie",
+    "cli_command": "python -B tests/reference/v03_bezier_verify.py --input C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-spec-review/actual-ts-export.json",
+    "cli_result": {"exit_code": 0, "passed": true, "cases": 6, "leaves": 97, "samples": 103},
+    "fresh_export_and_fixture_sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa",
+    "independent_witnesses": "80 syntetycznych cubic z niezależnymi kontrolami Hermite'a na nieregularnych przedziałach: 240 dokładnych porównań Bernstein-product oracle z Python power/Bernstein6; wszystkie zgodne. Dodatkowo cztery formalne tożsamości współczynników B-L, po jednej dla każdej kontroli.",
+    "negative_controls": "11 odrzuconych mutacji rzeczywistego eksportu; skażenie kontroli wnętrza przy zachowanych endpointach: CLI exit1/FAIL. Duplicate JSON keys, NaN, głębokie zagnieżdżenie, błędne UTF-8 i plik >16MiB: exit1. Bramka oversize sprawdzona przed open. Cztery budżety: exit2/UNKNOWN.",
+    "not_run": "Pełne suity, przeglądarki, heavy bench i tsc pozostawiono rodzicowi; bez ponownego review całości numerics.ts i bez weryfikacji historii TDD."
+  },
+  "evidence_directory": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-spec-review/",
+  "evidence_files": ["run_review.py", "review-evidence.json", "targeted-vitest.log", "focused-python.log", "fresh-cli.log", "fixture-cli.log", "mutated-cli.log", "actual-ts-export.json", "mutated-controls.json", "source-hashes-before.json", "source-hashes-after.json"],
+  "files_modified": "Wyłącznie nowe artefakty we własnym scratch. Sześć plików review ma identyczne SHA256 przed/po; żadnych zapisów, stage, commit, stash ani reset w repo. W trakcie pracy rodzic dodawał własne raporty docs/verification; nie były naszym wejściem ani wynikiem.",
+  "issues_encountered": []
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "synthetic Python in-memory capacity check, NOT TS evidence",
+  "summary": {
+    "passed": true,
+    "cases": 1,
+    "leaves": 20000,
+    "samples": 20001
+  },
+  "elapsed_seconds": 9.156098599996767
+}

@@ -1,0 +1,357 @@
+{
+  "passed": true,
+  "checks": 71,
+  "results": [
+    {
+      "name": "fresh_actual_TS_export_API_and_CLI",
+      "passed": true,
+      "summary": {
+        "passed": true,
+        "cases": 6,
+        "leaves": 97,
+        "samples": 103
+      },
+      "sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa"
+    },
+    {
+      "name": "fresh_export_equals_repository_fixture_semantically",
+      "passed": true
+    },
+    {
+      "name": "linear:root-control",
+      "passed": true
+    },
+    {
+      "name": "linear:leaf-control",
+      "passed": true
+    },
+    {
+      "name": "linear:sample-point",
+      "passed": true
+    },
+    {
+      "name": "linear:negative-bound",
+      "passed": true
+    },
+    {
+      "name": "linear:false-maximum",
+      "passed": true
+    },
+    {
+      "name": "curved:root-control",
+      "passed": true
+    },
+    {
+      "name": "curved:leaf-control",
+      "passed": true
+    },
+    {
+      "name": "curved:sample-point",
+      "passed": true
+    },
+    {
+      "name": "curved:negative-bound",
+      "passed": true
+    },
+    {
+      "name": "curved:false-maximum",
+      "passed": true
+    },
+    {
+      "name": "nonplanar:root-control",
+      "passed": true
+    },
+    {
+      "name": "nonplanar:leaf-control",
+      "passed": true
+    },
+    {
+      "name": "nonplanar:sample-point",
+      "passed": true
+    },
+    {
+      "name": "nonplanar:negative-bound",
+      "passed": true
+    },
+    {
+      "name": "nonplanar:false-maximum",
+      "passed": true
+    },
+    {
+      "name": "zerochord:root-control",
+      "passed": true
+    },
+    {
+      "name": "zerochord:leaf-control",
+      "passed": true
+    },
+    {
+      "name": "zerochord:sample-point",
+      "passed": true
+    },
+    {
+      "name": "zerochord:negative-bound",
+      "passed": true
+    },
+    {
+      "name": "zerochord:false-maximum",
+      "passed": true
+    },
+    {
+      "name": "constant:root-control",
+      "passed": true
+    },
+    {
+      "name": "constant:leaf-control",
+      "passed": true
+    },
+    {
+      "name": "constant:sample-point",
+      "passed": true
+    },
+    {
+      "name": "constant:negative-bound",
+      "passed": true
+    },
+    {
+      "name": "constant:false-maximum",
+      "passed": true
+    },
+    {
+      "name": "negative:root-control",
+      "passed": true
+    },
+    {
+      "name": "negative:leaf-control",
+      "passed": true
+    },
+    {
+      "name": "negative:sample-point",
+      "passed": true
+    },
+    {
+      "name": "negative:negative-bound",
+      "passed": true
+    },
+    {
+      "name": "negative:false-maximum",
+      "passed": true
+    },
+    {
+      "name": "alias:('input',):controls:replace",
+      "passed": true
+    },
+    {
+      "name": "alias:('input',):controls:add",
+      "passed": true
+    },
+    {
+      "name": "alias:('input',):tolerance:replace",
+      "passed": true
+    },
+    {
+      "name": "alias:('input',):tolerance:add",
+      "passed": true
+    },
+    {
+      "name": "alias:('result', 'samples', 0):point:replace",
+      "passed": true
+    },
+    {
+      "name": "alias:('result', 'samples', 0):point:add",
+      "passed": true
+    },
+    {
+      "name": "alias:('result', 'leaves', 0):controls:replace",
+      "passed": true
+    },
+    {
+      "name": "alias:('result', 'leaves', 0):controls:add",
+      "passed": true
+    },
+    {
+      "name": "alias:('result', 'leaves', 0):upperSquared:replace",
+      "passed": true
+    },
+    {
+      "name": "alias:('result', 'leaves', 0):upperSquared:add",
+      "passed": true
+    },
+    {
+      "name": "alias:('result',):maxUpperSquared:replace",
+      "passed": true
+    },
+    {
+      "name": "alias:('result',):maxUpperSquared:add",
+      "passed": true
+    },
+    {
+      "name": "canonical-token:'-0'",
+      "passed": true
+    },
+    {
+      "name": "canonical-token:'+1'",
+      "passed": true
+    },
+    {
+      "name": "canonical-token:'01'",
+      "passed": true
+    },
+    {
+      "name": "canonical-token:' 1'",
+      "passed": true
+    },
+    {
+      "name": "canonical-token:'1 '",
+      "passed": true
+    },
+    {
+      "name": "canonical-token:'1\\n'",
+      "passed": true
+    },
+    {
+      "name": "canonical-token:'\u0661'",
+      "passed": true
+    },
+    {
+      "name": "canonical-token:'1e0'",
+      "passed": true
+    },
+    {
+      "name": "CLI:duplicate-root",
+      "passed": true,
+      "exit": 1,
+      "response": {
+        "passed": false,
+        "status": "FAIL",
+        "error": "certificate rejected"
+      }
+    },
+    {
+      "name": "CLI:duplicate-numerator",
+      "passed": true,
+      "exit": 1,
+      "response": {
+        "passed": false,
+        "status": "FAIL",
+        "error": "certificate rejected"
+      }
+    },
+    {
+      "name": "CLI:escaped-duplicate",
+      "passed": true,
+      "exit": 1,
+      "response": {
+        "passed": false,
+        "status": "FAIL",
+        "error": "certificate rejected"
+      }
+    },
+    {
+      "name": "CLI:float-version",
+      "passed": true,
+      "exit": 1,
+      "response": {
+        "passed": false,
+        "status": "FAIL",
+        "error": "certificate rejected"
+      }
+    },
+    {
+      "name": "CLI:nan-version",
+      "passed": true,
+      "exit": 1,
+      "response": {
+        "passed": false,
+        "status": "FAIL",
+        "error": "certificate rejected"
+      }
+    },
+    {
+      "name": "CLI:deep-nesting",
+      "passed": true,
+      "exit": 1,
+      "response": {
+        "passed": false,
+        "status": "FAIL",
+        "error": "certificate rejected"
+      }
+    },
+    {
+      "name": "pre-payload:case-count",
+      "passed": true
+    },
+    {
+      "name": "pre-payload:leaf-count",
+      "passed": true
+    },
+    {
+      "name": "pre-payload:aggregate-count",
+      "passed": true
+    },
+    {
+      "name": "preflight-before-Fraction:mul",
+      "passed": true
+    },
+    {
+      "name": "preflight-before-Fraction:add",
+      "passed": true
+    },
+    {
+      "name": "preflight-before-Fraction:sub",
+      "passed": true
+    },
+    {
+      "name": "preflight-before-Fraction:less",
+      "passed": true
+    },
+    {
+      "name": "CLI-UNKNOWN:MAX_OPERATIONS",
+      "passed": true,
+      "exit": 2,
+      "response": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    },
+    {
+      "name": "CLI-UNKNOWN:MAX_WEIGHTED_WORK",
+      "passed": true,
+      "exit": 2,
+      "response": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    },
+    {
+      "name": "CLI-UNKNOWN:MAX_NUMERIC_CHARS",
+      "passed": true,
+      "exit": 2,
+      "response": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    },
+    {
+      "name": "CLI-UNKNOWN:MAX_INTERMEDIATE_BITS",
+      "passed": true,
+      "exit": 2,
+      "response": {
+        "passed": false,
+        "status": "UNKNOWN",
+        "error": "verification budget exhausted"
+      }
+    },
+    {
+      "name": "oversize-file-before-open-and-parse",
+      "passed": true
+    },
+    {
+      "name": "reviewed-input-hashes-unchanged",
+      "passed": true
+    }
+  ]
+}

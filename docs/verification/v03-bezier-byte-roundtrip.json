@@ -1,0 +1,48 @@
+{
+  "scope": "Byte-bound M0a/b + M0c1 subset export, not full repo/GUI or release ZIP",
+  "results": [
+    {
+      "temporaryAutocrlf": "true",
+      "checks": [
+        {
+          "export": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-cubic-export-z8j_hqsv",
+          "verifiedBytePaths": 167,
+          "pythonTests": 25,
+          "pythonExitCode": 0
+        },
+        {
+          "passed": true,
+          "cases": 1,
+          "leaves": 29,
+          "samples": 30
+        }
+      ],
+      "exitCode": 0
+    },
+    {
+      "temporaryAutocrlf": "false",
+      "checks": [
+        {
+          "export": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-cubic-export-36it0zyt",
+          "verifiedBytePaths": 167,
+          "pythonTests": 25,
+          "pythonExitCode": 0
+        },
+        {
+          "passed": true,
+          "cases": 1,
+          "leaves": 29,
+          "samples": 30
+        }
+      ],
+      "exitCode": 0
+    }
+  ],
+  "unchanged": {
+    "originalIndexEntriesUnchanged": 568,
+    "worktreeBytePathsUnchanged": 167,
+    "globalAutocrlfUnchanged": true
+  },
+  "formatting": "Captured CRLF/blank-line terminal records retained byte-exact; path-scoped whitespace attributes only for evidence, source/tests retain formatting checks. Initial raw-log diff-check failure was not a functional code failure.",
+  "sourceAcceptance": "Both independent core reviews PASS; 1169 Node tests and 25 Python tests; no claim of full trimline/cut/shell completion"
+}

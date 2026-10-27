@@ -1,0 +1,33 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-bezier.test.ts (20 tests | 1 failed) 165ms
+     × exports real synthetic sampleCubic results only to an explicitly requested scratch file 69ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-bezier.test.ts > v03 certified cubic approximation > exports real synthetic sampleCubic results only to an explicitly requested scratch file
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/v03-bezier.test.ts:91:32
+     89|     const output = process.env.ORTHO_BEZIER_EVIDENCE_OUT;
+     90|     if (output === undefined) return; // Default test execution perfor…
+     91|     expect(existsSync(output)).toBe(true);
+       |                                ^
+     92|     expect(JSON.parse(readFileSync(output, 'utf8'))).toEqual(
+     93|       JSON.parse(JSON.stringify(bundle, (_key, value: unknown) => type…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 19 passed (20)
+   Start at  14:37:56
+   Duration  352ms (transform 42ms, setup 0ms, import 56ms, tests 165ms, environment 0ms)
+

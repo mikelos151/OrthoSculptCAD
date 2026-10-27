@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    {
+      "severity": "non-blocking",
+      "location": "tests/reference/test_v03_bezier_interop.py:28-40",
+      "message": "Rozszerzyć stałą regresję aliasów o każdą nazwę osobno, zarówno zamiast pola kanonicznego, jak i obok niego. Obecna zbiorcza zamiana może zakończyć się na pierwszym błędnym obiekcie input.",
+      "audit_evidence": "adversarial-results.json zawiera 12 niezależnych odmów dla 6 lokalizacji pól w trybach replace/add; wszystkie poprawne nazwy schematu zaakceptowano."
+    }
+  ],
+  "summary": "PASS niezależnego audytu readonly M0c1: bez potwierdzonych blockerów bezpieczeństwa, logiki ani zasobów w zadanym zakresie; kanoniczny schemat działa, aliasy są odrzucane.",
+  "verified": [
+    "Sampler: deskryptory własnych danych, odrzucanie accessorów/sparse/forgeries bez coercion; zachowanie NumericsError; jeden kumulatywny ctx.",
+    "Sampler: rezerwacja dwojga dzieci i minimalnej liczby przyszłych liści przed split, dokładne granice depth/nodes/segments, niemutowalny wynik i brak publikacji częściowego sukcesu.",
+    "Verifier: dokładne typy i kształty, kanoniczne ułamki, duplicate keys także po dekodowaniu escape, brak aliasów, limity pliku przed open/read/JSON oraz aggregate counts przed parsowaniem payloadu liczbowego.",
+    "Verifier: niezależna tożsamość wielomianowa, ciągłe pokrycie parametrów, wszystkie współrzędne i bound Bernsteina6, zgodność maksimum; budżety operacji/work/chars/bits zwracają UNKNOWN z exit 2, nigdy PASS.",
+    "Preflight Python odmawia oversize przed wykonaniem Fraction mul/add/sub/less; hashe wszystkich 7 wejść audytu pozostały niezmienione."
+  ],
+  "tests": [
+    {"name": "targeted Vitest tests/v03-bezier.test.ts --maxWorkers=1 --no-cache", "passed": 21, "failed": 0, "exit": 0, "evidence": "focused-vitest.log"},
+    {"name": "focused Python verifier + interop unittest", "passed": 12, "failed": 0, "skipped": 0, "exit": 0, "evidence": "focused-python.log"},
+    {"name": "własny bounded adversarial harness", "passed": 71, "failed": 0, "exit": 0, "evidence": "adversarial-results.json"},
+    {"name": "świeży rzeczywisty eksport TS do Python API i CLI", "passed": true, "cases": 6, "leaves": 97, "samples": 103, "exit": 0, "evidence": "actual-ts-export.json"}
+  ],
+  "evidence_base": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-quality-review/",
+  "evidence_files": ["review-verdict.json", "input-manifest.json", "focused-vitest.log", "focused-python.log", "actual-ts-export.json", "adversarial-results.json", "adversarial-run.log", "adversarial_audit.py", "run_focused_python.py"],
+  "files_changed": "Wyłącznie własne skrypty, logi, eksport i negatywne fixture w evidence_base; brak edycji repozytorium, stage/commit/reset/stash i konfiguracji profilu.",
+  "limitations": [
+    "Audyt dotyczy pojedynczego dokładnego cubic 3D, bez integracji App/Worker i bez wniosków klinicznych/topologicznych.",
+    "Budżety arytmetyczne i limity wejścia nie gwarantują całego RSS ani wall-clock procesu; implementacja ujawnia to uczciwie. Brak sandboxingu procesu nie jest blockerem tego zakresu.",
+    "Nie uruchamiano pełnych suites, przeglądarki ani ciężkich benchmarków; nie przypisano sobie wyników rodzica."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "scope": "independent Python stdlib Fraction verifier; no TypeScript implementation or tests read; no TS result bundle run yet",
+  "repository_files_created": [
+    "tests/reference/v03_bezier_verify.py",
+    "tests/reference/test_v03_bezier_verify.py"
+  ],
+  "schema": "OrthoSculptBezierProof/v1, controls4x3Rat/toleranceRat/point3Rat/upperSquaredRat/maxUpperSquaredRat as explicitly frozen in delegation; older plan names are not aliases",
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests/reference -p test_v03_bezier_verify.py -v",
+  "final_test_result": {
+    "tests": 11,
+    "elapsed_seconds": 1.138,
+    "status": "OK",
+    "exit_code": 0,
+    "log": "09-final-suite.log"
+  },
+  "synthetic_in_memory_capacity_result": {
+    "passed": true,
+    "cases": 1,
+    "leaves": 20000,
+    "samples": 20001,
+    "log": "check_max_leaves.log",
+    "not_TS_evidence": true
+  },
+  "vertical_tdd_logs": [
+    ["01-linear-red.log", "01-linear-green.log"],
+    ["02-schema-red.log", "02-schema-green.log"],
+    ["03-identity-red.log", "03-identity-green-corrected-poison.log"],
+    ["04-bound-red.log", "04-bound-green.log"],
+    ["05-budget-red.log", "05-budget-green.log"],
+    ["06-cli-red.log", "06-cli-green.log"]
+  ],
+  "preserved_failed_green": {
+    "log": "03-identity-green.log",
+    "cause": "One supposed poison set an already-zero control to zero; corrected test mutation to one. No verifier condition weakened."
+  },
+  "cli_command_from_repo": "PYTHONDONTWRITEBYTECODE=1 python tests/reference/v03_bezier_verify.py --input <actual-exported-TS-bundle.json>",
+  "cli_exit_codes": {"complete_PASS": 0, "rejected_or_unreadable": 1, "UNKNOWN_budget": 2},
+  "source_sha256": {
+    "tests/reference/v03_bezier_verify.py": "7b2b912a9b1faf7866c3389e070d1d679029684b0bc33373e768810a8e498e6f",
+    "tests/reference/test_v03_bezier_verify.py": "12bf61baf6828ab390da85f0e46199c0698526f4eb5e15979a95f9d8b8d622fd"
+  },
+  "left_to_parent": "Run CLI on the actual TS-exported bundle, then corrupt a COPY and verify refusal; independent math/spec and quality review remain parent acceptance gates. No staging, commits, stash, reset, dependency or unrelated repository edits performed."
+}

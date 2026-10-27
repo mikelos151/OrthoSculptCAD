@@ -1,0 +1,246 @@
+{
+  "passed": true,
+  "reviewedManifest": {
+    "src/trimline/bezier.ts": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e",
+    "tests/v03-bezier.test.ts": "0a694b4a641a675e48eb9dc0c1d51a8a8c1d57536dea23fb41965f1f06ec2547",
+    "tests/reference/v03_bezier_verify.py": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c",
+    "tests/reference/test_v03_bezier_verify.py": "1a863b6c41809e373c9637122d91235b5dee203f7cba7b224ce262f07d5edaf1",
+    "tests/reference/test_v03_bezier_interop.py": "ef5af078e30685fa311ea85bb1b70f75272fa6c838d5937f0ed0ab17667f2770",
+    "tests/fixtures/v03-bezier-proof-actual.json": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa"
+  },
+  "files": [
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/verdict.json",
+      "sha256": "8a8486d059cb5d46450a88746141237a866a3aefa4281bdee909126785e2791c",
+      "bytes": 4358
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/review-evidence.json",
+      "sha256": "207e2760f9601001f133ddabc03d27ef4bf083af0e4f469637847eaaef4ea689",
+      "bytes": 8049
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/run_review.py",
+      "sha256": "b3f584c4a1d08d71e6e87525904df3cb6f2ee53eddec87ecc42351b7b7afdc98",
+      "bytes": 10314
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/targeted-vitest.log",
+      "sha256": "0ba6982e24c160a6043ccb3c3635d6711f2702121da1073ef2a493d7fc51306c",
+      "bytes": 3346
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/focused-python.log",
+      "sha256": "842469d8603de11160ff2673f683761763c3c93535242575a3dcc5e75194c788",
+      "bytes": 1931
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/fresh-cli.log",
+      "sha256": "d379af70766fec6516044cce461963aac86d4e0a1a3fcb9ca057be3e5774bac4",
+      "bytes": 71
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/fixture-cli.log",
+      "sha256": "d379af70766fec6516044cce461963aac86d4e0a1a3fcb9ca057be3e5774bac4",
+      "bytes": 71
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/mutated-cli.log",
+      "sha256": "1c99325a84f29550a894486337857b3837b8b19de1d1237a5acdf6b4944b27d0",
+      "bytes": 81
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/source-hashes-before.json",
+      "sha256": "657d1a9d72ee657a38435719f37aac67c13713b1f563b0f47f9d249525113cf1",
+      "bytes": 661
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/source-hashes-after.json",
+      "sha256": "657d1a9d72ee657a38435719f37aac67c13713b1f563b0f47f9d249525113cf1",
+      "bytes": 661
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/actual-ts-export.json",
+      "sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa",
+      "bytes": 208240
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/spec/mutated-controls.json",
+      "sha256": "f38a5c64627bcff95c2e7fb7de03cb0b844442793f7c0e6b7647cb221e7a92a7",
+      "bytes": 59566
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/review-verdict.json",
+      "sha256": "7f9bb2e44dad71e33b19b2774276d1ff9acf947580c28ffb701aabcf9aa21560",
+      "bytes": 3361
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/input-manifest.json",
+      "sha256": "f8ad8508922365fe179a1260ab89e9c4d533aeac8ab07a77623e891591653b7d",
+      "bytes": 1427
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/focused-vitest.log",
+      "sha256": "dbd441c8399fdc5ab711ece62d12de3c91f63b9c11abe97d7bcdefca1a8110e8",
+      "bytes": 214
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/focused-python.log",
+      "sha256": "fd427e1541a6ea36b91aae8f9aaa13f8db957a618e34ad78ceea40ceca2100be",
+      "bytes": 2239
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/adversarial-results.json",
+      "sha256": "83a06138e1ee68c24eddad3f9a5883cd9cce8308cacba0d2cc7bfe50184d1c3b",
+      "bytes": 7565
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/adversarial-run.log",
+      "sha256": "b4be0aa4f04deae6e35a32cdde84571163112f766da97472e598c096228055aa",
+      "bytes": 246
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/actual-ts-export.json",
+      "sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa",
+      "bytes": 208240
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/adversarial_audit.py",
+      "sha256": "d891231e130ba10b8b13067e89d0c3bd6cd0e0810d9f5c4ba8174b21e96d9d85",
+      "bytes": 7946
+    },
+    {
+      "path": "docs/verification/v03-bezier-independent-evidence/quality/run_focused_python.py",
+      "sha256": "8b42d20e57521273f051942eaa541b1cd19221b1fb22e3e7f501c7d4f52f5948",
+      "bytes": 892
+    }
+  ],
+  "reviewEvidenceFiles": 21,
+  "spec": {
+    "passed": true,
+    "security_concerns": [],
+    "logic_errors": [],
+    "suggestions": [],
+    "summary": "Niezależny spec/math review M0c1 PASS: bieżące TS i Python realizują zamrożony kontrakt lokalnej aproksymacji cubic3D; brak wykrytych blokerów. To nie jest certyfikat prostoty, osadzenia na powierzchni, cut/shell ani dopuszczenie kliniczne.",
+    "math_review": [
+      "bezier.ts:63-84: B(u)-L(u)=sum Bernstein3_i(u) D_i; nieujemne wagi sumujące się do 1 i wypukłość normy kwadratowej dają całoprzedziałowe U=max(||D1||²,||D2||²). Nie używa się próbek ani Float64 do decyzji.",
+      "bezier.ts:87-99,119-141: dokładny de Casteljau zachowuje ograniczenie root do przedziału; DFS left-first pokrywa [0,1] bez luk. Każdy punkt krzywej i każdy punkt odpowiedniej cięciwy ma partnera przy tym samym parametrze lokalnym, co ogranicza oba kierunki Hausdorffa, także dla zero-chord i stałej krzywej.",
+      "v03_bezier_verify.py:200-274: niezależna baza potęgowa, dokładne podstawienie t=t0+(t1-t0)u i tożsamość wszystkich współczynników odrzucają fałszywe liście nawet przy dobrych endpointach. Kwadrat normy stopnia <=6 i poprawna konwersja b_k=sum c_j*binom(k,j)/binom(6,j) certyfikują cały przedział.",
+      "Sprawdzone samples/leaves, ciągłość, końce, maxUpperSquared jako maksimum zgłoszonych U, zakres tolerance, rezerwacja dwóch dzieci i minimalnej liczby przyszłych liści, jeden kumulatywny ctx oraz brak częściowego wyniku po odmowie.",
+      "Weryfikator przyjmuje wyłącznie controls/tolerance/point/upperSquared/maxUpperSquared. Każdy z pięciu aliasów sprawdzony oddzielnym skażeniem i odrzucony. Wyczerpanie każdego z czterech sprawdzanych budżetów daje exit2/UNKNOWN, nie PASS."
+    ],
+    "verification": {
+      "workdir": "C:/Users/sandr/OrthoSculptCAD",
+      "driver_command": "python -B C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-spec-review/run_review.py",
+      "driver_exit_code": 0,
+      "vitest_command": "node node_modules/vitest/vitest.mjs run tests/v03-bezier.test.ts --configLoader native --cache false --maxWorkers 1 --no-file-parallelism --reporter verbose",
+      "vitest_environment": "ORTHO_BEZIER_EVIDENCE_OUT=C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-spec-review/actual-ts-export.json",
+      "vitest_result": "exit0; 21/21 PASS",
+      "python_unittest_result": "11/11 PASS; istniejący test CLI z cudzym hard-coded katalogiem pominięty w runnerze; własne próby CLI wykonane niezależnie",
+      "cli_command": "python -B tests/reference/v03_bezier_verify.py --input C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-spec-review/actual-ts-export.json",
+      "cli_result": {
+        "exit_code": 0,
+        "passed": true,
+        "cases": 6,
+        "leaves": 97,
+        "samples": 103
+      },
+      "fresh_export_and_fixture_sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa",
+      "independent_witnesses": "80 syntetycznych cubic z niezależnymi kontrolami Hermite'a na nieregularnych przedziałach: 240 dokładnych porównań Bernstein-product oracle z Python power/Bernstein6; wszystkie zgodne. Dodatkowo cztery formalne tożsamości współczynników B-L, po jednej dla każdej kontroli.",
+      "negative_controls": "11 odrzuconych mutacji rzeczywistego eksportu; skażenie kontroli wnętrza przy zachowanych endpointach: CLI exit1/FAIL. Duplicate JSON keys, NaN, głębokie zagnieżdżenie, błędne UTF-8 i plik >16MiB: exit1. Bramka oversize sprawdzona przed open. Cztery budżety: exit2/UNKNOWN.",
+      "not_run": "Pełne suity, przeglądarki, heavy bench i tsc pozostawiono rodzicowi; bez ponownego review całości numerics.ts i bez weryfikacji historii TDD."
+    },
+    "evidence_directory": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-spec-review/",
+    "evidence_files": [
+      "run_review.py",
+      "review-evidence.json",
+      "targeted-vitest.log",
+      "focused-python.log",
+      "fresh-cli.log",
+      "fixture-cli.log",
+      "mutated-cli.log",
+      "actual-ts-export.json",
+      "mutated-controls.json",
+      "source-hashes-before.json",
+      "source-hashes-after.json"
+    ],
+    "files_modified": "Wyłącznie nowe artefakty we własnym scratch. Sześć plików review ma identyczne SHA256 przed/po; żadnych zapisów, stage, commit, stash ani reset w repo. W trakcie pracy rodzic dodawał własne raporty docs/verification; nie były naszym wejściem ani wynikiem.",
+    "issues_encountered": []
+  },
+  "quality": {
+    "passed": true,
+    "security_concerns": [],
+    "logic_errors": [],
+    "suggestions": [
+      {
+        "severity": "non-blocking",
+        "location": "tests/reference/test_v03_bezier_interop.py:28-40",
+        "message": "Rozszerzyć stałą regresję aliasów o każdą nazwę osobno, zarówno zamiast pola kanonicznego, jak i obok niego. Obecna zbiorcza zamiana może zakończyć się na pierwszym błędnym obiekcie input.",
+        "audit_evidence": "adversarial-results.json zawiera 12 niezależnych odmów dla 6 lokalizacji pól w trybach replace/add; wszystkie poprawne nazwy schematu zaakceptowano."
+      }
+    ],
+    "summary": "PASS niezależnego audytu readonly M0c1: bez potwierdzonych blockerów bezpieczeństwa, logiki ani zasobów w zadanym zakresie; kanoniczny schemat działa, aliasy są odrzucane.",
+    "verified": [
+      "Sampler: deskryptory własnych danych, odrzucanie accessorów/sparse/forgeries bez coercion; zachowanie NumericsError; jeden kumulatywny ctx.",
+      "Sampler: rezerwacja dwojga dzieci i minimalnej liczby przyszłych liści przed split, dokładne granice depth/nodes/segments, niemutowalny wynik i brak publikacji częściowego sukcesu.",
+      "Verifier: dokładne typy i kształty, kanoniczne ułamki, duplicate keys także po dekodowaniu escape, brak aliasów, limity pliku przed open/read/JSON oraz aggregate counts przed parsowaniem payloadu liczbowego.",
+      "Verifier: niezależna tożsamość wielomianowa, ciągłe pokrycie parametrów, wszystkie współrzędne i bound Bernsteina6, zgodność maksimum; budżety operacji/work/chars/bits zwracają UNKNOWN z exit 2, nigdy PASS.",
+      "Preflight Python odmawia oversize przed wykonaniem Fraction mul/add/sub/less; hashe wszystkich 7 wejść audytu pozostały niezmienione."
+    ],
+    "tests": [
+      {
+        "name": "targeted Vitest tests/v03-bezier.test.ts --maxWorkers=1 --no-cache",
+        "passed": 21,
+        "failed": 0,
+        "exit": 0,
+        "evidence": "focused-vitest.log"
+      },
+      {
+        "name": "focused Python verifier + interop unittest",
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "exit": 0,
+        "evidence": "focused-python.log"
+      },
+      {
+        "name": "własny bounded adversarial harness",
+        "passed": 71,
+        "failed": 0,
+        "exit": 0,
+        "evidence": "adversarial-results.json"
+      },
+      {
+        "name": "świeży rzeczywisty eksport TS do Python API i CLI",
+        "passed": true,
+        "cases": 6,
+        "leaves": 97,
+        "samples": 103,
+        "exit": 0,
+        "evidence": "actual-ts-export.json"
+      }
+    ],
+    "evidence_base": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bezier-quality-review/",
+    "evidence_files": [
+      "review-verdict.json",
+      "input-manifest.json",
+      "focused-vitest.log",
+      "focused-python.log",
+      "actual-ts-export.json",
+      "adversarial-results.json",
+      "adversarial-run.log",
+      "adversarial_audit.py",
+      "run_focused_python.py"
+    ],
+    "files_changed": "Wyłącznie własne skrypty, logi, eksport i negatywne fixture w evidence_base; brak edycji repozytorium, stage/commit/reset/stash i konfiguracji profilu.",
+    "limitations": [
+      "Audyt dotyczy pojedynczego dokładnego cubic 3D, bez integracji App/Worker i bez wniosków klinicznych/topologicznych.",
+      "Budżety arytmetyczne i limity wejścia nie gwarantują całego RSS ani wall-clock procesu; implementacja ujawnia to uczciwie. Brak sandboxingu procesu nie jest blockerem tego zakresu.",
+      "Nie uruchamiano pełnych suites, przeglądarki ani ciężkich benchmarków; nie przypisano sobie wyników rodzica."
+    ]
+  },
+  "releaseUnchanged": {
+    "bundleSha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "versionedAndAliasZipSha256": "d4c22a1bb0128b2c9e58c5a11822a0f8f5b21102c268ca935eaba15824246736"
+  }
+}

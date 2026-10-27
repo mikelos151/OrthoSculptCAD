@@ -1,0 +1,33 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-bezier.test.ts (2 tests | 1 failed) 6ms
+     × splits a curved cubic exactly at a single shared de Casteljau midpoint 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-bezier.test.ts > v03 certified cubic approximation > splits a curved cubic exactly at a single shared de Casteljau midpoint
+AssertionError: expected [ { t0: { n: 0n, d: 1n }, …(3) } ] to have a length of 2 but got 1
+
+- Expected
++ Received
+
+- 2
++ 1
+
+ ❯ tests/v03-bezier.test.ts:34:27
+     32|     const { controls, tolerance } = curved();
+     33|     const result = bezier.sampleCubic(controls, tolerance, limits, con…
+     34|     expect(result.leaves).toHaveLength(2);
+       |                           ^
+     35|     const [left, right] = result.leaves;
+     36|     const ctx = context();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  14:30:06
+   Duration  162ms (transform 26ms, setup 0ms, import 35ms, tests 6ms, environment 0ms)
+

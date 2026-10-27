@@ -1,0 +1,5 @@
+tests/v03-bezier.test.ts(189,40): error TS2352: Conversion of type '{ readonly n: void; readonly d: void; }' to type 'Rational' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'n' are incompatible.
+    Type 'void' is not comparable to type 'bigint'.
+
+tsc_exit=2

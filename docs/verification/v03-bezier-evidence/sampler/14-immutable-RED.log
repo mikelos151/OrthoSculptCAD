@@ -1,0 +1,34 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-bezier.test.ts (14 tests | 1 failed) 142ms
+     × returns a deeply immutable certificate without freezing or changing caller arrays 9ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-bezier.test.ts > v03 certified cubic approximation > returns a deeply immutable certificate without freezing or changing caller arrays
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ visit tests/v03-bezier.test.ts:87:40
+     85|       const visit = (value: unknown): void => {
+     86|         if (typeof value !== 'object' || value === null) return;
+     87|         expect(Object.isFrozen(value)).toBe(true);
+       |                                        ^
+     88|         for (const child of Object.values(value)) visit(child);
+     89|       };
+ ❯ tests/v03-bezier.test.ts:90:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 13 passed (14)
+   Start at  14:34:46
+   Duration  439ms (transform 63ms, setup 0ms, import 85ms, tests 142ms, environment 0ms)
+

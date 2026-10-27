@@ -1,0 +1,51 @@
+{
+  "scope": "Targeted checkout of byte-bound M0 evidence/source subset, not full repository export",
+  "initialWholeTreeProbe": "Failed on legacy long Windows artifact paths; not counted as checksum RED",
+  "checksumRed": {
+    "export": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-bytered-ytufopx5",
+    "manifestEntriesChecked": 69,
+    "mismatches": 31,
+    "autocrlf": "true"
+  },
+  "fix": "Path-scoped -text for authored LF data, explicit text eol=crlf for authored uniform CRLF files whose index is normalized. No fixture restaging or digest replacement.",
+  "green": [
+    {
+      "temporaryAutocrlf": "true",
+      "checks": [
+        {
+          "export": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-byte-green-riati_bj",
+          "verifiedBytePaths": 77,
+          "exportedPythonTests": 12,
+          "pythonExitCode": 0
+        },
+        {
+          "exportedNodeBits": 1065353217,
+          "nodePassed": true
+        }
+      ],
+      "exitCode": 0
+    },
+    {
+      "temporaryAutocrlf": "false",
+      "checks": [
+        {
+          "export": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-byte-green-zivr6ko9",
+          "verifiedBytePaths": 77,
+          "exportedPythonTests": 12,
+          "pythonExitCode": 0
+        },
+        {
+          "exportedNodeBits": 1065353217,
+          "nodePassed": true
+        }
+      ],
+      "exitCode": 0
+    }
+  ],
+  "unchanged": {
+    "originalIndexEntriesUnchanged": 568,
+    "onlyAddedIndexPath": ".gitattributes",
+    "worktreeBytePathsUnchanged": 77,
+    "globalAutocrlfUnchanged": true
+  }
+}

@@ -1,0 +1,38 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-bezier.test.ts (11 tests | 1 failed) 70ms
+     × validates owned finite integer subdivision limits without getters or coercion 5ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-bezier.test.ts > v03 certified cubic approximation > validates owned finite integer subdivision limits without getters or coercion
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "INVALID_INPUT",
+-   "message": "INVALID_INPUT",
+-   "name": "BezierError",
++ TypeError {
++   "message": "Cannot read properties of null (reading 'maxSegments')",
+  }
+
+ ❯ tests/v03-bezier.test.ts:90:32
+     88|           key === 'maxDepth' ? 33 : key === 'maxSegments' ? 20001 : 40…
+     89|           ...(key === 'maxDepth' ? [] : [0])].map(value => ({ ...limit…
+     90|     ]) expect(() => call(cap)).toThrowError(invalid);
+       |                                ^
+     91|     let touched = 0;
+     92|     const cap = { ...limits };
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 passed (11)
+   Start at  14:32:44
+   Duration  237ms (transform 37ms, setup 0ms, import 49ms, tests 70ms, environment 0ms)
+

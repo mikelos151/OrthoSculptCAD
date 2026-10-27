@@ -1,0 +1,32 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > accepts U equal to tolerance squared but rejects an arbitrarily small excess 2ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > exports real synthetic sampleCubic results only to an explicitly requested scratch file 73ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > refuses pending-node leaf deficits before doing any extra split arithmetic 8ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > honors exact adaptive tree limits and refuses each one-short boundary 15ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > decides subdivision below Float64 underflow using exact rational comparisons 2ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > preserves authentic NumericsError for forged values and contexts without reading accessors 5ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > uses one cumulative arithmetic context and never publishes a partial certificate on exhaustion 6ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > returns a deeply immutable certificate without freezing or changing caller arrays 1ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > snapshots only dense owned coordinate arrays without invoking getters or custom maps 1ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > accepts only positive computational tolerance at most 1/200 mm 0ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > validates owned finite integer subdivision limits without getters or coercion 1ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > accounts root depth and both children before allocating a required split 1ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > certifies 'linear' synthetic geometry without claiming cut validity 1ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > certifies 'curved' synthetic geometry without claiming cut validity 1ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > certifies 'nonplanar' synthetic geometry without claiming cut validity 15ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > certifies 'zerochord' synthetic geometry without claiming cut validity 17ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > certifies 'constant' synthetic geometry without claiming cut validity 1ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > certifies 'negative' synthetic geometry without claiming cut validity 13ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > does not mistake collinearity for matched-parameter linearity 11ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > certifies a parametrically linear 3D cubic with one zero-bound leaf 0ms
+ ✓ tests/v03-bezier.test.ts > v03 certified cubic approximation > splits a curved cubic exactly at a single shared de Casteljau midpoint 0ms
+
+ Test Files  1 passed (1)
+      Tests  21 passed (21)
+   Start at  15:17:51
+   Duration  351ms (transform 38ms, setup 0ms, import 53ms, tests 175ms, environment 0ms)
+
+
+STDERR:

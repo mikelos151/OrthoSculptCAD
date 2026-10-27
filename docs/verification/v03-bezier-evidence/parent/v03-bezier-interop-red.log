@@ -1,0 +1,15 @@
+test_untouched_real_ts_export_matches_frozen_contract_not_invented_aliases (test_v03_bezier_interop.ActualTypeScriptInteropTests.test_untouched_real_ts_export_matches_frozen_contract_not_invented_aliases) ... FAIL
+
+======================================================================
+FAIL: test_untouched_real_ts_export_matches_frozen_contract_not_invented_aliases (test_v03_bezier_interop.ActualTypeScriptInteropTests.test_untouched_real_ts_export_matches_frozen_contract_not_invented_aliases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\OrthoSculptCAD\tests\reference\test_v03_bezier_interop.py", line 25, in test_untouched_real_ts_export_matches_frozen_contract_not_invented_aliases
+    self.assertIsNone(failure, "Untouched actual TS export was rejected: " + str(failure))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'invalid object shape' is not None : Untouched actual TS export was rejected: invalid object shape
+
+----------------------------------------------------------------------
+Ran 1 test in 0.006s
+
+FAILED (failures=1)

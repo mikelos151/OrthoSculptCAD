@@ -1,0 +1,10 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+
+ Test Files  1 passed (1)
+      Tests  21 passed (21)
+   Start at  14:41:07
+   Duration  486ms (transform 50ms, setup 0ms, import 68ms, tests 261ms, environment 0ms)
+
+default_run_scratch_unchanged=true

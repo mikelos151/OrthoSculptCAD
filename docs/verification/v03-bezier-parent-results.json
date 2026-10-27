@@ -1,0 +1,82 @@
+{
+  "scope": "M0c1 exact cubic3D parametric approximation only; not a surface curve, cut, shell or clinical release",
+  "parentChecks": {
+    "unit": {
+      "numTotalTests": 1169,
+      "numPassedTests": 1169,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "success": true
+    },
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    }
+  },
+  "pythonTests": {
+    "run": "python -m unittest discover -s tests/reference -p test_v03_*.py -v",
+    "previousPassed": 24,
+    "passed": 25,
+    "exitCode": 0
+  },
+  "typeScriptExitCode": 0,
+  "realUnmodifiedTsBundle": {
+    "passed": true,
+    "cases": 6,
+    "leaves": 97,
+    "samples": 103,
+    "sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa"
+  },
+  "negativeCanonicalControlMutation": {
+    "exitCode": 1,
+    "status": "FAIL",
+    "error": "certificate rejected"
+  },
+  "integrationRegression": {
+    "initial": "Assertion failure: invalid object shape for untouched TS export",
+    "cause": "Verifier invented JSON field aliases contrary to frozen contract",
+    "fix": "Consumer and its tests corrected to exact plan keys; input not modified; invented aliases rejected",
+    "requestedProvider": "openai-codex",
+    "requestedModel": "gpt-6.1-terra",
+    "requestedReasoning": "high",
+    "returnedInitModel": "gpt-6.1-terra",
+    "cliExitCode": 0,
+    "telemetryCaveat": "Init model and accepted CLI arguments are not independent inference-wire attestation"
+  },
+  "manifest": [
+    {
+      "path": "src/trimline/bezier.ts",
+      "sha256": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e"
+    },
+    {
+      "path": "tests/v03-bezier.test.ts",
+      "sha256": "0a694b4a641a675e48eb9dc0c1d51a8a8c1d57536dea23fb41965f1f06ec2547"
+    },
+    {
+      "path": "tests/reference/v03_bezier_verify.py",
+      "sha256": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c"
+    },
+    {
+      "path": "tests/reference/test_v03_bezier_verify.py",
+      "sha256": "1a863b6c41809e373c9637122d91235b5dee203f7cba7b224ce262f07d5edaf1"
+    },
+    {
+      "path": "tests/reference/test_v03_bezier_interop.py",
+      "sha256": "ef5af078e30685fa311ea85bb1b70f75272fa6c838d5937f0ed0ab17667f2770"
+    },
+    {
+      "path": "tests/fixtures/v03-bezier-proof-actual.json",
+      "sha256": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa"
+    }
+  ],
+  "evidenceIndex": "docs/verification/v03-bezier-evidence/index.json",
+  "independentReview": {"passed": true, "delegation": "deleg_a6970c0c", "specMath": "PASS", "qualitySecurity": "PASS", "unchangedReviewedSourceFiles": 6, "evidence": "docs/verification/v03-bezier-independent-evidence/index.json", "suggestion": "Individual aliases now permanently covered: 6 locations x replacement/addition = 12 refusals; added coverage-only test, no reviewed implementation changes"},
+  "release": "Published 0.2.0 dist and ZIP not rebuilt or replaced",
+  "coverageOnlyAddendum": {"path": "tests/reference/test_v03_bezier_aliases.py", "sha256": "a863faa4d8941a661a99544145c65459690e47f05495dd325e302e1add035cae", "actualParentUnittestPassed": 25, "productionChanges": false, "requestedModel": "gpt-6.1-terra", "requestedReasoning": "high", "returnedInitModel": "gpt-6.1-terra"},
+  "releaseUnchanged": {"bundleSha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd", "versionedAndAliasZipSha256": "d4c22a1bb0128b2c9e58c5a11822a0f8f5b21102c268ca935eaba15824246736"},
+  "byteTransportEvidence": "docs/verification/v03-bezier-byte-roundtrip.json"
+}

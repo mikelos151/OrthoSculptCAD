@@ -1,0 +1,48 @@
+{
+  "scope": "TypeScript cubic approximation only; independent Python verification pending parent",
+  "head": "cb99a65f9e36946c2f0d5abdc4b0befdd77a8a02",
+  "testsPassed": 21,
+  "tscExit": 0,
+  "format": "OrthoSculptBezierProof",
+  "version": 1,
+  "cases": 6,
+  "leaves": 97,
+  "samples": 103,
+  "caseCounts": [
+    {
+      "id": "linear",
+      "leaves": 1,
+      "samples": 2
+    },
+    {
+      "id": "curved",
+      "leaves": 2,
+      "samples": 3
+    },
+    {
+      "id": "nonplanar",
+      "leaves": 29,
+      "samples": 30
+    },
+    {
+      "id": "zerochord",
+      "leaves": 36,
+      "samples": 37
+    },
+    {
+      "id": "constant",
+      "leaves": 1,
+      "samples": 2
+    },
+    {
+      "id": "negative",
+      "leaves": 28,
+      "samples": 29
+    }
+  ],
+  "files": {
+    "src/trimline/bezier.ts": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e",
+    "tests/v03-bezier.test.ts": "0a694b4a641a675e48eb9dc0c1d51a8a8c1d57536dea23fb41965f1f06ec2547",
+    "proof-delivery.json": "2cc58291180f9e233429357d30ae00afb743a161fccdb1ec585987858e25c0aa"
+  }
+}

@@ -1,0 +1,10 @@
+$ C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\python.exe -m unittest discover -s tests/reference -p test_v03_bezier_verify.py -v
+test_linear_root_is_complete_pass (test_v03_bezier_verify.VerifierTests.test_linear_root_is_complete_pass) ... ok
+test_strict_schema_rejects_poison (test_v03_bezier_verify.VerifierTests.test_strict_schema_rejects_poison) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK
+
+EXIT=0
