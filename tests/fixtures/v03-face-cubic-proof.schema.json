@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OrthoSculptFaceCubicProof/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "version",
+    "cases"
+  ],
+  "properties": {
+    "format": {
+      "const": "OrthoSculptFaceCubicProof"
+    },
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "$ref": "#/$defs/Case"
+      }
+    }
+  },
+  "$defs": {
+    "Rat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "n",
+        "d"
+      ],
+      "properties": {
+        "n": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1235,
+          "pattern": "^(0|-?[1-9][0-9]*)$"
+        },
+        "d": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1234,
+          "pattern": "^[1-9][0-9]*$"
+        }
+      }
+    },
+    "Point3": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/Rat"
+      }
+    },
+    "Triangle": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/Point3"
+      }
+    },
+    "BarycentricControls": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/Point3"
+      }
+    },
+    "Controls": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/Point3"
+      }
+    },
+    "Containment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "triangle",
+        "barycentricControls",
+        "controls"
+      ],
+      "properties": {
+        "kind": {
+          "const": "supplied-face-cubic-hull-v1"
+        },
+        "triangle": {
+          "$ref": "#/$defs/Triangle"
+        },
+        "barycentricControls": {
+          "$ref": "#/$defs/BarycentricControls"
+        },
+        "controls": {
+          "$ref": "#/$defs/Controls"
+        }
+      }
+    },
+    "Sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t",
+        "point"
+      ],
+      "properties": {
+        "t": {
+          "$ref": "#/$defs/Rat"
+        },
+        "point": {
+          "$ref": "#/$defs/Point3"
+        }
+      }
+    },
+    "Leaf": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t0",
+        "t1",
+        "controls",
+        "upperSquared"
+      ],
+      "properties": {
+        "t0": {
+          "$ref": "#/$defs/Rat"
+        },
+        "t1": {
+          "$ref": "#/$defs/Rat"
+        },
+        "controls": {
+          "$ref": "#/$defs/Controls"
+        },
+        "upperSquared": {
+          "$ref": "#/$defs/Rat"
+        }
+      }
+    },
+    "Approximation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "samples",
+        "leaves",
+        "maxUpperSquared"
+      ],
+      "properties": {
+        "kind": {
+          "const": "cubic-parametric-bound-v1"
+        },
+        "samples": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 20001,
+          "items": {
+            "$ref": "#/$defs/Sample"
+          }
+        },
+        "leaves": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20000,
+          "items": {
+            "$ref": "#/$defs/Leaf"
+          }
+        },
+        "maxUpperSquared": {
+          "$ref": "#/$defs/Rat"
+        }
+      }
+    },
+    "Case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "tolerance",
+        "containment",
+        "approximation"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[ -~]+$"
+        },
+        "tolerance": {
+          "$ref": "#/$defs/Rat"
+        },
+        "containment": {
+          "$ref": "#/$defs/Containment"
+        },
+        "approximation": {
+          "$ref": "#/$defs/Approximation"
+        }
+      }
+    }
+  }
+}

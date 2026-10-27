@@ -1,6 +1,12 @@
 # Byte-bound M0 source and evidence: preserve recorded working bytes.
 # LF inputs stay exact; already-normalized CRLF logs have explicit CRLF checkout.
 # New M0c1 artifacts are staged raw before any newline normalization.
+# M0c2 contract and design evidence are byte-exact before first staging.
+docs/plans/v03-face-cubic-containment.md -text
+tests/fixtures/v03-face-cubic-proof.schema.json -text
+docs/verification/v03-face-cubic-design-*.json -text
+docs/verification/v03-face-cubic-design-evidence/** -text whitespace=cr-at-eol
+docs/verification/v03-face-cubic-design-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 # Captured terminal whitespace is evidence, not source formatting to repair.
 docs/verification/v03-bezier-evidence/** whitespace=cr-at-eol
 docs/verification/v03-bezier-independent-evidence/** whitespace=cr-at-eol

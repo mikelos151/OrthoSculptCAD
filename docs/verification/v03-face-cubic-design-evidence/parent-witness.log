@@ -1,0 +1,17 @@
+SCOPE: DESIGN arithmetic only; no TS/Python implementation acceptance
+triangle: ((Fraction(1, 1), Fraction(2, 1), Fraction(3, 1)), (Fraction(4, 1), Fraction(4, 1), Fraction(4, 1)), (Fraction(2, 1), Fraction(6, 1), Fraction(5, 1)))
+minors XY XZ YZ: [Fraction(10, 1), Fraction(5, 1), Fraction(0, 1)]
+mapped controls: [(Fraction(1, 1), Fraction(2, 1), Fraction(3, 1)), (Fraction(13, 6), Fraction(10, 3), Fraction(11, 3)), (Fraction(5, 2), Fraction(14, 3), Fraction(13, 3)), (Fraction(2, 1), Fraction(6, 1), Fraction(5, 1))]
+inverse recovered weights: [(Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(1, 2), Fraction(1, 3), Fraction(1, 6)), (Fraction(1, 6), Fraction(1, 3), Fraction(1, 2)), (Fraction(0, 1), Fraction(0, 1), Fraction(1, 1))]
+tinynegative exact sum: 1
+tinynegative strictly negative: True
+near-degenerate XY minor equals 2^-600: True
+tolerance squared: 1/40000
+world-metric witness weights: [(Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), (Fraction(1997, 3000), Fraction(1, 3), Fraction(1, 1000)), (Fraction(997, 3000), Fraction(2, 3), Fraction(1, 1000)), (Fraction(0, 1), Fraction(1, 1), Fraction(0, 1))]
+world-metric chart U: 1/500000
+world-metric unscaled U: 21/1000000
+world-metric scaled x1000 U: 21
+schema syntax: valid JSON; required/property equality and local references resolved
+schema definitions: 10
+schema reference occurrences: 20
+schema limitation: stdlib structural check, not a general JSON Schema validator or implementation test

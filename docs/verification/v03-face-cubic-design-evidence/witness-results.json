@@ -1,0 +1,77 @@
+{
+  "scope": "Independent design witnesses; mathematical containment assembled in scratch, existing sampler exercised. NOT execution of future M0c2.",
+  "charts": [
+    {
+      "id": "nonaxis-curved",
+      "axes": [
+        0,
+        1
+      ],
+      "D": "10"
+    },
+    {
+      "id": "edge-linear",
+      "axes": [
+        0,
+        1
+      ],
+      "D": "10"
+    },
+    {
+      "id": "vertex-constant",
+      "axes": [
+        0,
+        1
+      ],
+      "D": "10"
+    },
+    {
+      "id": "xz-chart",
+      "axes": [
+        0,
+        2
+      ],
+      "D": "1"
+    },
+    {
+      "id": "yz-chart",
+      "axes": [
+        1,
+        2
+      ],
+      "D": "1"
+    },
+    {
+      "id": "thin-constant",
+      "axes": [
+        0,
+        1
+      ],
+      "D": "1/4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376"
+    }
+  ],
+  "bounds": [
+    "1/500000",
+    "21/1000000",
+    "21"
+  ],
+  "schema_and_old_public_projection": {
+    "passed": true,
+    "cases": 6,
+    "leaves": 21,
+    "samples": 27
+  },
+  "weight_mutant": "schema valid, old projection PASS, inverse weights mismatch",
+  "offplane_mutant": "schema valid, old projection PASS, third-axis residual rejects",
+  "world_metric_existing_sampler": [
+    {
+      "id": "world-scale-1",
+      "outcome": "success"
+    },
+    {
+      "id": "world-scale-1000",
+      "outcome": "BUDGET_EXCEEDED"
+    }
+  ],
+  "alias_and_format_negative_checks": "rejected"
+}

@@ -1,0 +1,37 @@
+{
+  "planPath": "docs/plans/v03-face-cubic-containment.md",
+  "planSha256": "7fbf62ab1fcfeca6513eddaa4027c7ca50db3ee7fa95510d823af1ffa3542c56",
+  "schemaDefinitions": 10,
+  "caseKeys": [
+    "id",
+    "tolerance",
+    "containment",
+    "approximation"
+  ],
+  "containmentKeys": [
+    "kind",
+    "triangle",
+    "barycentricControls",
+    "controls"
+  ],
+  "files": [
+    {
+      "path": "docs/verification/v03-face-cubic-design-evidence/design-witness.py",
+      "sha256": "118d6e7aa1a9f58df10b2c7d7b91805fc5a3ebfee50a980a2fffddee0de667ce"
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-design-evidence/author-witness.log",
+      "sha256": "d6e2e8e17e4ae0c6eb25b9c68a8f559f6147da2496998ba88597b72ef4d59bd5"
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-design-evidence/parent-witness.log",
+      "sha256": "d6e2e8e17e4ae0c6eb25b9c68a8f559f6147da2496998ba88597b72ef4d59bd5"
+    }
+  ],
+  "scope": "Design witness only; no M0c2 implementation or runtime acceptance",
+  "parentWitnessExitCode": 0,
+  "parentDraft202012MetaSchemaExitCode": 0,
+  "review": "PASS deleg_939a309c; see v03-face-cubic-design-review.json; design approval only",
+  "acceptedRuntimeBaseline": "3b9dc0d1d5507d04880f5f7c4ed1056cebb898c9",
+  "sourceFreeze": "No source/dist/release modifications"
+}

@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "delegation": "deleg_939a309c",
+  "security_concerns": [],
+  "logic_errors": [],
+  "scope": "Design review only, not M0c2 implementation acceptance",
+  "reviewedPlanSha256": "7fbf62ab1fcfeca6513eddaa4027c7ca50db3ee7fa95510d823af1ffa3542c56",
+  "planAfterCoverageClarificationsSha256": "692ebe317eec27178ab6334ed479f0dacf90746b3d57d5dc0423cad3597aaa5e",
+  "clarifications": [
+    "Negative determinant through B/C permutation plus corresponding barycentric permutation",
+    "Cumulative inverse budget across cases, one real old-verifier call for entire projection"
+  ],
+  "files": [
+    {
+      "path": "docs/verification/v03-face-cubic-design-evidence/independent_witness.py",
+      "sha256": "0178a6db135308c10c1304b28077fff265709e577d98de8e9feb94d4f36199d7"
+    },
+    {
+      "path": "docs/verification/v03-face-cubic-design-evidence/witness-results.json",
+      "sha256": "352d1e2226bb16514ff4413fbca1d7a8c9e9a71b48f8019f1cff5a0c77ad64b3"
+    }
+  ],
+  "independentDesignWitness": {
+    "scope": "Independent design witnesses; mathematical containment assembled in scratch, existing sampler exercised. NOT execution of future M0c2.",
+    "charts": [
+      {
+        "id": "nonaxis-curved",
+        "axes": [
+          0,
+          1
+        ],
+        "D": "10"
+      },
+      {
+        "id": "edge-linear",
+        "axes": [
+          0,
+          1
+        ],
+        "D": "10"
+      },
+      {
+        "id": "vertex-constant",
+        "axes": [
+          0,
+          1
+        ],
+        "D": "10"
+      },
+      {
+        "id": "xz-chart",
+        "axes": [
+          0,
+          2
+        ],
+        "D": "1"
+      },
+      {
+        "id": "yz-chart",
+        "axes": [
+          1,
+          2
+        ],
+        "D": "1"
+      },
+      {
+        "id": "thin-constant",
+        "axes": [
+          0,
+          1
+        ],
+        "D": "1/4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376"
+      }
+    ],
+    "bounds": [
+      "1/500000",
+      "21/1000000",
+      "21"
+    ],
+    "schema_and_old_public_projection": {
+      "passed": true,
+      "cases": 6,
+      "leaves": 21,
+      "samples": 27
+    },
+    "weight_mutant": "schema valid, old projection PASS, inverse weights mismatch",
+    "offplane_mutant": "schema valid, old projection PASS, third-axis residual rejects",
+    "world_metric_existing_sampler": [
+      {
+        "id": "world-scale-1",
+        "outcome": "success"
+      },
+      {
+        "id": "world-scale-1000",
+        "outcome": "BUDGET_EXCEEDED"
+      }
+    ],
+    "alias_and_format_negative_checks": "rejected"
+  },
+  "next": "Vertical TDD in two disjoint new TS/Python file sets; no integration or release changes"
+}
