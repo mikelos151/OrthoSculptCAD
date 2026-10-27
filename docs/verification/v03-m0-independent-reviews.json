@@ -1,0 +1,58 @@
+{
+  "scope": "Acceptance of M0a/b only, not complete M0 or smooth cutting/shell product",
+  "specMath": {
+    "delegation": "deleg_e2d9264a/task-0",
+    "passed": true,
+    "blockers": [],
+    "artifactReadback": {
+      "passed": true,
+      "counts": {
+        "round_finite": 4808,
+        "round_overflow": 1304,
+        "round_conservative_refusals": 100,
+        "decode_exact": 2000,
+        "arithmetic_fraction_assertions": 6000,
+        "comparison_exact": 1000,
+        "oracle_interval_witnesses": 6212,
+        "fixture_semantically_reproduced": 799,
+        "fixture_interval_witnesses": 799
+      },
+      "seed": "0x6d617468",
+      "method": "Exact Fraction distances to adjacent finite values, parity on equal distances, exact overflow threshold; integer F32 decoder independent of production and oracle decoding."
+    }
+  },
+  "qualitySecurity": {
+    "delegation": "deleg_e2d9264a/task-1",
+    "passed": true,
+    "blockers": [],
+    "artifactReadback": {
+      "fixture_cases": 799,
+      "unique_ids": 799,
+      "semantic_reproduction": true,
+      "fixture_sha256": "3d502b806b517bdf817d24e0a3a73926decd56a10ae589b182319a66aa4f6edf",
+      "without_force_refused": true,
+      "original_fixture_unchanged": true,
+      "additional_rounding_cases": 1200,
+      "additional_arithmetic_cases": 300
+    }
+  },
+  "parentAcceptance": {
+    "sourceManifestMatched": true,
+    "nodeFullRunPassed": 1148,
+    "nodeFailed": 0,
+    "nodePending": 0,
+    "pythonUnittestPassed": 12,
+    "oracleInputsCompared": 799,
+    "typecheckExitCode": 0,
+    "npmKnownVulnerabilities": 0
+  },
+  "nonblockingFollowups": [
+    "Keep Python unittest/fixture reproduction as a separate validation gate",
+    "Add lasting regression cases for repeated INVALID_INPUT budget use and cross-context failures when extending this module"
+  ],
+  "limits": [
+    "Reviewer additional harness counts are reviewer executions, not summed into the parent full-suite total",
+    "New module exercised in Node; new browser/native Worker API integration remains pending",
+    "Smooth curve, full cut, construction embedding certificate, shell/collar, v3 and clinical acceptance remain unfinished"
+  ]
+}

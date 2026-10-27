@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "counts": {
+    "round_finite": 4808,
+    "round_overflow": 1304,
+    "round_conservative_refusals": 100,
+    "decode_exact": 2000,
+    "arithmetic_fraction_assertions": 6000,
+    "comparison_exact": 1000,
+    "oracle_interval_witnesses": 6212,
+    "fixture_semantically_reproduced": 799,
+    "fixture_interval_witnesses": 799
+  },
+  "seed": "0x6d617468",
+  "method": "Exact Fraction distances to adjacent finite values, parity on equal distances, exact overflow threshold; integer F32 decoder independent of production and oracle decoding."
+}

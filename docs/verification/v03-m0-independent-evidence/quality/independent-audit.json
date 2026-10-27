@@ -1,0 +1,10 @@
+{
+  "fixture_cases": 799,
+  "unique_ids": 799,
+  "semantic_reproduction": true,
+  "fixture_sha256": "3d502b806b517bdf817d24e0a3a73926decd56a10ae589b182319a66aa4f6edf",
+  "without_force_refused": true,
+  "original_fixture_unchanged": true,
+  "additional_rounding_cases": 1200,
+  "additional_arithmetic_cases": 300
+}

@@ -1,0 +1,111 @@
+{
+  "scope": "Completed independent review evidence; source arithmetic only",
+  "count": 21,
+  "files": [
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/focused-tests.log",
+      "bytes": 225,
+      "sha256": "83a669dd437ce7253acf1bfca316c475bf46d12295691da519c10834c62fdc68"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/generator.log",
+      "bytes": 138,
+      "sha256": "d68046078bbd24ace568b2ee853111c95d9952600356c3e8ee59458e229deb0b"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/harness-node.log",
+      "bytes": 48,
+      "sha256": "f7808150fbf2d44339ec3020dd7c18435699270d9b4d77a54cd4363bb9d2b88e"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/harness-summary.json",
+      "bytes": 580,
+      "sha256": "ee9e58936551efa8e37d6efa3862705aedfd3febac897dafc80cda7ac36c4769"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/inputs.json",
+      "bytes": 3141620,
+      "sha256": "392062fc2b235e54050bbb3ca0013c2a2a9ce662998aa748534b5f11113ec255"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/outputs.json",
+      "bytes": 1679614,
+      "sha256": "300f44e7ba711d70a0585b06f893ffcdb1f0cefe602537cb6e4b4d635dbe3307"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/python-unittest.log",
+      "bytes": 1783,
+      "sha256": "ba1d96c91b3a80bb2c1d7a0d08984b6a01c38680b201b7db886f4fa82199469c"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/regenerated-fixture.json",
+      "bytes": 156172,
+      "sha256": "3d502b806b517bdf817d24e0a3a73926decd56a10ae589b182319a66aa4f6edf"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/spec/review.py",
+      "bytes": 6199,
+      "sha256": "ac21274b1b095b6f36d41bc01f80403f4c050033b8a2ce9c8e317939fe83c7fe"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/additional-cases.json",
+      "bytes": 1127434,
+      "sha256": "95f324a011e91dfb2bfc417abdbb8633374eb9fcf6ffde3ed4b2e09da5ba957c"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/additional-results.json",
+      "bytes": 179,
+      "sha256": "04e9e1c5ad42c7614a8d97206c3eda52d11dcf1f6e96e26a415d463107b37ab2"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/additional-review.log",
+      "bytes": 141,
+      "sha256": "68c324e5ef81656202a2fc62394e2968bad9a8c8f253e8b0abc2602eb91149cc"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/additional_review.mjs",
+      "bytes": 4868,
+      "sha256": "c314ab75a6b7737f0e0dc04a33c8ba44f5989c4c48ed3f7cdd08eed42a24ef97"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/independent-audit.json",
+      "bytes": 325,
+      "sha256": "68d9a0d66ae65c6b53cbae9bc02177846f2016784b9f1d178e46785afbbc0c27"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/independent-audit.log",
+      "bytes": 298,
+      "sha256": "0f835217182942dc9d33e7930c1de43a5f9f56da70dc23aa3fc83ed526460478"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/independent_audit.py",
+      "bytes": 2997,
+      "sha256": "5a53b1daff7012eee1a4405bba35cecdbb52d12def2881524c371eb5a9f121d7"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/numerics.review.mjs",
+      "bytes": 8584,
+      "sha256": "299809aa588ac03d89740b69e81eb622a0a39b362d8c193b2d9b36515fd3ff47"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/python-unittest.log",
+      "bytes": 1783,
+      "sha256": "b41fbe21d03b5b7b429f1d6fe2295134b571125dabd38a114ab22af1cdd36c08"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/regenerated-fixture.json",
+      "bytes": 156172,
+      "sha256": "3d502b806b517bdf817d24e0a3a73926decd56a10ae589b182319a66aa4f6edf"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/targeted-vitest.log",
+      "bytes": 217,
+      "sha256": "24dc7fd73f006eb19e135d09cc244ec234cc6b7c0895a23ab23b716eaaf600ab"
+    },
+    {
+      "path": "docs/verification/v03-m0-independent-evidence/quality/typescript.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

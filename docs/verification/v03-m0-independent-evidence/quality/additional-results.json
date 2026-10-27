@@ -1,0 +1,10 @@
+{
+  "rounding": {
+    "finite": 760,
+    "overflow": 415,
+    "conservative_budget": 25
+  },
+  "arithmetic_cases": 300,
+  "arithmetic_assertions": 1500,
+  "resource_checks": 10
+}

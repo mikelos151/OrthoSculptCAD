@@ -1,0 +1,246 @@
+{
+  "scope": "Copied completed implementer TDD evidence, not pending reviewer artifacts",
+  "count": 48,
+  "files": [
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/01-construction-red.log",
+      "bytes": 1109,
+      "sha256": "b45587cd65ddfbe1e670036cedb18087349f9785a0d62196d78db447562d5ce7"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/02-construction-green.log",
+      "bytes": 310,
+      "sha256": "f2068bff37ee6069870d6723f48d2e33ed8ef49a6dcab60350c35103248195d5"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/03-validation-red.log",
+      "bytes": 1309,
+      "sha256": "cd396d94dbdbfa2f98344883a07c3efe6b60e0525578ed1d8d4d84d6527aea61"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/04-validation-green.log",
+      "bytes": 445,
+      "sha256": "4d1b6ed73194a97bbb1a810a4fc5f8674bd13b1e2c2011fc133d16e7599065a8"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/05-operations-red.log",
+      "bytes": 1430,
+      "sha256": "5cb0fa54e40a362e85a18728118f0ab16854d1ce1da8b40affb838be1bbaba34"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/06-operations-green.log",
+      "bytes": 586,
+      "sha256": "d59d7a1fe51a3d685ff588198238bafc9db9510ab2784f157874e8f10f6ce1e5"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/07-budget-red.log",
+      "bytes": 1622,
+      "sha256": "370e90495b672ae3886b7a1a7032caf8536ef3b7c032ff12f669a3fd42494854"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/08-budget-green.log",
+      "bytes": 731,
+      "sha256": "e1e43da64ada0ca9794ffdf4536ebe2a7268f2990b74248fceb1753aa1eee6d8"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/09-forge-red.log",
+      "bytes": 1747,
+      "sha256": "77f4a09b17383924302cd5d3db9e5bac1d7c10ebd1bd18c751d02f2511203d16"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/10-forge-green.log",
+      "bytes": 885,
+      "sha256": "f0e2437416598e4f69bd43b686e3bd5c10f2a42a228b3865860be32954da9152"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/11-decode-red.log",
+      "bytes": 1895,
+      "sha256": "43c30684fb625a3deca7cc85cf6f76a24108bf064723d39b23b64e6327f145ce"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/12-decode-green.log",
+      "bytes": 1042,
+      "sha256": "23530b29dbd29931c6ae6d3dfe1874855b5c971ccb7bdbc880e0f52217293111"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/13-rounding-red.log",
+      "bytes": 2009,
+      "sha256": "53b1519583d67e81b2438a385655b2f37fbcf1ee28a9661d435f642b01bd8f7d"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/14-rounding-green.log",
+      "bytes": 1181,
+      "sha256": "ba041d0b607ff216bf9da3269327c03146d704133a9a638ce4898a605c265e0b"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/15-subnormal-red.log",
+      "bytes": 2296,
+      "sha256": "5dafb98e1e05f25aafdad4968459609cec0ace8b8ef89bb2c2113081715314df"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/16-subnormal-green.log",
+      "bytes": 1345,
+      "sha256": "9da7f35b0f2d59b6b6c578b50e1b091e0fecac95ddece3ade398f6cf18ddf9a0"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/17-overflow-red.log",
+      "bytes": 2395,
+      "sha256": "e8767d5bb657e3cb3d63ec2d5b6cfe61a895b0c987e53cd1cd8a79b49d636493"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/18-overflow-green.log",
+      "bytes": 1491,
+      "sha256": "9083d1dacdb0130c70e5b9520d6a22f9a05a1bdd02a204dd5911de421d95ec8c"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/19-properties-green.log",
+      "bytes": 1956,
+      "sha256": "f3627e412c66fb54f0d0a3de304adb2a2954ba094a136746b0142a6203c9b384"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/20-tsc.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/21-final-tests.log",
+      "bytes": 2123,
+      "sha256": "579c7ad99cd4e616149a9d3bf2285540436b3b5772de61912b6a9835f4b2830e"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/22-final-tsc.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/23-final-tests.log",
+      "bytes": 2123,
+      "sha256": "89dcd5eb9fa9c846c1c0196e633e3647f4ee4d2026f13746852cfc7390f44ab5"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/24-final-tsc.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/numerics/EVIDENCE.md",
+      "bytes": 3169,
+      "sha256": "e6fa15d9b502f4b41c39764eb2bc96c8269fb5c38e008ffc319be0c3be4c4324"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/01-double-round-green.log",
+      "bytes": 234,
+      "sha256": "b6f3c7ab004dd1c9e7f91e19cfd4e5915e27263148522cbad504ea0ef640d82e"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/01-double-round-red.log",
+      "bytes": 996,
+      "sha256": "5c59080be57801ec375cfc0455df190009e6f125428264a2ceb2420eb1312313"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/02-sign-green.log",
+      "bytes": 525,
+      "sha256": "01db3352bfd9aa34b55fe729f946464f2ea4640e02d072b0771e6380026304b6"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/02-sign-red.log",
+      "bytes": 2706,
+      "sha256": "ec785e93164d9db5103b98b6d2a244d7c0fc5a3f287b700011bcf3782c30f530"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/03-overflow-green.log",
+      "bytes": 791,
+      "sha256": "18daa15bde2cb3bf183dbb1d725699c72d0ff3069461862057a65902c33c3445"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/03-overflow-red.log",
+      "bytes": 7088,
+      "sha256": "d639157480ba9467be13350c6e52456f6e52d7f3c2483d8a276b8529eef80ee6"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/04-parse-green.log",
+      "bytes": 910,
+      "sha256": "ef2e74bbe2173f36a50af9713c9402da872d382624ebd5514de004a342a126cc"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/04-parse-red.log",
+      "bytes": 1549,
+      "sha256": "0561c221b85ac128c5a6ae04386a44678145caf1b5630565372283a0e8670f99"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/05-parse-bounds-green.log",
+      "bytes": 1047,
+      "sha256": "1fd6ea319fde0ecbf2e649f00156f50c4db3002a99623200cb64ab46da9344b3"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/05-parse-bounds-red.log",
+      "bytes": 7997,
+      "sha256": "1cbeada6a39dd0b71a1df73dc133714933b9f60ab663a09330714f290347550a"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/06-fraction-validation-green.log",
+      "bytes": 1198,
+      "sha256": "ee93d6b2ea7637f281f2128bd5789faed281417d66344eac76cb9cb05478aea0"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/06-fraction-validation-red.log",
+      "bytes": 10073,
+      "sha256": "1168f82cc80270704fc30724ea88a30966ac9dfd9b7a48cae0aa8de3017d9c97"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/07-fixture-schema-green.log",
+      "bytes": 1333,
+      "sha256": "934c1990b39233bd9c855494af4b26b61e0873dfa8210a16dd8c441abc7f0056"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/07-fixture-schema-red.log",
+      "bytes": 2014,
+      "sha256": "a1a376cd0a6ffbb8fc0d6c4de547c4d9450fd8ccc18af4a0e93e13f1267120c5"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/08-default-cases-green.log",
+      "bytes": 1499,
+      "sha256": "9fd1cd4b432a5bd8f6d9e0c1af7b8ec931511674213dc0c0a293de775d948e67"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/08-default-cases-red.log",
+      "bytes": 2157,
+      "sha256": "01f03aacb2db2539f3177ea1ca89565c4cb84451bb3900339ddb320aef0d79fb"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/09-cli-green.log",
+      "bytes": 1660,
+      "sha256": "546beecbd9506c24d46c51c8cb6322d66eeaead4b680e25c96dcc5a2f3586cd7"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/09-cli-red.log",
+      "bytes": 2399,
+      "sha256": "447cc8bad287e02ef504918e65edc11faae9aff92771b582b6d9b6576677023d"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/10-repository-fixture-green.log",
+      "bytes": 1783,
+      "sha256": "95fa6e681a4d348b9f6ba9c594a94d0860d2a8d85461171a33099be3477a2560"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/10-repository-fixture-red.log",
+      "bytes": 2500,
+      "sha256": "14e40cd4186c424ba88f116277901802c5f8d411c06dd587f92232f004c97976"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/11-final-green.log",
+      "bytes": 1783,
+      "sha256": "e9dc17bce7213df53b0471fb0b4dfb0dc2bdcf280d9c3621289f6abd9b63437b"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/fixture-interval-audit.log",
+      "bytes": 582,
+      "sha256": "da332d61a5c0ff8da7f791a1556c61057ebfa77fac80906917cad190821d6303"
+    },
+    {
+      "path": "docs/verification/v03-m0-evidence/oracle/generator.log",
+      "bytes": 66,
+      "sha256": "3afd9b8347b45467db0fab7d54802aa86caeadd1a47a10f595514b0c492e04ca"
+    }
+  ]
+}

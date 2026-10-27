@@ -1,0 +1,63 @@
+{
+  "scope": "M0a/b arithmetic foundations plus regression suite, not smooth cut/shell completion",
+  "status": "accepted_M0a_M0b_only",
+  "fullRun": {
+    "success": true,
+    "numTotalTests": 1148,
+    "numPassedTests": 1148,
+    "numFailedTests": 0,
+    "numPendingTests": 0
+  },
+  "targetedRunTests": 814,
+  "testFileCounts": {
+    "v03-numerics-oracle.test.ts": 801,
+    "v03-numerics.test.ts": 13
+  },
+  "oracleCases": 799,
+  "oracleKinds": {
+    "finite": 795,
+    "overflow": 4
+  },
+  "oracleRegeneratedByParentAndSemanticallyCompared": true,
+  "pythonUnittestPassed": 12,
+  "typecheckExitCode": 0,
+  "npmAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "frozenBundleSha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+  "frozenReleaseZipSha256": "d4c22a1bb0128b2c9e58c5a11822a0f8f5b21102c268ca935eaba15824246736",
+  "manifest": [
+    {
+      "path": "src/trimline/numerics.ts",
+      "sha256": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25"
+    },
+    {
+      "path": "tests/v03-numerics.test.ts",
+      "sha256": "a65ec53b7bce1c1435a68292a3d86e4a40a676be9bec9d7b0547e2819ffb44ca"
+    },
+    {
+      "path": "tests/reference/v03_f32_oracle.py",
+      "sha256": "abdeba997c2b86f72bc4fec69174f1877896195d9a43a2ae091cfb8824a42fc4"
+    },
+    {
+      "path": "tests/reference/test_v03_f32_oracle.py",
+      "sha256": "06a60aa476fb804dd071f6bba410082f620003fffd219f325177136cd788b4f5"
+    },
+    {
+      "path": "tests/fixtures/v03-f32-oracle.json",
+      "sha256": "3d502b806b517bdf817d24e0a3a73926decd56a10ae589b182319a66aa4f6edf"
+    },
+    {
+      "path": "tests/v03-numerics-oracle.test.ts",
+      "sha256": "b05c99feb4ae2efa45edff7997ffb032b742768cb6de36ab64a6769af50b2919"
+    }
+  ],
+  "browserScope": "Existing real Worker/PDF regressions ran; new numeric code was exercised in Node/Vitest, not yet a new browser/native Worker API",
+  "nativeWebViewVerified": false,
+  "clinicalValidation": false
+}

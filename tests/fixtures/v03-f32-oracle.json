@@ -1,0 +1,7193 @@
+{
+  "format": "OrthoSculptFloat32Oracle",
+  "version": 1,
+  "cases": [
+    {
+      "id": "zero",
+      "n": "0",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 0
+      }
+    },
+    {
+      "id": "double-round-positive",
+      "n": "1606938140039961579660015739737851799416526969953987971776513",
+      "d": "1606938044258990275541962092341162602522202993782792835301376",
+      "expected": {
+        "kind": "finite",
+        "bits": 1065353217
+      }
+    },
+    {
+      "id": "double-round-negative",
+      "n": "-1606938140039961579660015739737851799416526969953987971776513",
+      "d": "1606938044258990275541962092341162602522202993782792835301376",
+      "expected": {
+        "kind": "finite",
+        "bits": 3212836865
+      }
+    },
+    {
+      "id": "double-round-down-positive",
+      "n": "1606938331601904187896123034531230193205174922296378244726783",
+      "d": "1606938044258990275541962092341162602522202993782792835301376",
+      "expected": {
+        "kind": "finite",
+        "bits": 1065353217
+      }
+    },
+    {
+      "id": "double-round-down-negative",
+      "n": "-1606938331601904187896123034531230193205174922296378244726783",
+      "d": "1606938044258990275541962092341162602522202993782792835301376",
+      "expected": {
+        "kind": "finite",
+        "bits": 3212836865
+      }
+    },
+    {
+      "id": "half-even-lower-positive",
+      "n": "16777217",
+      "d": "16777216",
+      "expected": {
+        "kind": "finite",
+        "bits": 1065353216
+      }
+    },
+    {
+      "id": "half-even-lower-negative",
+      "n": "-16777217",
+      "d": "16777216",
+      "expected": {
+        "kind": "finite",
+        "bits": 3212836864
+      }
+    },
+    {
+      "id": "half-even-upper-positive",
+      "n": "16777219",
+      "d": "16777216",
+      "expected": {
+        "kind": "finite",
+        "bits": 1065353218
+      }
+    },
+    {
+      "id": "half-even-upper-negative",
+      "n": "-16777219",
+      "d": "16777216",
+      "expected": {
+        "kind": "finite",
+        "bits": 3212836866
+      }
+    },
+    {
+      "id": "minsubnormal-positive",
+      "n": "1",
+      "d": "713623846352979940529142984724747568191373312",
+      "expected": {
+        "kind": "finite",
+        "bits": 1
+      }
+    },
+    {
+      "id": "minsubnormal-negative",
+      "n": "-1",
+      "d": "713623846352979940529142984724747568191373312",
+      "expected": {
+        "kind": "finite",
+        "bits": 2147483649
+      }
+    },
+    {
+      "id": "minnormal-positive",
+      "n": "1",
+      "d": "85070591730234615865843651857942052864",
+      "expected": {
+        "kind": "finite",
+        "bits": 8388608
+      }
+    },
+    {
+      "id": "minnormal-negative",
+      "n": "-1",
+      "d": "85070591730234615865843651857942052864",
+      "expected": {
+        "kind": "finite",
+        "bits": 2155872256
+      }
+    },
+    {
+      "id": "maxsubnormal-positive",
+      "n": "8388607",
+      "d": "713623846352979940529142984724747568191373312",
+      "expected": {
+        "kind": "finite",
+        "bits": 8388607
+      }
+    },
+    {
+      "id": "maxsubnormal-negative",
+      "n": "-8388607",
+      "d": "713623846352979940529142984724747568191373312",
+      "expected": {
+        "kind": "finite",
+        "bits": 2155872255
+      }
+    },
+    {
+      "id": "underflow-below-positive",
+      "n": "1",
+      "d": "2854495385411919762116571938898990272765493248",
+      "expected": {
+        "kind": "finite",
+        "bits": 0
+      }
+    },
+    {
+      "id": "underflow-below-negative",
+      "n": "-1",
+      "d": "2854495385411919762116571938898990272765493248",
+      "expected": {
+        "kind": "finite",
+        "bits": 2147483648
+      }
+    },
+    {
+      "id": "underflow-half-positive",
+      "n": "1",
+      "d": "1427247692705959881058285969449495136382746624",
+      "expected": {
+        "kind": "finite",
+        "bits": 0
+      }
+    },
+    {
+      "id": "underflow-half-negative",
+      "n": "-1",
+      "d": "1427247692705959881058285969449495136382746624",
+      "expected": {
+        "kind": "finite",
+        "bits": 2147483648
+      }
+    },
+    {
+      "id": "underflow-above-positive",
+      "n": "3",
+      "d": "2854495385411919762116571938898990272765493248",
+      "expected": {
+        "kind": "finite",
+        "bits": 1
+      }
+    },
+    {
+      "id": "underflow-above-negative",
+      "n": "-3",
+      "d": "2854495385411919762116571938898990272765493248",
+      "expected": {
+        "kind": "finite",
+        "bits": 2147483649
+      }
+    },
+    {
+      "id": "subnormal-normal-below-positive",
+      "n": "33554429",
+      "d": "2854495385411919762116571938898990272765493248",
+      "expected": {
+        "kind": "finite",
+        "bits": 8388607
+      }
+    },
+    {
+      "id": "subnormal-normal-below-negative",
+      "n": "-33554429",
+      "d": "2854495385411919762116571938898990272765493248",
+      "expected": {
+        "kind": "finite",
+        "bits": 2155872255
+      }
+    },
+    {
+      "id": "subnormal-normal-half-positive",
+      "n": "16777215",
+      "d": "1427247692705959881058285969449495136382746624",
+      "expected": {
+        "kind": "finite",
+        "bits": 8388608
+      }
+    },
+    {
+      "id": "subnormal-normal-half-negative",
+      "n": "-16777215",
+      "d": "1427247692705959881058285969449495136382746624",
+      "expected": {
+        "kind": "finite",
+        "bits": 2155872256
+      }
+    },
+    {
+      "id": "subnormal-normal-above-positive",
+      "n": "33554431",
+      "d": "2854495385411919762116571938898990272765493248",
+      "expected": {
+        "kind": "finite",
+        "bits": 8388608
+      }
+    },
+    {
+      "id": "subnormal-normal-above-negative",
+      "n": "-33554431",
+      "d": "2854495385411919762116571938898990272765493248",
+      "expected": {
+        "kind": "finite",
+        "bits": 2155872256
+      }
+    },
+    {
+      "id": "maxfinite-positive",
+      "n": "340282346638528859811704183484516925440",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2139095039
+      }
+    },
+    {
+      "id": "maxfinite-negative",
+      "n": "-340282346638528859811704183484516925440",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4286578687
+      }
+    },
+    {
+      "id": "overflow-below-positive",
+      "n": "340282356779733661637539395458142568447",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2139095039
+      }
+    },
+    {
+      "id": "overflow-below-negative",
+      "n": "-340282356779733661637539395458142568447",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4286578687
+      }
+    },
+    {
+      "id": "overflow-half-positive",
+      "n": "340282356779733661637539395458142568448",
+      "d": "1",
+      "expected": {
+        "kind": "overflow"
+      }
+    },
+    {
+      "id": "overflow-half-negative",
+      "n": "-340282356779733661637539395458142568448",
+      "d": "1",
+      "expected": {
+        "kind": "overflow"
+      }
+    },
+    {
+      "id": "overflow-above-positive",
+      "n": "340282356779733661637539395458142568449",
+      "d": "1",
+      "expected": {
+        "kind": "overflow"
+      }
+    },
+    {
+      "id": "overflow-above-negative",
+      "n": "-340282356779733661637539395458142568449",
+      "d": "1",
+      "expected": {
+        "kind": "overflow"
+      }
+    },
+    {
+      "id": "binade--126-positive",
+      "n": "1",
+      "d": "85070591730234615865843651857942052864",
+      "expected": {
+        "kind": "finite",
+        "bits": 8388608
+      }
+    },
+    {
+      "id": "binade--126-negative",
+      "n": "-1",
+      "d": "85070591730234615865843651857942052864",
+      "expected": {
+        "kind": "finite",
+        "bits": 2155872256
+      }
+    },
+    {
+      "id": "binade--125-positive",
+      "n": "1",
+      "d": "42535295865117307932921825928971026432",
+      "expected": {
+        "kind": "finite",
+        "bits": 16777216
+      }
+    },
+    {
+      "id": "binade--125-negative",
+      "n": "-1",
+      "d": "42535295865117307932921825928971026432",
+      "expected": {
+        "kind": "finite",
+        "bits": 2164260864
+      }
+    },
+    {
+      "id": "binade--124-positive",
+      "n": "1",
+      "d": "21267647932558653966460912964485513216",
+      "expected": {
+        "kind": "finite",
+        "bits": 25165824
+      }
+    },
+    {
+      "id": "binade--124-negative",
+      "n": "-1",
+      "d": "21267647932558653966460912964485513216",
+      "expected": {
+        "kind": "finite",
+        "bits": 2172649472
+      }
+    },
+    {
+      "id": "binade--123-positive",
+      "n": "1",
+      "d": "10633823966279326983230456482242756608",
+      "expected": {
+        "kind": "finite",
+        "bits": 33554432
+      }
+    },
+    {
+      "id": "binade--123-negative",
+      "n": "-1",
+      "d": "10633823966279326983230456482242756608",
+      "expected": {
+        "kind": "finite",
+        "bits": 2181038080
+      }
+    },
+    {
+      "id": "binade--122-positive",
+      "n": "1",
+      "d": "5316911983139663491615228241121378304",
+      "expected": {
+        "kind": "finite",
+        "bits": 41943040
+      }
+    },
+    {
+      "id": "binade--122-negative",
+      "n": "-1",
+      "d": "5316911983139663491615228241121378304",
+      "expected": {
+        "kind": "finite",
+        "bits": 2189426688
+      }
+    },
+    {
+      "id": "binade--121-positive",
+      "n": "1",
+      "d": "2658455991569831745807614120560689152",
+      "expected": {
+        "kind": "finite",
+        "bits": 50331648
+      }
+    },
+    {
+      "id": "binade--121-negative",
+      "n": "-1",
+      "d": "2658455991569831745807614120560689152",
+      "expected": {
+        "kind": "finite",
+        "bits": 2197815296
+      }
+    },
+    {
+      "id": "binade--120-positive",
+      "n": "1",
+      "d": "1329227995784915872903807060280344576",
+      "expected": {
+        "kind": "finite",
+        "bits": 58720256
+      }
+    },
+    {
+      "id": "binade--120-negative",
+      "n": "-1",
+      "d": "1329227995784915872903807060280344576",
+      "expected": {
+        "kind": "finite",
+        "bits": 2206203904
+      }
+    },
+    {
+      "id": "binade--119-positive",
+      "n": "1",
+      "d": "664613997892457936451903530140172288",
+      "expected": {
+        "kind": "finite",
+        "bits": 67108864
+      }
+    },
+    {
+      "id": "binade--119-negative",
+      "n": "-1",
+      "d": "664613997892457936451903530140172288",
+      "expected": {
+        "kind": "finite",
+        "bits": 2214592512
+      }
+    },
+    {
+      "id": "binade--118-positive",
+      "n": "1",
+      "d": "332306998946228968225951765070086144",
+      "expected": {
+        "kind": "finite",
+        "bits": 75497472
+      }
+    },
+    {
+      "id": "binade--118-negative",
+      "n": "-1",
+      "d": "332306998946228968225951765070086144",
+      "expected": {
+        "kind": "finite",
+        "bits": 2222981120
+      }
+    },
+    {
+      "id": "binade--117-positive",
+      "n": "1",
+      "d": "166153499473114484112975882535043072",
+      "expected": {
+        "kind": "finite",
+        "bits": 83886080
+      }
+    },
+    {
+      "id": "binade--117-negative",
+      "n": "-1",
+      "d": "166153499473114484112975882535043072",
+      "expected": {
+        "kind": "finite",
+        "bits": 2231369728
+      }
+    },
+    {
+      "id": "binade--116-positive",
+      "n": "1",
+      "d": "83076749736557242056487941267521536",
+      "expected": {
+        "kind": "finite",
+        "bits": 92274688
+      }
+    },
+    {
+      "id": "binade--116-negative",
+      "n": "-1",
+      "d": "83076749736557242056487941267521536",
+      "expected": {
+        "kind": "finite",
+        "bits": 2239758336
+      }
+    },
+    {
+      "id": "binade--115-positive",
+      "n": "1",
+      "d": "41538374868278621028243970633760768",
+      "expected": {
+        "kind": "finite",
+        "bits": 100663296
+      }
+    },
+    {
+      "id": "binade--115-negative",
+      "n": "-1",
+      "d": "41538374868278621028243970633760768",
+      "expected": {
+        "kind": "finite",
+        "bits": 2248146944
+      }
+    },
+    {
+      "id": "binade--114-positive",
+      "n": "1",
+      "d": "20769187434139310514121985316880384",
+      "expected": {
+        "kind": "finite",
+        "bits": 109051904
+      }
+    },
+    {
+      "id": "binade--114-negative",
+      "n": "-1",
+      "d": "20769187434139310514121985316880384",
+      "expected": {
+        "kind": "finite",
+        "bits": 2256535552
+      }
+    },
+    {
+      "id": "binade--113-positive",
+      "n": "1",
+      "d": "10384593717069655257060992658440192",
+      "expected": {
+        "kind": "finite",
+        "bits": 117440512
+      }
+    },
+    {
+      "id": "binade--113-negative",
+      "n": "-1",
+      "d": "10384593717069655257060992658440192",
+      "expected": {
+        "kind": "finite",
+        "bits": 2264924160
+      }
+    },
+    {
+      "id": "binade--112-positive",
+      "n": "1",
+      "d": "5192296858534827628530496329220096",
+      "expected": {
+        "kind": "finite",
+        "bits": 125829120
+      }
+    },
+    {
+      "id": "binade--112-negative",
+      "n": "-1",
+      "d": "5192296858534827628530496329220096",
+      "expected": {
+        "kind": "finite",
+        "bits": 2273312768
+      }
+    },
+    {
+      "id": "binade--111-positive",
+      "n": "1",
+      "d": "2596148429267413814265248164610048",
+      "expected": {
+        "kind": "finite",
+        "bits": 134217728
+      }
+    },
+    {
+      "id": "binade--111-negative",
+      "n": "-1",
+      "d": "2596148429267413814265248164610048",
+      "expected": {
+        "kind": "finite",
+        "bits": 2281701376
+      }
+    },
+    {
+      "id": "binade--110-positive",
+      "n": "1",
+      "d": "1298074214633706907132624082305024",
+      "expected": {
+        "kind": "finite",
+        "bits": 142606336
+      }
+    },
+    {
+      "id": "binade--110-negative",
+      "n": "-1",
+      "d": "1298074214633706907132624082305024",
+      "expected": {
+        "kind": "finite",
+        "bits": 2290089984
+      }
+    },
+    {
+      "id": "binade--109-positive",
+      "n": "1",
+      "d": "649037107316853453566312041152512",
+      "expected": {
+        "kind": "finite",
+        "bits": 150994944
+      }
+    },
+    {
+      "id": "binade--109-negative",
+      "n": "-1",
+      "d": "649037107316853453566312041152512",
+      "expected": {
+        "kind": "finite",
+        "bits": 2298478592
+      }
+    },
+    {
+      "id": "binade--108-positive",
+      "n": "1",
+      "d": "324518553658426726783156020576256",
+      "expected": {
+        "kind": "finite",
+        "bits": 159383552
+      }
+    },
+    {
+      "id": "binade--108-negative",
+      "n": "-1",
+      "d": "324518553658426726783156020576256",
+      "expected": {
+        "kind": "finite",
+        "bits": 2306867200
+      }
+    },
+    {
+      "id": "binade--107-positive",
+      "n": "1",
+      "d": "162259276829213363391578010288128",
+      "expected": {
+        "kind": "finite",
+        "bits": 167772160
+      }
+    },
+    {
+      "id": "binade--107-negative",
+      "n": "-1",
+      "d": "162259276829213363391578010288128",
+      "expected": {
+        "kind": "finite",
+        "bits": 2315255808
+      }
+    },
+    {
+      "id": "binade--106-positive",
+      "n": "1",
+      "d": "81129638414606681695789005144064",
+      "expected": {
+        "kind": "finite",
+        "bits": 176160768
+      }
+    },
+    {
+      "id": "binade--106-negative",
+      "n": "-1",
+      "d": "81129638414606681695789005144064",
+      "expected": {
+        "kind": "finite",
+        "bits": 2323644416
+      }
+    },
+    {
+      "id": "binade--105-positive",
+      "n": "1",
+      "d": "40564819207303340847894502572032",
+      "expected": {
+        "kind": "finite",
+        "bits": 184549376
+      }
+    },
+    {
+      "id": "binade--105-negative",
+      "n": "-1",
+      "d": "40564819207303340847894502572032",
+      "expected": {
+        "kind": "finite",
+        "bits": 2332033024
+      }
+    },
+    {
+      "id": "binade--104-positive",
+      "n": "1",
+      "d": "20282409603651670423947251286016",
+      "expected": {
+        "kind": "finite",
+        "bits": 192937984
+      }
+    },
+    {
+      "id": "binade--104-negative",
+      "n": "-1",
+      "d": "20282409603651670423947251286016",
+      "expected": {
+        "kind": "finite",
+        "bits": 2340421632
+      }
+    },
+    {
+      "id": "binade--103-positive",
+      "n": "1",
+      "d": "10141204801825835211973625643008",
+      "expected": {
+        "kind": "finite",
+        "bits": 201326592
+      }
+    },
+    {
+      "id": "binade--103-negative",
+      "n": "-1",
+      "d": "10141204801825835211973625643008",
+      "expected": {
+        "kind": "finite",
+        "bits": 2348810240
+      }
+    },
+    {
+      "id": "binade--102-positive",
+      "n": "1",
+      "d": "5070602400912917605986812821504",
+      "expected": {
+        "kind": "finite",
+        "bits": 209715200
+      }
+    },
+    {
+      "id": "binade--102-negative",
+      "n": "-1",
+      "d": "5070602400912917605986812821504",
+      "expected": {
+        "kind": "finite",
+        "bits": 2357198848
+      }
+    },
+    {
+      "id": "binade--101-positive",
+      "n": "1",
+      "d": "2535301200456458802993406410752",
+      "expected": {
+        "kind": "finite",
+        "bits": 218103808
+      }
+    },
+    {
+      "id": "binade--101-negative",
+      "n": "-1",
+      "d": "2535301200456458802993406410752",
+      "expected": {
+        "kind": "finite",
+        "bits": 2365587456
+      }
+    },
+    {
+      "id": "binade--100-positive",
+      "n": "1",
+      "d": "1267650600228229401496703205376",
+      "expected": {
+        "kind": "finite",
+        "bits": 226492416
+      }
+    },
+    {
+      "id": "binade--100-negative",
+      "n": "-1",
+      "d": "1267650600228229401496703205376",
+      "expected": {
+        "kind": "finite",
+        "bits": 2373976064
+      }
+    },
+    {
+      "id": "binade--99-positive",
+      "n": "1",
+      "d": "633825300114114700748351602688",
+      "expected": {
+        "kind": "finite",
+        "bits": 234881024
+      }
+    },
+    {
+      "id": "binade--99-negative",
+      "n": "-1",
+      "d": "633825300114114700748351602688",
+      "expected": {
+        "kind": "finite",
+        "bits": 2382364672
+      }
+    },
+    {
+      "id": "binade--98-positive",
+      "n": "1",
+      "d": "316912650057057350374175801344",
+      "expected": {
+        "kind": "finite",
+        "bits": 243269632
+      }
+    },
+    {
+      "id": "binade--98-negative",
+      "n": "-1",
+      "d": "316912650057057350374175801344",
+      "expected": {
+        "kind": "finite",
+        "bits": 2390753280
+      }
+    },
+    {
+      "id": "binade--97-positive",
+      "n": "1",
+      "d": "158456325028528675187087900672",
+      "expected": {
+        "kind": "finite",
+        "bits": 251658240
+      }
+    },
+    {
+      "id": "binade--97-negative",
+      "n": "-1",
+      "d": "158456325028528675187087900672",
+      "expected": {
+        "kind": "finite",
+        "bits": 2399141888
+      }
+    },
+    {
+      "id": "binade--96-positive",
+      "n": "1",
+      "d": "79228162514264337593543950336",
+      "expected": {
+        "kind": "finite",
+        "bits": 260046848
+      }
+    },
+    {
+      "id": "binade--96-negative",
+      "n": "-1",
+      "d": "79228162514264337593543950336",
+      "expected": {
+        "kind": "finite",
+        "bits": 2407530496
+      }
+    },
+    {
+      "id": "binade--95-positive",
+      "n": "1",
+      "d": "39614081257132168796771975168",
+      "expected": {
+        "kind": "finite",
+        "bits": 268435456
+      }
+    },
+    {
+      "id": "binade--95-negative",
+      "n": "-1",
+      "d": "39614081257132168796771975168",
+      "expected": {
+        "kind": "finite",
+        "bits": 2415919104
+      }
+    },
+    {
+      "id": "binade--94-positive",
+      "n": "1",
+      "d": "19807040628566084398385987584",
+      "expected": {
+        "kind": "finite",
+        "bits": 276824064
+      }
+    },
+    {
+      "id": "binade--94-negative",
+      "n": "-1",
+      "d": "19807040628566084398385987584",
+      "expected": {
+        "kind": "finite",
+        "bits": 2424307712
+      }
+    },
+    {
+      "id": "binade--93-positive",
+      "n": "1",
+      "d": "9903520314283042199192993792",
+      "expected": {
+        "kind": "finite",
+        "bits": 285212672
+      }
+    },
+    {
+      "id": "binade--93-negative",
+      "n": "-1",
+      "d": "9903520314283042199192993792",
+      "expected": {
+        "kind": "finite",
+        "bits": 2432696320
+      }
+    },
+    {
+      "id": "binade--92-positive",
+      "n": "1",
+      "d": "4951760157141521099596496896",
+      "expected": {
+        "kind": "finite",
+        "bits": 293601280
+      }
+    },
+    {
+      "id": "binade--92-negative",
+      "n": "-1",
+      "d": "4951760157141521099596496896",
+      "expected": {
+        "kind": "finite",
+        "bits": 2441084928
+      }
+    },
+    {
+      "id": "binade--91-positive",
+      "n": "1",
+      "d": "2475880078570760549798248448",
+      "expected": {
+        "kind": "finite",
+        "bits": 301989888
+      }
+    },
+    {
+      "id": "binade--91-negative",
+      "n": "-1",
+      "d": "2475880078570760549798248448",
+      "expected": {
+        "kind": "finite",
+        "bits": 2449473536
+      }
+    },
+    {
+      "id": "binade--90-positive",
+      "n": "1",
+      "d": "1237940039285380274899124224",
+      "expected": {
+        "kind": "finite",
+        "bits": 310378496
+      }
+    },
+    {
+      "id": "binade--90-negative",
+      "n": "-1",
+      "d": "1237940039285380274899124224",
+      "expected": {
+        "kind": "finite",
+        "bits": 2457862144
+      }
+    },
+    {
+      "id": "binade--89-positive",
+      "n": "1",
+      "d": "618970019642690137449562112",
+      "expected": {
+        "kind": "finite",
+        "bits": 318767104
+      }
+    },
+    {
+      "id": "binade--89-negative",
+      "n": "-1",
+      "d": "618970019642690137449562112",
+      "expected": {
+        "kind": "finite",
+        "bits": 2466250752
+      }
+    },
+    {
+      "id": "binade--88-positive",
+      "n": "1",
+      "d": "309485009821345068724781056",
+      "expected": {
+        "kind": "finite",
+        "bits": 327155712
+      }
+    },
+    {
+      "id": "binade--88-negative",
+      "n": "-1",
+      "d": "309485009821345068724781056",
+      "expected": {
+        "kind": "finite",
+        "bits": 2474639360
+      }
+    },
+    {
+      "id": "binade--87-positive",
+      "n": "1",
+      "d": "154742504910672534362390528",
+      "expected": {
+        "kind": "finite",
+        "bits": 335544320
+      }
+    },
+    {
+      "id": "binade--87-negative",
+      "n": "-1",
+      "d": "154742504910672534362390528",
+      "expected": {
+        "kind": "finite",
+        "bits": 2483027968
+      }
+    },
+    {
+      "id": "binade--86-positive",
+      "n": "1",
+      "d": "77371252455336267181195264",
+      "expected": {
+        "kind": "finite",
+        "bits": 343932928
+      }
+    },
+    {
+      "id": "binade--86-negative",
+      "n": "-1",
+      "d": "77371252455336267181195264",
+      "expected": {
+        "kind": "finite",
+        "bits": 2491416576
+      }
+    },
+    {
+      "id": "binade--85-positive",
+      "n": "1",
+      "d": "38685626227668133590597632",
+      "expected": {
+        "kind": "finite",
+        "bits": 352321536
+      }
+    },
+    {
+      "id": "binade--85-negative",
+      "n": "-1",
+      "d": "38685626227668133590597632",
+      "expected": {
+        "kind": "finite",
+        "bits": 2499805184
+      }
+    },
+    {
+      "id": "binade--84-positive",
+      "n": "1",
+      "d": "19342813113834066795298816",
+      "expected": {
+        "kind": "finite",
+        "bits": 360710144
+      }
+    },
+    {
+      "id": "binade--84-negative",
+      "n": "-1",
+      "d": "19342813113834066795298816",
+      "expected": {
+        "kind": "finite",
+        "bits": 2508193792
+      }
+    },
+    {
+      "id": "binade--83-positive",
+      "n": "1",
+      "d": "9671406556917033397649408",
+      "expected": {
+        "kind": "finite",
+        "bits": 369098752
+      }
+    },
+    {
+      "id": "binade--83-negative",
+      "n": "-1",
+      "d": "9671406556917033397649408",
+      "expected": {
+        "kind": "finite",
+        "bits": 2516582400
+      }
+    },
+    {
+      "id": "binade--82-positive",
+      "n": "1",
+      "d": "4835703278458516698824704",
+      "expected": {
+        "kind": "finite",
+        "bits": 377487360
+      }
+    },
+    {
+      "id": "binade--82-negative",
+      "n": "-1",
+      "d": "4835703278458516698824704",
+      "expected": {
+        "kind": "finite",
+        "bits": 2524971008
+      }
+    },
+    {
+      "id": "binade--81-positive",
+      "n": "1",
+      "d": "2417851639229258349412352",
+      "expected": {
+        "kind": "finite",
+        "bits": 385875968
+      }
+    },
+    {
+      "id": "binade--81-negative",
+      "n": "-1",
+      "d": "2417851639229258349412352",
+      "expected": {
+        "kind": "finite",
+        "bits": 2533359616
+      }
+    },
+    {
+      "id": "binade--80-positive",
+      "n": "1",
+      "d": "1208925819614629174706176",
+      "expected": {
+        "kind": "finite",
+        "bits": 394264576
+      }
+    },
+    {
+      "id": "binade--80-negative",
+      "n": "-1",
+      "d": "1208925819614629174706176",
+      "expected": {
+        "kind": "finite",
+        "bits": 2541748224
+      }
+    },
+    {
+      "id": "binade--79-positive",
+      "n": "1",
+      "d": "604462909807314587353088",
+      "expected": {
+        "kind": "finite",
+        "bits": 402653184
+      }
+    },
+    {
+      "id": "binade--79-negative",
+      "n": "-1",
+      "d": "604462909807314587353088",
+      "expected": {
+        "kind": "finite",
+        "bits": 2550136832
+      }
+    },
+    {
+      "id": "binade--78-positive",
+      "n": "1",
+      "d": "302231454903657293676544",
+      "expected": {
+        "kind": "finite",
+        "bits": 411041792
+      }
+    },
+    {
+      "id": "binade--78-negative",
+      "n": "-1",
+      "d": "302231454903657293676544",
+      "expected": {
+        "kind": "finite",
+        "bits": 2558525440
+      }
+    },
+    {
+      "id": "binade--77-positive",
+      "n": "1",
+      "d": "151115727451828646838272",
+      "expected": {
+        "kind": "finite",
+        "bits": 419430400
+      }
+    },
+    {
+      "id": "binade--77-negative",
+      "n": "-1",
+      "d": "151115727451828646838272",
+      "expected": {
+        "kind": "finite",
+        "bits": 2566914048
+      }
+    },
+    {
+      "id": "binade--76-positive",
+      "n": "1",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 427819008
+      }
+    },
+    {
+      "id": "binade--76-negative",
+      "n": "-1",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 2575302656
+      }
+    },
+    {
+      "id": "binade--75-positive",
+      "n": "1",
+      "d": "37778931862957161709568",
+      "expected": {
+        "kind": "finite",
+        "bits": 436207616
+      }
+    },
+    {
+      "id": "binade--75-negative",
+      "n": "-1",
+      "d": "37778931862957161709568",
+      "expected": {
+        "kind": "finite",
+        "bits": 2583691264
+      }
+    },
+    {
+      "id": "binade--74-positive",
+      "n": "1",
+      "d": "18889465931478580854784",
+      "expected": {
+        "kind": "finite",
+        "bits": 444596224
+      }
+    },
+    {
+      "id": "binade--74-negative",
+      "n": "-1",
+      "d": "18889465931478580854784",
+      "expected": {
+        "kind": "finite",
+        "bits": 2592079872
+      }
+    },
+    {
+      "id": "binade--73-positive",
+      "n": "1",
+      "d": "9444732965739290427392",
+      "expected": {
+        "kind": "finite",
+        "bits": 452984832
+      }
+    },
+    {
+      "id": "binade--73-negative",
+      "n": "-1",
+      "d": "9444732965739290427392",
+      "expected": {
+        "kind": "finite",
+        "bits": 2600468480
+      }
+    },
+    {
+      "id": "binade--72-positive",
+      "n": "1",
+      "d": "4722366482869645213696",
+      "expected": {
+        "kind": "finite",
+        "bits": 461373440
+      }
+    },
+    {
+      "id": "binade--72-negative",
+      "n": "-1",
+      "d": "4722366482869645213696",
+      "expected": {
+        "kind": "finite",
+        "bits": 2608857088
+      }
+    },
+    {
+      "id": "binade--71-positive",
+      "n": "1",
+      "d": "2361183241434822606848",
+      "expected": {
+        "kind": "finite",
+        "bits": 469762048
+      }
+    },
+    {
+      "id": "binade--71-negative",
+      "n": "-1",
+      "d": "2361183241434822606848",
+      "expected": {
+        "kind": "finite",
+        "bits": 2617245696
+      }
+    },
+    {
+      "id": "binade--70-positive",
+      "n": "1",
+      "d": "1180591620717411303424",
+      "expected": {
+        "kind": "finite",
+        "bits": 478150656
+      }
+    },
+    {
+      "id": "binade--70-negative",
+      "n": "-1",
+      "d": "1180591620717411303424",
+      "expected": {
+        "kind": "finite",
+        "bits": 2625634304
+      }
+    },
+    {
+      "id": "binade--69-positive",
+      "n": "1",
+      "d": "590295810358705651712",
+      "expected": {
+        "kind": "finite",
+        "bits": 486539264
+      }
+    },
+    {
+      "id": "binade--69-negative",
+      "n": "-1",
+      "d": "590295810358705651712",
+      "expected": {
+        "kind": "finite",
+        "bits": 2634022912
+      }
+    },
+    {
+      "id": "binade--68-positive",
+      "n": "1",
+      "d": "295147905179352825856",
+      "expected": {
+        "kind": "finite",
+        "bits": 494927872
+      }
+    },
+    {
+      "id": "binade--68-negative",
+      "n": "-1",
+      "d": "295147905179352825856",
+      "expected": {
+        "kind": "finite",
+        "bits": 2642411520
+      }
+    },
+    {
+      "id": "binade--67-positive",
+      "n": "1",
+      "d": "147573952589676412928",
+      "expected": {
+        "kind": "finite",
+        "bits": 503316480
+      }
+    },
+    {
+      "id": "binade--67-negative",
+      "n": "-1",
+      "d": "147573952589676412928",
+      "expected": {
+        "kind": "finite",
+        "bits": 2650800128
+      }
+    },
+    {
+      "id": "binade--66-positive",
+      "n": "1",
+      "d": "73786976294838206464",
+      "expected": {
+        "kind": "finite",
+        "bits": 511705088
+      }
+    },
+    {
+      "id": "binade--66-negative",
+      "n": "-1",
+      "d": "73786976294838206464",
+      "expected": {
+        "kind": "finite",
+        "bits": 2659188736
+      }
+    },
+    {
+      "id": "binade--65-positive",
+      "n": "1",
+      "d": "36893488147419103232",
+      "expected": {
+        "kind": "finite",
+        "bits": 520093696
+      }
+    },
+    {
+      "id": "binade--65-negative",
+      "n": "-1",
+      "d": "36893488147419103232",
+      "expected": {
+        "kind": "finite",
+        "bits": 2667577344
+      }
+    },
+    {
+      "id": "binade--64-positive",
+      "n": "1",
+      "d": "18446744073709551616",
+      "expected": {
+        "kind": "finite",
+        "bits": 528482304
+      }
+    },
+    {
+      "id": "binade--64-negative",
+      "n": "-1",
+      "d": "18446744073709551616",
+      "expected": {
+        "kind": "finite",
+        "bits": 2675965952
+      }
+    },
+    {
+      "id": "binade--63-positive",
+      "n": "1",
+      "d": "9223372036854775808",
+      "expected": {
+        "kind": "finite",
+        "bits": 536870912
+      }
+    },
+    {
+      "id": "binade--63-negative",
+      "n": "-1",
+      "d": "9223372036854775808",
+      "expected": {
+        "kind": "finite",
+        "bits": 2684354560
+      }
+    },
+    {
+      "id": "binade--62-positive",
+      "n": "1",
+      "d": "4611686018427387904",
+      "expected": {
+        "kind": "finite",
+        "bits": 545259520
+      }
+    },
+    {
+      "id": "binade--62-negative",
+      "n": "-1",
+      "d": "4611686018427387904",
+      "expected": {
+        "kind": "finite",
+        "bits": 2692743168
+      }
+    },
+    {
+      "id": "binade--61-positive",
+      "n": "1",
+      "d": "2305843009213693952",
+      "expected": {
+        "kind": "finite",
+        "bits": 553648128
+      }
+    },
+    {
+      "id": "binade--61-negative",
+      "n": "-1",
+      "d": "2305843009213693952",
+      "expected": {
+        "kind": "finite",
+        "bits": 2701131776
+      }
+    },
+    {
+      "id": "binade--60-positive",
+      "n": "1",
+      "d": "1152921504606846976",
+      "expected": {
+        "kind": "finite",
+        "bits": 562036736
+      }
+    },
+    {
+      "id": "binade--60-negative",
+      "n": "-1",
+      "d": "1152921504606846976",
+      "expected": {
+        "kind": "finite",
+        "bits": 2709520384
+      }
+    },
+    {
+      "id": "binade--59-positive",
+      "n": "1",
+      "d": "576460752303423488",
+      "expected": {
+        "kind": "finite",
+        "bits": 570425344
+      }
+    },
+    {
+      "id": "binade--59-negative",
+      "n": "-1",
+      "d": "576460752303423488",
+      "expected": {
+        "kind": "finite",
+        "bits": 2717908992
+      }
+    },
+    {
+      "id": "binade--58-positive",
+      "n": "1",
+      "d": "288230376151711744",
+      "expected": {
+        "kind": "finite",
+        "bits": 578813952
+      }
+    },
+    {
+      "id": "binade--58-negative",
+      "n": "-1",
+      "d": "288230376151711744",
+      "expected": {
+        "kind": "finite",
+        "bits": 2726297600
+      }
+    },
+    {
+      "id": "binade--57-positive",
+      "n": "1",
+      "d": "144115188075855872",
+      "expected": {
+        "kind": "finite",
+        "bits": 587202560
+      }
+    },
+    {
+      "id": "binade--57-negative",
+      "n": "-1",
+      "d": "144115188075855872",
+      "expected": {
+        "kind": "finite",
+        "bits": 2734686208
+      }
+    },
+    {
+      "id": "binade--56-positive",
+      "n": "1",
+      "d": "72057594037927936",
+      "expected": {
+        "kind": "finite",
+        "bits": 595591168
+      }
+    },
+    {
+      "id": "binade--56-negative",
+      "n": "-1",
+      "d": "72057594037927936",
+      "expected": {
+        "kind": "finite",
+        "bits": 2743074816
+      }
+    },
+    {
+      "id": "binade--55-positive",
+      "n": "1",
+      "d": "36028797018963968",
+      "expected": {
+        "kind": "finite",
+        "bits": 603979776
+      }
+    },
+    {
+      "id": "binade--55-negative",
+      "n": "-1",
+      "d": "36028797018963968",
+      "expected": {
+        "kind": "finite",
+        "bits": 2751463424
+      }
+    },
+    {
+      "id": "binade--54-positive",
+      "n": "1",
+      "d": "18014398509481984",
+      "expected": {
+        "kind": "finite",
+        "bits": 612368384
+      }
+    },
+    {
+      "id": "binade--54-negative",
+      "n": "-1",
+      "d": "18014398509481984",
+      "expected": {
+        "kind": "finite",
+        "bits": 2759852032
+      }
+    },
+    {
+      "id": "binade--53-positive",
+      "n": "1",
+      "d": "9007199254740992",
+      "expected": {
+        "kind": "finite",
+        "bits": 620756992
+      }
+    },
+    {
+      "id": "binade--53-negative",
+      "n": "-1",
+      "d": "9007199254740992",
+      "expected": {
+        "kind": "finite",
+        "bits": 2768240640
+      }
+    },
+    {
+      "id": "binade--52-positive",
+      "n": "1",
+      "d": "4503599627370496",
+      "expected": {
+        "kind": "finite",
+        "bits": 629145600
+      }
+    },
+    {
+      "id": "binade--52-negative",
+      "n": "-1",
+      "d": "4503599627370496",
+      "expected": {
+        "kind": "finite",
+        "bits": 2776629248
+      }
+    },
+    {
+      "id": "binade--51-positive",
+      "n": "1",
+      "d": "2251799813685248",
+      "expected": {
+        "kind": "finite",
+        "bits": 637534208
+      }
+    },
+    {
+      "id": "binade--51-negative",
+      "n": "-1",
+      "d": "2251799813685248",
+      "expected": {
+        "kind": "finite",
+        "bits": 2785017856
+      }
+    },
+    {
+      "id": "binade--50-positive",
+      "n": "1",
+      "d": "1125899906842624",
+      "expected": {
+        "kind": "finite",
+        "bits": 645922816
+      }
+    },
+    {
+      "id": "binade--50-negative",
+      "n": "-1",
+      "d": "1125899906842624",
+      "expected": {
+        "kind": "finite",
+        "bits": 2793406464
+      }
+    },
+    {
+      "id": "binade--49-positive",
+      "n": "1",
+      "d": "562949953421312",
+      "expected": {
+        "kind": "finite",
+        "bits": 654311424
+      }
+    },
+    {
+      "id": "binade--49-negative",
+      "n": "-1",
+      "d": "562949953421312",
+      "expected": {
+        "kind": "finite",
+        "bits": 2801795072
+      }
+    },
+    {
+      "id": "binade--48-positive",
+      "n": "1",
+      "d": "281474976710656",
+      "expected": {
+        "kind": "finite",
+        "bits": 662700032
+      }
+    },
+    {
+      "id": "binade--48-negative",
+      "n": "-1",
+      "d": "281474976710656",
+      "expected": {
+        "kind": "finite",
+        "bits": 2810183680
+      }
+    },
+    {
+      "id": "binade--47-positive",
+      "n": "1",
+      "d": "140737488355328",
+      "expected": {
+        "kind": "finite",
+        "bits": 671088640
+      }
+    },
+    {
+      "id": "binade--47-negative",
+      "n": "-1",
+      "d": "140737488355328",
+      "expected": {
+        "kind": "finite",
+        "bits": 2818572288
+      }
+    },
+    {
+      "id": "binade--46-positive",
+      "n": "1",
+      "d": "70368744177664",
+      "expected": {
+        "kind": "finite",
+        "bits": 679477248
+      }
+    },
+    {
+      "id": "binade--46-negative",
+      "n": "-1",
+      "d": "70368744177664",
+      "expected": {
+        "kind": "finite",
+        "bits": 2826960896
+      }
+    },
+    {
+      "id": "binade--45-positive",
+      "n": "1",
+      "d": "35184372088832",
+      "expected": {
+        "kind": "finite",
+        "bits": 687865856
+      }
+    },
+    {
+      "id": "binade--45-negative",
+      "n": "-1",
+      "d": "35184372088832",
+      "expected": {
+        "kind": "finite",
+        "bits": 2835349504
+      }
+    },
+    {
+      "id": "binade--44-positive",
+      "n": "1",
+      "d": "17592186044416",
+      "expected": {
+        "kind": "finite",
+        "bits": 696254464
+      }
+    },
+    {
+      "id": "binade--44-negative",
+      "n": "-1",
+      "d": "17592186044416",
+      "expected": {
+        "kind": "finite",
+        "bits": 2843738112
+      }
+    },
+    {
+      "id": "binade--43-positive",
+      "n": "1",
+      "d": "8796093022208",
+      "expected": {
+        "kind": "finite",
+        "bits": 704643072
+      }
+    },
+    {
+      "id": "binade--43-negative",
+      "n": "-1",
+      "d": "8796093022208",
+      "expected": {
+        "kind": "finite",
+        "bits": 2852126720
+      }
+    },
+    {
+      "id": "binade--42-positive",
+      "n": "1",
+      "d": "4398046511104",
+      "expected": {
+        "kind": "finite",
+        "bits": 713031680
+      }
+    },
+    {
+      "id": "binade--42-negative",
+      "n": "-1",
+      "d": "4398046511104",
+      "expected": {
+        "kind": "finite",
+        "bits": 2860515328
+      }
+    },
+    {
+      "id": "binade--41-positive",
+      "n": "1",
+      "d": "2199023255552",
+      "expected": {
+        "kind": "finite",
+        "bits": 721420288
+      }
+    },
+    {
+      "id": "binade--41-negative",
+      "n": "-1",
+      "d": "2199023255552",
+      "expected": {
+        "kind": "finite",
+        "bits": 2868903936
+      }
+    },
+    {
+      "id": "binade--40-positive",
+      "n": "1",
+      "d": "1099511627776",
+      "expected": {
+        "kind": "finite",
+        "bits": 729808896
+      }
+    },
+    {
+      "id": "binade--40-negative",
+      "n": "-1",
+      "d": "1099511627776",
+      "expected": {
+        "kind": "finite",
+        "bits": 2877292544
+      }
+    },
+    {
+      "id": "binade--39-positive",
+      "n": "1",
+      "d": "549755813888",
+      "expected": {
+        "kind": "finite",
+        "bits": 738197504
+      }
+    },
+    {
+      "id": "binade--39-negative",
+      "n": "-1",
+      "d": "549755813888",
+      "expected": {
+        "kind": "finite",
+        "bits": 2885681152
+      }
+    },
+    {
+      "id": "binade--38-positive",
+      "n": "1",
+      "d": "274877906944",
+      "expected": {
+        "kind": "finite",
+        "bits": 746586112
+      }
+    },
+    {
+      "id": "binade--38-negative",
+      "n": "-1",
+      "d": "274877906944",
+      "expected": {
+        "kind": "finite",
+        "bits": 2894069760
+      }
+    },
+    {
+      "id": "binade--37-positive",
+      "n": "1",
+      "d": "137438953472",
+      "expected": {
+        "kind": "finite",
+        "bits": 754974720
+      }
+    },
+    {
+      "id": "binade--37-negative",
+      "n": "-1",
+      "d": "137438953472",
+      "expected": {
+        "kind": "finite",
+        "bits": 2902458368
+      }
+    },
+    {
+      "id": "binade--36-positive",
+      "n": "1",
+      "d": "68719476736",
+      "expected": {
+        "kind": "finite",
+        "bits": 763363328
+      }
+    },
+    {
+      "id": "binade--36-negative",
+      "n": "-1",
+      "d": "68719476736",
+      "expected": {
+        "kind": "finite",
+        "bits": 2910846976
+      }
+    },
+    {
+      "id": "binade--35-positive",
+      "n": "1",
+      "d": "34359738368",
+      "expected": {
+        "kind": "finite",
+        "bits": 771751936
+      }
+    },
+    {
+      "id": "binade--35-negative",
+      "n": "-1",
+      "d": "34359738368",
+      "expected": {
+        "kind": "finite",
+        "bits": 2919235584
+      }
+    },
+    {
+      "id": "binade--34-positive",
+      "n": "1",
+      "d": "17179869184",
+      "expected": {
+        "kind": "finite",
+        "bits": 780140544
+      }
+    },
+    {
+      "id": "binade--34-negative",
+      "n": "-1",
+      "d": "17179869184",
+      "expected": {
+        "kind": "finite",
+        "bits": 2927624192
+      }
+    },
+    {
+      "id": "binade--33-positive",
+      "n": "1",
+      "d": "8589934592",
+      "expected": {
+        "kind": "finite",
+        "bits": 788529152
+      }
+    },
+    {
+      "id": "binade--33-negative",
+      "n": "-1",
+      "d": "8589934592",
+      "expected": {
+        "kind": "finite",
+        "bits": 2936012800
+      }
+    },
+    {
+      "id": "binade--32-positive",
+      "n": "1",
+      "d": "4294967296",
+      "expected": {
+        "kind": "finite",
+        "bits": 796917760
+      }
+    },
+    {
+      "id": "binade--32-negative",
+      "n": "-1",
+      "d": "4294967296",
+      "expected": {
+        "kind": "finite",
+        "bits": 2944401408
+      }
+    },
+    {
+      "id": "binade--31-positive",
+      "n": "1",
+      "d": "2147483648",
+      "expected": {
+        "kind": "finite",
+        "bits": 805306368
+      }
+    },
+    {
+      "id": "binade--31-negative",
+      "n": "-1",
+      "d": "2147483648",
+      "expected": {
+        "kind": "finite",
+        "bits": 2952790016
+      }
+    },
+    {
+      "id": "binade--30-positive",
+      "n": "1",
+      "d": "1073741824",
+      "expected": {
+        "kind": "finite",
+        "bits": 813694976
+      }
+    },
+    {
+      "id": "binade--30-negative",
+      "n": "-1",
+      "d": "1073741824",
+      "expected": {
+        "kind": "finite",
+        "bits": 2961178624
+      }
+    },
+    {
+      "id": "binade--29-positive",
+      "n": "1",
+      "d": "536870912",
+      "expected": {
+        "kind": "finite",
+        "bits": 822083584
+      }
+    },
+    {
+      "id": "binade--29-negative",
+      "n": "-1",
+      "d": "536870912",
+      "expected": {
+        "kind": "finite",
+        "bits": 2969567232
+      }
+    },
+    {
+      "id": "binade--28-positive",
+      "n": "1",
+      "d": "268435456",
+      "expected": {
+        "kind": "finite",
+        "bits": 830472192
+      }
+    },
+    {
+      "id": "binade--28-negative",
+      "n": "-1",
+      "d": "268435456",
+      "expected": {
+        "kind": "finite",
+        "bits": 2977955840
+      }
+    },
+    {
+      "id": "binade--27-positive",
+      "n": "1",
+      "d": "134217728",
+      "expected": {
+        "kind": "finite",
+        "bits": 838860800
+      }
+    },
+    {
+      "id": "binade--27-negative",
+      "n": "-1",
+      "d": "134217728",
+      "expected": {
+        "kind": "finite",
+        "bits": 2986344448
+      }
+    },
+    {
+      "id": "binade--26-positive",
+      "n": "1",
+      "d": "67108864",
+      "expected": {
+        "kind": "finite",
+        "bits": 847249408
+      }
+    },
+    {
+      "id": "binade--26-negative",
+      "n": "-1",
+      "d": "67108864",
+      "expected": {
+        "kind": "finite",
+        "bits": 2994733056
+      }
+    },
+    {
+      "id": "binade--25-positive",
+      "n": "1",
+      "d": "33554432",
+      "expected": {
+        "kind": "finite",
+        "bits": 855638016
+      }
+    },
+    {
+      "id": "binade--25-negative",
+      "n": "-1",
+      "d": "33554432",
+      "expected": {
+        "kind": "finite",
+        "bits": 3003121664
+      }
+    },
+    {
+      "id": "binade--24-positive",
+      "n": "1",
+      "d": "16777216",
+      "expected": {
+        "kind": "finite",
+        "bits": 864026624
+      }
+    },
+    {
+      "id": "binade--24-negative",
+      "n": "-1",
+      "d": "16777216",
+      "expected": {
+        "kind": "finite",
+        "bits": 3011510272
+      }
+    },
+    {
+      "id": "binade--23-positive",
+      "n": "1",
+      "d": "8388608",
+      "expected": {
+        "kind": "finite",
+        "bits": 872415232
+      }
+    },
+    {
+      "id": "binade--23-negative",
+      "n": "-1",
+      "d": "8388608",
+      "expected": {
+        "kind": "finite",
+        "bits": 3019898880
+      }
+    },
+    {
+      "id": "binade--22-positive",
+      "n": "1",
+      "d": "4194304",
+      "expected": {
+        "kind": "finite",
+        "bits": 880803840
+      }
+    },
+    {
+      "id": "binade--22-negative",
+      "n": "-1",
+      "d": "4194304",
+      "expected": {
+        "kind": "finite",
+        "bits": 3028287488
+      }
+    },
+    {
+      "id": "binade--21-positive",
+      "n": "1",
+      "d": "2097152",
+      "expected": {
+        "kind": "finite",
+        "bits": 889192448
+      }
+    },
+    {
+      "id": "binade--21-negative",
+      "n": "-1",
+      "d": "2097152",
+      "expected": {
+        "kind": "finite",
+        "bits": 3036676096
+      }
+    },
+    {
+      "id": "binade--20-positive",
+      "n": "1",
+      "d": "1048576",
+      "expected": {
+        "kind": "finite",
+        "bits": 897581056
+      }
+    },
+    {
+      "id": "binade--20-negative",
+      "n": "-1",
+      "d": "1048576",
+      "expected": {
+        "kind": "finite",
+        "bits": 3045064704
+      }
+    },
+    {
+      "id": "binade--19-positive",
+      "n": "1",
+      "d": "524288",
+      "expected": {
+        "kind": "finite",
+        "bits": 905969664
+      }
+    },
+    {
+      "id": "binade--19-negative",
+      "n": "-1",
+      "d": "524288",
+      "expected": {
+        "kind": "finite",
+        "bits": 3053453312
+      }
+    },
+    {
+      "id": "binade--18-positive",
+      "n": "1",
+      "d": "262144",
+      "expected": {
+        "kind": "finite",
+        "bits": 914358272
+      }
+    },
+    {
+      "id": "binade--18-negative",
+      "n": "-1",
+      "d": "262144",
+      "expected": {
+        "kind": "finite",
+        "bits": 3061841920
+      }
+    },
+    {
+      "id": "binade--17-positive",
+      "n": "1",
+      "d": "131072",
+      "expected": {
+        "kind": "finite",
+        "bits": 922746880
+      }
+    },
+    {
+      "id": "binade--17-negative",
+      "n": "-1",
+      "d": "131072",
+      "expected": {
+        "kind": "finite",
+        "bits": 3070230528
+      }
+    },
+    {
+      "id": "binade--16-positive",
+      "n": "1",
+      "d": "65536",
+      "expected": {
+        "kind": "finite",
+        "bits": 931135488
+      }
+    },
+    {
+      "id": "binade--16-negative",
+      "n": "-1",
+      "d": "65536",
+      "expected": {
+        "kind": "finite",
+        "bits": 3078619136
+      }
+    },
+    {
+      "id": "binade--15-positive",
+      "n": "1",
+      "d": "32768",
+      "expected": {
+        "kind": "finite",
+        "bits": 939524096
+      }
+    },
+    {
+      "id": "binade--15-negative",
+      "n": "-1",
+      "d": "32768",
+      "expected": {
+        "kind": "finite",
+        "bits": 3087007744
+      }
+    },
+    {
+      "id": "binade--14-positive",
+      "n": "1",
+      "d": "16384",
+      "expected": {
+        "kind": "finite",
+        "bits": 947912704
+      }
+    },
+    {
+      "id": "binade--14-negative",
+      "n": "-1",
+      "d": "16384",
+      "expected": {
+        "kind": "finite",
+        "bits": 3095396352
+      }
+    },
+    {
+      "id": "binade--13-positive",
+      "n": "1",
+      "d": "8192",
+      "expected": {
+        "kind": "finite",
+        "bits": 956301312
+      }
+    },
+    {
+      "id": "binade--13-negative",
+      "n": "-1",
+      "d": "8192",
+      "expected": {
+        "kind": "finite",
+        "bits": 3103784960
+      }
+    },
+    {
+      "id": "binade--12-positive",
+      "n": "1",
+      "d": "4096",
+      "expected": {
+        "kind": "finite",
+        "bits": 964689920
+      }
+    },
+    {
+      "id": "binade--12-negative",
+      "n": "-1",
+      "d": "4096",
+      "expected": {
+        "kind": "finite",
+        "bits": 3112173568
+      }
+    },
+    {
+      "id": "binade--11-positive",
+      "n": "1",
+      "d": "2048",
+      "expected": {
+        "kind": "finite",
+        "bits": 973078528
+      }
+    },
+    {
+      "id": "binade--11-negative",
+      "n": "-1",
+      "d": "2048",
+      "expected": {
+        "kind": "finite",
+        "bits": 3120562176
+      }
+    },
+    {
+      "id": "binade--10-positive",
+      "n": "1",
+      "d": "1024",
+      "expected": {
+        "kind": "finite",
+        "bits": 981467136
+      }
+    },
+    {
+      "id": "binade--10-negative",
+      "n": "-1",
+      "d": "1024",
+      "expected": {
+        "kind": "finite",
+        "bits": 3128950784
+      }
+    },
+    {
+      "id": "binade--9-positive",
+      "n": "1",
+      "d": "512",
+      "expected": {
+        "kind": "finite",
+        "bits": 989855744
+      }
+    },
+    {
+      "id": "binade--9-negative",
+      "n": "-1",
+      "d": "512",
+      "expected": {
+        "kind": "finite",
+        "bits": 3137339392
+      }
+    },
+    {
+      "id": "binade--8-positive",
+      "n": "1",
+      "d": "256",
+      "expected": {
+        "kind": "finite",
+        "bits": 998244352
+      }
+    },
+    {
+      "id": "binade--8-negative",
+      "n": "-1",
+      "d": "256",
+      "expected": {
+        "kind": "finite",
+        "bits": 3145728000
+      }
+    },
+    {
+      "id": "binade--7-positive",
+      "n": "1",
+      "d": "128",
+      "expected": {
+        "kind": "finite",
+        "bits": 1006632960
+      }
+    },
+    {
+      "id": "binade--7-negative",
+      "n": "-1",
+      "d": "128",
+      "expected": {
+        "kind": "finite",
+        "bits": 3154116608
+      }
+    },
+    {
+      "id": "binade--6-positive",
+      "n": "1",
+      "d": "64",
+      "expected": {
+        "kind": "finite",
+        "bits": 1015021568
+      }
+    },
+    {
+      "id": "binade--6-negative",
+      "n": "-1",
+      "d": "64",
+      "expected": {
+        "kind": "finite",
+        "bits": 3162505216
+      }
+    },
+    {
+      "id": "binade--5-positive",
+      "n": "1",
+      "d": "32",
+      "expected": {
+        "kind": "finite",
+        "bits": 1023410176
+      }
+    },
+    {
+      "id": "binade--5-negative",
+      "n": "-1",
+      "d": "32",
+      "expected": {
+        "kind": "finite",
+        "bits": 3170893824
+      }
+    },
+    {
+      "id": "binade--4-positive",
+      "n": "1",
+      "d": "16",
+      "expected": {
+        "kind": "finite",
+        "bits": 1031798784
+      }
+    },
+    {
+      "id": "binade--4-negative",
+      "n": "-1",
+      "d": "16",
+      "expected": {
+        "kind": "finite",
+        "bits": 3179282432
+      }
+    },
+    {
+      "id": "binade--3-positive",
+      "n": "1",
+      "d": "8",
+      "expected": {
+        "kind": "finite",
+        "bits": 1040187392
+      }
+    },
+    {
+      "id": "binade--3-negative",
+      "n": "-1",
+      "d": "8",
+      "expected": {
+        "kind": "finite",
+        "bits": 3187671040
+      }
+    },
+    {
+      "id": "binade--2-positive",
+      "n": "1",
+      "d": "4",
+      "expected": {
+        "kind": "finite",
+        "bits": 1048576000
+      }
+    },
+    {
+      "id": "binade--2-negative",
+      "n": "-1",
+      "d": "4",
+      "expected": {
+        "kind": "finite",
+        "bits": 3196059648
+      }
+    },
+    {
+      "id": "binade--1-positive",
+      "n": "1",
+      "d": "2",
+      "expected": {
+        "kind": "finite",
+        "bits": 1056964608
+      }
+    },
+    {
+      "id": "binade--1-negative",
+      "n": "-1",
+      "d": "2",
+      "expected": {
+        "kind": "finite",
+        "bits": 3204448256
+      }
+    },
+    {
+      "id": "binade-0-positive",
+      "n": "1",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1065353216
+      }
+    },
+    {
+      "id": "binade-0-negative",
+      "n": "-1",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3212836864
+      }
+    },
+    {
+      "id": "binade-1-positive",
+      "n": "2",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1073741824
+      }
+    },
+    {
+      "id": "binade-1-negative",
+      "n": "-2",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3221225472
+      }
+    },
+    {
+      "id": "binade-2-positive",
+      "n": "4",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1082130432
+      }
+    },
+    {
+      "id": "binade-2-negative",
+      "n": "-4",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3229614080
+      }
+    },
+    {
+      "id": "binade-3-positive",
+      "n": "8",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1090519040
+      }
+    },
+    {
+      "id": "binade-3-negative",
+      "n": "-8",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3238002688
+      }
+    },
+    {
+      "id": "binade-4-positive",
+      "n": "16",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1098907648
+      }
+    },
+    {
+      "id": "binade-4-negative",
+      "n": "-16",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3246391296
+      }
+    },
+    {
+      "id": "binade-5-positive",
+      "n": "32",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1107296256
+      }
+    },
+    {
+      "id": "binade-5-negative",
+      "n": "-32",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3254779904
+      }
+    },
+    {
+      "id": "binade-6-positive",
+      "n": "64",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1115684864
+      }
+    },
+    {
+      "id": "binade-6-negative",
+      "n": "-64",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3263168512
+      }
+    },
+    {
+      "id": "binade-7-positive",
+      "n": "128",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1124073472
+      }
+    },
+    {
+      "id": "binade-7-negative",
+      "n": "-128",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3271557120
+      }
+    },
+    {
+      "id": "binade-8-positive",
+      "n": "256",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1132462080
+      }
+    },
+    {
+      "id": "binade-8-negative",
+      "n": "-256",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3279945728
+      }
+    },
+    {
+      "id": "binade-9-positive",
+      "n": "512",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1140850688
+      }
+    },
+    {
+      "id": "binade-9-negative",
+      "n": "-512",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3288334336
+      }
+    },
+    {
+      "id": "binade-10-positive",
+      "n": "1024",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1149239296
+      }
+    },
+    {
+      "id": "binade-10-negative",
+      "n": "-1024",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3296722944
+      }
+    },
+    {
+      "id": "binade-11-positive",
+      "n": "2048",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1157627904
+      }
+    },
+    {
+      "id": "binade-11-negative",
+      "n": "-2048",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3305111552
+      }
+    },
+    {
+      "id": "binade-12-positive",
+      "n": "4096",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1166016512
+      }
+    },
+    {
+      "id": "binade-12-negative",
+      "n": "-4096",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3313500160
+      }
+    },
+    {
+      "id": "binade-13-positive",
+      "n": "8192",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1174405120
+      }
+    },
+    {
+      "id": "binade-13-negative",
+      "n": "-8192",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3321888768
+      }
+    },
+    {
+      "id": "binade-14-positive",
+      "n": "16384",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1182793728
+      }
+    },
+    {
+      "id": "binade-14-negative",
+      "n": "-16384",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3330277376
+      }
+    },
+    {
+      "id": "binade-15-positive",
+      "n": "32768",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1191182336
+      }
+    },
+    {
+      "id": "binade-15-negative",
+      "n": "-32768",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3338665984
+      }
+    },
+    {
+      "id": "binade-16-positive",
+      "n": "65536",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1199570944
+      }
+    },
+    {
+      "id": "binade-16-negative",
+      "n": "-65536",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3347054592
+      }
+    },
+    {
+      "id": "binade-17-positive",
+      "n": "131072",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1207959552
+      }
+    },
+    {
+      "id": "binade-17-negative",
+      "n": "-131072",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3355443200
+      }
+    },
+    {
+      "id": "binade-18-positive",
+      "n": "262144",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1216348160
+      }
+    },
+    {
+      "id": "binade-18-negative",
+      "n": "-262144",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3363831808
+      }
+    },
+    {
+      "id": "binade-19-positive",
+      "n": "524288",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1224736768
+      }
+    },
+    {
+      "id": "binade-19-negative",
+      "n": "-524288",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3372220416
+      }
+    },
+    {
+      "id": "binade-20-positive",
+      "n": "1048576",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1233125376
+      }
+    },
+    {
+      "id": "binade-20-negative",
+      "n": "-1048576",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3380609024
+      }
+    },
+    {
+      "id": "binade-21-positive",
+      "n": "2097152",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1241513984
+      }
+    },
+    {
+      "id": "binade-21-negative",
+      "n": "-2097152",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3388997632
+      }
+    },
+    {
+      "id": "binade-22-positive",
+      "n": "4194304",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1249902592
+      }
+    },
+    {
+      "id": "binade-22-negative",
+      "n": "-4194304",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3397386240
+      }
+    },
+    {
+      "id": "binade-23-positive",
+      "n": "8388608",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1258291200
+      }
+    },
+    {
+      "id": "binade-23-negative",
+      "n": "-8388608",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3405774848
+      }
+    },
+    {
+      "id": "binade-24-positive",
+      "n": "16777216",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1266679808
+      }
+    },
+    {
+      "id": "binade-24-negative",
+      "n": "-16777216",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3414163456
+      }
+    },
+    {
+      "id": "binade-25-positive",
+      "n": "33554432",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1275068416
+      }
+    },
+    {
+      "id": "binade-25-negative",
+      "n": "-33554432",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3422552064
+      }
+    },
+    {
+      "id": "binade-26-positive",
+      "n": "67108864",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1283457024
+      }
+    },
+    {
+      "id": "binade-26-negative",
+      "n": "-67108864",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3430940672
+      }
+    },
+    {
+      "id": "binade-27-positive",
+      "n": "134217728",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1291845632
+      }
+    },
+    {
+      "id": "binade-27-negative",
+      "n": "-134217728",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3439329280
+      }
+    },
+    {
+      "id": "binade-28-positive",
+      "n": "268435456",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1300234240
+      }
+    },
+    {
+      "id": "binade-28-negative",
+      "n": "-268435456",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3447717888
+      }
+    },
+    {
+      "id": "binade-29-positive",
+      "n": "536870912",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1308622848
+      }
+    },
+    {
+      "id": "binade-29-negative",
+      "n": "-536870912",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3456106496
+      }
+    },
+    {
+      "id": "binade-30-positive",
+      "n": "1073741824",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1317011456
+      }
+    },
+    {
+      "id": "binade-30-negative",
+      "n": "-1073741824",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3464495104
+      }
+    },
+    {
+      "id": "binade-31-positive",
+      "n": "2147483648",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1325400064
+      }
+    },
+    {
+      "id": "binade-31-negative",
+      "n": "-2147483648",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3472883712
+      }
+    },
+    {
+      "id": "binade-32-positive",
+      "n": "4294967296",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1333788672
+      }
+    },
+    {
+      "id": "binade-32-negative",
+      "n": "-4294967296",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3481272320
+      }
+    },
+    {
+      "id": "binade-33-positive",
+      "n": "8589934592",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1342177280
+      }
+    },
+    {
+      "id": "binade-33-negative",
+      "n": "-8589934592",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3489660928
+      }
+    },
+    {
+      "id": "binade-34-positive",
+      "n": "17179869184",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1350565888
+      }
+    },
+    {
+      "id": "binade-34-negative",
+      "n": "-17179869184",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3498049536
+      }
+    },
+    {
+      "id": "binade-35-positive",
+      "n": "34359738368",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1358954496
+      }
+    },
+    {
+      "id": "binade-35-negative",
+      "n": "-34359738368",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3506438144
+      }
+    },
+    {
+      "id": "binade-36-positive",
+      "n": "68719476736",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1367343104
+      }
+    },
+    {
+      "id": "binade-36-negative",
+      "n": "-68719476736",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3514826752
+      }
+    },
+    {
+      "id": "binade-37-positive",
+      "n": "137438953472",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1375731712
+      }
+    },
+    {
+      "id": "binade-37-negative",
+      "n": "-137438953472",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3523215360
+      }
+    },
+    {
+      "id": "binade-38-positive",
+      "n": "274877906944",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1384120320
+      }
+    },
+    {
+      "id": "binade-38-negative",
+      "n": "-274877906944",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3531603968
+      }
+    },
+    {
+      "id": "binade-39-positive",
+      "n": "549755813888",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1392508928
+      }
+    },
+    {
+      "id": "binade-39-negative",
+      "n": "-549755813888",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3539992576
+      }
+    },
+    {
+      "id": "binade-40-positive",
+      "n": "1099511627776",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1400897536
+      }
+    },
+    {
+      "id": "binade-40-negative",
+      "n": "-1099511627776",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3548381184
+      }
+    },
+    {
+      "id": "binade-41-positive",
+      "n": "2199023255552",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1409286144
+      }
+    },
+    {
+      "id": "binade-41-negative",
+      "n": "-2199023255552",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3556769792
+      }
+    },
+    {
+      "id": "binade-42-positive",
+      "n": "4398046511104",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1417674752
+      }
+    },
+    {
+      "id": "binade-42-negative",
+      "n": "-4398046511104",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3565158400
+      }
+    },
+    {
+      "id": "binade-43-positive",
+      "n": "8796093022208",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1426063360
+      }
+    },
+    {
+      "id": "binade-43-negative",
+      "n": "-8796093022208",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3573547008
+      }
+    },
+    {
+      "id": "binade-44-positive",
+      "n": "17592186044416",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1434451968
+      }
+    },
+    {
+      "id": "binade-44-negative",
+      "n": "-17592186044416",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3581935616
+      }
+    },
+    {
+      "id": "binade-45-positive",
+      "n": "35184372088832",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1442840576
+      }
+    },
+    {
+      "id": "binade-45-negative",
+      "n": "-35184372088832",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3590324224
+      }
+    },
+    {
+      "id": "binade-46-positive",
+      "n": "70368744177664",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1451229184
+      }
+    },
+    {
+      "id": "binade-46-negative",
+      "n": "-70368744177664",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3598712832
+      }
+    },
+    {
+      "id": "binade-47-positive",
+      "n": "140737488355328",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1459617792
+      }
+    },
+    {
+      "id": "binade-47-negative",
+      "n": "-140737488355328",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3607101440
+      }
+    },
+    {
+      "id": "binade-48-positive",
+      "n": "281474976710656",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1468006400
+      }
+    },
+    {
+      "id": "binade-48-negative",
+      "n": "-281474976710656",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3615490048
+      }
+    },
+    {
+      "id": "binade-49-positive",
+      "n": "562949953421312",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1476395008
+      }
+    },
+    {
+      "id": "binade-49-negative",
+      "n": "-562949953421312",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3623878656
+      }
+    },
+    {
+      "id": "binade-50-positive",
+      "n": "1125899906842624",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1484783616
+      }
+    },
+    {
+      "id": "binade-50-negative",
+      "n": "-1125899906842624",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3632267264
+      }
+    },
+    {
+      "id": "binade-51-positive",
+      "n": "2251799813685248",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1493172224
+      }
+    },
+    {
+      "id": "binade-51-negative",
+      "n": "-2251799813685248",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3640655872
+      }
+    },
+    {
+      "id": "binade-52-positive",
+      "n": "4503599627370496",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1501560832
+      }
+    },
+    {
+      "id": "binade-52-negative",
+      "n": "-4503599627370496",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3649044480
+      }
+    },
+    {
+      "id": "binade-53-positive",
+      "n": "9007199254740992",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1509949440
+      }
+    },
+    {
+      "id": "binade-53-negative",
+      "n": "-9007199254740992",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3657433088
+      }
+    },
+    {
+      "id": "binade-54-positive",
+      "n": "18014398509481984",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1518338048
+      }
+    },
+    {
+      "id": "binade-54-negative",
+      "n": "-18014398509481984",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3665821696
+      }
+    },
+    {
+      "id": "binade-55-positive",
+      "n": "36028797018963968",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1526726656
+      }
+    },
+    {
+      "id": "binade-55-negative",
+      "n": "-36028797018963968",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3674210304
+      }
+    },
+    {
+      "id": "binade-56-positive",
+      "n": "72057594037927936",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1535115264
+      }
+    },
+    {
+      "id": "binade-56-negative",
+      "n": "-72057594037927936",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3682598912
+      }
+    },
+    {
+      "id": "binade-57-positive",
+      "n": "144115188075855872",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1543503872
+      }
+    },
+    {
+      "id": "binade-57-negative",
+      "n": "-144115188075855872",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3690987520
+      }
+    },
+    {
+      "id": "binade-58-positive",
+      "n": "288230376151711744",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1551892480
+      }
+    },
+    {
+      "id": "binade-58-negative",
+      "n": "-288230376151711744",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3699376128
+      }
+    },
+    {
+      "id": "binade-59-positive",
+      "n": "576460752303423488",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1560281088
+      }
+    },
+    {
+      "id": "binade-59-negative",
+      "n": "-576460752303423488",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3707764736
+      }
+    },
+    {
+      "id": "binade-60-positive",
+      "n": "1152921504606846976",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1568669696
+      }
+    },
+    {
+      "id": "binade-60-negative",
+      "n": "-1152921504606846976",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3716153344
+      }
+    },
+    {
+      "id": "binade-61-positive",
+      "n": "2305843009213693952",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1577058304
+      }
+    },
+    {
+      "id": "binade-61-negative",
+      "n": "-2305843009213693952",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3724541952
+      }
+    },
+    {
+      "id": "binade-62-positive",
+      "n": "4611686018427387904",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1585446912
+      }
+    },
+    {
+      "id": "binade-62-negative",
+      "n": "-4611686018427387904",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3732930560
+      }
+    },
+    {
+      "id": "binade-63-positive",
+      "n": "9223372036854775808",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1593835520
+      }
+    },
+    {
+      "id": "binade-63-negative",
+      "n": "-9223372036854775808",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3741319168
+      }
+    },
+    {
+      "id": "binade-64-positive",
+      "n": "18446744073709551616",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1602224128
+      }
+    },
+    {
+      "id": "binade-64-negative",
+      "n": "-18446744073709551616",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3749707776
+      }
+    },
+    {
+      "id": "binade-65-positive",
+      "n": "36893488147419103232",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1610612736
+      }
+    },
+    {
+      "id": "binade-65-negative",
+      "n": "-36893488147419103232",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3758096384
+      }
+    },
+    {
+      "id": "binade-66-positive",
+      "n": "73786976294838206464",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1619001344
+      }
+    },
+    {
+      "id": "binade-66-negative",
+      "n": "-73786976294838206464",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3766484992
+      }
+    },
+    {
+      "id": "binade-67-positive",
+      "n": "147573952589676412928",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1627389952
+      }
+    },
+    {
+      "id": "binade-67-negative",
+      "n": "-147573952589676412928",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3774873600
+      }
+    },
+    {
+      "id": "binade-68-positive",
+      "n": "295147905179352825856",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1635778560
+      }
+    },
+    {
+      "id": "binade-68-negative",
+      "n": "-295147905179352825856",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3783262208
+      }
+    },
+    {
+      "id": "binade-69-positive",
+      "n": "590295810358705651712",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1644167168
+      }
+    },
+    {
+      "id": "binade-69-negative",
+      "n": "-590295810358705651712",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3791650816
+      }
+    },
+    {
+      "id": "binade-70-positive",
+      "n": "1180591620717411303424",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1652555776
+      }
+    },
+    {
+      "id": "binade-70-negative",
+      "n": "-1180591620717411303424",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3800039424
+      }
+    },
+    {
+      "id": "binade-71-positive",
+      "n": "2361183241434822606848",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1660944384
+      }
+    },
+    {
+      "id": "binade-71-negative",
+      "n": "-2361183241434822606848",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3808428032
+      }
+    },
+    {
+      "id": "binade-72-positive",
+      "n": "4722366482869645213696",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1669332992
+      }
+    },
+    {
+      "id": "binade-72-negative",
+      "n": "-4722366482869645213696",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3816816640
+      }
+    },
+    {
+      "id": "binade-73-positive",
+      "n": "9444732965739290427392",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1677721600
+      }
+    },
+    {
+      "id": "binade-73-negative",
+      "n": "-9444732965739290427392",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3825205248
+      }
+    },
+    {
+      "id": "binade-74-positive",
+      "n": "18889465931478580854784",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1686110208
+      }
+    },
+    {
+      "id": "binade-74-negative",
+      "n": "-18889465931478580854784",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3833593856
+      }
+    },
+    {
+      "id": "binade-75-positive",
+      "n": "37778931862957161709568",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1694498816
+      }
+    },
+    {
+      "id": "binade-75-negative",
+      "n": "-37778931862957161709568",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3841982464
+      }
+    },
+    {
+      "id": "binade-76-positive",
+      "n": "75557863725914323419136",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1702887424
+      }
+    },
+    {
+      "id": "binade-76-negative",
+      "n": "-75557863725914323419136",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3850371072
+      }
+    },
+    {
+      "id": "binade-77-positive",
+      "n": "151115727451828646838272",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1711276032
+      }
+    },
+    {
+      "id": "binade-77-negative",
+      "n": "-151115727451828646838272",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3858759680
+      }
+    },
+    {
+      "id": "binade-78-positive",
+      "n": "302231454903657293676544",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1719664640
+      }
+    },
+    {
+      "id": "binade-78-negative",
+      "n": "-302231454903657293676544",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3867148288
+      }
+    },
+    {
+      "id": "binade-79-positive",
+      "n": "604462909807314587353088",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1728053248
+      }
+    },
+    {
+      "id": "binade-79-negative",
+      "n": "-604462909807314587353088",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3875536896
+      }
+    },
+    {
+      "id": "binade-80-positive",
+      "n": "1208925819614629174706176",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1736441856
+      }
+    },
+    {
+      "id": "binade-80-negative",
+      "n": "-1208925819614629174706176",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3883925504
+      }
+    },
+    {
+      "id": "binade-81-positive",
+      "n": "2417851639229258349412352",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1744830464
+      }
+    },
+    {
+      "id": "binade-81-negative",
+      "n": "-2417851639229258349412352",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3892314112
+      }
+    },
+    {
+      "id": "binade-82-positive",
+      "n": "4835703278458516698824704",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1753219072
+      }
+    },
+    {
+      "id": "binade-82-negative",
+      "n": "-4835703278458516698824704",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3900702720
+      }
+    },
+    {
+      "id": "binade-83-positive",
+      "n": "9671406556917033397649408",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1761607680
+      }
+    },
+    {
+      "id": "binade-83-negative",
+      "n": "-9671406556917033397649408",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3909091328
+      }
+    },
+    {
+      "id": "binade-84-positive",
+      "n": "19342813113834066795298816",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1769996288
+      }
+    },
+    {
+      "id": "binade-84-negative",
+      "n": "-19342813113834066795298816",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3917479936
+      }
+    },
+    {
+      "id": "binade-85-positive",
+      "n": "38685626227668133590597632",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1778384896
+      }
+    },
+    {
+      "id": "binade-85-negative",
+      "n": "-38685626227668133590597632",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3925868544
+      }
+    },
+    {
+      "id": "binade-86-positive",
+      "n": "77371252455336267181195264",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1786773504
+      }
+    },
+    {
+      "id": "binade-86-negative",
+      "n": "-77371252455336267181195264",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3934257152
+      }
+    },
+    {
+      "id": "binade-87-positive",
+      "n": "154742504910672534362390528",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1795162112
+      }
+    },
+    {
+      "id": "binade-87-negative",
+      "n": "-154742504910672534362390528",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3942645760
+      }
+    },
+    {
+      "id": "binade-88-positive",
+      "n": "309485009821345068724781056",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1803550720
+      }
+    },
+    {
+      "id": "binade-88-negative",
+      "n": "-309485009821345068724781056",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3951034368
+      }
+    },
+    {
+      "id": "binade-89-positive",
+      "n": "618970019642690137449562112",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1811939328
+      }
+    },
+    {
+      "id": "binade-89-negative",
+      "n": "-618970019642690137449562112",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3959422976
+      }
+    },
+    {
+      "id": "binade-90-positive",
+      "n": "1237940039285380274899124224",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1820327936
+      }
+    },
+    {
+      "id": "binade-90-negative",
+      "n": "-1237940039285380274899124224",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3967811584
+      }
+    },
+    {
+      "id": "binade-91-positive",
+      "n": "2475880078570760549798248448",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1828716544
+      }
+    },
+    {
+      "id": "binade-91-negative",
+      "n": "-2475880078570760549798248448",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3976200192
+      }
+    },
+    {
+      "id": "binade-92-positive",
+      "n": "4951760157141521099596496896",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1837105152
+      }
+    },
+    {
+      "id": "binade-92-negative",
+      "n": "-4951760157141521099596496896",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3984588800
+      }
+    },
+    {
+      "id": "binade-93-positive",
+      "n": "9903520314283042199192993792",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1845493760
+      }
+    },
+    {
+      "id": "binade-93-negative",
+      "n": "-9903520314283042199192993792",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3992977408
+      }
+    },
+    {
+      "id": "binade-94-positive",
+      "n": "19807040628566084398385987584",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1853882368
+      }
+    },
+    {
+      "id": "binade-94-negative",
+      "n": "-19807040628566084398385987584",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4001366016
+      }
+    },
+    {
+      "id": "binade-95-positive",
+      "n": "39614081257132168796771975168",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1862270976
+      }
+    },
+    {
+      "id": "binade-95-negative",
+      "n": "-39614081257132168796771975168",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4009754624
+      }
+    },
+    {
+      "id": "binade-96-positive",
+      "n": "79228162514264337593543950336",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1870659584
+      }
+    },
+    {
+      "id": "binade-96-negative",
+      "n": "-79228162514264337593543950336",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4018143232
+      }
+    },
+    {
+      "id": "binade-97-positive",
+      "n": "158456325028528675187087900672",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1879048192
+      }
+    },
+    {
+      "id": "binade-97-negative",
+      "n": "-158456325028528675187087900672",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4026531840
+      }
+    },
+    {
+      "id": "binade-98-positive",
+      "n": "316912650057057350374175801344",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1887436800
+      }
+    },
+    {
+      "id": "binade-98-negative",
+      "n": "-316912650057057350374175801344",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4034920448
+      }
+    },
+    {
+      "id": "binade-99-positive",
+      "n": "633825300114114700748351602688",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1895825408
+      }
+    },
+    {
+      "id": "binade-99-negative",
+      "n": "-633825300114114700748351602688",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4043309056
+      }
+    },
+    {
+      "id": "binade-100-positive",
+      "n": "1267650600228229401496703205376",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1904214016
+      }
+    },
+    {
+      "id": "binade-100-negative",
+      "n": "-1267650600228229401496703205376",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4051697664
+      }
+    },
+    {
+      "id": "binade-101-positive",
+      "n": "2535301200456458802993406410752",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1912602624
+      }
+    },
+    {
+      "id": "binade-101-negative",
+      "n": "-2535301200456458802993406410752",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4060086272
+      }
+    },
+    {
+      "id": "binade-102-positive",
+      "n": "5070602400912917605986812821504",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1920991232
+      }
+    },
+    {
+      "id": "binade-102-negative",
+      "n": "-5070602400912917605986812821504",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4068474880
+      }
+    },
+    {
+      "id": "binade-103-positive",
+      "n": "10141204801825835211973625643008",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1929379840
+      }
+    },
+    {
+      "id": "binade-103-negative",
+      "n": "-10141204801825835211973625643008",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4076863488
+      }
+    },
+    {
+      "id": "binade-104-positive",
+      "n": "20282409603651670423947251286016",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1937768448
+      }
+    },
+    {
+      "id": "binade-104-negative",
+      "n": "-20282409603651670423947251286016",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4085252096
+      }
+    },
+    {
+      "id": "binade-105-positive",
+      "n": "40564819207303340847894502572032",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1946157056
+      }
+    },
+    {
+      "id": "binade-105-negative",
+      "n": "-40564819207303340847894502572032",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4093640704
+      }
+    },
+    {
+      "id": "binade-106-positive",
+      "n": "81129638414606681695789005144064",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1954545664
+      }
+    },
+    {
+      "id": "binade-106-negative",
+      "n": "-81129638414606681695789005144064",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4102029312
+      }
+    },
+    {
+      "id": "binade-107-positive",
+      "n": "162259276829213363391578010288128",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1962934272
+      }
+    },
+    {
+      "id": "binade-107-negative",
+      "n": "-162259276829213363391578010288128",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4110417920
+      }
+    },
+    {
+      "id": "binade-108-positive",
+      "n": "324518553658426726783156020576256",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1971322880
+      }
+    },
+    {
+      "id": "binade-108-negative",
+      "n": "-324518553658426726783156020576256",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4118806528
+      }
+    },
+    {
+      "id": "binade-109-positive",
+      "n": "649037107316853453566312041152512",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1979711488
+      }
+    },
+    {
+      "id": "binade-109-negative",
+      "n": "-649037107316853453566312041152512",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4127195136
+      }
+    },
+    {
+      "id": "binade-110-positive",
+      "n": "1298074214633706907132624082305024",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1988100096
+      }
+    },
+    {
+      "id": "binade-110-negative",
+      "n": "-1298074214633706907132624082305024",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4135583744
+      }
+    },
+    {
+      "id": "binade-111-positive",
+      "n": "2596148429267413814265248164610048",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1996488704
+      }
+    },
+    {
+      "id": "binade-111-negative",
+      "n": "-2596148429267413814265248164610048",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4143972352
+      }
+    },
+    {
+      "id": "binade-112-positive",
+      "n": "5192296858534827628530496329220096",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2004877312
+      }
+    },
+    {
+      "id": "binade-112-negative",
+      "n": "-5192296858534827628530496329220096",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4152360960
+      }
+    },
+    {
+      "id": "binade-113-positive",
+      "n": "10384593717069655257060992658440192",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2013265920
+      }
+    },
+    {
+      "id": "binade-113-negative",
+      "n": "-10384593717069655257060992658440192",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4160749568
+      }
+    },
+    {
+      "id": "binade-114-positive",
+      "n": "20769187434139310514121985316880384",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2021654528
+      }
+    },
+    {
+      "id": "binade-114-negative",
+      "n": "-20769187434139310514121985316880384",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4169138176
+      }
+    },
+    {
+      "id": "binade-115-positive",
+      "n": "41538374868278621028243970633760768",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2030043136
+      }
+    },
+    {
+      "id": "binade-115-negative",
+      "n": "-41538374868278621028243970633760768",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4177526784
+      }
+    },
+    {
+      "id": "binade-116-positive",
+      "n": "83076749736557242056487941267521536",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2038431744
+      }
+    },
+    {
+      "id": "binade-116-negative",
+      "n": "-83076749736557242056487941267521536",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4185915392
+      }
+    },
+    {
+      "id": "binade-117-positive",
+      "n": "166153499473114484112975882535043072",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2046820352
+      }
+    },
+    {
+      "id": "binade-117-negative",
+      "n": "-166153499473114484112975882535043072",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4194304000
+      }
+    },
+    {
+      "id": "binade-118-positive",
+      "n": "332306998946228968225951765070086144",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2055208960
+      }
+    },
+    {
+      "id": "binade-118-negative",
+      "n": "-332306998946228968225951765070086144",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4202692608
+      }
+    },
+    {
+      "id": "binade-119-positive",
+      "n": "664613997892457936451903530140172288",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2063597568
+      }
+    },
+    {
+      "id": "binade-119-negative",
+      "n": "-664613997892457936451903530140172288",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4211081216
+      }
+    },
+    {
+      "id": "binade-120-positive",
+      "n": "1329227995784915872903807060280344576",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2071986176
+      }
+    },
+    {
+      "id": "binade-120-negative",
+      "n": "-1329227995784915872903807060280344576",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4219469824
+      }
+    },
+    {
+      "id": "binade-121-positive",
+      "n": "2658455991569831745807614120560689152",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2080374784
+      }
+    },
+    {
+      "id": "binade-121-negative",
+      "n": "-2658455991569831745807614120560689152",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4227858432
+      }
+    },
+    {
+      "id": "binade-122-positive",
+      "n": "5316911983139663491615228241121378304",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2088763392
+      }
+    },
+    {
+      "id": "binade-122-negative",
+      "n": "-5316911983139663491615228241121378304",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4236247040
+      }
+    },
+    {
+      "id": "binade-123-positive",
+      "n": "10633823966279326983230456482242756608",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2097152000
+      }
+    },
+    {
+      "id": "binade-123-negative",
+      "n": "-10633823966279326983230456482242756608",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4244635648
+      }
+    },
+    {
+      "id": "binade-124-positive",
+      "n": "21267647932558653966460912964485513216",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2105540608
+      }
+    },
+    {
+      "id": "binade-124-negative",
+      "n": "-21267647932558653966460912964485513216",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4253024256
+      }
+    },
+    {
+      "id": "binade-125-positive",
+      "n": "42535295865117307932921825928971026432",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2113929216
+      }
+    },
+    {
+      "id": "binade-125-negative",
+      "n": "-42535295865117307932921825928971026432",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4261412864
+      }
+    },
+    {
+      "id": "binade-126-positive",
+      "n": "85070591730234615865843651857942052864",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2122317824
+      }
+    },
+    {
+      "id": "binade-126-negative",
+      "n": "-85070591730234615865843651857942052864",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4269801472
+      }
+    },
+    {
+      "id": "binade-127-positive",
+      "n": "170141183460469231731687303715884105728",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 2130706432
+      }
+    },
+    {
+      "id": "binade-127-negative",
+      "n": "-170141183460469231731687303715884105728",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4278190080
+      }
+    },
+    {
+      "id": "midpoint-0-below-positive",
+      "n": "19527119924499587124291587827243679743",
+      "d": "166153499473114484112975882535043072",
+      "expected": {
+        "kind": "finite",
+        "bits": 1122700437
+      }
+    },
+    {
+      "id": "midpoint-0-below-negative",
+      "n": "-19527119924499587124291587827243679743",
+      "d": "166153499473114484112975882535043072",
+      "expected": {
+        "kind": "finite",
+        "bits": 3270184085
+      }
+    },
+    {
+      "id": "midpoint-0-half-positive",
+      "n": "30808363",
+      "d": "262144",
+      "expected": {
+        "kind": "finite",
+        "bits": 1122700438
+      }
+    },
+    {
+      "id": "midpoint-0-half-negative",
+      "n": "-30808363",
+      "d": "262144",
+      "expected": {
+        "kind": "finite",
+        "bits": 3270184086
+      }
+    },
+    {
+      "id": "midpoint-0-above-positive",
+      "n": "19527119924499587124291587827243679745",
+      "d": "166153499473114484112975882535043072",
+      "expected": {
+        "kind": "finite",
+        "bits": 1122700438
+      }
+    },
+    {
+      "id": "midpoint-0-above-negative",
+      "n": "-19527119924499587124291587827243679745",
+      "d": "166153499473114484112975882535043072",
+      "expected": {
+        "kind": "finite",
+        "bits": 3270184086
+      }
+    },
+    {
+      "id": "midpoint-1-below-positive",
+      "n": "18645413155414443533456964892963635199",
+      "d": "1048576",
+      "expected": {
+        "kind": "finite",
+        "bits": 1935699869
+      }
+    },
+    {
+      "id": "midpoint-1-below-negative",
+      "n": "-18645413155414443533456964892963635199",
+      "d": "1048576",
+      "expected": {
+        "kind": "finite",
+        "bits": 4083183517
+      }
+    },
+    {
+      "id": "midpoint-1-half-positive",
+      "n": "17781651645101970227677311795200",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1935699870
+      }
+    },
+    {
+      "id": "midpoint-1-half-negative",
+      "n": "-17781651645101970227677311795200",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4083183518
+      }
+    },
+    {
+      "id": "midpoint-1-above-positive",
+      "n": "18645413155414443533456964892963635201",
+      "d": "1048576",
+      "expected": {
+        "kind": "finite",
+        "bits": 1935699870
+      }
+    },
+    {
+      "id": "midpoint-1-above-negative",
+      "n": "-18645413155414443533456964892963635201",
+      "d": "1048576",
+      "expected": {
+        "kind": "finite",
+        "bits": 4083183518
+      }
+    },
+    {
+      "id": "midpoint-2-below-positive",
+      "n": "19318431676786414630840791565355450367",
+      "d": "187072209578355573530071658587684226515959365500928",
+      "expected": {
+        "kind": "finite",
+        "bits": 703105411
+      }
+    },
+    {
+      "id": "midpoint-2-below-negative",
+      "n": "-19318431676786414630840791565355450367",
+      "d": "187072209578355573530071658587684226515959365500928",
+      "expected": {
+        "kind": "finite",
+        "bits": 2850589059
+      }
+    },
+    {
+      "id": "midpoint-2-half-positive",
+      "n": "30479111",
+      "d": "295147905179352825856",
+      "expected": {
+        "kind": "finite",
+        "bits": 703105412
+      }
+    },
+    {
+      "id": "midpoint-2-half-negative",
+      "n": "-30479111",
+      "d": "295147905179352825856",
+      "expected": {
+        "kind": "finite",
+        "bits": 2850589060
+      }
+    },
+    {
+      "id": "midpoint-2-above-positive",
+      "n": "19318431676786414630840791565355450369",
+      "d": "187072209578355573530071658587684226515959365500928",
+      "expected": {
+        "kind": "finite",
+        "bits": 703105412
+      }
+    },
+    {
+      "id": "midpoint-2-above-negative",
+      "n": "-19318431676786414630840791565355450369",
+      "d": "187072209578355573530071658587684226515959365500928",
+      "expected": {
+        "kind": "finite",
+        "bits": 2850589060
+      }
+    },
+    {
+      "id": "midpoint-3-below-positive",
+      "n": "11495948702717445000385459093757755391",
+      "d": "332306998946228968225951765070086144",
+      "expected": {
+        "kind": "finite",
+        "bits": 1107976352
+      }
+    },
+    {
+      "id": "midpoint-3-below-negative",
+      "n": "-11495948702717445000385459093757755391",
+      "d": "332306998946228968225951765070086144",
+      "expected": {
+        "kind": "finite",
+        "bits": 3255460000
+      }
+    },
+    {
+      "id": "midpoint-3-half-positive",
+      "n": "18137409",
+      "d": "524288",
+      "expected": {
+        "kind": "finite",
+        "bits": 1107976352
+      }
+    },
+    {
+      "id": "midpoint-3-half-negative",
+      "n": "-18137409",
+      "d": "524288",
+      "expected": {
+        "kind": "finite",
+        "bits": 3255460000
+      }
+    },
+    {
+      "id": "midpoint-3-above-positive",
+      "n": "11495948702717445000385459093757755393",
+      "d": "332306998946228968225951765070086144",
+      "expected": {
+        "kind": "finite",
+        "bits": 1107976353
+      }
+    },
+    {
+      "id": "midpoint-3-above-negative",
+      "n": "-11495948702717445000385459093757755393",
+      "d": "332306998946228968225951765070086144",
+      "expected": {
+        "kind": "finite",
+        "bits": 3255460001
+      }
+    },
+    {
+      "id": "midpoint-4-below-positive",
+      "n": "15167557957061886128357093794073542655",
+      "d": "1361129467683753853853498429727072845824",
+      "expected": {
+        "kind": "finite",
+        "bits": 1010209445
+      }
+    },
+    {
+      "id": "midpoint-4-below-negative",
+      "n": "-15167557957061886128357093794073542655",
+      "d": "1361129467683753853853498429727072845824",
+      "expected": {
+        "kind": "finite",
+        "bits": 3157693093
+      }
+    },
+    {
+      "id": "midpoint-4-half-positive",
+      "n": "23930187",
+      "d": "2147483648",
+      "expected": {
+        "kind": "finite",
+        "bits": 1010209446
+      }
+    },
+    {
+      "id": "midpoint-4-half-negative",
+      "n": "-23930187",
+      "d": "2147483648",
+      "expected": {
+        "kind": "finite",
+        "bits": 3157693094
+      }
+    },
+    {
+      "id": "midpoint-4-above-positive",
+      "n": "15167557957061886128357093794073542657",
+      "d": "1361129467683753853853498429727072845824",
+      "expected": {
+        "kind": "finite",
+        "bits": 1010209446
+      }
+    },
+    {
+      "id": "midpoint-4-above-negative",
+      "n": "-15167557957061886128357093794073542657",
+      "d": "1361129467683753853853498429727072845824",
+      "expected": {
+        "kind": "finite",
+        "bits": 3157693094
+      }
+    },
+    {
+      "id": "midpoint-5-below-positive",
+      "n": "13214571074579267924382220451259088895",
+      "d": "421249166674228746791672110734681729275580381602196445017243910144",
+      "expected": {
+        "kind": "finite",
+        "bits": 270471306
+      }
+    },
+    {
+      "id": "midpoint-5-below-negative",
+      "n": "-13214571074579267924382220451259088895",
+      "d": "421249166674228746791672110734681729275580381602196445017243910144",
+      "expected": {
+        "kind": "finite",
+        "bits": 2417954954
+      }
+    },
+    {
+      "id": "midpoint-5-half-positive",
+      "n": "20848917",
+      "d": "664613997892457936451903530140172288",
+      "expected": {
+        "kind": "finite",
+        "bits": 270471306
+      }
+    },
+    {
+      "id": "midpoint-5-half-negative",
+      "n": "-20848917",
+      "d": "664613997892457936451903530140172288",
+      "expected": {
+        "kind": "finite",
+        "bits": 2417954954
+      }
+    },
+    {
+      "id": "midpoint-5-above-positive",
+      "n": "13214571074579267924382220451259088897",
+      "d": "421249166674228746791672110734681729275580381602196445017243910144",
+      "expected": {
+        "kind": "finite",
+        "bits": 270471307
+      }
+    },
+    {
+      "id": "midpoint-5-above-negative",
+      "n": "-13214571074579267924382220451259088897",
+      "d": "421249166674228746791672110734681729275580381602196445017243910144",
+      "expected": {
+        "kind": "finite",
+        "bits": 2417954955
+      }
+    },
+    {
+      "id": "midpoint-6-below-positive",
+      "n": "19117856392914702805559574203981627391",
+      "d": "144115188075855872",
+      "expected": {
+        "kind": "finite",
+        "bits": 1625694065
+      }
+    },
+    {
+      "id": "midpoint-6-below-negative",
+      "n": "-19117856392914702805559574203981627391",
+      "d": "144115188075855872",
+      "expected": {
+        "kind": "finite",
+        "bits": 3773177713
+      }
+    },
+    {
+      "id": "midpoint-6-half-positive",
+      "n": "132656777180569665536",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1625694066
+      }
+    },
+    {
+      "id": "midpoint-6-half-negative",
+      "n": "-132656777180569665536",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3773177714
+      }
+    },
+    {
+      "id": "midpoint-6-above-positive",
+      "n": "19117856392914702805559574203981627393",
+      "d": "144115188075855872",
+      "expected": {
+        "kind": "finite",
+        "bits": 1625694066
+      }
+    },
+    {
+      "id": "midpoint-6-above-negative",
+      "n": "-19117856392914702805559574203981627393",
+      "d": "144115188075855872",
+      "expected": {
+        "kind": "finite",
+        "bits": 3773177714
+      }
+    },
+    {
+      "id": "midpoint-7-below-positive",
+      "n": "11417686489960554573595855631264251903",
+      "d": "134217728",
+      "expected": {
+        "kind": "finite",
+        "bits": 1871277942
+      }
+    },
+    {
+      "id": "midpoint-7-below-negative",
+      "n": "-11417686489960554573595855631264251903",
+      "d": "134217728",
+      "expected": {
+        "kind": "finite",
+        "bits": 4018761590
+      }
+    },
+    {
+      "id": "midpoint-7-half-positive",
+      "n": "85068393423859436613290426368",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1871277942
+      }
+    },
+    {
+      "id": "midpoint-7-half-negative",
+      "n": "-85068393423859436613290426368",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 4018761590
+      }
+    },
+    {
+      "id": "midpoint-7-above-positive",
+      "n": "11417686489960554573595855631264251905",
+      "d": "134217728",
+      "expected": {
+        "kind": "finite",
+        "bits": 1871277943
+      }
+    },
+    {
+      "id": "midpoint-7-above-negative",
+      "n": "-11417686489960554573595855631264251905",
+      "d": "134217728",
+      "expected": {
+        "kind": "finite",
+        "bits": 4018761591
+      }
+    },
+    {
+      "id": "midpoint-8-below-positive",
+      "n": "19525831991489755243219667176787017727",
+      "d": "356811923176489970264571492362373784095686656",
+      "expected": {
+        "kind": "finite",
+        "bits": 862652573
+      }
+    },
+    {
+      "id": "midpoint-8-below-negative",
+      "n": "-19525831991489755243219667176787017727",
+      "d": "356811923176489970264571492362373784095686656",
+      "expected": {
+        "kind": "finite",
+        "bits": 3010136221
+      }
+    },
+    {
+      "id": "midpoint-8-half-positive",
+      "n": "30806331",
+      "d": "562949953421312",
+      "expected": {
+        "kind": "finite",
+        "bits": 862652574
+      }
+    },
+    {
+      "id": "midpoint-8-half-negative",
+      "n": "-30806331",
+      "d": "562949953421312",
+      "expected": {
+        "kind": "finite",
+        "bits": 3010136222
+      }
+    },
+    {
+      "id": "midpoint-8-above-positive",
+      "n": "19525831991489755243219667176787017729",
+      "d": "356811923176489970264571492362373784095686656",
+      "expected": {
+        "kind": "finite",
+        "bits": 862652574
+      }
+    },
+    {
+      "id": "midpoint-8-above-negative",
+      "n": "-19525831991489755243219667176787017729",
+      "d": "356811923176489970264571492362373784095686656",
+      "expected": {
+        "kind": "finite",
+        "bits": 3010136222
+      }
+    },
+    {
+      "id": "midpoint-9-below-positive",
+      "n": "21072107123045748554247739759891841023",
+      "d": "79228162514264337593543950336",
+      "expected": {
+        "kind": "finite",
+        "bits": 1300079985
+      }
+    },
+    {
+      "id": "midpoint-9-below-negative",
+      "n": "-21072107123045748554247739759891841023",
+      "d": "79228162514264337593543950336",
+      "expected": {
+        "kind": "finite",
+        "bits": 3447563633
+      }
+    },
+    {
+      "id": "midpoint-9-half-positive",
+      "n": "265967384",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1300079986
+      }
+    },
+    {
+      "id": "midpoint-9-half-negative",
+      "n": "-265967384",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3447563634
+      }
+    },
+    {
+      "id": "midpoint-9-above-positive",
+      "n": "21072107123045748554247739759891841025",
+      "d": "79228162514264337593543950336",
+      "expected": {
+        "kind": "finite",
+        "bits": 1300079986
+      }
+    },
+    {
+      "id": "midpoint-9-above-negative",
+      "n": "-21072107123045748554247739759891841025",
+      "d": "79228162514264337593543950336",
+      "expected": {
+        "kind": "finite",
+        "bits": 3447563634
+      }
+    },
+    {
+      "id": "midpoint-10-below-positive",
+      "n": "17329356049365898964034708578987147263",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 1464899635
+      }
+    },
+    {
+      "id": "midpoint-10-below-negative",
+      "n": "-17329356049365898964034708578987147263",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 3612383283
+      }
+    },
+    {
+      "id": "midpoint-10-half-positive",
+      "n": "229352117633024",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1464899636
+      }
+    },
+    {
+      "id": "midpoint-10-half-negative",
+      "n": "-229352117633024",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3612383284
+      }
+    },
+    {
+      "id": "midpoint-10-above-positive",
+      "n": "17329356049365898964034708578987147265",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 1464899636
+      }
+    },
+    {
+      "id": "midpoint-10-above-negative",
+      "n": "-17329356049365898964034708578987147265",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 3612383284
+      }
+    },
+    {
+      "id": "midpoint-11-below-positive",
+      "n": "14717503964462857843943719255068901375",
+      "d": "43556142965880123323311949751266331066368",
+      "expected": {
+        "kind": "finite",
+        "bits": 967911375
+      }
+    },
+    {
+      "id": "midpoint-11-below-negative",
+      "n": "-14717503964462857843943719255068901375",
+      "d": "43556142965880123323311949751266331066368",
+      "expected": {
+        "kind": "finite",
+        "bits": 3115395023
+      }
+    },
+    {
+      "id": "midpoint-11-half-positive",
+      "n": "23220127",
+      "d": "68719476736",
+      "expected": {
+        "kind": "finite",
+        "bits": 967911376
+      }
+    },
+    {
+      "id": "midpoint-11-half-negative",
+      "n": "-23220127",
+      "d": "68719476736",
+      "expected": {
+        "kind": "finite",
+        "bits": 3115395024
+      }
+    },
+    {
+      "id": "midpoint-11-above-positive",
+      "n": "14717503964462857843943719255068901377",
+      "d": "43556142965880123323311949751266331066368",
+      "expected": {
+        "kind": "finite",
+        "bits": 967911376
+      }
+    },
+    {
+      "id": "midpoint-11-above-negative",
+      "n": "-14717503964462857843943719255068901377",
+      "d": "43556142965880123323311949751266331066368",
+      "expected": {
+        "kind": "finite",
+        "bits": 3115395024
+      }
+    },
+    {
+      "id": "midpoint-12-below-positive",
+      "n": "12745845856289478049114200970742464511",
+      "d": "324518553658426726783156020576256",
+      "expected": {
+        "kind": "finite",
+        "bits": 1192848427
+      }
+    },
+    {
+      "id": "midpoint-12-below-negative",
+      "n": "-12745845856289478049114200970742464511",
+      "d": "324518553658426726783156020576256",
+      "expected": {
+        "kind": "finite",
+        "bits": 3340332075
+      }
+    },
+    {
+      "id": "midpoint-12-half-positive",
+      "n": "20109399",
+      "d": "512",
+      "expected": {
+        "kind": "finite",
+        "bits": 1192848428
+      }
+    },
+    {
+      "id": "midpoint-12-half-negative",
+      "n": "-20109399",
+      "d": "512",
+      "expected": {
+        "kind": "finite",
+        "bits": 3340332076
+      }
+    },
+    {
+      "id": "midpoint-12-above-positive",
+      "n": "12745845856289478049114200970742464513",
+      "d": "324518553658426726783156020576256",
+      "expected": {
+        "kind": "finite",
+        "bits": 1192848428
+      }
+    },
+    {
+      "id": "midpoint-12-above-negative",
+      "n": "-12745845856289478049114200970742464513",
+      "d": "324518553658426726783156020576256",
+      "expected": {
+        "kind": "finite",
+        "bits": 3340332076
+      }
+    },
+    {
+      "id": "midpoint-13-below-positive",
+      "n": "20675659539029171634764857806036140031",
+      "d": "17179869184",
+      "expected": {
+        "kind": "finite",
+        "bits": 1819860939
+      }
+    },
+    {
+      "id": "midpoint-13-below-negative",
+      "n": "-20675659539029171634764857806036140031",
+      "d": "17179869184",
+      "expected": {
+        "kind": "finite",
+        "bits": 3967344587
+      }
+    },
+    {
+      "id": "midpoint-13-half-positive",
+      "n": "1203481779610107864414158848",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1819860940
+      }
+    },
+    {
+      "id": "midpoint-13-half-negative",
+      "n": "-1203481779610107864414158848",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3967344588
+      }
+    },
+    {
+      "id": "midpoint-13-above-positive",
+      "n": "20675659539029171634764857806036140033",
+      "d": "17179869184",
+      "expected": {
+        "kind": "finite",
+        "bits": 1819860940
+      }
+    },
+    {
+      "id": "midpoint-13-above-negative",
+      "n": "-20675659539029171634764857806036140033",
+      "d": "17179869184",
+      "expected": {
+        "kind": "finite",
+        "bits": 3967344588
+      }
+    },
+    {
+      "id": "midpoint-14-below-positive",
+      "n": "10935355577778515112161572035244326911",
+      "d": "3138550867693340381917894711603833208051177722232017256448",
+      "expected": {
+        "kind": "finite",
+        "bits": 495165738
+      }
+    },
+    {
+      "id": "midpoint-14-below-negative",
+      "n": "-10935355577778515112161572035244326911",
+      "d": "3138550867693340381917894711603833208051177722232017256448",
+      "expected": {
+        "kind": "finite",
+        "bits": 2642649386
+      }
+    },
+    {
+      "id": "midpoint-14-half-positive",
+      "n": "17252949",
+      "d": "4951760157141521099596496896",
+      "expected": {
+        "kind": "finite",
+        "bits": 495165738
+      }
+    },
+    {
+      "id": "midpoint-14-half-negative",
+      "n": "-17252949",
+      "d": "4951760157141521099596496896",
+      "expected": {
+        "kind": "finite",
+        "bits": 2642649386
+      }
+    },
+    {
+      "id": "midpoint-14-above-positive",
+      "n": "10935355577778515112161572035244326913",
+      "d": "3138550867693340381917894711603833208051177722232017256448",
+      "expected": {
+        "kind": "finite",
+        "bits": 495165739
+      }
+    },
+    {
+      "id": "midpoint-14-above-negative",
+      "n": "-10935355577778515112161572035244326913",
+      "d": "3138550867693340381917894711603833208051177722232017256448",
+      "expected": {
+        "kind": "finite",
+        "bits": 2642649387
+      }
+    },
+    {
+      "id": "midpoint-15-below-positive",
+      "n": "12841637141546324432067700845159907327",
+      "d": "274877906944",
+      "expected": {
+        "kind": "finite",
+        "bits": 1780126553
+      }
+    },
+    {
+      "id": "midpoint-15-below-negative",
+      "n": "-12841637141546324432067700845159907327",
+      "d": "274877906944",
+      "expected": {
+        "kind": "finite",
+        "bits": 3927610201
+      }
+    },
+    {
+      "id": "midpoint-15-half-positive",
+      "n": "46717603769307331939008512",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1780126554
+      }
+    },
+    {
+      "id": "midpoint-15-half-negative",
+      "n": "-46717603769307331939008512",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3927610202
+      }
+    },
+    {
+      "id": "midpoint-15-above-positive",
+      "n": "12841637141546324432067700845159907329",
+      "d": "274877906944",
+      "expected": {
+        "kind": "finite",
+        "bits": 1780126554
+      }
+    },
+    {
+      "id": "midpoint-15-above-negative",
+      "n": "-12841637141546324432067700845159907329",
+      "d": "274877906944",
+      "expected": {
+        "kind": "finite",
+        "bits": 3927610202
+      }
+    },
+    {
+      "id": "midpoint-16-below-positive",
+      "n": "13619178525509513956522536683647795199",
+      "d": "50216813883093446110686315385661331328818843555712276103168",
+      "expected": {
+        "kind": "finite",
+        "bits": 463728469
+      }
+    },
+    {
+      "id": "midpoint-16-below-negative",
+      "n": "-13619178525509513956522536683647795199",
+      "d": "50216813883093446110686315385661331328818843555712276103168",
+      "expected": {
+        "kind": "finite",
+        "bits": 2611212117
+      }
+    },
+    {
+      "id": "midpoint-16-half-positive",
+      "n": "21487275",
+      "d": "79228162514264337593543950336",
+      "expected": {
+        "kind": "finite",
+        "bits": 463728470
+      }
+    },
+    {
+      "id": "midpoint-16-half-negative",
+      "n": "-21487275",
+      "d": "79228162514264337593543950336",
+      "expected": {
+        "kind": "finite",
+        "bits": 2611212118
+      }
+    },
+    {
+      "id": "midpoint-16-above-positive",
+      "n": "13619178525509513956522536683647795201",
+      "d": "50216813883093446110686315385661331328818843555712276103168",
+      "expected": {
+        "kind": "finite",
+        "bits": 463728470
+      }
+    },
+    {
+      "id": "midpoint-16-above-negative",
+      "n": "-13619178525509513956522536683647795201",
+      "d": "50216813883093446110686315385661331328818843555712276103168",
+      "expected": {
+        "kind": "finite",
+        "bits": 2611212118
+      }
+    },
+    {
+      "id": "midpoint-17-below-positive",
+      "n": "11529816523803742605305246513295785983",
+      "d": "19342813113834066795298816",
+      "expected": {
+        "kind": "finite",
+        "bits": 1393215741
+      }
+    },
+    {
+      "id": "midpoint-17-below-negative",
+      "n": "-11529816523803742605305246513295785983",
+      "d": "19342813113834066795298816",
+      "expected": {
+        "kind": "finite",
+        "bits": 3540699389
+      }
+    },
+    {
+      "id": "midpoint-17-half-positive",
+      "n": "596077543424",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1393215742
+      }
+    },
+    {
+      "id": "midpoint-17-half-negative",
+      "n": "-596077543424",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3540699390
+      }
+    },
+    {
+      "id": "midpoint-17-above-positive",
+      "n": "11529816523803742605305246513295785985",
+      "d": "19342813113834066795298816",
+      "expected": {
+        "kind": "finite",
+        "bits": 1393215742
+      }
+    },
+    {
+      "id": "midpoint-17-above-negative",
+      "n": "-11529816523803742605305246513295785985",
+      "d": "19342813113834066795298816",
+      "expected": {
+        "kind": "finite",
+        "bits": 3540699390
+      }
+    },
+    {
+      "id": "midpoint-18-below-positive",
+      "n": "21128400950900683765509405355836178431",
+      "d": "205688069665150755269371147819668813122841983204197482918576128",
+      "expected": {
+        "kind": "finite",
+        "bits": 368988905
+      }
+    },
+    {
+      "id": "midpoint-18-below-negative",
+      "n": "-21128400950900683765509405355836178431",
+      "d": "205688069665150755269371147819668813122841983204197482918576128",
+      "expected": {
+        "kind": "finite",
+        "bits": 2516472553
+      }
+    },
+    {
+      "id": "midpoint-18-half-positive",
+      "n": "33334739",
+      "d": "324518553658426726783156020576256",
+      "expected": {
+        "kind": "finite",
+        "bits": 368988906
+      }
+    },
+    {
+      "id": "midpoint-18-half-negative",
+      "n": "-33334739",
+      "d": "324518553658426726783156020576256",
+      "expected": {
+        "kind": "finite",
+        "bits": 2516472554
+      }
+    },
+    {
+      "id": "midpoint-18-above-positive",
+      "n": "21128400950900683765509405355836178433",
+      "d": "205688069665150755269371147819668813122841983204197482918576128",
+      "expected": {
+        "kind": "finite",
+        "bits": 368988906
+      }
+    },
+    {
+      "id": "midpoint-18-above-negative",
+      "n": "-21128400950900683765509405355836178433",
+      "d": "205688069665150755269371147819668813122841983204197482918576128",
+      "expected": {
+        "kind": "finite",
+        "bits": 2516472554
+      }
+    },
+    {
+      "id": "midpoint-19-below-positive",
+      "n": "14834775589140571574105580765301440511",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 1462931758
+      }
+    },
+    {
+      "id": "midpoint-19-below-negative",
+      "n": "-14834775589140571574105580765301440511",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 3610415406
+      }
+    },
+    {
+      "id": "midpoint-19-half-positive",
+      "n": "196336620142592",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1462931758
+      }
+    },
+    {
+      "id": "midpoint-19-half-negative",
+      "n": "-196336620142592",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3610415406
+      }
+    },
+    {
+      "id": "midpoint-19-above-positive",
+      "n": "14834775589140571574105580765301440513",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 1462931759
+      }
+    },
+    {
+      "id": "midpoint-19-above-negative",
+      "n": "-14834775589140571574105580765301440513",
+      "d": "75557863725914323419136",
+      "expected": {
+        "kind": "finite",
+        "bits": 3610415407
+      }
+    },
+    {
+      "id": "midpoint-20-below-positive",
+      "n": "20553413653396162332431523232425705471",
+      "d": "803469022129495137770981046170581301261101496891396417650688",
+      "expected": {
+        "kind": "finite",
+        "bits": 435644184
+      }
+    },
+    {
+      "id": "midpoint-20-below-negative",
+      "n": "-20553413653396162332431523232425705471",
+      "d": "803469022129495137770981046170581301261101496891396417650688",
+      "expected": {
+        "kind": "finite",
+        "bits": 2583127832
+      }
+    },
+    {
+      "id": "midpoint-20-half-positive",
+      "n": "32427569",
+      "d": "1267650600228229401496703205376",
+      "expected": {
+        "kind": "finite",
+        "bits": 435644184
+      }
+    },
+    {
+      "id": "midpoint-20-half-negative",
+      "n": "-32427569",
+      "d": "1267650600228229401496703205376",
+      "expected": {
+        "kind": "finite",
+        "bits": 2583127832
+      }
+    },
+    {
+      "id": "midpoint-20-above-positive",
+      "n": "20553413653396162332431523232425705473",
+      "d": "803469022129495137770981046170581301261101496891396417650688",
+      "expected": {
+        "kind": "finite",
+        "bits": 435644185
+      }
+    },
+    {
+      "id": "midpoint-20-above-negative",
+      "n": "-20553413653396162332431523232425705473",
+      "d": "803469022129495137770981046170581301261101496891396417650688",
+      "expected": {
+        "kind": "finite",
+        "bits": 2583127833
+      }
+    },
+    {
+      "id": "midpoint-21-below-positive",
+      "n": "11835094676651905266232485572620845055",
+      "d": "1237940039285380274899124224",
+      "expected": {
+        "kind": "finite",
+        "bits": 1343124915
+      }
+    },
+    {
+      "id": "midpoint-21-below-negative",
+      "n": "-11835094676651905266232485572620845055",
+      "d": "1237940039285380274899124224",
+      "expected": {
+        "kind": "finite",
+        "bits": 3490608563
+      }
+    },
+    {
+      "id": "midpoint-21-half-positive",
+      "n": "9560313344",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1343124916
+      }
+    },
+    {
+      "id": "midpoint-21-half-negative",
+      "n": "-9560313344",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3490608564
+      }
+    },
+    {
+      "id": "midpoint-21-above-positive",
+      "n": "11835094676651905266232485572620845057",
+      "d": "1237940039285380274899124224",
+      "expected": {
+        "kind": "finite",
+        "bits": 1343124916
+      }
+    },
+    {
+      "id": "midpoint-21-above-negative",
+      "n": "-11835094676651905266232485572620845057",
+      "d": "1237940039285380274899124224",
+      "expected": {
+        "kind": "finite",
+        "bits": 3490608564
+      }
+    },
+    {
+      "id": "midpoint-22-below-positive",
+      "n": "18131408725335101532196884670654185471",
+      "d": "182687704666362864775460604089535377456991567872",
+      "expected": {
+        "kind": "finite",
+        "bits": 786055095
+      }
+    },
+    {
+      "id": "midpoint-22-below-negative",
+      "n": "-18131408725335101532196884670654185471",
+      "d": "182687704666362864775460604089535377456991567872",
+      "expected": {
+        "kind": "finite",
+        "bits": 2933538743
+      }
+    },
+    {
+      "id": "midpoint-22-half-positive",
+      "n": "28606319",
+      "d": "288230376151711744",
+      "expected": {
+        "kind": "finite",
+        "bits": 786055096
+      }
+    },
+    {
+      "id": "midpoint-22-half-negative",
+      "n": "-28606319",
+      "d": "288230376151711744",
+      "expected": {
+        "kind": "finite",
+        "bits": 2933538744
+      }
+    },
+    {
+      "id": "midpoint-22-above-positive",
+      "n": "18131408725335101532196884670654185473",
+      "d": "182687704666362864775460604089535377456991567872",
+      "expected": {
+        "kind": "finite",
+        "bits": 786055096
+      }
+    },
+    {
+      "id": "midpoint-22-above-negative",
+      "n": "-18131408725335101532196884670654185473",
+      "d": "182687704666362864775460604089535377456991567872",
+      "expected": {
+        "kind": "finite",
+        "bits": 2933538744
+      }
+    },
+    {
+      "id": "midpoint-23-below-positive",
+      "n": "13678026669323909050028218136550965247",
+      "d": "5070602400912917605986812821504",
+      "expected": {
+        "kind": "finite",
+        "bits": 1243915436
+      }
+    },
+    {
+      "id": "midpoint-23-below-negative",
+      "n": "-13678026669323909050028218136550965247",
+      "d": "5070602400912917605986812821504",
+      "expected": {
+        "kind": "finite",
+        "bits": 3391399084
+      }
+    },
+    {
+      "id": "midpoint-23-half-positive",
+      "n": "21580121",
+      "d": "8",
+      "expected": {
+        "kind": "finite",
+        "bits": 1243915436
+      }
+    },
+    {
+      "id": "midpoint-23-half-negative",
+      "n": "-21580121",
+      "d": "8",
+      "expected": {
+        "kind": "finite",
+        "bits": 3391399084
+      }
+    },
+    {
+      "id": "midpoint-23-above-positive",
+      "n": "13678026669323909050028218136550965249",
+      "d": "5070602400912917605986812821504",
+      "expected": {
+        "kind": "finite",
+        "bits": 1243915437
+      }
+    },
+    {
+      "id": "midpoint-23-above-negative",
+      "n": "-13678026669323909050028218136550965249",
+      "d": "5070602400912917605986812821504",
+      "expected": {
+        "kind": "finite",
+        "bits": 3391399085
+      }
+    },
+    {
+      "id": "midpoint-24-below-positive",
+      "n": "17020965814294175999926795113292890111",
+      "d": "3533694129556768659166595001485837031654967793751237916243212402585239552",
+      "expected": {
+        "kind": "finite",
+        "bits": 80536038
+      }
+    },
+    {
+      "id": "midpoint-24-below-negative",
+      "n": "-17020965814294175999926795113292890111",
+      "d": "3533694129556768659166595001485837031654967793751237916243212402585239552",
+      "expected": {
+        "kind": "finite",
+        "bits": 2228019686
+      }
+    },
+    {
+      "id": "midpoint-24-half-positive",
+      "n": "26854349",
+      "d": "5575186299632655785383929568162090376495104",
+      "expected": {
+        "kind": "finite",
+        "bits": 80536038
+      }
+    },
+    {
+      "id": "midpoint-24-half-negative",
+      "n": "-26854349",
+      "d": "5575186299632655785383929568162090376495104",
+      "expected": {
+        "kind": "finite",
+        "bits": 2228019686
+      }
+    },
+    {
+      "id": "midpoint-24-above-positive",
+      "n": "17020965814294175999926795113292890113",
+      "d": "3533694129556768659166595001485837031654967793751237916243212402585239552",
+      "expected": {
+        "kind": "finite",
+        "bits": 80536039
+      }
+    },
+    {
+      "id": "midpoint-24-above-negative",
+      "n": "-17020965814294175999926795113292890113",
+      "d": "3533694129556768659166595001485837031654967793751237916243212402585239552",
+      "expected": {
+        "kind": "finite",
+        "bits": 2228019687
+      }
+    },
+    {
+      "id": "midpoint-25-below-positive",
+      "n": "14891851557415847602907969827123494911",
+      "d": "19807040628566084398385987584",
+      "expected": {
+        "kind": "finite",
+        "bits": 1311981839
+      }
+    },
+    {
+      "id": "midpoint-25-below-negative",
+      "n": "-14891851557415847602907969827123494911",
+      "d": "19807040628566084398385987584",
+      "expected": {
+        "kind": "finite",
+        "bits": 3459465487
+      }
+    },
+    {
+      "id": "midpoint-25-half-positive",
+      "n": "751846368",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1311981840
+      }
+    },
+    {
+      "id": "midpoint-25-half-negative",
+      "n": "-751846368",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3459465488
+      }
+    },
+    {
+      "id": "midpoint-25-above-positive",
+      "n": "14891851557415847602907969827123494913",
+      "d": "19807040628566084398385987584",
+      "expected": {
+        "kind": "finite",
+        "bits": 1311981840
+      }
+    },
+    {
+      "id": "midpoint-25-above-negative",
+      "n": "-14891851557415847602907969827123494913",
+      "d": "19807040628566084398385987584",
+      "expected": {
+        "kind": "finite",
+        "bits": 3459465488
+      }
+    },
+    {
+      "id": "midpoint-26-below-positive",
+      "n": "21263926744221683999052819392226131967",
+      "d": "18014398509481984",
+      "expected": {
+        "kind": "finite",
+        "bits": 1652552840
+      }
+    },
+    {
+      "id": "midpoint-26-below-negative",
+      "n": "-21263926744221683999052819392226131967",
+      "d": "18014398509481984",
+      "expected": {
+        "kind": "finite",
+        "bits": 3800036488
+      }
+    },
+    {
+      "id": "midpoint-26-half-positive",
+      "n": "1180385053268877770752",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1652552840
+      }
+    },
+    {
+      "id": "midpoint-26-half-negative",
+      "n": "-1180385053268877770752",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3800036488
+      }
+    },
+    {
+      "id": "midpoint-26-above-positive",
+      "n": "21263926744221683999052819392226131969",
+      "d": "18014398509481984",
+      "expected": {
+        "kind": "finite",
+        "bits": 1652552841
+      }
+    },
+    {
+      "id": "midpoint-26-above-negative",
+      "n": "-21263926744221683999052819392226131969",
+      "d": "18014398509481984",
+      "expected": {
+        "kind": "finite",
+        "bits": 3800036489
+      }
+    },
+    {
+      "id": "midpoint-27-below-positive",
+      "n": "15219537969924244674965466109009985535",
+      "d": "5575186299632655785383929568162090376495104",
+      "expected": {
+        "kind": "finite",
+        "bits": 909587154
+      }
+    },
+    {
+      "id": "midpoint-27-below-negative",
+      "n": "-15219537969924244674965466109009985535",
+      "d": "5575186299632655785383929568162090376495104",
+      "expected": {
+        "kind": "finite",
+        "bits": 3057070802
+      }
+    },
+    {
+      "id": "midpoint-27-half-positive",
+      "n": "24012197",
+      "d": "8796093022208",
+      "expected": {
+        "kind": "finite",
+        "bits": 909587154
+      }
+    },
+    {
+      "id": "midpoint-27-half-negative",
+      "n": "-24012197",
+      "d": "8796093022208",
+      "expected": {
+        "kind": "finite",
+        "bits": 3057070802
+      }
+    },
+    {
+      "id": "midpoint-27-above-positive",
+      "n": "15219537969924244674965466109009985537",
+      "d": "5575186299632655785383929568162090376495104",
+      "expected": {
+        "kind": "finite",
+        "bits": 909587155
+      }
+    },
+    {
+      "id": "midpoint-27-above-negative",
+      "n": "-15219537969924244674965466109009985537",
+      "d": "5575186299632655785383929568162090376495104",
+      "expected": {
+        "kind": "finite",
+        "bits": 3057070803
+      }
+    },
+    {
+      "id": "midpoint-28-below-positive",
+      "n": "13348645407963006835260920762478886911",
+      "d": "1298074214633706907132624082305024",
+      "expected": {
+        "kind": "finite",
+        "bits": 1176546736
+      }
+    },
+    {
+      "id": "midpoint-28-below-negative",
+      "n": "-13348645407963006835260920762478886911",
+      "d": "1298074214633706907132624082305024",
+      "expected": {
+        "kind": "finite",
+        "bits": 3324030384
+      }
+    },
+    {
+      "id": "midpoint-28-half-positive",
+      "n": "21060449",
+      "d": "2048",
+      "expected": {
+        "kind": "finite",
+        "bits": 1176546736
+      }
+    },
+    {
+      "id": "midpoint-28-half-negative",
+      "n": "-21060449",
+      "d": "2048",
+      "expected": {
+        "kind": "finite",
+        "bits": 3324030384
+      }
+    },
+    {
+      "id": "midpoint-28-above-positive",
+      "n": "13348645407963006835260920762478886913",
+      "d": "1298074214633706907132624082305024",
+      "expected": {
+        "kind": "finite",
+        "bits": 1176546737
+      }
+    },
+    {
+      "id": "midpoint-28-above-negative",
+      "n": "-13348645407963006835260920762478886913",
+      "d": "1298074214633706907132624082305024",
+      "expected": {
+        "kind": "finite",
+        "bits": 3324030385
+      }
+    },
+    {
+      "id": "midpoint-29-below-positive",
+      "n": "19338399709041209700373167634246533119",
+      "d": "17592186044416",
+      "expected": {
+        "kind": "finite",
+        "bits": 1734919947
+      }
+    },
+    {
+      "id": "midpoint-29-below-negative",
+      "n": "-19338399709041209700373167634246533119",
+      "d": "17592186044416",
+      "expected": {
+        "kind": "finite",
+        "bits": 3882403595
+      }
+    },
+    {
+      "id": "midpoint-29-half-positive",
+      "n": "1099260754758757326520320",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 1734919948
+      }
+    },
+    {
+      "id": "midpoint-29-half-negative",
+      "n": "-1099260754758757326520320",
+      "d": "1",
+      "expected": {
+        "kind": "finite",
+        "bits": 3882403596
+      }
+    },
+    {
+      "id": "midpoint-29-above-positive",
+      "n": "19338399709041209700373167634246533121",
+      "d": "17592186044416",
+      "expected": {
+        "kind": "finite",
+        "bits": 1734919948
+      }
+    },
+    {
+      "id": "midpoint-29-above-negative",
+      "n": "-19338399709041209700373167634246533121",
+      "d": "17592186044416",
+      "expected": {
+        "kind": "finite",
+        "bits": 3882403596
+      }
+    },
+    {
+      "id": "midpoint-30-below-positive",
+      "n": "17616708355076234232995382758284984319",
+      "d": "5316911983139663491615228241121378304",
+      "expected": {
+        "kind": "finite",
+        "bits": 1079250348
+      }
+    },
+    {
+      "id": "midpoint-30-below-negative",
+      "n": "-17616708355076234232995382758284984319",
+      "d": "5316911983139663491615228241121378304",
+      "expected": {
+        "kind": "finite",
+        "bits": 3226733996
+      }
+    },
+    {
+      "id": "midpoint-30-half-positive",
+      "n": "27794265",
+      "d": "8388608",
+      "expected": {
+        "kind": "finite",
+        "bits": 1079250348
+      }
+    },
+    {
+      "id": "midpoint-30-half-negative",
+      "n": "-27794265",
+      "d": "8388608",
+      "expected": {
+        "kind": "finite",
+        "bits": 3226733996
+      }
+    },
+    {
+      "id": "midpoint-30-above-positive",
+      "n": "17616708355076234232995382758284984321",
+      "d": "5316911983139663491615228241121378304",
+      "expected": {
+        "kind": "finite",
+        "bits": 1079250349
+      }
+    },
+    {
+      "id": "midpoint-30-above-negative",
+      "n": "-17616708355076234232995382758284984321",
+      "d": "5316911983139663491615228241121378304",
+      "expected": {
+        "kind": "finite",
+        "bits": 3226733997
+      }
+    },
+    {
+      "id": "midpoint-31-below-positive",
+      "n": "15824932402376440646697049652207812607",
+      "d": "1532495540865888858358347027150309183618739122183602176",
+      "expected": {
+        "kind": "finite",
+        "bits": 591297622
+      }
+    },
+    {
+      "id": "midpoint-31-below-negative",
+      "n": "-15824932402376440646697049652207812607",
+      "d": "1532495540865888858358347027150309183618739122183602176",
+      "expected": {
+        "kind": "finite",
+        "bits": 2738781270
+      }
+    },
+    {
+      "id": "midpoint-31-half-positive",
+      "n": "24967341",
+      "d": "2417851639229258349412352",
+      "expected": {
+        "kind": "finite",
+        "bits": 591297622
+      }
+    },
+    {
+      "id": "midpoint-31-half-negative",
+      "n": "-24967341",
+      "d": "2417851639229258349412352",
+      "expected": {
+        "kind": "finite",
+        "bits": 2738781270
+      }
+    },
+    {
+      "id": "midpoint-31-above-positive",
+      "n": "15824932402376440646697049652207812609",
+      "d": "1532495540865888858358347027150309183618739122183602176",
+      "expected": {
+        "kind": "finite",
+        "bits": 591297623
+      }
+    },
+    {
+      "id": "midpoint-31-above-negative",
+      "n": "-15824932402376440646697049652207812609",
+      "d": "1532495540865888858358347027150309183618739122183602176",
+      "expected": {
+        "kind": "finite",
+        "bits": 2738781271
+      }
+    },
+    {
+      "id": "rational-0-positive",
+      "n": "41423665073758242503730745952372435283293546813162554616971264",
+      "d": "1074670044364755289251035",
+      "expected": {
+        "kind": "finite",
+        "bits": 2112355508
+      }
+    },
+    {
+      "id": "rational-0-negative",
+      "n": "-41423665073758242503730745952372435283293546813162554616971264",
+      "d": "1074670044364755289251035",
+      "expected": {
+        "kind": "finite",
+        "bits": 4259839156
+      }
+    },
+    {
+      "id": "rational-1-positive",
+      "n": "930212157941027367464397",
+      "d": "563526245871116323627035185928646629398594819032694652928",
+      "expected": {
+        "kind": "finite",
+        "bits": 151593596
+      }
+    },
+    {
+      "id": "rational-1-negative",
+      "n": "-930212157941027367464397",
+      "d": "563526245871116323627035185928646629398594819032694652928",
+      "expected": {
+        "kind": "finite",
+        "bits": 2299077244
+      }
+    },
+    {
+      "id": "rational-2-positive",
+      "n": "3942124297857472362590393510606302028733267377651712",
+      "d": "69677754752442029579311",
+      "expected": {
+        "kind": "finite",
+        "bits": 1865862910
+      }
+    },
+    {
+      "id": "rational-2-negative",
+      "n": "-3942124297857472362590393510606302028733267377651712",
+      "d": "69677754752442029579311",
+      "expected": {
+        "kind": "finite",
+        "bits": 4013346558
+      }
+    },
+    {
+      "id": "rational-3-positive",
+      "n": "71478233497970337771677",
+      "d": "778505899185732266273251090753801762730677232687498810884096",
+      "expected": {
+        "kind": "finite",
+        "bits": 33157494
+      }
+    },
+    {
+      "id": "rational-3-negative",
+      "n": "-71478233497970337771677",
+      "d": "778505899185732266273251090753801762730677232687498810884096",
+      "expected": {
+        "kind": "finite",
+        "bits": 2180641142
+      }
+    },
+    {
+      "id": "rational-4-positive",
+      "n": "47055700949327046307349",
+      "d": "109942159037785345881474085852266726731539860634468352",
+      "expected": {
+        "kind": "finite",
+        "bits": 218817842
+      }
+    },
+    {
+      "id": "rational-4-negative",
+      "n": "-47055700949327046307349",
+      "d": "109942159037785345881474085852266726731539860634468352",
+      "expected": {
+        "kind": "finite",
+        "bits": 2366301490
+      }
+    },
+    {
+      "id": "rational-5-positive",
+      "n": "2357318555558668976890662504841848291328",
+      "d": "18197669863372221925649",
+      "expected": {
+        "kind": "finite",
+        "bits": 1541807048
+      }
+    },
+    {
+      "id": "rational-5-negative",
+      "n": "-2357318555558668976890662504841848291328",
+      "d": "18197669863372221925649",
+      "expected": {
+        "kind": "finite",
+        "bits": 3689290696
+      }
+    },
+    {
+      "id": "rational-6-positive",
+      "n": "1607086886427672047805952",
+      "d": "543849529238728372630385",
+      "expected": {
+        "kind": "finite",
+        "bits": 1077747473
+      }
+    },
+    {
+      "id": "rational-6-negative",
+      "n": "-1607086886427672047805952",
+      "d": "543849529238728372630385",
+      "expected": {
+        "kind": "finite",
+        "bits": 3225231121
+      }
+    },
+    {
+      "id": "rational-7-positive",
+      "n": "418920413149260549136386332830702219333708882716393472",
+      "d": "24049744584693453078935",
+      "expected": {
+        "kind": "finite",
+        "bits": 1935399819
+      }
+    },
+    {
+      "id": "rational-7-negative",
+      "n": "-418920413149260549136386332830702219333708882716393472",
+      "d": "24049744584693453078935",
+      "expected": {
+        "kind": "finite",
+        "bits": 4082883467
+      }
+    },
+    {
+      "id": "rational-8-positive",
+      "n": "10675956961776085382203",
+      "d": "918743144659231884152677507727884288",
+      "expected": {
+        "kind": "finite",
+        "bits": 676418714
+      }
+    },
+    {
+      "id": "rational-8-negative",
+      "n": "-10675956961776085382203",
+      "d": "918743144659231884152677507727884288",
+      "expected": {
+        "kind": "finite",
+        "bits": 2823902362
+      }
+    },
+    {
+      "id": "rational-9-positive",
+      "n": "159986864669151431767411",
+      "d": "5297677061146850934886432752659718995968",
+      "expected": {
+        "kind": "finite",
+        "bits": 604718388
+      }
+    },
+    {
+      "id": "rational-9-negative",
+      "n": "-159986864669151431767411",
+      "d": "5297677061146850934886432752659718995968",
+      "expected": {
+        "kind": "finite",
+        "bits": 2752202036
+      }
+    },
+    {
+      "id": "rational-10-positive",
+      "n": "136118311073945669411563",
+      "d": "11418946734869183270871637912287042330054619388365945248586222526267392",
+      "expected": {
+        "kind": "finite",
+        "bits": 0
+      }
+    },
+    {
+      "id": "rational-10-negative",
+      "n": "-136118311073945669411563",
+      "d": "11418946734869183270871637912287042330054619388365945248586222526267392",
+      "expected": {
+        "kind": "finite",
+        "bits": 2147483648
+      }
+    },
+    {
+      "id": "rational-11-positive",
+      "n": "16035224631381618297939995980261317832767724069664587776",
+      "d": "30629031401997722921467",
+      "expected": {
+        "kind": "finite",
+        "bits": 1976467212
+      }
+    },
+    {
+      "id": "rational-11-negative",
+      "n": "-16035224631381618297939995980261317832767724069664587776",
+      "d": "30629031401997722921467",
+      "expected": {
+        "kind": "finite",
+        "bits": 4123950860
+      }
+    },
+    {
+      "id": "rational-12-positive",
+      "n": "200130486626750262949841",
+      "d": "113292311888228607632871229869240435247030004952858624",
+      "expected": {
+        "kind": "finite",
+        "bits": 235884723
+      }
+    },
+    {
+      "id": "rational-12-negative",
+      "n": "-200130486626750262949841",
+      "d": "113292311888228607632871229869240435247030004952858624",
+      "expected": {
+        "kind": "finite",
+        "bits": 2383368371
+      }
+    },
+    {
+      "id": "rational-13-positive",
+      "n": "332746635474675178143017",
+      "d": "2848001768160875277837004411490833874971662629686214656",
+      "expected": {
+        "kind": "finite",
+        "bits": 202877217
+      }
+    },
+    {
+      "id": "rational-13-negative",
+      "n": "-332746635474675178143017",
+      "d": "2848001768160875277837004411490833874971662629686214656",
+      "expected": {
+        "kind": "finite",
+        "bits": 2350360865
+      }
+    },
+    {
+      "id": "rational-14-positive",
+      "n": "1112319003230874572900229",
+      "d": "7706304201852461565366929199036401022346183186425288178974851072",
+      "expected": {
+        "kind": "finite",
+        "bits": 103004
+      }
+    },
+    {
+      "id": "rational-14-negative",
+      "n": "-1112319003230874572900229",
+      "d": "7706304201852461565366929199036401022346183186425288178974851072",
+      "expected": {
+        "kind": "finite",
+        "bits": 2147586652
+      }
+    },
+    {
+      "id": "rational-15-positive",
+      "n": "2345149414869330862449536461769399011620746142349867532419072",
+      "d": "325783339770934019533173",
+      "expected": {
+        "kind": "finite",
+        "bits": 2091732005
+      }
+    },
+    {
+      "id": "rational-15-negative",
+      "n": "-2345149414869330862449536461769399011620746142349867532419072",
+      "d": "325783339770934019533173",
+      "expected": {
+        "kind": "finite",
+        "bits": 4239215653
+      }
+    },
+    {
+      "id": "rational-16-positive",
+      "n": "219222795272333132615087",
+      "d": "29232091130894262734891506364203251903248305538002321408",
+      "expected": {
+        "kind": "finite",
+        "bits": 169591190
+      }
+    },
+    {
+      "id": "rational-16-negative",
+      "n": "-219222795272333132615087",
+      "d": "29232091130894262734891506364203251903248305538002321408",
+      "expected": {
+        "kind": "finite",
+        "bits": 2317074838
+      }
+    },
+    {
+      "id": "rational-17-positive",
+      "n": "873090809318559459951539",
+      "d": "32996285595346308549625323767267784206613670264832",
+      "expected": {
+        "kind": "finite",
+        "bits": 352519778
+      }
+    },
+    {
+      "id": "rational-17-negative",
+      "n": "-873090809318559459951539",
+      "d": "32996285595346308549625323767267784206613670264832",
+      "expected": {
+        "kind": "finite",
+        "bits": 2500003426
+      }
+    },
+    {
+      "id": "rational-18-positive",
+      "n": "275241332540461625718181",
+      "d": "278677060206540070742484806383499712997039489941504",
+      "expected": {
+        "kind": "finite",
+        "bits": 312246453
+      }
+    },
+    {
+      "id": "rational-18-negative",
+      "n": "-275241332540461625718181",
+      "d": "278677060206540070742484806383499712997039489941504",
+      "expected": {
+        "kind": "finite",
+        "bits": 2459730101
+      }
+    },
+    {
+      "id": "rational-19-positive",
+      "n": "81145934658939576903998916820587249664",
+      "d": "283883886826450160785645",
+      "expected": {
+        "kind": "finite",
+        "bits": 1468136547
+      }
+    },
+    {
+      "id": "rational-19-negative",
+      "n": "-81145934658939576903998916820587249664",
+      "d": "283883886826450160785645",
+      "expected": {
+        "kind": "finite",
+        "bits": 3615620195
+      }
+    },
+    {
+      "id": "rational-20-positive",
+      "n": "27625751303586797162095073624110137344",
+      "d": "365238729758077430654027",
+      "expected": {
+        "kind": "finite",
+        "bits": 1451857271
+      }
+    },
+    {
+      "id": "rational-20-negative",
+      "n": "-27625751303586797162095073624110137344",
+      "d": "365238729758077430654027",
+      "expected": {
+        "kind": "finite",
+        "bits": 3599340919
+      }
+    },
+    {
+      "id": "rational-21-positive",
+      "n": "695201161077933910432064578166864766089632426548527104",
+      "d": "31572866497503356538167",
+      "expected": {
+        "kind": "finite",
+        "bits": 1938486662
+      }
+    },
+    {
+      "id": "rational-21-negative",
+      "n": "-695201161077933910432064578166864766089632426548527104",
+      "d": "31572866497503356538167",
+      "expected": {
+        "kind": "finite",
+        "bits": 4085970310
+      }
+    },
+    {
+      "id": "rational-22-positive",
+      "n": "142460969358963347893945",
+      "d": "709126978443020168037432010365606685983193702076514304",
+      "expected": {
+        "kind": "finite",
+        "bits": 209871775
+      }
+    },
+    {
+      "id": "rational-22-negative",
+      "n": "-142460969358963347893945",
+      "d": "709126978443020168037432010365606685983193702076514304",
+      "expected": {
+        "kind": "finite",
+        "bits": 2357355423
+      }
+    },
+    {
+      "id": "rational-23-positive",
+      "n": "73787257405128615719831",
+      "d": "133283587139291843623528169472",
+      "expected": {
+        "kind": "finite",
+        "bits": 890543067
+      }
+    },
+    {
+      "id": "rational-23-negative",
+      "n": "-73787257405128615719831",
+      "d": "133283587139291843623528169472",
+      "expected": {
+        "kind": "finite",
+        "bits": 3038026715
+      }
+    },
+    {
+      "id": "rational-24-positive",
+      "n": "335498010162541235481341",
+      "d": "3717155150859237554147936960512",
+      "expected": {
+        "kind": "finite",
+        "bits": 868340512
+      }
+    },
+    {
+      "id": "rational-24-negative",
+      "n": "-335498010162541235481341",
+      "d": "3717155150859237554147936960512",
+      "expected": {
+        "kind": "finite",
+        "bits": 3015824160
+      }
+    },
+    {
+      "id": "rational-25-positive",
+      "n": "389960186234936446327977305494965964505088",
+      "d": "1035048265339181741347531",
+      "expected": {
+        "kind": "finite",
+        "bits": 1554468902
+      }
+    },
+    {
+      "id": "rational-25-negative",
+      "n": "-389960186234936446327977305494965964505088",
+      "d": "1035048265339181741347531",
+      "expected": {
+        "kind": "finite",
+        "bits": 3701952550
+      }
+    },
+    {
+      "id": "rational-26-positive",
+      "n": "10215881263779775191825760256",
+      "d": "86499827788917384285397",
+      "expected": {
+        "kind": "finite",
+        "bits": 1206299508
+      }
+    },
+    {
+      "id": "rational-26-negative",
+      "n": "-10215881263779775191825760256",
+      "d": "86499827788917384285397",
+      "expected": {
+        "kind": "finite",
+        "bits": 3353783156
+      }
+    },
+    {
+      "id": "rational-27-positive",
+      "n": "1083134148026105716648041925296343837916751456729300992",
+      "d": "7387499487882577850625",
+      "expected": {
+        "kind": "finite",
+        "bits": 1961316914
+      }
+    },
+    {
+      "id": "rational-27-negative",
+      "n": "-1083134148026105716648041925296343837916751456729300992",
+      "d": "7387499487882577850625",
+      "expected": {
+        "kind": "finite",
+        "bits": 4108800562
+      }
+    },
+    {
+      "id": "rational-28-positive",
+      "n": "5426773305549622548040660432367501901593313280",
+      "d": "7883933956004688239703",
+      "expected": {
+        "kind": "finite",
+        "bits": 1729217182
+      }
+    },
+    {
+      "id": "rational-28-negative",
+      "n": "-5426773305549622548040660432367501901593313280",
+      "d": "7883933956004688239703",
+      "expected": {
+        "kind": "finite",
+        "bits": 3876700830
+      }
+    },
+    {
+      "id": "rational-29-positive",
+      "n": "439180505353792205196991",
+      "d": "567405039976308138599944",
+      "expected": {
+        "kind": "finite",
+        "bits": 1061561831
+      }
+    },
+    {
+      "id": "rational-29-negative",
+      "n": "-439180505353792205196991",
+      "d": "567405039976308138599944",
+      "expected": {
+        "kind": "finite",
+        "bits": 3209045479
+      }
+    },
+    {
+      "id": "rational-30-positive",
+      "n": "25162930416428097498789",
+      "d": "323337654747024345853871233156775936",
+      "expected": {
+        "kind": "finite",
+        "bits": 699350423
+      }
+    },
+    {
+      "id": "rational-30-negative",
+      "n": "-25162930416428097498789",
+      "d": "323337654747024345853871233156775936",
+      "expected": {
+        "kind": "finite",
+        "bits": 2846834071
+      }
+    },
+    {
+      "id": "rational-31-positive",
+      "n": "37547383510662834650653",
+      "d": "155014165252376342994414241742748371635975527333888",
+      "expected": {
+        "kind": "finite",
+        "bits": 295274058
+      }
+    },
+    {
+      "id": "rational-31-negative",
+      "n": "-37547383510662834650653",
+      "d": "155014165252376342994414241742748371635975527333888",
+      "expected": {
+        "kind": "finite",
+        "bits": 2442757706
+      }
+    }
+  ]
+}
