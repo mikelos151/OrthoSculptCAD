@@ -1,0 +1,11 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 1ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  13:25:16
+   Duration  182ms (transform 20ms, setup 0ms, import 30ms, tests 3ms, environment 0ms)
+

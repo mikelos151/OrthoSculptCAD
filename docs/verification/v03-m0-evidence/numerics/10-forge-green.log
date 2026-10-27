@@ -1,0 +1,14 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 3ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > performs the four exact operations and comparison on normalized rationals 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > owns immutable limits and charges cumulative primitive work before arithmetic 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects forged contexts/fractions without invoking accessors and freezes owned values 2ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  13:28:39
+   Duration  289ms (transform 40ms, setup 0ms, import 58ms, tests 11ms, environment 0ms)
+

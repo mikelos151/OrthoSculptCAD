@@ -1,0 +1,21 @@
+{
+  "interval_audit": "PASS",
+  "cases": 799,
+  "kinds": {
+    "finite": 795,
+    "overflow": 4
+  },
+  "bytes": 156172,
+  "sha256": "3d502b806b517bdf817d24e0a3a73926decd56a10ae589b182319a66aa4f6edf",
+  "double_round_example": {
+    "id": "double-round-positive",
+    "n": "1606938140039961579660015739737851799416526969953987971776513",
+    "d": "1606938044258990275541962092341162602522202993782792835301376",
+    "expected": {
+      "kind": "finite",
+      "bits": 1065353217
+    }
+  },
+  "direct_bits_hex": "0x3f800001",
+  "via_f64_bits_hex": "0x3f800000"
+}

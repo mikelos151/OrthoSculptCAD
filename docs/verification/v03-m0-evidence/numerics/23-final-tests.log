@@ -1,0 +1,22 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > performs the four exact operations and comparison on normalized rationals 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > owns immutable limits and charges cumulative primitive work before arithmetic 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects forged contexts/fractions without invoking accessors and freezes owned values 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > decodes finite Float32 bits exactly and rejects malformed/nonfinite inputs before coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rounds directly once: 1 + 2^-24 + 2^-200 is above the Float32 midpoint 0ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rounds zero/subnormal/min-normal boundaries with ties-even and preserves negative underflow zero 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > uses even mantissas at normal binades and rejects the exact overflow threshold 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > covers cumulative rounding budgets, hostile values and hard raw/intermediate size boundaries 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > satisfies deterministic exact arithmetic identities without a floating-point oracle 7ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > checks nearest-even by independent exact local-distance witnesses on deterministic rational inputs 18ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > roundtrips finite bit patterns and resolves exact adjacent midpoints across binades 44ms
+
+ Test Files  1 passed (1)
+      Tests  13 passed (13)
+   Start at  13:38:03
+   Duration  283ms (transform 35ms, setup 0ms, import 48ms, tests 81ms, environment 0ms)
+

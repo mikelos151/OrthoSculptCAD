@@ -1,0 +1,29 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > performs the four exact operations and comparison on normalized rationals 1ms
+ × tests/v03-numerics.test.ts > v03 bounded exact numerics > owns immutable limits and charges cumulative primitive work before arithmetic 4ms
+   → expected function to throw an error, but it didn't
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-numerics.test.ts > v03 bounded exact numerics > owns immutable limits and charges cumulative primitive work before arithmetic
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-numerics.test.ts:53:91
+     51|       { maxBits: 32, maxOperations: 2000001 }, { maxBits: 32, maxOpera…
+     52|       { maxBits: 32, maxOperations: '100' }, { maxBits: 32, maxOperati…
+     53|       expect(() => numerics.createArithmeticContext(limits as numerics…
+       |                                                                                           ^
+     54|     }
+     55|     const limits = { maxBits: 8, maxOperations: 10000 };
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 passed (4)
+   Start at  13:26:44
+   Duration  264ms (transform 42ms, setup 0ms, import 58ms, tests 9ms, environment 0ms)
+

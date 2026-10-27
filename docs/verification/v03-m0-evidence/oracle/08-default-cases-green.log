@@ -1,0 +1,15 @@
+test_bounded_unique_canonical_case_collection (test_v03_f32_oracle.FixtureTests.test_bounded_unique_canonical_case_collection) ... ok
+test_deterministic_synthetic_inputs_cover_numeric_boundaries (test_v03_f32_oracle.FixtureTests.test_deterministic_synthetic_inputs_cover_numeric_boundaries) ... ok
+test_canonical_decimal_rational_parser (test_v03_f32_oracle.InputTests.test_canonical_decimal_rational_parser) ... ok
+test_input_bit_limits_and_preparse_string_limit (test_v03_f32_oracle.InputTests.test_input_bit_limits_and_preparse_string_limit) ... ok
+test_rounding_rejects_nonfraction_and_oversized_values (test_v03_f32_oracle.InputTests.test_rounding_rejects_nonfraction_and_oversized_values) ... ok
+test_direct_rounding_avoids_double_rounding (test_v03_f32_oracle.RoundingTests.test_direct_rounding_avoids_double_rounding) ... ok
+test_exact_overflow_threshold_both_signs (test_v03_f32_oracle.RoundingTests.test_exact_overflow_threshold_both_signs) ... ok
+test_float64_path_is_a_known_counterexample_not_the_oracle (test_v03_f32_oracle.RoundingTests.test_float64_path_is_a_known_counterexample_not_the_oracle) ... ok
+test_halfway_even_and_subnormal_normal_boundary (test_v03_f32_oracle.RoundingTests.test_halfway_even_and_subnormal_normal_boundary) ... ok
+test_negative_values_and_signed_underflow (test_v03_f32_oracle.RoundingTests.test_negative_values_and_signed_underflow) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.167s
+
+OK

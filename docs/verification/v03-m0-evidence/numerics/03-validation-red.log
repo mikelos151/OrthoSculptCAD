@@ -1,0 +1,27 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 2ms
+ × tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 3ms
+   → expected function to throw an error, but it didn't
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-numerics.test.ts:20:70
+     18|     expect(numerics.rational(-6n, 8n, ctx)).toEqual({ n: -3n, d: 4n });
+     19|     for (const [n, d] of [[1n, 0n], [1, 2n], ['1', 2n], [1n, 2], [Obje…
+     20|       expect(() => numerics.rational(n as bigint, d as bigint, ctx)).t…
+       |                                                                      ^
+     21|         expect.objectContaining({ code: 'INVALID_INPUT' }),
+     22|       );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  13:25:02
+   Duration  233ms (transform 32ms, setup 0ms, import 44ms, tests 6ms, environment 0ms)
+

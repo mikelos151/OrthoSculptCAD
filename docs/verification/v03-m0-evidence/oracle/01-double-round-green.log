@@ -1,0 +1,6 @@
+test_direct_rounding_avoids_double_rounding (test_v03_f32_oracle.RoundingTests.test_direct_rounding_avoids_double_rounding) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK

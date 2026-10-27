@@ -1,0 +1,17 @@
+test_direct_rounding_avoids_double_rounding (test_v03_f32_oracle.RoundingTests.test_direct_rounding_avoids_double_rounding) ... FAIL
+
+======================================================================
+FAIL: test_direct_rounding_avoids_double_rounding (test_v03_f32_oracle.RoundingTests.test_direct_rounding_avoids_double_rounding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\OrthoSculptCAD\tests\reference\test_v03_f32_oracle.py", line 24, in test_direct_rounding_avoids_double_rounding
+    self.assertEqual(call("round_fraction", value),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {"kind": "finite", "bits": 0x3F800001})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != {'kind': 'finite', 'bits': 1065353217}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

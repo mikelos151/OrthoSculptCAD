@@ -1,0 +1,42 @@
+test_direct_rounding_avoids_double_rounding (test_v03_f32_oracle.RoundingTests.test_direct_rounding_avoids_double_rounding) ... ok
+test_float64_path_is_a_known_counterexample_not_the_oracle (test_v03_f32_oracle.RoundingTests.test_float64_path_is_a_known_counterexample_not_the_oracle) ... ok
+test_negative_values_and_signed_underflow (test_v03_f32_oracle.RoundingTests.test_negative_values_and_signed_underflow) ... 
+  test_negative_values_and_signed_underflow (test_v03_f32_oracle.RoundingTests.test_negative_values_and_signed_underflow) (value=Fraction(-3, 2)) ... FAIL
+  test_negative_values_and_signed_underflow (test_v03_f32_oracle.RoundingTests.test_negative_values_and_signed_underflow) (value=Fraction(-1, 2854495385411919762116571938898990272765493248)) ... FAIL
+
+======================================================================
+FAIL: test_negative_values_and_signed_underflow (test_v03_f32_oracle.RoundingTests.test_negative_values_and_signed_underflow) (value=Fraction(-3, 2))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\OrthoSculptCAD\tests\reference\test_v03_f32_oracle.py", line 32, in test_negative_values_and_signed_underflow
+    self.assertEqual(call("round_fraction", value),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {"kind": "finite", "bits": bits})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'kind': 'finite', 'bits': 0} != {'kind': 'finite', 'bits': 3217031168}
+- {'bits': 0, 'kind': 'finite'}
++ {'bits': 3217031168, 'kind': 'finite'}
+?          ++++ +++++
+
+
+======================================================================
+FAIL: test_negative_values_and_signed_underflow (test_v03_f32_oracle.RoundingTests.test_negative_values_and_signed_underflow) (value=Fraction(-1, 2854495385411919762116571938898990272765493248))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\OrthoSculptCAD\tests\reference\test_v03_f32_oracle.py", line 32, in test_negative_values_and_signed_underflow
+    self.assertEqual(call("round_fraction", value),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {"kind": "finite", "bits": bits})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'kind': 'finite', 'bits': 0} != {'kind': 'finite', 'bits': 2147483648}
+- {'bits': 0, 'kind': 'finite'}
+?          ^
+
++ {'bits': 2147483648, 'kind': 'finite'}
+?          ^^^^^^^^^^
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=2)

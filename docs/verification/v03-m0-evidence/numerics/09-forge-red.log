@@ -1,0 +1,37 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > performs the four exact operations and comparison on normalized rationals 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > owns immutable limits and charges cumulative primitive work before arithmetic 2ms
+ × tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects forged contexts/fractions without invoking accessors and freezes owned values 6ms
+   → expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects forged contexts/fractions without invoking accessors and freezes owned values
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/v03-numerics.test.ts:85:36
+     83|     const ctx = numerics.createArithmeticContext({ maxBits: 256, maxOp…
+     84|     const value = numerics.rational(3n, 5n, ctx);
+     85|     expect(Object.isFrozen(value)).toBe(true);
+       |                                    ^
+     86|     expect(Object.isFrozen(ctx)).toBe(true);
+     87|     expect(Reflect.set(value, 'n', 9n)).toBe(false);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 passed (5)
+   Start at  13:28:19
+   Duration  277ms (transform 37ms, setup 0ms, import 54ms, tests 13ms, environment 0ms)
+

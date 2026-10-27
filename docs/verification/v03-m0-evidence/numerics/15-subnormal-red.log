@@ -1,0 +1,40 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > performs the four exact operations and comparison on normalized rationals 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > owns immutable limits and charges cumulative primitive work before arithmetic 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects forged contexts/fractions without invoking accessors and freezes owned values 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > decodes finite Float32 bits exactly and rejects malformed/nonfinite inputs before coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rounds directly once: 1 + 2^-24 + 2^-200 is above the Float32 midpoint 0ms
+ × tests/v03-numerics.test.ts > v03 bounded exact numerics > rounds zero/subnormal/min-normal boundaries with ties-even and preserves negative underflow zero 6ms
+   → expected 1040187392 to be +0 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-numerics.test.ts > v03 bounded exact numerics > rounds zero/subnormal/min-normal boundaries with ties-even and preserves negative underflow zero
+AssertionError: expected 1040187392 to be +0 // Object.is equality
+
+- Expected
++ Received
+
+- 0
++ 1040187392
+
+ ❯ tests/v03-numerics.test.ts:185:24
+    183|         const ctx = numerics.createArithmeticContext({ maxBits: 512, m…
+    184|         const result = numerics.toFloat32Bits(numerics.rational(sign *…
+    185|         expect(result).toBe(bits + (sign < 0n && n !== 0n ? 0x80000000…
+       |                        ^
+    186|         expect(Number.isInteger(result) && result >= 0 && result <= 0x…
+    187|         expect((result >>> 23) & 0xff).not.toBe(255);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 passed (8)
+   Start at  13:31:24
+   Duration  274ms (transform 41ms, setup 0ms, import 57ms, tests 16ms, environment 0ms)
+

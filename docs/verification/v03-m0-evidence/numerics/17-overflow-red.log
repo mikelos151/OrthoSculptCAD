@@ -1,0 +1,34 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > performs the four exact operations and comparison on normalized rationals 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > owns immutable limits and charges cumulative primitive work before arithmetic 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects forged contexts/fractions without invoking accessors and freezes owned values 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > decodes finite Float32 bits exactly and rejects malformed/nonfinite inputs before coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rounds directly once: 1 + 2^-24 + 2^-200 is above the Float32 midpoint 0ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rounds zero/subnormal/min-normal boundaries with ties-even and preserves negative underflow zero 2ms
+ × tests/v03-numerics.test.ts > v03 bounded exact numerics > uses even mantissas at normal binades and rejects the exact overflow threshold 4ms
+   → expected function to throw an error, but it didn't
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-numerics.test.ts > v03 bounded exact numerics > uses even mantissas at normal binades and rejects the exact overflow threshold
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-numerics.test.ts:210:89
+    208|       for (const n of [threshold, threshold + 1n, 1n << 128n, 1n << 10…
+    209|         const ctx = numerics.createArithmeticContext({ maxBits: 2048, …
+    210|         expect(() => numerics.toFloat32Bits(numerics.rational(sign * n…
+       |                                                                                         ^
+    211|           expect.objectContaining({ code: 'FLOAT32_OVERFLOW' }),
+    212|         );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 passed (9)
+   Start at  13:32:03
+   Duration  290ms (transform 46ms, setup 0ms, import 63ms, tests 18ms, environment 0ms)
+

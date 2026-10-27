@@ -1,0 +1,16 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > constructs a normalized rational 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects malformed fractions and canonicalizes zero without coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > performs the four exact operations and comparison on normalized rationals 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > owns immutable limits and charges cumulative primitive work before arithmetic 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rejects forged contexts/fractions without invoking accessors and freezes owned values 2ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > decodes finite Float32 bits exactly and rejects malformed/nonfinite inputs before coercion 1ms
+ ✓ tests/v03-numerics.test.ts > v03 bounded exact numerics > rounds directly once: 1 + 2^-24 + 2^-200 is above the Float32 midpoint 0ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  13:30:52
+   Duration  277ms (transform 43ms, setup 0ms, import 60ms, tests 12ms, environment 0ms)
+
