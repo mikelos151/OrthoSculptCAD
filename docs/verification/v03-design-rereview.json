@@ -1,0 +1,27 @@
+{
+  "scope": "Independent rereview of the integrated design, not acceptance of implementation or clinical product",
+  "delegationId": "deleg_4d16da92",
+  "reportedModel": "gpt-6.1-sol",
+  "passed": true,
+  "blockers": [],
+  "suggestions": [],
+  "reviewedFiles": [
+    "docs/plans/trimline-v03-integrated-design.md",
+    "docs/plans/trimline-float32-design-note.md"
+  ],
+  "closedDesignBlockers": {
+    "B1": "Continuous piecewise affine Q over both parts; whole-surface displacement cap 0.010 mm with distinct error allocations; separate embedding certificate for near sheets/local fans",
+    "B2": "Normative inner R and side checks against full construction C including discarded; source normals are candidate directions only; no strict original-plane no-penetration claim",
+    "B3": "Outer/rim-only refinement preserves inner and curve; inner subdivision requires full construction before final cut or explicit regenerated preview and renewed certificates"
+  },
+  "remainingMandatoryGate": "M0 must select and independently demonstrate the certification methods. A failure stops development rather than weakening requirements.",
+  "productScopeAlreadyApproved": "Smooth 3D curve, nonplanar shell and external collar",
+  "parentReadback": "Both updated design files were read; protected production paths showed no tracked changes before implementation",
+  "limitations": {
+    "implementationAccepted": false,
+    "newFeatureTestsExecuted": false,
+    "nativeWebViewVerified": false,
+    "clinicalValidation": false
+  },
+  "metadataUpdatePolicy": "Pending-review wording in the documents is updated after this verdict; the reviewed technical acceptance criteria remain unchanged."
+}

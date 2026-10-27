@@ -1,0 +1,67 @@
+{
+  "scope": "Historical baseline before any implementation of the newly approved smooth trimline/nonplanar-shell/collar feature",
+  "sourceHead": "c6185b52bfe8235b18d036a75e49cf8d7b05b892",
+  "branchAtBaseline": "master",
+  "productionTrackedDiff": "none",
+  "frozenBundleSha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+  "initialRun": {
+    "report": "v03-baseline-before-code.json",
+    "total": 334,
+    "passed": 330,
+    "failed": 4,
+    "pending": 0,
+    "causeObserved": "All four failures reported ModuleNotFoundError: pymupdf in PDF inspection. The previous dependency target in Hermes scratch no longer existed.",
+    "retained": true
+  },
+  "restoredRun": {
+    "report": "v03-baseline-restored-tools.json",
+    "total": 334,
+    "passed": 334,
+    "failed": 0,
+    "pending": 0,
+    "commandExitCode": 0,
+    "typecheckExitCode": 0,
+    "realWorkerOptIn": true,
+    "realReportPdfOptIn": true,
+    "maxWorkers": 1,
+    "assertionsWeakened": false
+  },
+  "developmentToolRestore": {
+    "package": "PyMuPDF==2.0",
+    "target": "node_modules/.cache/orthosculpt-report-python",
+    "interpreter": "The existing python command; REPORT_PDF_PYTHON resolved through sys.executable",
+    "runtimeApplicationDependency": false,
+    "importVerified": true,
+    "auditExitCode": 0,
+    "auditedDependencies": 12,
+    "knownVulnerabilityEntries": 0,
+    "skippedDependencies": [],
+    "auditCaveat": "A snapshot of known-advisory checking, not proof of complete security. Project tool cache may need restoration after npm ci.",
+    "dependencies": [
+      {"name":"flatbuffers","version":"25.12.19","vulns":[]},
+      {"name":"networkx","version":"3.7","vulns":[]},
+      {"name":"numpy","version":"2.5.4","vulns":[]},
+      {"name":"onnxruntime","version":"1.31.1","vulns":[]},
+      {"name":"packaging","version":"26.3","vulns":[]},
+      {"name":"protobuf","version":"7.36.2","vulns":[]},
+      {"name":"psutil","version":"7.2.2","vulns":[]},
+      {"name":"pymupdf","version":"2.0","vulns":[]},
+      {"name":"pymupdf-layout","version":"2.0","vulns":[]},
+      {"name":"pymupdf4llm","version":"2.0","vulns":[]},
+      {"name":"pyyaml","version":"6.0.3","vulns":[]},
+      {"name":"tabulate","version":"0.10.0","vulns":[]}
+    ]
+  },
+  "designGateAtThisSnapshot": {
+    "approvedProductScope": "Smooth 3D trimline, nonplanar shell and external collar",
+    "initialIndependentReviewPassed": false,
+    "openDesignBlockers": [
+      "Measurable source-to-construction displacement contract and near-sheet embedding protection",
+      "Unambiguous normative geometry for normals, offset side and retained inner surface",
+      "Refinement/collar rules preventing independently rounded inner-geometry changes"
+    ],
+    "fixAssignedToFreshAgent": true,
+    "newFeatureImplementedOrTested": false,
+    "clinicalAcceptance": "pending"
+  }
+}

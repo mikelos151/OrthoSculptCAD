@@ -1,0 +1,36 @@
+{
+  "scope": "Per-task model routing and a documentation-only task; not a CAD feature or release acceptance",
+  "requestedLabel": "gpt 6.1 terra high",
+  "launch": {
+    "provider": "openai-codex",
+    "model": "gpt-6.1-terra",
+    "reasoning": "high",
+    "globalConfigurationChanged": false,
+    "metadataLimit": "The stream init confirms the model; provider and reasoning are explicit accepted CLI arguments, not independently captured inference-wire telemetry."
+  },
+  "sessionId": "local-570f4e57c4577edce716b6800e6a66ad13b24daeee4a1c471328720b3389fc40",
+  "completedRuns": [
+    {"task": "Summarize five existing source/requirements files", "streamInitModel": "gpt-6.1-terra", "exitCode": 0, "durationMs": 31346},
+    {"task": "Correct the closed-cap input description after parent source review", "streamInitModel": "gpt-6.1-terra", "exitCode": 0, "durationMs": 22281}
+  ],
+  "artifact": {
+    "path": "docs/plans/trimline-existing-contracts.md",
+    "sha256": "7f3e73400257821e749c821d36ad56849b27544be96d171f03acdc1b536a72fa",
+    "tableRows": 9,
+    "verifiedByParentReadback": true,
+    "implementedTrimline": false
+  },
+  "preservedLimits": {
+    "productionTrackedDiff": "none",
+    "frozenBundleSha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "frozenReleaseZipSha256": "d4c22a1bb0128b2c9e58c5a11822a0f8f5b21102c268ca935eaba15824246736",
+    "releaseZipComparedWithItsSidecar": true,
+    "newApplicationTestsRun": false,
+    "clinicalGate": "pending; no authorized scans, independent measurement acceptance or prosthetist evaluation supplied in this exchange"
+  },
+  "rejectedInvocations": [
+    {"exitCode": 2, "reason": "Gateway-backed CLI rejected --run-budget before inference", "resolution": "Removed unsupported flag; did not change shared configuration or gateway policy"},
+    {"exitCode": 2, "reason": "Resume rejected --max-turns 4 differing from the session launch policy", "resolution": "Resumed without that creation override"}
+  ],
+  "rawTraceLocation": "The original stream/stderr files are in the Hermes scratch directory under ortho-terra-*. They are temporary diagnostics and may be pruned. This report retains only verified summary fields, not a guarantee of permanent raw-trace retention."
+}
