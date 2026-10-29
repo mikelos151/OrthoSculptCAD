@@ -1,0 +1,1469 @@
+{
+  "phases": [
+    {
+      "phase": "01-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  17 passed (17)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "211302d35ee978836e2cc202cf8a33ace2b9826b9eccf0a2d2ee7ef88811e67a",
+        "workerPool.ts": "620571f0b53bee729c58681de355dc96ce648587ac233ab1318079777645c567",
+        "v03-worker-pool.test.ts": "961773f5c8a8e21aad05dc6969323b3c98a0d84a198375c71b50182f4a78dd3e"
+      }
+    },
+    {
+      "phase": "01-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 16 passed (17)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 01 reserves the complete plan in the supplied real ledger before construction",
+        "AssertionError: expected { ok: false, code: 'BUSY' } to not have property \"code\""
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "00ade9ee6a45d3b7ec08b54599bbebc817c960ed10c6716fd4fb266f1381a890",
+        "workerPool.ts": "c85f0a9f804fc5d0e7fc8d0bca54a21c2d281ad315d712a5fdc2ef7b50b4d632",
+        "v03-worker-pool.test.ts": "961773f5c8a8e21aad05dc6969323b3c98a0d84a198375c71b50182f4a78dd3e"
+      }
+    },
+    {
+      "phase": "03-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  19 passed (19)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "f5395f13b395864c561079f3213cc0e6e2d220dd94d09c68be2625161e697196",
+        "workerPool.ts": "ceaf828a548bbef8e314de7d91d16a87b8bc20218612b57f3e45f02f23cc1aea",
+        "v03-worker-pool.test.ts": "0e665cef7139cee7172a4f7153a2bde3f3c38e7dc01f68b69f4789f3e23ec640"
+      }
+    },
+    {
+      "phase": "03-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 18 passed (19)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 03 TEST constructor failure returns its slot and closes only its own reservation",
+        "AssertionError: expected { managed: 24, job: 16, …(2) } to deeply equal { managed: 8, job: +0, …(2) }"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "bea98a89263f72190c3ab98758c2b2ed03ebd4ccca2bca69c5b531ce90676a54",
+        "workerPool.ts": "620571f0b53bee729c58681de355dc96ce648587ac233ab1318079777645c567",
+        "v03-worker-pool.test.ts": "0e665cef7139cee7172a4f7153a2bde3f3c38e7dc01f68b69f4789f3e23ec640"
+      }
+    },
+    {
+      "phase": "04-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  20 passed (20)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "ed51a82dfc4d5b2d8dce377367c95017d059f3967b06640806c26a5392876d12",
+        "workerPool.ts": "5e9dddf56df1a3aad47c5b0bd37d600e4fa076e97b18163474007451aac0f0c9",
+        "v03-worker-pool.test.ts": "c2e86569eea075dd01bd3ec7a588df36e1e37c8ee928e098c4c9a2ca1ab1db87"
+      }
+    },
+    {
+      "phase": "04-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 19 passed (20)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 04 authentic release invokes controlled terminate once before returning the slot",
+        "AssertionError: expected [Function] to not throw an error but 'Error: Invalid pool input' was thrown",
+        "\"Error: Invalid pool input\""
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "6460b771bf93a4a6c9a6055a6ecb9d4f70a876e946baa412a06c6e1e871f849d",
+        "workerPool.ts": "4b1b31c12615e49f239367aeda811094380b1e6a8f7e7975785bfce2e8b2cd8c",
+        "v03-worker-pool.test.ts": "c2e86569eea075dd01bd3ec7a588df36e1e37c8ee928e098c4c9a2ca1ab1db87"
+      }
+    },
+    {
+      "phase": "08-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  24 passed (24)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "1d3b61dd433b98e52786fe310c3cbb806395a24d6ce34d771e00eb80a85e6a17",
+        "workerPool.ts": "c0e868f72bde8b3121ea56669175288b72e1e0491c6fdc63c41c022aaaa33294",
+        "v03-worker-pool.test.ts": "f5ebe88a599ef5da2a4ac354875ad94a1294f847901b2b46973573cff01d5832"
+      }
+    },
+    {
+      "phase": "08-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 23 passed (24)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 08 rejects an invalid internal role before reserving or constructing",
+        "AssertionError: expected function to throw an error, but it didn't"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "951f67f08bd692fc2c052375448d783f883032c7d50db3ec0dfc6f17a00186a4",
+        "workerPool.ts": "5e9dddf56df1a3aad47c5b0bd37d600e4fa076e97b18163474007451aac0f0c9",
+        "v03-worker-pool.test.ts": "f5ebe88a599ef5da2a4ac354875ad94a1294f847901b2b46973573cff01d5832"
+      }
+    },
+    {
+      "phase": "09-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  25 passed (25)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "5f04e004a509afd646df8a670bb1d267eb0222511b2bd8de7a1aeb4d24c82081",
+        "workerPool.ts": "58d7c85573d5d87713a525cf96f91159497ce791b320af802417876d06daefe3",
+        "v03-worker-pool.test.ts": "dac32e74485e927c34101b3e59eb839094addbd8e391edeac346b6c2b5127600"
+      }
+    },
+    {
+      "phase": "09-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 24 passed (25)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "AssertionError: expected {} to deeply equal { ok: false, code: 'BUDGET' }"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "096d08a5d77c88cd5939f51bdbbb6b80a6a96e97e0e8b787ff3fc8950cfaa6ee",
+        "workerPool.ts": "c0e868f72bde8b3121ea56669175288b72e1e0491c6fdc63c41c022aaaa33294",
+        "v03-worker-pool.test.ts": "dac32e74485e927c34101b3e59eb839094addbd8e391edeac346b6c2b5127600"
+      }
+    },
+    {
+      "phase": "12-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  28 passed (28)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "ff2a1f0ff87eeb37809addd1a0db243fd6711bc727f46e6e16d7d49cd1729dc9",
+        "workerPool.ts": "f331e961fb9f1704f5276cba11befb5535fc2ce85009e47bc5a927f6d1cc5a4e",
+        "v03-worker-pool.test.ts": "23c610e27aeac798206ae4e4dc3eb3d2bc29ff9fe4e9d9caa6fdacdf6c4c5310"
+      }
+    },
+    {
+      "phase": "12-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 27 passed (28)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "AssertionError: expected +0 to be 1 // Object.is equality"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "733d3d91adabc5d2f2d1a317a439ac2062a5de773891f689c67cec494dc69d25",
+        "workerPool.ts": "58d7c85573d5d87713a525cf96f91159497ce791b320af802417876d06daefe3",
+        "v03-worker-pool.test.ts": "23c610e27aeac798206ae4e4dc3eb3d2bc29ff9fe4e9d9caa6fdacdf6c4c5310"
+      }
+    },
+    {
+      "phase": "13-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  29 passed (29)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "dfe7a3187158d70241aebef32b4bfcfda15a156f7b7cb28338ee0560270fbb05",
+        "workerPool.ts": "cdf229cf071e13787235ca17ceb43cacf969ac35aaafa8abea3ecfe503b7908b",
+        "v03-worker-pool.test.ts": "b5f75e21b480b66d58048ef4602781668c08d62ad04dd3d4806791e3a3e40fe3"
+      }
+    },
+    {
+      "phase": "13-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 28 passed (29)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "AssertionError: expected function to throw an error, but it didn't"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "d37c48cca19a7c81458ca0ebf76ce5ac0420cb334e1a2bcff5e6ef028f737cf5",
+        "workerPool.ts": "64d76f4d98bcfebc41e7206b140ffe277b68e8a1907d98da2265d8719dbd750f",
+        "v03-worker-pool.test.ts": "b5f75e21b480b66d58048ef4602781668c08d62ad04dd3d4806791e3a3e40fe3"
+      }
+    },
+    {
+      "phase": "14-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  30 passed (30)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "2bd91782a554d1a1a108f4fba6846ac53cc60c125708c4a33e4c0c629d5ef008",
+        "workerPool.ts": "7f3a85e38fd10028adf279329f4f039247e08c869907705ff233fb4636eee44b",
+        "v03-worker-pool.test.ts": "83e1c1d44b5bc6960376497978f466243086eb3a7d04e7ef85257430fad72c5d"
+      }
+    },
+    {
+      "phase": "14-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 29 passed (30)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "AssertionError: expected error to match asymmetric matcher"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "ec7aef1d73516580d72460133f46fb5a7d7ec5fd9e86e3a09efa0e849693c895",
+        "workerPool.ts": "cdf229cf071e13787235ca17ceb43cacf969ac35aaafa8abea3ecfe503b7908b",
+        "v03-worker-pool.test.ts": "83e1c1d44b5bc6960376497978f466243086eb3a7d04e7ef85257430fad72c5d"
+      }
+    },
+    {
+      "phase": "15-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  31 passed (31)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "8c16bd6dc36709a0b8ccfe1a19f3ccfd2e0949c6e5a9786653378c3e96e8a826",
+        "workerPool.ts": "c4ae66b211a46e6becdd2bba63d4f88a407bd9f9f87b7d9ef0febbe8e76ded65",
+        "v03-worker-pool.test.ts": "a3bd8583332cfa8abf4bf172a7995d1d6e794bf9c7abb16ba1d523f307a7b5d3"
+      }
+    },
+    {
+      "phase": "15-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 30 passed (31)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "AssertionError: expected { disposed: false, occupied: 2 } to match object { occupied: 2, slots: [ …(2) ] }"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "334721b9ee94b9e0c370df35cf3616bf61b4b9ca1f91600b48ab3e05d7636794",
+        "workerPool.ts": "751bfa9a68be505582d3a78e9e069817e4d06377bcd7e3e9fe783178900f37f0",
+        "v03-worker-pool.test.ts": "a3bd8583332cfa8abf4bf172a7995d1d6e794bf9c7abb16ba1d523f307a7b5d3"
+      }
+    },
+    {
+      "phase": "16-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  32 passed (32)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "906f33c9bf82456f63a2e7adfbc0fa72f6335739669b7025f9e29c77d80731db",
+        "workerPool.ts": "dbdad88badddd2f6e95a3f0669d23145335f63eac21dd080c553bff7bba980b5",
+        "v03-worker-pool.test.ts": "a6204546de29fc7c6b8e333aed538fd27ea162d7c67cbd0150bc8ca38958cc1d"
+      }
+    },
+    {
+      "phase": "16-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 31 passed (32)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "AssertionError: expected \"getRandomValues\" to be called at least once"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "46c362e3e79b2dd86106a409820420cc685479bb9eba8443ebfdbb6d9734d529",
+        "workerPool.ts": "c4ae66b211a46e6becdd2bba63d4f88a407bd9f9f87b7d9ef0febbe8e76ded65",
+        "v03-worker-pool.test.ts": "a6204546de29fc7c6b8e333aed538fd27ea162d7c67cbd0150bc8ca38958cc1d"
+      }
+    },
+    {
+      "phase": "17-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  33 passed (33)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "5408c24564e5bf0efb352f70f2eb3d459521e6193bc56bfee96b6fb09e6877f2",
+        "workerPool.ts": "083cb01f04a7f50253f964cac462b6735f0a86879e693bdc8a25f7a5372ee97f",
+        "v03-worker-pool.test.ts": "9ab909b99a024e9f491bccfefcc57bd565ac7ae142508ae39c5af65b3f18fb2e"
+      }
+    },
+    {
+      "phase": "17-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 32 passed (33)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "AssertionError: expected function to throw an error, but it didn't"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "49753e06b4510ac4a918e1e2f871b2d1f1cbdbbafa45f06403b297bd696aa27f",
+        "workerPool.ts": "dbdad88badddd2f6e95a3f0669d23145335f63eac21dd080c553bff7bba980b5",
+        "v03-worker-pool.test.ts": "9ab909b99a024e9f491bccfefcc57bd565ac7ae142508ae39c5af65b3f18fb2e"
+      }
+    },
+    {
+      "phase": "18-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  34 passed (34)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "18 TEST listener setup failure terminates the newly owned Worker without publishing a lease"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "c6a907bc4173d4d38e6e471d42ca5f3ceb48c55f54260a9b56cc458c2cdf8184",
+        "workerPool.ts": "f9d810ee58039e939c56a92e71dc03a8d6b8b1a800d1d0c8af8c66f421acf42c",
+        "v03-worker-pool.test.ts": "beb044bdbc6c340d965deeb47f361cfe085005e9fb6f1bc568ca179a9c7ba561"
+      }
+    },
+    {
+      "phase": "18-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 33 passed (34)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 18 TEST listener setup failure terminates the newly owned Worker without publishing a lease",
+        "AssertionError: expected +0 to be 1 // Object.is equality"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "18 TEST listener setup failure terminates the newly owned Worker without publishing a lease"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "53ec9a2c95875fa37f6a1b2ff815bfb2400e23614961e47a53dbdba49bb08e2a",
+        "workerPool.ts": "083cb01f04a7f50253f964cac462b6735f0a86879e693bdc8a25f7a5372ee97f",
+        "v03-worker-pool.test.ts": "beb044bdbc6c340d965deeb47f361cfe085005e9fb6f1bc568ca179a9c7ba561"
+      }
+    },
+    {
+      "phase": "19-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  35 passed (35)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "18 TEST listener setup failure terminates the newly owned Worker without publishing a lease",
+        "19 TEST messageerror is terminal for its exact binding"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "8f4ac6080352ee60665e8961ac749cdd82e43159e269a88df0c703d258c0a941",
+        "workerPool.ts": "d4f9ea277c9d8023847d0d4b4ece15455104a0c0c97ff36875bc97a433150d88",
+        "v03-worker-pool.test.ts": "c074fa72c88b74b79f39af3458d113f375d2bab99f0e9ffa56b2898b90ed44af"
+      }
+    },
+    {
+      "phase": "19-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 34 passed (35)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 19 TEST messageerror is terminal for its exact binding",
+        "AssertionError: expected +0 to be 1 // Object.is equality"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "18 TEST listener setup failure terminates the newly owned Worker without publishing a lease",
+        "19 TEST messageerror is terminal for its exact binding"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "31964a726615ac7d4f17e909d12d791070f4d5e814ae6c06e72cfd235703e8d1",
+        "workerPool.ts": "f9d810ee58039e939c56a92e71dc03a8d6b8b1a800d1d0c8af8c66f421acf42c",
+        "v03-worker-pool.test.ts": "c074fa72c88b74b79f39af3458d113f375d2bab99f0e9ffa56b2898b90ed44af"
+      }
+    },
+    {
+      "phase": "20-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  36 passed (36)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "18 TEST listener setup failure terminates the newly owned Worker without publishing a lease",
+        "19 TEST messageerror is terminal for its exact binding",
+        "20 retains exactly three private ownership domains, never exposing capabilities in diagnostics"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "f73bb4c1c512ae18694c2ca96ad6079ec1d90155295ad4219ba9a8a46957c1cc",
+        "workerPool.ts": "75cf2d11364d5bd2a6b42e6b0e73078b9e6c140a67acebb16efd5dcdf1224ef4",
+        "v03-worker-pool.test.ts": "ce07a9f9336e624a883b22f86918d5dc7a1004447bd69d382759740abb4bf32a"
+      }
+    },
+    {
+      "phase": "20-red",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 1,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 35 passed (36)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 20 retains exactly three private ownership domains, never exposing capabilities in diagnostics",
+        "AssertionError: expected { disposed: false, occupied: +0, …(1) } to have property \"ownershipDomains\" with value 3"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "18 TEST listener setup failure terminates the newly owned Worker without publishing a lease",
+        "19 TEST messageerror is terminal for its exact binding",
+        "20 retains exactly three private ownership domains, never exposing capabilities in diagnostics"
+      ],
+      "hashes": {
+        "command.json": "61841d0bf492ad606c7f2d4a6865a493210c81f99422155b995daee6aabf21a7",
+        "output.log": "523fbb5704a262d02bae39479aa28c101bba1b88e0bd31ab99809703ee194e1a",
+        "workerPool.ts": "d4f9ea277c9d8023847d0d4b4ece15455104a0c0c97ff36875bc97a433150d88",
+        "v03-worker-pool.test.ts": "ce07a9f9336e624a883b22f86918d5dc7a1004447bd69d382759740abb4bf32a"
+      }
+    },
+    {
+      "phase": "24-existing-coverage",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  40 passed (40)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "18 TEST listener setup failure terminates the newly owned Worker without publishing a lease",
+        "19 TEST messageerror is terminal for its exact binding",
+        "20 retains exactly three private ownership domains, never exposing capabilities in diagnostics",
+        "21 TEST release revokes auth before terminate and holds the REVOKING slot through the native call",
+        "22 TEST dispose continues other cleanup after terminate throw and never retries the failed object",
+        "23 TEST captured late callback from a retired exact binding has zero h2 effects",
+        "24 preserves unrelated materialized external lease ownership when disposing pool reservations"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "be4379326c3164728c099e1364f88db8cefad5c711e517cd18a214aef00a35ea",
+        "workerPool.ts": "75cf2d11364d5bd2a6b42e6b0e73078b9e6c140a67acebb16efd5dcdf1224ef4",
+        "v03-worker-pool.test.ts": "b0c8e2aacb6ce9f306656890f85e96ebd892328b1e0d55bc2435f291a189f7cb"
+      }
+    },
+    {
+      "phase": "final-green",
+      "command": {
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+          "run",
+          "--config",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/vitest.config.mjs"
+        ],
+        "exit": 0,
+        "error": "",
+        "signal": null
+      },
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  40 passed (40)"
+      ],
+      "test_names": [
+        "01 reserves the complete plan in the supplied real ledger before construction",
+        "02 counts STARTING and idle slots across roles; BUSY has zero ledger/constructor effects",
+        "03 TEST constructor failure returns its slot and closes only its own reservation",
+        "04 authentic release invokes controlled terminate once before returning the slot",
+        "05 rejects forged, cloned, diagnostic and cross-pool handles even after authentic retirement",
+        "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+        "07 atomic BUDGET leaves the free slot available and never calls payload allocator or constructor",
+        "08 rejects an invalid internal role before reserving or constructing",
+        "09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "10 isolates sparse and other malformed plans without leaked slots or ledger changes",
+        "11 TEST terminate throw fails closed with revoked authority and no slot or charge reuse",
+        "12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "18 TEST listener setup failure terminates the newly owned Worker without publishing a lease",
+        "19 TEST messageerror is terminal for its exact binding",
+        "20 retains exactly three private ownership domains, never exposing capabilities in diagnostics",
+        "21 TEST release revokes auth before terminate and holds the REVOKING slot through the native call",
+        "22 TEST dispose continues other cleanup after terminate throw and never retries the failed object",
+        "23 TEST captured late callback from a retired exact binding has zero h2 effects",
+        "24 preserves unrelated materialized external lease ownership when disposing pool reservations"
+      ],
+      "hashes": {
+        "command.json": "007ea5add94ff8d11c8035b0ce1c9b0fad3aa623c692e28166b4a9ac6e6f4d86",
+        "output.log": "edfb394b6098fede128ad09e88c58a0dbcc14c3fe4f72948b8c8e69b8ca91592",
+        "workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+        "v03-worker-pool.test.ts": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7"
+      }
+    }
+  ],
+  "cycles": [
+    {
+      "id": "01",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\01-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\01-source.diff"
+    },
+    {
+      "id": "03",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\03-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\03-source.diff"
+    },
+    {
+      "id": "04",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\04-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\04-source.diff"
+    },
+    {
+      "id": "08",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\08-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\08-source.diff"
+    },
+    {
+      "id": "09",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\09-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\09-source.diff"
+    },
+    {
+      "id": "12",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\12-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\12-source.diff"
+    },
+    {
+      "id": "13",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\13-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\13-source.diff"
+    },
+    {
+      "id": "14",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\14-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\14-source.diff"
+    },
+    {
+      "id": "15",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\15-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\15-source.diff"
+    },
+    {
+      "id": "16",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\16-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\16-source.diff"
+    },
+    {
+      "id": "17",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\17-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\17-source.diff"
+    },
+    {
+      "id": "18",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\18-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\18-source.diff"
+    },
+    {
+      "id": "19",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\19-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\19-source.diff"
+    },
+    {
+      "id": "20",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\20-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\20-source.diff"
+    }
+  ],
+  "cycles_count": 14,
+  "final_tests": {
+    "G1a": 16,
+    "pool": 24,
+    "total": 40,
+    "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\final-green\\output.log"
+  },
+  "native_existing_observations": {
+    "not_reexecuted": true,
+    "checks": 119,
+    "created": 49,
+    "close_notifications": 49,
+    "metrics": {
+      "attempts": 50,
+      "created": 49,
+      "terminated": 49,
+      "sends": 0,
+      "allocations": 0
+    },
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "verified_hashes": {
+      "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "src/compute/resourceLedger.ts": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\served\\workerPool.js": "f2700677312afea074a0c9d821050d87d5df5f5a5b7dcfa4727814f0bea50fc3",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\served\\resourceLedger.js": "f3190cf48d308dc2768912315665a59258d16e6d45078ac2bebda696af06b6e0",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\fixture.mjs": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256"
+    }
+  },
+  "limitations": [
+    "Author evidence inspected as data, not executed.",
+    "Immediate GREEN is existing coverage, not TDD RED.",
+    "Native observations apply only to isolated pool, never the global App cap."
+  ]
+}

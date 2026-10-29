@@ -1,0 +1,15 @@
+test_original_budget_before_boundary (__main__.Deadline.test_original_budget_before_boundary) ... FAIL
+
+======================================================================
+FAIL: test_original_budget_before_boundary (__main__.Deadline.test_original_budget_before_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-native-broker-contract-fix\test_spec.py", line 6, in test_original_budget_before_boundary
+    self.assertTrue(main_gate(100, 120099))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

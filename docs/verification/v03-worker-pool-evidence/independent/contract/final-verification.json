@@ -1,0 +1,9 @@
+{
+  "review_json_valid": true,
+  "spec_counts_verified": true,
+  "input_source_artifact_hashes_unchanged": true,
+  "exit_witnesses_verified": true,
+  "head_unchanged": true,
+  "tracked_diff_empty": true,
+  "scope": "DESIGN_ONLY_SPEC_MODEL_NOT_PRODUCTION"
+}

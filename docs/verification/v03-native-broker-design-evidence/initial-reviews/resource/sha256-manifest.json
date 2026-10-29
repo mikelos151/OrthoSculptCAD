@@ -1,0 +1,52 @@
+{
+  "scope": "Own scratch artifacts only, manifest excludes itself",
+  "files": [
+    {
+      "path": "audit_inputs.py",
+      "bytes": 2351,
+      "sha256": "908000107aaa56cdd165521ac2fe134ba0576d60d6eaf1700827e1086bfaba55"
+    },
+    {
+      "path": "hash-after.log",
+      "bytes": 1725,
+      "sha256": "0be1171e3dc5faf8f86b23ae6b48aa9c5cc6eca7cd064343e41a01b5b72a0fd7"
+    },
+    {
+      "path": "hash-before.log",
+      "bytes": 1691,
+      "sha256": "27b1e1caf4c843a06128e10fc49d1b2440628a581513cc5221cd0ca223fe003a"
+    },
+    {
+      "path": "inputs-after.json",
+      "bytes": 1725,
+      "sha256": "0be1171e3dc5faf8f86b23ae6b48aa9c5cc6eca7cd064343e41a01b5b72a0fd7"
+    },
+    {
+      "path": "inputs-before.json",
+      "bytes": 1691,
+      "sha256": "27b1e1caf4c843a06128e10fc49d1b2440628a581513cc5221cd0ca223fe003a"
+    },
+    {
+      "path": "ownership-spec-matrix.json",
+      "bytes": 4553,
+      "sha256": "b749dd29ef577ecab973bbdcd81e34822be15b9fed9f3b86889ea63354e1d0eb"
+    },
+    {
+      "path": "review.json",
+      "bytes": 9158,
+      "sha256": "3a6c28cb3fb2b4fb2edb3eef5f8159f30abc9c3c5c5cdf0e62eedec30faa7e52"
+    },
+    {
+      "path": "status-after.log",
+      "bytes": 102,
+      "sha256": "e79083be100e19b2999c09e0ebd2852dc692561b5e4b51cc23e1fd5f3a39a26b"
+    },
+    {
+      "path": "status-before.log",
+      "bytes": 102,
+      "sha256": "e79083be100e19b2999c09e0ebd2852dc692561b5e4b51cc23e1fd5f3a39a26b"
+    }
+  ],
+  "file_count": 9,
+  "verification": "All JSON parsed, verdict invariant and SPEC case count checked; input hashes matched before/after; no new implementation tested"
+}

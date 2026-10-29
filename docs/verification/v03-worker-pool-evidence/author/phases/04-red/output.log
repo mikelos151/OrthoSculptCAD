@@ -1,0 +1,33 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (4 tests | 1 failed) 12ms
+     × 04 authentic release invokes controlled terminate once before returning the slot 5ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 19 passed (20)
+   Start at  20:15:23
+   Duration  587ms (transform 81ms, setup 0ms, import 118ms, tests 36ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 04 authentic release invokes controlled terminate once before returning the slot
+AssertionError: expected [Function] to not throw an error but 'Error: Invalid pool input' was thrown
+
+- Expected:
+undefined
+
++ Received:
+"Error: Invalid pool input"
+
+ ❯ tests/v03-worker-pool.test.ts:62:40
+     60|     const h1 = accepted(pool.acquire('compute', plan));
+     61|     accepted(pool.acquire('owner', plan));
+     62|     expect(() => pool.release(h1)).not.toThrow();
+       |                                        ^
+     63|     expect(instances[0].terminated).toBe(1); expect(ledger.snapshot().…
+     64|     accepted(pool.acquire('index', plan));
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

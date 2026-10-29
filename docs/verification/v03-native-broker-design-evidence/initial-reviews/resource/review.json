@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    {
+      "id": "S1",
+      "location": "docs/plans/v03-native-broker-g1b-design.md:40-42,68-76; src/compute/resourceLedger.ts:105-114,134-141,183-187",
+      "suggestion": "W pionie handoff dodać ukierunkowane regresje phase guards: po usunięciu lokalnego buffer obecny allocateBuffer pomyliłby remote allocation z reserved, a reclassify zaakceptowałby brak buffer. Projekt już wymaga odmowy; implementacja musi sprawdzać jawny phase, nie obecność buffer. Przy nowej factory prywatny snapshot nie może oznaczać REMOTE jako RESERVED, a stara factory zachowuje odebrany snapshot reserved/live.",
+      "blocking": false,
+      "acceptance": "PREPARED/IN_FLIGHT/REMOTE/RETURNING: allocate/retain/reclassify/transfer odmawiają bez zmiany grafu/liczników i bez wywołania alokatora; powrót MAIN odblokowuje dopiero po atomowym rebind. Uruchomić stare testy G1a bez ich osłabiania."
+    },
+    {
+      "id": "S2",
+      "location": "docs/plans/v03-native-broker-g1b-design.md:54-63,75-78,125-127",
+      "suggestion": "Przed pionem G1b1c zapisać dokładny prywatny typ native-output grant i bindNativeResult(grant, actualAB), obecnie zdefiniowany normatywnie w prozie, ale pominięty w przykładowym interface. Oddzielić jego powiązanie z main continuation od RemoteGrant/request endpointu. Nie jest to blocker pierwszej puli ani input roundtrip: przydział 32 B przed native call, same-ID bind i settle są już zamrożone w tekście.",
+      "blocking": false,
+      "acceptance": "Odmowa forged/foreign/retired/reused grant, złej intrinsic długości/detached/RAB/SAB/known backing; brak zmiany grafu na odmowie. Faktyczny native wynik binduje się raz bez registerExisting i dodatkowego charge; revoke/worker death nie zwalnia main reservation przed actual settle. Brak publicznego provider hook."
+    }
+  ],
+  "summary": "PASS wyłącznie DESIGN. Prywatny adapter nad tym samym rdzeniem jest spójny z G1a, rozdziela ownership od native wrapper identity i utrzymuje charge przez transfer/grant/rebind/main-settle. Brak konkretnego blokera do rozpoczęcia G1b1a; nie odebrano żadnej implementacji G1b.",
+  "scope": {
+    "review_type": "Niezależny readonly review projektu, szczególnie §4 i §6",
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "branch": "feature/trimline-v03",
+    "head": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+    "plan_sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+    "write_allowlist": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-resource-review/ only",
+    "not_done": ["Nie zmieniono repo, canonical plan, src/tests/docs/config, profili ani skills", "Bez stage/commit/reset, instalacji, pełnych suites i nowej przeglądarki", "Nie czytano WIP ani wyników równoległego reviewera", "Nie wykonano/replayowano nowego brokera ani adaptera; nie ma sfabrykowanych odpowiedzi API"]
+  },
+  "evidence": {
+    "input_integrity": {
+      "verified_before_and_after": true,
+      "files": [
+        {"path":"docs/plans/v03-native-broker-g1b-design.md","bytes":22953,"lines":162,"sha256":"6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558"},
+        {"path":"docs/plans/v03-source-admission-owner-design.md","sha256":"800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"},
+        {"path":"src/compute/resourceLedger.ts","sha256":"f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109"},
+        {"path":"tests/v03-resource-ledger.test.ts","sha256":"643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95"}
+      ],
+      "git_status_before_after": "?? docs/plans/v03-native-broker-g1b-design.md\n",
+      "head_unchanged": true,
+      "tracked_worktree_and_index_diffs": "Oba git diff --exit-code zakończyły się 0, przed i po; nie hashowano każdego pliku repo."
+    },
+    "review_findings": [
+      {"location":"§4:35-45,68-76; G1a:42-60,94-141,172-187","result":"Potrzeba małej zmiany rdzenia jest rzeczywista: public transfer zmienia tylko realm, detached AB odrzucany, returned wrapper rejestrowany zwykłym ingress daje nowy allocation. Projekt nie udaje naprawy publicznym wrapperem."},
+      {"location":"§4:55-76; §6:112-124","result":"Batch prepare i batch return atomowe; same IDs/bytes/category charges przez podróż. Attached throw rollback oraz partial-detach fail-closed opisane oddzielnie; remote states nie są RESERVED. Consumer retain dopiero po MAIN rebind, category union i inne refs zachowane."},
+      {"location":"§3:26-33; §4:65-74; §5:89-94; §6:103-106,122","result":"Runtime opaque authority, exact Worker i incarnation/nonce poprzedzają mutacje grafu. Wire ID/ordinal tylko lookup. Stabilne trzy logiczne domeny nie udają trzech physical realms; terminal i retired h1 cleanup mają scope starego bindingu, nie nowego workera/h2."},
+      {"location":"§4:75-78; §6:104-127","result":"Remote grants rezerwują przed allocation; ACK i return nie doliczają nowego allocation, także przed ACK charge istnieje. Native SHA output osobno 32 B przed call. Terminate usuwa tylko remote holds, main continuations pozostają do settle; brak założenia cancel=terminal lub promise finite settle."},
+      {"location":"§1:9-13; §7; §8","result":"G1b1 nie wymaga gotowej areny/admission, G1b2 oddziela całą migrację app i source gate. Mixed-positive z real G2c/G3 nadal UNACCEPTED; brak zawężenia full CAD, EXE/clinical/RSS nie są deklarowane."}
+    ],
+    "author_probe": {
+      "files_read_as_data": ["native-boundary-probe.mjs", "native-probe-results.json", "sha256-manifest.json", "handoff.json"],
+      "directory": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-g1b-design/",
+      "checked_artifact_hashes": 3,
+      "recorded_checks_parsed": 12,
+      "recorded_checks_passed": 12,
+      "recorded_errors": 0,
+      "result_sha256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+      "meaning": "Czytany kod probe rzeczywiście używa native Worker/postMessage i rzeczywistych odpowiedzi; wyniki potwierdzają wyłącznie starą granicę G1a. To nie własny browser replay ani GREEN nowego adaptera. Parent replay pozostaje osobną czynnością."
+    },
+    "spec_matrix": {"path":"ownership-spec-matrix.json","cases":12,"kind":"Normatywna mała macierz acceptance, nie uruchomione testy implementacji"},
+    "commands": [
+      {"command":"git status --short; git rev-parse HEAD; git branch --show-current; Python hashlib dla plan/owner-design/G1a","actual_exit_code":0,"result":"Właściwa baza, 3 oczekiwane hashe; jedyny untracked plik to canonical plan."},
+      {"command":"Python hashlib testów G1a i trzech plików probe + parsowanie eventów","actual_exit_code":0,"result":"Oczekiwany test hash, 3/3 probe artifact hashes zgodne, 12/12 zapisanych checks, zero recorded errors."},
+      {"command":"python audit_inputs.py before > hash-before.log && git status --short > status-before.log && git diff --exit-code && git diff --cached --exit-code && git rev-parse HEAD","actual_exit_code":0,"result":"inputs-before.json; wszystkie oczekiwane hashe, brak tracked/index diff."},
+      {"command":"python audit_inputs.py after > hash-after.log && git status --short > status-after.log && git diff --exit-code && git diff --cached --exit-code && git rev-parse HEAD && Python porównanie statusów/unikalności matrix IDs","actual_exit_code":0,"result":"before_after_identical=True; status identyczny; HEAD zachowany; 12 unikalnych normatywnych cases."}
+    ],
+    "issues_encountered": []
+  },
+  "readiness": {
+    "G1b1a_ready": true,
+    "G1b1a_scope": "Zgoda projektowa na pierwszy pion pool: synchroniczne slot+plan reserve, dwa real native idle workers, trzecie BUSY przed copy/constructor/send; constructor rollback, terminal/reacquire i >32 incarnation bez nowych realms. Najpierw real behavioral RED, następnie minimalny GREEN i regresja G1a. Nie migrować całej aplikacji ani nie otwierać ACTIVE w tym pionie.",
+    "G1b1_transport_contract_ready_for_implementation": true,
+    "G1b1_transport_contract_note": "Same-core private extension, handoff/grants/return/terminal/main-settle są wystarczająco zamrożone do pionowego wdrożenia; wskazówki S1/S2 to konkretne przyszłe AC, nie sprzeczności blokujące projekt.",
+    "G1b1_implementation_accepted": false,
+    "G1b1_full_native_acceptance_ready": false,
+    "G1b1_full_native_acceptance_reason": "Brak nowej implementacji i jej rzeczywistych RED/GREEN: input same-ID rebind, alias/batch failure, correlated ACK, cancellation/reuse, main SHA continuation lifecycle i regression G1a dopiero do wykonania. Probe istniejącego G1a tego nie zastępuje.",
+    "remote_new_grants_accepted": false,
+    "remote_new_grants_note": "Nie są prerequisite G1b1a/input-only proof, ale muszą mieć osobne native grant/materialize/return/terminate proof przed użyciem przez G2c.",
+    "G1b2_application_source_gate_accepted": false,
+    "G2c_G3_mixed_positive": "UNACCEPTED",
+    "application_authority": false,
+    "RSS_EXE_clinical_accepted": false
+  }
+}

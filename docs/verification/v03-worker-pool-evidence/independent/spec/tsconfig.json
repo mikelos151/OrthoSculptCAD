@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "types": [],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/src/compute",
+    "outDir": "./compiled",
+    "skipLibCheck": false,
+    "noEmitOnError": true,
+    "incremental": false
+  },
+  "files": ["C:/Users/sandr/OrthoSculptCAD/src/compute/workerPool.ts", "C:/Users/sandr/OrthoSculptCAD/src/compute/resourceLedger.ts"]
+}

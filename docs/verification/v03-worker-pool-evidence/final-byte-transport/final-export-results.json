@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "autocrlf": true,
+      "bytePaths": 658,
+      "compileExit": 0,
+      "witnessExit": 0,
+      "UNITTests": 29,
+      "assertions": 754
+    },
+    {
+      "autocrlf": false,
+      "bytePaths": 658,
+      "compileExit": 0,
+      "witnessExit": 0,
+      "UNITTests": 29,
+      "assertions": 754
+    }
+  ],
+  "scope": "Actual staged 658-path subset; final attributes included; UNIT not browser"
+}

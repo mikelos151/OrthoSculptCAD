@@ -1,0 +1,457 @@
+{
+  "phases": [
+    {
+      "phase": "01-green",
+      "exit": 0,
+      "tests": 1,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  17 passed (17)"
+      ]
+    },
+    {
+      "phase": "01-red",
+      "exit": 1,
+      "tests": 1,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 16 passed (17)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 01 reserves the complete plan in the supplied real ledger before construction",
+        "AssertionError: expected { ok: false, code: 'BUSY' } to not have property \"code\""
+      ]
+    },
+    {
+      "phase": "03-green",
+      "exit": 0,
+      "tests": 3,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  19 passed (19)"
+      ]
+    },
+    {
+      "phase": "03-red",
+      "exit": 1,
+      "tests": 3,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 18 passed (19)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 03 TEST constructor failure returns its slot and closes only its own reservation",
+        "AssertionError: expected { managed: 24, job: 16, …(2) } to deeply equal { managed: 8, job: +0, …(2) }"
+      ]
+    },
+    {
+      "phase": "04-green",
+      "exit": 0,
+      "tests": 4,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  20 passed (20)"
+      ]
+    },
+    {
+      "phase": "04-red",
+      "exit": 1,
+      "tests": 4,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 19 passed (20)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 04 authentic release invokes controlled terminate once before returning the slot",
+        "AssertionError: expected [Function] to not throw an error but 'Error: Invalid pool input' was thrown",
+        "\"Error: Invalid pool input\""
+      ]
+    },
+    {
+      "phase": "08-green",
+      "exit": 0,
+      "tests": 8,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  24 passed (24)"
+      ]
+    },
+    {
+      "phase": "08-red",
+      "exit": 1,
+      "tests": 8,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 23 passed (24)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 08 rejects an invalid internal role before reserving or constructing",
+        "AssertionError: expected function to throw an error, but it didn't"
+      ]
+    },
+    {
+      "phase": "09-green",
+      "exit": 0,
+      "tests": 9,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  25 passed (25)"
+      ]
+    },
+    {
+      "phase": "09-red",
+      "exit": 1,
+      "tests": 9,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 24 passed (25)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 09 bounds trusted plans to sixteen entries before any reservation or constructor",
+        "AssertionError: expected {} to deeply equal { ok: false, code: 'BUDGET' }"
+      ]
+    },
+    {
+      "phase": "12-green",
+      "exit": 0,
+      "tests": 12,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  28 passed (28)"
+      ]
+    },
+    {
+      "phase": "12-red",
+      "exit": 1,
+      "tests": 12,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 27 passed (28)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 12 TEST native error callback retires only the captured binding and late events cannot touch h2",
+        "AssertionError: expected +0 to be 1 // Object.is equality"
+      ]
+    },
+    {
+      "phase": "13-green",
+      "exit": 0,
+      "tests": 13,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  29 passed (29)"
+      ]
+    },
+    {
+      "phase": "13-red",
+      "exit": 1,
+      "tests": 13,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 28 passed (29)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 13 dispose synchronously blocks acquire and revokes every public lease before native effects",
+        "AssertionError: expected function to throw an error, but it didn't"
+      ]
+    },
+    {
+      "phase": "14-green",
+      "exit": 0,
+      "tests": 14,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  30 passed (30)"
+      ]
+    },
+    {
+      "phase": "14-red",
+      "exit": 1,
+      "tests": 14,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 29 passed (30)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object",
+        "AssertionError: expected error to match asymmetric matcher"
+      ]
+    },
+    {
+      "phase": "15-green",
+      "exit": 0,
+      "tests": 15,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  31 passed (31)"
+      ]
+    },
+    {
+      "phase": "15-red",
+      "exit": 1,
+      "tests": 15,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 30 passed (31)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse",
+        "AssertionError: expected { disposed: false, occupied: 2 } to match object { occupied: 2, slots: [ …(2) ] }"
+      ]
+    },
+    {
+      "phase": "16-green",
+      "exit": 0,
+      "tests": 16,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  32 passed (32)"
+      ]
+    },
+    {
+      "phase": "16-red",
+      "exit": 1,
+      "tests": 16,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 31 passed (32)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY",
+        "AssertionError: expected \"getRandomValues\" to be called at least once"
+      ]
+    },
+    {
+      "phase": "17-green",
+      "exit": 0,
+      "tests": 17,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  33 passed (33)"
+      ]
+    },
+    {
+      "phase": "17-red",
+      "exit": 1,
+      "tests": 17,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 32 passed (33)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 17 TEST trusted factory cannot bind one exact Worker object to two incarnations",
+        "AssertionError: expected function to throw an error, but it didn't"
+      ]
+    },
+    {
+      "phase": "18-green",
+      "exit": 0,
+      "tests": 18,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  34 passed (34)"
+      ]
+    },
+    {
+      "phase": "18-red",
+      "exit": 1,
+      "tests": 18,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 33 passed (34)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 18 TEST listener setup failure terminates the newly owned Worker without publishing a lease",
+        "AssertionError: expected +0 to be 1 // Object.is equality"
+      ]
+    },
+    {
+      "phase": "19-green",
+      "exit": 0,
+      "tests": 19,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  35 passed (35)"
+      ]
+    },
+    {
+      "phase": "19-red",
+      "exit": 1,
+      "tests": 19,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 34 passed (35)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 19 TEST messageerror is terminal for its exact binding",
+        "AssertionError: expected +0 to be 1 // Object.is equality"
+      ]
+    },
+    {
+      "phase": "20-green",
+      "exit": 0,
+      "tests": 20,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  36 passed (36)"
+      ]
+    },
+    {
+      "phase": "20-red",
+      "exit": 1,
+      "tests": 20,
+      "summary": [
+        " Test Files  1 failed | 1 passed (2)",
+        "      Tests  1 failed | 35 passed (36)",
+        "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+        " FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 20 retains exactly three private ownership domains, never exposing capabilities in diagnostics",
+        "AssertionError: expected { disposed: false, occupied: +0, …(1) } to have property \"ownershipDomains\" with value 3"
+      ]
+    },
+    {
+      "phase": "24-existing-coverage",
+      "exit": 0,
+      "tests": 24,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  40 passed (40)"
+      ]
+    },
+    {
+      "phase": "final-green",
+      "exit": 0,
+      "tests": 24,
+      "summary": [
+        " Test Files  2 passed (2)",
+        "      Tests  40 passed (40)"
+      ]
+    }
+  ],
+  "final_body_changes": [
+    {
+      "phase": "08-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "08-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "09-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "09-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "12-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "12-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "13-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "13-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "14-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "14-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "15-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "15-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "16-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "16-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "17-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "17-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "18-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "18-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "19-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "19-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "20-green",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "20-red",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    },
+    {
+      "phase": "24-existing-coverage",
+      "name": "06 reuses exactly two logical domains for forty incarnations with maxRealms=3",
+      "before": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }",
+      "after": "() => {\n    const ledger = createResourceLedger(limits, { controls: { maxRealms: 3, maxLeases: 2, maxRefs: 2 } });\n    const pool = createWorkerPool(ledger, worker), domains = new Set<number>();\n    const anchor = accepted(pool.acquire('owner', plan));\n    domains.add(ledger.snapshot().allocations[0].realm);\n    for (let i = 0; i < 40; i++) {\n      const h = accepted(pool.acquire('index', plan));\n      for (const a of ledger.snapshot().allocations) domains.add(a.realm);\n      pool.release(h); pool.release(h);\n    }\n    pool.release(anchor); expect(domains.size).toBe(2); expect(ledger.snapshot().managed).toBe(0);\n    expect(() => ledger.createRealm()).toThrowError(expect.objectContaining({ code: 'BUDGET' }));\n  }"
+    }
+  ]
+}

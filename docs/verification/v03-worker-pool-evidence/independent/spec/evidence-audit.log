@@ -1,0 +1,163 @@
+{
+  "cycles": [
+    {
+      "id": "01",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\01-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\01-source.diff"
+    },
+    {
+      "id": "03",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\03-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\03-source.diff"
+    },
+    {
+      "id": "04",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\04-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\04-source.diff"
+    },
+    {
+      "id": "08",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\08-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\08-source.diff"
+    },
+    {
+      "id": "09",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\09-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\09-source.diff"
+    },
+    {
+      "id": "12",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\12-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\12-source.diff"
+    },
+    {
+      "id": "13",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\13-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\13-source.diff"
+    },
+    {
+      "id": "14",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\14-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\14-source.diff"
+    },
+    {
+      "id": "15",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\15-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\15-source.diff"
+    },
+    {
+      "id": "16",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\16-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\16-source.diff"
+    },
+    {
+      "id": "17",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\17-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\17-source.diff"
+    },
+    {
+      "id": "18",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\18-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\18-source.diff"
+    },
+    {
+      "id": "19",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\19-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\19-source.diff"
+    },
+    {
+      "id": "20",
+      "red_exit": 1,
+      "green_exit": 0,
+      "assertion_failure": true,
+      "same_test_bytes": true,
+      "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\20-red\\output.log",
+      "source_diff": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-spec-review\\20-source.diff"
+    }
+  ],
+  "phase_count": 30,
+  "final_tests": {
+    "G1a": 16,
+    "pool": 24,
+    "total": 40,
+    "raw_log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\phases\\final-green\\output.log"
+  },
+  "native": {
+    "not_reexecuted": true,
+    "checks": 119,
+    "created": 49,
+    "close_notifications": 49,
+    "metrics": {
+      "attempts": 50,
+      "created": 49,
+      "terminated": 49,
+      "sends": 0,
+      "allocations": 0
+    },
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "verified_hashes": {
+      "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "src/compute/resourceLedger.ts": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\served\\workerPool.js": "f2700677312afea074a0c9d821050d87d5df5f5a5b7dcfa4727814f0bea50fc3",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\served\\resourceLedger.js": "f3190cf48d308dc2768912315665a59258d16e6d45078ac2bebda696af06b6e0",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\fixture.mjs": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256"
+    }
+  }
+}

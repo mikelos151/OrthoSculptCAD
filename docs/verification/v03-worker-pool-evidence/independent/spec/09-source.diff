@@ -1,0 +1,11 @@
+--- 09-red
++++ 09-green
+@@ -24,6 +24,8 @@
+       if (kind !== 'compute' && kind !== 'display' && kind !== 'index' && kind !== 'owner') invalid();
+       const slot = slots.find(s => !s.current);
+       if (!slot) return { ok: false, code: 'BUSY' };
++      if (!Array.isArray(plan)) invalid();
++      if (plan.length > 16) return { ok: false, code: 'BUDGET' };
+       const resources = ledger.reserve(plan.map(p => ({ ...p, owner: slot.domain })));
+       if ('code' in resources) return resources;
+       const binding: Binding = { slot, resources }; slot.current = binding;

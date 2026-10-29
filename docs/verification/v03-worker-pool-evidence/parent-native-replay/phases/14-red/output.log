@@ -1,0 +1,36 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (14 tests | 1 failed) 12ms
+     × 14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object 4ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 29 passed (30)
+   Start at  20:19:08
+   Duration  474ms (transform 68ms, setup 0ms, import 98ms, tests 36ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 14 TEST disposal during trusted constructor cannot publish a lease or leak the returned native object
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "CLOSED",
++ TypeError {
++   "message": "Cannot read properties of undefined (reading 'terminate')",
+  }
+
+ ❯ tests/v03-worker-pool.test.ts:174:49
+    172|     const ledger = createResourceLedger(limits); const w = new TestWor…
+    173|     const pool = createWorkerPool(ledger, () => { pool.dispose(); retu…
+    174|     expect(() => pool.acquire('compute', plan)).toThrowError(expect.ob…
+       |                                                 ^
+    175|     expect(w.terminated).toBe(1); expect(ledger.snapshot().managed).to…
+    176|     pool.dispose(); expect(w.terminated).toBe(1);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

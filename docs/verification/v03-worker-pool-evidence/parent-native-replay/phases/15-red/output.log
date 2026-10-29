@@ -1,0 +1,49 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (15 tests | 1 failed) 25ms
+     × 15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse 8ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 30 passed (31)
+   Start at  20:20:05
+   Duration  655ms (transform 87ms, setup 0ms, import 125ms, tests 50ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 15 exposes only frozen diagnostic binding ordinals, monotonically increasing across slot reuse
+AssertionError: expected { disposed: false, occupied: 2 } to match object { occupied: 2, slots: [ …(2) ] }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "occupied": 2,
+-   "slots": [
+-     {
+-       "generation": 1,
+-       "incarnation": 1,
+-       "ordinal": 0,
+-       "phase": "IDLE",
+-     },
+-     {
+-       "generation": 2,
+-       "incarnation": 1,
+-       "ordinal": 1,
+-       "phase": "IDLE",
+-     },
+-   ],
+  }
+
+ ❯ tests/v03-worker-pool.test.ts:183:29
+    181|     const h1 = accepted(pool.acquire('owner', plan));
+    182|     const h2 = accepted(pool.acquire('index', plan));
+    183|     expect(pool.snapshot()).toMatchObject({ occupied: 2, slots: [
+       |                             ^
+    184|       { ordinal: 0, incarnation: 1, generation: 1, phase: 'IDLE' },
+    185|       { ordinal: 1, incarnation: 1, generation: 2, phase: 'IDLE' },
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-native-broker-contract-fix\audit.py", line 12, in <module>
+    commands = {key: run(*args) for key,args in {
+                     ~~~^^^^^^^
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-native-broker-contract-fix\audit.py", line 7, in run
+    p = subprocess.run(['git', '-C', str(ROOT), *args], capture_output=True)
+  File "C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\subprocess.py", line 555, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\Lib\subprocess.py", line 1553, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+PermissionError: [WinError 5] Odmowa dostępu

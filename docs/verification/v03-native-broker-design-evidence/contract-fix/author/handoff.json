@@ -1,0 +1,129 @@
+{
+  "scope": "DESIGN ONLY: fixes G1B-DEADLINE-WIRE and G1B-CORRELATION-ORDER; closely related clarifications only",
+  "repository": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "plan": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\v03-native-broker-g1b-design.md",
+  "patch": "design.patch",
+  "plan_before_sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+  "plan_after_sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+  "original_lines": 162,
+  "new_lines": 177,
+  "added_diff_lines": 27,
+  "removed_diff_lines": 12,
+  "protected_sections_unchanged": {
+    "2": true,
+    "3": true,
+    "7": true,
+    "9": true
+  },
+  "proposed_G1a_interface_unchanged": true,
+  "tracked_count": 1932,
+  "all_tracked_bytes_unchanged": true,
+  "G1a_sha256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+  "branch": "feature/trimline-v03",
+  "head": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+  "git_before": {
+    "command": [
+      "git",
+      "-C",
+      "C:\\Users\\sandr\\OrthoSculptCAD",
+      "status",
+      "--short"
+    ],
+    "exit_code": 0,
+    "stdout": "?? docs/plans/v03-native-broker-g1b-design.md\n?? docs/verification/v03-native-broker-design-evidence/\n?? src/compute/workerPool.ts\n?? tests/v03-worker-pool.test.ts\n",
+    "stderr": ""
+  },
+  "git_after": {
+    "command": [
+      "git",
+      "-C",
+      "C:\\Users\\sandr\\OrthoSculptCAD",
+      "status",
+      "--short"
+    ],
+    "exit_code": 0,
+    "stdout": "?? docs/plans/v03-native-broker-g1b-design.md\n?? docs/verification/v03-native-broker-design-evidence/\n?? docs/verification/v03-native-broker-design-results.json\n?? src/compute/workerPool.ts\n?? tests/v03-worker-pool.test.ts\n",
+    "stderr": ""
+  },
+  "untracked_caveat": "Parallel actor owns workerPool.ts/test and other parent evidence; not read or modified; do not attribute all untracked files to this task.",
+  "spec": {
+    "scope": "symbolic SPEC only; not production/native GREEN",
+    "tests_run": 42,
+    "classification_cases": 36,
+    "deadline_tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "successful": true
+  },
+  "commands": [
+    {
+      "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-fix/test_spec.py",
+      "phase": "deadline scaffold",
+      "exit_code": 1,
+      "output": "spec-deadline-red.log",
+      "meaning": "SPEC scaffold behavioral refusal; not production RED"
+    },
+    {
+      "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-fix/test_spec.py",
+      "phase": "correlation scaffold",
+      "exit_code": 1,
+      "output": "spec-correlation-red.log",
+      "meaning": "SPEC scaffold behavioral refusal; not production RED"
+    },
+    {
+      "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-fix/test_spec.py",
+      "phase": "current scaffold",
+      "exit_code": 1,
+      "output": "spec-current-red.log",
+      "meaning": "SPEC scaffold behavioral refusal; not production RED"
+    },
+    {
+      "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-fix/test_spec.py",
+      "phase": "deadline",
+      "exit_code": 0,
+      "output": "spec-deadline-green.log"
+    },
+    {
+      "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-fix/test_spec.py",
+      "phase": "correlation",
+      "exit_code": 0,
+      "output": "spec-correlation-green.log"
+    },
+    {
+      "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-fix/test_spec.py",
+      "phase": "current",
+      "exit_code": 0,
+      "output": "spec-current-green.log"
+    },
+    {
+      "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-fix/spec_cases.py",
+      "exit_code": 0,
+      "output": "spec-full.log",
+      "meaning": "symbolic SPEC only"
+    }
+  ],
+  "added_lines_security_findings": [],
+  "issues_encountered": [
+    "Initial Python subprocess git capture failed PermissionError WinError 5; raw audit-before.log retained. Actual bash git capture succeeded; no settings changed.",
+    "write_file refused test_spec.py overwrite despite full read; file unchanged by refused call; expanded matrix written as new spec_cases.py."
+  ],
+  "approval": false,
+  "fresh_parent_review_required": true,
+  "full_transport_status": "HOLD pending fresh independent review; no transport implementation/native acceptance",
+  "G1b1a_scope": "Independent pool only; max2/3 domains unchanged; no global app-cap migration claim",
+  "not_claimed": [
+    "production changes",
+    "native GREEN",
+    "worker-clock GREEN",
+    "G1b2 migration",
+    "source ACTIVE/admission",
+    "G2c/G3 mixed-positive",
+    "clinical CAD",
+    "EXE",
+    "RSS"
+  ],
+  "owned_repo_writes": [
+    "docs/plans/v03-native-broker-g1b-design.md"
+  ],
+  "owned_scratch": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-broker-contract-fix"
+}

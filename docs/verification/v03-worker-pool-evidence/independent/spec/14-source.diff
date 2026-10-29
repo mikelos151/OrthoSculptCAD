@@ -1,0 +1,24 @@
+--- 14-red
++++ 14-green
+@@ -15,8 +15,9 @@
+   let disposed = false;
+   function terminal(binding: Binding) {
+     if (binding.terminalAttempted || binding.slot.current !== binding) return;
++    if (binding.auth) binding.auth.binding = undefined;
++    if (!binding.worker) return; // STARTING is still occupied until the trusted constructor returns.
+     binding.terminalAttempted = true;
+-    if (binding.auth) binding.auth.binding = undefined;
+     binding.stop?.();
+     binding.worker!.terminate(); // If this throws, the occupied slot and charge stay fail-closed.
+     binding.resources.close(); binding.slot.current = undefined;
+@@ -50,6 +51,10 @@
+       const binding: Binding = { slot, resources }; slot.current = binding;
+       try { binding.worker = factory(kind); }
+       catch (error) { resources.close(); slot.current = undefined; throw error; }
++      if (disposed) {
++        terminal(binding);
++        throw Object.assign(new Error('Closed pool'), { code: 'CLOSED' });
++      }
+       const lease = Object.freeze({}) as PoolLease;
+       const auth = { binding }; binding.auth = auth; leases.set(lease, auth);
+       const native = binding.worker;

@@ -1,0 +1,8 @@
+test_current_valid_ack_is_accepted (__main__.Correlation.test_current_valid_ack_is_accepted) ... ok
+test_old_binding_is_ignored_before_frame_access (__main__.Correlation.test_old_binding_is_ignored_before_frame_access) ... ok
+test_original_budget_before_boundary (__main__.Deadline.test_original_budget_before_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

@@ -1,0 +1,40 @@
+{
+  "status": "DESIGN_DRAFT_COMPLETE_PARENT_INDEPENDENT_REVIEW_REQUIRED_BEFORE_CODE",
+  "plan": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\v03-native-broker-g1b-design.md",
+  "planSHA256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+  "planLines": 162,
+  "head": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+  "trackedFilesCompared": 1932,
+  "trackedSourcesUnchanged": true,
+  "repositoryStatus": "?? docs/plans/v03-native-broker-g1b-design.md\n",
+  "scope": "New plan + dedicated scratch only; no implementation/staging/commit or dependency/config/profile/skill/release changes",
+  "nativeProbe": {
+    "command": "node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-g1b-design/native-boundary-probe.mjs",
+    "exitCode": 0,
+    "checks": 12,
+    "browser": "156.0.8078.4",
+    "resultSHA256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+    "scope": "Observed existing accepted G1a logical/native boundary only; no invented native responses; terminate invocation is not physical-thread completion"
+  },
+  "designValidation": {
+    "command": "node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-g1b-design/verify-design.mjs",
+    "exitCode": 0,
+    "status": "SELF_CHECK_PASS_PARENT_REVIEW_PENDING",
+    "scope": "Static contract/API checks plus observed existing G1a native boundary; NOT broker/ledger extension implementation, TDD GREEN or independent review"
+  },
+  "beforeCodeGate": "Parent independent design review of final hash, not yet performed here",
+  "notAccepted": [
+    "G1b implementation",
+    "new ledger adapter",
+    "pool lifecycle",
+    "main SHA disposal proof",
+    "remote-new grant allocator",
+    "source-mode application ingress",
+    "G2c/G3 mixed-positive",
+    "G4 publication",
+    "native EXE/clinical/RSS"
+  ],
+  "issues": [
+    "Initial Python subprocess git: WinError 5/exit 1; recovered via direct shell git and file-based hashing."
+  ]
+}

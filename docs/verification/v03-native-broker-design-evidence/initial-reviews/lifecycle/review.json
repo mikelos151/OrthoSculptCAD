@@ -1,0 +1,130 @@
+{
+  "passed": false,
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "G1B-DEADLINE-WIRE",
+      "severity": "high",
+      "location": "docs/plans/v03-native-broker-g1b-design.md:81-88,99-101",
+      "finding": "Zamknięty ABI nie przekazuje ani deadline, ani remaining duration, ani uzgodnionego clock origin. Dziesięć uint32 ma już znaczenia, nonce zajmuje 40..55, a 56..63 musi być zerem. START dopuszcza tylko input/grant descriptors; nie ma dozwolonego pola czasu. Worker nie może więc sprawdzać tej samej pozostałej duration z acquire, jak obiecuje linia 100. Nowe lokalne 120 s od odbioru START resetowałoby budżet po kopii/SHA/startup/transporcie. Main watchdog oraz synchronous gates są wykonalne i nie są kwestionowane; brak dotyczy deklarowanego kontraktu endpointu, nie konieczności napisania G2/G3 już teraz.",
+      "required_correction_AC": [
+        "Przed kodowaniem transportu zamrozić jedną decyzję: albo jawnie G1b main-only deadline enforcement i usunąć z tego ABI obietnicę worker-loop same-duration, przenosząc dopięcie worker clock do osobnej bramki przed G2c/G3; albo poprawić wersjonowany layout tak, aby rzeczywiście niósł czas.",
+        "Jeśli czas trafia na wire: określić dokładny offset, typ, zakres, jednostkę i wspólną oś czasu/konwersję. Przykładowy mały wariant to przeznaczenie obecnych 8 reserved bytes na f64 absolute deadline w jawnie znormalizowanej osi performance.timeOrigin + performance.now; wymaga to usunięcia sprzecznego obowiązku zero i zdefiniowania walidacji. Nie traktować prostego receiveNow + remaining jako identycznego deadline bez rozliczenia czasu przesyłu.",
+        "Future native AC: kontrolowane opóźnienie przed START oraz przy odbiorze zużywa pierwotne 120 s; RECEIVED/RETURN nie odnawia budżetu; main odmawia send/ACK/publication po własnym deadline. Sam statyczny witness lub Node timer nie jest GREEN tego zachowania. Ten AC nie blokuje izolowanego G1b1a pool."
+      ]
+    },
+    {
+      "id": "G1B-CORRELATION-ORDER",
+      "severity": "medium",
+      "location": "docs/plans/v03-native-broker-g1b-design.md:89-94,102-107,152",
+      "finding": "Linia 89 każe revoke/terminate dla unexpected/duplicate/wrong-schema od aktualnego Workera, a linia 91 każe ignorować stary nonce/incarnation/generation/job/request/window bez rozróżnienia starego kanału, rzeczywiście wycofanego requestu i błędnego tuple wysłanego przez aktualny kanał. Ten sam frame z bieżącego exact Worker i nieprawidłowym nonce może trafić do obu reguł. Brakuje też jawnego rozdziału unieważnionej publicznej authority i nadal ważnej authority odbioru cleanup ACK: RELEASED musi być możliwe po synchronicznym revoke. Nie można pozostawić decyzji encoderowi/handlerowi dopiero w implementacji.",
+      "required_correction_AC": [
+        "Zamrozić kolejność: najpierw prywatny captured Worker/binding vs aktualna mapa slotu; zdarzenia starego bindingu ignorować bez zmian ledgeru. Dla aktualnego kanału wymagać fixed-header/schema i klasyfikować malformed jako protocol fault.",
+        "Rozdzielić known-issued retired request od current outstanding oraz impossible/unissued/mismatched tuple. Prawdziwie stary tuple ma zero delty; duplicate aktywnego ACK, niemożliwy future request lub błędny nonce obecnego bindingu są protocol fault. Nie stosować ogólnego any-mismatch-is-stale. Opisać bounded bookkeeping/regułę monotoniczną, bez rosnącej historii odpowiedzi.",
+        "Public auth ginie przy revoke, lecz prywatny cleanup correlation binding pozostaje do terminalTransition. Przyjąć dokładnie właściwe RELEASED w REVOKING bez przywracania prawa dispatch/publication, następnie terminate i cleanup raz. RELEASED starego h1/bindingu nie dotyka h2.",
+        "Future native AC oddzielnie: old Worker event po reuse, retired-request reply, duplicate RECEIVED/RETURN, malformed current frame, wrong nonce/current Worker, RELEASED po revoke i powtórny RELEASED. Ustalić oczekiwane ignore vs fault i wykazać niezmienione h2 refs/charges. Nie wymaga to implementacji audited owner."
+      ]
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "G1B-TDD-SCOPE",
+      "location": "docs/plans/v03-native-broker-g1b-design.md:9-10,150,153-155",
+      "finding": "Pion G1b1a mówi o RED powodowanym omijaniem cap przez stary display, chociaż migracja runDisplayTask jest w G1b2. To nie wymusza przenoszenia integracji do prymitywu: rozdzielić dwa testy i nie przedstawiać pierwszego GREEN jako dowodu całej aplikacji.",
+      "recommendation": "G1b1a: dwie rzeczywiste idle fixture instances przez nowe API, trzecie acquire bez constructor/copy/send, constructor-failure rollback, terminate/reacquire, >32 incarnations przy 3 capabilities. Brakujący pool może dać behawioralny RED po najmniejszym niefunctional scaffold; nie psuć starego kodu dla RED. Test 2 compute + real stary display/global app cap zachować jako przyszły RED→GREEN G1b2. Nie deklarować single production constructor, dopóki obie rzeczywiste ścieżki nie są zmigrowane."
+    },
+    {
+      "id": "G1B-WAITMAIN-ADMISSION",
+      "location": "docs/plans/v03-native-broker-g1b-design.md:104-106,120-127",
+      "finding": "Rozdział workerTerminal/mainSettled i osobny limit 2 main holds są poprawne. Przy implementacji cap musi obejmować już obiecane miejsca dla aktywnych main continuations, nie wyłącznie wpisy dopiero nazwane WAIT_MAIN po oddaniu slotu.",
+      "recommendation": "Token main-hold rezerwować przed uruchomieniem uncancellable operacji i zachować do real settle. Dodać przypadek 1 stary WAIT_MAIN + aktywne joby, które kończą Worker zanim settle main; żaden interleaving nie może utworzyć trzeciego hold. Main-copy/SHA/native output reservation nie znika przy public rejection. To doprecyzowanie już podanego capu, nie żądanie finite settle native SHA."
+    },
+    {
+      "id": "G1B-IDLE-RELEASE-CLOCK",
+      "location": "docs/plans/v03-native-broker-g1b-design.md:99-103,107-108",
+      "finding": "Idle owner nie ma aktywnego job deadline; ograniczenie grace do remaining job deadline wymaga jednoznacznej gałęzi idle. Nie wolno użyć wygasłego deadline dawnego capture ani bez końca przedłużać release wiadomościami.",
+      "recommendation": "Opisać graceEnd dla busy jako min(revokeNow+1000, activeRequestDeadline); dla idle jako revokeNow+1000 z osobnym cleanup clock, bez przywracania auth. Nowy legalny request na idle owner dostaje nowy request t0, ale release nie jest nowym obliczeniem i nie resetuje starego busy job."
+    },
+    {
+      "id": "G1B-NATIVE-READER-ADAPTER",
+      "location": "docs/plans/v03-native-broker-g1b-design.md:139-147; src/native.ts:20-33; src/App.tsx:434-459",
+      "finding": "Zapis o drain Rust/Tauri jest słuszny, ale istniejący Rust SliceEngine nie wystawia dispose, a createSliceEngine uploaduje bez AbortSignal. owned?.dispose?.() w istniejącym effect nie jest dowodem drain tego wariantu.",
+      "recommendation": "W G1b2 dodać faktyczny pending-upload/read lifecycle adapter i właściwe zwolnienie cache albo jawnie session unavailable na tej platformie. Późny upload po CLOSING nie może odtworzyć readera. Na wejściu i wyjściu blokować synchronicznie import/Undo/export oraz restarty obu effects, czekać na własne main holds i atomic ingress; przy refusal wrócić do legacy bez zdjęcia pending SHA. Obecny plan dopuszcza unavailable, więc nie jest to blocker G1b1a."
+    }
+  ],
+  "summary": "HOLD dla kompletnego kontraktu transportu: brak czasu na wire oraz niejednoznaczna kolejność stale-ignore/protocol-fault/cleanup ACK. Izolowany G1b1a pool może rozpocząć TDD bez udawania integracji; G1b1b i odbiór całości wymagają powyższych korekt kontraktu.",
+  "scope": {
+    "review_type": "Niezależny readonly design review; nie implementacja ani acceptance native backendu",
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "head_start": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+    "head_end": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+    "branch": "feature/trimline-v03",
+    "plan": "docs/plans/v03-native-broker-g1b-design.md",
+    "plan_sha256_start": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+    "plan_sha256_end": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+    "plan_bytes": 22953,
+    "plan_lines": 162,
+    "write_scope": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-lifecycle-review/ only",
+    "excluded": ["repo/src/tests/docs writes", "stage/commit/reset", "dependencies/settings/profiles/skills changes", "other reviewer or inflight artifacts", "browser/native replay", "full test suite", "large allocations", "release 0.2 changes"]
+  },
+  "evidence": {
+    "verification": "verification-results.json",
+    "source_hash_start": ["source-start.json", "source-additional-start.json"],
+    "source_hash_end": "verification-results.json:source_end",
+    "all_selected_source_hashes_unchanged": true,
+    "accepted_G1a_source_sha256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+    "accepted_G1a_tests_sha256": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+    "normative_owner_design_sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+    "completed_author_evidence": {
+      "directory": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-g1b-design/",
+      "read_files": ["handoff.json", "native-boundary-probe.mjs", "native-probe-results.json", "sha256-manifest.json"],
+      "manifest_validation": "Plan + three completed artifacts match supplied SHA256 manifest; verified locally twice.",
+      "native_probe_checks": 12,
+      "all_recorded_checks_pass": true,
+      "recorded_errors": [],
+      "independent_replay": false,
+      "interpretation": "Existing G1a logical/native boundary only. Actual script calls real new Worker/postMessage, observes responses and both detach directions; no replacement replies. Results justify detach/rebind extension and expose naive double charge, not new broker GREEN, main-SHA lifecycle, physical thread completion or mixed-positive."
+    },
+    "actual_source_observations": [
+      "client.ts:4-6,17-22: existing two-worker counter is local to WorkerClient; constructor fail precedes increment.",
+      "runDisplayTask.ts:3-7,23,31-36: independent active flag/constructor, clone task; therefore current application cap is not the proposed shared cap.",
+      "index.ts:15-18,22-27: copyParameters occurs before client acquisition; mesh copy afterwards; finally disposes one-shot. Proposed G1b2 mode/acquire gate must precede both kinds of copy.",
+      "sliceEngine.ts:12-21,35-55: retained client, active + latest pending read; disposing must invalidate both and drain actual copy users.",
+      "worker.ts:8-11 and protocol.ts:10-19: current generic result structuredClone plus recursive transfer discovery is not bounded source transport.",
+      "resourceLedger.ts:30-36,42,55-60,94-108,124-141,172-186: logical transfer retains same JS buffer; detached backing fails intrinsic validation; ordinary registerExisting cannot rebind a returned wrapper.",
+      "App.tsx:400-476 and native.ts:20-33: multiple background/read engine paths and native upload require actual mode adapters; React passive effects are not a synchronous CLOSING fence.",
+      "workbenchState.ts:49-85: existing task/stroke current checks remain publication controls, not wire authority."
+    ],
+    "accepted_design_properties": [
+      "One singleton max2 including compute/display/index/owner; acquire before constructor/copies; pinned idle and REVOKING consume slot; no queue or source fallback; constructor failure rolls back.",
+      "Three opaque realm domains are main + two logical slot domains, privately bound to exact Worker/incarnation/nonce; no false physical realm identity and no lifetime maxRealms bump. uint32 wire counter cutoff is stricter than safe-integer cutoff, so both can hold.",
+      "Retired h1 release authenticates h1 before any h2 action; forged/foreign capabilities reject. Prepared packet/grant/binding are private runtime authority, not IDs or bytes on wire.",
+      "Prepare is sole-owner/preflight/atomic; detach keeps same allocation charge; actual correlated return rebinds same allocation; remote grants precede allocation, with G2c path still separately gated.",
+      "Cancel request does not free slot. Exactly-once terminal after controlled terminate/clean release ACK; remote grants and IN_FLIGHT are cleaned while unrelated main refs remain until actual settle. No thread-join/GC/RSS claim.",
+      "64-byte arithmetic and max16 descriptors fit bounds: descriptor maximum 192 B, header+descriptors 256 B <=1024; closed role/type/error codes and one outstanding request/one group are implementable except the identified clock/correlation gaps.",
+      "G1b1 does not expose ACTIVE; G1b2 migrates constructors/actual mode fences. Production ACTIVE requires G3 and ingress; positive owner+arena-analyze mixed remains UNACCEPTED until real G2c/G3. Full G4 mutations/publication are not claimed now."
+    ],
+    "decisive_commands": [
+      {"command": "git -C C:/Users/sandr/OrthoSculptCAD rev-parse HEAD", "initial_exit_code": 0, "final_exit_code": 0, "final_stdout_file": "head-end.log"},
+      {"command": "git -C C:/Users/sandr/OrthoSculptCAD branch --show-current", "initial_exit_code": 0, "final_exit_code": 0, "final_stdout_file": "branch-end.log"},
+      {"command": "git -C C:/Users/sandr/OrthoSculptCAD grep -n 'new Worker(' -- src", "exit_code": 0, "result": "src/compute/client.ts:19 and src/hooks/runDisplayTask.ts:23"},
+      {"command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-lifecycle-review/verify-review.py", "exit_code": 0, "stdout_file": "verification.log", "result_file": "verification-results.json"}
+    ],
+    "command_exit_log": "command-results.log",
+    "artifact_manifest": "artifact-manifest.json",
+    "test_claim": "No production tests or native replay executed in this review. Static assertions/provenance checks exit 0 are not production TDD RED/GREEN. Full baseline totals supplied in delegation were not independently rerun."
+  },
+  "readiness": {
+    "G1b1a_can_start": true,
+    "G1b1a_scope": "Wyłącznie niezależny pool acquire/busy/constructor rollback/controlled terminate/domain reuse z real idle fixture w przyszłym TDD; bez source ACTIVE, ABI same-duration claim ani global display migration PASS. Wymaga zatwierdzenia tego ograniczonego zakresu przez rodzica.",
+    "G1b1b_full_transport_contract_ready": false,
+    "fulltransport_ready": false,
+    "design_corrections_before_transport_code": ["G1B-DEADLINE-WIRE", "G1B-CORRELATION-ORDER"],
+    "G1b2_migration_accepted": false,
+    "production_ACTIVE_enabled_or_accepted": false,
+    "G2c_G3_mixed_positive": "UNACCEPTED; correctly future, not a requirement to start isolated pool",
+    "G4_publication_accepted": false,
+    "clinical_EXE_RSS": "NOT CLAIMED",
+    "existing_G1a_reopened": false
+  }
+}

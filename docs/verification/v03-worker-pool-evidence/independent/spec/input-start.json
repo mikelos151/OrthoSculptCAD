@@ -1,0 +1,7 @@
+{
+  "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+  "tests/v03-worker-pool.test.ts": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7",
+  "src/compute/resourceLedger.ts": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+  "tests/v03-resource-ledger.test.ts": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+  "docs/plans/v03-native-broker-g1b-design.md": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3"
+}

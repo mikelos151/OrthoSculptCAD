@@ -1,0 +1,56 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (3 tests | 1 failed) 8ms
+     × 03 TEST constructor failure returns its slot and closes only its own reservation 5ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 18 passed (19)
+   Start at  20:14:47
+   Duration  341ms (transform 49ms, setup 0ms, import 71ms, tests 23ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 03 TEST constructor failure returns its slot and closes only its own reservation
+AssertionError: expected { managed: 24, job: 16, …(2) } to deeply equal { managed: 8, job: +0, …(2) }
+
+- Expected
++ Received
+
+@@ -10,10 +10,22 @@
+            "category": "history",
+            "id": 1,
+          },
+        ],
+      },
++     {
++       "bytes": 16,
++       "id": 2,
++       "phase": "reserved",
++       "realm": 3,
++       "refs": [
++         {
++           "category": "job",
++           "id": 2,
++         },
++       ],
++     },
+    ],
+    "history": 8,
+-   "job": 0,
+-   "managed": 8,
++   "job": 16,
++   "managed": 24,
+  }
+
+ ❯ tests/v03-worker-pool.test.ts:51:31
+     49|     const pool = createWorkerPool(ledger, () => { if (fail) throw new …
+     50|     expect(() => pool.acquire('compute', plan)).toThrow('TEST construc…
+     51|     expect(ledger.snapshot()).toEqual(before);
+       |                               ^
+     52|     fail = false; accepted(pool.acquire('index', plan)); accepted(pool…
+     53|     external.close();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

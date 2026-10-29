@@ -1,0 +1,33 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (19 tests | 1 failed) 29ms
+     × 19 TEST messageerror is terminal for its exact binding 6ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 34 passed (35)
+   Start at  20:23:22
+   Duration  637ms (transform 98ms, setup 0ms, import 137ms, tests 52ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 19 TEST messageerror is terminal for its exact binding
+AssertionError: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ tests/v03-worker-pool.test.ts:231:26
+    229|     const h = accepted(pool.acquire('index', plan));
+    230|     w.dispatchEvent(new Event('messageerror'));
+    231|     expect(w.terminated).toBe(1); expect(ledger.snapshot().managed).to…
+       |                          ^
+    232|     pool.release(h); expect(w.terminated).toBe(1);
+    233|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

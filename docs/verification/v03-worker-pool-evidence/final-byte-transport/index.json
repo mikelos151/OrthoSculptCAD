@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/check-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/ff-compile.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/ff-compile.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/ff-witness.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/ff-witness.stdout.log",
+      "sha256": "46f9f50c009b7f40ef6f898c96840fb2d34651b19b37492251b31bbf28a8a34b"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/final-export-results.json",
+      "sha256": "997842cd8091af2133f67fff11a6868425d766fc0b63cdf4d6692049cb4a7ed3"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/final-export.paths",
+      "sha256": "57f68c20396594cfcc3ed8a9075f33b0700ab6ac0feadc29e8be9f40de396462"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/final-manifest.json",
+      "sha256": "7080ba3c79ecb81d315a40b2a61e0c1e234d88b5cc52aee617c58ac7e3b099ca"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/final-verify.py",
+      "sha256": "2f1c397df2b047b54f4f0134f64f815d46533d50c82a2ffebc7f2f5b87d57944"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/tt-compile.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/tt-compile.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/tt-witness.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-worker-pool-evidence/final-byte-transport/tt-witness.stdout.log",
+      "sha256": "46f9f50c009b7f40ef6f898c96840fb2d34651b19b37492251b31bbf28a8a34b"
+    }
+  ],
+  "count": 13,
+  "scope": "658-path staged snapshot exported in both modes; these supplementary proof files were generated afterwards, not part of their own snapshot."
+}

@@ -1,0 +1,9 @@
+{
+  "label": "finalization-attempt-1",
+  "command": ["node", "--max-old-space-size=128", "--max-semi-space-size=8", "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-worker-pool-spec-review/finalize.mjs"],
+  "exit": 1,
+  "failure": "Node child_process.spawnSync('git', ...) status=null, spawnSync git EPERM. This was an environment subprocess restriction, not a pool/API failure. No source/config workaround applied.",
+  "probe": "node -e const cp=require('node:child_process'); cp.spawnSync('git',['--version'],{encoding:'utf8'})",
+  "probe_observed": {"status": null, "error": "spawnSync git EPERM"},
+  "recovery": "Use actual read-only git commands through the allowed terminal bash shell; preserve their output in owned scratch and verify before finalization."
+}

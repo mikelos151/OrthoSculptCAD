@@ -1,0 +1,25 @@
+--- 01-red
++++ 01-green
+@@ -4,9 +4,19 @@
+ export type InternalPlan = readonly InternalPlanEntry[];
+ export interface PoolLease { readonly poolLeaseBrand: unique symbol }
+ export type PoolRefusal = Readonly<{ ok: false; code: 'BUSY' | 'BUDGET' }>;
+-/** Nonfunctional API scaffold: no constructors, reservations or payload operations. */
+-export function createWorkerPool(_ledger: ResourceLedger, _factory: (kind: WorkerKind) => Worker) {
++/** Trusted internal composition only; not a user/provider/URL extension point. */
++export function createWorkerPool(ledger: ResourceLedger, factory: (kind: WorkerKind) => Worker) {
++  ledger.createRealm(); // Stable main ownership domain, reserved for future composition.
++  const slots = [ledger.createRealm(), ledger.createRealm()].map(domain => ({ domain, held: false }));
+   return Object.freeze({
+-    acquire(_kind: WorkerKind, _plan: InternalPlan): PoolLease | PoolRefusal { return { ok: false, code: 'BUSY' }; },
++    acquire(kind: WorkerKind, plan: InternalPlan): PoolLease | PoolRefusal {
++      const slot = slots.find(s => !s.held);
++      if (!slot) return { ok: false, code: 'BUSY' };
++      const resources = ledger.reserve(plan.map(p => ({ ...p, owner: slot.domain })));
++      if ('code' in resources) return resources;
++      slot.held = true;
++      factory(kind);
++      return Object.freeze({}) as PoolLease;
++    },
+   });
+ }

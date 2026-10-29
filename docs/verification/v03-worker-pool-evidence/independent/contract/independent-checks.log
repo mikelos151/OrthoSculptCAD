@@ -1,0 +1,42 @@
+{
+  "scope": "SPEC_MODEL_NOT_PRODUCTION",
+  "checks_passed": 19,
+  "checks": [
+    "old captured binding short-circuits every frame field",
+    "cleanup foreign nonce is fault despite correct target",
+    "cleanup malformed schema is fault before cleanup acceptance",
+    "cleanup nonzero transfer is fault",
+    "cleanup unexpected descriptors is fault",
+    "valid cleanup before busy deadline accepted after revoke",
+    "cleanup at busy deadline terminal",
+    "retired plan-valid response remains ignore in REVOKING",
+    "matching current tuple without expected signature faults",
+    "idle last-retired response ignores without active request",
+    "valid planned ERROR is eligible current response",
+    "grace never extends exhausted busy deadline",
+    "main gate expired not extended by long delay",
+    "36 unique case names",
+    "actual loader discovers 36 plus 6 tests",
+    "raw runner enumerates exactly 42 passing tests",
+    "all actual exit witnesses zero",
+    "supplied patch exactly reproduces original to current diff",
+    "all three accepted canonical source/design hashes match"
+  ],
+  "actual_case_counts": {
+    "classification": 36,
+    "deadline": 6
+  },
+  "raw_runner_ok_lines": 42,
+  "protected_sources": {
+    "src/compute/resourceLedger.ts": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+    "tests/v03-resource-ledger.test.ts": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+    "docs/plans/v03-source-admission-owner-design.md": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+  },
+  "limits": [
+    "schema=True means closed-envelope validation premise, not a wire decoder",
+    "auth is private binding correlation, not live public dispatch/publication authority",
+    "classifier has no ledger/rebind, issuance or terminal side effects",
+    "step-name loop does not exercise real copy/start/send or asynchronous clock propagation",
+    "supplementary checks are not additional native or production tests"
+  ]
+}

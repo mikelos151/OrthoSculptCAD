@@ -1,0 +1,61 @@
+{
+  "scope": "All direct files in reviewer-owned scratch directory except this self-referential manifest; repository files are separately in verification-results.json.",
+  "files": [
+    {
+      "path": "branch-end.log",
+      "bytes": 21,
+      "sha256": "a8e1730380e49f6a38f070b242c602b9cc046f034c3fdcda6b21e298c39bd383"
+    },
+    {
+      "path": "command-results.log",
+      "bytes": 90,
+      "sha256": "9053cbbb9f9b1af4ff0a1204bc04ec44d444f2e8cdabf95d460e40f11140c096"
+    },
+    {
+      "path": "finalization-results.json",
+      "bytes": 400,
+      "sha256": "9611792a9445c21abfb7f91488f2984d4f668f1a0ccacd8ba093741c4551b3ca"
+    },
+    {
+      "path": "finalize-review.py",
+      "bytes": 2547,
+      "sha256": "d08c0ac75f287da8e283474c8626ace1f7e2a81af5894ca3b37b604cbf768066"
+    },
+    {
+      "path": "head-end.log",
+      "bytes": 41,
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4"
+    },
+    {
+      "path": "review.json",
+      "bytes": 15137,
+      "sha256": "fa15d91d7219f483f8d10c2b623393b79e2a279248fc1d3bcbf1ed07cb8e2993"
+    },
+    {
+      "path": "source-additional-start.json",
+      "bytes": 312,
+      "sha256": "15b5a953f06bf5079ee82a9cc290f3fd67b504e0c38fb549564c1adfffd24e63"
+    },
+    {
+      "path": "source-start.json",
+      "bytes": 3242,
+      "sha256": "5c4b4910aee6b4625ac184d5c7226d799305cc4865ac193a5efa4ea473231433"
+    },
+    {
+      "path": "verification-results.json",
+      "bytes": 4922,
+      "sha256": "9dc0850a4e298d5fce44ea8b0055f169e45db13af68dbcf0acbc19547debc25b"
+    },
+    {
+      "path": "verification.log",
+      "bytes": 4922,
+      "sha256": "9dc0850a4e298d5fce44ea8b0055f169e45db13af68dbcf0acbc19547debc25b"
+    },
+    {
+      "path": "verify-review.py",
+      "bytes": 3524,
+      "sha256": "9739c08a0c6c1d8a032cd37a0cc80ef08abed6a927a68e66185b669483aec364"
+    }
+  ],
+  "file_count": 11
+}

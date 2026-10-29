@@ -1,0 +1,23 @@
+--- 16-red
++++ 16-green
+@@ -6,7 +6,7 @@
+ export type PoolRefusal = Readonly<{ ok: false; code: 'BUSY' | 'BUDGET' }>;
+ type Phase = 'FREE' | 'STARTING' | 'IDLE' | 'REVOKING' | 'FAILED';
+ interface Slot { domain: Realm; ordinal: number; incarnation: number; current?: Binding }
+-interface Binding { slot: Slot; generation: number; phase: Phase; resources: Lease; worker?: Worker; auth?: { binding?: Binding }; stop?: () => void; terminalAttempted?: boolean }
++interface Binding { slot: Slot; generation: number; phase: Phase; nonce?: Uint32Array; resources: Lease; worker?: Worker; auth?: { binding?: Binding }; stop?: () => void; terminalAttempted?: boolean }
+ function invalid(): never { throw Object.assign(new Error('Invalid pool input'), { code: 'INVALID_INPUT' }); }
+ /** Trusted internal composition only; not a user/provider/URL extension point. */
+ export function createWorkerPool(ledger: ResourceLedger, factory: (kind: WorkerKind) => Worker) {
+@@ -62,7 +62,10 @@
+       if ('code' in resources) return resources;
+       slot.incarnation++;
+       const binding: Binding = { slot, generation: ++generation, phase: 'STARTING', resources }; slot.current = binding;
+-      try { binding.worker = factory(kind); }
++      try {
++        binding.nonce = globalThis.crypto.getRandomValues(new Uint32Array(4));
++        binding.worker = factory(kind);
++      }
+       catch (error) { resources.close(); slot.current = undefined; throw error; }
+       if (disposed) {
+         terminal(binding);

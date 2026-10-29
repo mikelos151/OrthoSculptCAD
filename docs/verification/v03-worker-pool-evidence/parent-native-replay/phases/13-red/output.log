@@ -1,0 +1,29 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (13 tests | 1 failed) 18ms
+     × 13 dispose synchronously blocks acquire and revokes every public lease before native effects 4ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 28 passed (29)
+   Start at  20:18:35
+   Duration  468ms (transform 69ms, setup 0ms, import 98ms, tests 38ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 13 dispose synchronously blocks acquire and revokes every public lease before native effects
+AssertionError: expected function to throw an error, but it didn't
+ ❯ TestWorker.w.terminate tests/v03-worker-pool.test.ts:160:51
+    158|       w.terminate = () => {
+    159|         w.terminated++;
+    160|         expect(() => pool.acquire('display', [])).toThrowError(expect.…
+       |                                                   ^
+    161|         pool.release(second); // Must not terminate the second binding…
+    162|         if (instances[0] === w) expect(instances[1].terminated).toBe(0…
+ ❯ terminal src/compute/workerPool.ts:20:21
+ ❯ Object.release src/compute/workerPool.ts:28:7
+ ❯ tests/v03-worker-pool.test.ts:167:42
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

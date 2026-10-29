@@ -1,0 +1,36 @@
+--- 13-red
++++ 13-green
+@@ -12,6 +12,7 @@
+   ledger.createRealm(); // Stable main ownership domain, reserved for future composition.
+   const slots: Slot[] = [ledger.createRealm(), ledger.createRealm()].map(domain => ({ domain }));
+   const leases = new WeakMap<PoolLease, { binding?: Binding }>();
++  let disposed = false;
+   function terminal(binding: Binding) {
+     if (binding.terminalAttempted || binding.slot.current !== binding) return;
+     binding.terminalAttempted = true;
+@@ -21,13 +22,24 @@
+     binding.resources.close(); binding.slot.current = undefined;
+   }
+   return Object.freeze({
+-    dispose(): void { /* Nonfunctional disposal scaffold. */ },
++    dispose(): void {
++      if (disposed) return;
++      disposed = true;
++      const active = slots.flatMap(s => s.current ? [s.current] : []);
++      for (const b of active) if (b.auth) b.auth.binding = undefined;
++      let failure: unknown;
++      for (const b of active) {
++        try { terminal(b); } catch (error) { failure ??= error; }
++      }
++      if (failure) throw failure;
++    },
+     release(lease: PoolLease): void {
+       const auth = leases.get(lease); if (!auth) invalid();
+       const binding = auth.binding; if (!binding) return;
+       terminal(binding);
+     },
+     acquire(kind: WorkerKind, plan: InternalPlan): PoolLease | PoolRefusal {
++      if (disposed) throw Object.assign(new Error('Closed pool'), { code: 'CLOSED' });
+       if (kind !== 'compute' && kind !== 'display' && kind !== 'index' && kind !== 'owner') invalid();
+       const slot = slots.find(s => !s.current);
+       if (!slot) return { ok: false, code: 'BUSY' };

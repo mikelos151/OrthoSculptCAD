@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    {
+      "id": "SPEC-EVIDENCE-BOUNDARY",
+      "location": "spec_model.py:5-22; spec_cases.py:58-75",
+      "finding": "Model jest czystym klasyfikatorem z przesłankami schema/expected/seen i prywatnym binding auth. Nie dekoduje wire, nie wykonuje issuance, revoke, rebind ani terminalTransition; porównanie stanu przed/po dowodzi tylko braku mutacji klasyfikatora. Pętla po nazwach copy/send/publication nie wykonuje tych kroków.",
+      "recommendation": "Zachować etykietę SPEC_MODEL_NOT_PRODUCTION; przy G1b1b/c wykazać osobno rzeczywiste decoder gates, kolejność native zdarzeń, exactly-once cleanup i h2 refs/charges. Nie używać 42 PASS jako dowodu native clock ani transportu. Nie blokuje to zatwierdzenia projektu."
+    }
+  ],
+  "summary": "PASS DESIGN ONLY: G1B-DEADLINE-WIRE i G1B-CORRELATION-ORDER zamknięte; rzeczywisty spec_cases.py przechodzi 42 testy, ale implementacja/native transport nie są GREEN.",
+  "scope": {
+    "review_type": "Świeży niezależny readonly targeted design rereview",
+    "reviewed_issue_ids": ["G1B-DEADLINE-WIRE", "G1B-CORRELATION-ORDER"],
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "head_start": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+    "head_end": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+    "plan": "docs/plans/v03-native-broker-g1b-design.md",
+    "plan_sha256_before": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+    "plan_sha256_after": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+    "plan_lines": 177,
+    "plan_bytes": 27918,
+    "original_plan_sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+    "target_locations": ["§5 lines 81-108", "§6 lines 110-142", "§8 lines 165-169", "completed contract-fix/design.patch"],
+    "write_scope": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-rereview/ only",
+    "excluded": ["repo writes", "stage/commit/reset", "dependencies/global settings/skills", "codepool primitive and other live reviewers reports/WIP", "full suite", "browser/native replay", "large allocations"],
+    "production_and_test_changes": false,
+    "resource_coupling_reopened": false,
+    "protected_sections_2_3_7_9_unchanged": true,
+    "proposed_internal_interface_unchanged": true,
+    "product_CAD_scope_reduced": false
+  },
+  "evidence": {
+    "issue_closures": [
+      {
+        "id": "G1B-DEADLINE-WIRE",
+        "status": "CLOSED",
+        "locations": "plan:84,112-117,165-169",
+        "reason": "Jawne main-only 120000 ms od acquire/request t0 na monotonicznym main performance.now, watchdog oraz synchronous allocation/send/current-ACK/publication gates, bez resetu przez START/RECEIVED/RETURN. 64-byte ABI nie niesie czasu; nonce i reserved zero nie zmieniają znaczenia. Wersjonowany worker-clock/loop-limit kontrakt i native delayed-send/receive proof są obowiązkową bramką przed zależnymi G2c/G3, nie zadaniem do wykonania przed obecnym approval dokumentu.",
+        "related_conditions": "Busy grace=min(revokeNow+1000,activeRequestDeadline), idle świeże revokeNow+1000 bez starego job deadline. Main-hold cap=2 rezerwowany przed każdą continuation, także aktywnego jobu, aż do rzeczywistego settle; worker terminal go nie tworzy ani nie zwalnia."
+      },
+      {
+        "id": "G1B-CORRELATION-ORDER",
+        "status": "CLOSED",
+        "locations": "plan:91-107,117-122,128,137,167",
+        "reason": "Captured exact binding najpierw; stary binding ignore bez frame access. Current binding wymaga closed header/schema, potem exact slot/nonce/incarnation/generation, następnie current/one last-retired/cleanup exact records. Unknown, foreign nonce, unissued/future/older-untracked i duplicate-active są fault, nie lower-number stale. Generation=1 per physical binding i monotoniczne n; issuance przy native START invocation, throw zużywa n bez retirement/retry pod tym n. Last-retired ma tylko dozwolone exact response signatures i nie trzyma payload AB.",
+        "related_conditions": "Revoke usuwa public dispatch/publication authority, ale zachowuje PRIVATE cleanup correlation. Exact RELEASED przed grace w REVOKING kończy cleanup bez przywrócenia public authority; po terminal old binding/RELEASED nie rusza h2. Last-retired plan-valid response jest ignore bez rebind/publication."
+      }
+    ],
+    "spec_replay": {
+      "scope": "SPEC_MODEL_NOT_PRODUCTION",
+      "copy_policy": "Three inspected scripts copied byte-for-byte into owned replay directory; -B prevents pycache; spec-results.json output remains in owned copy.",
+      "command": "python -B spec_cases.py",
+      "cwd": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-contract-rereview/replay",
+      "exit_code": 0,
+      "tests_run": 42,
+      "classification_tests": 36,
+      "deadline_tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "independent_count_verification": "Actual unittest loader, unique dynamic case names and 42 enumerated raw runner OK lines agree; not summary metadata alone.",
+      "log": "spec-cases.log",
+      "results": "replay/spec-results.json",
+      "spec_cases_sha256": "6ad910179c5d0eaa9d2962594fc8b57be399ee1bb18a8b6d4ab7b8dfd7c4b696",
+      "spec_model_sha256": "fbb679b32cac2bf82f06ef27b547b6efd40e217b57700ae12c75a4ab5ebf6865"
+    },
+    "bootstrap_replay": {
+      "command": "python -B test_spec.py",
+      "exit_code": 0,
+      "tests_run": 3,
+      "log": "bootstrap.log",
+      "sha256": "e88da2f1c4b597078a7fd7298ddc337cd8b4c2bb011ef9391d1c67087666b87b",
+      "warning_history_preserved": "Fixer handoff: overwrite test_spec.py was REFUSED; full 42-test matrix was delivered as NEW spec_cases.py. Existing 15-line bootstrap is only 3 tests, not 42; both actual files inspected and replayed."
+    },
+    "independent_checks": {
+      "command": "python -B independent_checks.py",
+      "final_exit_code": 0,
+      "checks_passed": 19,
+      "results": "independent-results.json",
+      "additional_scope": "SPEC premise/correlation/grace boundary checks plus runner count/provenance; not additional production tests.",
+      "first_failure_preserved": "independent-checks-first-failure.log and .exit: exit 1 due to reviewer hash-matching count assertion counting a retained duplicate owner-design copy; corrected to three exact canonical paths, without changing tested model, tests or source."
+    },
+    "integrity": {
+      "before": "before-hashes.json",
+      "after": "after-hashes.json",
+      "tracked_file_hashes_compared": 1932,
+      "tracked_bytes_unchanged": true,
+      "completed_fixer_artifacts_verified_before_after": 59,
+      "completed_artifact_hash_mismatches": [],
+      "artifact_manifest_sha256": "e62f2d90ad4c90b7c0d2a3c1341e32eea066b8b55ab7772aa33b6cae2de5fffc",
+      "patch_exactly_matches_original_to_current": true,
+      "accepted_resourceLedger_sha256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+      "accepted_ledger_tests_sha256": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+      "accepted_owner_design_sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+      "own_evidence_manifest": "artifact-manifest.json"
+    },
+    "witness_commands": [
+      {"command":"python -B audit.py before", "exit_code":0, "log":"audit-before.log"},
+      {"command":"python -B spec_cases.py", "exit_code":0, "log":"spec-cases.log"},
+      {"command":"python -B test_spec.py", "exit_code":0, "log":"bootstrap.log"},
+      {"command":"python -B independent_checks.py (first)", "exit_code":1, "log":"independent-checks-first-failure.log"},
+      {"command":"python -B independent_checks.py (corrected canonical-path provenance check)", "exit_code":0, "log":"independent-checks.log"},
+      {"command":"python -B audit.py after", "exit_code":0, "log":"audit-after.log"},
+      {"command":"git -C C:/Users/sandr/OrthoSculptCAD rev-parse HEAD", "exit_code":0, "stdout":"head-end.stdout"},
+      {"command":"git -C C:/Users/sandr/OrthoSculptCAD diff --exit-code", "exit_code":0, "stdout":"tracked-diff.stdout"}
+    ],
+    "environment_issue": "Initial Python subprocess git lookup failed WinError 5 (tool exit 1); direct bash git succeeded (exit 0), no system/settings changes. This was environment capture failure, not SPEC/test failure."
+  },
+  "readiness": {
+    "G1B-DEADLINE-WIRE": "CLOSED",
+    "G1B-CORRELATION-ORDER": "CLOSED",
+    "fulltransport_contract_ready": true,
+    "fulltransport_contract_ready_meaning": "Targeted design blockers removed; main-only G1b ABI/lifecycle/correlation contract may proceed to staged implementation, subject to parent approval. Does not waive later private native-output grant/binding freeze before G1b1c (line 79) or any native acceptance gate.",
+    "G1b1a_can_start": true,
+    "G1b1a_code_review_or_acceptance_performed": false,
+    "fulltransport_implementation_GREEN": false,
+    "native_transport_accepted": false,
+    "native_main_deadline_delayed_send_receive_accepted": false,
+    "worker_clock_GREEN": false,
+    "worker_clock_and_loop_contract_gate_before_dependent_G2c_G3": "MANDATORY",
+    "G1b2_migration_accepted": false,
+    "global_App_worker_cap_proven": false,
+    "production_ACTIVE_admission_accepted": false,
+    "G2c_G3_positive_mixed": "UNACCEPTED",
+    "G4_publication_accepted": false,
+    "clinical_EXE_RSS": "NOT CLAIMED"
+  }
+}

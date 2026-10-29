@@ -1,0 +1,22 @@
+{
+  "protected_file_count": 1932,
+  "changed_protected_files": [],
+  "new_file_hashes": {
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "tests/v03-worker-pool.test.ts": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7"
+  },
+  "red_green_cycles": 14,
+  "static_scan": {
+    "src/compute/workerPool.ts": {
+      "secrets": false,
+      "eval_or_exec": false,
+      "network_or_process_api": false
+    },
+    "tests/v03-worker-pool.test.ts": {
+      "secrets": false,
+      "eval_or_exec": false,
+      "network_or_process_api": false
+    }
+  }
+}
+native_checks 119 all_pass True

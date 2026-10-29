@@ -1,0 +1,33 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (18 tests | 1 failed) 28ms
+     × 18 TEST listener setup failure terminates the newly owned Worker without publishing a lease 6ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 33 passed (34)
+   Start at  20:22:36
+   Duration  591ms (transform 82ms, setup 0ms, import 121ms, tests 52ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 18 TEST listener setup failure terminates the newly owned Worker without publishing a lease
+AssertionError: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ tests/v03-worker-pool.test.ts:224:26
+    222|     const pool = createWorkerPool(ledger, () => w as unknown as Worker…
+    223|     expect(() => pool.acquire('index', plan)).toThrow('TEST listener s…
+    224|     expect(w.terminated).toBe(1); expect(ledger.snapshot().managed).to…
+       |                          ^
+    225|   });
+    226| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

@@ -1,0 +1,5 @@
+{
+  "initialCheckExit": 2,
+  "reason": "Generated JSON uses uniform CRLF; -text preserves CR and default Git whitespace flags it. Only this generated proof JSON now has whitespace=cr-at-eol; live source and tests checks remain unchanged. No source/test/evidence bytes rewritten. Earlier 636-path export intentionally captured the preceding attributes snapshot.",
+  "failedRawLogSHA256": "cae6c9c79b657460ddc8218cf32b5167928ca455425449e406ac474278428e48"
+}

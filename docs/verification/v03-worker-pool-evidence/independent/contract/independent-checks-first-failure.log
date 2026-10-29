@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-native-broker-contract-rereview\independent_checks.py", line 65, in <module>
+    check('all three accepted source/design hashes present', len(protected_sources)==3)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-native-broker-contract-rereview\independent_checks.py", line 18, in check
+    assert condition, name
+           ^^^^^^^^^
+AssertionError: all three accepted source/design hashes present

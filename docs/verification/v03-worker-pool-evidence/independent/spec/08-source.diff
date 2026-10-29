@@ -1,0 +1,10 @@
+--- 08-red
++++ 08-green
+@@ -21,6 +21,7 @@
+       binding.resources.close(); binding.slot.current = undefined;
+     },
+     acquire(kind: WorkerKind, plan: InternalPlan): PoolLease | PoolRefusal {
++      if (kind !== 'compute' && kind !== 'display' && kind !== 'index' && kind !== 'owner') invalid();
+       const slot = slots.find(s => !s.current);
+       if (!slot) return { ok: false, code: 'BUSY' };
+       const resources = ledger.reserve(plan.map(p => ({ ...p, owner: slot.domain })));

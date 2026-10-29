@@ -1,0 +1,150 @@
+{
+  "status": "SELF_CHECK_PASS_PARENT_REVIEW_PENDING",
+  "scope": "Static contract/API checks plus observed existing G1a native boundary; NOT broker/ledger extension implementation, TDD GREEN or independent review",
+  "planSHA256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+  "planLines": 162,
+  "actualLeaseMethods": [
+    {
+      "name": "ref",
+      "line": 13
+    },
+    {
+      "name": "allocateBuffer",
+      "line": 14
+    },
+    {
+      "name": "retain",
+      "line": 15
+    },
+    {
+      "name": "reclassify",
+      "line": 16
+    },
+    {
+      "name": "release",
+      "line": 17
+    },
+    {
+      "name": "close",
+      "line": 18
+    },
+    {
+      "name": "transfer",
+      "line": 19
+    }
+  ],
+  "nativeProbeChecks": 12,
+  "nativeProbeSHA256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+  "checks": [
+    {
+      "name": "accepted source SHA matches frozen input",
+      "ok": true
+    },
+    {
+      "name": "actual Lease API matches design baseline",
+      "ok": true
+    },
+    {
+      "name": "actual Allocation.buffer is main AB",
+      "ok": true
+    },
+    {
+      "name": "native detach rejected by actual backingBytes",
+      "ok": true
+    },
+    {
+      "name": "actual default realms=32 lifetime",
+      "ok": true
+    },
+    {
+      "name": "pure G1a contains no native Worker/postMessage",
+      "ok": true
+    },
+    {
+      "name": "bounded plan 120..180 lines",
+      "ok": true
+    },
+    {
+      "name": "plan ends exactly one LF without trailing whitespace",
+      "ok": true
+    },
+    {
+      "name": "design coverage G1b1",
+      "ok": true
+    },
+    {
+      "name": "design coverage G1b2",
+      "ok": true
+    },
+    {
+      "name": "design coverage MIXED-POSITIVE: UNACCEPTED",
+      "ok": true
+    },
+    {
+      "name": "design coverage WAIT_MAIN",
+      "ok": true
+    },
+    {
+      "name": "design coverage sendThrew",
+      "ok": true
+    },
+    {
+      "name": "design coverage IN_FLIGHT",
+      "ok": true
+    },
+    {
+      "name": "design coverage RETURNING",
+      "ok": true
+    },
+    {
+      "name": "design coverage bindNativeResult",
+      "ok": true
+    },
+    {
+      "name": "design coverage DataCloneError",
+      "ok": true
+    },
+    {
+      "name": "design coverage parent",
+      "ok": true
+    },
+    {
+      "name": "design coverage source-session",
+      "ok": true
+    },
+    {
+      "name": "four concrete future vertical pions",
+      "ok": true
+    },
+    {
+      "name": "real Chromium existing-boundary probe succeeded",
+      "ok": true
+    },
+    {
+      "name": "native probe all recorded checks true",
+      "ok": true
+    },
+    {
+      "name": "proposed binary header=64 and control fits 1024",
+      "ok": true
+    }
+  ],
+  "proposedArithmetic": {
+    "label": "PROPOSED ABI ARITHMETIC ONLY, not app acceptance",
+    "headerBytes": 64,
+    "descriptorBytes": 192,
+    "maxControlFrameBytes": 256,
+    "maxFourFramesTwoSlotsBytes": 2048
+  },
+  "unaccepted": [
+    "G1b implementation",
+    "new ledger adapter",
+    "pool lifecycle",
+    "main SHA disposal proof",
+    "remote-new grant allocator",
+    "source-mode application ingress",
+    "G2c/G3 mixed-positive",
+    "G4 publication",
+    "native EXE/clinical/RSS"
+  ]
+}

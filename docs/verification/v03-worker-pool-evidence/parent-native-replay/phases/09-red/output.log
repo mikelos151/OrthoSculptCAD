@@ -1,0 +1,36 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (9 tests | 1 failed) 18ms
+     × 09 bounds trusted plans to sixteen entries before any reservation or constructor 7ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 24 passed (25)
+   Start at  20:17:01
+   Duration  573ms (transform 84ms, setup 0ms, import 121ms, tests 42ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 09 bounds trusted plans to sixteen entries before any reservation or constructor
+AssertionError: expected {} to deeply equal { ok: false, code: 'BUDGET' }
+
+- Expected
++ Received
+
+- {
+-   "code": "BUDGET",
+-   "ok": false,
+- }
++ {}
+
+ ❯ tests/v03-worker-pool.test.ts:113:48
+    111|     const pool = createWorkerPool(ledger, () => { constructors++; retu…
+    112|     const oversized = Array.from({ length: 17 }, (_, i) => ({ ...plan[…
+    113|     expect(pool.acquire('compute', oversized)).toEqual({ ok: false, co…
+       |                                                ^
+    114|     expect(constructors).toBe(0); expect(ledger.snapshot().allocations…
+    115|     const h = accepted(pool.acquire('compute', oversized.slice(0, 16))…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

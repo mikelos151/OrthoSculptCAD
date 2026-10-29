@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    {
+      "id": "G1B1A-FUTURE-MIGRATION-GATES",
+      "blocking": false,
+      "status": "UNACCEPTED; outside isolated G1b1a",
+      "location": "Future G1b1b/G1b1c/G1b2/G2/G3 composition",
+      "suggestion": "Keep native transport/ACK/rebind/deadline/main-settle, application singleton/constructor migration, source ACTIVE and mixed-positive owner/arena acceptance as separate gates. This helper and its passing unit witnesses do not establish those gates or a global application-wide two-Worker cap."
+    }
+  ],
+  "summary": "PASS dla zamrożonego izolowanego G1b1a: niezależna kompilacja rzeczywistych modułów i 29/29 API witnesses (754 asercje), bez znalezionych blokujących błędów bezpieczeństwa lub logiki.",
+  "scope": {
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "head_start_and_end": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+    "production_file": "src/compute/workerPool.ts; all 109 lines read",
+    "test_file": "tests/v03-worker-pool.test.ts; all 301 lines read",
+    "accepted_dependency": "src/compute/resourceLedger.ts; all 192 lines read; unchanged G1a",
+    "canonical_contract": "docs/plans/v03-native-broker-g1b-design.md; pool clauses and isolated G1b1a acceptance, not full transport acceptance",
+    "factory_boundary": "Trusted internal constructor seam returning ordinary Worker objects. Not arbitrary executable-plan/getter/Proxy or same-realm malicious-JS sandboxing. Legitimate constructor/release/dispose reentrancy and ordinary malformed data are included.",
+    "write_ownership": "Only C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-worker-pool-quality-review/",
+    "not_claimed": [
+      "No source/test/document/config/profile/skill/dependency changes, git staging/reset/commit or installation performed.",
+      "No second full regression suite or native/browser-heavy replay; those remain parent-owned.",
+      "EventTarget doubles are UNIT fault-injection transports, not native Workers or browser events.",
+      "No native Worker close/thread join, GC, heap/RSS bound, clinical/native EXE or full CAD acceptance.",
+      "Author HANDOFF.md/handoff.json were read as data, not treated as independent approval or verification of their passed flags.",
+      "Safe-integer overflow branches and actual WeakMap garbage collection were statically reviewed, not dynamically exhausted/proven."
+    ]
+  },
+  "evidence": {
+    "directory": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-worker-pool-quality-review/",
+    "replay": "node --max-old-space-size=128 --max-semi-space-size=8 C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-worker-pool-quality-review/run.mjs",
+    "source_inputs": {
+      "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "tests/v03-worker-pool.test.ts": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7",
+      "src/compute/resourceLedger.ts": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+      "docs/plans/v03-native-broker-g1b-design.md": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3"
+    },
+    "input_integrity": "run.mjs independently checks all four expected SHA256 values before and after compilation/execution; input-start.json and input-end.json agree. HEAD independently reread after execution agrees.",
+    "execution": {
+      "node": "v24.19.0",
+      "heapMiB": 128,
+      "semiSpaceMiB": 8,
+      "typescript": "Installed repository TypeScript CLI; exact version in static-scan.json",
+      "compiler_input": "Actual unchanged absolute-path production TS files, not a rewritten model or copied implementation",
+      "compiler_settings": "strict, types:[], lib:[ES2022,DOM], target:ES2022, CommonJS, noEmitOnError; output only in owned scratch/compiled",
+      "compile_exit": 0,
+      "witness_exit": 0,
+      "tests": 29,
+      "passed": 29,
+      "failed": 0,
+      "assertions": 754,
+      "largest_materialized_payload_bytes": 4,
+      "note": "MAX_SAFE_INTEGER and budget cases only reserve logically and refuse; no cap-sized/OOM allocations. Native crypto.getRandomValues is left unchanged and executes in the actual production module."
+    },
+    "files": [
+      "run.mjs",
+      "witnesses.cjs",
+      "tsconfig.json",
+      "compiled/workerPool.js",
+      "compiled/resourceLedger.js",
+      "commands.json",
+      "compile.log",
+      "unit-witnesses.log",
+      "witness-results.json",
+      "static-scan.json",
+      "input-start.json",
+      "input-end.json",
+      "review.json",
+      "hashmanifest.json",
+      "README.md"
+    ],
+    "coverage": [
+      "Pool-local WeakMap identity rejects primitives, forged objects, Proxy wrappers, hostile property traps, structuredClone/JSON clones, foreign pool handles and diagnostic ordinals without ledger or Worker effects. Genuine retired handles remain no-op, including after dispose.",
+      "Detached release.call(otherReceiver, genuineOwnHandle) works by existing closure authority; the other pool's handle remains invalid. Method receiver is intentionally not an additional capability.",
+      "Two occupied STARTING/IDLE/REVOKING/FAILED records prevent third admission. BUSY does not even read a hostile plan Proxy and causes no reservation, constructor, payload allocation or send.",
+      "Full actual G1a reservation precedes factory. Supplied owner fields including prototype-pollution-shaped plain data do not choose authority; pool overwrites owner with its authenticated private slot domain.",
+      "Category/global/unsafe-sum budgets, 17-entry refusal, 16 zero-byte entries, dense/sparse/null/malformed plans and malformed roles preserve state atomically.",
+      "Constructor throw closes only the failing acquire's resources, preserves an unrelated real materialized 4-byte lease and any reentrantly successful second binding, then allows reuse.",
+      "Dispose during STARTING handles return, throw, two nested constructors and late terminate throw: no late lease is issued, returned ordinary Worker is terminated or retained FAILED with its charge, acquire remains CLOSED.",
+      "Release revokes authentication before native effects and keeps REVOKING occupied through terminate. Reentrant acquire can use only the other free slot; third remains BUSY. Dispose revokes both public handles before the first removeEventListener hook.",
+      "Terminate throws leave FAILED and original charges, with no public retry or accidental reuse. Dispose continues the other binding's cleanup. Error callback termination failure also stays fail-closed.",
+      "Partial listener installation throw detaches the installed first listener, terminates the newly owned Worker and returns the reservation/slot. Successful terminal paths remove both error/messageerror listeners.",
+      "Both error and messageerror terminate only their captured exact binding. Explicitly captured old callbacks invoked after slot reuse and retired h1 release during h2 STARTING have zero h2 Worker/ledger/snapshot effects; these are UNIT calls, not fabricated native events.",
+      "Exact same Worker object reuse while live and after retirement is rejected within a pool without terminating another valid binding or retaining a new reservation.",
+      "80 serial reuses alongside an anchor use exactly two stable slot domains and the original three total domains with maxRealms=3/maxLeases=2/maxRefs=2; no defaults raised, no new per-incarnation Realm.",
+      "Frozen public surface and snapshots disclose only diagnostics, never Worker/Realm/resource Lease/Ref/nonce. Manual ownership audit confirms retirement clears auth.binding; weak records do not retain retired payloads, while FAILED slots intentionally retain their resources."
+    ],
+    "static_security_review": "Full source/test reads and saved lexical scan found no hardcoded secrets, dynamic evaluation, direct network/process IO or public native/resource/nonce escape. The trusted constructor seam is explicitly not a sandbox boundary.",
+    "operational_issue": "One reviewer-only run.mjs edit initially had a missing parenthesis in supplemental scan construction and exited 1 with SyntaxError before production execution. Corrected only in owned scratch; subsequent full compile plus 29 witnesses exit 0. No production workaround or assertion weakening."
+  }
+}

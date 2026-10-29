@@ -1,0 +1,23 @@
+--- 20-red
++++ 20-green
+@@ -10,8 +10,9 @@
+ function invalid(): never { throw Object.assign(new Error('Invalid pool input'), { code: 'INVALID_INPUT' }); }
+ /** Trusted internal composition only; not a user/provider/URL extension point. */
+ export function createWorkerPool(ledger: ResourceLedger, factory: (kind: WorkerKind) => Worker) {
+-  ledger.createRealm(); // Stable main ownership domain, reserved for future composition.
+-  const slots: Slot[] = [ledger.createRealm(), ledger.createRealm()].map((domain, ordinal) => ({ domain, ordinal, incarnation: 0 }));
++  // Main + two logical slot domains, not physical JavaScript realm identities.
++  const domains = Object.freeze([ledger.createRealm(), ledger.createRealm(), ledger.createRealm()]);
++  const slots: Slot[] = domains.slice(1).map((domain, ordinal) => ({ domain, ordinal, incarnation: 0 }));
+   const leases = new WeakMap<PoolLease, { binding?: Binding }>();
+   const boundWorkers = new WeakSet<Worker>();
+   let disposed = false, generation = 0;
+@@ -39,7 +40,7 @@
+   }
+   return Object.freeze({
+     snapshot() {
+-      return Object.freeze({ disposed, occupied: slots.filter(s => s.current).length,
++      return Object.freeze({ disposed, ownershipDomains: domains.length, occupied: slots.filter(s => s.current).length,
+         slots: Object.freeze(slots.map(s => Object.freeze({ ordinal: s.ordinal, incarnation: s.incarnation,
+           generation: s.current?.generation ?? 0, phase: s.current?.phase ?? 'FREE' as Phase }))) });
+     },

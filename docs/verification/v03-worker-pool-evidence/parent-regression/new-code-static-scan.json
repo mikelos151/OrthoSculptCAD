@@ -1,0 +1,11 @@
+{
+  "files": [
+    "src/compute/workerPool.ts",
+    "tests/v03-worker-pool.test.ts"
+  ],
+  "scan": {
+    "suspectedCredential": [],
+    "dynamicExecution": [],
+    "networkOrProcess": []
+  }
+}

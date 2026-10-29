@@ -1,0 +1,26 @@
+{
+  "plan_after_sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+  "original_lines": 162,
+  "new_lines": 177,
+  "added_diff_lines": 27,
+  "removed_diff_lines": 12,
+  "protected_sections_unchanged": {
+    "2": true,
+    "3": true,
+    "7": true,
+    "9": true
+  },
+  "tracked_count": 1932,
+  "all_tracked_bytes_unchanged": true,
+  "spec": {
+    "scope": "symbolic SPEC only; not production/native GREEN",
+    "tests_run": 42,
+    "classification_cases": 36,
+    "deadline_tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "successful": true
+  },
+  "approval": false,
+  "full_transport_status": "HOLD pending fresh independent review; no transport implementation/native acceptance"
+}

@@ -1,0 +1,20 @@
+test_current_valid_ack_is_accepted (__main__.Correlation.test_current_valid_ack_is_accepted) ... FAIL
+test_old_binding_is_ignored_before_frame_access (__main__.Correlation.test_old_binding_is_ignored_before_frame_access) ... ok
+test_original_budget_before_boundary (__main__.Deadline.test_original_budget_before_boundary) ... ok
+
+======================================================================
+FAIL: test_current_valid_ack_is_accepted (__main__.Correlation.test_current_valid_ack_is_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-native-broker-contract-fix\test_spec.py", line 13, in test_current_valid_ack_is_accepted
+    self.assertEqual(classify(state, frame, 101), 'accept-current')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'fault' != 'accept-current'
+- fault
++ accept-current
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=1)

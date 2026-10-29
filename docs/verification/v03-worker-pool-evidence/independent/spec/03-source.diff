@@ -1,0 +1,12 @@
+--- 03-red
++++ 03-green
+@@ -15,7 +15,8 @@
+       const resources = ledger.reserve(plan.map(p => ({ ...p, owner: slot.domain })));
+       if ('code' in resources) return resources;
+       slot.held = true;
+-      factory(kind);
++      try { factory(kind); }
++      catch (error) { resources.close(); slot.held = false; throw error; }
+       return Object.freeze({}) as PoolLease;
+     },
+   });

@@ -1,0 +1,26 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (8 tests | 1 failed) 15ms
+     × 08 rejects an invalid internal role before reserving or constructing 3ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 23 passed (24)
+   Start at  20:16:31
+   Duration  560ms (transform 78ms, setup 0ms, import 113ms, tests 39ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 08 rejects an invalid internal role before reserving or constructing
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-worker-pool.test.ts:106:61
+    104|     const ledger = createResourceLedger(limits); let constructors = 0;
+    105|     const pool = createWorkerPool(ledger, () => { constructors++; retu…
+    106|     expect(() => pool.acquire('fake-owner' as never, plan)).toThrowErr…
+       |                                                             ^
+    107|     expect(constructors).toBe(0); expect(ledger.snapshot().managed).to…
+    108|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

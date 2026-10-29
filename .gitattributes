@@ -145,3 +145,13 @@ docs/verification/v03-source-admission-design-evidence/** -text whitespace=cr-at
 docs/verification/v03-source-admission-fixture-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 docs/verification/v03-source-candidate-native-runtime-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 docs/verification/v03-resource-ledger-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# G1b1a pool and accepted G1b design: checksum-bound raw inputs/evidence.
+src/compute/workerPool.ts -text
+tests/v03-worker-pool.test.ts -text
+docs/plans/v03-native-broker-g1b-design.md -text
+docs/verification/v03-native-broker-design-results.json -text
+docs/verification/v03-worker-pool-parent-results.json -text
+docs/verification/v03-worker-pool-byte-roundtrip.json -text whitespace=cr-at-eol
+docs/verification/v03-native-broker-design-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/verification/v03-worker-pool-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

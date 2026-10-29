@@ -1,0 +1,68 @@
+{
+  "algorithm": "SHA256",
+  "excluded": [
+    "hashmanifest.json"
+  ],
+  "files": {
+    "commands.json": {
+      "bytes": 974,
+      "sha256": "e97bbfc27b53aa16c2d3435d160fb7f86e13a5ec5a4b7bcc20fabd70b17336f5"
+    },
+    "compile.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "compiled/resourceLedger.js": {
+      "bytes": 10939,
+      "sha256": "6ae0607fe24b8707fa8044ad47aac959bd0ac18f88ba9009a499067a55c21735"
+    },
+    "compiled/workerPool.js": {
+      "bytes": 5704,
+      "sha256": "3e0bab0270b45aeac9c75ca889bc15a7953f2803ccebd85927248ba409ab5d1b"
+    },
+    "finalize.mjs": {
+      "bytes": 2095,
+      "sha256": "e37d4c96737ae2de7b45605664585befad808ef71373a33efaff85e06c8c325b"
+    },
+    "input-end.json": {
+      "bytes": 424,
+      "sha256": "e20d8aedb8ef0907eceec54caee2096a5b3a5d2457c00e1fef322963a468e6a2"
+    },
+    "input-start.json": {
+      "bytes": 424,
+      "sha256": "e20d8aedb8ef0907eceec54caee2096a5b3a5d2457c00e1fef322963a468e6a2"
+    },
+    "README.md": {
+      "bytes": 2435,
+      "sha256": "4718ec6ad5d8a1497697d2f25130cd5b405d4cb018d35396a142c41cf767b708"
+    },
+    "review.json": {
+      "bytes": 8403,
+      "sha256": "57b3a55ad25b1a5085f9b23d4be9e88047db54ba414888f1cbf1e96161cb02f9"
+    },
+    "run.mjs": {
+      "bytes": 3070,
+      "sha256": "d0c3635aa868a7f9c63fa9b6e2a04dd13c00280cc0fc96ec33ccf648b5b12244"
+    },
+    "static-scan.json": {
+      "bytes": 429,
+      "sha256": "b6f748712b804bf179ec0f83b88231765a533b00cc3d0dc171c956e22d03ec66"
+    },
+    "tsconfig.json": {
+      "bytes": 498,
+      "sha256": "f29ea1730942afa30733be3465208ca13a1c32b7628f1f1587fa8ba0ea64a7bb"
+    },
+    "unit-witnesses.log": {
+      "bytes": 2937,
+      "sha256": "46f9f50c009b7f40ef6f898c96840fb2d34651b19b37492251b31bbf28a8a34b"
+    },
+    "witness-results.json": {
+      "bytes": 4080,
+      "sha256": "b095ba15c87d72f3b0b05903440d0ee176aa6b25ce694f9970f32823cdf6791a"
+    },
+    "witnesses.cjs": {
+      "bytes": 18313,
+      "sha256": "f794311c8840fb5c407b3dc43244452658f19754680cdfd1fc6861e5fb3be234"
+    }
+  }
+}

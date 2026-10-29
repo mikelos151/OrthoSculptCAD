@@ -1,0 +1,9 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+
+ Test Files  2 passed (2)
+      Tests  32 passed (32)
+   Start at  20:21:24
+   Duration  654ms (transform 84ms, setup 0ms, import 121ms, tests 50ms, environment 0ms)
+

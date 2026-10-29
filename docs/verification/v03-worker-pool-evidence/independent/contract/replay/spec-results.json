@@ -1,0 +1,9 @@
+{
+  "scope": "symbolic SPEC only; not production/native GREEN",
+  "tests_run": 42,
+  "classification_cases": 36,
+  "deadline_tests": 6,
+  "failures": 0,
+  "errors": 0,
+  "successful": true
+}

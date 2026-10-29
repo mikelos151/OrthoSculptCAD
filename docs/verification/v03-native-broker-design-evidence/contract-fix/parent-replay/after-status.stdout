@@ -1,0 +1,5 @@
+?? docs/plans/v03-native-broker-g1b-design.md
+?? docs/verification/v03-native-broker-design-evidence/
+?? docs/verification/v03-native-broker-design-results.json
+?? src/compute/workerPool.ts
+?? tests/v03-worker-pool.test.ts

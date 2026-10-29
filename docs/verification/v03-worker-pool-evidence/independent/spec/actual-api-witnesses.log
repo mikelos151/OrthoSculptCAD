@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "classification": "Independent existing-behavior UNIT coverage of actual compiled production APIs; no new TDD/native claim",
+  "checks": [
+    {
+      "name": "reserve whole 16-entry mixed-category plan before exact constructor; third never reads plan",
+      "passed": true
+    },
+    {
+      "name": "STARTING plus nested IDLE consume both slots before returning factories",
+      "passed": true
+    },
+    {
+      "name": "BUDGET and constructor throw preserve independent actual materialized source bytes and refs",
+      "passed": true
+    },
+    {
+      "name": "retired/foreign/JSON/clone/snapshot handles never change a newer binding",
+      "passed": true
+    },
+    {
+      "name": "actual captured late callbacks have zero newer-binding effects after same-slot reuse",
+      "passed": true
+    },
+    {
+      "name": "dispose revokes BOTH handles before first native-effect stand-in and REVOKING is occupied",
+      "passed": true
+    },
+    {
+      "name": "terminate failure retains FAILED slot and charge forever without retry; disposal still cleans other slot",
+      "passed": true
+    },
+    {
+      "name": "dispose during nested STARTING blocks publication, terminates both returned exact objects once",
+      "passed": true
+    },
+    {
+      "name": "dispose then constructor throw rolls back own reservation and publishes nothing",
+      "passed": true
+    },
+    {
+      "name": "three stable domains survive 80 admitted incarnations under maxRealms=3",
+      "passed": true
+    },
+    {
+      "name": "diagnostics recursively frozen and contain only non-authoritative scalar fields",
+      "passed": true
+    },
+    {
+      "name": "360 deterministic actual-API transitions agree with independent tiny ownership-counter graph",
+      "passed": true
+    }
+  ],
+  "checks_count": 12,
+  "model_steps": 360,
+  "seed_final": 372312601
+}

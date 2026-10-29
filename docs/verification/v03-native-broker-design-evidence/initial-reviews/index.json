@@ -1,0 +1,120 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/audit_inputs.py",
+      "sha256": "908000107aaa56cdd165521ac2fe134ba0576d60d6eaf1700827e1086bfaba55",
+      "bytes": 2351
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/hash-after.log",
+      "sha256": "0be1171e3dc5faf8f86b23ae6b48aa9c5cc6eca7cd064343e41a01b5b72a0fd7",
+      "bytes": 1725
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/hash-before.log",
+      "sha256": "27b1e1caf4c843a06128e10fc49d1b2440628a581513cc5221cd0ca223fe003a",
+      "bytes": 1691
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/inputs-after.json",
+      "sha256": "0be1171e3dc5faf8f86b23ae6b48aa9c5cc6eca7cd064343e41a01b5b72a0fd7",
+      "bytes": 1725
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/inputs-before.json",
+      "sha256": "27b1e1caf4c843a06128e10fc49d1b2440628a581513cc5221cd0ca223fe003a",
+      "bytes": 1691
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/ownership-spec-matrix.json",
+      "sha256": "b749dd29ef577ecab973bbdcd81e34822be15b9fed9f3b86889ea63354e1d0eb",
+      "bytes": 4553
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/review.json",
+      "sha256": "3a6c28cb3fb2b4fb2edb3eef5f8159f30abc9c3c5c5cdf0e62eedec30faa7e52",
+      "bytes": 9158
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/sha256-manifest.json",
+      "sha256": "e2dab9707235f9fa8406e516728180b98d9c01eabeca9c9a0f3e61d0dc6cf03b",
+      "bytes": 1669
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/status-after.log",
+      "sha256": "e79083be100e19b2999c09e0ebd2852dc692561b5e4b51cc23e1fd5f3a39a26b",
+      "bytes": 102
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/resource/status-before.log",
+      "sha256": "e79083be100e19b2999c09e0ebd2852dc692561b5e4b51cc23e1fd5f3a39a26b",
+      "bytes": 102
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/artifact-manifest.json",
+      "sha256": "052141300d8cba128c8741ff7226e6061b3b57c3eb47b65b234bbe3981b087e3",
+      "bytes": 1948
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/branch-end.log",
+      "sha256": "a8e1730380e49f6a38f070b242c602b9cc046f034c3fdcda6b21e298c39bd383",
+      "bytes": 21
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/command-results.log",
+      "sha256": "9053cbbb9f9b1af4ff0a1204bc04ec44d444f2e8cdabf95d460e40f11140c096",
+      "bytes": 90
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/finalization-results.json",
+      "sha256": "9611792a9445c21abfb7f91488f2984d4f668f1a0ccacd8ba093741c4551b3ca",
+      "bytes": 400
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/finalize-review.py",
+      "sha256": "d08c0ac75f287da8e283474c8626ace1f7e2a81af5894ca3b37b604cbf768066",
+      "bytes": 2547
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/head-end.log",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/review.json",
+      "sha256": "fa15d91d7219f483f8d10c2b623393b79e2a279248fc1d3bcbf1ed07cb8e2993",
+      "bytes": 15137
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/source-additional-start.json",
+      "sha256": "15b5a953f06bf5079ee82a9cc290f3fd67b504e0c38fb549564c1adfffd24e63",
+      "bytes": 312
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/source-start.json",
+      "sha256": "5c4b4910aee6b4625ac184d5c7226d799305cc4865ac193a5efa4ea473231433",
+      "bytes": 3242
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/verification-results.json",
+      "sha256": "9dc0850a4e298d5fce44ea8b0055f169e45db13af68dbcf0acbc19547debc25b",
+      "bytes": 4922
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/verification.log",
+      "sha256": "9dc0850a4e298d5fce44ea8b0055f169e45db13af68dbcf0acbc19547debc25b",
+      "bytes": 4922
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-reviews/lifecycle/verify-review.py",
+      "sha256": "9739c08a0c6c1d8a032cd37a0cc80ef08abed6a927a68e66185b669483aec364",
+      "bytes": 3524
+    }
+  ],
+  "count": 22,
+  "verifiedReviewerArtifactCounts": {
+    "resource": 9,
+    "lifecycle": 11
+  },
+  "status": "TRANSPORT_DESIGN_HOLD: G1B-DEADLINE-WIRE, G1B-CORRELATION-ORDER; isolated G1b1a pool approved by both reviewers"
+}

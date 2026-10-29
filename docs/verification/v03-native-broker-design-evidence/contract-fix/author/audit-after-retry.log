@@ -1,0 +1,10 @@
+{
+  "phase": "after",
+  "tracked_count": 1932,
+  "plan_sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+  "head": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+  "branch": "feature/trimline-v03",
+  "status": "?? docs/plans/v03-native-broker-g1b-design.md\n?? docs/verification/v03-native-broker-design-evidence/\n?? docs/verification/v03-native-broker-design-results.json\n?? src/compute/workerPool.ts\n?? tests/v03-worker-pool.test.ts\n",
+  "tracked_diff_exit": 0,
+  "index_diff_exit": 0
+}

@@ -1,0 +1,19 @@
+--- 17-red
++++ 17-green
+@@ -13,6 +13,7 @@
+   ledger.createRealm(); // Stable main ownership domain, reserved for future composition.
+   const slots: Slot[] = [ledger.createRealm(), ledger.createRealm()].map((domain, ordinal) => ({ domain, ordinal, incarnation: 0 }));
+   const leases = new WeakMap<PoolLease, { binding?: Binding }>();
++  const boundWorkers = new WeakSet<Worker>();
+   let disposed = false, generation = 0;
+   function terminal(binding: Binding) {
+     if (binding.terminalAttempted || binding.slot.current !== binding) return;
+@@ -65,6 +66,8 @@
+       try {
+         binding.nonce = globalThis.crypto.getRandomValues(new Uint32Array(4));
+         binding.worker = factory(kind);
++        if (boundWorkers.has(binding.worker)) invalid();
++        boundWorkers.add(binding.worker);
+       }
+       catch (error) { resources.close(); slot.current = undefined; throw error; }
+       if (disposed) {

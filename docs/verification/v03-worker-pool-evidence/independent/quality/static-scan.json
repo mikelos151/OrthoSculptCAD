@@ -1,0 +1,16 @@
+{
+  "note": "Read-only lexical scan, supplemental to manual full-file review; not a complete security proof",
+  "typescript": "5.9.3",
+  "files": {
+    "src/compute/workerPool.ts": {
+      "hardcoded_secret": [],
+      "dynamic_eval": [],
+      "direct_network_or_process": []
+    },
+    "tests/v03-worker-pool.test.ts": {
+      "hardcoded_secret": [],
+      "dynamic_eval": [],
+      "direct_network_or_process": []
+    }
+  }
+}

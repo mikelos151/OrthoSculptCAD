@@ -1,0 +1,15 @@
+import { spawnSync } from 'node:child_process';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+const dir = fileURLToPath(new URL('.', import.meta.url));
+const repo = 'C:/Users/sandr/OrthoSculptCAD';
+const phase = process.argv[2];
+if (!/^[a-z0-9-]+$/.test(phase ?? '')) throw Error('phase required');
+const args = ['--max-old-space-size=256', '--max-semi-space-size=8', repo + '/node_modules/vitest/vitest.mjs', 'run', '--config', dir + '/vitest.config.mjs'];
+const result = spawnSync(process.execPath, args, { cwd: repo, encoding: 'utf8', env: { ...process.env, NODE_OPTIONS: '--max-old-space-size=256 --max-semi-space-size=8' } });
+mkdirSync(dir + '/phases/' + phase, { recursive: true });
+for (const p of ['src/compute/workerPool.ts','tests/v03-worker-pool.test.ts']) writeFileSync(dir + '/phases/' + phase + '/' + p.split('/').at(-1), readFileSync(repo + '/' + p));
+writeFileSync(dir + '/phases/' + phase + '/command.json', JSON.stringify({ command: [process.execPath, ...args], exit: result.status, error: String(result.error ?? ''), signal: result.signal }, null, 2));
+writeFileSync(dir + '/phases/' + phase + '/output.log', (result.stdout ?? '') + (result.stderr ?? ''));
+console.log(result.stdout, result.stderr, 'ACTUAL_EXIT', result.status);
+process.exitCode = result.status ?? 1;

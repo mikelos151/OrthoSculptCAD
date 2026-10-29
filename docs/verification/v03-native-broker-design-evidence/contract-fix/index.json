@@ -1,0 +1,641 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/__pycache__/spec_model.cpython-314.pyc",
+      "sha256": "e97ebcf2187fbeae485e5a2bafb6be2e7273405ca23afe01f638aa701e4f0741",
+      "bytes": 1865
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-branch.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-branch.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-branch.stdout",
+      "sha256": "a8e1730380e49f6a38f070b242c602b9cc046f034c3fdcda6b21e298c39bd383",
+      "bytes": 21
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-diff.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-diff.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-head.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-head.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-head.stdout",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-index_diff.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-index_diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-index_diff.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-status.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-status.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-status.stdout",
+      "sha256": "2722f678ec38eab4cc6a5489754d493e1497a395fb81f7898e1e0e79fef9a013",
+      "bytes": 223
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-tracked.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-tracked.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after-tracked.stdout",
+      "sha256": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+      "bytes": 151306
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/after.json",
+      "sha256": "f1198e90b55b0480c1ae2df2ac819d24d76992ddd4856ccc0b73529a7fe0e037",
+      "bytes": 461082
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/artifact-manifest.json",
+      "sha256": "e62f2d90ad4c90b7c0d2a3c1341e32eea066b8b55ab7772aa33b6cae2de5fffc",
+      "bytes": 5476
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/audit-after-retry.log",
+      "sha256": "22cc27b7095de96b10a5c55dddc0f98d2ea91f8a23f57231287e2d3711d07aa4",
+      "bytes": 527
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/audit-before-retry.log",
+      "sha256": "77831a2db43fea48ef7846ffd3eaf0fdd85f2f92939b7d618fd1ac95af395752",
+      "bytes": 468
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/audit-before.log",
+      "sha256": "3dbcf05e68ac455e14769b1eff47abdcc1db7126bc30280aacc127bd3715c886",
+      "bytes": 1818
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/audit.py",
+      "sha256": "137ab347ffffd6b0b3c7759a1324d7e5424a4237794941b2da1dd0f4addc4119",
+      "bytes": 2623
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-branch.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-branch.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-branch.stdout",
+      "sha256": "a8e1730380e49f6a38f070b242c602b9cc046f034c3fdcda6b21e298c39bd383",
+      "bytes": 21
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-diff.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-diff.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-head.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-head.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-head.stdout",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-index_diff.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-index_diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-index_diff.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-status.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-status.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-status.stdout",
+      "sha256": "5685be22feb6963d95c3eb79490e0ac4f031c3214de3618962383006c9a7f84f",
+      "bytes": 164
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-tracked.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-tracked.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before-tracked.stdout",
+      "sha256": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+      "bytes": 151306
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/before.json",
+      "sha256": "0dcb243019b6d8df31e4acb645dac51003fe2e5cf8edfcaaca6b4b5dcc99b3cf",
+      "bytes": 461023
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/capture.sh",
+      "sha256": "47193c97c11d72eeba4da627159e777ce990742b11cd2737e08ce6578465934d",
+      "bytes": 752
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/design.patch",
+      "sha256": "62a2a3b19f33b819a6b2fa9c264f9cf7e5d16cd330e402a7236cfd8e3b631c09",
+      "bytes": 17519
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/finalize.log",
+      "sha256": "0e33c93b58b7423af1f31c5ad61673ad65df57bfd8db996fd1b5c8f655556992",
+      "bytes": 737
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/finalize.py",
+      "sha256": "1f020e1f2c3c3d2c8f4f688e043c75c0c24bbf7850feaa27d676da8909d60689",
+      "bytes": 6304
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/handoff.json",
+      "sha256": "d196148f710f0ad59b11993abcdb4be2f1a7e8ae54d55475bc729eaaa4e93b84",
+      "bytes": 5174
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/plan-after.md",
+      "sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+      "bytes": 27918
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/plan-before.md",
+      "sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+      "bytes": 22953
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec-correlation-green.log",
+      "sha256": "bda4584580cb6ea39d26268ce2f805579343530290725f9d39e74271ad1886d4",
+      "bytes": 332
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec-correlation-red.log",
+      "sha256": "f56c9d844865f9773c14419482a63d7e8ecc3a43ecb329e19e82c87643b03782",
+      "bytes": 1095
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec-current-green.log",
+      "sha256": "0db190f89ef9c4f3b24b634565c1db3e84f06fb70b7df858ef48195bb479705e",
+      "bytes": 433
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec-current-red.log",
+      "sha256": "b88043845a54c7b24c730077fba2636cea03f1982af8f83fc47b74944eacc6b1",
+      "bytes": 1098
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec-deadline-green.log",
+      "sha256": "7d18019450b33a803a614527ce251dd51320d344eb7274967ed6abbd331547af",
+      "bytes": 204
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec-deadline-red.log",
+      "sha256": "2365e5fa4d3fe2ab95681895ccc40f7b724fd6cc4bc44103b9f14d93549c40e4",
+      "bytes": 784
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec-full.log",
+      "sha256": "50a558cb055f4f9bdb42511516f2aa7cb25a643d082b247a25f23e6408f74648",
+      "bytes": 3500
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec-results.json",
+      "sha256": "7f91544209c422d7c93d74afa1c5fa3fbca8c1dc33089697142da02563de197c",
+      "bytes": 198
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec_cases.py",
+      "sha256": "6ad910179c5d0eaa9d2962594fc8b57be399ee1bb18a8b6d4ab7b8dfd7c4b696",
+      "bytes": 5876
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/spec_model.py",
+      "sha256": "fbb679b32cac2bf82f06ef27b547b6efd40e217b57700ae12c75a4ab5ebf6865",
+      "bytes": 1247
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/author/test_spec.py",
+      "sha256": "e88da2f1c4b597078a7fd7298ddc337cd8b4c2bb011ef9391d1c67087666b87b",
+      "bytes": 1097
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-branch.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-branch.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-branch.stdout",
+      "sha256": "a8e1730380e49f6a38f070b242c602b9cc046f034c3fdcda6b21e298c39bd383",
+      "bytes": 21
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-diff.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-diff.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-head.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-head.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-head.stdout",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-index_diff.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-index_diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-index_diff.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-status.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-status.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-status.stdout",
+      "sha256": "2722f678ec38eab4cc6a5489754d493e1497a395fb81f7898e1e0e79fef9a013",
+      "bytes": 223
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-tracked.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-tracked.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after-tracked.stdout",
+      "sha256": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+      "bytes": 151306
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/after.json",
+      "sha256": "f1198e90b55b0480c1ae2df2ac819d24d76992ddd4856ccc0b73529a7fe0e037",
+      "bytes": 461082
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/artifact-manifest.json",
+      "sha256": "e62f2d90ad4c90b7c0d2a3c1341e32eea066b8b55ab7772aa33b6cae2de5fffc",
+      "bytes": 5476
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/audit-after-retry.log",
+      "sha256": "22cc27b7095de96b10a5c55dddc0f98d2ea91f8a23f57231287e2d3711d07aa4",
+      "bytes": 527
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/audit-before-retry.log",
+      "sha256": "77831a2db43fea48ef7846ffd3eaf0fdd85f2f92939b7d618fd1ac95af395752",
+      "bytes": 468
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/audit-before.log",
+      "sha256": "3dbcf05e68ac455e14769b1eff47abdcc1db7126bc30280aacc127bd3715c886",
+      "bytes": 1818
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/audit.py",
+      "sha256": "137ab347ffffd6b0b3c7759a1324d7e5424a4237794941b2da1dd0f4addc4119",
+      "bytes": 2623
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-branch.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-branch.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-branch.stdout",
+      "sha256": "a8e1730380e49f6a38f070b242c602b9cc046f034c3fdcda6b21e298c39bd383",
+      "bytes": 21
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-diff.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-diff.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-head.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-head.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-head.stdout",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-index_diff.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-index_diff.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-index_diff.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-status.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-status.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-status.stdout",
+      "sha256": "5685be22feb6963d95c3eb79490e0ac4f031c3214de3618962383006c9a7f84f",
+      "bytes": 164
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-tracked.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-tracked.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before-tracked.stdout",
+      "sha256": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+      "bytes": 151306
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/before.json",
+      "sha256": "0dcb243019b6d8df31e4acb645dac51003fe2e5cf8edfcaaca6b4b5dcc99b3cf",
+      "bytes": 461023
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/capture.sh",
+      "sha256": "47193c97c11d72eeba4da627159e777ce990742b11cd2737e08ce6578465934d",
+      "bytes": 752
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/design.patch",
+      "sha256": "62a2a3b19f33b819a6b2fa9c264f9cf7e5d16cd330e402a7236cfd8e3b631c09",
+      "bytes": 17519
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/finalize.log",
+      "sha256": "0e33c93b58b7423af1f31c5ad61673ad65df57bfd8db996fd1b5c8f655556992",
+      "bytes": 737
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/finalize.py",
+      "sha256": "1f020e1f2c3c3d2c8f4f688e043c75c0c24bbf7850feaa27d676da8909d60689",
+      "bytes": 6304
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/handoff.json",
+      "sha256": "d196148f710f0ad59b11993abcdb4be2f1a7e8ae54d55475bc729eaaa4e93b84",
+      "bytes": 5174
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/plan-after.md",
+      "sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+      "bytes": 27918
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/plan-before.md",
+      "sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+      "bytes": 22953
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec-correlation-green.log",
+      "sha256": "bda4584580cb6ea39d26268ce2f805579343530290725f9d39e74271ad1886d4",
+      "bytes": 332
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec-correlation-red.log",
+      "sha256": "f56c9d844865f9773c14419482a63d7e8ecc3a43ecb329e19e82c87643b03782",
+      "bytes": 1095
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec-current-green.log",
+      "sha256": "0db190f89ef9c4f3b24b634565c1db3e84f06fb70b7df858ef48195bb479705e",
+      "bytes": 433
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec-current-red.log",
+      "sha256": "b88043845a54c7b24c730077fba2636cea03f1982af8f83fc47b74944eacc6b1",
+      "bytes": 1098
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec-deadline-green.log",
+      "sha256": "7d18019450b33a803a614527ce251dd51320d344eb7274967ed6abbd331547af",
+      "bytes": 204
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec-deadline-red.log",
+      "sha256": "2365e5fa4d3fe2ab95681895ccc40f7b724fd6cc4bc44103b9f14d93549c40e4",
+      "bytes": 784
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec-full.log",
+      "sha256": "50a558cb055f4f9bdb42511516f2aa7cb25a643d082b247a25f23e6408f74648",
+      "bytes": 3500
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec-results.json",
+      "sha256": "7f91544209c422d7c93d74afa1c5fa3fbca8c1dc33089697142da02563de197c",
+      "bytes": 198
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec_cases.py",
+      "sha256": "6ad910179c5d0eaa9d2962594fc8b57be399ee1bb18a8b6d4ab7b8dfd7c4b696",
+      "bytes": 5876
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec_cases.py.parent.stderr.log",
+      "sha256": "85eec57b024239cc8cae3a5b75bd480e8977c74749720e2abce2caf7eca43278",
+      "bytes": 3500
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec_cases.py.parent.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/spec_model.py",
+      "sha256": "fbb679b32cac2bf82f06ef27b547b6efd40e217b57700ae12c75a4ab5ebf6865",
+      "bytes": 1247
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/test_spec.py",
+      "sha256": "e88da2f1c4b597078a7fd7298ddc337cd8b4c2bb011ef9391d1c67087666b87b",
+      "bytes": 1097
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/test_spec.py.parent.stderr.log",
+      "sha256": "0db190f89ef9c4f3b24b634565c1db3e84f06fb70b7df858ef48195bb479705e",
+      "bytes": 433
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/contract-fix/parent-replay/test_spec.py.parent.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "count": 127,
+  "status": "Replay verified; independent reviews deleg_e756eeba pending"
+}

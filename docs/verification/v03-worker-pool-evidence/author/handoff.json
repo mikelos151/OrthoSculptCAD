@@ -1,0 +1,199 @@
+{
+  "scope": "G1b1a isolated internal pool primitive only; parent replay and independent reviews pending",
+  "repository": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "head_start": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+  "head_end": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+  "created_repo_files": [
+    "src/compute/workerPool.ts",
+    "tests/v03-worker-pool.test.ts"
+  ],
+  "source_hashes": {
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "tests/v03-worker-pool.test.ts": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7"
+  },
+  "protected": {
+    "tracked_files_hashed": 1932,
+    "changed": [],
+    "resourceLedger_sha256_start_end": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+    "ledger_tests_sha256_start_end": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+    "tracked_and_index_diff_empty": true,
+    "canonical_plan": "Read only relevant clauses. Another owner may change canonical transport clauses/evidence; not claimed unchanged and not edited here."
+  },
+  "exports": {
+    "runtime": [
+      "createWorkerPool"
+    ],
+    "types": [
+      "WorkerKind",
+      "InternalPlanEntry",
+      "InternalPlan",
+      "PoolLease",
+      "PoolRefusal",
+      "WorkerPool",
+      "WorkerPoolSnapshot"
+    ]
+  },
+  "api": {
+    "factory": "createWorkerPool(sameRealResourceLedger, trustedInternalFactory(kind): Worker)",
+    "acquire": "acquire(kind, readonly plan) -> opaque PoolLease | {ok:false,code:BUSY|BUDGET}",
+    "release": "release(authentic pool-local lease): void; authentic retired no-op; no revoke/dispatch alias",
+    "dispose": "dispose(): void; revokes all public leases and closes acquire synchronously; repeated no-op",
+    "snapshot": "Frozen disposed/ownershipDomains/occupied plus 2 frozen ordinal/incarnation/generation/phase diagnostics; no Worker/Realm/Lease/Ref/nonce"
+  },
+  "limits": {
+    "occupied_slots": 2,
+    "ownership_domains": 3,
+    "plan_entries": 16,
+    "key_length": "same ledger maxKeyLength, default 128",
+    "payload_policy_unchanged": {
+      "job": 134217728,
+      "history": 134217728,
+      "managed": 402653184
+    },
+    "native_fixture": {
+      "managed": 1024,
+      "job": 768,
+      "history": 512,
+      "maxRealms": 3,
+      "maxLeases": 2,
+      "maxRefs": 2
+    },
+    "ordinals": "Number.MAX_SAFE_INTEGER cutoff closes pool rather than wrapping; not wire uint32 ABI",
+    "nonce": "private 128-bit native crypto.getRandomValues per admitted binding"
+  },
+  "errors": {
+    "BUSY": "return before reservation/nonce/native constructor if both logical slots occupied",
+    "BUDGET": "atomic ledger reservation refusal or >16 entries; composition realm/counter capacity can throw BUDGET",
+    "INVALID_INPUT": "foreign/JSON/structuredClone/diagnostic handles; invalid role, malformed plan delegated to real G1a validation; repeated exact Worker object from trusted factory",
+    "CLOSED": "acquire after synchronous dispose, including dispose during factory",
+    "native_errors": "constructor errors rethrown after own reservation cleanup; terminate errors leave FAILED slot/charge and revoked public auth; no retry; async error/messageerror uses captured exact binding"
+  },
+  "verification": {
+    "unit": {
+      "passed": 40,
+      "G1a_unchanged": 16,
+      "pool": 24,
+      "heapMiB": 256,
+      "semiSpaceMiB": 8,
+      "maxWorkers": 1,
+      "fileParallelism": false
+    },
+    "vertical_TDD_red_green_cycles": 14,
+    "phases": "phases/*/{command.json,output.log,workerPool.ts,v03-worker-pool.test.ts}",
+    "TDD_note": "Existing-behavior coverage that passed immediately is labelled as such. Each of 14 missing-behavior cycles has actual functional RED exit 1 followed by GREEN exit 0; missing module/import errors are not counted.",
+    "tsc": {
+      "exit": 0,
+      "heapMiB": 512,
+      "incremental": false
+    },
+    "native": {
+      "passed": true,
+      "checks": 119,
+      "metrics": {
+        "attempts": 50,
+        "created": 49,
+        "terminated": 49,
+        "sends": 0,
+        "allocations": 0
+      },
+      "maxCreatedMinusTerminated": 2,
+      "browser": {
+        "version": "156.0.8078.4",
+        "nativeCreated": 49,
+        "nativeCloseNotificationsBeforeContextClose": 49
+      },
+      "nativeConstructorFailure": "Actual new Worker invalid URL throws SyntaxError synchronously; no network",
+      "expectedTrustedNativeWorkerErrors": [
+        {
+          "message": "Uncaught Error: G1B_EXPECTED_WORKER_ERROR",
+          "trusted": true,
+          "ordinal": 46
+        }
+      ],
+      "pageErrors": [],
+      "externalRequests": [],
+      "closed": {
+        "context": true,
+        "browser": true,
+        "server": true,
+        "portRefuses": true
+      }
+    },
+    "source_and_served_hashes": {
+      "source": {
+        "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+        "src/compute/resourceLedger.ts": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109"
+      },
+      "served": {
+        "workerPool.js": "f2700677312afea074a0c9d821050d87d5df5f5a5b7dcfa4727814f0bea50fc3",
+        "resourceLedger.js": "f3190cf48d308dc2768912315665a59258d16e6d45078ac2bebda696af06b6e0",
+        "fixture.mjs": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256"
+      }
+    },
+    "commands": [
+      {
+        "label": "unit-final",
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/phase.mjs",
+          "final-green"
+        ],
+        "exit": 0,
+        "signal": null,
+        "error": ""
+      },
+      {
+        "label": "tsc-final",
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=512",
+          "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+          "--noEmit",
+          "--incremental",
+          "false"
+        ],
+        "exit": 0,
+        "signal": null,
+        "error": ""
+      },
+      {
+        "label": "native-final",
+        "command": [
+          "C:\\Program Files\\nodejs\\node.exe",
+          "--max-old-space-size=256",
+          "--max-semi-space-size=8",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\/native-cli.mjs"
+        ],
+        "exit": 0,
+        "signal": null,
+        "error": ""
+      }
+    ],
+    "static_scan": {
+      "src/compute/workerPool.ts": {
+        "secrets": false,
+        "eval_or_exec": false,
+        "network_or_process_api": false
+      },
+      "tests/v03-worker-pool.test.ts": {
+        "secrets": false,
+        "eval_or_exec": false,
+        "network_or_process_api": false
+      }
+    }
+  },
+  "boundaries": [
+    "No App/WorkerClient/runDisplayTask migration, production singleton or global application cap claim.",
+    "No transport, ACK, handoff/rebind, deadline wire, remote grants, main-SHA/WAIT_MAIN settlement or owner/audited-source capability.",
+    "No native old-binding event after terminate was manufactured: late captured callback guard is explicitly TEST unit coverage.",
+    "Physical Worker thread completion, GC, RSS, EXE, clinical readiness, G1b2, G2c/G3 mixed-positive and full CAD acceptance not claimed.",
+    "Main ownership domain exists privately but no main continuations are created. External resource leases remain outside pool close scope.",
+    "Multiple isolated helper instances are not a whole-App singleton; production constructor URLs/composition are a future G1b2 responsibility.",
+    "Parent must replay full serial regression and two independent reviews before acceptance/stage/commit."
+  ],
+  "issues": [
+    "Initial Python subprocess invocation of git failed with WinError 5; used shell git listing and Python hashing successfully. No source workaround or settings change.",
+    "Full project suite intentionally not run concurrently; only focused 16+24 tests plus complete tsc and owned native fixture."
+  ],
+  "git_operations": "No stage/commit/reset/stash. No dependency install or profile/skill/config/dist/ZIP edits."
+}

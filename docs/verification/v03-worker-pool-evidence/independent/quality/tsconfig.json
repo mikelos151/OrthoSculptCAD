@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "CommonJS", "lib": ["ES2022", "DOM"],
+    "types": [], "strict": true, "skipLibCheck": true,
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/src/compute",
+    "outDir": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-worker-pool-quality-review/compiled",
+    "noEmitOnError": true
+  },
+  "files": [
+    "C:/Users/sandr/OrthoSculptCAD/src/compute/resourceLedger.ts",
+    "C:/Users/sandr/OrthoSculptCAD/src/compute/workerPool.ts"
+  ]
+}

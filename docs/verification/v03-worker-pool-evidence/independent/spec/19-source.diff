@@ -1,0 +1,15 @@
+--- 19-red
++++ 19-green
+@@ -82,8 +82,10 @@
+         if (binding.slot.current !== binding || binding.worker !== native) return;
+         try { terminal(binding); } catch { /* Native terminate failed: retain slot/charge. */ }
+       };
+-      binding.stop = () => native.removeEventListener('error', onError);
+-      try { native.addEventListener('error', onError); }
++      binding.stop = () => {
++        native.removeEventListener('error', onError); native.removeEventListener('messageerror', onError);
++      };
++      try { native.addEventListener('error', onError); native.addEventListener('messageerror', onError); }
+       catch (error) { terminal(binding); throw error; }
+       return lease;
+     },

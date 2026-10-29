@@ -1,0 +1,9 @@
+{
+  "schema_and_fail_closed_checks": "PASS",
+  "logic_error_count": 2,
+  "security_concern_count": 0,
+  "suggestion_count": 4,
+  "all_selected_source_hashes_still_match": true,
+  "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-lifecycle-review/finalize-review.py",
+  "scope": "Static provenance and review artifact validation, not application tests"
+}

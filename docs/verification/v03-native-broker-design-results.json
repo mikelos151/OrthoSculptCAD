@@ -1,0 +1,43 @@
+{
+  "status": "DESIGN_ACCEPTED_TRANSPORT_IMPLEMENTATION_PENDING",
+  "acceptedPlanSHA256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+  "freshContractReview": "PASS DESIGN ONLY: both original issue IDs CLOSED; actual spec_cases.py 42/42, bootstrap test_spec.py 3/3 kept separately",
+  "freshReviewEvidence": "docs/verification/v03-worker-pool-evidence/independent/contract/review.json",
+  "initialReviewDisposition": "Historical HOLD and original draft hashes below are preserved; superseded by the accepted corrected contract, not rewritten.",
+  "reviewedPlan": "docs/plans/v03-native-broker-g1b-design.md",
+  "reviewedPlanSHA256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+  "baselineHEAD": "2a586bd3abe3c801e7fe23764fecc77b8c770b50",
+  "reviews": {
+    "resource": "DESIGN PASS, G1b1a ready; future phase guards/native result grant AC retained",
+    "lifecycle": "HOLD full transport: G1B-DEADLINE-WIRE, G1B-CORRELATION-ORDER; independent G1b1a may start",
+    "verifiedArtifactCounts": { "resource": 9, "lifecycle": 11 },
+    "evidence": "docs/verification/v03-native-broker-design-evidence/initial-reviews/index.json"
+  },
+  "parentExistingBoundaryReplay": {
+    "nativeChromiumChecks": 12,
+    "nativeProbeExit": 0,
+    "staticSelfCheckExit": 0,
+    "browserClosed": true,
+    "meaning": "Existing accepted G1a native-boundary coverage only, not a new handoff adapter or broker GREEN"
+  },
+  "technicalDecisionsForCorrection": {
+    "deadline": "G1b main-enforced only; 64-byte ABI unchanged; worker clock propagation/loop checks separately gated before G2c/G3",
+    "correlation": "Old captured binding ignored; current malformed/wrong nonce/impossible tuple faults; genuinely issued retired requests separated from current outstanding; private cleanup correlation survives public revoke until terminal",
+    "mainHolds": "Cap includes reserved places for active continuations before starting uncancellable work, not only post-terminal WAIT_MAIN",
+    "idleRelease": "Separate bounded cleanup grace for idle binding; no reset of a busy request deadline"
+  },
+  "activeDelegation": "deleg_427a3413",
+  "ownership": {
+    "contractFixer": "Only G1b plan and dedicated scratch; no production edits",
+    "poolImplementer": "Only NEW src/compute/workerPool.ts and NEW tests/v03-worker-pool.test.ts plus dedicated scratch"
+  },
+  "approvedCodeScope": "Isolated G1b1a pool acquire/BUSY/reserve/constructor rollback/authenticated leases/controlled termination/three logical domain reuse, strict TDD and real Chromium fixtures",
+  "notApproved": [
+    "Full transport contract until targeted correction and independent rereview",
+    "Native handoff/rebind/ACK implementation",
+    "G1b2 legacy constructors migration or global application Worker cap",
+    "Source ACTIVE, G2c/G3 mixed-positive, source admission",
+    "Complete CAD, shell/collar/export v3, clinical use, native EXE or RSS guarantees"
+  ],
+  "release020": "Frozen, not replaced"
+}

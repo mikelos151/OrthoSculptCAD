@@ -1,0 +1,28 @@
+{
+  "scope": "Scratch files except this manifest, plus final plan",
+  "plan": {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\v03-native-broker-g1b-design.md",
+    "sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558"
+  },
+  "scratchFiles": {
+    "design-validation.json": "20f0524f56650fd738f5c8982ba0e18daf7abf425d5f00aaad39a01b57f844a7",
+    "design-validation.log": "20f0524f56650fd738f5c8982ba0e18daf7abf425d5f00aaad39a01b57f844a7",
+    "finalize.py": "28fcd616e3dd9cef77471c536123d2bed03d867ce7c3fa42c27f165500c03f05",
+    "handoff.json": "38e0479802dff908832a10feb94fd9d3db6be7782adc5bbdee988adec25233dd",
+    "head-end.log": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+    "head-start.log": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+    "native-boundary-probe.mjs": "2d28058ae26ef0bb5e6d897a5a3c2fe9073b5b33a2b2a88e798ab3ec712e68f4",
+    "native-probe-results.json": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+    "native-probe.log": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+    "README.md": "f2be8ace4d60a16c77796b6173a2b0b60f7d43b232830801233f0682723b02c4",
+    "resourceLedger.existing.mjs": "83b87cd0b610e77aebfb2a11fb4ccc7d8653f9b10fb38061e98979a6e77f350b",
+    "source-end.json": "4dab5d6c65286d4fdc63ea8ee5215d24d056b041bb8e2d639bf6b511acb7d425",
+    "source-start.json": "42005441034a2aa66a644659c71f70f72769b48228e20c887ceb4bdb3bc61d75",
+    "status-end.log": "32ecd774fb81119f7cf311808b7244535b00ae83b41dd1d71d6f919f8ffa0d13",
+    "status-start.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tracked-end.bin": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+    "tracked-start.bin": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+    "verify-design.mjs": "099da26458e1f366a6e37131f82aaa3c94e24bb3474c287a6cd55bb7f8a98176"
+  },
+  "scratchFileCount": 18
+}

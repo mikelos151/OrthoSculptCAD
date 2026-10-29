@@ -1,0 +1,26 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (17 tests | 1 failed) 26ms
+     × 17 TEST trusted factory cannot bind one exact Worker object to two incarnations 4ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 32 passed (33)
+   Start at  20:21:56
+   Duration  576ms (transform 85ms, setup 0ms, import 124ms, tests 49ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 17 TEST trusted factory cannot bind one exact Worker object to two incarnations
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-worker-pool.test.ts:213:49
+    211|     const pool = createWorkerPool(ledger, () => w as unknown as Worker…
+    212|     const h = accepted(pool.acquire('owner', plan)), before = ledger.s…
+    213|     expect(() => pool.acquire('compute', plan)).toThrowError(expect.ob…
+       |                                                 ^
+    214|     expect(ledger.snapshot()).toEqual(before); expect(w.terminated).to…
+    215|     pool.release(h);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

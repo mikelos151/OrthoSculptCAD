@@ -1,0 +1,47 @@
+test_ack_at_deadline (__main__.Correlation.test_ack_at_deadline) ... ok
+test_current_malformed (__main__.Correlation.test_current_malformed) ... ok
+test_current_valid_ack (__main__.Correlation.test_current_valid_ack) ... ok
+test_current_valid_return (__main__.Correlation.test_current_valid_return) ... ok
+test_duplicate_active_materialized (__main__.Correlation.test_duplicate_active_materialized) ... ok
+test_duplicate_active_received (__main__.Correlation.test_duplicate_active_received) ... ok
+test_duplicate_active_return (__main__.Correlation.test_duplicate_active_return) ... ok
+test_duplicate_released_terminal (__main__.Correlation.test_duplicate_released_terminal) ... ok
+test_future_generation (__main__.Correlation.test_future_generation) ... ok
+test_future_request (__main__.Correlation.test_future_request) ... ok
+test_idle_before_first_start (__main__.Correlation.test_idle_before_first_start) ... ok
+test_idle_cleanup_not_old_deadline (__main__.Correlation.test_idle_cleanup_not_old_deadline) ... ok
+test_last_retired_ack (__main__.Correlation.test_last_retired_ack) ... ok
+test_last_retired_return (__main__.Correlation.test_last_retired_return) ... ok
+test_lower_unissued (__main__.Correlation.test_lower_unissued) ... ok
+test_mixed_job (__main__.Correlation.test_mixed_job) ... ok
+test_mixed_window (__main__.Correlation.test_mixed_window) ... ok
+test_old_binding_before_frame_access (__main__.Correlation.test_old_binding_before_frame_access) ... ok
+test_old_h1_released_h2_reuse (__main__.Correlation.test_old_h1_released_h2_reuse) ... ok
+test_old_incarnation_current_channel (__main__.Correlation.test_old_incarnation_current_channel) ... ok
+test_older_untracked_cleanup (__main__.Correlation.test_older_untracked_cleanup) ... ok
+test_released_after_revoke (__main__.Correlation.test_released_after_revoke) ... ok
+test_released_at_grace (__main__.Correlation.test_released_at_grace) ... ok
+test_released_without_revoke (__main__.Correlation.test_released_without_revoke) ... ok
+test_released_wrong_target (__main__.Correlation.test_released_wrong_target) ... ok
+test_retired_after_deadline (__main__.Correlation.test_retired_after_deadline) ... ok
+test_retired_malformed (__main__.Correlation.test_retired_malformed) ... ok
+test_retired_unplanned (__main__.Correlation.test_retired_unplanned) ... ok
+test_retired_wrong_nonce (__main__.Correlation.test_retired_wrong_nonce) ... ok
+test_retired_wrong_transfer (__main__.Correlation.test_retired_wrong_transfer) ... ok
+test_return_after_deadline (__main__.Correlation.test_return_after_deadline) ... ok
+test_revoked_active_ack (__main__.Correlation.test_revoked_active_ack) ... ok
+test_wrong_descriptor (__main__.Correlation.test_wrong_descriptor) ... ok
+test_wrong_nonce (__main__.Correlation.test_wrong_nonce) ... ok
+test_wrong_slot (__main__.Correlation.test_wrong_slot) ... ok
+test_wrong_transfer (__main__.Correlation.test_wrong_transfer) ... ok
+test_before_boundary (__main__.Deadline.test_before_boundary) ... ok
+test_boundary_expired (__main__.Deadline.test_boundary_expired) ... ok
+test_busy_capped (__main__.Deadline.test_busy_capped) ... ok
+test_busy_one_second (__main__.Deadline.test_busy_one_second) ... ok
+test_delayed_steps_never_reset (__main__.Deadline.test_delayed_steps_never_reset) ... ok
+test_idle_fresh_cleanup (__main__.Deadline.test_idle_fresh_cleanup) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.003s
+
+OK

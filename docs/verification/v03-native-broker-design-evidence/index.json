@@ -1,0 +1,250 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/design-validation.json",
+      "sha256": "20f0524f56650fd738f5c8982ba0e18daf7abf425d5f00aaad39a01b57f844a7",
+      "bytes": 3261
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/design-validation.log",
+      "sha256": "20f0524f56650fd738f5c8982ba0e18daf7abf425d5f00aaad39a01b57f844a7",
+      "bytes": 3261
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/finalize.py",
+      "sha256": "28fcd616e3dd9cef77471c536123d2bed03d867ce7c3fa42c27f165500c03f05",
+      "bytes": 3330
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/handoff.json",
+      "sha256": "38e0479802dff908832a10feb94fd9d3db6be7782adc5bbdee988adec25233dd",
+      "bytes": 2011
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/head-end.log",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/head-start.log",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/native-boundary-probe.mjs",
+      "sha256": "2d28058ae26ef0bb5e6d897a5a3c2fe9073b5b33a2b2a88e798ab3ec712e68f4",
+      "bytes": 6527
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/native-probe-results.json",
+      "sha256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+      "bytes": 4229
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/native-probe.log",
+      "sha256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+      "bytes": 4229
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/README.md",
+      "sha256": "f2be8ace4d60a16c77796b6173a2b0b60f7d43b232830801233f0682723b02c4",
+      "bytes": 3491
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/resourceLedger.existing.mjs",
+      "sha256": "83b87cd0b610e77aebfb2a11fb4ccc7d8653f9b10fb38061e98979a6e77f350b",
+      "bytes": 10771
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/sha256-manifest.json",
+      "sha256": "680ceaabae11d5ef4b9d8d84625bc7467848bcb82595fe70a51508c11deb546e",
+      "bytes": 2012
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/source-end.json",
+      "sha256": "4dab5d6c65286d4fdc63ea8ee5215d24d056b041bb8e2d639bf6b511acb7d425",
+      "bytes": 298370
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/source-start.json",
+      "sha256": "42005441034a2aa66a644659c71f70f72769b48228e20c887ceb4bdb3bc61d75",
+      "bytes": 298235
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/status-end.log",
+      "sha256": "32ecd774fb81119f7cf311808b7244535b00ae83b41dd1d71d6f919f8ffa0d13",
+      "bytes": 46
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/status-start.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/tracked-end.bin",
+      "sha256": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+      "bytes": 151306
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/tracked-start.bin",
+      "sha256": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+      "bytes": 151306
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/author/verify-design.mjs",
+      "sha256": "099da26458e1f366a6e37131f82aaa3c94e24bb3474c287a6cd55bb7f8a98176",
+      "bytes": 3934
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/design-validation.json",
+      "sha256": "20f0524f56650fd738f5c8982ba0e18daf7abf425d5f00aaad39a01b57f844a7",
+      "bytes": 3261
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/design-validation.log",
+      "sha256": "20f0524f56650fd738f5c8982ba0e18daf7abf425d5f00aaad39a01b57f844a7",
+      "bytes": 3261
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/finalize.py",
+      "sha256": "28fcd616e3dd9cef77471c536123d2bed03d867ce7c3fa42c27f165500c03f05",
+      "bytes": 3330
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/handoff.json",
+      "sha256": "38e0479802dff908832a10feb94fd9d3db6be7782adc5bbdee988adec25233dd",
+      "bytes": 2011
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/head-end.log",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/head-start.log",
+      "sha256": "69bbebf66ced9232b1d26342607276806390463b58c83eb8d811f939b3b6b9c4",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/native-boundary-probe.mjs",
+      "sha256": "a5e0a4195de4174be1c7957ae637ce50354011621d79e34054a05cdd22410b3f",
+      "bytes": 6534
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/native-boundary-probe.mjs.parent.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/native-boundary-probe.mjs.parent.stdout.log",
+      "sha256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+      "bytes": 4229
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/native-probe-results.json",
+      "sha256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+      "bytes": 4229
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/native-probe.log",
+      "sha256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354",
+      "bytes": 4229
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/README.md",
+      "sha256": "f2be8ace4d60a16c77796b6173a2b0b60f7d43b232830801233f0682723b02c4",
+      "bytes": 3491
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/resourceLedger.existing.mjs",
+      "sha256": "83b87cd0b610e77aebfb2a11fb4ccc7d8653f9b10fb38061e98979a6e77f350b",
+      "bytes": 10771
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/sha256-manifest.json",
+      "sha256": "680ceaabae11d5ef4b9d8d84625bc7467848bcb82595fe70a51508c11deb546e",
+      "bytes": 2012
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/source-end.json",
+      "sha256": "4dab5d6c65286d4fdc63ea8ee5215d24d056b041bb8e2d639bf6b511acb7d425",
+      "bytes": 298370
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/source-start.json",
+      "sha256": "42005441034a2aa66a644659c71f70f72769b48228e20c887ceb4bdb3bc61d75",
+      "bytes": 298235
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/status-end.log",
+      "sha256": "32ecd774fb81119f7cf311808b7244535b00ae83b41dd1d71d6f919f8ffa0d13",
+      "bytes": 46
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/status-start.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/tracked-end.bin",
+      "sha256": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+      "bytes": 151306
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/tracked-start.bin",
+      "sha256": "e30618d827bfbcbaec85c2a4a9b9a47a2c8b9359e3d41eba7c1096f81e4b63d1",
+      "bytes": 151306
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/verify-design.mjs",
+      "sha256": "82a1a9fe94ec2b3aca51234fef071690c33d473604654b2de9a27074660c4522",
+      "bytes": 3941
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/verify-design.mjs.parent.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/parent-replay/verify-design.mjs.parent.stdout.log",
+      "sha256": "20f0524f56650fd738f5c8982ba0e18daf7abf425d5f00aaad39a01b57f844a7",
+      "bytes": 3261
+    },
+    {
+      "path": "docs/verification/v03-native-broker-design-evidence/initial-plan.md",
+      "sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+      "bytes": 22953
+    }
+  ],
+  "count": 43,
+  "verifiedAuthorArtifacts": 18,
+  "planSHA256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+  "replayChanges": [
+    {
+      "path": "native-boundary-probe.mjs",
+      "originalSHA256": "2d28058ae26ef0bb5e6d897a5a3c2fe9073b5b33a2b2a88e798ab3ec712e68f4",
+      "replaySHA256": "a5e0a4195de4174be1c7957ae637ce50354011621d79e34054a05cdd22410b3f",
+      "delta": "Only the literal output scratch-directory prefix changed; production imports and assertions unchanged."
+    },
+    {
+      "path": "verify-design.mjs",
+      "originalSHA256": "099da26458e1f366a6e37131f82aaa3c94e24bb3474c287a6cd55bb7f8a98176",
+      "replaySHA256": "82a1a9fe94ec2b3aca51234fef071690c33d473604654b2de9a27074660c4522",
+      "delta": "Only the literal output scratch-directory prefix changed; production imports and assertions unchanged."
+    }
+  ],
+  "runs": [
+    {
+      "script": "native-boundary-probe.mjs",
+      "exit": 0
+    },
+    {
+      "script": "verify-design.mjs",
+      "exit": 0
+    }
+  ],
+  "nativeChecks": 12,
+  "browserClosed": true,
+  "errors": [],
+  "status": "Existing G1a native-boundary coverage verified; G1b design under two independent reviews deleg_8b2ac0dc; NOT broker/native adapter GREEN"
+}

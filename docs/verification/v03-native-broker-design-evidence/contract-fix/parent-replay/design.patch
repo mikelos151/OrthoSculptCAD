@@ -1,0 +1,100 @@
+--- a/docs/plans/v03-native-broker-g1b-design.md
++++ b/docs/plans/v03-native-broker-g1b-design.md
+@@ -1,7 +1,7 @@
+ # G1b — mały broker native Workers i ledger handoff (projekt)
+ 
+ ## 1. Status, wejście i oddzielne bramki
+-- **DESIGN ONLY; wymaga niezależnego review rodzica przed kodem.** Nie wdraża brokera ani source admission.
++- **DESIGN ONLY; poprawki transportu wymagają świeżego niezależnego review rodzica.** Izolowany G1b1a pool może ruszyć oddzielnie; ten dokument nie wdraża brokera ani source admission.
+ - Baza: `feature/trimline-v03`, HEAD `2a586bd3abe3c801e7fe23764fecc77b8c770b50`; release 0.2 ZIP/dist pozostają zamrożone.
+ - Odebrany G1a: `resourceLedger.ts` SHA256 `f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109`.
+ - Testy G1a SHA256 `643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95`.
+@@ -76,19 +76,32 @@
+ - Materialized ACK przestawia ten sam rekord na REMOTE; przed nim reservation już nalicza bytes. Return wiąże ten rekord do actual AB; brak drugiego ledgeru/zero charge/dummy buffers.
+ - Controlled native SHA ma osobny fixed-output grant=32 B przed wywołaniem; internal `bindNativeResult(grant, actualAB)` wiąże rzeczywisty wynik do tego RESERVED ID, nie `registerExisting`. Brak wymiennego provider fallbacku; rejection zwalnia output reservation dopiero w settle.
+ - G1b1 może dowodzić input roundtrip bez remote-new allocator; G2c nie może użyć arena/output ścieżki przed osobnym testem grant/materialize/return/terminate.
++- Przed G1b1c osobno zamrozić dokładny prywatny typ native-output grant/bindNativeResult i jego main-continuation binding; nie utożsamiać go z RemoteGrant. To późniejsza bramka, nie rozszerzenie G1b1a.
+ 
+ ## 5. Bounded ABI i rzeczywiste ACK
+ - Nowy kontrolowany endpoint, nie obecny generic `WorkerResponse`. Stały 64-byte header AB: magic/version/type/slot/incarnation/generation/job/request/transfer/window + 16-byte nonce + reserved zero.
+ - Little-endian uint32 offsets 0..36 kolejno jak wyżej, nonce 40..55, zero 56..63; magic `0x3142474e`, version=1. Dokładne długości/role/ordinals sprawdzane przed ACK.
++- ABI v1 nie niesie czasu: nonce i reserved zero pozostają bez zmian. Nie kodować clock w ordinal/window/padding ani nie nazywać `receiveNow+remaining` tym samym deadline.
+ - Pola licznikowe uint32; limit kończy generację przed przepełnieniem (nie wrap). Types zamknięte: START, RECEIVED, RETURN, RELEASE, RELEASED, CANCEL, ERROR, MATERIALIZED.
+ - Type codes odpowiednio 1..8; role codes: positions=1, indices=2, colors=3, uvs=4, baseline=5, preimage=6, digest=7, arena=8, report=9; wszystkie inne → reject. ERROR: enum 1=INVALID, 2=BUDGET, 3=DEADLINE, 4=INTERNAL w pojedynczym descriptor `(0,code,0)`, bez tekstu/buffers.
+ - Header jest **control metadata**, jawny stały narzut max 4 nagłówki na slot; nie payload/shadow. Zero data-bearing diagnostics; ERROR tylko zamknięty enum.
+ - Wiadomość ma dokładnie `{ header, descriptors, buffers }`; max 16 descriptors i payload AB. `descriptors` to fixed AB długości `12*n`, LE tuple `(ordinal, role, bytes)` uint32, role z zamkniętego enum; header/descriptors nie są payload grantami.
+ - START: pierwsze `buffers.length` descriptors opisują dokładnie input AB w tej kolejności; reszta to pre-reserved remote grants. RECEIVED echo input descriptors; MATERIALIZED echo grants, oba bez buffers. RETURN ma wyłącznie prywatnie zaplanowany ordered subset z actual AB; RELEASE/RELEASED/CANCEL bez descriptors/buffers. Transfer=0 tylko dla control bez payload/grants.
+ - Header/descriptors łącznie ≤1024 B/message; brak dowolnych nested objects, tekstur, nazw/metadanych i recursive clone/transfer discovery w source transport.
+-- Max jedno outstanding request na slot i jedna grupa handoff; max 4 kontrolne odpowiedzi na grupę. Unexpected/duplicate/wrong-schema od aktualnego Workera → protocol error + revoke/terminate.
++- Max jedno outstanding request na slot i jedna grupa handoff; max 4 kontrolne odpowiedzi na grupę. Poniższa uporządkowana klasyfikacja poprzedza każdą zmianę allocation; fault oznacza protocol error + revoke/terminate, nigdy stale-ignore.
+ - MATERIALIZED jest jednym batch ACK wszystkich grants, nie wiadomością per buffer. Idle owner odpowiada tylko na ograniczone bieżące request/release; brak unsolicited progress/heartbeat i ukrytej kolejki.
+-- Stary listener/nonce/incarnation/generation/job/request/window jest nieaktualny → ignoruj; nie zwalniaj nowej rezerwacji. Correlation sprawdzić **przed** przejściem allocation.
++1. Najpierw porównać captured exact Worker/binding listenera z aktywną prywatną mapą slotu, bez czytania frame. Stary binding → ignore/drop, zero delty, nawet malformed; nie dotyka h2.
++2. Tylko current binding: fixed 64 B header, magic/version/type, reserved zero i zamknięty schema/descriptor/buffer envelope (także intrinsic długości i distinct fixed AB) muszą być poprawne. Malformed → fault, także gdy numery wyglądają na stare.
++3. Slot/nonce/incarnation/generation muszą dokładnie uwierzytelnić current binding. Wrong nonce, obcy lub future binding tuple → fault; nie jest to dowód starego kanału.
++4. Dopiero potem porównać request tuple z prywatnym current record, jednym last-retired record lub cleanup record. Inny/unissued/future/older-untracked tuple na current kanale → fault, nie inferencja z mniejszego numeru.
++- Reguła issuance: generation=1 przez życie physical binding; nowy binding ma nowy incarnation/nonce. W jego obrębie n rośnie od 1; `(generation,job,request,window)=(1,n,n,n)`, transfer=n dla grupy payload/grants, inaczej 0. Porządek leksykograficzny służy wyłącznie kontroli wzrostu, nie authority.
++- Request staje się issued dopiero przy wywołaniu native START po preflight i zapisie exact tuple/plan; przygotowanie nie wystarcza. Throw zużywa n, nie tworzy last-retired; brak retry pod tym n. Nowe n dopiero bez outstanding; overflow zamyka broker.
++- Control CANCEL/RELEASE/RELEASED ma transfer=0, pozostałe pola identyfikują target issued request; idle po ukończeniu używa last-retired, a przed pierwszym START `(job,request,window)=(0,0,0)`. Cleanup record powstaje przed send CANCEL/RELEASE; nie jest nowym jobem.
++- Bounded tracking: najwyżej current expected plan + jego ACK-seen bits, jeden last-retired exact tuple z ≤4 dozwolonymi response signatures (type/transfer/ordered descriptors), jeden cleanup target; bez listy historii. Signature nie zatrzymuje payload AB.
++- Retirement następuje dopiero po przyjęciu końcowego zaplanowanego RETURN/ERROR i rozliczeniu handoff; zastępuje last-retired. Do tego duplicate RECEIVED/MATERIALIZED/RETURN → fault. Exact plan-valid response do last-retired → ignore/drop z zerową deltą (także duplicate ACK/RETURN), bez rebind/publication.
++- Mniejszy licznik ani lexicographic floor nie legalizuje żadnego innego frame: older-untracked cleanup/reply ignorować tylko przez stary captured binding w kroku 1. Nie zwiększać historii dla idle ownera.
++- REVOKING natychmiast odbiera public auth, lecz prywatny cleanup correlation record żyje do terminal. W kroku 4 najpierw sprawdzić exact RELEASED do wysłanego CANCEL/RELEASE i przed graceEnd: kończy cleanup bez przywrócenia dispatch/publication. Następnie last-retired ignore; inny current-active frame → fault.
++- Po terminal mapa/listenery są usunięte: powtórny RELEASED starego bindingu trafia do kroku 1 i nic nie robi, także po acquire h2. Ignore nie zatrzymuje niezależnego main watchdog; current ACK/RETURN po deadline nie zmienia ledgeru przed deadline-terminal.
+ - RECEIVED dopiero po walidacji rzeczywistych przyjętych AB i zapisaniu ich w prywatnym worker record; to nie koniec job ani permission publikacji.
+ - RETURN zawiera dokładnie oczekiwane AB i detach po stronie worker; staje się MAIN dopiero po walidacji main. Nie release remote charge na samą zapowiedź RETURN.
+ - RELEASED dopiero po drop wszystkich wskazanych remote rekordów i zakończeniu ich worker continuations; nie ACK samego odebrania CANCEL/RELEASE.
+@@ -96,10 +109,12 @@
+ 
+ ## 6. Lifecycle i dokładne delty ledgeru
+ - Acquire atomowo sprawdza mode/slot i reserve całego planu; failure nie zostawia slotu/ref. Constructor throw cofa reservation, bez publication.
+-- `t0` przy acquire; `deadline=t0+120000ms` obejmuje kopie, serialization, native SHA, startup, audit i reply. Żadna wiadomość nie resetuje deadline.
+-- Synchronous gate sprawdza czas również przed allocation/send/ACK/publication; timer może być opóźniony przez event loop. Worker pętle później sprawdzają tę samą pozostałą duration.
++- `t0` przy acquire na monotonicznym main `performance.now()`; `deadline=t0+120000ms` obejmuje kopie, serialization, native SHA, startup, audit i reply. Żadna wiadomość nie resetuje deadline.
++- **G1b deadline jest main-enforced only:** watchdog i synchronous gate przed allocation/send/przyjęciem current ACK/publication używają pierwotnego t0; `now>=deadline` → deadline-terminal, bez przyjęcia/publikacji. START/RECEIVED/RETURN nie resetują budżetu; opóźniony event loop nie omija gate.
++- Ten ABI nie zobowiązuje worker-loop do tej samej remaining duration. Propagacja clock/limit pętli wymaga osobnego wersjonowanego kontraktu i native delayed-send/receive proof **przed zależnymi kernelami G2c/G3**; nie ogłaszać G1b worker-clock GREEN.
++- Przyszły native AC: opóźnione copy/start/send/odbiór i ACK/publication zużywają oryginalne 120000 ms od acquire/request t0. Main odmawia po deadline; model/spec ani Node timer nie dowodzą tego native zachowania.
+ - Idle retained owner/index nie traci slotu po 120s istnienia; każde jego nowe żądanie ma własne t0 i deadline, nie równoległy reset owner lifetime.
+-- Revoke synchronously unieważnia auth i blokuje dispatch/publication; cancel REQUEST **nie** zwalnia slotu. Grace release proponowane 1000ms, ograniczone pozostałym job deadline.
++- Revoke synchronously unieważnia public auth i blokuje dispatch/publication; cancel REQUEST **nie** zwalnia slotu. Busy: `graceEnd=min(revokeNow+1000,activeRequestDeadline)`; idle: `graceEnd=revokeNow+1000`, świeży cleanup clock, nie deadline dawnego jobu. Kolejne wiadomości nie przesuwają graceEnd; `now>=graceEnd` → terminal.
+ - Jeden `terminalTransition(binding, cause)` ma latch; odłącza listenery, kończy native Worker (także po clean RELEASED), wycofuje remote refs i zwraca slot **dokładnie raz**.
+ - Terminal usuwa także niewykorzystane RESERVED remote grants tej instancji. MAIN/PREPARED po pre-send cancel/constructor failure zwalnia dopiero lokalny cleanup po zakończeniu ich copy users; nie udawać, że terminate kończy kopię.
+ - Remote cleanup obejmuje IN_FLIGHT i RETURNING także bez RECEIVED ACK. Unexpected current-channel AB nie rejestruje się: drop i terminate, nie nadawanie ID z wiadomości. Native terminate throw → fail-closed broker bez reuse slotu, jawny błąd.
+@@ -110,7 +125,7 @@
+ | Zdarzenie / stan | Przejście / slot | Delta dla backing D kategorii job; eligibility |
+ |---|---|---|
+ | acquire/pre-send | RESERVED→MAIN, slot held | reserve `(+D,+D,0)` przed allocation; alias → odmowa przed detach |
+-| prepare + send throw attached | MAIN→PREPARED→MAIN | `(0,0,0)`, ten sam ID; retry tylko po jawnej ponownej kontroli deadline |
++| prepare + send throw attached | MAIN→PREPARED→MAIN | `(0,0,0)`, ten sam ID; retry tylko pod świeżym n i po kontroli pierwotnego deadline |
+ | send success, detached | PREPARED→IN_FLIGHT | `(0,0,0)`; nie wywoływać starego transfer/retain na detached AB |
+ | correlated RECEIVED | IN_FLIGHT→REMOTE | `(0,0,0)`; controlled ref żyje, slot held |
+ | return actual AB | REMOTE→RETURNING→MAIN | `(0,0,0)`; jeden rebind; current auth wymagane do wydania wyniku |
+@@ -119,12 +134,12 @@
+ | main AB zwrócony, lecz revoked | MAIN→RETIRED | `(-D,-D,0)` dopiero po drop lokalnych użytkowników; nie publikuj |
+ | main copy/serialization/SHA pending | worker terminal + WAIT_MAIN | slot oddany, **brak** delty main refs; ich lease nadal zajmuje budżet |
+ | rzeczywisty main settle, także reject | WAIT_MAIN→RETIRED | usuń wyłącznie refs tego continuation; last ref dopiero teraz odejmuje D |
+-| late ACK / h1 release przy pending h2 | stan h2 bez zmian | `(0,0,0)`; brak nowego handle/zwolnienia h2 |
++| known last-retired ACK / old binding / h1 release przy pending h2 | stan h2 bez zmian | `(0,0,0)`; current malformed/unissued/duplicate-active zamiast tego fault wg §5 |
+ 
+ - Tuple oznacza `(managed,job,history)`; shared refs zachowują G1a kategoriowe union, nie sumować refów. Tabela dotyczy sole remote ref, nie cudzych holds.
+ - Uncancellable native SHA przechowuje real preimage do prawdziwego JS settle; worker terminate ani public reject nie zwalnia jego main lease. Dispose ma priorytet także nad późnym SHA rejection.
+ - Worker-owned payload zwalnia logical charge na terminal; nie obiecuje natychmiastowego końca wątku/GC/RSS. Uncancellable main promise nie ma gwarancji finite settle: poprawny HOLD, nie fałszywe zero.
+-- Ograniczyć liczbę main continuations istniejącymi lease/ref caps i osobnym broker cap=2 WAIT_MAIN; przy dwóch nierozliczonych main holds nowe acquire BUSY przed kopią.
++- Ograniczyć main continuations istniejącymi lease/ref caps i osobnym broker cap=2 main-hold/WAIT_MAIN. Token rezerwować **przed** uruchomieniem każdej main continuation, także aktywnego jobu, i trzymać do real settle; przy dwóch zajętych tokenach nowe acquire BUSY przed kopią. Worker terminal nie tworzy dopiero tokenu ani nie zwalnia go; 1 stary WAIT_MAIN + aktywne joby nigdy nie obiecują trzeciego hold.
+ 
+ ## 7. Migracja istniejących właścicieli bez przepisywania CAD
+ | Plik / aktualny właściciel | Minimalna przyszła zmiana |
+@@ -147,10 +162,10 @@
+ - G1b2 testuje prywatną gate state machine, nie fikcyjny AuditedSource; produkcyjne ACTIVE wymaga faktycznego G3 ownera. Zablokowane operacje/UNKNOWN nie są działającym backendem admission.
+ 
+ ## 8. Cztery przyszłe piony RED→GREEN (nie wykonane w tym projekcie)
+-1. **G1b1a pool:** real native idle fixture zajmuje 2 sloty; trzecie acquire RED gdy stary display omija cap → minimalny broker. Constructor/copy/send counters: trzeci ma zero; terminate/reacquire i >32 inkarnacje bez nowych Realm; żadnego fake owner/token.
++1. **G1b1a pool:** niezależne real native idle fixtures przez nowe pool API zajmują 2 sloty; scaffold odmawiający legalnego acquire daje behawioralny RED → minimalny broker. Trzecie acquire BUSY z zerem constructor/copy/send; constructor-failure rollback, terminate/reacquire i >32 inkarnacje bez nowych Realm; żadnego fake owner/token. To nie GREEN global app cap ani migracji display.
+ 2. **G1b1b handoff:** real AB z G1a, native START→RECEIVED→RETURN; RED: detached G1a nie potrafi rebind → internal extension. Zachować bytes/hash/ID/charge, różne JS object identities, alias refusal; real DataCloneError attached rollback i malformed return fail-closed. Obserwować native send/receive/detach/terminate, nie sfabrykowane ACK.
+-3. **G1b1c lifecycle:** real busy worker + cancel/release/error/deadline, exactly-once terminal; delayed old native reply nie dotyka nowej lease. Real SHA preimage hold po revoke/terminate aż settle, także rejection/dispose, h1-release/pending-h2. Native event chronology + ledger snapshots; krótkie deadline tylko private test config, zero worker flags/bypass.
+-4. **G1b2→G2c/G3 mixed:** najpierw wszystkie legacy constructors przez broker i real slice/display caches drain, blocked source-mode copy counters zero; osobno remote-new grant/materialize roundtrip. **Później** real retained audited owner + dodatni arena-analyze (nie stub/all-UNKNOWN), max2, trzeci index/display blocked. Ostatnia część pozostaje UNACCEPTED do G2c/G3.
++3. **G1b1c lifecycle:** real busy worker + cancel/release/error/deadline, exactly-once terminal; delayed old native reply nie dotyka nowej lease. Native AC osobno: old-binding event, exact last-retired reply, duplicate-active RECEIVED/RETURN, malformed current frame, wrong nonce/unissued/future tuple, RELEASED po revoke i duplicate po terminal; sprawdzić ignore/fault i niezmienione h2 refs/charges wg §5. Real SHA preimage hold po revoke/terminate aż settle, także rejection/dispose, h1-release/pending-h2. Native event chronology + ledger snapshots; krótkie deadline tylko private test config, zero worker flags/bypass.
++4. **G1b2→G2c/G3 mixed:** osobny RED starego display omijającego 2 compute/global cap → migracja wszystkich legacy constructors przez broker i real slice/display caches drain, blocked source-mode copy counters zero; osobno remote-new grant/materialize roundtrip. **Później** real retained audited owner + dodatni arena-analyze (nie stub/all-UNKNOWN), max2, trzeci index/display blocked. Ostatnia część pozostaje UNACCEPTED do G2c/G3.
+ - Każdy pion: najpierw rzeczywisty behawioralny RED, minimalny GREEN, regresja odebranego G1a; zachować komendy/exit/raw logs. Native Chromium gate nie zastępuje Node fallback.
+ - Kryteria przed kodem: niezależne review API/coupling/states/ABI, poprawna granica main-settle, domain mapping i source-mode; nie wymagać już zaimplementowanego G2/G3 do startu pionu 1.
+ - Dowody tego projektu i source start/end hashes są w scratch `v03-native-broker-g1b-design/`; to weryfikacja projektu, nie odbiór aplikacji.

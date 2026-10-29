@@ -1,0 +1,46 @@
+{
+  "phase": "before",
+  "files": [
+    {
+      "path": "docs/plans/v03-native-broker-g1b-design.md",
+      "bytes": 22953,
+      "lines": 162,
+      "sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558"
+    },
+    {
+      "path": "docs/plans/v03-source-admission-owner-design.md",
+      "bytes": 53412,
+      "lines": 305,
+      "sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+    },
+    {
+      "path": "src/compute/resourceLedger.ts",
+      "bytes": 11141,
+      "lines": 192,
+      "sha256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109"
+    },
+    {
+      "path": "tests/v03-resource-ledger.test.ts",
+      "bytes": 25179,
+      "lines": 355,
+      "sha256": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95"
+    }
+  ],
+  "probe_files": [
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-broker-g1b-design\\native-boundary-probe.mjs",
+      "sha256": "2d28058ae26ef0bb5e6d897a5a3c2fe9073b5b33a2b2a88e798ab3ec712e68f4"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-broker-g1b-design\\native-probe-results.json",
+      "sha256": "86cad09b42bbd28b140d80e61f16f653db6fedaea8b84196907600a86cebb354"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-broker-g1b-design\\handoff.json",
+      "sha256": "38e0479802dff908832a10feb94fd9d3db6be7782adc5bbdee988adec25233dd"
+    }
+  ],
+  "probe_recorded_checks": 12,
+  "probe_scope": "Existing G1a boundary; reviewed as data, not replayed; no G1b acceptance",
+  "ok": true
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "tests/v03-resource-ledger.test.ts",
+    "sha256": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+    "bytes": 25179
+  },
+  {
+    "path": "src/native.ts",
+    "sha256": "653c8a5ace6d4fda9db528c370c01e31dc93abc5d6e48bf3f870a528645aa9f1",
+    "bytes": 2100
+  }
+]

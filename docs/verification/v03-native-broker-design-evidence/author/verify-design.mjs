@@ -1,0 +1,38 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { createRequire } from 'node:module';
+const root='C:/Users/sandr/OrthoSculptCAD/';
+const scratch='C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-broker-g1b-design/';
+const require=createRequire(root+'package.json'), ts=require('typescript');
+const source=await readFile(root+'src/compute/resourceLedger.ts','utf8');
+const plan=await readFile(root+'docs/plans/v03-native-broker-g1b-design.md','utf8');
+const sha=s=>createHash('sha256').update(s).digest('hex');
+const sf=ts.createSourceFile('resourceLedger.ts',source,ts.ScriptTarget.Latest,true);
+const iface=sf.statements.find(n=>ts.isInterfaceDeclaration(n)&&n.name.text==='Lease');
+const methods=iface.members.map(n=>({name:n.name.getText(sf),line:sf.getLineAndCharacterOfPosition(n.getStart(sf)).line+1}));
+const expected=['ref','allocateBuffer','retain','reclassify','release','close','transfer'];
+const checks=[];
+const check=(name,ok)=>{checks.push({name,ok}); if(!ok) process.exitCode=1;};
+check('accepted source SHA matches frozen input',sha(source)==='f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109');
+check('actual Lease API matches design baseline',JSON.stringify(methods.map(m=>m.name))===JSON.stringify(expected));
+check('actual Allocation.buffer is main AB',source.includes('buffer?: ArrayBuffer; refs: Set<Ref>'));
+check('native detach rejected by actual backingBytes',source.includes('new Uint8Array(b, 0, 0)'));
+check('actual default realms=32 lifetime',source.includes('maxRealms: 32')&&source.includes('realmId >= controls.maxRealms'));
+check('pure G1a contains no native Worker/postMessage',!source.includes('new Worker(')&&!source.includes('.postMessage('));
+const lines=plan.trimEnd().split('\n');
+check('bounded plan 120..180 lines',lines.length>=120&&lines.length<=180);
+check('plan ends exactly one LF without trailing whitespace',plan.endsWith('\n')&&!plan.endsWith('\n\n')&&!lines.some(l=>/[ \t]+$/.test(l)));
+for(const term of ['G1b1','G1b2','MIXED-POSITIVE: UNACCEPTED','WAIT_MAIN','sendThrew','IN_FLIGHT','RETURNING','bindNativeResult','DataCloneError','parent','source-session']) {
+  check('design coverage '+term,plan.includes(term==='parent'?'rodzica':term));
+}
+const pions=lines.filter(l=>/^\d+\. \*\*G1b/.test(l));
+check('four concrete future vertical pions',pions.length===4);
+const probe=JSON.parse(await readFile(scratch+'native-probe-results.json','utf8'));
+check('real Chromium existing-boundary probe succeeded',probe.status==='EXISTING_BOUNDARY_CONFIRMED'&&probe.errors.length===0&&probe.browserClosed===true);
+const asserts=probe.result.events.filter(e=>'check' in e);
+check('native probe all recorded checks true',asserts.length>0&&asserts.every(e=>e.pass));
+const witness={label:'PROPOSED ABI ARITHMETIC ONLY, not app acceptance',headerBytes:10*4+16+8,descriptorBytes:16*3*4,maxControlFrameBytes:10*4+16+8+16*3*4,maxFourFramesTwoSlotsBytes:4*2*(10*4+16+8+16*3*4)};
+check('proposed binary header=64 and control fits 1024',witness.headerBytes===64&&witness.maxControlFrameBytes<=1024);
+const report={status:checks.every(c=>c.ok)?'SELF_CHECK_PASS_PARENT_REVIEW_PENDING':'FAIL',scope:'Static contract/API checks plus observed existing G1a native boundary; NOT broker/ledger extension implementation, TDD GREEN or independent review',planSHA256:sha(plan),planLines:lines.length,actualLeaseMethods:methods,nativeProbeChecks:asserts.length,nativeProbeSHA256:sha(await readFile(scratch+'native-probe-results.json')),checks,proposedArithmetic:witness,unaccepted:['G1b implementation','new ledger adapter','pool lifecycle','main SHA disposal proof','remote-new grant allocator','source-mode application ingress','G2c/G3 mixed-positive','G4 publication','native EXE/clinical/RSS']};
+await writeFile(scratch+'design-validation.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

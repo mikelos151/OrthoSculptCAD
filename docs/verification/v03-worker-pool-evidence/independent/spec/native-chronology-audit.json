@@ -1,0 +1,15 @@
+{
+  "classification": "Inspection of completed author observations, not independent native execution",
+  "attempts": 50,
+  "created": 49,
+  "terminated": 49,
+  "remaining": 0,
+  "maximum_created_minus_terminated": 2,
+  "source_and_served_hashes_verified": {
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "src/compute/resourceLedger.ts": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\served\\workerPool.js": "f2700677312afea074a0c9d821050d87d5df5f5a5b7dcfa4727814f0bea50fc3",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\served\\resourceLedger.js": "f3190cf48d308dc2768912315665a59258d16e6d45078ac2bebda696af06b6e0",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core\\fixture.mjs": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256"
+  }
+}

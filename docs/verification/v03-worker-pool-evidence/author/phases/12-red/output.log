@@ -1,0 +1,33 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (12 tests | 1 failed) 19ms
+     × 12 TEST native error callback retires only the captured binding and late events cannot touch h2 5ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 27 passed (28)
+   Start at  20:17:42
+   Duration  492ms (transform 70ms, setup 0ms, import 104ms, tests 42ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 12 TEST native error callback retires only the captured binding and late events cannot touch h2
+AssertionError: expected +0 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 0
+
+ ❯ tests/v03-worker-pool.test.ts:148:37
+    146|     const old = accepted(pool.acquire('index', plan));
+    147|     instances[0].dispatchEvent(new Event('error'));
+    148|     expect(instances[0].terminated).toBe(1); expect(ledger.snapshot().…
+       |                                     ^
+    149|     const h2 = accepted(pool.acquire('display', plan)), before = ledge…
+    150|     instances[0].dispatchEvent(new Event('error')); pool.release(old);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

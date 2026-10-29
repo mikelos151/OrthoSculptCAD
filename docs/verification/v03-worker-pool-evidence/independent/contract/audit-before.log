@@ -1,0 +1,18 @@
+{
+  "phase": "before",
+  "plan_sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+  "initial_plan_sha256": "6b9d5ead108a81f32daf24bca112f2d33300274fe31dfb78858000e80943c558",
+  "artifact_manifest_sha256": "e62f2d90ad4c90b7c0d2a3c1341e32eea066b8b55ab7772aa33b6cae2de5fffc",
+  "artifact_mismatches": [],
+  "source_count": 1932,
+  "changed_from_fixer_before": [],
+  "protected_sections_unchanged": {
+    "2": true,
+    "3": true,
+    "7": true,
+    "9": true
+  },
+  "proposed_internal_interface_unchanged": true,
+  "original_review_sha256": "fa15d91d7219f483f8d10c2b623393b79e2a279248fc1d3bcbf1ed07cb8e2993"
+}
+Validated 59 completed artifact hashes and 1932 tracked file hashes; replay copies exact.

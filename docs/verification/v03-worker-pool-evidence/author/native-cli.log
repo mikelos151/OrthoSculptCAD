@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": 119,
+  "failedChecks": [],
+  "metrics": {
+    "attempts": 50,
+    "created": 49,
+    "terminated": 49,
+    "sends": 0,
+    "allocations": 0
+  },
+  "browser": {
+    "version": "156.0.8078.4",
+    "nativeCreated": 49,
+    "nativeCloseNotificationsBeforeContextClose": 49
+  },
+  "closed": {
+    "context": true,
+    "browser": true,
+    "server": true,
+    "portRefuses": true
+  },
+  "pageErrors": [],
+  "externalRequests": []
+}

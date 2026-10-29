@@ -1,0 +1,185 @@
+{
+  "scope": "Existing G1a gap probe, NOT G1b implementation/acceptance",
+  "sourceSHA256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+  "compiledSHA256": "83b87cd0b610e77aebfb2a11fb4ccc7d8653f9b10fb38061e98979a6e77f350b",
+  "errors": [],
+  "browserVersion": "156.0.8078.4",
+  "result": {
+    "events": [
+      {
+        "check": "G1a logical transfer does not detach",
+        "pass": true
+      },
+      {
+        "native": "constructor"
+      },
+      {
+        "check": "native synchronous DataCloneError leaves AB attached",
+        "pass": true
+      },
+      {
+        "native": "postMessage",
+        "kind": "start"
+      },
+      {
+        "check": "native transfer detached main AB",
+        "pass": true
+      },
+      {
+        "native": "response",
+        "kind": "received"
+      },
+      {
+        "check": "real Worker received original payload",
+        "pass": true
+      },
+      {
+        "check": "existing G1a retain refuses detached backing",
+        "pass": true
+      },
+      {
+        "check": "existing G1a reclassify refuses detached backing",
+        "pass": true
+      },
+      {
+        "check": "existing G1a transfer refuses detached backing",
+        "pass": true
+      },
+      {
+        "native": "postMessage",
+        "kind": "return"
+      },
+      {
+        "native": "response",
+        "kind": "returned"
+      },
+      {
+        "check": "native returned wrapper differs, bytes preserved",
+        "pass": true
+      },
+      {
+        "native": "response",
+        "kind": "detached"
+      },
+      {
+        "check": "Worker-side native return detaches held AB",
+        "pass": true
+      },
+      {
+        "check": "existing registerExisting accepts returned wrapper as new allocation",
+        "pass": true
+      },
+      {
+        "check": "naive registerExisting duplicates accounting, proving adapter requirement",
+        "pass": true
+      },
+      {
+        "check": "explicit cleanup closes both old and new charges",
+        "pass": true
+      },
+      {
+        "native": "terminate-invoked"
+      }
+    ],
+    "snapshots": {
+      "main": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "live",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "logicalTransfer": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 2,
+            "phase": "live",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "detachedButLedgerStillLive": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 2,
+            "phase": "live",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "naiveRegisterDoubleCharge": {
+        "managed": 32,
+        "job": 32,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 2,
+            "phase": "live",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "live",
+            "refs": [
+              {
+                "id": 2,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "closed": {
+        "managed": 0,
+        "job": 0,
+        "history": 0,
+        "allocations": []
+      }
+    },
+    "noG1bAdapterImplemented": true,
+    "nativeTerminationMeans": "terminate invoked, not physical-thread/GC/RSS proof"
+  },
+  "status": "EXISTING_BOUNDARY_CONFIRMED",
+  "browserClosed": true
+}

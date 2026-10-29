@@ -1,0 +1,28 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (16 tests | 1 failed) 25ms
+     × 16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY 8ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 31 passed (32)
+   Start at  20:21:10
+   Duration  624ms (transform 86ms, setup 0ms, import 123ms, tests 49ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 16 creates a private 128-bit native crypto nonce per admitted binding, never for BUSY
+AssertionError: expected "getRandomValues" to be called at least once
+ ❯ tests/v03-worker-pool.test.ts:199:24
+    197|       const ledger = createResourceLedger(limits);
+    198|       const pool = createWorkerPool(ledger, () => {
+    199|         expect(random).toHaveBeenCalled();
+       |                        ^
+    200|         expect((random.mock.calls.at(-1)![0] as Uint32Array).byteLengt…
+    201|         return worker();
+ ❯ Object.acquire src/compute/workerPool.ts:65:30
+ ❯ tests/v03-worker-pool.test.ts:203:32
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

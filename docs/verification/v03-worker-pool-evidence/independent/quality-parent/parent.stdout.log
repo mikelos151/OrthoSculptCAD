@@ -1,0 +1,35 @@
+{"label":"compile","command":["C:\\Program Files\\nodejs\\node.exe","--max-old-space-size=128","--max-semi-space-size=8","C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc","-p","C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-quality-parent\\tsconfig.json"],"cwd":"C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-quality-parent","exit":0,"signal":null,"error":null}
+
+{"label":"unit-witnesses","command":["C:\\Program Files\\nodejs\\node.exe","--max-old-space-size=128","--max-semi-space-size=8","C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-quality-parent\\witnesses.cjs"],"cwd":"C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-quality-parent","exit":0,"signal":null,"error":null}
+{"id":"01-same-ledger-full-reservation-before-factory-owner-not-caller-data","passed":true,"assertions":11}
+{"id":"02-forged-cloned-foreign-proxy-diagnostic-handles-atomic","passed":true,"assertions":40}
+{"id":"03-authentication-priority-after-dispose-and-retired-idempotency","passed":true,"assertions":6}
+{"id":"04-method-receiver-is-not-authority-closure-handle-both-required","passed":true,"assertions":5}
+{"id":"05-busy-zero-plan-read-constructor-reserve-copy-send","passed":true,"assertions":6}
+{"id":"06-starting-occupied-nested-factory-cannot-start-third","passed":true,"assertions":10}
+{"id":"07-constructor-throw-rolls-back-only-own-reservation","passed":true,"assertions":7}
+{"id":"08-outer-constructor-throw-preserves-successful-reentrant-inner","passed":true,"assertions":7}
+{"id":"09-dispose-during-starting-return-prevents-lease-publication","passed":true,"assertions":8}
+{"id":"10-dispose-during-starting-then-factory-throw","passed":true,"assertions":4}
+{"id":"11-dispose-with-two-nested-starting-bindings","passed":true,"assertions":5}
+{"id":"12-budget-category-global-and-safe-integer-atomic-no-constructor","passed":true,"assertions":11}
+{"id":"13-malformed-dense-sparse-plans-atomic","passed":true,"assertions":39}
+{"id":"14-plan-cardinality-bound-zero-byte-records","passed":true,"assertions":5}
+{"id":"15-eighty-incarnations-no-new-domains-or-control-limit-bump","passed":true,"assertions":486}
+{"id":"16-exact-worker-object-reuse-rejected-without-terminating-valid-binding","passed":true,"assertions":9}
+{"id":"17-error-captured-old-callback-has-zero-new-lease-effects","passed":true,"assertions":8}
+{"id":"17-messageerror-captured-old-callback-has-zero-new-lease-effects","passed":true,"assertions":8}
+{"id":"18-reentrant-release-holds-revoking-slot-and-revoked-authority","passed":true,"assertions":7}
+{"id":"19-terminate-throw-revokes-auth-retains-charge-and-failed-slot-no-retry","passed":true,"assertions":10}
+{"id":"20-dispose-revokes-all-authority-before-listener-teardown","passed":true,"assertions":6}
+{"id":"21-dispose-continues-other-cleanup-after-first-terminate-throw","passed":true,"assertions":7}
+{"id":"22-partial-listener-install-throw-removes-first-listener-and-rolls-back","passed":true,"assertions":5}
+{"id":"23-error-callback-terminate-throw-fail-closed-without-retry","passed":true,"assertions":5}
+{"id":"24-terminate-can-reentrantly-acquire-only-other-free-slot","passed":true,"assertions":9}
+{"id":"25-retired-h1-release-during-new-h2-starting-does-not-cancel-new-work","passed":true,"assertions":6}
+{"id":"26-public-values-deep-frozen-diagnostics-only-no-worker-resource-nonce","passed":true,"assertions":13}
+{"id":"27-plain-prototype-pollution-shaped-fields-cannot-set-owner-authority","passed":true,"assertions":4}
+{"id":"28-dispose-during-starting-and-late-terminate-throw-retains-unpublished-binding","passed":true,"assertions":7}
+{"tests":29,"passed":29,"failed":0,"assertions":754}
+
+INPUT HASHES UNCHANGED

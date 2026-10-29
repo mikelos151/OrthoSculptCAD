@@ -1,0 +1,34 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (1 test | 1 failed) 7ms
+     × 01 reserves the complete plan in the supplied real ledger before construction 6ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 16 passed (17)
+   Start at  20:14:07
+   Duration  410ms (transform 49ms, setup 0ms, import 74ms, tests 24ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 01 reserves the complete plan in the supplied real ledger before construction
+AssertionError: expected { ok: false, code: 'BUSY' } to not have property "code"
+
+- Expected:
+undefined
+
++ Received:
+"BUSY"
+
+ ❯ accepted tests/v03-worker-pool.test.ts:8:21
+      6| const plan = [{ key: 'payload', bytes: 16, category: 'job' as const }];
+      7| function accepted(value: PoolLease | PoolRefusal): PoolLease {
+      8|   expect(value).not.toHaveProperty('code'); return value as PoolLease;
+       |                     ^
+      9| }
+     10| /** TEST ONLY fault-injection seam; native acceptance uses actual Chro…
+ ❯ tests/v03-worker-pool.test.ts:25:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

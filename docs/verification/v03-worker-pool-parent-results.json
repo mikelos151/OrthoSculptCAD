@@ -1,0 +1,107 @@
+{
+  "status": "G1B1A_POOL_PRIMITIVE_ACCEPTED",
+  "independentAcceptance": {
+    "spec": "PASS: 12 independent API witnesses and 360 model-checked transitions; 14 author TDD pairs verified",
+    "quality": "PASS: 29 API witnesses, 754 assertions, 80 incarnations; UNIT/EventTarget, not native Worker",
+    "parentQualityReplay": "Strict compile and 29 API witnesses rerun exit 0; only scratch outDir changed",
+    "contract": "DESIGN PASS; G1B-DEADLINE-WIRE and G1B-CORRELATION-ORDER closed, plan 45cc11a0...",
+    "evidence": "docs/verification/v03-worker-pool-evidence/independent/index.json"
+  },
+  "scope": "G1b1a isolated pool instance only, not application-wide cap/transport/source admission",
+  "poolSourceSHA256": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+  "poolTestSHA256": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7",
+  "acceptedG1aSHA256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+  "parentRegression": {
+    "unitExit": 0,
+    "typecheckExit": 0,
+    "pythonExit": 0,
+    "npmAuditExit": 0,
+    "inputHashesUnchanged": true,
+    "staticScan": {
+      "suspectedCredential": [],
+      "dynamicExecution": [],
+      "networkOrProcess": []
+    },
+    "scope": "G1b1a isolated pool primitive regression only; no full App cap or transport",
+    "unit": {
+      "success": true,
+      "numTotalTests": 1248,
+      "numPassedTests": 1248,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0
+    },
+    "ledger": [
+      {
+        "status": "passed",
+        "assertions": 24,
+        "failed": []
+      }
+    ],
+    "unitExpectedTotal": 1248,
+    "pythonTests": 71,
+    "auditVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "status": "REGRESSION_PASS_REVIEWS_PENDING"
+  },
+  "parentNativeReplay": {
+    "checks": 119,
+    "metrics": {
+      "attempts": 50,
+      "created": 49,
+      "terminated": 49,
+      "sends": 0,
+      "allocations": 0
+    },
+    "browser": {
+      "version": "156.0.8078.4",
+      "nativeCreated": 49,
+      "nativeCloseNotificationsBeforeContextClose": 49
+    },
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "pageErrors": [],
+    "externalRequests": []
+  },
+  "staticScanNewPoolFiles": {
+    "suspectedCredential": [],
+    "dynamicExecution": [],
+    "networkOrProcess": []
+  },
+  "copiedRunnerCaveat": "Generic archived runner uses legacy label ledger for the selected pool suite (actually 24 pool assertions) and initially scans G1a files. A separate actual scan of both NEW pool files is preserved in new-code-static-scan.json and this report.",
+  "contractFixReplay": {
+    "newPlanSHA256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+    "specRuns": [
+      {
+        "file": "test_spec.py",
+        "tests": 3,
+        "exit": 0
+      },
+      {
+        "file": "spec_cases.py",
+        "tests": 42,
+        "exit": 0
+      }
+    ],
+    "writeWarningResolution": "test_spec.py overwrite refused: actual file retains 3 bootstrap tests; expanded canonical spec_cases.py independently rerun 42/42, not production/native tests."
+  },
+  "independentReviews": "deleg_e756eeba: both pool code reviews and contract DESIGN rereview PASS; verified artifacts and parent quality replay archived",
+  "evidence": "docs/verification/v03-worker-pool-evidence/index.json",
+  "notAccepted": [
+    "Native transport/ACK/handoff/rebind",
+    "Global application pool cap/migration",
+    "Source admission/G4 App fences",
+    "Complete CAD/clinical/native EXE/RSS"
+  ],
+  "release020": "Frozen, not replaced"
+}

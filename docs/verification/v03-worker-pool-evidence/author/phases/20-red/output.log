@@ -1,0 +1,33 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-worker-pool.test.ts (20 tests | 1 failed) 29ms
+     × 20 retains exactly three private ownership domains, never exposing capabilities in diagnostics 6ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 35 passed (36)
+   Start at  20:26:05
+   Duration  615ms (transform 77ms, setup 0ms, import 113ms, tests 50ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-worker-pool.test.ts > G1b1a isolated internal pool > 20 retains exactly three private ownership domains, never exposing capabilities in diagnostics
+AssertionError: expected { disposed: false, occupied: +0, …(1) } to have property "ownershipDomains" with value 3
+
+- Expected:
+3
+
++ Received:
+undefined
+
+ ❯ tests/v03-worker-pool.test.ts:237:18
+    235|     const ledger = createResourceLedger(limits, { controls: { maxRealm…
+    236|     const pool = createWorkerPool(ledger, worker), snap = pool.snapsho…
+    237|     expect(snap).toHaveProperty('ownershipDomains', 3);
+       |                  ^
+    238|     expect(Object.isFrozen(snap.slots)).toBe(true);
+    239|     for (const slot of snap.slots) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
