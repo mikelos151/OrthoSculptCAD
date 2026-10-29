@@ -1,0 +1,11 @@
+$ C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\python.exe -B -m unittest -v test_same_face_binding
+test_coverage_permuted_f_and_wrong_g_are_refused (test_same_face_binding.SameFaceBindingTests.test_coverage_permuted_f_and_wrong_g_are_refused) ... ok
+test_original_ordered_reference_faces_pass (test_same_face_binding.SameFaceBindingTests.test_original_ordered_reference_faces_pass) ... ok
+test_real_tilted_ts_proof_passes_public_but_bridge_refuses (test_same_face_binding.SameFaceBindingTests.test_real_tilted_ts_proof_passes_public_but_bridge_refuses) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.038s
+
+OK
+
+exit=0

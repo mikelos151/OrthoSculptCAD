@@ -1,0 +1,39 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 4ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 5ms
+ ✓ tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities 3ms
+ ✓ tests/v03-source-candidate.test.ts > preflights descriptor shapes, bounded metadata and ordinary fixed native view ranges 4ms
+ × tests/v03-source-candidate.test.ts > validates the private whole snapshot before hashing, including distant coordinates and attrs 4ms
+   → promise resolved "{}" instead of rejecting
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 passed (5)
+   Start at  17:53:58
+   Duration  233ms (transform 54ms, setup 0ms, import 73ms, tests 22ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > validates the private whole snapshot before hashing, including distant coordinates and attrs
+AssertionError: promise resolved "{}" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
+- }
++ {}
+
+ ❯ tests/v03-source-candidate.test.ts:166:44
+    164|   for (const mutate of mutations) {
+    165|     const m = mesh(); mutate(m);
+    166|     await expect(store.capture(m, stamp())).rejects.toThrowError(refus…
+       |                                            ^
+    167|   }
+    168|   const valid = mesh(); valid.name = ''; valid.colors![0] = -0; valid.…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

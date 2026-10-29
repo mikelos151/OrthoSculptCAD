@@ -1,0 +1,14 @@
+DESIGN MATH ONLY; no runtime implementation tests
+edge length squared: 1
+conormal length squares: 1, 2
+conormal metric ratio: 2; rational square: False
+world cross(v,w): (Fraction(-1, 1), Fraction(-1, 1), Fraction(0, 1))
+rational affine chart determinant: 0
+intrinsic unfolded determinant coefficients [1,sqrt(2)]: (Fraction(1, 1), Fraction(-1, 1))
+intrinsic G1 necessary condition: b*c = sqrt(2)*a*d
+nonzero rational a,b,c,d cannot satisfy it; perpendicular crossing a=c=0 is an exception for G1
+intrinsic C1 requires b=sqrt(2)*d and fails for any rational nonzero transversal derivative
+algebraic candidate G A-weight conservative lower bounds using sqrt(2)<3/2: (Fraction(1, 2), Fraction(17, 48), Fraction(5, 24), Fraction(1, 16))
+algebraic straight-span candidate has matching intrinsic seam derivatives v/4; not accepted by current rational-only runtime
+edge-height Bernstein controls: (Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(-2, 1)); polynomial: 1-3*t^2; positive event: 1/sqrt(3)
+normative independent budget sum: 1/50 mm

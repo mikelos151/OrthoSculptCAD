@@ -1,0 +1,53 @@
+{
+  "README.md": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\README.md",
+    "sha256": "4dcc9bd0722d2ef0b89eccc3191139cf07b0a5f4ec2527cfeabe6686f76de1fa",
+    "byteIdenticalCopy": true,
+    "equalsOriginal": false
+  },
+  "spike.py": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\spike.py",
+    "sha256": "fe9b17c1a63dc5724dee7fdc192d147dafdd5d14549026d15dd7176d82ee6842",
+    "byteIdenticalCopy": true,
+    "equalsOriginal": true
+  },
+  "check_bridge.py": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\check_bridge.py",
+    "sha256": "7ffa29798bfdb9fb750be766ee950755c271b53902f5f6d192f025cc933e7835",
+    "byteIdenticalCopy": true,
+    "equalsOriginal": false
+  },
+  "producer.cjs": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\producer.cjs",
+    "sha256": "99baa84f3209ed99d7e0e58872149fd0ef750cdbfaff9c139980336dcd900bea",
+    "byteIdenticalCopy": true,
+    "equalsOriginal": true
+  },
+  "secondary.py": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\secondary.py",
+    "sha256": "f495f72f007d0f89b1ae7f814c751cca9d9eeadeef784e160d6866e234bb14e6",
+    "byteIdenticalCopy": true,
+    "equalsOriginal": true
+  },
+  "test_spike.py": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\test_spike.py",
+    "sha256": "423f872752c99e30e647300c892115867f05b5a9af5c34531de23c90ecc7d9e7",
+    "byteIdenticalCopy": true,
+    "equalsOriginal": true
+  },
+  "test_review_regression.py": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\test_review_regression.py",
+    "sha256": "64f943bb1ae3623bd2b5579639d661ccc785b45ea4f499b661cf1780c570c0ac",
+    "byteIdenticalCopy": true
+  },
+  "test_same_face_binding.py": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\test_same_face_binding.py",
+    "sha256": "b8ff180cade093d6a5a1d5fd191a780e997a07d29ced29b9e18780060dc7f92c",
+    "byteIdenticalCopy": true
+  },
+  "review-results.json": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed\\review-results.json",
+    "sha256": "7b0b33d27739f5002eaa7ec25873d74a973d40712874377c614d878c4cec1e7b",
+    "byteIdenticalCopy": true
+  }
+}

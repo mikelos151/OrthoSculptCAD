@@ -1,0 +1,16 @@
+{
+  "name": "focused-tilted-regression",
+  "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+  "argv": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F"
+  ],
+  "expectedExit": 0,
+  "exit": 0,
+  "stdout": "",
+  "stderr": "test_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.007s\n\nOK\n"
+}

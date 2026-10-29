@@ -1,0 +1,421 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/artifact-hashes.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\artifact-hashes.json",
+      "bytes": 22698,
+      "sha256": "511389c237c2bf6a3daf5229aa897f7864f63ff8ed21d339991dec7b09085597"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/check_bridge.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\check_bridge.py",
+      "bytes": 9742,
+      "sha256": "7ffa29798bfdb9fb750be766ee950755c271b53902f5f6d192f025cc933e7835"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/commands-and-results.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\commands-and-results.json",
+      "bytes": 8922,
+      "sha256": "032d0878601222b3a6fd6ef4009678bce7a0b2d41e86a3c9d708ce077bbc06ef"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/compiled/bezier.js",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\compiled\\bezier.js",
+      "bytes": 6216,
+      "sha256": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/compiled/face-cubic.js",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\compiled\\face-cubic.js",
+      "bytes": 3779,
+      "sha256": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/compiled/numerics.js",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\compiled\\numerics.js",
+      "bytes": 8951,
+      "sha256": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/copy-and-change-comparison.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\copy-and-change-comparison.json",
+      "bytes": 2518,
+      "sha256": "dd82abdfb18b402be79965716aac157306e33072efc2d4207564f886a24ed073"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/finalize.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\finalize.py",
+      "bytes": 8957,
+      "sha256": "ff4f4a5c7179549ef3de2f86e5490b15cdee69116a3593e74c25f2cbc7f3bb3b"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fixed-3-tests.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fixed-3-tests.command.json",
+      "bytes": 977,
+      "sha256": "53f0835d1c1c07bcbc55a0d3e9a4e37fb7a813c506f691347cce4fae6507d1d6"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fixed-3-tests.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fixed-3-tests.log",
+      "bytes": 707,
+      "sha256": "2068c8ccb77ecf7e5d969105ed77645da5324ca15c7328535933ef8ce1f2d125"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/focused-tilted-regression.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\focused-tilted-regression.command.json",
+      "bytes": 793,
+      "sha256": "15fc7a6c03c65fafa042fb709b5154a55261eead3b001c9f7195f9af526d84a4"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/focused-tilted-regression.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\focused-tilted-regression.log",
+      "bytes": 511,
+      "sha256": "1a564bc37bd1379160b99401fa10511cc5f56793c818e0fbd9992a83cce40bb1"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-curved.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-curved.command.json",
+      "bytes": 667,
+      "sha256": "5b7d9830800f899f93c585bcd87dcc82498850dd04d1d7d3b120e8570112ff83"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-curved.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-curved.log",
+      "bytes": 374,
+      "sha256": "e64879066fb34cca5b3ded6e1e4a54a73c16ea89cffdf4d0b6593eddd9c90faa"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-straight.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-straight.command.json",
+      "bytes": 651,
+      "sha256": "604ff5a0d17216460ef246b50914b6ce08fef8d4c977e0511f27ad383c83c247"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-straight.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-straight.log",
+      "bytes": 364,
+      "sha256": "b6e930c4afea5744e675aca54428cdbf2cac07a90292cee7973c59eef55fba7a"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-fixed.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-fixed.command.json",
+      "bytes": 724,
+      "sha256": "294c00763a10b228f188abfae2cb525dfa3800f72f194f2777b42ad90fac5cd8"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-fixed.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-fixed.log",
+      "bytes": 428,
+      "sha256": "90c946cdb56735391f16fc5ba846e505951e3aa80cbc0a60ff51f8a0435dceac"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-producer.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-producer.command.json",
+      "bytes": 743,
+      "sha256": "929bdaa4bcee0ffbfb029cb0b804502d56b3ea45b402c3a29d59135dcef67755"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-producer.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-producer.log",
+      "bytes": 450,
+      "sha256": "5d3e1e79679a0cdad8725a02bd3e75b1b03dbdad0c7210f552379dc3545c29df"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-public.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-public.command.json",
+      "bytes": 658,
+      "sha256": "3e283b63a38b982971477bb22345dc3b32bb85e3aadab1f55217b58e958814f8"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-public.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-public.log",
+      "bytes": 366,
+      "sha256": "89dff2c9969b19671a52291a8590ad5e46f2571168fc2b76d902d040e57a3251"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-witness/bridge-reference.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\bridge-reference.json",
+      "bytes": 14544,
+      "sha256": "0ecc26268a0051b939ea1134927f73c783bcc5b8e133332652b99b56f1f499f4"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-witness/real-face-proof.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\real-face-proof.json",
+      "bytes": 24649,
+      "sha256": "4efad90aef0b47da8c070fc0d3e456f2d0b5ddf0d8ae46c4a2298ae681924986"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/fresh-tilted-witness/request.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\request.json",
+      "bytes": 2828,
+      "sha256": "3f419efa017a64e84b16ef3f253d8680803cb929eb7b807983d20d320084b7d4"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/inputs-end.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\inputs-end.json",
+      "bytes": 145078,
+      "sha256": "cfd063f121187184910c3f919b54edb0282fe815b5ec2712471aa828631d3e53"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/inputs-start.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\inputs-start.json",
+      "bytes": 145078,
+      "sha256": "cfd063f121187184910c3f919b54edb0282fe815b5ec2712471aa828631d3e53"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/mutant-canonical-control-error.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\mutant-canonical-control-error.json",
+      "bytes": 15202,
+      "sha256": "6e07a116462c79c223a64fc6b47988e0e6dbac8517243c106bb4e8964d913aff"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/mutant-canonical-false-G1.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\mutant-canonical-false-G1.json",
+      "bytes": 15194,
+      "sha256": "762194db053e838917d993adc3bc8367ac7ed0bd8bf852d6b1c1a27e46609812"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/negative-cap.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\negative-cap.command.json",
+      "bytes": 627,
+      "sha256": "413b69c8d459d31693ab50c729a583e2669af6ca6edd74566e322cb672aae827"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/negative-cap.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\negative-cap.log",
+      "bytes": 332,
+      "sha256": "05f1d4704b009e43739f63d28c79893e454fd85a720c8817739e971d33e83720"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/negative-coarse.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\negative-coarse.command.json",
+      "bytes": 645,
+      "sha256": "0f073d6a50786af5b229b64ef93c38cfb0991b3bdf36079f610f9612cd17d62e"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/negative-coarse.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\negative-coarse.log",
+      "bytes": 339,
+      "sha256": "e5abbce19c2503ccaac16c70100d760ab4aae1472718c16218e8dcffaf450a6c"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/negative-overspend.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\negative-overspend.command.json",
+      "bytes": 650,
+      "sha256": "fede4738a3f6556336bda1199cd8dc1c020763e4466a2736b6e0987509d57cd8"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/negative-overspend.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\negative-overspend.log",
+      "bytes": 349,
+      "sha256": "0929dfed1bd8f9f6a06d38b1ec3327170b828c94e925727768cf1efd69314318"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/old_checker.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\old_checker.py",
+      "bytes": 9094,
+      "sha256": "12596842240efb39531ab82777fcbc306dd776887d9caee3de720d18d27827e8"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/original-12-tests.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\original-12-tests.command.json",
+      "bytes": 2390,
+      "sha256": "7455c38d2f7e878731ba5b55989b3d74fd6eadf2c2056dd0a595dce5d59fe5aa"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/original-12-tests.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\original-12-tests.log",
+      "bytes": 2116,
+      "sha256": "64acaa79bca4a5fe8b87bd6135c6278609ef6fa9e4dfa5f1472954996f6b2df7"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/prepare.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\prepare.py",
+      "bytes": 2937,
+      "sha256": "78355aefff4f9173e97c1f48b3dc10ad1ad959edaa23ba2889c5e22e6ddb976b"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/producer.cjs",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\producer.cjs",
+      "bytes": 1426,
+      "sha256": "99baa84f3209ed99d7e0e58872149fd0ef750cdbfaff9c139980336dcd900bea"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/README.md",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\README.md",
+      "bytes": 13941,
+      "sha256": "4dcc9bd0722d2ef0b89eccc3191139cf07b0a5f4ec2527cfeabe6686f76de1fa"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/review-results.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\review-results.json",
+      "bytes": 8809,
+      "sha256": "7b0b33d27739f5002eaa7ec25873d74a973d40712874377c614d878c4cec1e7b"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/review.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\review.json",
+      "bytes": 29471,
+      "sha256": "7f5f5413fa912bcc305c18ec9c3b607c6bb1a59879f7597c996809503e99da25"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/reviewer-4-tests.command.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\reviewer-4-tests.command.json",
+      "bytes": 1234,
+      "sha256": "6ff8762af54556a2bb6fcabe70911ba4bef9e549d4b70caab868441037d27e40"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/reviewer-4-tests.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\reviewer-4-tests.log",
+      "bytes": 961,
+      "sha256": "a68c73570ff47428f81827bc021ceedfa5bba7fc1690a8c2d740aec4df811743"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/run_tests.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\run_tests.py",
+      "bytes": 2078,
+      "sha256": "ebd98747dd16c32b5135d60a9716d7df4c4eac299726c810aca1b8256bd9bf88"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-0e7268d7cfa3/bridge-reference.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\bridge-reference.json",
+      "bytes": 14362,
+      "sha256": "149ec63ddd030c6c41bfc048d943e0ae98ea9013caa796147daa8a0ae744c413"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-0e7268d7cfa3/compile.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\compile.log",
+      "bytes": 406,
+      "sha256": "a1c42fbe536f15813ebd553ff7e3cd60145758f432e64400a5c3dfbe97a02cf2"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-0e7268d7cfa3/independent-bridge-verifier.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\independent-bridge-verifier.log",
+      "bytes": 1004,
+      "sha256": "debe2b42f34a5950d90106483c7ad4dd92d678c60f96a7085095c576987d93b0"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-0e7268d7cfa3/producer.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\producer.log",
+      "bytes": 452,
+      "sha256": "bab2163bc18b130476c7960c9278df456abc169e861256db0dd0fbacc19fdb4d"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-0e7268d7cfa3/public-verifier.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\public-verifier.log",
+      "bytes": 367,
+      "sha256": "8c24277857ae76effcf5bbf866154e69ab177cb5200221b1a534119cfafd3bee"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-0e7268d7cfa3/real-face-proof.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\real-face-proof.json",
+      "bytes": 24299,
+      "sha256": "6d59a2734a0a787e5074da743af5f795b8646f6bc7c7f48d5cd6b8f31fbde2ff"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-0e7268d7cfa3/request.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\request.json",
+      "bytes": 2822,
+      "sha256": "59432d0922057e6b8586750aa0350a44655546a2fac8d05f19bade832b4369e8"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-0e7268d7cfa3/results.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\results.json",
+      "bytes": 15235,
+      "sha256": "082c3835c93fd36b2cf3b70f0ff32af05f2ce746be1bd2b8c6970bc1ba0f8745"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-c3d01661dcdd/bridge-reference.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\bridge-reference.json",
+      "bytes": 14284,
+      "sha256": "e4b3b1f0c58d7899cf02d631e538524fc642f2814d00ddded35c5355cb503b4f"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-c3d01661dcdd/compile.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\compile.log",
+      "bytes": 406,
+      "sha256": "a1c42fbe536f15813ebd553ff7e3cd60145758f432e64400a5c3dfbe97a02cf2"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-c3d01661dcdd/independent-bridge-verifier.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\independent-bridge-verifier.log",
+      "bytes": 993,
+      "sha256": "64ee8577803a0ce466674a85c7aa2118ec20e8b90c7eee074663b701030d3886"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-c3d01661dcdd/producer.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\producer.log",
+      "bytes": 452,
+      "sha256": "bae132ab978b707b5ed513d26cc9ca1b1ea20cc92a969c304bf91ab0dc8bde23"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-c3d01661dcdd/public-verifier.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\public-verifier.log",
+      "bytes": 366,
+      "sha256": "f84317519956bc91fa83aef35fb98bc90133f752c16148e92c78240396722317"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-c3d01661dcdd/real-face-proof.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\real-face-proof.json",
+      "bytes": 11646,
+      "sha256": "fc010da504398c64066f68844d81a30f065693f4d712627eb860976d55df9ba9"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-c3d01661dcdd/request.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\request.json",
+      "bytes": 2821,
+      "sha256": "1c25508b81bf325e0f6f72d29342a84cc12ca9b354a0f0fb42a5732af890ec85"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/runs/cli-c3d01661dcdd/results.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\results.json",
+      "bytes": 15146,
+      "sha256": "e30bde8f1d67aba56ea646b091b0011e7dfb384323ab23a560346fe74dc73f42"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/secondary.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\secondary.py",
+      "bytes": 3893,
+      "sha256": "f495f72f007d0f89b1ae7f814c751cca9d9eeadeef784e160d6866e234bb14e6"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/spike.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\spike.py",
+      "bytes": 15231,
+      "sha256": "fe9b17c1a63dc5724dee7fdc192d147dafdd5d14549026d15dd7176d82ee6842"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/test_review_regression.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\test_review_regression.py",
+      "bytes": 2756,
+      "sha256": "64f943bb1ae3623bd2b5579639d661ccc785b45ea4f499b661cf1780c570c0ac"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/test_same_face_binding.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\test_same_face_binding.py",
+      "bytes": 2920,
+      "sha256": "b8ff180cade093d6a5a1d5fd191a780e997a07d29ced29b9e18780060dc7f92c"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/test_spike.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\test_spike.py",
+      "bytes": 7008,
+      "sha256": "423f872752c99e30e647300c892115867f05b5a9af5c34531de23c90ecc7d9e7"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/witness-results.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\witness-results.json",
+      "bytes": 11419,
+      "sha256": "fbe9cbfad09366b455ccee1674855b25697b971762e97291f0f893f99682c986"
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview/witness.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\witness.py",
+      "bytes": 7806,
+      "sha256": "2a6cfdead07d25f44b5d5296dca155763f9da8d99b73d151e0f362ab01d708fe"
+    }
+  ],
+  "count": 69,
+  "parentVerifiedInputFiles": 594,
+  "scope": "CLOSED_LOCAL_ONLY, not production approval"
+}

@@ -1,0 +1,70 @@
+{
+  "passed": false,
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "severity": "blocker-for-independent-same-face-certification",
+      "location": "check_bridge.py:83-108,133-138,160-162",
+      "finding": "Ideal controls/barycentrics are reconstructed on fixed original F/G, but containment.triangle in the genuine TS proof is never equated to those same ordered triangles. The public verifier correctly certifies its supplied triangle, not the fixed reference triangle. Matching weights and a small world-space error cannot close this implication.",
+      "canonical_counterexample": "Set only F.C.z to exact F32 dyadic 1/4096 (bits 964689920); retain original A/B, E, all barycentric controls, ideal formulas, source hashes and delta/tau. Run unchanged real producer.cjs, then update reported rationalWorld/error coefficients/enclosures/proof hash and diagnostics consistently. No TS proof fields are fabricated.",
+      "actual_result": "Real public verifier PASS: 2 cases, 8 leaves, 10 samples. check_bridge.py also PASS. Actual rational curve and PL start at z=9/131072; actual curve at t=1/2 has z=73731/2147483648, strictly outside original F's plane z=0. Maximum squared control-error upper bound is 81/17179869184 < delta^2=1/1000000. Shared E remains exact.",
+      "scope": "This is a local mathematical containment-binding gap, not an untrusted-file security exploit, source-admission requirement, or defect in the public FaceCubic/Bezier verifier. The preserved original positive proofs actually use the correct F/G and remain valid.",
+      "fix_acceptance_criteria": [
+        "Before composing bridge/containment statements, independently require each real containment.triangle to equal the exact fixed ordered reference F/G used for idealWorld/idealBarycentric/unfolding. Do not derive the expected triangles from the same mutable proof or self-reported hashes.",
+        "Retain exact binding of rational barycentrics and world controls to the full genuine proof and the public inverse-chart verifier; expected ordered geometry plus these existing checks must establish both curves inhabit the same face.",
+        "The retained tilted-F regression must reject at the bridge face-binding gate while the unchanged public verifier still passes that valid F' proof.",
+        "Both original straight/curved proofs and fresh real-TS originals must continue passing; overspend/coarse/UNKNOWN and canonical error/G1 negatives must retain their outcomes. No extra error budget or epsilon containment exemption."
+      ]
+    }
+  ],
+  "suggestions": [
+    "Describe the current evidence as independently rechecked feasibility on trusted literal F/G fixtures, with a missing independent same-face-binding gate; do not call the checker sufficient by itself for that claim yet.",
+    "State explicitly that only the shared seam endpoint E is preserved exactly in the primary pair. The curved far G endpoint has z=1/32+(1/8)*sqrt(2), so rational endpoint exactness does not extend to all span boundaries.",
+    "Keep source_sha256 as local reproducibility evidence, not externally authoritative fixture identity. Keep Q(sqrt(3)) labeled one separate local span, not a multi-seam chain."
+  ],
+  "summary": "Local algebraic-reference to rational/PL feasibility is supported by the actual original F/G runs and valid error composition, but the independent checker accepts a real valid proof on a different face; same-face certification review therefore fails.",
+  "limited_feasibility_verdict": {
+    "positive_fixture_result": "VALIDATED for these independently inspected literal F/G fixtures only",
+    "standalone_same_face_checker": "NOT VALIDATED; confirmed blocker",
+    "full_builder": "NOT CERTIFIED; out of scope, not a review failure by itself",
+    "math_checked": [
+      "Exact Q(sqrt(2)) coefficient identity gives unfolded derivative equality (1/4,-1/4,0), nonzero derivative and positive dot 1/8; curved chord/tangent determinants are -1/128 on both spans.",
+      "Independent integer-isqrt enclosure and world control squared-error expansions give control error <=delta. Nonnegative unit-sum Bernstein coefficients extend this to every parameter.",
+      "Unchanged real TS sampler plus public polynomial verifier gives complete parameter coverage and same-parameter rational-cubic/PL error <=tau; triangle inequality gives delta+tau=1/200 without borrowing from hit 1/200 or full-C quantization 1/100.",
+      "Rational/PL curves are approximations, not exact intrinsic G1. Unresolved nonzero interval sign is UNKNOWN, not equality. No long-curve/regularity/simplicity/isotopy/source-admission/F32-C/cut/shell/App claim was required."
+    ]
+  },
+  "evidence_root": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-seam-bridge-independent-review/",
+  "actual_tests": [
+    {"command": "python -B review.py", "exit": 0, "result": "Reverified both historical public+bridge proofs and exact original ordered geometry; ran copied 12-test suite PASS; compiled three unchanged TS modules into own scratch, identical historical JS hashes; fresh curved CLI PASS with 2 cases/8 leaves/10 samples; exercised three negative CLIs and real-TS tilt mutant.", "evidence": "review-results.json"},
+    {"command": "python -B -m unittest -v test_spike", "exit": 0, "result": "12 PASS, including straight, curved, optional local sqrt3, budget/sign/canonical mutations", "evidence": "unittest.log"},
+    {"command": "python -B spike.py --curved", "exit": 0, "evidence": "runs/cli-e26d0931d5e4/results.json"},
+    {"command": "python -B spike.py --curved --bits 2", "exit": 1, "result": "REFUSED, exact error 49/1024 >1/1000000; producer not called", "evidence": "negative-coarse.log"},
+    {"command": "python -B spike.py --delta 1/500", "exit": 1, "result": "REFUSED, 3/500 >1/200; producer not called", "evidence": "negative-overspent.log"},
+    {"command": "python -B spike.py --bits 257", "exit": 2, "result": "UNKNOWN before producer", "evidence": "negative-cap.log"},
+    {"command": "python -B -m unittest -v test_review_regression", "exit": 1, "result": "3 PASS; 1 intentional RED: ValueError not raised for accepted real tilted-F proof. No implementation fix performed.", "evidence": "regression-RED.log"},
+    {"command": "python -B -m unittest -v test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F", "result": "Repeatable single-test reproduction; RED already exercised as part of previous command."}
+  ],
+  "evidence_handles": {
+    "provenance": "provenance.json",
+    "tilt_request": "mutant-tilted-F/request.json",
+    "tilt_genuine_TS_proof": "mutant-tilted-F/real-face-proof.json",
+    "tilt_joint_claim": "mutant-tilted-F/bridge-reference.json",
+    "tilt_producer_log": "mutant-real-producer.log",
+    "tilt_public_PASS": "mutant-public.log",
+    "tilt_bridge_PASS": "mutant-bridge.log",
+    "failing_regression": "test_review_regression.py",
+    "regression_output": "regression-RED.log"
+  },
+  "files_and_integrity": {
+    "copied_byte_identically": ["README.md", "spike.py", "check_bridge.py", "producer.cjs", "secondary.py", "test_spike.py"],
+    "created": ["review.py", "test_review_regression.py", "provenance.json", "review-results.json", "review-verdict.json", "logs, fresh runs, compiled JS and clearly labeled mutant evidence beneath evidence_root"],
+    "source_and_artifact_hashes_verified_before_and_after": 13,
+    "historical_primary_proof_hashes_verified": 2,
+    "copied_harness_files_still_byte_identical_after_tests": 6,
+    "repository_HEAD": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+    "repository_status": "Unchanged between initial/final checks; three pre-existing untracked design/evidence paths not read or modified.",
+    "edits_to_original_parent_or_repository": false,
+    "install_browser_fullsuite_skill_or_git_mutations": false
+  }
+}

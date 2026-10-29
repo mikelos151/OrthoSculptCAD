@@ -1,0 +1,208 @@
+
+<--- Last few GCs --->
+
+[59056:0000016E38302000]      679 ms: Scavenge 85.0 (118.0) -> 63.2 (124.1) MB, pooled: 0 MB, 3.56 / 0.00 ms  (average mu = 0.971, current mu = 0.923) allocation failure; 
+[59056:0000016E38302000]      786 ms: Scavenge 94.6 (127.6) -> 71.3 (131.9) MB, pooled: 30 MB, 92.45 / 0.00 ms  (average mu = 0.971, current mu = 0.923) allocation failure; 
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF76B8C50BF 
+ 2: 00007FF76A4EDD27 
+ 3: 00007FF76A2EE567 
+ 4: 00007FF76A286B5B 
+ 5: 00007FF76A2AF0DA 
+ 6: 00007FF76A2F0946 
+ 7: 00007FF76A2EFF96 
+ 8: 00007FF76A300EF2 
+ 9: 00007FF76A300A1B 
+10: 00007FF76BBE7DED 
+11: 00007FF76A2EC030 
+12: 00007FF76A30688A 
+13: 00007FF76A3126E8 
+14: 00007FF76A32A0DC 
+15: 00007FF76A32A075 
+16: 00007FF769FFABEB 
+17: 00007FF769FFA46D 
+18: 00007FF769FFB678 
+19: 00007FF769EED977 
+20: 0000016E70A375FA 
+
+<--- Last few GCs --->
+
+[9956:000001B329B9E000]      379 ms: Scavenge (interleaved) 110.8 (176.4) -> 53.8 (181.4) MB, pooled: 0 MB, 3.35 / 0.00 ms  (average mu = 0.978, current mu = 0.978) allocation failure; 
+[9956:000001B329B9E000]      420 ms: Scavenge (interleaved) 116.0 (181.4) -> 53.9 (183.6) MB, pooled: 0 MB, 13.92 / 0.00 ms  (average mu = 0.978, current mu = 0.978) allocation failure; 
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+
+ 1: 00007FF76B8C50BF 
+ 2: 00007FF76A4EDD27 
+ 3: 00007FF769E65BC6 
+ 4: 00007FF769A21EC2 
+ 5: 00007FF76B22E43B 
+ 6: 00007FF76B22DF32 
+ 7: 00007FF76B22DD75 
+ 8: 00007FF76B2147A8 
+ 9: 00007FF76B211ED8 
+10: 00007FF76B20EF57 
+11: 00007FF76B20EAC9 
+12: 00007FF76B20E584 
+13: 00007FF76B20D9DF 
+14: 00007FF76B20D65E 
+15: 00007FF76AEFBFE6 
+16: 00007FF76AEF3198 
+17: 00007FF76AEF26A0 
+18: 00007FF76A4619DF 
+19: 00007FF76A426A2D 
+20: 00007FF76A426725 
+21: 00007FF76ACDF2CF 
+22: 00007FF76B80954B 
+23: 00007FF76A543136 
+24: 00007FF76BC035B3 
+25: 00007FFE3D4FDDA7 
+26: 00007FFE3E6FEE4C 
+
+<--- Last few GCs --->
+
+[24040:0000019BA4C36000]      437 ms: Scavenge (interleaved) 64.7 (98.5) -> 47.6 (103.2) MB, pooled: 56 MB, 45.41 / 0.00 ms  (average mu = 0.993, current mu = 0.993) allocation failure; 
+[24040:0000019BA4C36000]      447 ms: Scavenge (interleaved) 69.6 (103.2) -> 43.2 (108.4) MB, pooled: 51 MB, 1.18 / 0.00 ms  (average mu = 0.993, current mu = 0.993) allocation failure; 
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+
+
+<--- Last few GCs --->
+
+[24040:0000019BA4C36000]      437 ms: Scavenge (interleaved) 64.7 (98.5) -> 47.6 (103.2) MB, pooled: 56 MB, 45.41 / 0.00 ms  (average mu = 0.993, current mu = 0.993) allocation failure; 
+[24040:0000019BA4C36000]      447 ms: Scavenge (interleaved) 69.6 (103.2) -> 43.2 (108.4) MB, pooled: 51 MB, 1.18 / 0.00 ms  (average mu = 0.993, current mu = 0.993) allocation failure; 
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+
+ 1: 00007FF76B8C50BF 
+ 2: 00007FF76A4EDD27 
+ 3: 00007FF769E65BC6 
+ 4: 00007FF769A220C3 
+ 5: 00007FF76B03EBD6 
+ 6: 00007FF76B03E1B4 
+ 7: 00007FF76B03DDA8 
+ 8: 00007FF76B03947B 
+ 9: 00007FF76B038A3A 
+10: 00007FF76AEFB065 
+11: 00007FF76AEF4502 
+12: 00007FF76AEF30D4 
+13: 00007FF76AEF25CD 
+14: 00007FF76A4619DF 
+15: 00007FF76A426A2D 
+16: 00007FF76A426725 
+17: 00007FF76ACDF2CF 
+18: 00007FF76B80954B 
+19: 00007FF76A543136 
+20: 00007FF76BC035B3 
+21: 00007FFE3D4FDDA7 
+22: 00007FFE3E6FEE4C RtlUserThreadStart+44
+
+<--- Last few GCs --->
+
+[24640:0000021245C79000]      811 ms: Mark-Compact (reduce) 11.1 (30.9) -> 10.1 (12.8) MB, pooled: 0 MB, 6.90 / 0.00 ms  (average mu = 0.987, current mu = 0.924) last resort; GC in old space requested
+[24640:0000021245C79000]      814 ms: Mark-Compact (reduce) 10.1 (12.8) -> 10.1 (11.8) MB, pooled: 0 MB, 3.23 / 0.00 ms  (average mu = 0.979, current mu = 0.006) last resort; GC in old space requested
+
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF76B8C50BF node::OnFatalError+1343
+ 2: 00007FF76A4EDD27 v8::Function::NewInstance+423
+ 3: 00007FF76A306BC2 X509_STORE_set_cleanup+5922
+ 4: 00007FF76A3126E8 uv_timer_set_repeat+19096
+ 5: 00007FF76A32D8F4 uv_timer_set_repeat+130212
+ 6: 00007FF76A32D7CC uv_timer_set_repeat+129916
+ 7: 00007FF769A4A14E v8::base::TimeDelta::TimeDelta+25054
+ 8: 00007FF76A18CF26 v8::Promise::MarkAsSilent+236342
+ 9: 00007FF76A1948C8 v8::Promise::MarkAsSilent+267480
+10: 00007FF76A1902FB v8::Promise::MarkAsSilent+249611
+11: 00007FF76A188D9E v8::Promise::MarkAsSilent+219566
+12: 00007FF76A18ED8D v8::Promise::MarkAsSilent+244125
+13: 00007FF76A4A44D1 X509_STORE_CTX_get_check_issued+269585
+14: 000002127E3B753A 
+
+<--- Last few GCs --->
+
+[46328:0000022CBF8E8000]      299 ms: Scavenge (interleaved) 60.4 (93.6) -> 60.3 (100.1) MB, pooled: 0 MB, 12.64 / 0.00 ms  (average mu = 0.988, current mu = 0.988) allocation failure; 
+[46328:0000022CBF8E8000]     1055 ms: Scavenge (interleaved) 68.2 (102.1) -> 65.0 (128.1) MB, pooled: 16 MB, 750.02 / 0.00 ms  (average mu = 0.988, current mu = 0.988) allocation failure; 
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF76B8C50BF 
+ 2: 00007FF76A4EDD27 
+ 3: 00007FF76A2EE567 
+ 4: 00007FF76A286B5B 
+ 5: 00007FF76A25E58E 
+ 6: 00007FF76A2F1002 
+ 7: 00007FF76A2EFFB7 
+ 8: 00007FF76A300EF2 
+ 9: 00007FF76A300A1B 
+10: 00007FF76BBE7DED 
+11: 00007FF76A2EC030 
+12: 00007FF76A30688A 
+13: 00007FF76A312D26 
+14: 00007FF769EE3937 
+15: 0000022CF7F375FA 
+
+<--- Last few GCs --->
+
+[25116:000001CE74CF7000]      297 ms: Scavenge (interleaved) 30.3 (51.5) -> 17.1 (51.5) MB, pooled: 1 MB, 0.83 / 0.00 ms  (average mu = 0.992, current mu = 0.992) allocation failure; 
+[25116:000001CE74CF7000]      307 ms: Scavenge (interleaved) 33.0 (51.5) -> 17.0 (51.5) MB, pooled: 1 MB, 0.17 / 0.00 ms  (average mu = 0.992, current mu = 0.992) allocation failure; 
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+
+ 1: 00007FF76B8C50BF 
+ 2: 00007FF76A4EDD27 
+ 3: 00007FF769E65BC6 
+ 4: 00007FF769C8F382 
+ 5: 00007FF769C86B44 
+ 6: 00007FF769C89CD4 
+ 7: 00007FF769CEDFD5 
+ 8: 00007FF769CEDC7B 
+ 9: 00007FF769CC4A78 
+10: 00007FF769D3CA56 
+11: 00007FF769D3B770 
+12: 00007FF769D3956A 
+13: 00007FF76A4619DF 
+14: 00007FF769D3B04B 
+15: 00007FF76ACDF2CF 
+16: 00007FF76B80954B 
+17: 00007FF76A543136 
+18: 00007FF76BC035B3 
+19: 00007FFE3D4FDDA7 
+20: 00007FFE3E6FEE4C 
+
+<--- Last few GCs --->
+
+[8916:0000018A56EAC000]       60 ms: Scavenge 6.3 (8.2) -> 5.9 (8.4) MB, pooled: 1 MB, 2.17 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[8916:0000018A56EAC000]       71 ms: Mark-Compact (reduce) 6.0 (8.4) -> 5.4 (7.4) MB, pooled: 0 MB, 5.47 / 0.00 ms  (average mu = 0.918, current mu = 0.918) low memory notification; GC in old space requested
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF76B8C50BF 
+ 2: 00007FF76A4EDD27 
+ 3: 00007FF76A2EE567 
+ 4: 00007FF76A286B5B 
+ 5: 00007FF76A2AF0DA 
+ 6: 00007FF76A2F0946 
+ 7: 00007FF76A2EFF96 
+ 8: 00007FF76A300EF2 
+ 9: 00007FF76A300A1B 
+10: 00007FF76BBE7DED 
+11: 00007FF76A2EC030 
+12: 00007FF76A2ECA12 
+13: 00007FF76A519CB7 
+14: 00007FF76B6E8379 
+15: 00007FF76B6E7C3D 
+16: 00007FF76B99378B 
+17: 0000018A1FDCF64D 
+WARNING: Some tests are still running when generating the JSON report.This is likely an internal bug in Vitest.Please report it to https://github.com/vitest-dev/vitest/issues
+JSON report written to C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-parent/full-unit.json

@@ -1,0 +1,14 @@
+{
+  "name": "fresh-tilted-producer",
+  "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+  "argv": [
+    "node",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\producer.cjs",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\request.json",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\real-face-proof.json"
+  ],
+  "expectedExit": 0,
+  "exit": 0,
+  "stdout": "{\"producer\":\"real-existing-TS\",\"cases\":2,\"leaves\":8,\"sameContextForEntireBundle\":true}\n",
+  "stderr": ""
+}

@@ -1,0 +1,48 @@
+{
+  "fixtureCases": 31,
+  "faces": 121,
+  "uniqueDigests": 28,
+  "uniqueRuntimeIds": 31,
+  "nativeShaCalls": 31,
+  "boundSpans": 8,
+  "sameContextDecoderCalls": 72,
+  "sameContextCertifierCalls": 8,
+  "invalidFrames": [
+    {
+      "frameId": "A\n",
+      "accepted": false,
+      "error": "INVALID_INPUT"
+    },
+    {
+      "frameId": "A\r",
+      "accepted": false,
+      "error": "INVALID_INPUT"
+    },
+    {
+      "frameId": "A\r\n",
+      "accepted": false,
+      "error": "INVALID_INPUT"
+    },
+    {
+      "frameId": "A ",
+      "accepted": false,
+      "error": "INVALID_INPUT"
+    },
+    {
+      "frameId": "A ",
+      "accepted": false,
+      "error": "INVALID_INPUT"
+    },
+    {
+      "frameId": "A B",
+      "accepted": false,
+      "error": "INVALID_INPUT"
+    },
+    {
+      "frameId": "",
+      "accepted": false,
+      "error": "INVALID_INPUT"
+    }
+  ],
+  "frameAlphabetAllInvalidRejected": true
+}

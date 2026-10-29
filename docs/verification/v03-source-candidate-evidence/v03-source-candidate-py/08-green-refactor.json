@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_source_candidate_oracle.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_base_preimage_matches_manual_byte_witness (test_v03_source_candidate_oracle.OracleTests.test_base_preimage_matches_manual_byte_witness) ... ok\ntest_cli_exports_executed_deterministic_fixture (test_v03_source_candidate_oracle.OracleTests.test_cli_exports_executed_deterministic_fixture) ... ok\ntest_every_ordered_face_uses_raw_bits_and_exact_rationals (test_v03_source_candidate_oracle.OracleTests.test_every_ordered_face_uses_raw_bits_and_exact_rationals) ... ok\ntest_f32_integer_decode_known_dyadics_and_extremes (test_v03_source_candidate_oracle.OracleTests.test_f32_integer_decode_known_dyadics_and_extremes) ... ok\ntest_generated_matrix_literal_schema_and_whole_source_coverage (test_v03_source_candidate_oracle.OracleTests.test_generated_matrix_literal_schema_and_whole_source_coverage) ... ok\ntest_optional_attributes_and_metadata_match_manual_bytes (test_v03_source_candidate_oracle.OracleTests.test_optional_attributes_and_metadata_match_manual_bytes) ... ok\ntest_reference_input_validation_without_coercion_or_normalization (test_v03_source_candidate_oracle.OracleTests.test_reference_input_validation_without_coercion_or_normalization) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.117s\n\nOK\n"
+}

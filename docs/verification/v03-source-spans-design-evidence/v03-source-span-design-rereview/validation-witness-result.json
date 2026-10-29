@@ -1,0 +1,19 @@
+{
+  "kind": "actual-validation-and-intrinsic-feasibility-witness-not-store-test",
+  "passed": true,
+  "assertions": 4178,
+  "actualValidationFile": "C:/Users/sandr/OrthoSculptCAD/src/io/validation.ts",
+  "validationSha256": "fc1c411d0a4c678d5b31db9df67864aff9d91705d605e8b1309e5f5396215832",
+  "loneSurrogateCodeUnitsChecked": 2048,
+  "acceptedNameCases": 16,
+  "conclusions": [
+    "Actual assertMesh rejects all lone surrogate code units in both single-character and embedded names.",
+    "Actual assertMesh accepts valid surrogate pairs, including supplementary boundary cases; /u does not reject paired surrogates.",
+    "The concrete TextEncoder lone-surrogate/replacement collision is outside the accepted name domain.",
+    "Accepted name samples retain UTF-8 identity without normalization; encodeInto writes directly into the exact-sized destination.",
+    "Actual texture grammar is ASCII-only; source is an explicit closed enum.",
+    "Captured TypedArray accessors expose the true nonzero-offset view without touching own getters; raw-range copying preserves negative-zero bits.",
+    "Captured ArrayBuffer accessors distinguish resizable/detached backing and reject SharedArrayBuffer."
+  ],
+  "limitations": "No SourceCandidateStore exists or is implemented/tested here. No lifecycle implementation, SHA cancellation, allocation accounting, global RAM, admission, Worker fence, seam bridge, UI or product claim is made."
+}

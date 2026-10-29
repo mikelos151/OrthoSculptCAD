@@ -1,0 +1,103 @@
+{
+  "review": "M0c3a niezależny adversarial security/lifecycle/resource quality review",
+  "verdict": "SCOPED_PASS",
+  "passed": true,
+  "summary": "Nie znaleziono konkretnego blokera w niezmiennej własności, authority, publikacji/wycofaniu handle ani lokalnym buffer-byte accounting. 18 ograniczonych rzeczywistych świadków przeszło. To wyłącznie odbiór zakresu tej recenzji modułu candidate, nie funkcji produktu ani pełnej regresji.",
+  "repository": {
+    "path": "C:/Users/sandr/OrthoSculptCAD",
+    "branch": "feature/trimline-v03",
+    "head": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+    "read_only": true,
+    "input_kind": "Dwa nowe untracked pliki src/test odczytano bezpośrednio; pusty diff tracked nie oznacza braku kodu do review.",
+    "preexisting_tracked_change": ".gitattributes",
+    "staging_or_commit_performed": false
+  },
+  "normative_inputs": [
+    {"path":"docs/plans/v03-source-bound-spans-design.md","sha256":"c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf","read_entire_file":true},
+    {"path":"docs/plans/v03-source-candidate-oracle-contract.md","sha256":"043c304fe5ebba2dc920fa858a2e7937dedd53ff71e53bbd61ff84fc9dea1b44","read_entire_file":true}
+  ],
+  "implementation_inputs": [
+    {"path":"src/trimline/source-candidate.ts","sha256":"983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b","read_entire_file":true},
+    {"path":"tests/v03-source-candidate.test.ts","sha256":"8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188","read_entire_file":true}
+  ],
+  "review_inputs_unchanged_start_end": true,
+  "runtime_artifacts_unchanged_start_end": true,
+  "additional_read_only_context": ["src/io/validation.ts", "src/trimline/numerics.ts", "src/trimline/face-cubic.ts", "package.json", "parent/compiled/trimline/source-candidate.js"],
+  "security_concerns": [],
+  "logic_errors": [],
+  "blockers": [],
+  "findings": [
+    {
+      "id": "immutable-view-ownership",
+      "status": "PASS",
+      "lines": "src/trimline/source-candidate.ts:58-120,133-137,214-230",
+      "evidence": "Captured intrinsic kind/buffer/offset/byteLength/resizable accessors + exact prototype checks odrzucają SAB, RAB, detached, subclass i brand/prototype spoof. Prywatna bitowa kopia exact view range jest synchroniczna przed pierwszym await. Witness z offsetem, poisoned otoczeniem backing buffer, shadow getters/iterator/tag oraz mutacją caller po capture zachował digest i -0; getters nie wykonano."
+    },
+    {
+      "id": "opaque-authority-frozen-results",
+      "status": "PASS",
+      "lines": "src/trimline/source-candidate.ts:177-205,233-239,260-264; src/trimline/face-cubic.ts:38-48,92-93; src/trimline/numerics.ts:106-108",
+      "evidence": "Pusty frozen handle otrzymuje authority wyłącznie przez private WeakMap, nie brand TS. JSON/structuredClone/foreign/primitives odrzucone. Rekurencyjny witness wszystkich publicznych danych span/face/description/handle potwierdził freeze, brak buforów i brak getterów. Certifier kopiuje macierze controls; autentyczne immutable Rational mogą być współdzielone bez wycieku MeshData."
+    },
+    {
+      "id": "retirement-and-strong-life",
+      "status": "PASS_STATIC_AND_RUNTIME",
+      "lines": "src/trimline/source-candidate.ts:177-193,244-258",
+      "evidence": "release usuwa wpis źródła z WeakMap, zapisuje tylko handle w WeakSet i zeruje live; retired bookkeeping nie zawiera OwnedSource/MeshData/buforów. Podwójne release/dispose idempotentne. Rzeczywisty ciąg h1 capture → release h1 → gated native SHA h2 → ponowne release h1 zachował busy i legalną publikację h2; późniejszy exact-budget h3 potwierdził reuse po release. Nie wykonano ani nie deklaruje się deterministycznego pomiaru GC/RSS."
+    },
+    {
+      "id": "pending-dispose-and-error-priorities",
+      "status": "PASS",
+      "lines": "src/trimline/source-candidate.ts:181-197,208-210,230-249,253-258",
+      "evidence": "Native WebCrypto naprawdę policzyło digest; test-only gate opóźniało jego dostarczenie. Dispose wywołano synchronicznie po dispatch, zanim witness zaobserwował settlement native Promise; nie mierzono wewnętrznego zakończenia pracy wątku crypto. Przed otwarciem gate capture pozostawał pending, po zakończeniu zawsze STALE_SOURCE bez handle, również przy jawnej failure injection po native SHA. Closed/busy/forged/retired/f priority i brak getterów/coercion przeszły. Nie deklaruje się anulowania WebCrypto."
+    },
+    {
+      "id": "whole-reservation-before-allocation",
+      "status": "PASS_STATIC_AND_RUNTIME",
+      "lines": "src/trimline/source-candidate.ts:90-120,125-169,214-229,238-248",
+      "evidence": "Stała liczba descriptor reads, bounded counts/metadata; UTF-8 length bez encoded kopii i encodeInto bezpośrednio do preimage. Instrumentacja ArrayBuffer pokazała zero owned allocations przy total-1 oraz dokładnie cztery S buffers + jeden pełny preimage przy total. Preflight sumy i rezerwacja wyprzedzają copy. Statycznie finally zwalnia lokalną reservation dopiero po await; success odejmuje z niej live S, release odejmuje live S raz. Zewnętrzne świadki nie introspektują prywatnego licznika pending."
+    },
+    {
+      "id": "operational-refusals-and-composition",
+      "status": "PASS",
+      "lines": "src/trimline/source-candidate.ts:65-70,194-204,227-243,260-264",
+      "evidence": "Jawne failure injection copy/preimage/hash throw/hash reject/validator RangeError dały sanitized UNAVAILABLE i późniejszy udany exact-budget capture; bez echo prywatnego wyjątku. Prywatna cała kopia walidowana także dla odległego NaN/index/RGB/UV. Resolver i binder zachowały oryginalne NumericsError/FaceCubicError; dwa świadki exhaustion potwierdziły brak resetu ctx i brak dalszego sukcesu na wyczerpanym ctx."
+    },
+    {
+      "id": "privacy-and-static-security",
+      "status": "PASS",
+      "lines": "src/trimline/source-candidate.ts:1-266; tests/v03-source-candidate.test.ts:1-459",
+      "evidence": "Ręczny przegląd całości oraz ograniczony skan nie wykazały sekretów, backdoorów, dynamicznego eval/exec, shell/injection, sieci/telemetrii lub uploadu. SourceCandidateError ma wyłącznie name/code/message bez mesh danych. Dane testów i harness są syntetyczne. Nie zakłada się izolacji executable Proxy ani obrony przed arbitrary same-realm global code execution."
+    }
+  ],
+  "real_execution": {
+    "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-quality-review/adversarial.cjs",
+    "exit_code": 0,
+    "node": "v24.19.0",
+    "total": 18,
+    "passed": 18,
+    "failed": 0,
+    "results": "adversarial-results.json",
+    "native_sha_successes": "Wyłącznie rzeczywisty WebCrypto SHA-256; brak fabricated successful hashes.",
+    "compiled_artifact_caveat": "Użyto i odczytano rzeczywiste emitowane moduły rodzica; ich pięć hashy związano z run start/end. Ten review nie jest nowym niezależnym tsc ani dowodem, że pierwotna komenda emitowania zakończyła się exit0."
+  },
+  "tests_review": {
+    "read_all_author_tests": true,
+    "author_tests_rerun_by_this_reviewer": false,
+    "notes": "Zestaw autora obejmuje wskazane priorytety, native SHA gates, exact budget, rollback, inherited/accessor metadata, typed-array spoofs oraz niezależny oracle. TDD logs nie były wymagane do rozstrzygnięcia; nie przyznaje się tu dodatkowego RED ani odbioru TDD."
+  },
+  "not_accepted_or_claimed": [
+    "Pełna regresja repo: parent-reported 1208 total / 1204 PASS / 4 istniejące PDF failure przy braku pamięci nie jest pełnym PASS; ten reviewer jej nie uruchamiał.",
+    "App/CAD/cut/shell/export/clinical/source-admission acceptance.",
+    "Autorytatywne pełne S, trusted mm/registration, raw-number file parser admission, świeży pełny audit.",
+    "Global ledger/RSS/GC bounds, native crypto working set, wspólny pool Workerów lub outgoing Worker fence.",
+    "Pełna gładka krzywa, seams, isotopia ani inne późniejsze bramki produktu.",
+    "JS Proxy sandbox lub zabezpieczenie przed arbitralną modyfikacją globali w tym samym realm."
+  ],
+  "issues_encountered": [
+    "Zgodnie z ostrzeżeniem o Windows commit exhaustion nie wykonywano heavy allocations, pełnego suite, browser ani całego tsc; mały Node witness przeszedł z process-local heap 128 MiB/semi-space 8 MiB.",
+    "Python subprocess.run git odmówiony WinError 5 po udanym zapisie hashy/skanu; bezpośredni git retry exit0. Nie zmieniano uprawnień ani globalnej konfiguracji."
+  ],
+  "artifacts_created_only_in_owned_scratch": ["review.json", "adversarial.cjs", "adversarial-results.json", "commands.json", "hashes-start.json", "hashes-end.json", "static-scan.json"],
+  "repository_or_other_reviewer_files_modified": false
+}

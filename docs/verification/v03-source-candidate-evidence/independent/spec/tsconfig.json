@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "types": [],
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/src",
+    "outDir": "./compiled",
+    "noEmitOnError": true
+  },
+  "files": ["C:/Users/sandr/OrthoSculptCAD/src/trimline/source-candidate.ts"]
+}

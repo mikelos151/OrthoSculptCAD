@@ -1,0 +1,11 @@
+{
+  "status": "UNKNOWN",
+  "reason": "dyadic grid cap: 1..64 bits",
+  "delta": "1/1000",
+  "tau": "1/250",
+  "sum": "1/200",
+  "bits": 257,
+  "budget": "1/200",
+  "producerCalled": false,
+  "details": {}
+}

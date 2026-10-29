@@ -1,0 +1,15 @@
+test_straight_reference_through_real_ts_and_public_verifier (test_spike.BridgeTests.test_straight_reference_through_real_ts_and_public_verifier) ... FAIL
+
+======================================================================
+FAIL: test_straight_reference_through_real_ts_and_public_verifier (test_spike.BridgeTests.test_straight_reference_through_real_ts_and_public_verifier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\test_spike.py", line 7, in test_straight_reference_through_real_ts_and_public_verifier
+    self.assertTrue(callable(getattr(spike, 'run_experiment', None)), 'missing end-to-end bridge')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : missing end-to-end bridge
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

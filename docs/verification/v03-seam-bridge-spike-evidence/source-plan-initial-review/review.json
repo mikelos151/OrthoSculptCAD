@@ -1,0 +1,44 @@
+{
+  "passed": false,
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "SOURCE-AC-1",
+      "severity": "medium",
+      "area": "source-plan acceptance contract, not mathematical/source architecture",
+      "evidence": ["docs/plans/v03-source-bound-spans-design.md:83-104", "docs/plans/v03-source-bound-spans-design.md:165"],
+      "finding": "Tracer 3 requires release/dispose during pending SHA to prevent a late handle, but release requires a SourceCandidate that capture has not returned. The only authentic handle available can be an already released earlier snapshot; releasing it again must be idempotent, not cancel a different pending capture. Thus the stated release-during-SHA acceptance requirement cannot be implemented literally with the frozen API.",
+      "required_correction_AC": "Use dispose during pending SHA as the cancellation AC and require rejection/no late handle/cleanup. Separately test release only after successful capture, repeated release as a no-op, and stale methods. Add h1=capture; release(h1); p2=capture; release(h1) while p2 hashes: the old release must not cancel p2 or free its reservation. Freeze the pending-dispose rejection code as STALE_SOURCE. No new public cancellation method is needed for this small step."
+    }
+  ],
+  "suggestions": [
+    {
+      "area": "source-plan outcome",
+      "text": "Apart from the lifecycle AC correction, the scoped candidate design is compatible with actual repository APIs. Owned synchronous bit-copy before the first await, fixed non-shared buffers, private runtime authority, original face order/IDs/raw bits including -0, length-delimited domain-separated LE digest, frozen outputs and shared arithmetic context form an honest candidate. It does not claim audited S. The source digest format is unambiguous for validated metadata; do not use a local-face digest or reinterpret the old fingerprintMesh.",
+      "evidence": ["src/types.ts:4", "src/geometry/core.ts:3-44", "src/io/validation.ts:16-44", "src/workspace/index.ts:5-13", "src/trimline/numerics.ts:167-189", "src/trimline/face-cubic.ts:51-94"]
+    },
+    {
+      "area": "source-plan implementation clarifications",
+      "text": "Freeze a precedence table for closed/busy store versus malformed input; lines 104 and 122 otherwise invite inconsistent tests. Use captured intrinsic TypedArray/ArrayBuffer accessors for type/range checks and raw byte copying, not caller-overridden length/buffer/slice/iterator. Test valid nonzero-offset subviews, own accessors on otherwise ordinary views, rejected detached/resizable/shared buffers and no allocation before reservation. Precompute UTF-8 length without an unreserved temporary encoded texture buffer, or encode directly into the reserved preimage. Define reservation rollback once and drop owned references on failure/release/dispose; authenticate retired handles with weak bookkeeping so idempotent release does not retain S forever. These are focused guardrails, not demands for a global RAM ledger in M0c3a.",
+      "evidence": ["docs/plans/v03-source-bound-spans-design.md:103-122", "docs/plans/v03-source-bound-spans-design.md:126-133"]
+    },
+    {
+      "area": "source admission remains blocked separately",
+      "text": "The actual audit cap is 200000 V/F and auditMesh returns a report, not a capability. Its complete refers to the bounded floating/tolerance audit, not exact source proof; minimum thickness remains UNKNOWN. Existing analyze workers terminate per task, and transport generation/workspace revision/object identity do not supply retained-source admission or the future publication fence. The plan correctly leaves those gates, shared ledger and App integration open. Do not fail this deliberately disconnected candidate solely because they are not implemented.",
+      "evidence": ["src/geometry/audit.ts:7-69", "src/geometry/intersections.ts:11-123", "src/compute/index.ts:10-27", "src/compute/service.ts:6-35", "src/workspace/types.ts:30-40", "src/hooks/workbenchState.ts:40-85", "src/App.tsx:181-201", "docs/plans/v03-source-bound-spans-design.md:138-157"]
+    },
+    {
+      "area": "seam mathematics and requirement scope",
+      "text": "The determinant condition bc=sqrt(2)ad is correct for the stated transversal incoming/outgoing directions. Rational nonzero a,c cannot meet it; perpendicular a=c=0 is a genuine intrinsic-G1 exception. With one common local parameter, intrinsic C1 additionally requires a=c and b=sqrt(2)d and fails for rational nonzero transverse derivatives, including that perpendicular exception. World regular G1/C1 tangents must lie on AB; higher-order tangential crossings are not ruled out. All original algebraic witness controls satisfy the hull and G1/C1 after unfolding. The signed-height polynomial is exactly 1-3t^2 with the sole positive root isolated in [1/2,3/5]. The obstruction is to generic exact intrinsic seams in this representation, NOT to every smooth curve or the approved product. Integrated design lines 25-28 and prior face-cubic sections 8/9 leave the precise seam contract open; they do not already mandate exact intrinsic G1. Fixed chart-dependent G1 is a real derivative constraint bc=ad, not arbitrary C0, but changes the metric meaning and needs an explicit fixed-atlas contract.",
+      "evidence": ["docs/plans/trimline-v03-integrated-design.md:16-28", "docs/plans/v03-face-cubic-containment.md:376-391", "docs/plans/v03-source-bound-spans-design.md:177-203", "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-span-design-review/independent-math-review.json"]
+    },
+    {
+      "area": "certified rational bridge: viable representational option, not approval",
+      "text": "Let A_i be certified algebraic reference controls and R_i rational controls on the same ordered face, with identical rational endpoints and max_i norm(A_i-R_i)<=delta. Bernstein convexity gives norm(A(t)-R(t))<=delta. The unchanged sampler supplies norm(R(t)-L(t))<=tau at the same parameter; therefore delta+tau<=1/200 mm certifies the reference-to-PL approximation with no fourth budget. M0c2 certifies actual R and L, not algebraic A or exact smoothness of R. This avoids a general algebraic curve sampler, but still needs bounded algebraic control/identity/sign certification, a separately certified reference, a bridge verifier and a frozen composed proof format. Hit remains <=1/200 and whole-C quantization <=1/100; global regularity/simplicity/isotopy are not consequences of the error bound. A rational approximant generally loses exact intrinsic G1 and must never be labelled as preserving it.",
+      "independent_witness": "Use the original F controls P_k=E+(k-3)v/12. On G use Q0=E, Q1=(7/12,-sqrt(2)/24,sqrt(2)/24), Q2=(2/3,-1/12,1/12), Q3=(3/4,-1/8,1/8). These reference cubics have rational endpoints, positive hull weights and exact unfolded C1 at E. Replace only Q1 z by r=707/12000 and y by -r. With 707/500<sqrt(2)<14143/10000, the world control error is strictly below 3/160000 mm < delta=1/50000 mm. Choose tau=249/50000 mm; delta+tau=1/200. The rational seam determinant is exactly 1/16-(707/16000)sqrt(2), nonzero. Both local curves are regular/injective because dx/dt=1/4, but this is only this witness, not a global route theorem.",
+      "acceptance_before_production": "Independently certify reference seam equality and hull, rational endpoint identity, rational-simplex validity, world-norm delta, real unchanged M0c2+sampleCubic output at tau, composed delta+tau bound, boundary/over-budget UNKNOWN cases and cumulative resource bounds. Separately prove global curve and PL validity. More algebraic field growth across consecutive unrelated facets remains an open bounded-builder question.",
+      "evidence": ["src/trimline/bezier.ts:63-84,102-142", "docs/plans/v03-face-cubic-containment.md:29-39,99-112", "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-span-design-review/independent-math-review.py", "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-span-design-review/independent-math-review.json"]
+    }
+  ],
+  "summary": "Conditional hold only for an impossible lifecycle acceptance clause; the scoped candidate/source boundary and seam algebra otherwise check out. An exact smooth algebraic reference can conceptually feed a certified rational bridge inside the existing 0.005 mm approximation budget, without claiming the rational bridge itself is exact G1 or the product is implemented. Independent stdlib/Fraction witness exited 0 with 41 assertions; this reviewer changed no production source, repository files, skills or configuration, and ran no full tests/browser. Final tracked/staged diffs are empty; other concurrent untracked verification artifacts appeared and were not opened. Baseline HEAD bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9 on feature/trimline-v03."
+}

@@ -1,0 +1,15 @@
+test_independent_bridge_checker_binds_ideal_to_real_rational_proof (test_spike.BridgeTests.test_independent_bridge_checker_binds_ideal_to_real_rational_proof) ... FAIL
+
+======================================================================
+FAIL: test_independent_bridge_checker_binds_ideal_to_real_rational_proof (test_spike.BridgeTests.test_independent_bridge_checker_binds_ideal_to_real_rational_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\test_spike.py", line 37, in test_independent_bridge_checker_binds_ideal_to_real_rational_proof
+    self.assertTrue(callable(getattr(check_bridge, 'verify', None)), 'missing independent bridge checker')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : missing independent bridge checker
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

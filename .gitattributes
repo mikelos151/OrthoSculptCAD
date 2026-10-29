@@ -113,3 +113,24 @@ docs/verification/v03-m0-independent-evidence/spec/generator.log text eol=crlf
 docs/verification/v03-m0-independent-evidence/spec/harness-node.log text eol=crlf
 docs/verification/v03-m0-independent-evidence/spec/harness-summary.json text eol=crlf
 docs/verification/v03-m0-independent-evidence/spec/python-unittest.log text eol=crlf
+# M0c3 reviewed source plan and independent design evidence: raw before staging.
+docs/plans/v03-source-bound-spans-design.md -text
+docs/plans/v03-source-candidate-oracle-contract.md -text
+docs/verification/v03-source-spans-*.json -text
+docs/verification/v03-source-spans-design-evidence/** -text whitespace=cr-at-eol
+docs/verification/v03-source-spans-design-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+# Scratch bridge evidence is not production code or a release.
+docs/verification/v03-seam-bridge-*.json -text
+docs/verification/v03-seam-bridge-spike-evidence/** -text whitespace=cr-at-eol
+docs/verification/v03-seam-bridge-spike-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/verification/v03-seam-bridge-same-face-evidence/** -text whitespace=cr-at-eol
+docs/verification/v03-seam-bridge-same-face-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+# M0c3a source, independent oracle and original TDD evidence before first staging.
+src/trimline/source-candidate.ts -text
+tests/v03-source-candidate.test.ts -text
+tests/reference/v03_source_candidate_oracle.py -text
+tests/reference/test_v03_source_candidate_oracle.py -text
+tests/fixtures/v03-source-candidate-oracle.json -text
+docs/verification/v03-source-candidate-*.json -text
+docs/verification/v03-source-candidate-evidence/** -text whitespace=cr-at-eol
+docs/verification/v03-source-candidate-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

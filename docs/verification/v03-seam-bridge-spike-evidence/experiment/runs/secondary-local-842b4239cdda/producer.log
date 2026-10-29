@@ -1,0 +1,4 @@
+$ node C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\producer.cjs C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\runs\secondary-local-842b4239cdda\request.json C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\runs\secondary-local-842b4239cdda\real-face-proof.json
+{"producer":"real-existing-TS","cases":1,"leaves":4,"sameContextForEntireBundle":true}
+
+exit=0

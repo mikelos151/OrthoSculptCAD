@@ -1,0 +1,15 @@
+test_independent_checker_refuses_false_exact_g1_for_actual_approximation (test_spike.BridgeTests.test_independent_checker_refuses_false_exact_g1_for_actual_approximation) ... FAIL
+
+======================================================================
+FAIL: test_independent_checker_refuses_false_exact_g1_for_actual_approximation (test_spike.BridgeTests.test_independent_checker_refuses_false_exact_g1_for_actual_approximation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\test_spike.py", line 108, in test_independent_checker_refuses_false_exact_g1_for_actual_approximation
+    with self.assertRaisesRegex(ValueError, 'actual.*determinant'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.579s
+
+FAILED (failures=1)

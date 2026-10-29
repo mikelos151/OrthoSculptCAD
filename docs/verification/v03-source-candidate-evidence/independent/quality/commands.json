@@ -1,0 +1,22 @@
+{
+  "policy": "Wszystkie operacje w repo read-only; jedyne zapisy w zadeklarowanym scratch recenzenta. Bez pełnego suite, przeglądarki, pełnego tsc, stage/commit/reset/stash.",
+  "runtime_witness": {
+    "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-quality-review/adversarial.cjs",
+    "exit_code": 0,
+    "output": "adversarial-results.json",
+    "result": "18 PASS / 0 FAIL"
+  },
+  "git_discovery": [
+    "git -C C:/Users/sandr/OrthoSculptCAD status --short",
+    "git -C C:/Users/sandr/OrthoSculptCAD rev-parse HEAD",
+    "git -C C:/Users/sandr/OrthoSculptCAD branch --show-current",
+    "git -C C:/Users/sandr/OrthoSculptCAD diff --name-only",
+    "git -C C:/Users/sandr/OrthoSculptCAD diff --cached --name-only"
+  ],
+  "input_hashing": "Python 3.14 stdlib pathlib.read_bytes + hashlib.sha256; identyczne cztery ścieżki w hashes-start.json i hashes-end.json, porównanie słowników true. Harness sam hashuje pięć rzeczywistych modułów JS przed i po wykonaniu.",
+  "static_scan": "Python re.search po wszystkich liniach dwóch nowych plików TS; literal credentials, dynamic execution, networking/telemetry, process/shell oraz echo wyjątków. Pełny wynik static-scan.json; przegląd ręczny uzupełnia skan.",
+  "command_issue": {
+    "description": "Końcowy Python subprocess.run(['git', ...]) dostał WinError 5; zapisy hashy i skanu oraz ich wydruk zostały wcześniej wykonane. Ponowienie bezpośrednim git w narzędziu terminal zakończone exit0.",
+    "impact": "Nie blokuje audytu; nie zmieniano uprawnień, konfiguracji ani procesów."
+  }
+}

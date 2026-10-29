@@ -1,0 +1,17 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 5ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 5ms
+ ✓ tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities 3ms
+ ✓ tests/v03-source-candidate.test.ts > preflights descriptor shapes, bounded metadata and ordinary fixed native view ranges 5ms
+ ✓ tests/v03-source-candidate.test.ts > validates the private whole snapshot before hashing, including distant coordinates and attrs 1ms
+ ✓ tests/v03-source-candidate.test.ts > reserves whole S plus canonical preimage before the first owned buffer allocation 2ms
+ ✓ tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=false) 64ms
+ ✓ tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=true) 62ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  17:56:53
+   Duration  382ms (transform 63ms, setup 0ms, import 87ms, tests 150ms, environment 0ms)
+

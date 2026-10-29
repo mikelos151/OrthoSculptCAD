@@ -1,0 +1,67 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 5ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 6ms
+ ✓ tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities 3ms
+ ✓ tests/v03-source-candidate.test.ts > preflights descriptor shapes, bounded metadata and ordinary fixed native view ranges 3ms
+ ✓ tests/v03-source-candidate.test.ts > validates the private whole snapshot before hashing, including distant coordinates and attrs 1ms
+ ✓ tests/v03-source-candidate.test.ts > reserves whole S plus canonical preimage before the first owned buffer allocation 6ms
+ × tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=false) 72ms
+   → promise resolved "{}" instead of rejecting
+ × tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=true) 57ms
+   → expected error to match asymmetric matcher
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 6 passed (8)
+   Start at  17:56:34
+   Duration  405ms (transform 67ms, setup 0ms, import 91ms, tests 153ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=false)
+AssertionError: promise resolved "{}" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
+- }
++ {}
+
+ ❯ tests/v03-source-candidate.test.ts:225:39
+    223|     let settled = false, published = false;
+    224|     const observed = p.then(h => { settled = true; published = true; r…
+    225|     const rejection = expect(observed).rejects.toThrowError(refusal('S…
+       |                                       ^
+    226|     m.positions.fill(99);
+    227|     await vi.waitFor(() => expect(nativeSettled).toBe(true));
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=true)
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "STALE_SOURCE",
+-   "message": "STALE_SOURCE",
+-   "name": "SourceCandidateError",
++ Error {
++   "message": "injected digest rejection containing private details",
+  }
+
+ ❯ tests/v03-source-candidate.test.ts:225:39
+    223|     let settled = false, published = false;
+    224|     const observed = p.then(h => { settled = true; published = true; r…
+    225|     const rejection = expect(observed).rejects.toThrowError(refusal('S…
+       |                                       ^
+    226|     m.positions.fill(99);
+    227|     await vi.waitFor(() => expect(nativeSettled).toBe(true));
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+

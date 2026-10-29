@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_source_candidate_oracle.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_f32_integer_decode_known_dyadics_and_extremes (test_v03_source_candidate_oracle.OracleTests.test_f32_integer_decode_known_dyadics_and_extremes) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+}

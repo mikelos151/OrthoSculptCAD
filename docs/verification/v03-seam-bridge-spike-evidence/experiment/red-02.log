@@ -1,0 +1,16 @@
+test_curved_pair_uses_nonzero_sampler_certificates (test_spike.BridgeTests.test_curved_pair_uses_nonzero_sampler_certificates) ... ERROR
+
+======================================================================
+ERROR: test_curved_pair_uses_nonzero_sampler_certificates (test_spike.BridgeTests.test_curved_pair_uses_nonzero_sampler_certificates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\test_spike.py", line 19, in test_curved_pair_uses_nonzero_sampler_certificates
+    result = spike.run_experiment('tdd-curved', curved=True)
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\spike.py", line 216, in run_experiment
+    raise Refused('curved pair not implemented')
+spike.Refused: curved pair not implemented
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)

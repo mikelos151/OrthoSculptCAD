@@ -1,0 +1,10 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 3ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  17:50:14
+   Duration  156ms (transform 21ms, setup 0ms, import 33ms, tests 4ms, environment 0ms)
+

@@ -1,0 +1,1 @@
+file:C:/Program Files/WindowsApps/NousResearchInc.HermesAgent_2026.7082.1520.0_x64__sznbd6dv1j3v4/app/resources/agent-payload/tools/git-2.53.0+3-win32-x64/etc/gitconfig	true

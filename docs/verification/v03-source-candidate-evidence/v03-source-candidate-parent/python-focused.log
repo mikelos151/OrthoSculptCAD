@@ -1,0 +1,12 @@
+test_base_preimage_matches_manual_byte_witness (test_v03_source_candidate_oracle.OracleTests.test_base_preimage_matches_manual_byte_witness) ... ok
+test_cli_exports_executed_deterministic_fixture (test_v03_source_candidate_oracle.OracleTests.test_cli_exports_executed_deterministic_fixture) ... ok
+test_every_ordered_face_uses_raw_bits_and_exact_rationals (test_v03_source_candidate_oracle.OracleTests.test_every_ordered_face_uses_raw_bits_and_exact_rationals) ... ok
+test_f32_integer_decode_known_dyadics_and_extremes (test_v03_source_candidate_oracle.OracleTests.test_f32_integer_decode_known_dyadics_and_extremes) ... ok
+test_generated_matrix_literal_schema_and_whole_source_coverage (test_v03_source_candidate_oracle.OracleTests.test_generated_matrix_literal_schema_and_whole_source_coverage) ... ok
+test_optional_attributes_and_metadata_match_manual_bytes (test_v03_source_candidate_oracle.OracleTests.test_optional_attributes_and_metadata_match_manual_bytes) ... ok
+test_reference_input_validation_without_coercion_or_normalization (test_v03_source_candidate_oracle.OracleTests.test_reference_input_validation_without_coercion_or_normalization) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.161s
+
+OK

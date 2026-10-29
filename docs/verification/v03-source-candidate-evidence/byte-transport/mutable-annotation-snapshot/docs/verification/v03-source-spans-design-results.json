@@ -1,0 +1,82 @@
+{
+  "plan": "docs/plans/v03-source-bound-spans-design.md",
+  "planSha256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+  "reviewScope": "Design and acceptance criteria only; implementation not yet accepted",
+  "designStatus": "PASS; SOURCE-AC-1 closed by fresh independent rereview deleg_59716de2 task1",
+  "oracleInterchange": "docs/plans/v03-source-candidate-oracle-contract.md",
+  "oracleContractSha256": "043c304fe5ebba2dc920fa858a2e7937dedd53ff71e53bbd61ff84fc9dea1b44",
+  "parentNativeDomainAssertions": 4178,
+  "parentNativeDomainExitCode": 0,
+  "nativeWitnessCaveat": "Real existing io validation and intrinsic accessor feasibility only, not store lifecycle/allocation tests. Output-directory and caveat text only changed in parent witness; assertions unchanged.",
+  "historicalInitialState": "v03-source-spans-initial-status.json intentionally retained unchanged",
+  "implementation": "DELIVERED deleg_d24ccf9e, not accepted: parent20 focused Node tests, untouched31-case/121-face interoperability,71 Python tests and npm audit0 passed. Complete Node regression remains1204/1208 with four PDF allocation failures; fresh implementation reviews pending. See v03-source-candidate-parent-results.json. No admission or App integration.",
+  "acceptedRuntimeCore": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+  "files": [
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-design-review\\review.json",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-design-review/review.json",
+      "sha256": "24ecd3d179a65c0aa0f325959cf4b8843aeefe1eeb2e6ff0a6849f3584d1f6f1",
+      "bytes": 8823
+    },
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-design-review\\independent-math-review.py",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-design-review/independent-math-review.py",
+      "sha256": "0ae48d26c143622ce9e6a9308661d7d05a88fce706dfde6a4ecd9b83f3759871",
+      "bytes": 5634
+    },
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-design-review\\independent-math-review.json",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-design-review/independent-math-review.json",
+      "sha256": "cc18a80f533dc8cbc4c7215b06c21d6c4ec43b9eec95ba127c1d791d4402fe51",
+      "bytes": 2446
+    },
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-design-rereview\\review.json",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-design-rereview/review.json",
+      "sha256": "da3d950c1e40e4408f3dee79635e6717e01e9bba458963f2c1865c59428f6881",
+      "bytes": 8182
+    },
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-design-rereview\\validation-witness.mjs",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-design-rereview/validation-witness.mjs",
+      "sha256": "93f5753ace6974ae2415906ab468f6eee255f5bd547a90fa03742a5fb2084386",
+      "bytes": 6304
+    },
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-design-rereview\\validation-witness-result.json",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-design-rereview/validation-witness-result.json",
+      "sha256": "7331ba20cffe65be55c5694ebc82126064de183193b275c1dbe7ca928f590e19",
+      "bytes": 1436
+    },
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-parent-design\\validation-witness.mjs",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-parent-design/validation-witness.mjs",
+      "sha256": "97d096288bd6f7d105066194622b5e5d3f1cfdd0626a1382361ab039384cd9c2",
+      "bytes": 6308
+    },
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-parent-design\\validation-witness-result.json",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-parent-design/validation-witness-result.json",
+      "sha256": "59f5c94ac8cf4ea2efc1c066cc325e177c720017cbc6c6034a03afe5abfc013a",
+      "bytes": 1442
+    },
+    {
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-span-parent-design\\rereview-witness.log",
+      "path": "docs/verification/v03-source-spans-design-evidence/v03-source-span-parent-design/rereview-witness.log",
+      "sha256": "59f5c94ac8cf4ea2efc1c066cc325e177c720017cbc6c6034a03afe5abfc013a",
+      "bytes": 1442
+    },
+    {
+      "path": "docs/verification/v03-source-spans-design-evidence/seam-witness.py",
+      "sha256": "cdf2831efb5070e3ee43b9611bb1bc3b65035e3c633dda6ecb49c9857fb6a82e"
+    },
+    {
+      "path": "docs/verification/v03-source-spans-design-evidence/author-seam-witness.log",
+      "sha256": "e88c94e2f5fe67794aaa9c32f4653b9fc33319125642c978af8c446a593c70e9"
+    },
+    {
+      "path": "docs/verification/v03-source-spans-design-evidence/parent-seam-witness.log",
+      "sha256": "e88c94e2f5fe67794aaa9c32f4653b9fc33319125642c978af8c446a593c70e9"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+test_optional_second_local_radical_case_without_mixed_field (test_spike.BridgeTests.test_optional_second_local_radical_case_without_mixed_field) ... FAIL
+
+======================================================================
+FAIL: test_optional_second_local_radical_case_without_mixed_field (test_spike.BridgeTests.test_optional_second_local_radical_case_without_mixed_field)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\test_spike.py", line 89, in test_optional_second_local_radical_case_without_mixed_field
+    self.assertTrue(callable(getattr(secondary, 'run', None)), 'missing second local radical check')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : missing second local radical check
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)

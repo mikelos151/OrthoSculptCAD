@@ -1,0 +1,306 @@
+{
+  "historical": {
+    "straight": {
+      "public": {
+        "passed": true,
+        "cases": 2,
+        "leaves": 2,
+        "samples": 4
+      },
+      "bridge": {
+        "passed": true,
+        "controlsChecked": 8,
+        "idealDerivativeIdentity": true,
+        "idealG1": "exact coefficient identity",
+        "actualRationalAndPL": "approximations, NOT exact G1",
+        "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+        "minIdealBarycentricLower": "0",
+        "nonstraightDeterminants": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "publicVerifier": {
+          "passed": true,
+          "cases": 2,
+          "leaves": 2,
+          "samples": 4
+        },
+        "deltaPlusTau": "1/200",
+        "existingBudget": "1/200",
+        "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+      },
+      "geometry": [
+        {
+          "face": "F",
+          "originalOrderedTriangle": true,
+          "allControlWorldBindings": true
+        },
+        {
+          "face": "G",
+          "originalOrderedTriangle": true,
+          "allControlWorldBindings": true
+        }
+      ]
+    },
+    "curved": {
+      "public": {
+        "passed": true,
+        "cases": 2,
+        "leaves": 8,
+        "samples": 10
+      },
+      "bridge": {
+        "passed": true,
+        "controlsChecked": 8,
+        "idealDerivativeIdentity": true,
+        "idealG1": "exact coefficient identity",
+        "actualRationalAndPL": "approximations, NOT exact G1",
+        "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+        "minIdealBarycentricLower": "0",
+        "nonstraightDeterminants": [
+          [
+            "-1/128",
+            "0"
+          ],
+          [
+            "-1/128",
+            "0"
+          ]
+        ],
+        "publicVerifier": {
+          "passed": true,
+          "cases": 2,
+          "leaves": 8,
+          "samples": 10
+        },
+        "deltaPlusTau": "1/200",
+        "existingBudget": "1/200",
+        "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+      },
+      "geometry": [
+        {
+          "face": "F",
+          "originalOrderedTriangle": true,
+          "allControlWorldBindings": true
+        },
+        {
+          "face": "G",
+          "originalOrderedTriangle": true,
+          "allControlWorldBindings": true
+        }
+      ]
+    }
+  },
+  "fresh": {
+    "unitTests": 12,
+    "curved": {
+      "cli": {
+        "verdict": "VALIDATED_LOCAL",
+        "results": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\runs\\cli-e26d0931d5e4\\results.json",
+        "public_verifier": {
+          "passed": true,
+          "cases": 2,
+          "leaves": 8,
+          "samples": 10
+        }
+      },
+      "geometry": [
+        {
+          "face": "F",
+          "originalOrderedTriangle": true,
+          "allControlWorldBindings": true
+        },
+        {
+          "face": "G",
+          "originalOrderedTriangle": true,
+          "allControlWorldBindings": true
+        }
+      ]
+    },
+    "compiled": [
+      {
+        "name": "numerics.js",
+        "sha256": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb",
+        "equalsHistorical": true
+      },
+      {
+        "name": "bezier.js",
+        "sha256": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681",
+        "equalsHistorical": true
+      },
+      {
+        "name": "face-cubic.js",
+        "sha256": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098",
+        "equalsHistorical": true
+      }
+    ]
+  },
+  "negative": {
+    "coarse": {
+      "exit": 1,
+      "cli": {
+        "status": "REFUSED",
+        "reason": "control error exceeds delta",
+        "evidence": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\runs\\cli-dbc8e881c26e\\refusal.json"
+      },
+      "refusal": {
+        "status": "REFUSED",
+        "reason": "control error exceeds delta",
+        "delta": "1/1000",
+        "tau": "1/250",
+        "sum": "1/200",
+        "bits": 2,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {
+          "face": 0,
+          "control": 0,
+          "idealBarycentric": [
+            [
+              "15/32",
+              "0"
+            ],
+            [
+              "1/4",
+              "0"
+            ],
+            [
+              "9/32",
+              "0"
+            ]
+          ],
+          "rationalBarycentric": [
+            {
+              "n": "1",
+              "d": "4"
+            },
+            {
+              "n": "1",
+              "d": "4"
+            },
+            {
+              "n": "1",
+              "d": "2"
+            }
+          ],
+          "errorSquared": [
+            "49/1024",
+            "0"
+          ],
+          "deltaSquared": "1/1000000",
+          "errorSquaredMinusDeltaSquaredSign": 1
+        }
+      }
+    },
+    "overspent": {
+      "exit": 1,
+      "cli": {
+        "status": "REFUSED",
+        "reason": "delta + tau exceeds existing curve budget",
+        "evidence": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\runs\\cli-95efa58fe618\\refusal.json"
+      },
+      "refusal": {
+        "status": "REFUSED",
+        "reason": "delta + tau exceeds existing curve budget",
+        "delta": "1/500",
+        "tau": "1/250",
+        "sum": "3/500",
+        "bits": 16,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {}
+      }
+    },
+    "cap": {
+      "exit": 2,
+      "cli": {
+        "status": "UNKNOWN",
+        "reason": "dyadic grid cap: 1..64 bits",
+        "evidence": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\runs\\cli-f2d4121382c3\\refusal.json"
+      },
+      "refusal": {
+        "status": "UNKNOWN",
+        "reason": "dyadic grid cap: 1..64 bits",
+        "delta": "1/1000",
+        "tau": "1/250",
+        "sum": "1/200",
+        "bits": 257,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {}
+      }
+    }
+  },
+  "mutant": {
+    "request": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\mutant-tilted-F\\request.json",
+    "proof": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\mutant-tilted-F\\real-face-proof.json",
+    "bridge": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\mutant-tilted-F\\bridge-reference.json",
+    "epsilon": "1/4096",
+    "epsilonFloat32Bits": 964689920,
+    "realProducer": {
+      "producer": "real-existing-TS",
+      "cases": 2,
+      "leaves": 8,
+      "sameContextForEntireBundle": true
+    },
+    "publicVerifier": {
+      "passed": true,
+      "cases": 2,
+      "leaves": 8,
+      "samples": 10
+    },
+    "bridgeVerifier": {
+      "passed": true,
+      "controlsChecked": 8,
+      "idealDerivativeIdentity": true,
+      "idealG1": "exact coefficient identity",
+      "actualRationalAndPL": "approximations, NOT exact G1",
+      "maxControlErrorSquaredUpper": "81/17179869184",
+      "minIdealBarycentricLower": "0",
+      "nonstraightDeterminants": [
+        [
+          "-1/128",
+          "0"
+        ],
+        [
+          "-1/128",
+          "0"
+        ]
+      ],
+      "publicVerifier": {
+        "passed": true,
+        "cases": 2,
+        "leaves": 8,
+        "samples": 10
+      },
+      "deltaPlusTau": "1/200",
+      "existingBudget": "1/200",
+      "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+    },
+    "outsideOriginalF": {
+      "control0Z": "9/131072",
+      "curveAtHalfZ": "73731/2147483648",
+      "originalPlane": "z=0",
+      "PLStartZ": "9/131072"
+    },
+    "maxControlErrorSquaredUpper": "81/17179869184",
+    "allErrorsFitDelta": true,
+    "unchanged": [
+      "A",
+      "B",
+      "E",
+      "barycentricControls",
+      "idealWorld",
+      "idealBarycentric",
+      "source_sha256",
+      "delta",
+      "tau"
+    ]
+  }
+}

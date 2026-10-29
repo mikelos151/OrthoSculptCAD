@@ -1,0 +1,70 @@
+{
+  "scope": "Independent synthetic test-oracle expected values only; no runtime authority, audit admission, reload proof or clinical acceptance.",
+  "files": {
+    "tests/reference/v03_source_candidate_oracle.py": {
+      "bytes": 10381,
+      "sha256": "39244a4056d8e081c7a89b43b9aa7fde220c3c3f879addf8e92c0253105015e8"
+    },
+    "tests/reference/test_v03_source_candidate_oracle.py": {
+      "bytes": 15917,
+      "sha256": "2153073511ba578c7456c04e95091fcbc1b3543bfa4fb6486ffb46bcf4fb7c3b"
+    },
+    "tests/fixtures/v03-source-candidate-oracle.json": {
+      "bytes": 207897,
+      "sha256": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9"
+    }
+  },
+  "caseCount": 31,
+  "faceCount": 121,
+  "uniqueSourceDigests": 28,
+  "reviewedPlanSha256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+  "contractSha256": "043c304fe5ebba2dc920fa858a2e7937dedd53ff71e53bbd61ff84fc9dea1b44",
+  "generatorCommand": "python -B tests/reference/v03_source_candidate_oracle.py --output tests/fixtures/v03-source-candidate-oracle.json",
+  "generatorSummary": {
+    "bytes": 207897,
+    "caseCount": 31,
+    "faceCount": 121,
+    "sha256": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9"
+  },
+  "testCommand": "python -B -m unittest discover -s tests/reference -p test_v03_source_candidate_oracle.py -v",
+  "testCount": 7,
+  "testExitCode": 0,
+  "finalTestLog": "09-final-tests.json",
+  "verticalTdd": [
+    {
+      "tracer": "f32",
+      "red": "01-red-f32.json",
+      "green": "01-green-f32.json"
+    },
+    {
+      "tracer": "canonical",
+      "red": "02-red-canonical.json",
+      "green": "02-green-canonical.json"
+    },
+    {
+      "tracer": "optional",
+      "red": "03-red-optional.json",
+      "green": "03-green-optional.json"
+    },
+    {
+      "tracer": "validation",
+      "red": "04-red-validation.json",
+      "green": "04-green-validation.json"
+    },
+    {
+      "tracer": "faces",
+      "red": "05-red-faces.json",
+      "green": "05-green-faces.json"
+    },
+    {
+      "tracer": "fixture",
+      "red": "06-red-fixture.json",
+      "green": "06-green-fixture.json"
+    },
+    {
+      "tracer": "cli",
+      "red": "07-red-cli.json",
+      "green": "07-green-cli.json"
+    }
+  ]
+}

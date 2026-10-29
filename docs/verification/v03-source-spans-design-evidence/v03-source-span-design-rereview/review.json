@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [],
+  "summary": "SOURCE-AC-1 closed at the design/acceptance-contract level. The corrected frozen API and lifecycle are implementable without an API extension; no new concrete blocker was found. This is not acceptance of a SourceCandidateStore implementation, audited S, seams or the product.",
+  "review_target": {
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "branch": "feature/trimline-v03",
+    "head": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+    "plan": "docs/plans/v03-source-bound-spans-design.md",
+    "sha256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "sha256_rechecked_at_end": true,
+    "review_type": "fresh independent read-only rereview of corrected design, primarily sections 3 and 6"
+  },
+  "resolved_findings": [
+    {
+      "id": "SOURCE-AC-1",
+      "status": "closed",
+      "evidence": [
+        "docs/plans/v03-source-bound-spans-design.md:83-104",
+        "docs/plans/v03-source-bound-spans-design.md:118-131",
+        "docs/plans/v03-source-bound-spans-design.md:174-178"
+      ],
+      "reason": "capture returns its only authentic handle only on success. The pending-capture cancellation AC now uses dispose, not release. Dispose invalidates pending capture with STALE_SOURCE and forbids a late handle, including when the underlying SHA rejects. No new cancellation API is needed.",
+      "required_trace_now_explicit": "h1=capture succeeds; release(h1) retires h1 and releases S; p2=capture remains pending in SHA; release(h1) again is a no-op, cannot cancel p2 or free its preimage/reservation, and p2 may publish h2 after successful SHA if the store remains open.",
+      "authentication": "Authenticity is store-local private runtime authority, not TS branding, sourceId, source provenance metadata, JSON or structuredClone. Weak retired-handle bookkeeping permits idempotent release without retaining S. release authenticates even after disposal: forged/foreign is INVALID_INPUT, authentic retired is no-op. Closed describe/resolveFace/bindFaceCubic instead return STALE_SOURCE before authentication; in open stores forged/foreign is INVALID_INPUT and retired is STALE_SOURCE before other arguments. These intentional operation-specific priorities are explicit, not contradictory."
+    }
+  ],
+  "inspection": [
+    {
+      "area": "closed/busy/input priorities",
+      "result": "Consistent between lifecycle paragraph, precedence table and tracer 3. capture closed -> STALE_SOURCE without input inspection; open live/pending -> SOURCE_IN_USE without input inspection; otherwise shape/caps -> whole reservation -> private copy/validation -> SHA -> disposed recheck -> publication. release has its own authenticate-first rule.",
+      "evidence": ["plan:104", "plan:126-131", "plan:174-178"]
+    },
+    {
+      "area": "pending SHA ownership and cleanup",
+      "result": "Dispose is logical invalidation, not WebCrypto cancellation or immediate RAM recovery. The contract retains pending preimage/owned buffers and reservations until actual internal SHA settlement; success/rejection paths check disposal, drop references and roll back reservations exactly once. An open success drops only preimage and retains S until release/dispose. No false immediate GC/RSS claim remains.",
+      "evidence": ["plan:104", "plan:116-118", "plan:129-131", "plan:174-176"]
+    },
+    {
+      "area": "preflight, intrinsic accessors and resource scope",
+      "result": "The plan requires captured TypedArray/ArrayBuffer intrinsic accessors, fixed nonshared nondetached nonresizable ordinary views, exact subview ranges, synchronous private bit-copy before await and no public buffer aliases. Own overridden view properties are not authority. Whole S-plus-preimage reservation precedes allocation; UTF-8 sizing must not create an unreserved encoded texture copy and encodeInto may write directly into reserved preimage. maxOwnedBufferBytes is explicitly buffer accounting, not total application RAM. Executable Proxy isolation is not promised.",
+      "evidence": ["plan:103-117", "plan:178", "validation-witness-result.json"]
+    },
+    {
+      "area": "canonical preimage and actual metadata input domain",
+      "result": "The length-delimited domain-separated LE preimage is compatible with actual src/io/validation.ts. Name validation under /u rejects unpaired surrogate code units but permits valid surrogate pairs; it therefore excludes the concrete TextEncoder lone-surrogate versus U+FFFD collision. UTF-8 remains injective over accepted Unicode scalar sequences without normalization. Texture URI grammar is ASCII-only and bounded; source is the explicit absent/synthetic/imported enum. frameId and units are bounded ASCII by the plan. No invented Unicode blocker is warranted. Raw F32 bits, ordered indices/attributes and presence tags preserve relevant numeric/content distinctions including negative zero; stamp epochs and runtime identity are deliberately separate.",
+      "evidence": ["plan:105", "plan:117", "plan:133-145", "src/io/validation.ts:16-44", "src/types.ts:4", "validation-witness-result.json"]
+    },
+    {
+      "area": "candidate versus admission and approved scope",
+      "result": "The candidate is explicitly not audited S and cannot feed cut/shell/export. Actual full-source admission, retained owner, global shared resource accounting and transaction fences remain future blocked gates, not prerequisites for reviewing this isolated atomic candidate contract. The approved smooth 3D cut/shell/collar scope remains intact. Integrated plan and prior face-cubic plan keep precise facet smoothness and dependent geometry proofs open. Section 7 is not production approval; a rational bridge mentioned in the old review remains an experiment, not an implemented or accepted solution. No UI, clinical or full-system acceptance is imposed on M0c3a.",
+      "evidence": ["plan:7-17", "plan:147-166", "plan:186-222", "docs/plans/trimline-v03-integrated-design.md:16-28", "docs/plans/v03-face-cubic-containment.md:376-391"]
+    }
+  ],
+  "verification": {
+    "actual_execution": "node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-span-design-rereview/validation-witness.mjs",
+    "node_version": "v24.19.0",
+    "exit_code": 0,
+    "assertions": 4178,
+    "lone_surrogate_code_units_checked": 2048,
+    "accepted_name_cases": 16,
+    "actual_validation_sha256": "fc1c411d0a4c678d5b31db9df67864aff9d91705d605e8b1309e5f5396215832",
+    "execution_scope": "Imported and exercised the real src/io/validation.ts, plus native JS-intrinsic feasibility witnesses. Verified lone-surrogate rejection, accepted supplementary scalar boundary samples, exact-sized direct encodeInto, ASCII texture restrictions and source enum. Native accessors recovered a true nonzero-offset view despite own throwing getters, copied only its range preserving -0, and distinguished detached/resizable/shared backing. These are actual results, NOT SourceCandidateStore implementation tests or evidence of real lifecycle allocation cleanup.",
+    "not_run": ["full Node suite", "full Python suite", "browser/UI", "SourceCandidateStore implementation tests", "seam experiment", "audit-admission", "Worker fence"],
+    "source_candidate_file_exists": false,
+    "repository_writes": false,
+    "tracked_diff_empty_before_and_after": true,
+    "staged_diff_empty_before_and_after": true,
+    "status_unchanged_before_and_after": true,
+    "concurrent_untracked_paths_not_opened": ["docs/verification/v03-source-spans-design-evidence/", "docs/verification/v03-source-spans-initial-status.json"],
+    "prior_review_read": "Only the explicitly authorized v03-source-span-design-review/review.json; no other child output/transcript read."
+  },
+  "files_created": [
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-span-design-rereview/validation-witness.mjs",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-span-design-rereview/validation-witness-result.json",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-span-design-rereview/review.json"
+  ],
+  "issues_encountered": []
+}

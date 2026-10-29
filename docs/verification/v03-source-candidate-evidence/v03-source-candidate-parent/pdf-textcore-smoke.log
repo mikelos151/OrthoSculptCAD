@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import pymupdf,json;print(json.dumps({'file':pymupdf.__file__,'version':pymupdf.VersionBind,'layoutActive':callable(pymupdf._get_layout)}));d=pymupdf.open();p=d.new_page();p.insert_text((72,72),'Actual PDF glyph test',fontsize=12);data=d.tobytes();r=pymupdf.open(stream=data,filetype='pdf');assert 'Actual PDF glyph test' in r[0].get_text();assert all(s['size']==12 for b in r[0].get_text('dict')['blocks'] for l in b.get('lines',[])for s in l['spans']);print('Native core PDF extraction and 12pt glyph verification PASS')
+    ^^^^^^^^^^^^^^^^^^^
+MemoryError

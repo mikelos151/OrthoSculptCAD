@@ -1,0 +1,20 @@
+test_canonical_control_error_corruption_rejected_with_real_proof_unchanged (test_review_regression.IndependentAdversarialTests.test_canonical_control_error_corruption_rejected_with_real_proof_unchanged) ... ok
+test_canonical_false_actual_G1_rejected (test_review_regression.IndependentAdversarialTests.test_canonical_false_actual_G1_rejected) ... ok
+test_nonzero_interval_straddling_zero_is_unknown_not_equality (test_review_regression.IndependentAdversarialTests.test_nonzero_interval_straddling_zero_is_unknown_not_equality) ... ok
+test_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F) ... FAIL
+
+======================================================================
+FAIL: test_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-independent-review\test_review_regression.py", line 23, in test_same_face_bridge_must_reject_real_ts_tilted_original_F
+    with self.assertRaises(ValueError, msg='same-face checker accepts real R/PL outside original F'):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised : same-face checker accepts real R/PL outside original F
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.056s
+
+FAILED (failures=1)
+
+exit=1

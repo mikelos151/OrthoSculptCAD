@@ -1,0 +1,642 @@
+{
+  "issue": "BRIDGE-SAMEFACE-1",
+  "verdict": "CLOSED_LOCAL_ONLY",
+  "passed": true,
+  "language": "pl",
+  "summary": "BRIDGE-SAMEFACE-1 zamkni\u0119ty dla zamro\u017conego eksperymentu dw\u00f3ch lokalnych span\u00f3w. Minimalne dok\u0142adne zwi\u0105zanie obu uporz\u0105dkowanych tr\u00f3jk\u0105t\u00f3w usuwa potwierdzon\u0105 luk\u0119. Bez zatwierdzenia produkcyjnego ani gwarancji pe\u0142nego buildera.",
+  "security_concerns": [],
+  "logic_errors": [],
+  "scope": "Wy\u0142\u0105cznie scratchowy mostek algebraicznego wzorca Q(sqrt(2)) do racjonalnych krzywych i PL na dw\u00f3ch przypisanych literalnych F/G.",
+  "independence": {
+    "fixerHandoffUsedAsProof": false,
+    "reviewedChecker": "check_bridge.py:73-82",
+    "copiedInputsByteIdentical": 9,
+    "originalReviewerTestByteIdentical": true,
+    "changedSixHarnessFilesVsOriginal": [
+      "README.md",
+      "check_bridge.py"
+    ],
+    "testFilesEditedToPass": false,
+    "sourceCandidateWorkInspected": false,
+    "checkerSha256": "7ffa29798bfdb9fb750be766ee950755c271b53902f5f6d192f025cc933e7835"
+  },
+  "mathematical_reasoning": [
+    {
+      "location": "check_bridge.py:72-82",
+      "claim": "Wymagane s\u0105 dok\u0142adnie dwa przypadki. containment.triangle przypadku 0 r\u00f3wna si\u0119 dok\u0142adnie uporz\u0105dkowanemu F=((0,0,0),(1,0,0),(0,1,0)); przypadku 1 \u2013 G=((1,0,0),(0,0,0),(0,-1,1)). Oczekiwane dane s\u0105 literalne, niezale\u017cne od dowodu i self-reported hashy. Por\u00f3wnanie Fraction(n,d), bez epsilonu."
+    },
+    {
+      "location": "check_bridge.py:93-129; v03_face_cubic_verify.py:188-239",
+      "claim": "Niezmienione idealWorld i idealBarycentric s\u0105 sprawdzane wzgl\u0119dem literalnych wzor\u00f3w i pe\u0142nej otoczki kontrolnej. Nowy witness dodatkowo odtwarza idealne i racjonalne world controls z tych samych uporz\u0105dkowanych tr\u00f3jk\u0105t\u00f3w. Racjonalne wagi i world controls s\u0105 zwi\u0105zane z tym samym rzeczywistym dowodem; publiczny inverse-chart verifier wymaga dok\u0142adnych wag, p\u0142aszczyzny oraz simplex. Zatem idealna i racjonalna krzywa le\u017c\u0105 w tej samej przypisanej domkni\u0119tej \u015bcianie. Ca\u0142e odcinki PL tak\u017ce, przez sprawdzone ko\u0144ce pr\u00f3bek i wypuk\u0142o\u015b\u0107 tr\u00f3jk\u0105ta."
+    },
+    {
+      "location": "check_bridge.py:119-126,170-172; v03_bezier_verify.py:221-274",
+      "claim": "Niezmienione wsp\u00f3\u0142czynnikowe rozwini\u0119cie kwadratu b\u0142\u0119du i outward enclosure daje b\u0142\u0105d kontroli \u2264delta. Nieujemne Bernstein weights o sumie 1 rozci\u0105gaj\u0105 go na wszystkie t. Publiczny verifier sprawdza pe\u0142ne pokrycie parametru i ci\u0105g\u0142y b\u0142\u0105d wzgl\u0119dem chord\u00f3w \u2264tau. St\u0105d ideal\u2013PL \u2264delta+tau=1/200. Nie dodano sk\u0142adnika bud\u017cetu ani tolerancji na opuszczanie \u015bciany."
+    },
+    {
+      "location": "check_bridge.py:133-158",
+      "claim": "Wzorzec zachowuje dok\u0142adn\u0105 unfolded C1, a wi\u0119c G1, przy E: po roz\u0142o\u017ceniu obie pochodne=(1/4,-1/4,0), dodatni iloczyn skalarny/norma\u00b2=1/8. Racjonalna krzywa i PL pozostaj\u0105 przybli\u017ceniami, NIE dok\u0142adnie intrinsic G1. Nierozstrzygni\u0119ty znak pozostaje UNKNOWN."
+    },
+    {
+      "location": "check_bridge.py:172; witness.py:traced_verify",
+      "claim": "Warunek dok\u0142adnie tych samych uporz\u0105dkowanych \u015bcian wraz z niezmienionymi bindingami i pe\u0142nym publicznym sprawdzeniem zamyka brakuj\u0105c\u0105 implikacj\u0119, zamiast ukrywa\u0107 j\u0105 jako hipotez\u0119. Na obu historycznych i obu \u015bwie\u017cych poprawnych dowodach zaobserwowano dok\u0142adnie jedno wywo\u0142anie public.verify_bundle na kompletnych dw\u00f3ch przypadkach."
+    }
+  ],
+  "decisive_counterexample": {
+    "producer": {
+      "producer": "real-existing-TS",
+      "cases": 2,
+      "leaves": 8,
+      "sameContextForEntireBundle": true
+    },
+    "byteIdenticalToPriorGenuineTSProof": true,
+    "sha256": "4efad90aef0b47da8c070fc0d3e456f2d0b5ddf0d8ae46c4a2298ae681924986",
+    "public": {
+      "passed": true,
+      "cases": 2,
+      "leaves": 8,
+      "samples": 10
+    },
+    "fixedBridge": {
+      "exception": "ValueError",
+      "reason": "ordered reference triangle mismatch"
+    },
+    "originalFPlane": "z=0",
+    "control0Z": "9/131072",
+    "PLStartZ": "9/131072",
+    "curveAtHalfZ": "73731/2147483648",
+    "oldBridge": {
+      "passed": true,
+      "controlsChecked": 8,
+      "idealDerivativeIdentity": true,
+      "idealG1": "exact coefficient identity",
+      "actualRationalAndPL": "approximations, NOT exact G1",
+      "maxControlErrorSquaredUpper": "81/17179869184",
+      "minIdealBarycentricLower": "0",
+      "nonstraightDeterminants": [
+        [
+          "-1/128",
+          "0"
+        ],
+        [
+          "-1/128",
+          "0"
+        ]
+      ],
+      "publicVerifier": {
+        "passed": true,
+        "cases": 2,
+        "leaves": 8,
+        "samples": 10
+      },
+      "deltaPlusTau": "1/200",
+      "existingBudget": "1/200",
+      "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+    }
+  },
+  "historicalOriginals": {
+    "straight": {
+      "verification": {
+        "summary": {
+          "passed": true,
+          "controlsChecked": 8,
+          "idealDerivativeIdentity": true,
+          "idealG1": "exact coefficient identity",
+          "actualRationalAndPL": "approximations, NOT exact G1",
+          "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+          "minIdealBarycentricLower": "0",
+          "nonstraightDeterminants": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "publicVerifier": {
+            "passed": true,
+            "cases": 2,
+            "leaves": 2,
+            "samples": 4
+          },
+          "deltaPlusTau": "1/200",
+          "existingBudget": "1/200",
+          "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+        },
+        "completePublicVerifierCalls": 1
+      },
+      "geometry": {
+        "sameOrderedFaces": true,
+        "idealWorldFromSameTriangle": true,
+        "rationalWorldFromSameTriangle": true,
+        "controls": 8
+      }
+    },
+    "curved": {
+      "verification": {
+        "summary": {
+          "passed": true,
+          "controlsChecked": 8,
+          "idealDerivativeIdentity": true,
+          "idealG1": "exact coefficient identity",
+          "actualRationalAndPL": "approximations, NOT exact G1",
+          "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+          "minIdealBarycentricLower": "0",
+          "nonstraightDeterminants": [
+            [
+              "-1/128",
+              "0"
+            ],
+            [
+              "-1/128",
+              "0"
+            ]
+          ],
+          "publicVerifier": {
+            "passed": true,
+            "cases": 2,
+            "leaves": 8,
+            "samples": 10
+          },
+          "deltaPlusTau": "1/200",
+          "existingBudget": "1/200",
+          "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+        },
+        "completePublicVerifierCalls": 1
+      },
+      "geometry": {
+        "sameOrderedFaces": true,
+        "idealWorldFromSameTriangle": true,
+        "rationalWorldFromSameTriangle": true,
+        "controls": 8
+      }
+    }
+  },
+  "freshPositive": {
+    "fresh-curved": {
+      "results": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\results.json",
+      "verification": {
+        "summary": {
+          "passed": true,
+          "controlsChecked": 8,
+          "idealDerivativeIdentity": true,
+          "idealG1": "exact coefficient identity",
+          "actualRationalAndPL": "approximations, NOT exact G1",
+          "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+          "minIdealBarycentricLower": "0",
+          "nonstraightDeterminants": [
+            [
+              "-1/128",
+              "0"
+            ],
+            [
+              "-1/128",
+              "0"
+            ]
+          ],
+          "publicVerifier": {
+            "passed": true,
+            "cases": 2,
+            "leaves": 8,
+            "samples": 10
+          },
+          "deltaPlusTau": "1/200",
+          "existingBudget": "1/200",
+          "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+        },
+        "completePublicVerifierCalls": 1
+      },
+      "geometry": {
+        "sameOrderedFaces": true,
+        "idealWorldFromSameTriangle": true,
+        "rationalWorldFromSameTriangle": true,
+        "controls": 8
+      },
+      "budget": {
+        "delta": "1/1000",
+        "tau": "1/250",
+        "delta_plus_tau": "1/200",
+        "existingCurveBudget": "1/200",
+        "hitUnchanged": "1/200",
+        "fullCQuantizationUnchanged": "1/100"
+      }
+    },
+    "fresh-straight": {
+      "results": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\results.json",
+      "verification": {
+        "summary": {
+          "passed": true,
+          "controlsChecked": 8,
+          "idealDerivativeIdentity": true,
+          "idealG1": "exact coefficient identity",
+          "actualRationalAndPL": "approximations, NOT exact G1",
+          "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+          "minIdealBarycentricLower": "0",
+          "nonstraightDeterminants": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "publicVerifier": {
+            "passed": true,
+            "cases": 2,
+            "leaves": 2,
+            "samples": 4
+          },
+          "deltaPlusTau": "1/200",
+          "existingBudget": "1/200",
+          "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+        },
+        "completePublicVerifierCalls": 1
+      },
+      "geometry": {
+        "sameOrderedFaces": true,
+        "idealWorldFromSameTriangle": true,
+        "rationalWorldFromSameTriangle": true,
+        "controls": 8
+      },
+      "budget": {
+        "delta": "1/1000",
+        "tau": "1/250",
+        "delta_plus_tau": "1/200",
+        "existingCurveBudget": "1/200",
+        "hitUnchanged": "1/200",
+        "fullCQuantizationUnchanged": "1/100"
+      }
+    }
+  },
+  "tests": {
+    "suites": {
+      "fixed-3-tests": {
+        "tests": 3,
+        "exit": 0,
+        "log": "fixed-3-tests.log"
+      },
+      "focused-tilted-regression": {
+        "tests": 1,
+        "exit": 0,
+        "log": "focused-tilted-regression.log"
+      },
+      "original-12-tests": {
+        "tests": 12,
+        "exit": 0,
+        "log": "original-12-tests.log"
+      },
+      "reviewer-4-tests": {
+        "tests": 4,
+        "exit": 0,
+        "log": "reviewer-4-tests.log"
+      }
+    },
+    "executions": 20,
+    "distinctTests": 19,
+    "note": "19 r\u00f3\u017cnych test\u00f3w: oryginalne 12 + poprawkowe 3 + recenzenckie 4; skupiony test tilted-F uruchomiony dodatkowo osobno, st\u0105d 20 wykona\u0144. Bez zmiany asercji."
+  },
+  "negative": {
+    "negative-coarse": {
+      "exit": 1,
+      "refusal": {
+        "status": "REFUSED",
+        "reason": "control error exceeds delta",
+        "delta": "1/1000",
+        "tau": "1/250",
+        "sum": "1/200",
+        "bits": 2,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {
+          "face": 0,
+          "control": 0,
+          "idealBarycentric": [
+            [
+              "15/32",
+              "0"
+            ],
+            [
+              "1/4",
+              "0"
+            ],
+            [
+              "9/32",
+              "0"
+            ]
+          ],
+          "rationalBarycentric": [
+            {
+              "n": "1",
+              "d": "4"
+            },
+            {
+              "n": "1",
+              "d": "4"
+            },
+            {
+              "n": "1",
+              "d": "2"
+            }
+          ],
+          "errorSquared": [
+            "49/1024",
+            "0"
+          ],
+          "deltaSquared": "1/1000000",
+          "errorSquaredMinusDeltaSquaredSign": 1
+        }
+      }
+    },
+    "negative-overspend": {
+      "exit": 1,
+      "refusal": {
+        "status": "REFUSED",
+        "reason": "delta + tau exceeds existing curve budget",
+        "delta": "1/500",
+        "tau": "1/250",
+        "sum": "3/500",
+        "bits": 16,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {}
+      }
+    },
+    "negative-cap": {
+      "exit": 2,
+      "refusal": {
+        "status": "UNKNOWN",
+        "reason": "dyadic grid cap: 1..64 bits",
+        "delta": "1/1000",
+        "tau": "1/250",
+        "sum": "1/200",
+        "bits": 257,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {}
+      }
+    }
+  },
+  "additionalFaceCoverage": {
+    "permutedF": "synthetic checker coverage; REFUSED",
+    "wrongG": "synthetic checker coverage; REFUSED",
+    "claimedAsActualTS": false
+  },
+  "budget": {
+    "delta": "1/1000",
+    "tau": "1/250",
+    "sum": "1/200",
+    "hitUnchanged": "1/200",
+    "fullCQuantizationUnchanged": "1/100",
+    "extraBudgetOrEpsilon": false
+  },
+  "limitations": [
+    "Tylko wsp\u00f3lny punkt szwu E jest zachowany dok\u0142adnie; daleki koniec zakrzywionego G ma z=1/32+sqrt(2)/8. Nie twierdzimy dok\u0142adno\u015bci wszystkich ko\u0144c\u00f3w span\u00f3w.",
+    "Oddzielne Q(sqrt(3)) to tylko jeden lokalny span; nie jest dowodem wieloszwowego \u0142a\u0144cucha ani ograniczenia wzrostu stopnia p\u00f3l.",
+    "Hashy u\u017cywamy do odtwarzalno\u015bci i niezmienno\u015bci lokalnych bajt\u00f3w, nie jako zewn\u0119trznego uwierzytelnienia to\u017csamo\u015bci \u017ar\u00f3d\u0142a.",
+    "Sta\u0142y lokalny checker nie jest utwardzonym parserem dowod\u00f3w z niezaufanych plik\u00f3w; nie zatwierdzono \u017ar\u00f3d\u0142owej/full-S admission, globalnej regularno\u015bci, prostoty, izotopii, Float32 C, cut/shell, Worker/App ani pe\u0142nego buildera.",
+    "Nie oceniano pracy r\u00f3wnoleg\u0142ych kandydat\u00f3w \u017ar\u00f3d\u0142owych ani rzeczywistego wire-effort modelu."
+  ],
+  "integrity": {
+    "inputsStart": "inputs-start.json",
+    "inputsEnd": "inputs-end.json",
+    "filesHashedBeforeAndAfter": 594,
+    "differentFiles": [],
+    "originalAndPriorAndFixedTreesImmutable": true,
+    "fiveAcceptedSourceVerifierModulesAndExistingCompilerUnchanged": true,
+    "allCopiedInputsStillByteIdentical": true,
+    "compiledJSAgainstPrior": {
+      "numerics.js": {
+        "sha256": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb",
+        "identical": true
+      },
+      "bezier.js": {
+        "sha256": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681",
+        "identical": true
+      },
+      "face-cubic.js": {
+        "sha256": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098",
+        "identical": true
+      }
+    },
+    "writesOutsideOwnedEvidenceRoot": false,
+    "repositoryGitWritesOrInstallsOrConfigOrSkillWrites": false
+  },
+  "execution": {
+    "node": "v24.19.0",
+    "pythonFlags": "-B / PYTHONDONTWRITEBYTECODE=1",
+    "commands": [
+      {
+        "name": "fixed-3-tests",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "-v",
+          "test_same_face_binding"
+        ],
+        "expectedExit": 0,
+        "exit": 0,
+        "stdout": "",
+        "stderr": "test_coverage_permuted_f_and_wrong_g_are_refused (test_same_face_binding.SameFaceBindingTests.test_coverage_permuted_f_and_wrong_g_are_refused) ... ok\ntest_original_ordered_reference_faces_pass (test_same_face_binding.SameFaceBindingTests.test_original_ordered_reference_faces_pass) ... ok\ntest_real_tilted_ts_proof_passes_public_but_bridge_refuses (test_same_face_binding.SameFaceBindingTests.test_real_tilted_ts_proof_passes_public_but_bridge_refuses) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.038s\n\nOK\n"
+      },
+      {
+        "name": "focused-tilted-regression",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "-v",
+          "test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F"
+        ],
+        "expectedExit": 0,
+        "exit": 0,
+        "stdout": "",
+        "stderr": "test_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.007s\n\nOK\n"
+      },
+      {
+        "name": "fresh-curved",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "spike.py",
+          "--curved"
+        ],
+        "expectedExit": 0,
+        "exit": 0,
+        "stdout": "{\"verdict\": \"VALIDATED_LOCAL\", \"results\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-0e7268d7cfa3\\\\results.json\", \"public_verifier\": {\"passed\": true, \"cases\": 2, \"leaves\": 8, \"samples\": 10}}\n",
+        "stderr": ""
+      },
+      {
+        "name": "fresh-straight",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "spike.py"
+        ],
+        "expectedExit": 0,
+        "exit": 0,
+        "stdout": "{\"verdict\": \"VALIDATED_LOCAL\", \"results\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-c3d01661dcdd\\\\results.json\", \"public_verifier\": {\"passed\": true, \"cases\": 2, \"leaves\": 2, \"samples\": 4}}\n",
+        "stderr": ""
+      },
+      {
+        "name": "fresh-tilted-fixed",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\check_bridge.py",
+          "--input",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\bridge-reference.json"
+        ],
+        "expectedExit": 1,
+        "exit": 1,
+        "stdout": "{\"passed\": false, \"status\": \"REFUSED\", \"reason\": \"ordered reference triangle mismatch\"}\n",
+        "stderr": ""
+      },
+      {
+        "name": "fresh-tilted-producer",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\producer.cjs",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\request.json",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\real-face-proof.json"
+        ],
+        "expectedExit": 0,
+        "exit": 0,
+        "stdout": "{\"producer\":\"real-existing-TS\",\"cases\":2,\"leaves\":8,\"sameContextForEntireBundle\":true}\n",
+        "stderr": ""
+      },
+      {
+        "name": "fresh-tilted-public",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+          "--input",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\real-face-proof.json"
+        ],
+        "expectedExit": 0,
+        "exit": 0,
+        "stdout": "{\"passed\": true, \"cases\": 2, \"leaves\": 8, \"samples\": 10}\n",
+        "stderr": ""
+      },
+      {
+        "name": "negative-cap",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "spike.py",
+          "--bits",
+          "257"
+        ],
+        "expectedExit": 2,
+        "exit": 2,
+        "stdout": "{\"status\": \"UNKNOWN\", \"reason\": \"dyadic grid cap: 1..64 bits\", \"evidence\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-c2a4ab69145d\\\\refusal.json\"}\n",
+        "stderr": ""
+      },
+      {
+        "name": "negative-coarse",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "spike.py",
+          "--curved",
+          "--bits",
+          "2"
+        ],
+        "expectedExit": 1,
+        "exit": 1,
+        "stdout": "{\"status\": \"REFUSED\", \"reason\": \"control error exceeds delta\", \"evidence\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-cc520a211c77\\\\refusal.json\"}\n",
+        "stderr": ""
+      },
+      {
+        "name": "negative-overspend",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "spike.py",
+          "--delta",
+          "1/500"
+        ],
+        "expectedExit": 1,
+        "exit": 1,
+        "stdout": "{\"status\": \"REFUSED\", \"reason\": \"delta + tau exceeds existing curve budget\", \"evidence\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-f03a250ccb1f\\\\refusal.json\"}\n",
+        "stderr": ""
+      },
+      {
+        "name": "original-12-tests",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "-v",
+          "test_spike"
+        ],
+        "expectedExit": 0,
+        "exit": 0,
+        "stdout": "",
+        "stderr": "test_coarse_control_approximation_refuses_with_preserved_evidence (test_spike.BridgeTests.test_coarse_control_approximation_refuses_with_preserved_evidence) ... ok\ntest_curved_pair_uses_nonzero_sampler_certificates (test_spike.BridgeTests.test_curved_pair_uses_nonzero_sampler_certificates) ... ok\ntest_dyadic_request_cap_is_unknown_before_allocation (test_spike.BridgeTests.test_dyadic_request_cap_is_unknown_before_allocation) ... ok\ntest_field_identity_sign_cancellation_and_budget_coverage (test_spike.BridgeTests.test_field_identity_sign_cancellation_and_budget_coverage) ... ok\ntest_independent_bridge_checker_binds_ideal_to_real_rational_proof (test_spike.BridgeTests.test_independent_bridge_checker_binds_ideal_to_real_rational_proof) ... ok\ntest_independent_checker_refuses_false_exact_g1_for_actual_approximation (test_spike.BridgeTests.test_independent_checker_refuses_false_exact_g1_for_actual_approximation) ... ok\ntest_independent_control_error_mutant_rejected_while_public_proof_passes (test_spike.BridgeTests.test_independent_control_error_mutant_rejected_while_public_proof_passes) ... ok\ntest_optional_second_local_radical_case_without_mixed_field (test_spike.BridgeTests.test_optional_second_local_radical_case_without_mixed_field) ... ok\ntest_overspent_existing_curve_budget_refuses_before_real_producer (test_spike.BridgeTests.test_overspent_existing_curve_budget_refuses_before_real_producer) ... ok\ntest_real_rational_approximant_does_not_claim_exact_g1 (test_spike.BridgeTests.test_real_rational_approximant_does_not_claim_exact_g1) ... ok\ntest_single_cli_path_publishes_independent_joint_bridge_check (test_spike.BridgeTests.test_single_cli_path_publishes_independent_joint_bridge_check) ... ok\ntest_straight_reference_through_real_ts_and_public_verifier (test_spike.BridgeTests.test_straight_reference_through_real_ts_and_public_verifier) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 5.039s\n\nOK\n"
+      },
+      {
+        "name": "reviewer-4-tests",
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+        "argv": [
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "-v",
+          "test_review_regression"
+        ],
+        "expectedExit": 0,
+        "exit": 0,
+        "stdout": "",
+        "stderr": "test_canonical_control_error_corruption_rejected_with_real_proof_unchanged (test_review_regression.IndependentAdversarialTests.test_canonical_control_error_corruption_rejected_with_real_proof_unchanged) ... ok\ntest_canonical_false_actual_G1_rejected (test_review_regression.IndependentAdversarialTests.test_canonical_false_actual_G1_rejected) ... ok\ntest_nonzero_interval_straddling_zero_is_unknown_not_equality (test_review_regression.IndependentAdversarialTests.test_nonzero_interval_straddling_zero_is_unknown_not_equality) ... ok\ntest_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.029s\n\nOK\n"
+      }
+    ],
+    "witness": "witness.py",
+    "witnessResults": "witness-results.json",
+    "replayNote": "run_tests.py i witness.py u\u017cywaj\u0105 exclusive creation. Aby powt\u00f3rzy\u0107 wszystkie statyczne testy, skopiuj zachowane niezmienione pliki wej\u015bciowe do NOWEGO katalogu scratch; nie uruchamiaj ponownie w katalogu z istniej\u0105cymi mutantami."
+  },
+  "issuesEncountered": [
+    {
+      "severity": "nonblocking",
+      "description": "Opcjonalny odczyt Git HEAD przez subprocess zwr\u00f3ci\u0142 WinError 5. Nie oparto werdyktu na nowo odczytanym HEAD/statusie. Stan pi\u0119ciu rzeczywi\u015bcie u\u017cytych modu\u0142\u00f3w i kompilatora potwierdzaj\u0105 hashe start/end oraz zgodno\u015b\u0107 skompilowanych JS z pierwotnym review."
+    }
+  ],
+  "artifacts": [
+    "review.json",
+    "witness.py",
+    "witness-results.json",
+    "prepare.py",
+    "run_tests.py",
+    "commands-and-results.json",
+    "copy-and-change-comparison.json",
+    "inputs-start.json",
+    "inputs-end.json",
+    "check_bridge.py.diff",
+    "README.md.diff",
+    "*.command.json",
+    "*.log",
+    "fresh-tilted-witness/",
+    "runs/",
+    "compiled/"
+  ]
+}

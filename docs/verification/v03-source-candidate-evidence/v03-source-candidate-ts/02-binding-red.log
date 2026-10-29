@@ -1,0 +1,27 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 4ms
+ × tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 2ms
+   → store.resolveFace is not a function
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  17:50:37
+   Duration  167ms (transform 32ms, setup 0ms, import 45ms, tests 7ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx
+TypeError: store.resolveFace is not a function
+ ❯ tests/v03-source-candidate.test.ts:62:22
+     60|   m.positions.fill(100); m.indices.fill(0);
+     61|   const ctx = context(), q = (n: bigint, d = 1n) => rational(n, d, ctx…
+     62|   const face = store.resolveFace(h, 1, ctx);
+       |                      ^
+     63|   expect(face.sourceFace).toBe(1); expect(face.vertexIDs).toEqual([0, …
+     64|   expect(face.positionBits).toEqual([[0x40000000, 0, 0x80000000], [0x4…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

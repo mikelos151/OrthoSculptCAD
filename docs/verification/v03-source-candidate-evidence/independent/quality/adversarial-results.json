@@ -1,0 +1,104 @@
+{
+  "scope": "M0c3a bounded synthetic security/lifecycle/resource witnesses only",
+  "runtime": {
+    "node": "v24.19.0",
+    "nodeOptions": "--max-old-space-size=128 --max-semi-space-size=8"
+  },
+  "artifactHashesStart": {
+    "trimline/source-candidate.js": "d1a0b92e6889e1e14f471c71d787c3c722fca2bd17246c79eff9142403e45346",
+    "trimline/numerics.js": "03d032e8c8707d2ae2505bedc2a67d4678544328a71ef2c89cdb7b2184cc0098",
+    "trimline/face-cubic.js": "25860e9844b120d0f3319fecbbd97e44513cf2f3edb0e9ef3d20ccfbd5fbb985",
+    "trimline/bezier.js": "2eedbb5a503f13391521bd93ffa4d7c02f24ac8800a74fe0f772596067497cde",
+    "io/validation.js": "69481176fd753e7a2fc75cb26c8c6a46f5de60916147e51d23a22580531bf751"
+  },
+  "artifactHashesEnd": {
+    "trimline/source-candidate.js": "d1a0b92e6889e1e14f471c71d787c3c722fca2bd17246c79eff9142403e45346",
+    "trimline/numerics.js": "03d032e8c8707d2ae2505bedc2a67d4678544328a71ef2c89cdb7b2184cc0098",
+    "trimline/face-cubic.js": "25860e9844b120d0f3319fecbbd97e44513cf2f3edb0e9ef3d20ccfbd5fbb985",
+    "trimline/bezier.js": "2eedbb5a503f13391521bd93ffa4d7c02f24ac8800a74fe0f772596067497cde",
+    "io/validation.js": "69481176fd753e7a2fc75cb26c8c6a46f5de60916147e51d23a22580531bf751"
+  },
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "results": [
+    {
+      "id": "ownership-exact-range-native-shadow-immunity",
+      "status": "PASS"
+    },
+    {
+      "id": "deep-frozen-no-buffer-no-private-mesh-publication",
+      "status": "PASS"
+    },
+    {
+      "id": "private-authority-json-structuredclone-foreign-and-primitives",
+      "status": "PASS"
+    },
+    {
+      "id": "busy-closed-authentication-error-priority-no-getters",
+      "status": "PASS"
+    },
+    {
+      "id": "rejected-native-view-brands-and-buffer-lifetimes",
+      "status": "PASS"
+    },
+    {
+      "id": "shape-descriptors-and-fixed-field-traversal",
+      "status": "PASS"
+    },
+    {
+      "id": "whole-snapshot-validation-not-only-local-face",
+      "status": "PASS"
+    },
+    {
+      "id": "face-ordinal-before-context-controls-coercion",
+      "status": "PASS"
+    },
+    {
+      "id": "same-context-exhaustion-and-original-error-classes",
+      "status": "PASS"
+    },
+    {
+      "id": "preallocation-whole-budget-direct-encodeInto",
+      "status": "PASS"
+    },
+    {
+      "id": "allocation-failure-injection-rollback-2",
+      "status": "PASS"
+    },
+    {
+      "id": "allocation-failure-injection-rollback-5",
+      "status": "PASS"
+    },
+    {
+      "id": "dispose-pending-real-native-sha-failure-injection-false",
+      "status": "PASS"
+    },
+    {
+      "id": "dispose-pending-real-native-sha-failure-injection-true",
+      "status": "PASS"
+    },
+    {
+      "id": "h1-release-while-h2-pending-cannot-retire-h2-or-clear-busy",
+      "status": "PASS"
+    },
+    {
+      "id": "sha-operational-failure-injection-sanitized-rollback-throw",
+      "status": "PASS"
+    },
+    {
+      "id": "sha-operational-failure-injection-sanitized-rollback-reject",
+      "status": "PASS"
+    },
+    {
+      "id": "validator-allocation-failure-injection-remains-operational",
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "No full suite, browser, whole-project compiler, real patient data, admission, RSS/GC proof or native cancellation claim.",
+    "Native SHA gates are test-only delay wrappers; rejected hash/allocation/validator cases are explicitly failure injection.",
+    "Runtime artifacts supplied by parent; this run does not claim their original compile was clean.",
+    "Reservation internals and weak-retired nonretention additionally audited statically, not externally introspected."
+  ]
+}

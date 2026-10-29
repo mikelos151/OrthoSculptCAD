@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_source_candidate_oracle.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_base_preimage_matches_manual_byte_witness (test_v03_source_candidate_oracle.OracleTests.test_base_preimage_matches_manual_byte_witness) ... FAIL\ntest_f32_integer_decode_known_dyadics_and_extremes (test_v03_source_candidate_oracle.OracleTests.test_f32_integer_decode_known_dyadics_and_extremes) ... ok\n\n======================================================================\nFAIL: test_base_preimage_matches_manual_byte_witness (test_v03_source_candidate_oracle.OracleTests.test_base_preimage_matches_manual_byte_witness)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_source_candidate_oracle.py\", line 19, in test_base_preimage_matches_manual_byte_witness\n    self.assertTrue(callable(getattr(oracle, 'canonical_bytes', None)), 'missing canonical serializer')\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : missing canonical serializer\n\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nFAILED (failures=1)\n"
+}

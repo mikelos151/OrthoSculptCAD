@@ -1,0 +1,143 @@
+{
+  "scope": "M0c3a owned source candidate and independent synthetic oracle only; not audited S or product acceptance",
+  "status": "ACCEPTED M0c3a owned-source-candidate primitive ONLY; not audited S, full trimline, release or clinical acceptance",
+  "acceptedRuntimeBaseline": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+  "inputFiles": {
+    "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188",
+    "tests/reference/v03_source_candidate_oracle.py": "39244a4056d8e081c7a89b43b9aa7fde220c3c3f879addf8e92c0253105015e8",
+    "tests/reference/test_v03_source_candidate_oracle.py": "2153073511ba578c7456c04e95091fcbc1b3543bfa4fb6486ffb46bcf4fb7c3b",
+    "tests/fixtures/v03-source-candidate-oracle.json": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9"
+  },
+  "parentCheckedAllInputHashes": true,
+  "focusedNodeTests": {
+    "passed": 20,
+    "evidence": "full-unit-memory-bounded.json: all assertions in tests/v03-source-candidate.test.ts passed"
+  },
+  "actualInteroperability": {
+    "assertion": "interoperates directly with every untouched independent Python oracle case and face",
+    "passed": true,
+    "cases": 31,
+    "orderedFaces": 121,
+    "fixtureUntouched": true,
+    "method": "Live capture/describe/resolveFace values compared directly against independent expected digest, stamp, ordered IDs, raw F32 bits and exact n/d; all cases and all faces enumerated. No producer payload translation or invented standalone export."
+  },
+  "parentPython": {
+    "focusedTests": 7,
+    "allReferenceTests": 71,
+    "exitCode": 0,
+    "log": "v03-source-candidate-parent/python-all.log"
+  },
+  "parentTypecheck": {
+    "command": "node node_modules/typescript/bin/tsc --noEmit",
+    "processOnlyNodeOptions": "--max-old-space-size=512 --max-semi-space-size=8",
+    "exitCode": 0,
+    "log": "v03-source-candidate-parent/typecheck-memory-bounded.log",
+    "separateExportExperiment": "An optional explicit CJS compile used non-strict flags and returned TS2322 at source-candidate.ts:119. That failed command is retained, not counted as a passed build. The actual project typecheck above passed; no code was changed to accommodate the wrong export command."
+  },
+  "npmAudit": {
+    "exitCode": 0,
+    "vulnerabilities": 0,
+    "log": "v03-source-candidate-parent/npm-audit.json"
+  },
+  "fullParentRegression": {
+    "accepted": true,
+    "initialAttempt": "Interrupted Node workers and Chromium spawn failures due allocation errors; incomplete JSON retained, not treated as a completed suite.",
+    "boundedAttempt": {
+      "total": 1208,
+      "passed": 1204,
+      "failed": 4,
+      "pending": 0,
+      "exitCode": 1,
+      "processOnlyNodeOptions": "--max-old-space-size=256 --max-semi-space-size=8",
+      "workers": 1,
+      "fileParallelism": false,
+      "realWorkersEnabled": true,
+      "realReportPdfEnabled": true,
+      "failureLocation": "All four failures are existing tests/v02-reports-long-code.test.ts cases. PyMuPDF 2.0 imports the installed layout package, which initializes ONNX sessions; actual errors report bad allocation. Font/PDF assertions were not removed, bypassed or replaced.",
+      "json": "v03-source-candidate-parent/full-unit-memory-bounded.json"
+    }
+  },
+  "resourceDiagnostics": {
+    "initialSnapshot": {
+      "totalPhysicalBytes": 33752997888,
+      "availablePhysicalBytes": 9494704128,
+      "commitLimitBytes": 50932867072,
+      "availableCommitBytes": 1444225024
+    },
+    "laterSnapshot": {
+      "totalPhysicalBytes": 33752997888,
+      "availablePhysicalBytes": 10631745536,
+      "commitLimitBytes": 50932867072,
+      "availableCommitBytes": 324440064
+    },
+    "diagnosis": "Windows commit pressure is distinct from available physical RAM. Node heap caps improved coverage but did not permit the native ONNX/PDF import to finish.",
+    "isolationAttempt": "Installed the same pymupdf==2.0 core wheel with --no-deps into a NEW project-local textcore cache. Its import also raised MemoryError, so it is NOT claimed as a working PDF environment or a replacement accepted test run. Existing cache/global Python untouched.",
+    "userQuestion": "Asked to free unused applications or defer full tests; clarification timed out without an answer. No consent to terminate unrelated processes or change Windows/pagefile settings was inferred.",
+    "unrelatedApplicationsStopped": false,
+    "globalNodeOrWindowsConfigurationChanged": false,
+    "mostRecentAvailableCommitBytes": 236691456
+  },
+  "independentReviews": {
+    "batch": "deleg_86c5fcb9",
+    "specMathInterop": "SCOPED_PASS, no concrete blockers",
+    "qualityLifecycleResources": "SCOPED_PASS, no concrete blockers",
+    "qualityActualWitnesses": 18,
+    "specFrozenInputHashesVerifiedByParent": 7,
+    "parentRepeatedPublicProofVerification": {
+      "passed": true,
+      "cases": 8,
+      "leaves": 148,
+      "samples": 156
+    },
+    "strictSubsetCompile": "Independent real compiler exit0; source unchanged. This is distinct from the earlier parent non-strict export-command failure.",
+    "nativePreimages": "Reviewer compared all31 actual native WebCrypto inputs byte-for-byte with a third independent serializer; witness-results.json records equality.",
+    "evidenceIndex": "docs/verification/v03-source-candidate-evidence/independent-index.json",
+    "selectedArchivedFiles": 26,
+    "nonBlockingSuggestion": "Parameterize the oracle CLI test output root; deferred, not changed after review.",
+    "scope": "Candidate module/oracle only, not complete parent regression, source admission, App or clinical acceptance"
+  },
+  "evidenceIndex": "docs/verification/v03-source-candidate-evidence/index.json",
+  "archivedAuthorAndParentFiles": 70,
+  "notEstablished": [
+    "audited full source admission, shared global ledger or Worker publication fences",
+    "complete smooth curve, cut, shell, collar or App integration",
+    "native executable, clinical safety or manufacturing readiness"
+  ],
+  "byteTransport": {
+    "report": "docs/verification/v03-source-candidate-byte-roundtrip.json",
+    "metadataIndex": "docs/verification/v03-source-candidate-evidence/byte-transport-index.json",
+    "temporaryIndexSubsetPathsPerMode": 434,
+    "autocrlfModes": [
+      "true",
+      "false"
+    ],
+    "actualExportedPythonGeneratorCases": 31,
+    "actualExportedPythonGeneratorFaces": 121,
+    "fixtureSha256": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9",
+    "realIndexEntriesUnchanged": true,
+    "globalAutocrlfUnchanged": true,
+    "caveat": "Temporary snapshot before these final status annotations; original annotations archived. No actual repository staging/commit, whole-repo checkout, exported Node/browser replay or full acceptance claim."
+  },
+  "finalParentAcceptance": {
+    "nodePassed": 1208,
+    "nodeFailed": 0,
+    "nodeSkipped": 0,
+    "pdfTargetedPassed": 7,
+    "pythonPassed": 71,
+    "typecheckExitCode": 0,
+    "npmVulnerabilities": 0,
+    "inputHashesUnchanged": true,
+    "processOnlyNodeHeapMiB": 256,
+    "semiSpaceMiB": 8,
+    "originalPdfEnvironment": "node_modules/.cache/orthosculpt-report-python, unchanged complete pymupdf2.0 environment",
+    "realWorkersEnabled": true,
+    "realReportPdfEnabled": true,
+    "codeOrAssertionsChangedToPass": false,
+    "evidenceIndex": "docs/verification/v03-source-candidate-evidence/resume-index.json",
+    "resourceBlockerResolvedForThisRun": true,
+    "availableCommitBytesBeforeRerun": 2989686784,
+    "frozenDistSha256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd",
+    "scope": "Candidate storage/binding/oracle only. All prior failed attempts remain historical evidence."
+  }
+}

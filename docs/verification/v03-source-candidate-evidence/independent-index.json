@@ -1,0 +1,136 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/quality/adversarial-results.json",
+      "sha256": "04fd3dd666b1c43bd97474faf98cb42301674f0864febb54a3f4597e909f3dc0",
+      "bytes": 3631
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/quality/adversarial.cjs",
+      "sha256": "97df72922a4174a1249de4c6e6d3517d78fe8d5000f66a99c527defa71f408c9",
+      "bytes": 15422
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/quality/commands.json",
+      "sha256": "2d42440cf41fdba1690ed30e833b9fb815b1c1e8b75041fd635add2b0c586a79",
+      "bytes": 1673
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/quality/hashes-end.json",
+      "sha256": "c4f02de30415027c0f5dbc2c8e885dbe5e38cb34e17c1b6e97bde85f382405be",
+      "bytes": 776
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/quality/hashes-start.json",
+      "sha256": "c4f02de30415027c0f5dbc2c8e885dbe5e38cb34e17c1b6e97bde85f382405be",
+      "bytes": 776
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/quality/review.json",
+      "sha256": "0a1d3e14ae64b096f6dc6a64fca3ae1851725d580eef58e7244a728417c651d7",
+      "bytes": 8836
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/quality/static-scan.json",
+      "sha256": "7b479ce83df577b25428f00e21e8e70c529284ab0189414292446535242a1237",
+      "bytes": 1109
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/actual-face-proof.json",
+      "sha256": "ee6ba58a800303e32dc7f789d43e24f5623c1df660c5a8cb2b93fe6caa2e4242",
+      "bytes": 327393
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/AppData/Local/hermes/cache/scratch/v03-source-candidate-py/cli-fixture.json",
+      "sha256": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9",
+      "bytes": 207897
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/compiled/io/validation.js",
+      "sha256": "69481176fd753e7a2fc75cb26c8c6a46f5de60916147e51d23a22580531bf751",
+      "bytes": 3191
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/compiled/trimline/bezier.js",
+      "sha256": "2eedbb5a503f13391521bd93ffa4d7c02f24ac8800a74fe0f772596067497cde",
+      "bytes": 6226
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/compiled/trimline/face-cubic.js",
+      "sha256": "25860e9844b120d0f3319fecbbd97e44513cf2f3edb0e9ef3d20ccfbd5fbb985",
+      "bytes": 3789
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/compiled/trimline/numerics.js",
+      "sha256": "03d032e8c8707d2ae2505bedc2a67d4678544328a71ef2c89cdb7b2184cc0098",
+      "bytes": 8961
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/compiled/trimline/source-candidate.js",
+      "sha256": "d1a0b92e6889e1e14f471c71d787c3c722fca2bd17246c79eff9142403e45346",
+      "bytes": 13154
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/compiled/types.js",
+      "sha256": "d43aa81f5bc89faa359e0f97c814ba25155591ff078fbb9bfd40f8c7c9683230",
+      "bytes": 77
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/python-public-proof-verifier.json",
+      "sha256": "1e9f8046f7651105095e4a561a38b0a282e94cf380226517e46d7f7319998363",
+      "bytes": 74
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/python-unittest.log",
+      "sha256": "fb3ae9c68e0b9b39437ae2b51fe6b1a868b8c63383c695d50821ee6ad02ecfba",
+      "bytes": 1268
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/review.json",
+      "sha256": "9ebe68036a7148aaa86ae1d02cf32763f3310973cc45df9c3f83b186d368f358",
+      "bytes": 10940
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/run_review.py",
+      "sha256": "d4b079d4bf86dcb4becf3c23c2f7d7d34706375e07cb8f11b74b5306748960b4",
+      "bytes": 8090
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/runtime-actual.json",
+      "sha256": "776a73b8fa959b75b3d172d9aa8e6135ad5a6a7ecdc071e4bf014e121ddf4a35",
+      "bytes": 297454
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/runtime-results.json",
+      "sha256": "e74925941bed0e79c95618280883f10265b5ad2eb2c0bcbae918ef42f5759c7d",
+      "bytes": 919
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/runtime-witness.cjs",
+      "sha256": "392be90d38a457054b36c45b1d1d19c24ca98514991d27a12fe881ca6c9d70e4",
+      "bytes": 9911
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/runtime.log",
+      "sha256": "0ad54cf6e723453f9573a70d64effc6a6d5b48d863e06fe432713c80108ffb32",
+      "bytes": 968
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/strict-subset-compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/tsconfig.json",
+      "sha256": "41655b2376a2cb8b830c71feb712e62b521d145366d88e1c2da06aa987cf5afd",
+      "bytes": 565
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/independent/spec/witness-results.json",
+      "sha256": "5c96182a30e28b1a8ca82887845f106f4c11b913e04b2e045530f79010a222cd",
+      "bytes": 1955
+    }
+  ],
+  "count": 26,
+  "scope": "Two scoped independent reviews PASS; full parent PDF regression remains blocked"
+}

@@ -1,0 +1,40 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 4ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 5ms
+ × tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities 6ms
+   → expected error to match asymmetric matcher
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed (3)
+   Start at  17:51:42
+   Duration  213ms (transform 48ms, setup 0ms, import 69ms, tests 17ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "SOURCE_IN_USE",
+-   "message": "SOURCE_IN_USE",
+-   "name": "SourceCandidateError",
++ Error {
++   "message": "input getter",
+  }
+
+ ❯ tests/v03-source-candidate.test.ts:87:48
+     85|   let touched = 0;
+     86|   const hostile = Object.defineProperty({}, 'positions', { get() { tou…
+     87|   await expect(store.capture(hostile, stamp())).rejects.toThrowError(r…
+       |                                                ^
+     88|   const ctx = context();
+     89|   for (const fake of [{}, structuredClone(h), foreign, null, 1] as Sou…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

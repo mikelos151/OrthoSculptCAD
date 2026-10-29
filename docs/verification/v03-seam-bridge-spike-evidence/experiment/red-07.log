@@ -1,0 +1,19 @@
+test_dyadic_request_cap_is_unknown_before_allocation (test_spike.BridgeTests.test_dyadic_request_cap_is_unknown_before_allocation) ... FAIL
+
+======================================================================
+FAIL: test_dyadic_request_cap_is_unknown_before_allocation (test_spike.BridgeTests.test_dyadic_request_cap_is_unknown_before_allocation)
+----------------------------------------------------------------------
+spike.Unknown: bit budget
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\test_spike.py", line 84, in test_dyadic_request_cap_is_unknown_before_allocation
+    with self.assertRaisesRegex(spike.Unknown, 'dyadic.*cap'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "dyadic.*cap" does not match "bit budget"
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

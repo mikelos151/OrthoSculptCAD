@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    {
+      "severity": "non-blocking",
+      "file": "tests/reference/test_v03_source_candidate_oracle.py:208-234",
+      "description": "Test CLI zapisuje wynik do sztywno wskazanego katalogu autora. Warto umożliwić jawne wskazanie katalogu wyjściowego testów, aby niezależny reviewer lub CI nie musiał przekierowywać Path.home(). Nie jest to błąd store ani oracle.",
+      "evidence": "Wykonano wszystkie 7 oryginalnych testów, przekierowując wyłącznie Path.home() do przydzielonego katalogu reviewera; treść testów i wszystkie asercje pozostały niezmienione. Log: python-unittest.log."
+    }
+  ],
+  "summary": "Scoped PASS M0c3a: nie znaleziono konkretnego blokera zgodności specyfikacji, exact source bindingu ani whole-source oracle/interoperability. Rzeczywiste wykonanie potwierdziło 31 przypadków, 121 ścian, 28 digestów, 7 testów Python oraz 8 prawdziwych bound spans zaakceptowanych przez niezmieniony publiczny verifier Python. Nie jest to odbiór audytowanego S ani pełnej funkcji trimline.",
+  "verified": [
+    {
+      "requirement": "Literalne API i granica candidate",
+      "evidence": "Odczytano całe normative docs oraz 266 linii source-candidate.ts. API ma literalne nazwy i typy z §3; PositionBits jest strukturalnie zgodne przez tuple VertexIDs. Brak admit/audited/admission, zależności App/Worker/cut/shell/export. SourceDescription ma kind owned-source-candidate-v1, nie audited source."
+    },
+    {
+      "requirement": "Pełny canonical preimage zamiast face-local hash",
+      "evidence": "Przechwycono rzeczywiste dane wejściowe native WebCrypto SHA-256 dla wszystkich 31 przypadków. Każdy bajt porównano z oddzielnym stdlib Python serializerem, niezależnym od oracle i TS. Wszystkie digests i 121 faces zgodne z niezmienionym fixture; wykrywane są również zmiany odległych i nieużywanych V, indices, RGB, UV, texture, name, source i frame. Epoch/revision/generation pozostają poza digestem i występują w frozen stamp."
+    },
+    {
+      "requirement": "Raw F32 bits i exact dyadic decoder",
+      "evidence": "Niezależnie odczytano i przeliczono każde expected positionBits/triangle w całym fixture przez integer/Fraction, bez float(Fraction). Sprawdzono -0/+0, subnormal, min-normal, largest finite, signed dyadics, Unicode i brak normalizacji nazw. -0 i +0 mają ten sam Rational, lecz różne raw bits i whole-source digest."
+    },
+    {
+      "requirement": "Private owned snapshot i trójkątny ordinal",
+      "evidence": "Dla każdego z 31 live capture zmieniono caller positions/indices/colors/UV/name i revision przed await; późniejsze describe/resolveFace nadal odpowiadały oryginalnym danym. Wszystkie 121 ordinal/IDs/order/raw bits/exact triangle zgodne. Wszystkie wyniki są deep frozen, bez publicznych TypedArray/ArrayBuffer."
+    },
+    {
+      "requirement": "Runtime identity nie pochodzi z metadanych pliku",
+      "evidence": "31 store capture dało 31 różnych runtime sourceId, mimo powtarzających się digestów. Dodatkowe caller sourceId/sourceDigest/audited z rzucającymi getterami nie zostały odczytane. Autorytet jest w private WeakMap, a nie w description/hash/stringu lub TS brand."
+    },
+    {
+      "requirement": "Ten sam publiczny ctx/decoder/certifier i source-bound controls",
+      "evidence": "8 rzeczywistych bindFaceCubic: 72 wywołania publicznego fromFloat32Bits i 8 certifyFaceCubic z identycznym ctx bez resetu. Dla pierwszych 4 jawnie porównano tożsamość argumentów triangle i controls certifiera. Snapshoty fixture są mutowane przez callera przed publikacją. Mały exhausted ctx pozostaje wyczerpany przy kolejnym publicznym rational()."
+    },
+    {
+      "requirement": "Bliskie nieincydentne płaty i uporządkowane wagi",
+      "evidence": "Na rzeczywistym syntetycznym zamkniętym thin cuboid rozdzielonym o 1/1024 mm bind f=0 i f=2 zwrócił odpowiednio IDs [0,2,1] i [4,5,6] oraz różne dokładne współrzędne z. Zamiana B/C bez przestawienia wag zmieniła controls; odpowiednia permutacja wag odtworzyła world curve, ale nie ordered IDs ani sourceDigest."
+    },
+    {
+      "requirement": "Niezależna weryfikacja rzeczywistych producer payloads",
+      "evidence": "Bez aliasów i bez przepisywania danych containment/approximation utworzono literalny wrapper OrthoSculptFaceCubicProof/v1, serializując live native BigInt do literalnych n/d. Publiczny niezmieniony v03_face_cubic_verify.verify_bundle zaakceptował 8 przypadków, 148 leaves i 156 samples. Oddzielna mutacja off-plane control została odrzucona. Python inverse minor/residual i publiczny M0c1 verifier działają na faktycznym wyniku TS, nie na syntetycznej odpowiedzi."
+    },
+    {
+      "requirement": "Regeneracja fixture i testy oracle",
+      "evidence": "7/7 oryginalnych testów Python PASS; wykonany oryginalny generator CLI w dozwolonym scratch. oracle.generate_fixture() równe całemu literalnemu fixture. Nie zmieniano fixture ani nazw pól."
+    },
+    {
+      "requirement": "Walidacja frame bez fałszywego findingu",
+      "evidence": "Hipoteza o końcowych separatorach linii została obalona rzeczywistym wykonaniem: A+LF, CR, CRLF, U+2028, U+2029, spacja oraz puste frame wszystkie odrzucone INVALID_INPUT. Brak potwierdzonej wady."
+    }
+  ],
+  "files": {
+    "read_only_repo": "C:/Users/sandr/OrthoSculptCAD",
+    "owned_output_root": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-spec-review",
+    "reviewed_inputs": [
+      "docs/plans/v03-source-bound-spans-design.md",
+      "docs/plans/v03-source-candidate-oracle-contract.md",
+      "src/trimline/source-candidate.ts",
+      "tests/v03-source-candidate.test.ts",
+      "tests/reference/v03_source_candidate_oracle.py",
+      "tests/reference/test_v03_source_candidate_oracle.py",
+      "tests/fixtures/v03-source-candidate-oracle.json"
+    ],
+    "supporting_read_only_inputs": [
+      "src/types.ts",
+      "src/io/validation.ts",
+      "src/trimline/numerics.ts",
+      "src/trimline/face-cubic.ts",
+      "tests/reference/v03_face_cubic_verify.py",
+      "tsconfig.json",
+      "package.json"
+    ],
+    "created": [
+      "review.json",
+      "run_review.py",
+      "runtime-witness.cjs",
+      "tsconfig.json",
+      "compiled/ (real strict TypeScript output only)",
+      "runtime-actual.json",
+      "runtime-results.json",
+      "actual-face-proof.json",
+      "python-public-proof-verifier.json",
+      "witness-results.json",
+      "python-unittest.log",
+      "strict-subset-compile.log",
+      "runtime.log",
+      "AppData/Local/hermes/cache/scratch/v03-source-candidate-py/cli-fixture.json (original CLI test output, rooted inside owned directory)"
+    ],
+    "repo_files_modified": []
+  },
+  "commands": [
+    {
+      "command": "python -B C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-spec-review/run_review.py",
+      "exit_code": 0,
+      "results": "witness-results.json; 7 Python tests, independent whole-fixture calculation, strict subset compilation, actual native WebCrypto/TS runtime witnesses and unchanged public Python proof verification"
+    },
+    {
+      "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc -p C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-spec-review/tsconfig.json",
+      "exit_code": 0,
+      "scope": "Strict subset emit using unchanged actual source files and dependencies. strict/noUnusedLocals/noUnusedParameters/isolatedModules/ES2022 retained; CommonJS/moduleResolution=node used only for standalone witness loading, not a claim about full project build. noEmitOnError=true."
+    },
+    {
+      "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-spec-review/runtime-witness.cjs",
+      "exit_code": 0,
+      "results": "31 fixture cases, 121 resolved faces, 28 digests, 31 runtime IDs; 8 bound spans; 72 same-context decoder calls and 8 certifier calls"
+    }
+  ],
+  "hashes": {
+    "verified_at_start_and_end": true,
+    "all_equal_frozen_inputs": true,
+    "docs/plans/v03-source-bound-spans-design.md": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "docs/plans/v03-source-candidate-oracle-contract.md": "043c304fe5ebba2dc920fa858a2e7937dedd53ff71e53bbd61ff84fc9dea1b44",
+    "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188",
+    "tests/reference/v03_source_candidate_oracle.py": "39244a4056d8e081c7a89b43b9aa7fde220c3c3f879addf8e92c0253105015e8",
+    "tests/reference/test_v03_source_candidate_oracle.py": "2153073511ba578c7456c04e95091fcbc1b3543bfa4fb6486ffb46bcf4fb7c3b",
+    "tests/fixtures/v03-source-candidate-oracle.json": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9"
+  },
+  "scope": {
+    "branch": "feature/trimline-v03",
+    "head": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+    "verdict_applies_to": "M0c3a spec/math/whole-source oracle/real TS-Python focused interoperability on frozen inputs",
+    "not_claimed": [
+      "Pełna regresja, browser/PDF gates lub pełny projekt tsc: nie wykonywano w tej roli z powodu udokumentowanego presji system commit; własny strict subset compile zakończył się exit0.",
+      "Nie wykonano ponownie focused Vitest 20 ani 874 related tests; ich wynik autora nie jest przedstawiany jako własne wykonanie.",
+      "Primary lifecycle quality należy do innego reviewera. Odczytano całe lifecycle implementation/tests; nie znaleziono konkretnego konfliktu. Deferred native SHA wrappers w testach nie dowodzą anulowania WebCrypto.",
+      "maxOwnedBufferBytes liczy owned buffers i canonical preimage, nie RSS/cały RAM ani native crypto/GC. Brak claimu JS Proxy sandbox.",
+      "Digest zapewnia porównanie zawartości; sourceId/stamp/private handle stanowią osobną runtime authority. Recomputed plik z nowymi zgodnymi digestami nie staje się autentycznym starym źródłem.",
+      "Brak admission/audit pełnego S jest jawnym zakresem tego kroku, a nie nowym blockerem. SourceCandidate nie poświadcza etapu pre-cut, jednostek fizycznych, rejestracji, poprawności odległej geometrii ani seams/cut/shell/clinical safety."
+    ],
+    "writes": "Wyłącznie przydzielony owned scratch; bez source edits/staging/commits/reset/stash, bez odczytu prac innych reviewerów, bez zmian profiles/config/skills i bez instalacji dependencies.",
+    "resource_issues_encountered_in_own_execution": "Brak; wszystkie własne procesy zakończyły się exit0 przy process-local Node 128 MiB old-space / 8 MiB semi-space. Nie uruchamiano ciężkich bramek równolegle."
+  }
+}

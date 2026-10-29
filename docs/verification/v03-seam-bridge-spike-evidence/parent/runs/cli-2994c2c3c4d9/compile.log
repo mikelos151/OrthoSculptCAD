@@ -1,0 +1,3 @@
+$ node C:\Users\sandr\OrthoSculptCAD\node_modules\typescript\bin\tsc --target ES2020 --module commonjs --strict --skipLibCheck --outDir C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-parent\compiled C:\Users\sandr\OrthoSculptCAD\src\trimline\numerics.ts C:\Users\sandr\OrthoSculptCAD\src\trimline\bezier.ts C:\Users\sandr\OrthoSculptCAD\src\trimline\face-cubic.ts
+
+exit=0

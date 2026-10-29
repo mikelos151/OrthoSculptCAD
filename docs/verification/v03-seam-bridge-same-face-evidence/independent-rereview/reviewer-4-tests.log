@@ -1,0 +1,12 @@
+$ C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\python.exe -B -m unittest -v test_review_regression
+test_canonical_control_error_corruption_rejected_with_real_proof_unchanged (test_review_regression.IndependentAdversarialTests.test_canonical_control_error_corruption_rejected_with_real_proof_unchanged) ... ok
+test_canonical_false_actual_G1_rejected (test_review_regression.IndependentAdversarialTests.test_canonical_false_actual_G1_rejected) ... ok
+test_nonzero_interval_straddling_zero_is_unknown_not_equality (test_review_regression.IndependentAdversarialTests.test_nonzero_interval_straddling_zero_is_unknown_not_equality) ... ok
+test_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.029s
+
+OK
+
+exit=0

@@ -1,0 +1,32 @@
+{
+  "scope": "434-byte-path subset of a TEMPORARY Git index snapshot before final review-status annotations; not a complete repo checkout or App/Node/browser replay",
+  "results": [
+    {
+      "autocrlf": "true",
+      "bytePathsVerified": 434,
+      "actualExportedPythonGenerator": {
+        "bytes": 207897,
+        "caseCount": 31,
+        "faceCount": 121,
+        "sha256": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9"
+      },
+      "exitCode": 0
+    },
+    {
+      "autocrlf": "false",
+      "bytePathsVerified": 434,
+      "actualExportedPythonGenerator": {
+        "bytes": 207897,
+        "caseCount": 31,
+        "faceCount": 121,
+        "sha256": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9"
+      },
+      "exitCode": 0
+    }
+  ],
+  "realIndexUnchanged": true,
+  "globalAutocrlfUnchanged": true,
+  "worktreeSnapshotBytesUnchangedAtVerification": true,
+  "stagedOrCommittedToRealIndex": false,
+  "resourceGate": "Complete parent PDF regression remains blocked; no clinical/admission approval"
+}

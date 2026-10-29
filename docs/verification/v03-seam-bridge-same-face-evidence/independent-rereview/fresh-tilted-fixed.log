@@ -1,0 +1,4 @@
+$ C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\python.exe -B C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-same-face-rereview\check_bridge.py --input C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-same-face-rereview\fresh-tilted-witness\bridge-reference.json
+{"passed": false, "status": "REFUSED", "reason": "ordered reference triangle mismatch"}
+
+exit=1

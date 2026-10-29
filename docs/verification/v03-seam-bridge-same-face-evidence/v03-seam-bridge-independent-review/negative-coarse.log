@@ -1,0 +1,4 @@
+$ C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\python.exe -B spike.py --curved --bits 2
+{"status": "REFUSED", "reason": "control error exceeds delta", "evidence": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\runs\\cli-dbc8e881c26e\\refusal.json"}
+
+exit=1

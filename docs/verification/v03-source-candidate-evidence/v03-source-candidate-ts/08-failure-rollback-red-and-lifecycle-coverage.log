@@ -1,0 +1,102 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 7ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 6ms
+ ✓ tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities 3ms
+ ✓ tests/v03-source-candidate.test.ts > preflights descriptor shapes, bounded metadata and ordinary fixed native view ranges 3ms
+ ✓ tests/v03-source-candidate.test.ts > validates the private whole snapshot before hashing, including distant coordinates and attrs 1ms
+ ✓ tests/v03-source-candidate.test.ts > reserves whole S plus canonical preimage before the first owned buffer allocation 5ms
+ ✓ tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=false) 64ms
+ ✓ tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=true) 60ms
+ × tests/v03-source-candidate.test.ts > rolls back copy failure injection as sanitized UNAVAILABLE, allowing a fresh capture 6ms
+   → expected error to match asymmetric matcher
+ × tests/v03-source-candidate.test.ts > rolls back preimage failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+   → expected error to match asymmetric matcher
+ × tests/v03-source-candidate.test.ts > rolls back sha-reject failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+   → expected error to match asymmetric matcher
+ × tests/v03-source-candidate.test.ts > rolls back sha-throw failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+   → expected error to match asymmetric matcher
+ ✓ tests/v03-source-candidate.test.ts > releasing retired h1 during real pending capture h2 cannot cancel h2 or free its reservation 1ms
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 9 passed (13)
+   Start at  17:57:24
+   Duration  411ms (transform 65ms, setup 0ms, import 86ms, tests 160ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > rolls back copy failure injection as sanitized UNAVAILABLE, allowing a fresh capture
+ FAIL  tests/v03-source-candidate.test.ts > rolls back preimage failure injection as sanitized UNAVAILABLE, allowing a fresh capture
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "UNAVAILABLE",
+-   "message": "UNAVAILABLE",
+-   "name": "SourceCandidateError",
++ RangeError {
++   "message": "injected allocation failure private details",
+  }
+
+ ❯ tests/v03-source-candidate.test.ts:254:48
+    252|     return nativeDigest(algorithm, data);
+    253|   });
+    254|   try { await expect(store.capture(m, stamp())).rejects.toThrowError(r…
+       |                                                ^
+    255|   finally { sha.mockRestore(); vi.unstubAllGlobals(); }
+    256|   const h = await store.capture(m, stamp()); expect(store.describe(h).…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > rolls back sha-reject failure injection as sanitized UNAVAILABLE, allowing a fresh capture
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "UNAVAILABLE",
+-   "message": "UNAVAILABLE",
+-   "name": "SourceCandidateError",
++ Error {
++   "message": "injected rejected hash private details",
+  }
+
+ ❯ tests/v03-source-candidate.test.ts:254:48
+    252|     return nativeDigest(algorithm, data);
+    253|   });
+    254|   try { await expect(store.capture(m, stamp())).rejects.toThrowError(r…
+       |                                                ^
+    255|   finally { sha.mockRestore(); vi.unstubAllGlobals(); }
+    256|   const h = await store.capture(m, stamp()); expect(store.describe(h).…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > rolls back sha-throw failure injection as sanitized UNAVAILABLE, allowing a fresh capture
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "UNAVAILABLE",
+-   "message": "UNAVAILABLE",
+-   "name": "SourceCandidateError",
++ Error {
++   "message": "injected synchronous hash failure private details",
+  }
+
+ ❯ tests/v03-source-candidate.test.ts:254:48
+    252|     return nativeDigest(algorithm, data);
+    253|   });
+    254|   try { await expect(store.capture(m, stamp())).rejects.toThrowError(r…
+       |                                                ^
+    255|   finally { sha.mockRestore(); vi.unstubAllGlobals(); }
+    256|   const h = await store.capture(m, stamp()); expect(store.describe(h).…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+

@@ -1,0 +1,4 @@
+$ node C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-same-face-rereview\producer.cjs C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-same-face-rereview\runs\cli-c3d01661dcdd\request.json C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-same-face-rereview\runs\cli-c3d01661dcdd\real-face-proof.json
+{"producer":"real-existing-TS","cases":2,"leaves":2,"sameContextForEntireBundle":true}
+
+exit=0

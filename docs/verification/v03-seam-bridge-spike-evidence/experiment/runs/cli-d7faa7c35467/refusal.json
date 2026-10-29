@@ -1,0 +1,48 @@
+{
+  "status": "REFUSED",
+  "reason": "control error exceeds delta",
+  "delta": "1/1000",
+  "tau": "1/250",
+  "sum": "1/200",
+  "bits": 2,
+  "budget": "1/200",
+  "producerCalled": false,
+  "details": {
+    "face": 0,
+    "control": 0,
+    "idealBarycentric": [
+      [
+        "15/32",
+        "0"
+      ],
+      [
+        "1/4",
+        "0"
+      ],
+      [
+        "9/32",
+        "0"
+      ]
+    ],
+    "rationalBarycentric": [
+      {
+        "n": "1",
+        "d": "4"
+      },
+      {
+        "n": "1",
+        "d": "4"
+      },
+      {
+        "n": "1",
+        "d": "2"
+      }
+    ],
+    "errorSquared": [
+      "49/1024",
+      "0"
+    ],
+    "deltaSquared": "1/1000000",
+    "errorSquaredMinusDeltaSquaredSign": 1
+  }
+}

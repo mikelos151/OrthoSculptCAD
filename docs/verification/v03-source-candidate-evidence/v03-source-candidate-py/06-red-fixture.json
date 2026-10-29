@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_source_candidate_oracle.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_base_preimage_matches_manual_byte_witness (test_v03_source_candidate_oracle.OracleTests.test_base_preimage_matches_manual_byte_witness) ... ok\ntest_every_ordered_face_uses_raw_bits_and_exact_rationals (test_v03_source_candidate_oracle.OracleTests.test_every_ordered_face_uses_raw_bits_and_exact_rationals) ... ok\ntest_f32_integer_decode_known_dyadics_and_extremes (test_v03_source_candidate_oracle.OracleTests.test_f32_integer_decode_known_dyadics_and_extremes) ... ok\ntest_generated_matrix_literal_schema_and_whole_source_coverage (test_v03_source_candidate_oracle.OracleTests.test_generated_matrix_literal_schema_and_whole_source_coverage) ... FAIL\ntest_optional_attributes_and_metadata_match_manual_bytes (test_v03_source_candidate_oracle.OracleTests.test_optional_attributes_and_metadata_match_manual_bytes) ... ok\ntest_reference_input_validation_without_coercion_or_normalization (test_v03_source_candidate_oracle.OracleTests.test_reference_input_validation_without_coercion_or_normalization) ... ok\n\n======================================================================\nFAIL: test_generated_matrix_literal_schema_and_whole_source_coverage (test_v03_source_candidate_oracle.OracleTests.test_generated_matrix_literal_schema_and_whole_source_coverage)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_source_candidate_oracle.py\", line 135, in test_generated_matrix_literal_schema_and_whole_source_coverage\n    self.assertTrue(callable(getattr(oracle, 'generate_fixture', None)), 'missing bounded fixture generator')\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : missing bounded fixture generator\n\n----------------------------------------------------------------------\nRan 6 tests in 0.003s\n\nFAILED (failures=1)\n"
+}

@@ -1,0 +1,18 @@
+{
+  "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\v03-source-bound-spans-design.md": {
+    "sha256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "bytes": 34727
+  },
+  "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\source-candidate.ts": {
+    "sha256": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "bytes": 14852
+  },
+  "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\v03-source-candidate.test.ts": {
+    "sha256": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188",
+    "bytes": 31339
+  },
+  "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\v03-source-candidate-oracle-contract.md": {
+    "sha256": "043c304fe5ebba2dc920fa858a2e7937dedd53ff71e53bbd61ff84fc9dea1b44",
+    "bytes": 3999
+  }
+}

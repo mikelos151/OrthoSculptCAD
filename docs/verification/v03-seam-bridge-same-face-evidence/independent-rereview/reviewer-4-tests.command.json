@@ -1,0 +1,16 @@
+{
+  "name": "reviewer-4-tests",
+  "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+  "argv": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_review_regression"
+  ],
+  "expectedExit": 0,
+  "exit": 0,
+  "stdout": "",
+  "stderr": "test_canonical_control_error_corruption_rejected_with_real_proof_unchanged (test_review_regression.IndependentAdversarialTests.test_canonical_control_error_corruption_rejected_with_real_proof_unchanged) ... ok\ntest_canonical_false_actual_G1_rejected (test_review_regression.IndependentAdversarialTests.test_canonical_false_actual_G1_rejected) ... ok\ntest_nonzero_interval_straddling_zero_is_unknown_not_equality (test_review_regression.IndependentAdversarialTests.test_nonzero_interval_straddling_zero_is_unknown_not_equality) ... ok\ntest_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.029s\n\nOK\n"
+}

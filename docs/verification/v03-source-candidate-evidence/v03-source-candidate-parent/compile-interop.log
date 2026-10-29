@@ -1,0 +1,1 @@
+src/trimline/source-candidate.ts(119,59): error TS2322: Type 'unknown' is not assignable to type '"synthetic" | "imported"'.

@@ -1,0 +1,15 @@
+{
+  "name": "fresh-tilted-fixed",
+  "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+  "argv": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-B",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\check_bridge.py",
+    "--input",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\fresh-tilted-witness\\bridge-reference.json"
+  ],
+  "expectedExit": 1,
+  "exit": 1,
+  "stdout": "{\"passed\": false, \"status\": \"REFUSED\", \"reason\": \"ordered reference triangle mismatch\"}\n",
+  "stderr": ""
+}

@@ -1,0 +1,35 @@
+{
+  "planPath": "docs/plans/v03-source-bound-spans-design.md",
+  "planSha256": "0e42fcef2782b0bc3aadbd5f1c9ce5e404db9094ddb07cf7e381a10d79b9fee7",
+  "files": [
+    {
+      "path": "docs/verification/v03-source-spans-design-evidence/seam-witness.py",
+      "sha256": "cdf2831efb5070e3ee43b9611bb1bc3b65035e3c633dda6ecb49c9857fb6a82e"
+    },
+    {
+      "path": "docs/verification/v03-source-spans-design-evidence/author-seam-witness.log",
+      "sha256": "e88c94e2f5fe67794aaa9c32f4653b9fc33319125642c978af8c446a593c70e9"
+    },
+    {
+      "path": "docs/verification/v03-source-spans-design-evidence/parent-seam-witness.log",
+      "sha256": "e88c94e2f5fe67794aaa9c32f4653b9fc33319125642c978af8c446a593c70e9"
+    }
+  ],
+  "sourceCandidateImplemented": false,
+  "scope": "Unaccepted M0c3 design and mathematical feasibility investigation only",
+  "acceptedCoreHead": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+  "parentWitnessExitCode": 0,
+  "finding": "Generic intrinsic G1 across the illustrated facets cannot be represented by nonzero rational-only control derivatives; this does not invalidate M0c1/M0c2 or prove every interpretation of smoothness impossible.",
+  "requirementCaveat": "Intrinsic G1 is a technical candidate definition, not silently imposed as an already frozen user requirement.",
+  "proposedExperiment": "Exact algebraic reference, certified rational control error plus existing sampler error within original 1/200mm approximation limit; feasibility pending.",
+  "experimentalBudgetPartition": {
+    "controlApproximation": "1/1000 mm",
+    "existingSampler": "1/250 mm",
+    "exactSum": "1/200 mm",
+    "extraBudget": false
+  },
+  "independentDesignReview": "PENDING deleg_c6226724 task1",
+  "standaloneTddExperiment": "PENDING deleg_c6226724 task2, scratch only",
+  "admission": "BLOCKED: candidate is not audited S; no App/cut/shell/export capability",
+  "sourceOrReleaseChanges": false
+}

@@ -1,0 +1,15 @@
+test_coarse_control_approximation_refuses_with_preserved_evidence (test_spike.BridgeTests.test_coarse_control_approximation_refuses_with_preserved_evidence) ... FAIL
+
+======================================================================
+FAIL: test_coarse_control_approximation_refuses_with_preserved_evidence (test_spike.BridgeTests.test_coarse_control_approximation_refuses_with_preserved_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-spike\test_spike.py", line 51, in test_coarse_control_approximation_refuses_with_preserved_evidence
+    self.assertIsNotNone(evidence, 'refusal must preserve its failed experiment')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : refusal must preserve its failed experiment
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (failures=1)

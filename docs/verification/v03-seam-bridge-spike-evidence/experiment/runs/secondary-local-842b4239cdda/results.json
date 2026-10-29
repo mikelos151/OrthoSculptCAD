@@ -1,0 +1,215 @@
+{
+  "field": "Q(sqrt(3))",
+  "scope": "ONE independent local cubic/control bound, not another two-span G1 chain",
+  "controlsChecked": 4,
+  "controls": [
+    {
+      "idealBarycentric": [
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "rationalBarycentric": [
+        {
+          "n": "1",
+          "d": "2"
+        },
+        {
+          "n": "1",
+          "d": "2"
+        },
+        {
+          "n": "0",
+          "d": "1"
+        }
+      ],
+      "idealWorld": [
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "errorSquared": [
+        "0",
+        "0"
+      ],
+      "independentErrorSquaredUpper": "0"
+    },
+    {
+      "idealBarycentric": [
+        [
+          "7/12",
+          "0"
+        ],
+        [
+          "5/12",
+          "-1/36"
+        ],
+        [
+          "0",
+          "1/36"
+        ]
+      ],
+      "rationalBarycentric": [
+        {
+          "n": "38229",
+          "d": "65536"
+        },
+        {
+          "n": "24153",
+          "d": "65536"
+        },
+        {
+          "n": "1577",
+          "d": "32768"
+        }
+      ],
+      "idealWorld": [
+        [
+          "7/12",
+          "1/36"
+        ],
+        [
+          "7/12",
+          "-1/36"
+        ],
+        [
+          "0",
+          "1/36"
+        ]
+      ],
+      "errorSquared": [
+        "29834655/2147483648",
+        "-1577/196608"
+      ],
+      "independentErrorSquaredUpper": "13707554448454880418177792845835013/22300745198530623141535718272648361505980416"
+    },
+    {
+      "idealBarycentric": [
+        [
+          "2/3",
+          "0"
+        ],
+        [
+          "29/96",
+          "-1/18"
+        ],
+        [
+          "1/32",
+          "1/18"
+        ]
+      ],
+      "rationalBarycentric": [
+        {
+          "n": "21845",
+          "d": "32768"
+        },
+        {
+          "n": "13491",
+          "d": "65536"
+        },
+        {
+          "n": "8355",
+          "d": "65536"
+        }
+      ],
+      "idealWorld": [
+        [
+          "67/96",
+          "1/18"
+        ],
+        [
+          "61/96",
+          "-1/18"
+        ],
+        [
+          "1/32",
+          "1/18"
+        ]
+      ],
+      "errorSquared": [
+        "238639395/4294967296",
+        "-6307/196608"
+      ],
+      "independentErrorSquaredUpper": "14471748830095509327714715893525143/22300745198530623141535718272648361505980416"
+    },
+    {
+      "idealBarycentric": [
+        [
+          "3/4",
+          "0"
+        ],
+        [
+          "7/32",
+          "-1/12"
+        ],
+        [
+          "1/32",
+          "1/12"
+        ]
+      ],
+      "rationalBarycentric": [
+        {
+          "n": "3",
+          "d": "4"
+        },
+        {
+          "n": "1219",
+          "d": "16384"
+        },
+        {
+          "n": "2877",
+          "d": "16384"
+        }
+      ],
+      "idealWorld": [
+        [
+          "25/32",
+          "1/12"
+        ],
+        [
+          "23/32",
+          "-1/12"
+        ],
+        [
+          "1/32",
+          "1/12"
+        ]
+      ],
+      "errorSquared": [
+        "33556891/268435456",
+        "-2365/32768"
+      ],
+      "independentErrorSquaredUpper": "3742440001728357178570632736145243/11150372599265311570767859136324180752990208"
+    }
+  ],
+  "independentCoefficientErrorCheck": true,
+  "maxControlErrorSquaredUpper": "14471748830095509327714715893525143/22300745198530623141535718272648361505980416",
+  "publicVerifier": {
+    "passed": true,
+    "cases": 1,
+    "leaves": 4,
+    "samples": 5
+  },
+  "deltaPlusTau": "1/200",
+  "seamEndpointExact": true,
+  "realProof": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\secondary-local-842b4239cdda\\real-face-proof.json",
+  "noMixedField": "Local independent per-control bounds do not compose radical expressions. Exact cross-seam construction, shared controls, route/regularity predicates may still require growing composita; NOT proven bounded."
+}

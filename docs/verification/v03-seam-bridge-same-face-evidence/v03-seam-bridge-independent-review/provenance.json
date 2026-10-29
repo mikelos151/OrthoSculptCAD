@@ -1,0 +1,113 @@
+{
+  "copied": [
+    {
+      "name": "README.md",
+      "sha256": "b96efdf65ef4fcf535b9dfb2c00ebb8ad02d2a20621c85de61ae8365512e0275",
+      "byteIdentical": true
+    },
+    {
+      "name": "spike.py",
+      "sha256": "fe9b17c1a63dc5724dee7fdc192d147dafdd5d14549026d15dd7176d82ee6842",
+      "byteIdentical": true
+    },
+    {
+      "name": "check_bridge.py",
+      "sha256": "12596842240efb39531ab82777fcbc306dd776887d9caee3de720d18d27827e8",
+      "byteIdentical": true
+    },
+    {
+      "name": "producer.cjs",
+      "sha256": "99baa84f3209ed99d7e0e58872149fd0ef750cdbfaff9c139980336dcd900bea",
+      "byteIdentical": true
+    },
+    {
+      "name": "secondary.py",
+      "sha256": "f495f72f007d0f89b1ae7f814c751cca9d9eeadeef784e160d6866e234bb14e6",
+      "byteIdentical": true
+    },
+    {
+      "name": "test_spike.py",
+      "sha256": "423f872752c99e30e647300c892115867f05b5a9af5c34531de23c90ecc7d9e7",
+      "byteIdentical": true
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\numerics.ts",
+      "expected": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25",
+      "actual": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25"
+    },
+    {
+      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\bezier.ts",
+      "expected": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e",
+      "actual": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\face-cubic.ts",
+      "expected": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1",
+      "actual": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1"
+    },
+    {
+      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py",
+      "expected": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df",
+      "actual": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df"
+    },
+    {
+      "path": "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py",
+      "expected": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c",
+      "actual": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\compiled\\numerics.js",
+      "expected": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb",
+      "actual": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\compiled\\bezier.js",
+      "expected": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681",
+      "actual": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\compiled\\face-cubic.js",
+      "expected": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098",
+      "actual": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\spike.py",
+      "expected": "fe9b17c1a63dc5724dee7fdc192d147dafdd5d14549026d15dd7176d82ee6842",
+      "actual": "fe9b17c1a63dc5724dee7fdc192d147dafdd5d14549026d15dd7176d82ee6842"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\check_bridge.py",
+      "expected": "12596842240efb39531ab82777fcbc306dd776887d9caee3de720d18d27827e8",
+      "actual": "12596842240efb39531ab82777fcbc306dd776887d9caee3de720d18d27827e8"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\producer.cjs",
+      "expected": "99baa84f3209ed99d7e0e58872149fd0ef750cdbfaff9c139980336dcd900bea",
+      "actual": "99baa84f3209ed99d7e0e58872149fd0ef750cdbfaff9c139980336dcd900bea"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\secondary.py",
+      "expected": "f495f72f007d0f89b1ae7f814c751cca9d9eeadeef784e160d6866e234bb14e6",
+      "actual": "f495f72f007d0f89b1ae7f814c751cca9d9eeadeef784e160d6866e234bb14e6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\test_spike.py",
+      "expected": "423f872752c99e30e647300c892115867f05b5a9af5c34531de23c90ecc7d9e7",
+      "actual": "423f872752c99e30e647300c892115867f05b5a9af5c34531de23c90ecc7d9e7"
+    }
+  ],
+  "historicalProofs": [
+    {
+      "label": "straight",
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-99d70b2cbaae\\real-face-proof.json",
+      "hashMatches": true
+    },
+    {
+      "label": "curved",
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-c6818b7b743d\\real-face-proof.json",
+      "hashMatches": true
+    }
+  ]
+}

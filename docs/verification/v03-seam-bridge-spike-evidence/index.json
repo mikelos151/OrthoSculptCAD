@@ -1,0 +1,351 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/parent-curved-cli.json",
+      "sha256": "844c4bb5909e61591dabf3b3274141225f626ac83b3f219b1102b7d3ceb28ce3",
+      "bytes": 242
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/parent-unittest.log",
+      "sha256": "dc767109a69520e3d398b7aff12020a46abdbccdb1a3f58546489b9caf808069",
+      "bytes": 1988
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/runs/cli-2994c2c3c4d9/bridge-reference.json",
+      "sha256": "3f0f2b25da5c33597ab5d513fc15a5f908572312f5b59e19eae937a7a15b88d0",
+      "bytes": 14254
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/runs/cli-2994c2c3c4d9/compile.log",
+      "sha256": "e628debafba4c56e9d8b8110aa16b4076963f582c1a4501b14276b26f5afa259",
+      "bytes": 394
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/runs/cli-2994c2c3c4d9/independent-bridge-verifier.log",
+      "sha256": "451ed4f4fe5cb12c8074f4b0fa89309685c0f8c5679c95c30cbb261d27957dcf",
+      "bytes": 980
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/runs/cli-2994c2c3c4d9/producer.log",
+      "sha256": "93d28f22c5f8f1f215175e6d9d53d46d5ac5aeed9c77f9d6d0c7b684bfb5a806",
+      "bytes": 416
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/runs/cli-2994c2c3c4d9/public-verifier.log",
+      "sha256": "28df146470dc9ec35b79b0f8879d0266e2ccc145c1998ac2e2f312246cdd1180",
+      "bytes": 355
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/runs/cli-2994c2c3c4d9/real-face-proof.json",
+      "sha256": "6d59a2734a0a787e5074da743af5f795b8646f6bc7c7f48d5cd6b8f31fbde2ff",
+      "bytes": 24299
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/runs/cli-2994c2c3c4d9/request.json",
+      "sha256": "59432d0922057e6b8586750aa0350a44655546a2fac8d05f19bade832b4369e8",
+      "bytes": 2822
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/parent/runs/cli-2994c2c3c4d9/results.json",
+      "sha256": "e3c06f59febb6179b8bf451d98feb0e8380a5479b4a8f8c6bada8b43db4e52a7",
+      "bytes": 15127
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/check_bridge.py",
+      "sha256": "12596842240efb39531ab82777fcbc306dd776887d9caee3de720d18d27827e8",
+      "bytes": 9094
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/compiled/bezier.js",
+      "sha256": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681",
+      "bytes": 6216
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/compiled/face-cubic.js",
+      "sha256": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098",
+      "bytes": 3779
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/compiled/numerics.js",
+      "sha256": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb",
+      "bytes": 8951
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-01.log",
+      "sha256": "d3c3c298fefc3c8248938024af535b34565bf409c8e4ea86d1385c0ae0019c3d",
+      "bytes": 255
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-02.log",
+      "sha256": "c4ccca422c4d6918e8ba2870af92fd19df8baa5b3cb92b134197e4573e695ef9",
+      "bytes": 391
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-03.log",
+      "sha256": "d5c86712ed3450ebf10b7209ad491909689804fbabb242e0eb9eb3c14eccfe08",
+      "bytes": 556
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-04.log",
+      "sha256": "0e21f07dcc087cb018471799dff520a357f04bea871f0b425e8b9d05a4f44108",
+      "bytes": 723
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-05.log",
+      "sha256": "907f1c8c5242107f2e1b2cb0e381cbb3304a749840471413678f243f5529e86e",
+      "bytes": 1037
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-06.log",
+      "sha256": "bfc8915c64245dc228b0dca12d6828539516e17a76d25924f57bdfb882601e7a",
+      "bytes": 1180
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-07.log",
+      "sha256": "ee7d5a871edd0120c2338088a27ae0fdf4c3338f3399d16ee8b4295472bf5099",
+      "bytes": 1319
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-08.log",
+      "sha256": "f4383f9a6c4aebe6754d90dd404609227703cc06a5035256ea832b120098010d",
+      "bytes": 1472
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-09.log",
+      "sha256": "2e9ba314238d35f397f962e7f0ab345f66c30fc10ea3d474dc1e42f373408d77",
+      "bytes": 1831
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/green-10.log",
+      "sha256": "d2f0f78de47e904074999a1c5bb88c774e1f2e114d0bbd93ee3ac66741114feb",
+      "bytes": 1988
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/producer.cjs",
+      "sha256": "99baa84f3209ed99d7e0e58872149fd0ef750cdbfaff9c139980336dcd900bea",
+      "bytes": 1426
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/README.md",
+      "sha256": "b96efdf65ef4fcf535b9dfb2c00ebb8ad02d2a20621c85de61ae8365512e0275",
+      "bytes": 13141
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-01.log",
+      "sha256": "d10e8aaf7b809a4a1295490a65495584bbc553d343f18f70e292fdd204294953",
+      "bytes": 1039
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-02-assertion.log",
+      "sha256": "df6b8a34c09abc51bdcaf25a79903f04dc3ff9bdd0255739ff4a734417410240",
+      "bytes": 1474
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-02.log",
+      "sha256": "f89cccdd609edf883815f09e798262a49cce6e1933726ae8c0d3db71deff6218",
+      "bytes": 1008
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-03.log",
+      "sha256": "1929f5988cc0149830f8b846ef41dc5a1843904ad5b922e1f7756470f31e46a9",
+      "bytes": 984
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-04.log",
+      "sha256": "0ddd0a435674aafb0dd4baf092fc3b89110ba0f4af4fff4a0b9a8bada491fb98",
+      "bytes": 1100
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-05.log",
+      "sha256": "78c032d5487b00bc93ef8dadbf34339f49eea408279b0c865358165dfa453d6b",
+      "bytes": 1054
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-06.log",
+      "sha256": "d8c2d1b70f07f27b3960cf2b9649bff6808a6bdeb18211b1299352010ccfedea",
+      "bytes": 8103
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-07.log",
+      "sha256": "411115db4988801a937cc1ad948b019d1f736616ffdea05ca0e803a9ee99fee8",
+      "bytes": 1028
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-08.log",
+      "sha256": "47ddfa9704d99dbfe02cae90478f9dfaaac022a80ba9bb85a1f35824458c1078",
+      "bytes": 1053
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-09.log",
+      "sha256": "d99061b9e2024201b95e61035c50b4e95d42a5ada5f0e7aa369f208db726c35c",
+      "bytes": 1019
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/red-10.log",
+      "sha256": "da6151561459d950c9a04c98d744936647d573b69afbad02bce32108318c7a2b",
+      "bytes": 8251
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/results.json",
+      "sha256": "5766b82145c4c79a0f35bab0af1f2e0ced1aeb8872bd2196187ecce97f7b1de4",
+      "bytes": 14990
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-99d70b2cbaae/bridge-reference.json",
+      "sha256": "a047a992a3ffd8ab19f2a5f7ff187bf0df266c19d8bdc1f3e5787c88100deb31",
+      "bytes": 14167
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-99d70b2cbaae/compile.log",
+      "sha256": "be5ee18d43d5c76c4ac7bd337129554d4e0dbe161878f814c26c5dedbe11fbf0",
+      "bytes": 393
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-99d70b2cbaae/independent-bridge-verifier.log",
+      "sha256": "de5498394d2775d4a370ba25b6e66883c6028112b6674e783f846044aae2ab73",
+      "bytes": 967
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-99d70b2cbaae/producer.log",
+      "sha256": "94075577c4dde83293c68888a5cce6eb23084c5dc93ee01bb95ccf9db2981405",
+      "bytes": 413
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-99d70b2cbaae/public-verifier.log",
+      "sha256": "2150006b28c1c54e115892539750a7408a03d61e04f3db2e3f5747e89badb13a",
+      "bytes": 353
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-99d70b2cbaae/real-face-proof.json",
+      "sha256": "fc010da504398c64066f68844d81a30f065693f4d712627eb860976d55df9ba9",
+      "bytes": 11646
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-99d70b2cbaae/request.json",
+      "sha256": "1c25508b81bf325e0f6f72d29342a84cc12ca9b354a0f0fb42a5732af890ec85",
+      "bytes": 2821
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-99d70b2cbaae/results.json",
+      "sha256": "e813336840acbf48d5eb0f20cfa7af9960bb63da6f53477e87e9aa9d2b6b3739",
+      "bytes": 15029
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-b648131cf46f/refusal.json",
+      "sha256": "9b8a3185f478687ca095c7133c1a9630f55479e6b1d73d80863dd5dd3325889e",
+      "bytes": 229
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-c6818b7b743d/bridge-reference.json",
+      "sha256": "bd367535fd522604d081de4941df5e7cd6426e18d132dfc8100e66679f5d1bec",
+      "bytes": 14245
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-c6818b7b743d/compile.log",
+      "sha256": "be5ee18d43d5c76c4ac7bd337129554d4e0dbe161878f814c26c5dedbe11fbf0",
+      "bytes": 393
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-c6818b7b743d/independent-bridge-verifier.log",
+      "sha256": "a26f0edd97fbd9f86ab5a3314d7ae02c4a32944cbdacc94ddc3b0d2508aa0736",
+      "bytes": 978
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-c6818b7b743d/producer.log",
+      "sha256": "b0f4667d2e40427e475a9e69cd95816cc479c933efe6c600fd5c1cd2d84228a2",
+      "bytes": 413
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-c6818b7b743d/public-verifier.log",
+      "sha256": "d195c6c47a05c17096b6a68f42974c4158bd7b1ba66ff6c43170bd072061e312",
+      "bytes": 354
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-c6818b7b743d/real-face-proof.json",
+      "sha256": "6d59a2734a0a787e5074da743af5f795b8646f6bc7c7f48d5cd6b8f31fbde2ff",
+      "bytes": 24299
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-c6818b7b743d/request.json",
+      "sha256": "59432d0922057e6b8586750aa0350a44655546a2fac8d05f19bade832b4369e8",
+      "bytes": 2822
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-c6818b7b743d/results.json",
+      "sha256": "54e642ac34627c1020b809918774cd22ddcf39dedc3220865f0038e2f547d675",
+      "bytes": 15118
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-d7faa7c35467/refusal.json",
+      "sha256": "2d29e5a1929c64da98b8d41918c29ceb2d7a64ac218679f14502aa35e8cb7729",
+      "bytes": 778
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/cli-f757841405ae/refusal.json",
+      "sha256": "2ffc4960990c99534ee1b19b5d0e900fe9c873a6a18b212e4d7ddb0180fe5860",
+      "bytes": 217
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/secondary-local-842b4239cdda/compile.log",
+      "sha256": "be5ee18d43d5c76c4ac7bd337129554d4e0dbe161878f814c26c5dedbe11fbf0",
+      "bytes": 393
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/secondary-local-842b4239cdda/producer.log",
+      "sha256": "3be2819bc23497680a1f2fa20cdc28eb20654aa8e5912bfc195c86a08dfe5ddc",
+      "bytes": 437
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/secondary-local-842b4239cdda/public-verifier.log",
+      "sha256": "ab13e35904191057694a4c7f4dbdb6eb62168eceb94e39936daa2c88e4f31cc3",
+      "bytes": 365
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/secondary-local-842b4239cdda/real-face-proof.json",
+      "sha256": "8134adbd3a643e1b76dfcc0f3307ec263a814307796f6ccc38439bb35335235e",
+      "bytes": 12351
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/secondary-local-842b4239cdda/request.json",
+      "sha256": "5e59202e6ba51b986693f4172b8deecf731bc654721679d1c355aa58c2330ff7",
+      "bytes": 1468
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/runs/secondary-local-842b4239cdda/results.json",
+      "sha256": "f07d0be6b7441cb791e8eb9ceb8d1aad30776c90a8a923e29e71b46e422a7925",
+      "bytes": 4355
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/secondary.py",
+      "sha256": "f495f72f007d0f89b1ae7f814c751cca9d9eeadeef784e160d6866e234bb14e6",
+      "bytes": 3893
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/spike.py",
+      "sha256": "fe9b17c1a63dc5724dee7fdc192d147dafdd5d14549026d15dd7176d82ee6842",
+      "bytes": 15231
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/experiment/test_spike.py",
+      "sha256": "423f872752c99e30e647300c892115867f05b5a9af5c34531de23c90ecc7d9e7",
+      "bytes": 7008
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/source-plan-initial-review/independent-math-review.json",
+      "sha256": "cc18a80f533dc8cbc4c7215b06c21d6c4ec43b9eec95ba127c1d791d4402fe51",
+      "bytes": 2446
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/source-plan-initial-review/independent-math-review.py",
+      "sha256": "0ae48d26c143622ce9e6a9308661d7d05a88fce706dfde6a4ecd9b83f3759871",
+      "bytes": 5634
+    },
+    {
+      "path": "docs/verification/v03-seam-bridge-spike-evidence/source-plan-initial-review/review.json",
+      "sha256": "24ecd3d179a65c0aa0f325959cf4b8843aeefe1eeb2e6ff0a6849f3584d1f6f1",
+      "bytes": 8823
+    }
+  ],
+  "evidenceCount": 69,
+  "evidenceBytes": 323378
+}

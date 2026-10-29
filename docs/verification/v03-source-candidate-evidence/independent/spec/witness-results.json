@@ -1,0 +1,47 @@
+{
+  "fixture_cases": 31,
+  "fixture_faces": 121,
+  "fixture_unique_digests": 28,
+  "original_python_tests": 7,
+  "original_python_tests_passed": true,
+  "cli_test_path_redirect_only": true,
+  "all_native_sha_preimages_independently_equal": true,
+  "public_proof_verifier": {
+    "passed": true,
+    "cases": 8,
+    "leaves": 148,
+    "samples": 156
+  },
+  "actual_off_plane_mutation_rejected": true,
+  "accepted_illegal_frames_rejected_by_python": [],
+  "end_hashes_unchanged": true,
+  "hashes": {
+    "docs/plans/v03-source-bound-spans-design.md": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "docs/plans/v03-source-candidate-oracle-contract.md": "043c304fe5ebba2dc920fa858a2e7937dedd53ff71e53bbd61ff84fc9dea1b44",
+    "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188",
+    "tests/reference/v03_source_candidate_oracle.py": "39244a4056d8e081c7a89b43b9aa7fde220c3c3f879addf8e92c0253105015e8",
+    "tests/reference/test_v03_source_candidate_oracle.py": "2153073511ba578c7456c04e95091fcbc1b3543bfa4fb6486ffb46bcf4fb7c3b",
+    "tests/fixtures/v03-source-candidate-oracle.json": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9"
+  },
+  "commands": [
+    {
+      "argv": [
+        "node",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "-p",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-spec-review\\tsconfig.json"
+      ],
+      "exit_code": 0,
+      "log": "strict-subset-compile.log"
+    },
+    {
+      "argv": [
+        "node",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-spec-review\\runtime-witness.cjs"
+      ],
+      "exit_code": 0,
+      "log": "runtime.log"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "finding": "BRIDGE-SAMEFACE-1: original real tilted-F proof passes public verifier but must fail reference bridge",
+  "originalReview": "FAIL deleg_59716de2 task2; original evidence retained",
+  "fixScope": "Only scratch checker exact ordered F/G comparison; budgets/TS/public verifier unchanged",
+  "fixerRequestedProvider": "openai-codex",
+  "fixerRequestedModel": "gpt-6.1-terra",
+  "fixerRequestedReasoning": "high",
+  "fixerReturnedInitModel": "gpt-6.1-terra",
+  "fixerExitCode": 0,
+  "routingCaveat": "Accepted route and declared init model, not inference-wire attestation. First resume rejected changed --in before inference; retry omitted incompatible creation override. Failed stderr retained in scratch.",
+  "fixedCheckerSha256": "7ffa29798bfdb9fb750be766ee950755c271b53902f5f6d192f025cc933e7835",
+  "parentTests": 19,
+  "parentTestsExitCode": 0,
+  "parentCurved": {
+    "verdict": "VALIDATED_LOCAL",
+    "results": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-fixed-parent\\runs\\cli-035e39967449\\results.json",
+    "public_verifier": {
+      "passed": true,
+      "cases": 2,
+      "leaves": 8,
+      "samples": 10
+    }
+  },
+  "independentRereview": "PASS deleg_a37895f7; BRIDGE-SAMEFACE-1 CLOSED_LOCAL_ONLY. No production or full-builder approval.",
+  "independentRereviewUniqueTests": 19,
+  "independentRereviewTestExecutions": 20,
+  "parentRecheckedInputFiles": 594,
+  "independentReviewSha256": "7f5f5413fa912bcc305c18ec9c3b607c6bb1a59879f7597c996809503e99da25",
+  "independentEvidenceIndex": "docs/verification/v03-seam-bridge-same-face-evidence/independent-rereview-index.json",
+  "parentGitReadback": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9; five accepted source/verifier modules have no diff. This resolves only the optional Git-read observation, not a full-repository acceptance.",
+  "endpointScope": "Only shared E is exactly preserved; far curved-G endpoint is algebraic. Rational curve and PL are not exact intrinsic G1.",
+  "scope": "Local two-span experiment only; not full-builder, mixed-field chain, source admission, global simplicity/isotopy, cut/shell/collar or clinical validation",
+  "evidenceIndex": "docs/verification/v03-seam-bridge-same-face-evidence/index.json"
+}

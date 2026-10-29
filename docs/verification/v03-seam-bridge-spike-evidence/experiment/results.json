@@ -1,0 +1,504 @@
+{
+  "format": "ScratchSeamBridgeFeasibilityRunSummary-v1",
+  "verdict": "VALIDATED",
+  "validated_scope": "Exact algebraic intrinsic-G1 reference, dyadic control bridge and real existing TS sampler on TWO specific supplied synthetic F32 triangles, including genuinely curved pair.",
+  "full_builder_verdict": "PARTIAL / NOT CERTIFIED",
+  "repo_head": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+  "repo_branch": "feature/trimline-v03",
+  "budget": {
+    "delta": "1/1000",
+    "tau": "1/250",
+    "delta_plus_tau": "1/200",
+    "existingCurveBudget": "1/200",
+    "hitUnchanged": "1/200",
+    "fullCQuantizationUnchanged": "1/100"
+  },
+  "primary": {
+    "straight": {
+      "results_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-99d70b2cbaae\\results.json",
+      "real_proof_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-99d70b2cbaae\\real-face-proof.json",
+      "realProofSha256": "fc010da504398c64066f68844d81a30f065693f4d712627eb860976d55df9ba9",
+      "public_verifier": {
+        "passed": true,
+        "cases": 2,
+        "leaves": 2,
+        "samples": 4
+      },
+      "independent_bridge_verifier": {
+        "passed": true,
+        "controlsChecked": 8,
+        "idealDerivativeIdentity": true,
+        "idealG1": "exact coefficient identity",
+        "actualRationalAndPL": "approximations, NOT exact G1",
+        "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+        "minIdealBarycentricLower": "0",
+        "nonstraightDeterminants": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "publicVerifier": {
+          "passed": true,
+          "cases": 2,
+          "leaves": 2,
+          "samples": 4
+        },
+        "deltaPlusTau": "1/200",
+        "existingBudget": "1/200",
+        "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+      },
+      "leavesPerSpan": [
+        1,
+        1
+      ],
+      "samplerMaxUpperSquared": [
+        "1/4831838208",
+        "11/19327352832"
+      ],
+      "actualRationalUnfoldedDeterminant": [
+        "134225919/2147483648",
+        "-94948677/2147483648"
+      ]
+    },
+    "curved": {
+      "results_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-c6818b7b743d\\results.json",
+      "real_proof_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-c6818b7b743d\\real-face-proof.json",
+      "realProofSha256": "6d59a2734a0a787e5074da743af5f795b8646f6bc7c7f48d5cd6b8f31fbde2ff",
+      "public_verifier": {
+        "passed": true,
+        "cases": 2,
+        "leaves": 8,
+        "samples": 10
+      },
+      "independent_bridge_verifier": {
+        "passed": true,
+        "controlsChecked": 8,
+        "idealDerivativeIdentity": true,
+        "idealG1": "exact coefficient identity",
+        "actualRationalAndPL": "approximations, NOT exact G1",
+        "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+        "minIdealBarycentricLower": "0",
+        "nonstraightDeterminants": [
+          [
+            "-1/128",
+            "0"
+          ],
+          [
+            "-1/128",
+            "0"
+          ]
+        ],
+        "publicVerifier": {
+          "passed": true,
+          "cases": 2,
+          "leaves": 8,
+          "samples": 10
+        },
+        "deltaPlusTau": "1/200",
+        "existingBudget": "1/200",
+        "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+      },
+      "leavesPerSpan": [
+        4,
+        4
+      ],
+      "samplerMaxUpperSquared": [
+        "209735681/79164837199872",
+        "279948083/52776558133248"
+      ],
+      "actualRationalUnfoldedDeterminant": [
+        "134225919/2147483648",
+        "-94948677/2147483648"
+      ]
+    }
+  },
+  "secondary_local": {
+    "field": "Q(sqrt(3))",
+    "scope": "ONE independent local cubic/control bound, not another two-span G1 chain",
+    "controlsChecked": 4,
+    "controls": [
+      {
+        "idealBarycentric": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "1",
+            "d": "2"
+          },
+          {
+            "n": "1",
+            "d": "2"
+          },
+          {
+            "n": "0",
+            "d": "1"
+          }
+        ],
+        "idealWorld": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "errorSquared": [
+          "0",
+          "0"
+        ],
+        "independentErrorSquaredUpper": "0"
+      },
+      {
+        "idealBarycentric": [
+          [
+            "7/12",
+            "0"
+          ],
+          [
+            "5/12",
+            "-1/36"
+          ],
+          [
+            "0",
+            "1/36"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "38229",
+            "d": "65536"
+          },
+          {
+            "n": "24153",
+            "d": "65536"
+          },
+          {
+            "n": "1577",
+            "d": "32768"
+          }
+        ],
+        "idealWorld": [
+          [
+            "7/12",
+            "1/36"
+          ],
+          [
+            "7/12",
+            "-1/36"
+          ],
+          [
+            "0",
+            "1/36"
+          ]
+        ],
+        "errorSquared": [
+          "29834655/2147483648",
+          "-1577/196608"
+        ],
+        "independentErrorSquaredUpper": "13707554448454880418177792845835013/22300745198530623141535718272648361505980416"
+      },
+      {
+        "idealBarycentric": [
+          [
+            "2/3",
+            "0"
+          ],
+          [
+            "29/96",
+            "-1/18"
+          ],
+          [
+            "1/32",
+            "1/18"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "21845",
+            "d": "32768"
+          },
+          {
+            "n": "13491",
+            "d": "65536"
+          },
+          {
+            "n": "8355",
+            "d": "65536"
+          }
+        ],
+        "idealWorld": [
+          [
+            "67/96",
+            "1/18"
+          ],
+          [
+            "61/96",
+            "-1/18"
+          ],
+          [
+            "1/32",
+            "1/18"
+          ]
+        ],
+        "errorSquared": [
+          "238639395/4294967296",
+          "-6307/196608"
+        ],
+        "independentErrorSquaredUpper": "14471748830095509327714715893525143/22300745198530623141535718272648361505980416"
+      },
+      {
+        "idealBarycentric": [
+          [
+            "3/4",
+            "0"
+          ],
+          [
+            "7/32",
+            "-1/12"
+          ],
+          [
+            "1/32",
+            "1/12"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "3",
+            "d": "4"
+          },
+          {
+            "n": "1219",
+            "d": "16384"
+          },
+          {
+            "n": "2877",
+            "d": "16384"
+          }
+        ],
+        "idealWorld": [
+          [
+            "25/32",
+            "1/12"
+          ],
+          [
+            "23/32",
+            "-1/12"
+          ],
+          [
+            "1/32",
+            "1/12"
+          ]
+        ],
+        "errorSquared": [
+          "33556891/268435456",
+          "-2365/32768"
+        ],
+        "independentErrorSquaredUpper": "3742440001728357178570632736145243/11150372599265311570767859136324180752990208"
+      }
+    ],
+    "independentCoefficientErrorCheck": true,
+    "maxControlErrorSquaredUpper": "14471748830095509327714715893525143/22300745198530623141535718272648361505980416",
+    "publicVerifier": {
+      "passed": true,
+      "cases": 1,
+      "leaves": 4,
+      "samples": 5
+    },
+    "deltaPlusTau": "1/200",
+    "seamEndpointExact": true,
+    "realProof": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\secondary-local-842b4239cdda\\real-face-proof.json",
+    "noMixedField": "Local independent per-control bounds do not compose radical expressions. Exact cross-seam construction, shared controls, route/regularity predicates may still require growing composita; NOT proven bounded.",
+    "results_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\secondary-local-842b4239cdda\\results.json"
+  },
+  "negatives": {
+    "coarse": {
+      "cli": {
+        "status": "REFUSED",
+        "reason": "control error exceeds delta",
+        "evidence": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-d7faa7c35467\\refusal.json"
+      },
+      "record": {
+        "status": "REFUSED",
+        "reason": "control error exceeds delta",
+        "delta": "1/1000",
+        "tau": "1/250",
+        "sum": "1/200",
+        "bits": 2,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {
+          "face": 0,
+          "control": 0,
+          "idealBarycentric": [
+            [
+              "15/32",
+              "0"
+            ],
+            [
+              "1/4",
+              "0"
+            ],
+            [
+              "9/32",
+              "0"
+            ]
+          ],
+          "rationalBarycentric": [
+            {
+              "n": "1",
+              "d": "4"
+            },
+            {
+              "n": "1",
+              "d": "4"
+            },
+            {
+              "n": "1",
+              "d": "2"
+            }
+          ],
+          "errorSquared": [
+            "49/1024",
+            "0"
+          ],
+          "deltaSquared": "1/1000000",
+          "errorSquaredMinusDeltaSquaredSign": 1
+        }
+      }
+    },
+    "overspent": {
+      "cli": {
+        "status": "REFUSED",
+        "reason": "delta + tau exceeds existing curve budget",
+        "evidence": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-b648131cf46f\\refusal.json"
+      },
+      "record": {
+        "status": "REFUSED",
+        "reason": "delta + tau exceeds existing curve budget",
+        "delta": "1/500",
+        "tau": "1/250",
+        "sum": "3/500",
+        "bits": 16,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {}
+      }
+    },
+    "cap": {
+      "cli": {
+        "status": "UNKNOWN",
+        "reason": "dyadic grid cap: 1..64 bits",
+        "evidence": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\runs\\cli-f757841405ae\\refusal.json"
+      },
+      "record": {
+        "status": "UNKNOWN",
+        "reason": "dyadic grid cap: 1..64 bits",
+        "delta": "1/1000",
+        "tau": "1/250",
+        "sum": "1/200",
+        "bits": 257,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {}
+      }
+    }
+  },
+  "unittest": {
+    "tests": 12,
+    "passed": true,
+    "log": "green-10.log"
+  },
+  "tdd_cycles": [
+    {
+      "red": "red-01.log",
+      "green": "green-01.log"
+    },
+    {
+      "red": "red-02-assertion.log",
+      "green": "green-02.log"
+    },
+    {
+      "red": "red-03.log",
+      "green": "green-03.log"
+    },
+    {
+      "red": "red-04.log",
+      "green": "green-04.log"
+    },
+    {
+      "red": "red-05.log",
+      "green": "green-05.log"
+    },
+    {
+      "red": "red-06.log",
+      "green": "green-06.log"
+    },
+    {
+      "red": "red-07.log",
+      "green": "green-07.log"
+    },
+    {
+      "red": "red-08.log",
+      "green": "green-08.log"
+    },
+    {
+      "red": "red-09.log",
+      "green": "green-09.log"
+    },
+    {
+      "red": "red-10.log",
+      "green": "green-10.log"
+    }
+  ],
+  "source_sha256": {
+    "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\numerics.ts": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\bezier.ts": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\face-cubic.ts": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\compiled\\numerics.js": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\compiled\\bezier.js": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\compiled\\face-cubic.js": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\spike.py": "fe9b17c1a63dc5724dee7fdc192d147dafdd5d14549026d15dd7176d82ee6842",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\check_bridge.py": "12596842240efb39531ab82777fcbc306dd776887d9caee3de720d18d27827e8",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\producer.cjs": "99baa84f3209ed99d7e0e58872149fd0ef750cdbfaff9c139980336dcd900bea",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\secondary.py": "f495f72f007d0f89b1ae7f814c751cca9d9eeadeef784e160d6866e234bb14e6",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-spike\\test_spike.py": "423f872752c99e30e647300c892115867f05b5a9af5c34531de23c90ecc7d9e7"
+  },
+  "nonclaims": [
+    "source binding/admission",
+    "generic mixed-radical construction",
+    "global route/regularity/simplicity/isotopy",
+    "root isolation/general algebraic kernel",
+    "full-C Float32 quantization and embedding",
+    "cut/shell/collar/app/clinical validation"
+  ],
+  "issues": [
+    "Delegation said public/tests/reference; actual existing verifiers found under tests/reference. Used those unmodified.",
+    "Initial curved RED raised explicit not-implemented refusal; preserved it and reran an assertion RED before implementing.",
+    "Old RED-era artifacts are intentionally retained, including pre-guard overspending success; only final CLI paths are acceptance evidence."
+  ]
+}

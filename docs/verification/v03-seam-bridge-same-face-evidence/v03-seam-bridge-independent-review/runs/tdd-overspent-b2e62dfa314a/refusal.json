@@ -1,0 +1,11 @@
+{
+  "status": "REFUSED",
+  "reason": "delta + tau exceeds existing curve budget",
+  "delta": "1/500",
+  "tau": "1/250",
+  "sum": "3/500",
+  "bits": 16,
+  "budget": "1/200",
+  "producerCalled": false,
+  "details": {}
+}

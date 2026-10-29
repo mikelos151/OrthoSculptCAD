@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reference",
+    "-p",
+    "test_v03_source_candidate_oracle.py",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "test_f32_integer_decode_known_dyadics_and_extremes (test_v03_source_candidate_oracle.OracleTests.test_f32_integer_decode_known_dyadics_and_extremes) ... FAIL\n\n======================================================================\nFAIL: test_f32_integer_decode_known_dyadics_and_extremes (test_v03_source_candidate_oracle.OracleTests.test_f32_integer_decode_known_dyadics_and_extremes)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\test_v03_source_candidate_oracle.py\", line 9, in test_f32_integer_decode_known_dyadics_and_extremes\n    self.assertTrue(callable(getattr(oracle, 'decode_f32', None)), 'missing integer F32 decoder')\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true : missing integer F32 decoder\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nFAILED (failures=1)\n"
+}

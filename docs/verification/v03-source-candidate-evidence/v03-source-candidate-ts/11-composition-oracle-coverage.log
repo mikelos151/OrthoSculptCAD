@@ -1,0 +1,27 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 5ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 5ms
+ ✓ tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities 3ms
+ ✓ tests/v03-source-candidate.test.ts > preflights descriptor shapes, bounded metadata and ordinary fixed native view ranges 6ms
+ ✓ tests/v03-source-candidate.test.ts > validates the private whole snapshot before hashing, including distant coordinates and attrs 1ms
+ ✓ tests/v03-source-candidate.test.ts > reserves whole S plus canonical preimage before the first owned buffer allocation 3ms
+ ✓ tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=false) 67ms
+ ✓ tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=true) 61ms
+ ✓ tests/v03-source-candidate.test.ts > rolls back copy failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+ ✓ tests/v03-source-candidate.test.ts > rolls back preimage failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+ ✓ tests/v03-source-candidate.test.ts > rolls back sha-reject failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+ ✓ tests/v03-source-candidate.test.ts > rolls back sha-throw failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+ ✓ tests/v03-source-candidate.test.ts > releasing retired h1 during real pending capture h2 cannot cancel h2 or free its reservation 1ms
+ ✓ tests/v03-source-candidate.test.ts > validates a triangle ordinal before decoding, context use or inspecting controls 1ms
+ ✓ tests/v03-source-candidate.test.ts > checks native typed-array kind rather than a spoofed ordinary prototype or tag 0ms
+ ✓ tests/v03-source-candidate.test.ts > uses the public decoder and real certifier on the same cumulative arithmetic context 2ms
+ ✓ tests/v03-source-candidate.test.ts > binds the requested nearby plate and preserves source ordering rather than nearest geometry 1ms
+ ✓ tests/v03-source-candidate.test.ts > interoperates directly with every untouched independent Python oracle case and face 182ms
+
+ Test Files  1 passed (1)
+      Tests  18 passed (18)
+   Start at  18:01:34
+   Duration  600ms (transform 78ms, setup 0ms, import 101ms, tests 343ms, environment 0ms)
+

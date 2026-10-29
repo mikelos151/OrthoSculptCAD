@@ -1,0 +1,29 @@
+{
+  "unchanged_review_inputs": true,
+  "scans": {
+    "src/trimline/source-candidate.ts": {
+      "credential_literal": [],
+      "dynamic_execution": [],
+      "network_or_telemetry": [],
+      "process_or_shell": [],
+      "exception_echo": [
+        {
+          "line": 69,
+          "text": "if (error instanceof RangeError) throw error;"
+        },
+        {
+          "line": 242,
+          "text": "if (error instanceof SourceCandidateError) throw error;"
+        }
+      ]
+    },
+    "tests/v03-source-candidate.test.ts": {
+      "credential_literal": [],
+      "dynamic_execution": [],
+      "network_or_telemetry": [],
+      "process_or_shell": [],
+      "exception_echo": []
+    }
+  },
+  "interpretation": "No secrets, dynamic execution, network/exfiltration, shell calls found. Two expected rethrows: private validationFailure propagates RangeError to outer capture, which sanitizes it to UNAVAILABLE; outer capture preserves its own SourceCandidateError codes. Closed store overrides both with STALE_SOURCE. Manual review found no backdoor or exception-detail echo."
+}

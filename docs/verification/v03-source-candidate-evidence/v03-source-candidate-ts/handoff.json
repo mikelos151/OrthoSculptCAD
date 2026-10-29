@@ -1,0 +1,771 @@
+{
+  "scope": "M0c3a owned SourceCandidateStore only; not independent acceptance or audited S",
+  "repository": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "branch": "feature/trimline-v03",
+  "head": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9",
+  "ownedFiles": {
+    "src/trimline/source-candidate.ts": {
+      "sha256": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+      "bytes": 14852
+    },
+    "tests/v03-source-candidate.test.ts": {
+      "sha256": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188",
+      "bytes": 31339
+    }
+  },
+  "plan": {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\v03-source-bound-spans-design.md",
+    "sha256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf"
+  },
+  "oracle": {
+    "path": "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\fixtures\\v03-source-candidate-oracle.json",
+    "sha256": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9",
+    "cases": 31,
+    "faces": 121,
+    "consumption": "Untouched generated JSON; direct live describe/resolve comparisons; integers checked before typed arrays; no Python implementation inspected"
+  },
+  "verification": {
+    "focused": {
+      "passed": 20,
+      "reportedTotal": 20
+    },
+    "related": {
+      "passed": 874,
+      "reportedTotal": 874
+    },
+    "typecheck": {
+      "exitCode": 0,
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-typecheck-serial-retry.log"
+    },
+    "sourceAndTestHashesMatchAllFinalSuccessfulRuns": true
+  },
+  "tdd": {
+    "initialExecutableRed": "01-capture-red-executable.log",
+    "verticalTracers": [
+      "01-capture",
+      "02-binding",
+      "03-lifecycle",
+      "04-preflight",
+      "05-private-validation",
+      "06-buffer-reservation",
+      "07-pending-dispose",
+      "08-failure-rollback",
+      "09-face-ordinal",
+      "10-intrinsic-kind",
+      "12-validator-allocation-error"
+    ],
+    "additionalCoverageNotClaimedAsRed": [
+      "retired h1 release during pending h2",
+      "same-context real public decoder/certifier composition",
+      "nearby plates and B/C ordering",
+      "independent Python fixture interoperability"
+    ],
+    "history": "runs.jsonl and per-run stdout/stderr logs retain real outcomes and then-current file hashes. Final related run also retains exact source/test byte snapshots; historical states were not retroactively fabricated."
+  },
+  "exercised": [
+    "Native WebCrypto SHA canonical whole-source preimage",
+    "Synchronous bit-owned exact subviews; intrinsic kind/buffer/range/resizable checks",
+    "Actual io assertMesh and assertTexture semantics on private snapshot",
+    "Public fromFloat32Bits and certifyFaceCubic with same cumulative ctx; real sampleCubic composition",
+    "Deep immutable outputs and opaque runtime handle authentication",
+    "Exact S+preimage budget boundaries and preallocation observation",
+    "Retirement, foreign/fake handles, closed/busy priorities, repeated release and pending h2",
+    "Gated real digest completion and clearly labelled rejection/allocation failure injection; dispose STALE_SOURCE wins"
+  ],
+  "issuesEncountered": [
+    {
+      "label": "01-capture-green-attempt",
+      "issue": "Canonical domain NUL length was one byte short; corrected using domain.length and independent SHA assertion passed."
+    },
+    {
+      "label": "10-intrinsic-kind-red",
+      "issue": "Vitest worker exited unexpectedly once. Immediate unchanged retry produced the intended concrete failing assertion; fixed native kind authentication and passed."
+    },
+    {
+      "label": "11-typecheck-before-coverage",
+      "issue": "ES2022 type declarations lack resizable ArrayBuffer constructor overload. Test now invokes the real native constructor via Reflect.construct; no config changed."
+    },
+    {
+      "label": "12-typecheck",
+      "issue": "Actual tsc process aborted with JS heap out-of-memory during concurrent execution. Unchanged serial retry exited 0."
+    }
+  ],
+  "limitsAndNotRun": [
+    "No source admission/audited:true, adapter, UI, Worker, cut/shell/export or dist/ZIP changes",
+    "No clinical or full-product claim; full regression and independent reviews remain parent-owned",
+    "Buffer-byte ledger is not total RSS/native crypto/GC accounting; no immediate GC or JS sandbox claim",
+    "Pending-lifecycle gates wrap real native digest completion, not invented success hashes; injected failures are explicitly labelled"
+  ],
+  "worktreeAtHandoff": "M .gitattributes\n?? docs/plans/v03-source-bound-spans-design.md\n?? docs/plans/v03-source-candidate-oracle-contract.md\n?? docs/verification/v03-seam-bridge-parent-results.json\n?? docs/verification/v03-seam-bridge-same-face-evidence/\n?? docs/verification/v03-seam-bridge-same-face-parent-results.json\n?? docs/verification/v03-seam-bridge-spike-evidence/\n?? docs/verification/v03-source-spans-design-evidence/\n?? docs/verification/v03-source-spans-design-results.json\n?? docs/verification/v03-source-spans-initial-status.json\n?? src/trimline/source-candidate.ts\n?? tests/fixtures/v03-source-candidate-oracle.json\n?? tests/reference/test_v03_source_candidate_oracle.py\n?? tests/reference/v03_source_candidate_oracle.py\n?? tests/v03-source-candidate.test.ts",
+  "stagedNames": "",
+  "writes": "Only the two named new repository files plus this owned scratch tree. No staging/commits/reset/stash; concurrent unrelated worktree paths not edited.",
+  "runs": [
+    {
+      "label": "01-capture-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "tests/v03-source-candidate.test.ts": "708a5783f62a60cd96d0b9698fff29ae21d6c26eba1a1ed98529a532ebc424e8"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\01-capture-red.log",
+      "logSha256": "609bbc99b73ee422a5760e4ab769f864dd76dba8835845bfac60018d02e18349",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  no tests"
+      ]
+    },
+    {
+      "label": "01-capture-red-executable",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "c1fee8757abd078aad216a6cf41d5162655f09cf8bb8db5fa9edc9989d668cd1",
+        "tests/v03-source-candidate.test.ts": "708a5783f62a60cd96d0b9698fff29ae21d6c26eba1a1ed98529a532ebc424e8"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\01-capture-red-executable.log",
+      "logSha256": "7f2b4fe674632242d91e196ece256d7c8d84e80ae6f6388e48f3d11d8e3bd352",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed (1)"
+      ]
+    },
+    {
+      "label": "01-capture-green-attempt",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "35efc0940920375291af2793644af2bbb8a4eb54fd689d9e3b6e8a33801ab7f7",
+        "tests/v03-source-candidate.test.ts": "708a5783f62a60cd96d0b9698fff29ae21d6c26eba1a1ed98529a532ebc424e8"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\01-capture-green-attempt.log",
+      "logSha256": "b5866c97860e55dedb98779f88f5bb05b9d5735c81674873d084a3dd8415bf94",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed (1)"
+      ]
+    },
+    {
+      "label": "01-capture-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "b6dfe0984321bbd5ba7b9ab491e25214aa77873a9044e64c77e40ed2368e9c30",
+        "tests/v03-source-candidate.test.ts": "708a5783f62a60cd96d0b9698fff29ae21d6c26eba1a1ed98529a532ebc424e8"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\01-capture-green.log",
+      "logSha256": "4222f5cfe6025986e583ff0accf322ab499f145866cde158346eaa97bf42559f",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  1 passed (1)"
+      ]
+    },
+    {
+      "label": "02-binding-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "b6dfe0984321bbd5ba7b9ab491e25214aa77873a9044e64c77e40ed2368e9c30",
+        "tests/v03-source-candidate.test.ts": "674c259c1c96a284232ecc944cc6b921edb1054c6b507a72a440c0c4eaea3f5a"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\02-binding-red.log",
+      "logSha256": "e263e12a6c2347187699abf220081864dcec35a4affd6f1d93135b61822a997b",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed | 1 passed (2)"
+      ]
+    },
+    {
+      "label": "02-binding-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "9d0a72be4fd17c5c339deb5682482d972d2351a74ca442b4aa728ffea449ed6c",
+        "tests/v03-source-candidate.test.ts": "674c259c1c96a284232ecc944cc6b921edb1054c6b507a72a440c0c4eaea3f5a"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\02-binding-green.log",
+      "logSha256": "7f261042496e609b4662838ef8af0d25f5dce55b65b2140f4cecca2d49c944b1",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  2 passed (2)"
+      ]
+    },
+    {
+      "label": "03-lifecycle-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "9d0a72be4fd17c5c339deb5682482d972d2351a74ca442b4aa728ffea449ed6c",
+        "tests/v03-source-candidate.test.ts": "61a0adb0d7d10a43d66a523c47a9abc455f34a792e90744353fff600bd98ed3d"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\03-lifecycle-red.log",
+      "logSha256": "9c5e1e1066fc5d5ab6fd841f72293a71a49c685249fe6e211fc33c4348dae4c8",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed | 2 passed (3)"
+      ]
+    },
+    {
+      "label": "03-lifecycle-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "db07e5b27642155de70b4adeb5cb43d46222d240b7c160a472603fa735582203",
+        "tests/v03-source-candidate.test.ts": "61a0adb0d7d10a43d66a523c47a9abc455f34a792e90744353fff600bd98ed3d"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\03-lifecycle-green.log",
+      "logSha256": "b75418c9cb8c40ae7b676439dd0c9021c06a2a263567568b83e2ef77ea39e15f",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  3 passed (3)"
+      ]
+    },
+    {
+      "label": "04-preflight-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "db07e5b27642155de70b4adeb5cb43d46222d240b7c160a472603fa735582203",
+        "tests/v03-source-candidate.test.ts": "0e507b2816f93c6c140b325cbdcd953fea2008c4abab22438aae9467b6bcdac9"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\04-preflight-red.log",
+      "logSha256": "eba55f61e242f9c71811084e130e97171754dd61bb1104b449c825cc80e062e8",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed | 3 passed (4)"
+      ]
+    },
+    {
+      "label": "04-preflight-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "185ae765270a2a36992e5a55987e31cbaf7b9b2a12a63f589fad909915c0d6e0",
+        "tests/v03-source-candidate.test.ts": "0e507b2816f93c6c140b325cbdcd953fea2008c4abab22438aae9467b6bcdac9"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\04-preflight-green.log",
+      "logSha256": "dd5c6c1d6711ef75853ee26bf4ae4c95eea3cd4f9659bb949cde5b8fd33bb175",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  4 passed (4)"
+      ]
+    },
+    {
+      "label": "05-private-validation-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "185ae765270a2a36992e5a55987e31cbaf7b9b2a12a63f589fad909915c0d6e0",
+        "tests/v03-source-candidate.test.ts": "b707e7b57dc2405f37c67e2abb890331d2cd28205bba90ad73e90c5ee8916d44"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\05-private-validation-red.log",
+      "logSha256": "58e46864569c04df1e6d75dafac52798336a2aa99a1fb66042cca3c1bb2c4b44",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed | 4 passed (5)"
+      ]
+    },
+    {
+      "label": "05-private-validation-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "e52d0b0f8be4fee7fbb38c023252c86647f2a4691f1dcec0884402a9f4969d29",
+        "tests/v03-source-candidate.test.ts": "b707e7b57dc2405f37c67e2abb890331d2cd28205bba90ad73e90c5ee8916d44"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\05-private-validation-green.log",
+      "logSha256": "6cfdf5585bed5f5079ab350ac04ca0ac5a479608ab35789cded9034ef30e0590",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  5 passed (5)"
+      ]
+    },
+    {
+      "label": "06-buffer-reservation-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "e52d0b0f8be4fee7fbb38c023252c86647f2a4691f1dcec0884402a9f4969d29",
+        "tests/v03-source-candidate.test.ts": "e429c0280b35a857c6f6bbbaa4315d9af8cc42db581cd0e0f6c71ea0600686cc"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\06-buffer-reservation-red.log",
+      "logSha256": "bea31f8243231e8f02044f1c9d8da0dfc815d4c16d589a821eb10d73c750581a",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed | 5 passed (6)"
+      ]
+    },
+    {
+      "label": "06-buffer-reservation-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "caddfd42dce74af2092d21a4e96df4d07517ef9e618c9d2ec0368267ffe12bc2",
+        "tests/v03-source-candidate.test.ts": "e429c0280b35a857c6f6bbbaa4315d9af8cc42db581cd0e0f6c71ea0600686cc"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\06-buffer-reservation-green.log",
+      "logSha256": "61f7551232a15b718c60ca822720f7dceb829cee59d4aa14760f92cc0e2d3cfb",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  6 passed (6)"
+      ]
+    },
+    {
+      "label": "07-pending-dispose-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "caddfd42dce74af2092d21a4e96df4d07517ef9e618c9d2ec0368267ffe12bc2",
+        "tests/v03-source-candidate.test.ts": "a068d4dd319e995191377bf42f009953114c984f52d910169a5686f18a8fd430"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\07-pending-dispose-red.log",
+      "logSha256": "9aaec0eac81491508921d2a0d7104709dd40367761d6fe11772aca050f8ddebf",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  2 failed | 6 passed (8)"
+      ]
+    },
+    {
+      "label": "07-pending-dispose-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "580813dbb91172d1dec99fd3202e6f7ce2abf574cd2c5748a637a20935b2141f",
+        "tests/v03-source-candidate.test.ts": "a068d4dd319e995191377bf42f009953114c984f52d910169a5686f18a8fd430"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\07-pending-dispose-green.log",
+      "logSha256": "5fe5cf3019241cfa78edf8fc9cab8a66ba7345034f8a8e02999cea12933c35f3",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  8 passed (8)"
+      ]
+    },
+    {
+      "label": "08-failure-rollback-red-and-lifecycle-coverage",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "580813dbb91172d1dec99fd3202e6f7ce2abf574cd2c5748a637a20935b2141f",
+        "tests/v03-source-candidate.test.ts": "b13aee9399c8c785011882f946fa3b4ac79e7b35f0caf497d015e8f3efe6ce1c"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\08-failure-rollback-red-and-lifecycle-coverage.log",
+      "logSha256": "e40aaef21f28beec089fed070c95aff3395b4cbd9f76a787138440c9d0b0f2cd",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  4 failed | 9 passed (13)"
+      ]
+    },
+    {
+      "label": "08-failure-rollback-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "1108530c5c5838fc5d312dbee37897fea95bf047f036dc7633ee8a225ff08667",
+        "tests/v03-source-candidate.test.ts": "b13aee9399c8c785011882f946fa3b4ac79e7b35f0caf497d015e8f3efe6ce1c"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\08-failure-rollback-green.log",
+      "logSha256": "2b57c1a2580c7b94510a2e3c3e9ac2559c3a7d0a3b1778249dfbfbbafcb89452",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  13 passed (13)"
+      ]
+    },
+    {
+      "label": "09-face-ordinal-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "1108530c5c5838fc5d312dbee37897fea95bf047f036dc7633ee8a225ff08667",
+        "tests/v03-source-candidate.test.ts": "c74a0a90373778dad45cbf002d11d9b8bec47571e3595a3130573a9b2b911b99"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\09-face-ordinal-red.log",
+      "logSha256": "0090772db07181dfadb4986dbd441173ea3f0ed830d89b7e427a3c887660e976",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed | 13 passed (14)"
+      ]
+    },
+    {
+      "label": "09-face-ordinal-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "a8ed85a98f42fc021c86b0c99aac0b5da6d8d948370c4cbad129345131da496a",
+        "tests/v03-source-candidate.test.ts": "c74a0a90373778dad45cbf002d11d9b8bec47571e3595a3130573a9b2b911b99"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\09-face-ordinal-green.log",
+      "logSha256": "3e9b1d065560b17ba467fd98c24636da862149cd3dd3f78ce79728cc6659e080",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  14 passed (14)"
+      ]
+    },
+    {
+      "label": "10-intrinsic-kind-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "a8ed85a98f42fc021c86b0c99aac0b5da6d8d948370c4cbad129345131da496a",
+        "tests/v03-source-candidate.test.ts": "9096102f713b6831ee6d04d81311c7b30a47bc0576a0311037ed1e3b5f25643b"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\10-intrinsic-kind-red.log",
+      "logSha256": "73aab8508757bb9ab6fbb80c7c993ffbf2e88cc4d36d0100fb5ad0d01a56e2cc",
+      "testSummary": [
+        "Test Files   (1)",
+        "Tests   (15)",
+        "Errors  1 error"
+      ]
+    },
+    {
+      "label": "10-intrinsic-kind-red-retry",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "a8ed85a98f42fc021c86b0c99aac0b5da6d8d948370c4cbad129345131da496a",
+        "tests/v03-source-candidate.test.ts": "9096102f713b6831ee6d04d81311c7b30a47bc0576a0311037ed1e3b5f25643b"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\10-intrinsic-kind-red-retry.log",
+      "logSha256": "7ab1dc8e62c9fc4f423a696648de41096b01154c3e27d4ca181baee02e56589e",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  1 failed | 14 passed (15)"
+      ]
+    },
+    {
+      "label": "10-intrinsic-kind-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "96031079ee39016c5fa329362c99034d2d71cb37368ad694dfffe615c2770560",
+        "tests/v03-source-candidate.test.ts": "9096102f713b6831ee6d04d81311c7b30a47bc0576a0311037ed1e3b5f25643b"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\10-intrinsic-kind-green.log",
+      "logSha256": "62abc2eb01aa595ead25427370a8f72e1435974fe8582a87f96eb364f2c76cb2",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  15 passed (15)"
+      ]
+    },
+    {
+      "label": "11-typecheck-before-coverage",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "--noEmit"
+      ],
+      "exitCode": 2,
+      "files": {
+        "src/trimline/source-candidate.ts": "96031079ee39016c5fa329362c99034d2d71cb37368ad694dfffe615c2770560",
+        "tests/v03-source-candidate.test.ts": "9096102f713b6831ee6d04d81311c7b30a47bc0576a0311037ed1e3b5f25643b"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\11-typecheck-before-coverage.log",
+      "logSha256": "a3d032e9bd1dd96efffe875a0d4b0ad5abbf00976de0b3629a15c15744aa42ab",
+      "testSummary": []
+    },
+    {
+      "label": "11-composition-oracle-coverage",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "96031079ee39016c5fa329362c99034d2d71cb37368ad694dfffe615c2770560",
+        "tests/v03-source-candidate.test.ts": "4f2c7c7de297522c698d41787b220760ada2fb08a3617c87f92843c971520706"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\11-composition-oracle-coverage.log",
+      "logSha256": "24c67dc96ddf7dc55bdfb95ae6f529b66b6266867a8bb7d29c23c3a56f3b8f6a",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  18 passed (18)"
+      ]
+    },
+    {
+      "label": "11-typecheck-corrected",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "96031079ee39016c5fa329362c99034d2d71cb37368ad694dfffe615c2770560",
+        "tests/v03-source-candidate.test.ts": "4f2c7c7de297522c698d41787b220760ada2fb08a3617c87f92843c971520706"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\11-typecheck-corrected.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "testSummary": []
+    },
+    {
+      "label": "12-validator-allocation-error-red",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 1,
+      "files": {
+        "src/trimline/source-candidate.ts": "de41e04b408c28c036f732ca5ac09d76ea646273775ae21deb16d69bf0ebd74b",
+        "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-validator-allocation-error-red.log",
+      "logSha256": "79bf9adc3f5bda6d10d7efdd26825c29bf6982f6298e671afb455ed6dd3e4a65",
+      "testSummary": [
+        "Test Files  1 failed (1)",
+        "Tests  2 failed | 18 passed (20)"
+      ]
+    },
+    {
+      "label": "12-validator-allocation-error-green",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+        "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-validator-allocation-error-green.log",
+      "logSha256": "36edd2c37b085efc22c085da002c1c047ef5820af82f2dee2270f8bca00196cb",
+      "testSummary": [
+        "Test Files  1 passed (1)",
+        "Tests  20 passed (20)"
+      ]
+    },
+    {
+      "label": "12-typecheck",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "--noEmit"
+      ],
+      "exitCode": 134,
+      "files": {
+        "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+        "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-typecheck.log",
+      "logSha256": "c0ec618e0382da8eeb44586661b46de663e715f95dfc5d2588c946ef977f7ee2",
+      "testSummary": []
+    },
+    {
+      "label": "12-typecheck-serial-retry",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+        "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-typecheck-serial-retry.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "testSummary": []
+    },
+    {
+      "label": "13-related-regression",
+      "command": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "tests/v03-source-candidate.test.ts",
+        "tests/v03-face-cubic.test.ts",
+        "tests/v03-bezier.test.ts",
+        "tests/v03-numerics.test.ts",
+        "tests/v03-numerics-oracle.test.ts",
+        "--maxWorkers=1",
+        "--reporter=verbose"
+      ],
+      "exitCode": 0,
+      "files": {
+        "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+        "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188"
+      },
+      "log": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\13-related-regression.log",
+      "logSha256": "8c4bf1fdb49a5a18d8943d3786efc102ccb67839fb7d104f150085ceafaf74f0",
+      "testSummary": [
+        "Test Files  5 passed (5)",
+        "Tests  874 passed (874)"
+      ]
+    }
+  ],
+  "reproduce": {
+    "focused": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-ts/run.py rerun-focused",
+    "related": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-ts/run.py rerun-related related",
+    "typecheck": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-ts/run.py rerun-typecheck tsc"
+  }
+}

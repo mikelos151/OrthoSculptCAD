@@ -1,0 +1,426 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/compile-interop.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\compile-interop.log",
+      "bytes": 126,
+      "sha256": "be2d19b365235057186206cbdcc32849da43c87ff8ed61ca99bafb6ed5d7c342"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/full-unit-memory-bounded.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\full-unit-memory-bounded.json",
+      "bytes": 447116,
+      "sha256": "ddc64f0cef02bbb64b8676c31ca35113dd97db1547968c6fe27adddd3a8eaba9"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/full-unit-memory-bounded.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\full-unit-memory-bounded.log",
+      "bytes": 1326,
+      "sha256": "9daadb97704b35a4462989dceed724610eddc8dd8e5a38ea09bc2bc9b3024830"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/full-unit.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\full-unit.json",
+      "bytes": 135890,
+      "sha256": "25054cdb1c5f0c6f27d9d7513a2dd58db22f2d196cf2c3685471a7dd6f512d7a"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/full-unit.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\full-unit.log",
+      "bytes": 7907,
+      "sha256": "1cdf2422a36dde82ddce4512e9fed0f2a5063986f65fba303c41aab9d73f0da9"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/npm-audit.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\npm-audit.json",
+      "bytes": 364,
+      "sha256": "6a588c8f87dfffd67e33533606b8c87c3adfb394c0d1e7e3d3bf63448700d022"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/npm-audit.stderr",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\npm-audit.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/pdf-textcore-install.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\pdf-textcore-install.log",
+      "bytes": 93,
+      "sha256": "cff3328cc97ba73b529392e884d9244f189669a05837cd213db222ef489c0dfa"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/pdf-textcore-smoke.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\pdf-textcore-smoke.log",
+      "bytes": 642,
+      "sha256": "4d6fa0c2462ffa69617eff94882896177b788932ff05d0ac7dc07472431df183"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/python-all.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\python-all.log",
+      "bytes": 11435,
+      "sha256": "02cf9bcb2af53bcd37daeb8fbf2eddca2778abba001ec5057028507ae2bcdade"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/python-focused.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\python-focused.log",
+      "bytes": 1268,
+      "sha256": "163eb8e326ef60a59d00b1472a9838b995a266b8ebd13ed2fb92a43e5ffa7ad1"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-parent/typecheck-memory-bounded.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-parent\\typecheck-memory-bounded.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/01-green-f32.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\01-green-f32.json",
+      "bytes": 641,
+      "sha256": "d5b68198b9ab7b2203dea432b02804ff84137a365b95a3f2cdf155d58655f01f"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/01-red-f32.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\01-red-f32.json",
+      "bytes": 1424,
+      "sha256": "a381e63e33c49935037fc627977a73095dfc04be8376c87826f2d5abec50882b"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/02-green-canonical.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\02-green-canonical.json",
+      "bytes": 791,
+      "sha256": "baaacd28851cf1d674918f56ed031643aeb4903d5970c35f7a77d6066e854dea"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/02-red-canonical.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\02-red-canonical.json",
+      "bytes": 1576,
+      "sha256": "ecd99664d86d6574608d074dd69aa3e7dd6e80632fc32481b0c4397599c4c459"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/03-green-optional.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\03-green-optional.json",
+      "bytes": 960,
+      "sha256": "c3631e77683f862135db342436454041ac428806d3ab3ea2b0767aaadc4e421b"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/03-red-optional.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\03-red-optional.json",
+      "bytes": 1883,
+      "sha256": "11df2fed82bcdd307e2fafa46997f794747bdf25b400826fa16b0852a9377b3f"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/04-green-validation.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\04-green-validation.json",
+      "bytes": 1147,
+      "sha256": "67a285944f12fac25afc794212b84580e43b3842283431ad503621d7a9f07784"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/04-red-validation.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\04-red-validation.json",
+      "bytes": 2005,
+      "sha256": "2c92f454cae7b47dfe79ebe8e9b7b7552feac8bdae630c6314e42ececa0f21b2"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/05-green-faces.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\05-green-faces.json",
+      "bytes": 1318,
+      "sha256": "76098b7d82509badad561e34cc22359eeeb06600d745a5f1403f116c7168c92e"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/05-red-faces.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\05-red-faces.json",
+      "bytes": 2154,
+      "sha256": "21e7d226f981fa81d60e9cce8a0d1f4eeaf11464710abfba5d292d1dbad378a4"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/06-green-fixture.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\06-green-fixture.json",
+      "bytes": 1499,
+      "sha256": "fd12dfe51640a180c04b3dd8b4f02e33611a6183b8be699492e78070a4b5c904"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/06-red-fixture.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\06-red-fixture.json",
+      "bytes": 2350,
+      "sha256": "968824ae6aa0039269b3812c49b289d85945acf104565b552cb284565de3ee8d"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/07-green-cli.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\07-green-cli.json",
+      "bytes": 1650,
+      "sha256": "ba15ea01626945047c45436eb702437ac0c0293271d9e95a32e061f60a9c7de8"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/07-red-cli.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\07-red-cli.json",
+      "bytes": 2396,
+      "sha256": "b27a767431d65755e8d5dfa6986ff0f22336f217d2d0f84324cdd335e3546b58"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/08-green-refactor.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\08-green-refactor.json",
+      "bytes": 1650,
+      "sha256": "7c93180ab3e4293b167467968d3859160d1151bf3065dcffdcd6e36b04e56148"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/09-final-tests.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\09-final-tests.json",
+      "bytes": 1650,
+      "sha256": "a0e5818eee882d2bc8ba88aab9fe68027179d590da5485f6b6542dbcb2a3a8e3"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/cli-fixture.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\cli-fixture.json",
+      "bytes": 207897,
+      "sha256": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/delivery-evidence.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\delivery-evidence.json",
+      "bytes": 2316,
+      "sha256": "9d31d3d4c91c11a311c1359f5d209be4f6986f62226e9402c19a86daae5077d4"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/generate-fixture.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\generate-fixture.log",
+      "bytes": 132,
+      "sha256": "620f831e37d4d21c732abe58414db98a218d87899ecd7858c39f59e52ce99415"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/run_tests.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\run_tests.py",
+      "bytes": 715,
+      "sha256": "0493f4dcd5827b8b2993d3ce4ed7aebabef17abee4459ed385c8abeefef718dd"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-py/verify_delivery.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-py\\verify_delivery.py",
+      "bytes": 3070,
+      "sha256": "d3ee82e91cbddf65b09faa93d519979c4f2915649e4cd8227049b7fc57894ece"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/01-capture-green-attempt.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\01-capture-green-attempt.log",
+      "bytes": 1636,
+      "sha256": "b5866c97860e55dedb98779f88f5bb05b9d5735c81674873d084a3dd8415bf94"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/01-capture-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\01-capture-green.log",
+      "bytes": 345,
+      "sha256": "4222f5cfe6025986e583ff0accf322ab499f145866cde158346eaa97bf42559f"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/01-capture-red-executable.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\01-capture-red-executable.log",
+      "bytes": 1163,
+      "sha256": "7f2b4fe674632242d91e196ece256d7c8d84e80ae6f6388e48f3d11d8e3bd352"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/01-capture-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\01-capture-red.log",
+      "bytes": 1072,
+      "sha256": "609bbc99b73ee422a5760e4ab769f864dd76dba8835845bfac60018d02e18349"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/02-binding-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\02-binding-green.log",
+      "bytes": 478,
+      "sha256": "7f261042496e609b4662838ef8af0d25f5dce55b65b2140f4cecca2d49c944b1"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/02-binding-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\02-binding-red.log",
+      "bytes": 1302,
+      "sha256": "e263e12a6c2347187699abf220081864dcec35a4affd6f1d93135b61822a997b"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/03-lifecycle-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\03-lifecycle-green.log",
+      "bytes": 618,
+      "sha256": "b75418c9cb8c40ae7b676439dd0c9021c06a2a263567568b83e2ef77ea39e15f"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/03-lifecycle-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\03-lifecycle-red.log",
+      "bytes": 1648,
+      "sha256": "9c5e1e1066fc5d5ab6fd841f72293a71a49c685249fe6e211fc33c4348dae4c8"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/04-preflight-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\04-preflight-green.log",
+      "bytes": 750,
+      "sha256": "dd5c6c1d6711ef75853ee26bf4ae4c95eea3cd4f9659bb949cde5b8fd33bb175"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/04-preflight-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\04-preflight-red.log",
+      "bytes": 1938,
+      "sha256": "eba55f61e242f9c71811084e130e97171754dd61bb1104b449c825cc80e062e8"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/05-private-validation-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\05-private-validation-green.log",
+      "bytes": 891,
+      "sha256": "6cfdf5585bed5f5079ab350ac04ca0ac5a479608ab35789cded9034ef30e0590"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/05-private-validation-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\05-private-validation-red.log",
+      "bytes": 1761,
+      "sha256": "58e46864569c04df1e6d75dafac52798336a2aa99a1fb66042cca3c1bb2c4b44"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/06-buffer-reservation-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\06-buffer-reservation-green.log",
+      "bytes": 1023,
+      "sha256": "61f7551232a15b718c60ca822720f7dceb829cee59d4aa14760f92cc0e2d3cfb"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/06-buffer-reservation-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\06-buffer-reservation-red.log",
+      "bytes": 1930,
+      "sha256": "bea31f8243231e8f02044f1c9d8da0dfc815d4c16d589a821eb10d73c750581a"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/07-pending-dispose-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\07-pending-dispose-green.log",
+      "bytes": 1253,
+      "sha256": "5fe5cf3019241cfa78edf8fc9cab8a66ba7345034f8a8e02999cea12933c35f3"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/07-pending-dispose-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\07-pending-dispose-red.log",
+      "bytes": 3129,
+      "sha256": "9aaec0eac81491508921d2a0d7104709dd40367761d6fe11772aca050f8ddebf"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/08-failure-rollback-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\08-failure-rollback-green.log",
+      "bytes": 1940,
+      "sha256": "2b57c1a2580c7b94510a2e3c3e9ac2559c3a7d0a3b1778249dfbfbbafcb89452"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/08-failure-rollback-red-and-lifecycle-coverage.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\08-failure-rollback-red-and-lifecycle-coverage.log",
+      "bytes": 5099,
+      "sha256": "e40aaef21f28beec089fed070c95aff3395b4cbd9f76a787138440c9d0b0f2cd"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/09-face-ordinal-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\09-face-ordinal-green.log",
+      "bytes": 2066,
+      "sha256": "3e9b1d065560b17ba467fd98c24636da862149cd3dd3f78ce79728cc6659e080"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/09-face-ordinal-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\09-face-ordinal-red.log",
+      "bytes": 3168,
+      "sha256": "0090772db07181dfadb4986dbd441173ea3f0ed830d89b7e427a3c887660e976"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/10-intrinsic-kind-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\10-intrinsic-kind-green.log",
+      "bytes": 2193,
+      "sha256": "62abc2eb01aa595ead25427370a8f72e1435974fe8582a87f96eb364f2c76cb2"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/10-intrinsic-kind-red-retry.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\10-intrinsic-kind-red-retry.log",
+      "bytes": 3228,
+      "sha256": "7ab1dc8e62c9fc4f423a696648de41096b01154c3e27d4ca181baee02e56589e"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/10-intrinsic-kind-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\10-intrinsic-kind-red.log",
+      "bytes": 1254,
+      "sha256": "73aab8508757bb9ab6fbb80c7c993ffbf2e88cc4d36d0100fb5ad0d01a56e2cc"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/11-composition-oracle-coverage.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\11-composition-oracle-coverage.log",
+      "bytes": 2597,
+      "sha256": "24c67dc96ddf7dc55bdfb95ae6f529b66b6266867a8bb7d29c23c3a56f3b8f6a"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/11-typecheck-before-coverage.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\11-typecheck-before-coverage.log",
+      "bytes": 94,
+      "sha256": "a3d032e9bd1dd96efffe875a0d4b0ad5abbf00976de0b3629a15c15744aa42ab"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/11-typecheck-corrected.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\11-typecheck-corrected.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/12-typecheck-serial-retry.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-typecheck-serial-retry.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/12-typecheck.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-typecheck.log",
+      "bytes": 838,
+      "sha256": "c0ec618e0382da8eeb44586661b46de663e715f95dfc5d2588c946ef977f7ee2"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/12-validator-allocation-error-green.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-validator-allocation-error-green.log",
+      "bytes": 2862,
+      "sha256": "36edd2c37b085efc22c085da002c1c047ef5820af82f2dee2270f8bca00196cb"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/12-validator-allocation-error-red.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\12-validator-allocation-error-red.log",
+      "bytes": 4128,
+      "sha256": "79bf9adc3f5bda6d10d7efdd26825c29bf6982f6298e671afb455ed6dd3e4a65"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/13-related-regression.log",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\13-related-regression.log",
+      "bytes": 140601,
+      "sha256": "8c4bf1fdb49a5a18d8943d3786efc102ccb67839fb7d104f150085ceafaf74f0"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/handoff.json",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\handoff.json",
+      "bytes": 34204,
+      "sha256": "94605a73c30e749879445b38fdaf42ba4b60f03dfa8a0932ac4ae6992aac08c4"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/handoff.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\handoff.py",
+      "bytes": 6209,
+      "sha256": "9ca21fad70a0dc5139bc53dc5b2a346fccaa97f4b677d6e20996ef05f36cddcf"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/run.py",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\run.py",
+      "bytes": 1597,
+      "sha256": "9b579217c1ba676cf96d7e5179083a8ef44b7f66682457ea5418eace313696de"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/runs.jsonl",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\runs.jsonl",
+      "bytes": 14561,
+      "sha256": "da6db4272e1a8ec5c2b75e4bf7b7f1924786552e814b67487df977f7cfc33502"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/snapshots/13-related-regression/src/trimline/source-candidate.ts",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\snapshots\\13-related-regression\\src\\trimline\\source-candidate.ts",
+      "bytes": 14852,
+      "sha256": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b"
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/v03-source-candidate-ts/snapshots/13-related-regression/tests/v03-source-candidate.test.ts",
+      "originalPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-ts\\snapshots\\13-related-regression\\tests\\v03-source-candidate.test.ts",
+      "bytes": 31339,
+      "sha256": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188"
+    }
+  ],
+  "count": 70,
+  "scope": "Actual author TDD and parent partial verification; no final acceptance"
+}

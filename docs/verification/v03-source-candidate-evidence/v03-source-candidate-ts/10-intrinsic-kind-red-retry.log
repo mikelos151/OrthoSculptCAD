@@ -1,0 +1,49 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 5ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 5ms
+ ✓ tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities 3ms
+ ✓ tests/v03-source-candidate.test.ts > preflights descriptor shapes, bounded metadata and ordinary fixed native view ranges 3ms
+ ✓ tests/v03-source-candidate.test.ts > validates the private whole snapshot before hashing, including distant coordinates and attrs 1ms
+ ✓ tests/v03-source-candidate.test.ts > reserves whole S plus canonical preimage before the first owned buffer allocation 5ms
+ ✓ tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=false) 53ms
+ ✓ tests/v03-source-candidate.test.ts > dispose fences pending real SHA completion (failure injection=true) 61ms
+ ✓ tests/v03-source-candidate.test.ts > rolls back copy failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+ ✓ tests/v03-source-candidate.test.ts > rolls back preimage failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+ ✓ tests/v03-source-candidate.test.ts > rolls back sha-reject failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+ ✓ tests/v03-source-candidate.test.ts > rolls back sha-throw failure injection as sanitized UNAVAILABLE, allowing a fresh capture 1ms
+ ✓ tests/v03-source-candidate.test.ts > releasing retired h1 during real pending capture h2 cannot cancel h2 or free its reservation 1ms
+ ✓ tests/v03-source-candidate.test.ts > validates a triangle ordinal before decoding, context use or inspecting controls 1ms
+ × tests/v03-source-candidate.test.ts > checks native typed-array kind rather than a spoofed ordinary prototype or tag 7ms
+   → promise resolved "{}" instead of rejecting
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 14 passed (15)
+   Start at  17:59:05
+   Duration  405ms (transform 67ms, setup 0ms, import 94ms, tests 149ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > checks native typed-array kind rather than a spoofed ordinary prototype or tag
+AssertionError: promise resolved "{}" instead of rejecting
+
+- Expected
++ Received
+
+- Error {
+-   "message": "rejected promise",
+- }
++ {}
+
+ ❯ tests/v03-source-candidate.test.ts:303:98
+    301|   Object.setPrototypeOf(disguised, Float32Array.prototype);
+    302|   Object.defineProperty(disguised, Symbol.toStringTag, { value: 'Float…
+    303|   await expect(store.capture({ ...m, positions: disguised as unknown a…
+       |                                                                                                  ^
+    304|   const disguisedIndices = new Float32Array(m.indices.buffer.slice(0));
+    305|   Object.setPrototypeOf(disguisedIndices, Uint32Array.prototype);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

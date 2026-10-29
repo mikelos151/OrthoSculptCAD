@@ -1,0 +1,44 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ × tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 11ms
+   → expected { …(6) } to match object { …(5) }
+(1 matching property omitted from actual)
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  17:49:47
+   Duration  213ms (transform 27ms, setup 0ms, import 42ms, tests 12ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity
+AssertionError: expected { …(6) } to match object { …(5) }
+(1 matching property omitted from actual)
+
+- Expected
++ Received
+
+@@ -1,9 +1,9 @@
+  {
+    "faceCount": 4,
+    "kind": "owned-source-candidate-v1",
+-   "sourceDigest": "sha256:aaaf70f3017d78eb67134e42fb4d2efbb09ba429f2b5ff1b2c3ca9b0dbbee267",
++   "sourceDigest": "sha256:5e25a2ced712c268739b32813d33ef3ea8d7b2a37bffbc918b6da950353b3fcb",
+    "stamp": {
+      "frameId": "frame_1",
+      "generation": 3,
+      "projectEpoch": 1,
+      "revision": 2,
+
+ ❯ tests/v03-source-candidate.test.ts:47:13
+     45|   const h = await pending;
+     46|   const d = store.describe(h);
+     47|   expect(d).toMatchObject({ kind: 'owned-source-candidate-v1', sourceD…
+       |             ^
+     48|     vertexCount: 4, faceCount: 4, stamp: { ...stamp() } });
+     49|   expect(typeof d.sourceId).toBe('string'); expect(d.sourceId.length).…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

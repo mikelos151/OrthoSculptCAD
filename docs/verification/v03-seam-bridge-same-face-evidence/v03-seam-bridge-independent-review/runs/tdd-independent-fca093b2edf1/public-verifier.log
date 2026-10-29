@@ -1,0 +1,4 @@
+$ C:\Users\sandr\AppData\Local\hermes\tools\python-3.14.9+20261021-win32-x64\python.exe -B C:\Users\sandr\OrthoSculptCAD\tests\reference\v03_face_cubic_verify.py --input C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-seam-bridge-independent-review\runs\tdd-independent-fca093b2edf1\real-face-proof.json
+{"passed": true, "cases": 2, "leaves": 8, "samples": 10}
+
+exit=0

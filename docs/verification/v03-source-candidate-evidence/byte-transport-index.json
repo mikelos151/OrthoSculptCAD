@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/manifest.json",
+      "sha256": "3c04eeeedcec19d16c9fdebad92bdcd38cf0784b6ba05c73f5fe0eb2dd28285f",
+      "bytes": 111416
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/new-paths.txt",
+      "sha256": "bd338644a0d00e7e15f7562c784638c4842dd33c467b27972f8013bd3cf2dece",
+      "bytes": 10904
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/export-paths.txt",
+      "sha256": "9b101320b20cc559ba8d22f7f5f8d6c177a71952e0cfea100710d280de11b817",
+      "bytes": 31991
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/real-index-before.bin",
+      "sha256": "e5cb0e3319f147bb78d9064869c3dd197e74d876dae7ddcabaefe0632ac3b959",
+      "bytes": 87085
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/real-index-after.bin",
+      "sha256": "e5cb0e3319f147bb78d9064869c3dd197e74d876dae7ddcabaefe0632ac3b959",
+      "bytes": 87085
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/autocrlf-before.txt",
+      "sha256": "c17da2510d7f394bf7f633e79be43874a08a44d2e682e0afb667424a78edd398",
+      "bytes": 174
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/autocrlf-after.txt",
+      "sha256": "c17da2510d7f394bf7f633e79be43874a08a44d2e682e0afb667424a78edd398",
+      "bytes": 174
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/t-generator.log",
+      "sha256": "620f831e37d4d21c732abe58414db98a218d87899ecd7858c39f59e52ce99415",
+      "bytes": 132
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/f-generator.log",
+      "sha256": "620f831e37d4d21c732abe58414db98a218d87899ecd7858c39f59e52ce99415",
+      "bytes": 132
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/mutable-annotation-snapshot/.gitattributes",
+      "sha256": "8e1aea6f3590dce4f62324efdc68cdcaa20b28aa19ea5fa13abe567111c9fa2a",
+      "bytes": 9377
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/mutable-annotation-snapshot/docs/verification/v03-source-candidate-parent-results.json",
+      "sha256": "f6b206e40162b8d613a3edfa5c0e6a8a9b20b4b485ab67afc412aa30232f7e65",
+      "bytes": 5206
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/byte-transport/mutable-annotation-snapshot/docs/verification/v03-source-spans-design-results.json",
+      "sha256": "12ce69d9a250bd15f9c0223aa9a5f0fedf5b0add23dee240f99215375e3627b3",
+      "bytes": 5300
+    }
+  ],
+  "count": 12,
+  "scope": "Temporary-index snapshot metadata plus mutable annotations exactly as tested; later review-status annotations intentionally not part of that earlier snapshot"
+}

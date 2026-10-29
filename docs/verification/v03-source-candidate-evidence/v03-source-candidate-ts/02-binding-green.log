@@ -1,0 +1,11 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 3ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 4ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  17:51:13
+   Duration  177ms (transform 43ms, setup 0ms, import 57ms, tests 8ms, environment 0ms)
+

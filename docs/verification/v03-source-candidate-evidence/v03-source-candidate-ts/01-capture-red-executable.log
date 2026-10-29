@@ -1,0 +1,27 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ × tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 5ms
+   → Not implemented
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  17:49:14
+   Duration  274ms (transform 40ms, setup 0ms, import 58ms, tests 6ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity
+Error: Not implemented
+ ❯ Object.capture src/trimline/source-candidate.ts:25:91
+     23| export function createSourceCandidateStore(_limits: SourceCandidateLim…
+     24|   return {
+     25|     async capture(_mesh: MeshData, _stamp: SourceStamp): Promise<Sourc…
+       |                                                                                           ^
+     26|     describe(_source: SourceCandidate): SourceDescription { throw new …
+     27|   };
+ ❯ tests/v03-source-candidate.test.ts:42:25
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

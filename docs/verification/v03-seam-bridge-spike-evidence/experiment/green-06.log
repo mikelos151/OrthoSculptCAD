@@ -1,0 +1,12 @@
+test_coarse_control_approximation_refuses_with_preserved_evidence (test_spike.BridgeTests.test_coarse_control_approximation_refuses_with_preserved_evidence) ... ok
+test_curved_pair_uses_nonzero_sampler_certificates (test_spike.BridgeTests.test_curved_pair_uses_nonzero_sampler_certificates) ... ok
+test_field_identity_sign_cancellation_and_budget_coverage (test_spike.BridgeTests.test_field_identity_sign_cancellation_and_budget_coverage) ... ok
+test_independent_bridge_checker_binds_ideal_to_real_rational_proof (test_spike.BridgeTests.test_independent_bridge_checker_binds_ideal_to_real_rational_proof) ... ok
+test_overspent_existing_curve_budget_refuses_before_real_producer (test_spike.BridgeTests.test_overspent_existing_curve_budget_refuses_before_real_producer) ... ok
+test_real_rational_approximant_does_not_claim_exact_g1 (test_spike.BridgeTests.test_real_rational_approximant_does_not_claim_exact_g1) ... ok
+test_straight_reference_through_real_ts_and_public_verifier (test_spike.BridgeTests.test_straight_reference_through_real_ts_and_public_verifier) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.448s
+
+OK

@@ -1,0 +1,139 @@
+[
+  {
+    "name": "focused-tilted-regression",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F"
+    ],
+    "expectedExit": 0,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.007s\n\nOK\n"
+  },
+  {
+    "name": "original-12-tests",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_spike"
+    ],
+    "expectedExit": 0,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_coarse_control_approximation_refuses_with_preserved_evidence (test_spike.BridgeTests.test_coarse_control_approximation_refuses_with_preserved_evidence) ... ok\ntest_curved_pair_uses_nonzero_sampler_certificates (test_spike.BridgeTests.test_curved_pair_uses_nonzero_sampler_certificates) ... ok\ntest_dyadic_request_cap_is_unknown_before_allocation (test_spike.BridgeTests.test_dyadic_request_cap_is_unknown_before_allocation) ... ok\ntest_field_identity_sign_cancellation_and_budget_coverage (test_spike.BridgeTests.test_field_identity_sign_cancellation_and_budget_coverage) ... ok\ntest_independent_bridge_checker_binds_ideal_to_real_rational_proof (test_spike.BridgeTests.test_independent_bridge_checker_binds_ideal_to_real_rational_proof) ... ok\ntest_independent_checker_refuses_false_exact_g1_for_actual_approximation (test_spike.BridgeTests.test_independent_checker_refuses_false_exact_g1_for_actual_approximation) ... ok\ntest_independent_control_error_mutant_rejected_while_public_proof_passes (test_spike.BridgeTests.test_independent_control_error_mutant_rejected_while_public_proof_passes) ... ok\ntest_optional_second_local_radical_case_without_mixed_field (test_spike.BridgeTests.test_optional_second_local_radical_case_without_mixed_field) ... ok\ntest_overspent_existing_curve_budget_refuses_before_real_producer (test_spike.BridgeTests.test_overspent_existing_curve_budget_refuses_before_real_producer) ... ok\ntest_real_rational_approximant_does_not_claim_exact_g1 (test_spike.BridgeTests.test_real_rational_approximant_does_not_claim_exact_g1) ... ok\ntest_single_cli_path_publishes_independent_joint_bridge_check (test_spike.BridgeTests.test_single_cli_path_publishes_independent_joint_bridge_check) ... ok\ntest_straight_reference_through_real_ts_and_public_verifier (test_spike.BridgeTests.test_straight_reference_through_real_ts_and_public_verifier) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 5.039s\n\nOK\n"
+  },
+  {
+    "name": "fixed-3-tests",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_same_face_binding"
+    ],
+    "expectedExit": 0,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_coverage_permuted_f_and_wrong_g_are_refused (test_same_face_binding.SameFaceBindingTests.test_coverage_permuted_f_and_wrong_g_are_refused) ... ok\ntest_original_ordered_reference_faces_pass (test_same_face_binding.SameFaceBindingTests.test_original_ordered_reference_faces_pass) ... ok\ntest_real_tilted_ts_proof_passes_public_but_bridge_refuses (test_same_face_binding.SameFaceBindingTests.test_real_tilted_ts_proof_passes_public_but_bridge_refuses) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.038s\n\nOK\n"
+  },
+  {
+    "name": "reviewer-4-tests",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_review_regression"
+    ],
+    "expectedExit": 0,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_canonical_control_error_corruption_rejected_with_real_proof_unchanged (test_review_regression.IndependentAdversarialTests.test_canonical_control_error_corruption_rejected_with_real_proof_unchanged) ... ok\ntest_canonical_false_actual_G1_rejected (test_review_regression.IndependentAdversarialTests.test_canonical_false_actual_G1_rejected) ... ok\ntest_nonzero_interval_straddling_zero_is_unknown_not_equality (test_review_regression.IndependentAdversarialTests.test_nonzero_interval_straddling_zero_is_unknown_not_equality) ... ok\ntest_same_face_bridge_must_reject_real_ts_tilted_original_F (test_review_regression.IndependentAdversarialTests.test_same_face_bridge_must_reject_real_ts_tilted_original_F) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.029s\n\nOK\n"
+  },
+  {
+    "name": "fresh-curved",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "spike.py",
+      "--curved"
+    ],
+    "expectedExit": 0,
+    "exit": 0,
+    "stdout": "{\"verdict\": \"VALIDATED_LOCAL\", \"results\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-0e7268d7cfa3\\\\results.json\", \"public_verifier\": {\"passed\": true, \"cases\": 2, \"leaves\": 8, \"samples\": 10}}\n",
+    "stderr": ""
+  },
+  {
+    "name": "fresh-straight",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "spike.py"
+    ],
+    "expectedExit": 0,
+    "exit": 0,
+    "stdout": "{\"verdict\": \"VALIDATED_LOCAL\", \"results\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-c3d01661dcdd\\\\results.json\", \"public_verifier\": {\"passed\": true, \"cases\": 2, \"leaves\": 2, \"samples\": 4}}\n",
+    "stderr": ""
+  },
+  {
+    "name": "negative-coarse",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "spike.py",
+      "--curved",
+      "--bits",
+      "2"
+    ],
+    "expectedExit": 1,
+    "exit": 1,
+    "stdout": "{\"status\": \"REFUSED\", \"reason\": \"control error exceeds delta\", \"evidence\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-cc520a211c77\\\\refusal.json\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "negative-overspend",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "spike.py",
+      "--delta",
+      "1/500"
+    ],
+    "expectedExit": 1,
+    "exit": 1,
+    "stdout": "{\"status\": \"REFUSED\", \"reason\": \"delta + tau exceeds existing curve budget\", \"evidence\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-f03a250ccb1f\\\\refusal.json\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "negative-cap",
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "spike.py",
+      "--bits",
+      "257"
+    ],
+    "expectedExit": 2,
+    "exit": 2,
+    "stdout": "{\"status\": \"UNKNOWN\", \"reason\": \"dyadic grid cap: 1..64 bits\", \"evidence\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-seam-bridge-same-face-rereview\\\\runs\\\\cli-c2a4ab69145d\\\\refusal.json\"}\n",
+    "stderr": ""
+  }
+]

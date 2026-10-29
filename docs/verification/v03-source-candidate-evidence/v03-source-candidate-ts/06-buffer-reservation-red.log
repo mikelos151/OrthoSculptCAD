@@ -1,0 +1,31 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ✓ tests/v03-source-candidate.test.ts > captures whole owned S with canonical native SHA and a frozen runtime identity 4ms
+ ✓ tests/v03-source-candidate.test.ts > resolves ordered source bits and binds a real contained cubic sampled on the same ctx 5ms
+ ✓ tests/v03-source-candidate.test.ts > authenticates opaque handles with operation-specific retirement, busy and closed priorities 2ms
+ ✓ tests/v03-source-candidate.test.ts > preflights descriptor shapes, bounded metadata and ordinary fixed native view ranges 2ms
+ ✓ tests/v03-source-candidate.test.ts > validates the private whole snapshot before hashing, including distant coordinates and attrs 1ms
+ × tests/v03-source-candidate.test.ts > reserves whole S plus canonical preimage before the first owned buffer allocation 3ms
+   → expected function to throw an error, but it didn't
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 passed (6)
+   Start at  17:55:08
+   Duration  240ms (transform 65ms, setup 0ms, import 84ms, tests 19ms, environment 0ms)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-source-candidate.test.ts > reserves whole S plus canonical preimage before the first owned buffer allocation
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-source-candidate.test.ts:177:88
+    175| it('reserves whole S plus canonical preimage before the first owned bu…
+    176|   for (const value of [0, -1, 0.5, NaN, Infinity, 128 * 1024 * 1024 + …
+    177|     expect(() => createSourceCandidateStore({ maxOwnedBufferBytes: val…
+       |                                                                                        ^
+    178|   }
+    179|   expect(() => createSourceCandidateStore(Object.create({ maxOwnedBuff…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+

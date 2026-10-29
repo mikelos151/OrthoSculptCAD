@@ -1,0 +1,61 @@
+{
+  "evidenceCount": 69,
+  "evidenceBytes": 323378,
+  "parentTests": 12,
+  "parentCurvedResult": {
+    "verdict": "VALIDATED_LOCAL",
+    "results": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-parent\\runs\\cli-2994c2c3c4d9\\results.json",
+    "public_verifier": {
+      "passed": true,
+      "cases": 2,
+      "leaves": 8,
+      "samples": 10
+    }
+  },
+  "parentJointVerifier": {
+    "passed": true,
+    "controlsChecked": 8,
+    "idealDerivativeIdentity": true,
+    "idealG1": "exact coefficient identity",
+    "actualRationalAndPL": "approximations, NOT exact G1",
+    "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+    "minIdealBarycentricLower": "0",
+    "nonstraightDeterminants": [
+      [
+        "-1/128",
+        "0"
+      ],
+      [
+        "-1/128",
+        "0"
+      ]
+    ],
+    "publicVerifier": {
+      "passed": true,
+      "cases": 2,
+      "leaves": 8,
+      "samples": 10
+    },
+    "deltaPlusTau": "1/200",
+    "existingBudget": "1/200",
+    "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+  },
+  "parentResultPath": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-parent\\runs\\cli-2994c2c3c4d9\\results.json",
+  "currentPlanSha256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+  "fixRouting": {
+    "requestedProvider": "openai-codex",
+    "requestedModel": "gpt-6.1-terra",
+    "requestedReasoning": "high",
+    "returnedInitModel": "gpt-6.1-terra",
+    "exitCode": 0,
+    "telemetryCaveat": "Accepted arguments and declared init model, not independent inference-wire telemetry"
+  },
+  "sourceCandidateImplemented": false,
+  "scope": "Local feasibility experiment only; no production representation or complete builder approval",
+  "initialSourcePlanReview": "Historical SOURCE-AC-1 HOLD was corrected by Terra High and closed by fresh plan rereview; see v03-source-spans-design-results.json. This older bridge run is not approval of the source implementation.",
+  "independentReviews": "COMPLETED: deleg_59716de2 source plan PASS, original bridge checker FAIL; subsequent minimal correction and fresh deleg_a37895f7 rereview PASS CLOSED_LOCAL_ONLY. See v03-seam-bridge-same-face-parent-results.json. No production/full-builder approval.",
+  "specificReviewQuestion": "Bind actual rational proof to the same ordered reference triangles, not only a small control error; no acceptance claim until review",
+  "evidenceIndex": "docs/verification/v03-seam-bridge-spike-evidence/index.json",
+  "runtimeBaseline": "bd9faa6b10945ea30ed6711ae5d180e66d9ea4f9; accepted M0c1/M0c2 unchanged",
+  "reexecutionNote": "First attempt selected a nonexisting workdir before its creation and did not run; corrected by creating the directory first. Original experiment evidence was not overwritten."
+}

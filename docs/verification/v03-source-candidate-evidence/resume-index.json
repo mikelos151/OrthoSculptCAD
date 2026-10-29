@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/resume/full-unit.json",
+      "sha256": "3583f8f4162bba775902ccc8203eb5a24206d08a8a857fea174709dfbebfe0ed",
+      "bytes": 435050
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/resume/full-unit.log",
+      "sha256": "65a9126697aeb054b6532e9ab627213f7410cf83d89f417d91a82cd5655c5c7a",
+      "bytes": 1311
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/resume/npm-audit.json",
+      "sha256": "6a588c8f87dfffd67e33533606b8c87c3adfb394c0d1e7e3d3bf63448700d022",
+      "bytes": 364
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/resume/npm-audit.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/resume/pdf-targeted.json",
+      "sha256": "d7189f00f6c024077a096cff9962dfb64d69bf57369eff93c184c893b3676e6c",
+      "bytes": 3483
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/resume/pdf-targeted.log",
+      "sha256": "3460366f244ef84e8c754b9e417f9103084488b327c5946a66ef47ef1507f0d2",
+      "bytes": 119
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/resume/python-all.log",
+      "sha256": "193d92fe9e0ed01d542bbf16c584a56dd3db605f471e596368523ba744225d9e",
+      "bytes": 11435
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-evidence/resume/typecheck.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "count": 8,
+  "scope": "Complete successful unchanged-source parent acceptance rerun, originals and failed attempts retained"
+}

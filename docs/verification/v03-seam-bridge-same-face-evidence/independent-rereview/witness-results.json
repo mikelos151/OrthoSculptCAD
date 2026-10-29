@@ -1,0 +1,382 @@
+{
+  "preservedRealTiltedProof": {
+    "sha256": "4efad90aef0b47da8c070fc0d3e456f2d0b5ddf0d8ae46c4a2298ae681924986",
+    "public": {
+      "passed": true,
+      "cases": 2,
+      "leaves": 8,
+      "samples": 10
+    },
+    "fixedBridge": {
+      "exception": "ValueError",
+      "reason": "ordered reference triangle mismatch"
+    },
+    "oldBridge": {
+      "passed": true,
+      "controlsChecked": 8,
+      "idealDerivativeIdentity": true,
+      "idealG1": "exact coefficient identity",
+      "actualRationalAndPL": "approximations, NOT exact G1",
+      "maxControlErrorSquaredUpper": "81/17179869184",
+      "minIdealBarycentricLower": "0",
+      "nonstraightDeterminants": [
+        [
+          "-1/128",
+          "0"
+        ],
+        [
+          "-1/128",
+          "0"
+        ]
+      ],
+      "publicVerifier": {
+        "passed": true,
+        "cases": 2,
+        "leaves": 8,
+        "samples": 10
+      },
+      "deltaPlusTau": "1/200",
+      "existingBudget": "1/200",
+      "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+    }
+  },
+  "freshRealTiltedProof": {
+    "producer": {
+      "producer": "real-existing-TS",
+      "cases": 2,
+      "leaves": 8,
+      "sameContextForEntireBundle": true
+    },
+    "byteIdenticalToPriorGenuineTSProof": true,
+    "sha256": "4efad90aef0b47da8c070fc0d3e456f2d0b5ddf0d8ae46c4a2298ae681924986",
+    "public": {
+      "passed": true,
+      "cases": 2,
+      "leaves": 8,
+      "samples": 10
+    },
+    "fixedBridge": {
+      "exception": "ValueError",
+      "reason": "ordered reference triangle mismatch"
+    },
+    "originalFPlane": "z=0",
+    "control0Z": "9/131072",
+    "PLStartZ": "9/131072",
+    "curveAtHalfZ": "73731/2147483648",
+    "oldBridge": {
+      "passed": true,
+      "controlsChecked": 8,
+      "idealDerivativeIdentity": true,
+      "idealG1": "exact coefficient identity",
+      "actualRationalAndPL": "approximations, NOT exact G1",
+      "maxControlErrorSquaredUpper": "81/17179869184",
+      "minIdealBarycentricLower": "0",
+      "nonstraightDeterminants": [
+        [
+          "-1/128",
+          "0"
+        ],
+        [
+          "-1/128",
+          "0"
+        ]
+      ],
+      "publicVerifier": {
+        "passed": true,
+        "cases": 2,
+        "leaves": 8,
+        "samples": 10
+      },
+      "deltaPlusTau": "1/200",
+      "existingBudget": "1/200",
+      "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+    }
+  },
+  "historicalOriginals": {
+    "straight": {
+      "verification": {
+        "summary": {
+          "passed": true,
+          "controlsChecked": 8,
+          "idealDerivativeIdentity": true,
+          "idealG1": "exact coefficient identity",
+          "actualRationalAndPL": "approximations, NOT exact G1",
+          "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+          "minIdealBarycentricLower": "0",
+          "nonstraightDeterminants": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "publicVerifier": {
+            "passed": true,
+            "cases": 2,
+            "leaves": 2,
+            "samples": 4
+          },
+          "deltaPlusTau": "1/200",
+          "existingBudget": "1/200",
+          "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+        },
+        "completePublicVerifierCalls": 1
+      },
+      "geometry": {
+        "sameOrderedFaces": true,
+        "idealWorldFromSameTriangle": true,
+        "rationalWorldFromSameTriangle": true,
+        "controls": 8
+      }
+    },
+    "curved": {
+      "verification": {
+        "summary": {
+          "passed": true,
+          "controlsChecked": 8,
+          "idealDerivativeIdentity": true,
+          "idealG1": "exact coefficient identity",
+          "actualRationalAndPL": "approximations, NOT exact G1",
+          "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+          "minIdealBarycentricLower": "0",
+          "nonstraightDeterminants": [
+            [
+              "-1/128",
+              "0"
+            ],
+            [
+              "-1/128",
+              "0"
+            ]
+          ],
+          "publicVerifier": {
+            "passed": true,
+            "cases": 2,
+            "leaves": 8,
+            "samples": 10
+          },
+          "deltaPlusTau": "1/200",
+          "existingBudget": "1/200",
+          "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+        },
+        "completePublicVerifierCalls": 1
+      },
+      "geometry": {
+        "sameOrderedFaces": true,
+        "idealWorldFromSameTriangle": true,
+        "rationalWorldFromSameTriangle": true,
+        "controls": 8
+      }
+    }
+  },
+  "freshPositive": {
+    "fresh-curved": {
+      "results": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-0e7268d7cfa3\\results.json",
+      "verification": {
+        "summary": {
+          "passed": true,
+          "controlsChecked": 8,
+          "idealDerivativeIdentity": true,
+          "idealG1": "exact coefficient identity",
+          "actualRationalAndPL": "approximations, NOT exact G1",
+          "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+          "minIdealBarycentricLower": "0",
+          "nonstraightDeterminants": [
+            [
+              "-1/128",
+              "0"
+            ],
+            [
+              "-1/128",
+              "0"
+            ]
+          ],
+          "publicVerifier": {
+            "passed": true,
+            "cases": 2,
+            "leaves": 8,
+            "samples": 10
+          },
+          "deltaPlusTau": "1/200",
+          "existingBudget": "1/200",
+          "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+        },
+        "completePublicVerifierCalls": 1
+      },
+      "geometry": {
+        "sameOrderedFaces": true,
+        "idealWorldFromSameTriangle": true,
+        "rationalWorldFromSameTriangle": true,
+        "controls": 8
+      },
+      "budget": {
+        "delta": "1/1000",
+        "tau": "1/250",
+        "delta_plus_tau": "1/200",
+        "existingCurveBudget": "1/200",
+        "hitUnchanged": "1/200",
+        "fullCQuantizationUnchanged": "1/100"
+      }
+    },
+    "fresh-straight": {
+      "results": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-same-face-rereview\\runs\\cli-c3d01661dcdd\\results.json",
+      "verification": {
+        "summary": {
+          "passed": true,
+          "controlsChecked": 8,
+          "idealDerivativeIdentity": true,
+          "idealG1": "exact coefficient identity",
+          "actualRationalAndPL": "approximations, NOT exact G1",
+          "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+          "minIdealBarycentricLower": "0",
+          "nonstraightDeterminants": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          "publicVerifier": {
+            "passed": true,
+            "cases": 2,
+            "leaves": 2,
+            "samples": 4
+          },
+          "deltaPlusTau": "1/200",
+          "existingBudget": "1/200",
+          "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+        },
+        "completePublicVerifierCalls": 1
+      },
+      "geometry": {
+        "sameOrderedFaces": true,
+        "idealWorldFromSameTriangle": true,
+        "rationalWorldFromSameTriangle": true,
+        "controls": 8
+      },
+      "budget": {
+        "delta": "1/1000",
+        "tau": "1/250",
+        "delta_plus_tau": "1/200",
+        "existingCurveBudget": "1/200",
+        "hitUnchanged": "1/200",
+        "fullCQuantizationUnchanged": "1/100"
+      }
+    }
+  },
+  "mathematicalConstants": {
+    "idealUnfoldedDerivative": [
+      "1/4",
+      "-1/4",
+      "0"
+    ],
+    "positiveSquaredNormAndDot": "1/8",
+    "delta": "1/1000",
+    "tau": "1/250",
+    "sum": "1/200",
+    "exactEndpointScope": "shared seam E only",
+    "farCurvedGZ": "1/32+sqrt(2)/8",
+    "rationalAndPLExactG1": false
+  },
+  "compiledAgainstPrior": {
+    "numerics.js": {
+      "sha256": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb",
+      "identical": true
+    },
+    "bezier.js": {
+      "sha256": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681",
+      "identical": true
+    },
+    "face-cubic.js": {
+      "sha256": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098",
+      "identical": true
+    }
+  },
+  "negative": {
+    "negative-coarse": {
+      "exit": 1,
+      "refusal": {
+        "status": "REFUSED",
+        "reason": "control error exceeds delta",
+        "delta": "1/1000",
+        "tau": "1/250",
+        "sum": "1/200",
+        "bits": 2,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {
+          "face": 0,
+          "control": 0,
+          "idealBarycentric": [
+            [
+              "15/32",
+              "0"
+            ],
+            [
+              "1/4",
+              "0"
+            ],
+            [
+              "9/32",
+              "0"
+            ]
+          ],
+          "rationalBarycentric": [
+            {
+              "n": "1",
+              "d": "4"
+            },
+            {
+              "n": "1",
+              "d": "4"
+            },
+            {
+              "n": "1",
+              "d": "2"
+            }
+          ],
+          "errorSquared": [
+            "49/1024",
+            "0"
+          ],
+          "deltaSquared": "1/1000000",
+          "errorSquaredMinusDeltaSquaredSign": 1
+        }
+      }
+    },
+    "negative-overspend": {
+      "exit": 1,
+      "refusal": {
+        "status": "REFUSED",
+        "reason": "delta + tau exceeds existing curve budget",
+        "delta": "1/500",
+        "tau": "1/250",
+        "sum": "3/500",
+        "bits": 16,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {}
+      }
+    },
+    "negative-cap": {
+      "exit": 2,
+      "refusal": {
+        "status": "UNKNOWN",
+        "reason": "dyadic grid cap: 1..64 bits",
+        "delta": "1/1000",
+        "tau": "1/250",
+        "sum": "1/200",
+        "bits": 257,
+        "budget": "1/200",
+        "producerCalled": false,
+        "details": {}
+      }
+    }
+  }
+}

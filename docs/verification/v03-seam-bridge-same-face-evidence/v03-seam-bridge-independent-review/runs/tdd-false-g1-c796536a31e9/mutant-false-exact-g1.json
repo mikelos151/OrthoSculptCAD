@@ -1,0 +1,621 @@
+{
+  "format": "ScratchSeamReferenceBridge-v1-NOT-PRODUCTION",
+  "verdict": "VALIDATED_LOCAL",
+  "curved": true,
+  "nonstraightDeterminants": [
+    [
+      "-1/128",
+      "0"
+    ],
+    [
+      "-1/128",
+      "0"
+    ]
+  ],
+  "actualRationalUnfoldedDeterminant": [
+    "0",
+    "0"
+  ],
+  "actualRationalUnfoldedDeterminantSign": 0,
+  "leavesPerSpan": [
+    4,
+    4
+  ],
+  "referenceField": "Q(sqrt(2))",
+  "algebraicCaps": {
+    "maxBits": 512,
+    "maxOps": 200000,
+    "maxSignBits": 128
+  },
+  "algebraicOperations": 1905,
+  "controls": [
+    [
+      {
+        "idealBarycentric": [
+          [
+            "15/32",
+            "0"
+          ],
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "9/32",
+            "0"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "15",
+            "d": "32"
+          },
+          {
+            "n": "1",
+            "d": "4"
+          },
+          {
+            "n": "9",
+            "d": "32"
+          }
+        ],
+        "idealWorld": [
+          [
+            "1/4",
+            "0"
+          ],
+          [
+            "9/32",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "rationalWorld": [
+          "1/4",
+          "9/32",
+          "0"
+        ],
+        "idealHullLower": [
+          "15/32",
+          "1/4",
+          "9/32"
+        ],
+        "errorSquared": [
+          "0",
+          "0"
+        ],
+        "errorSquaredEnclosure": [
+          "0",
+          "0"
+        ],
+        "deltaSquaredMinusErrorSign": 1
+      },
+      {
+        "idealBarycentric": [
+          [
+            "15/32",
+            "0"
+          ],
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "19/96",
+            "0"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "15",
+            "d": "32"
+          },
+          {
+            "n": "21845",
+            "d": "65536"
+          },
+          {
+            "n": "12971",
+            "d": "65536"
+          }
+        ],
+        "idealWorld": [
+          [
+            "1/3",
+            "0"
+          ],
+          [
+            "19/96",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "rationalWorld": [
+          "21845/65536",
+          "12971/65536",
+          "0"
+        ],
+        "idealHullLower": [
+          "15/32",
+          "1/3",
+          "19/96"
+        ],
+        "errorSquared": [
+          "1/19327352832",
+          "0"
+        ],
+        "errorSquaredEnclosure": [
+          "1/19327352832",
+          "1/19327352832"
+        ],
+        "deltaSquaredMinusErrorSign": 1
+      },
+      {
+        "idealBarycentric": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "5/12",
+            "0"
+          ],
+          [
+            "1/12",
+            "0"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "1",
+            "d": "2"
+          },
+          {
+            "n": "13653",
+            "d": "32768"
+          },
+          {
+            "n": "2731",
+            "d": "32768"
+          }
+        ],
+        "idealWorld": [
+          [
+            "5/12",
+            "0"
+          ],
+          [
+            "1/12",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "rationalWorld": [
+          "13653/32768",
+          "2731/32768",
+          "0"
+        ],
+        "idealHullLower": [
+          "1/2",
+          "5/12",
+          "1/12"
+        ],
+        "errorSquared": [
+          "1/4831838208",
+          "0"
+        ],
+        "errorSquaredEnclosure": [
+          "1/4831838208",
+          "1/4831838208"
+        ],
+        "deltaSquaredMinusErrorSign": 1
+      },
+      {
+        "idealBarycentric": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "1",
+            "d": "2"
+          },
+          {
+            "n": "1",
+            "d": "2"
+          },
+          {
+            "n": "0",
+            "d": "1"
+          }
+        ],
+        "idealWorld": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "rationalWorld": [
+          "1/2",
+          "0",
+          "0"
+        ],
+        "idealHullLower": [
+          "1/2",
+          "1/2",
+          "0"
+        ],
+        "errorSquared": [
+          "0",
+          "0"
+        ],
+        "errorSquaredEnclosure": [
+          "0",
+          "0"
+        ],
+        "deltaSquaredMinusErrorSign": 1
+      }
+    ],
+    [
+      {
+        "idealBarycentric": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "1",
+            "d": "2"
+          },
+          {
+            "n": "1",
+            "d": "2"
+          },
+          {
+            "n": "0",
+            "d": "1"
+          }
+        ],
+        "idealWorld": [
+          [
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "rationalWorld": [
+          "1/2",
+          "0",
+          "0"
+        ],
+        "idealHullLower": [
+          "1/2",
+          "1/2",
+          "0"
+        ],
+        "errorSquared": [
+          "0",
+          "0"
+        ],
+        "errorSquaredEnclosure": [
+          "0",
+          "0"
+        ],
+        "deltaSquaredMinusErrorSign": 1
+      },
+      {
+        "idealBarycentric": [
+          [
+            "7/12",
+            "0"
+          ],
+          [
+            "5/12",
+            "-1/24"
+          ],
+          [
+            "0",
+            "1/24"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "38229",
+            "d": "65536"
+          },
+          {
+            "n": "5861",
+            "d": "16384"
+          },
+          {
+            "n": "3863",
+            "d": "65536"
+          }
+        ],
+        "idealWorld": [
+          [
+            "7/12",
+            "0"
+          ],
+          [
+            "0",
+            "-1/24"
+          ],
+          [
+            "0",
+            "1/24"
+          ]
+        ],
+        "rationalWorld": [
+          "38229/65536",
+          "-3863/65536",
+          "3863/65536"
+        ],
+        "idealHullLower": [
+          "7/12",
+          "2921591730873375611543678529362432000705/8166776806102523123120990578362437074944",
+          "240615969168004511545033772477625056927/4083388403051261561560495289181218537472"
+        ],
+        "errorSquared": [
+          "537045299/38654705664",
+          "-3863/393216"
+        ],
+        "errorSquaredEnclosure": [
+          "304401185842764449885002424216791813/401413413573551216547642928907670507107647488",
+          "152200592921382224942501212108401701/200706706786775608273821464453835253553823744"
+        ],
+        "deltaSquaredMinusErrorSign": 1
+      },
+      {
+        "idealBarycentric": [
+          [
+            "2/3",
+            "0"
+          ],
+          [
+            "29/96",
+            "-1/12"
+          ],
+          [
+            "1/32",
+            "1/12"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "21845",
+            "d": "32768"
+          },
+          {
+            "n": "12073",
+            "d": "65536"
+          },
+          {
+            "n": "9773",
+            "d": "65536"
+          }
+        ],
+        "idealWorld": [
+          [
+            "2/3",
+            "0"
+          ],
+          [
+            "-1/32",
+            "-1/12"
+          ],
+          [
+            "1/32",
+            "1/12"
+          ]
+        ],
+        "rationalWorld": [
+          "21845/32768",
+          "-9773/65536",
+          "9773/65536"
+        ],
+        "idealHullLower": [
+          "2/3",
+          "752291641752392906964665406984909652673/4083388403051261561560495289181218537472",
+          "304418912965680473444416511371081596575/2041694201525630780780247644590609268736"
+        ],
+        "errorSquared": [
+          "1073951539/19327352832",
+          "-2575/65536"
+        ],
+        "errorSquaredEnclosure": [
+          "233399677723407778328061624149265863/200706706786775608273821464453835253553823744",
+          "116699838861703889164030812074644519/100353353393387804136910732226917626776911872"
+        ],
+        "deltaSquaredMinusErrorSign": 1
+      },
+      {
+        "idealBarycentric": [
+          [
+            "3/4",
+            "0"
+          ],
+          [
+            "7/32",
+            "-1/8"
+          ],
+          [
+            "1/32",
+            "1/8"
+          ]
+        ],
+        "rationalBarycentric": [
+          {
+            "n": "3",
+            "d": "4"
+          },
+          {
+            "n": "1375",
+            "d": "32768"
+          },
+          {
+            "n": "6817",
+            "d": "32768"
+          }
+        ],
+        "idealWorld": [
+          [
+            "3/4",
+            "0"
+          ],
+          [
+            "-1/32",
+            "-1/8"
+          ],
+          [
+            "1/32",
+            "1/8"
+          ]
+        ],
+        "rationalWorld": [
+          "3/4",
+          "-6817/32768",
+          "6817/32768"
+        ],
+        "idealHullLower": [
+          "3/4",
+          "114262203775633287970838018050344256193/2722258935367507707706996859454145691648",
+          "283151265033121819477955598406596083359/1361129467683753853853498429727072845824"
+        ],
+        "errorSquared": [
+          "67113281/536870912",
+          "-5793/65536"
+        ],
+        "errorSquaredEnclosure": [
+          "6037620808600285249773570599997793/22300745198530623141535718272648361505980416",
+          "3018810404300142624886785300001793/11150372599265311570767859136324180752990208"
+        ],
+        "deltaSquaredMinusErrorSign": 1
+      }
+    ]
+  ],
+  "seam_exact": true,
+  "ideal_unfolded_determinant": [
+    "0",
+    "0"
+  ],
+  "bad_rational_determinant": [
+    "1",
+    "-1"
+  ],
+  "bad_rational_determinant_sign": -1,
+  "budget": {
+    "delta": "1/1000",
+    "tau": "1/250",
+    "delta_plus_tau": "1/200",
+    "existingCurveBudget": "1/200",
+    "hitUnchanged": "1/200",
+    "fullCQuantizationUnchanged": "1/100"
+  },
+  "public_verifier": {
+    "passed": true,
+    "cases": 2,
+    "leaves": 8,
+    "samples": 10
+  },
+  "producer": {
+    "producer": "real-existing-TS",
+    "cases": 2,
+    "leaves": 8,
+    "sameContextForEntireBundle": true
+  },
+  "real_proof_path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\runs\\tdd-false-g1-c796536a31e9\\real-face-proof.json",
+  "realProofSha256": "6d59a2734a0a787e5074da743af5f795b8646f6bc7c7f48d5cd6b8f31fbde2ff",
+  "source_sha256": {
+    "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\numerics.ts": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\bezier.ts": "9f55006402a30faa19ddef1e802178f2520859a0431c227c0569124ba136847e",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\src\\trimline\\face-cubic.ts": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_face_cubic_verify.py": "483d2a9b131fb32e13eb2dc53a994c7b2fecc4ea99cd183b8330abce6f34e6df",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tests\\reference\\v03_bezier_verify.py": "026fba002cc7502f64ea71dc095344320b427d408deccb9313a6d2dc969ac61c",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\compiled\\numerics.js": "7d3b13a270967febaf9864ff36417ec1e39c43e79fb1c8aa9fb54c6da8b7f4eb",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\compiled\\bezier.js": "e3233ade4bceae9c43476a3efb245fb403468f09d2e31862b6c0f744ea505681",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\compiled\\face-cubic.js": "811bcc4e16aca9a26200b9db79d96197d3292b533ec4d527cc88bb1db034b098",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\spike.py": "fe9b17c1a63dc5724dee7fdc192d147dafdd5d14549026d15dd7176d82ee6842",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\check_bridge.py": "12596842240efb39531ab82777fcbc306dd776887d9caee3de720d18d27827e8",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\producer.cjs": "99baa84f3209ed99d7e0e58872149fd0ef750cdbfaff9c139980336dcd900bea",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\secondary.py": "f495f72f007d0f89b1ae7f814c751cca9d9eeadeef784e160d6866e234bb14e6",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-seam-bridge-independent-review\\test_spike.py": "423f872752c99e30e647300c892115867f05b5a9af5c34531de23c90ecc7d9e7"
+  },
+  "samplerMaxUpperSquared": [
+    "209735681/79164837199872",
+    "279948083/52776558133248"
+  ],
+  "scope": "Two synthetic supplied faces only; rational cubic/PL approximate ideal, NOT exact G1. No source binding, route, global regularity/simplicity/isotopy, C quantization, cut/shell/collar or app certification.",
+  "independent_bridge_verifier": {
+    "passed": true,
+    "controlsChecked": 8,
+    "idealDerivativeIdentity": true,
+    "idealG1": "exact coefficient identity",
+    "actualRationalAndPL": "approximations, NOT exact G1",
+    "maxControlErrorSquaredUpper": "116699838861703889164030812074644519/100353353393387804136910732226917626776911872",
+    "minIdealBarycentricLower": "0",
+    "nonstraightDeterminants": [
+      [
+        "-1/128",
+        "0"
+      ],
+      [
+        "-1/128",
+        "0"
+      ]
+    ],
+    "publicVerifier": {
+      "passed": true,
+      "cases": 2,
+      "leaves": 8,
+      "samples": 10
+    },
+    "deltaPlusTau": "1/200",
+    "existingBudget": "1/200",
+    "independentCheckCap": "2 faces, 8 controls, 512-bit input coefficients; fixed-degree coefficient expansion and 128-bit sqrt enclosure; no mixed fields"
+  }
+}
