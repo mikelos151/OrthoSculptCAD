@@ -1,0 +1,37 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (2 tests | 1 failed) 12ms
+     × 02 atomically refuses managed/category excess and malformed plans before allocation 10ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 02 atomically refuses managed/category excess and malformed plans before allocation
+AssertionError: expected { ref: [Function ref], …(1) } to deeply equal { ok: false, code: 'BUDGET' }
+
+- Expected
++ Received
+
+  {
+-   "code": "BUDGET",
+-   "ok": false,
++   "allocateBuffer": [Function allocateBuffer],
++   "ref": [Function ref],
+  }
+
+ ❯ tests/v03-resource-ledger.test.ts:21:34
+     19|     accepted(l.reserve(plan(768, 'job')));
+     20|     const before = l.snapshot();
+     21|     expect(l.reserve(plan(257))).toEqual({ ok: false, code: 'BUDGET' }…
+       |                                  ^
+     22|     expect(l.reserve([...plan(1), { key: 'y', bytes: 256, category: 'r…
+     23|     expect(l.snapshot()).toEqual(before);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 1 passed (2)
+   Start at  19:02:47
+   Duration  246ms (transform 28ms, setup 0ms, import 43ms, tests 12ms, environment 0ms)
+

@@ -1,0 +1,116 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/tested-manifest.json",
+      "sha256": "ed3b3ea7ffc9454a6f4c2a284c857b25953af0ab1bd10a4961bf4106ad29d67d",
+      "bytes": 100577
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/tested-paths.txt",
+      "sha256": "2f493f5fd4964a9121a75ece15cf3f35b93eefd046bac24d790c56cb08d694c9",
+      "bytes": 54874
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/index-after.bin",
+      "sha256": "906f7838c598c55c8d1dde0a63e2c32c71ee9659411256071a778aa1fd072949",
+      "bytes": 153304
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/autocrlf-after.txt",
+      "sha256": "c17da2510d7f394bf7f633e79be43874a08a44d2e682e0afb667424a78edd398",
+      "bytes": 174
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/actual-exported-api.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/actual-exported-api.stdout.log",
+      "sha256": "292d670bf7f58ad501b4286a56153ce2e3715b40f4c4b6729edd1fe048b53b02",
+      "bytes": 1769
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/compile.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/compile.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/package.json",
+      "sha256": "337c421af135f6534462004073120ee84b7e007e1373e3b49290f237f59222af",
+      "bytes": 21
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/tsconfig.json",
+      "sha256": "ba25d9d84ca3f6e40096a9b0a4b0b115c18d7bc3ed4c7366c1f42e5fe63fa368",
+      "bytes": 345
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/witness-results.json",
+      "sha256": "d9c9c41222666b54f1977836e53cbdeed5771325e1ef385eb430cf02ee0124e7",
+      "bytes": 3293
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/witness.cjs",
+      "sha256": "a575c04efd09ca2f3ce8d3c11d7f55788cd0cddfdf5db6053f59d36bee8f645a",
+      "bytes": 20090
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-t/compiled/resourceLedger.js",
+      "sha256": "6ae0607fe24b8707fa8044ad47aac959bd0ac18f88ba9009a499067a55c21735",
+      "bytes": 10939
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/actual-exported-api.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/actual-exported-api.stdout.log",
+      "sha256": "292d670bf7f58ad501b4286a56153ce2e3715b40f4c4b6729edd1fe048b53b02",
+      "bytes": 1769
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/compile.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/compile.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/package.json",
+      "sha256": "337c421af135f6534462004073120ee84b7e007e1373e3b49290f237f59222af",
+      "bytes": 21
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/tsconfig.json",
+      "sha256": "0ea5494f24c023a4ef264764153e4710b61c3a9f8597acc4820469b42acbac8a",
+      "bytes": 345
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/witness-results.json",
+      "sha256": "d9c9c41222666b54f1977836e53cbdeed5771325e1ef385eb430cf02ee0124e7",
+      "bytes": 3293
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/witness.cjs",
+      "sha256": "a575c04efd09ca2f3ce8d3c11d7f55788cd0cddfdf5db6053f59d36bee8f645a",
+      "bytes": 20090
+    },
+    {
+      "path": "docs/verification/v03-resource-ledger-evidence/byte-transport/run-f/compiled/resourceLedger.js",
+      "sha256": "6ae0607fe24b8707fa8044ad47aac959bd0ac18f88ba9009a499067a55c21735",
+      "bytes": 10939
+    }
+  ],
+  "count": 22,
+  "scope": "Transport metadata created after the 626-file tested manifest; not included in that manifest."
+}

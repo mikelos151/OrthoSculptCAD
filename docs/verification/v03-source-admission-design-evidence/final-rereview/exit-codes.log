@@ -1,0 +1,4 @@
+witness=0
+negative-history-escape=1
+negative-sum-refs=1
+verify-artifacts=0

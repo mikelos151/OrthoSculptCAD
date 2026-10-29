@@ -1,0 +1,16 @@
+{
+  "label": "04-typescript-version",
+  "argv": [
+    "node",
+    "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+    "--version"
+  ],
+  "cwd": "C:/Users/sandr",
+  "environmentOverrides": {
+    "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 0,
+  "stdout": "Version 5.9.3\r\n",
+  "stderr": ""
+}

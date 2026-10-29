@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-quality-review\\witness.cjs"
+  ],
+  "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-quality-review",
+  "exit_code": 0,
+  "stdout": "PASS weak-identity: serialized/cloned/foreign/diagnostic handles never gain authority (169 assertions)\nPASS borrowed-method receivers authenticate the ledger-local lease (116 assertions)\nPASS reserved/live/retired/closed phase and authentication-error priority (39 assertions)\nPASS budget refusals preserve entire graph, aliases and controlled references (17 assertions)\nPASS intrinsic native backing identity ignores forged/shadow getters and view lengths (24 assertions)\nPASS allocator seam: thrown native-style failure and invalid results roll back only failing key (78 assertions)\nPASS allocator duplicate existing/live native backing cannot replace another allocation (8 assertions)\nPASS observed native detach refuses ownership transitions without dropping charge; cleanup recovers (26 assertions)\nPASS zero-byte/empty/invalid-plan control slots are bounded and reusable; realms have lifetime cap (1081 assertions)\nPASS sole-live-ref handoff preserves identity/bytes and never pretends native transport (14 assertions)\nPASS deep-frozen diagnostics expose no buffer/capability/native authority; default caps unchanged (45 assertions)\nPASS deterministic mixed lifecycle graph witness against actual API (1600 steps) (2637 assertions)\n{\n  \"passed\": true,\n  \"tests\": 12,\n  \"failed\": 0,\n  \"assertions\": 4254,\n  \"runtime\": {\n    \"node\": \"v24.19.0\",\n    \"v8\": \"13.6.233.17-node.51\",\n    \"execArgv\": [\n      \"--max-old-space-size=128\",\n      \"--max-semi-space-size=8\"\n    ],\n    \"platform\": \"win32\",\n    \"nativeLengthGetter\": \"function get byteLength() { [native code] }\",\n    \"arrayBufferConstructor\": \"function ArrayBuffer() { [native code] }\"\n  },\n  \"payload\": {\n    \"maxNativePayloadBytes\": 32,\n    \"countedNativeAllocations\": 252,\n    \"capSizedAllocations\": 0\n  }\n}\n",
+  "stderr": ""
+}

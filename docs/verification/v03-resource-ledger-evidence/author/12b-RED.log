@@ -1,0 +1,36 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (12 tests | 1 failed) 19ms
+     × 12 validates the entire dense plan before publishing any lease or reference 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 12 validates the entire dense plan before publishing any lease or reference
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "INVALID_INPUT",
++ TypeError {
++   "message": "Cannot read properties of undefined (reading 'bytes')",
+  }
+
+ ❯ tests/v03-resource-ledger.test.ts:20:45
+     18|     for (const bad of [sparse, [good, null], [good, { ...good, key: 'b…
+     19|       const before = l.snapshot();
+     20|       expect(() => l.reserve(bad as never)).toThrowError(expect.object…
+       |                                             ^
+     21|       expect(l.snapshot()).toEqual(before);
+     22|     }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 passed (12)
+   Start at  19:12:23
+   Duration  247ms (transform 35ms, setup 0ms, import 48ms, tests 19ms, environment 0ms)
+

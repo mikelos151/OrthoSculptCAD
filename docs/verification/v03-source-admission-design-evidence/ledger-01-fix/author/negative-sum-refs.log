@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-source-admission-ledger-contract-fix\contract_witness.py", line 254, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-source-admission-ledger-contract-fix\contract_witness.py", line 235, in main
+    assert code == v.expected_code, (v.name, "code", code, v.expected_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('resident-undo-accepted-768', 'code', 'BUDGET', 'OK')

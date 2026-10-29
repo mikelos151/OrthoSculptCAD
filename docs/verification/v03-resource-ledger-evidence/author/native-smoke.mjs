@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import { createResourceLedger, DEFAULT_RESOURCE_LIMITS } from './compiled/resourceLedger.js';
+const ledger = createResourceLedger({ managed: 1024, job: 768, history: 768 });
+const main = ledger.createRealm(), worker = ledger.createRealm();
+const caller = ledger.reserve([{ key: 'buffer', bytes: 768, category: 'job', owner: main }]);
+assert.ok(!('code' in caller));
+const ref = caller.ref('buffer'), backing = caller.allocateBuffer(ref);
+assert.ok(backing instanceof ArrayBuffer);
+assert.equal(Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, 'byteLength').get.call(backing), 768);
+const broker = ledger.reserve([]); assert.ok(!('code' in broker));
+const controlled = broker.retain(ref, 'history', main); assert.ok(!('code' in controlled));
+assert.throws(() => caller.transfer(ref, worker), { code: 'TRANSFER_ALIASED' });
+assert.equal(backing.byteLength, 768);
+caller.close();
+assert.deepEqual([ledger.snapshot().managed, ledger.snapshot().job, ledger.snapshot().history], [768, 0, 768]);
+const id = ledger.snapshot().allocations[0].id;
+broker.transfer(controlled, worker);
+assert.equal(ledger.snapshot().allocations[0].id, id);
+assert.equal(backing.byteLength, 768); // Deliberately no native transfer in G1a.
+assert.throws(() => broker.retain(structuredClone(controlled), 'job', worker), { code: 'INVALID_INPUT' });
+broker.release(controlled);
+assert.deepEqual([ledger.snapshot().managed, ledger.snapshot().job, ledger.snapshot().history], [0, 0, 0]);
+assert.ok(Object.isFrozen(DEFAULT_RESOURCE_LIMITS));
+console.log(JSON.stringify({ passed: true, node: process.version, v8: process.versions.v8, payloadBytes: 768, nativeArrayBuffer: true, logicalTransferOnly: true, nativeWorkerTested: false, RSSClaimed: false }));

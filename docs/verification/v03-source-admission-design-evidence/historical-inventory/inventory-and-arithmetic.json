@@ -1,0 +1,185 @@
+{
+  "kind": "read-only-design-inventory-v1",
+  "head": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "branch": "feature/trimline-v03",
+  "files": [
+    {
+      "path": "docs/plans/trimline-v03-integrated-design.md",
+      "bytes": 23407,
+      "lines": 103,
+      "sha256": "4874b8c83e5270750b06da4cc9b57834d816823872bd9ee86391da2ac995d8af"
+    },
+    {
+      "path": "docs/plans/trimline-v03-m0-implementation-plan.md",
+      "bytes": 9043,
+      "lines": 82,
+      "sha256": "1911ef066a8a8bf30968978199b28398627a0acc3143f2240b76ba967ab37158"
+    },
+    {
+      "path": "docs/plans/v03-source-bound-spans-design.md",
+      "bytes": 34727,
+      "lines": 232,
+      "sha256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf"
+    },
+    {
+      "path": "src/trimline/source-candidate.ts",
+      "bytes": 14852,
+      "lines": 266,
+      "sha256": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b"
+    },
+    {
+      "path": "src/geometry/audit.ts",
+      "bytes": 6009,
+      "lines": 70,
+      "sha256": "999f4db55936872025f14b0b07c6b9576bae6ea3b0199ad10b15d712cb9ac1e8"
+    },
+    {
+      "path": "src/geometry/auditTypes.ts",
+      "bytes": 639,
+      "lines": 15,
+      "sha256": "a6d76bfea63cad67f7df5ee8f3ce70641a39c5d71af3f0fad5eecc9a0084a8ee"
+    },
+    {
+      "path": "src/geometry/intersections.ts",
+      "bytes": 7515,
+      "lines": 124,
+      "sha256": "9eaff6af519c7109b38610a1cf8780b499cb12c2e8276ba326b10561bf83ffd3"
+    },
+    {
+      "path": "src/geometry/core.ts",
+      "bytes": 6860,
+      "lines": 212,
+      "sha256": "9fd28a791b77eddb8634e26512222e734e6452c06c9a06820a67ec7dfad6fc8d"
+    },
+    {
+      "path": "src/hooks/runDisplayTask.ts",
+      "bytes": 2706,
+      "lines": 39,
+      "sha256": "88321ec8eeb8e7865bf143de232a6fec68078c74e4051d2d596a08f48b5925e2"
+    },
+    {
+      "path": "src/hooks/workbenchState.ts",
+      "bytes": 4918,
+      "lines": 87,
+      "sha256": "051884f6b8a9c57143b3da5d66443f9ef12dc7e4416d7b113b1fc81a60727cf7"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 94026,
+      "lines": 2061,
+      "sha256": "f697dcc4a34a02dbe58b94e700eb9c2ce644ee3fc098e3e34b5161f7bfcdce17"
+    },
+    {
+      "path": "src/compute/client.ts",
+      "bytes": 3521,
+      "lines": 64,
+      "sha256": "d129131af2ddc2f08700d53360ea2338cb06b45e616231c74c1a7bf9287c5296"
+    },
+    {
+      "path": "src/compute/copy.ts",
+      "bytes": 8186,
+      "lines": 131,
+      "sha256": "003155329a220edfe46aed2cf946955a458fe5ac8d88bb00197b5d2d876993e8"
+    },
+    {
+      "path": "src/compute/execute.ts",
+      "bytes": 2191,
+      "lines": 33,
+      "sha256": "cc5955ff799b2339e13409da12e1620d74f954891bf7e41c37ba6c71344e9311"
+    },
+    {
+      "path": "src/compute/index.ts",
+      "bytes": 1620,
+      "lines": 28,
+      "sha256": "68f899bf90324bb24998d5d5f07bf64cdc796e9a6c5e664d9b75862c69b00ba1"
+    },
+    {
+      "path": "src/compute/measureAt.ts",
+      "bytes": 977,
+      "lines": 14,
+      "sha256": "c85b55987335dc47b0a7892b016501c7e0c49fe70adccdfafefd0c3b7ce69c21"
+    },
+    {
+      "path": "src/compute/protocol.ts",
+      "bytes": 1617,
+      "lines": 21,
+      "sha256": "2484c88d207781b7bb1a4c7c8c7c0f634258646380a1f734d6c8995542eb67af"
+    },
+    {
+      "path": "src/compute/service.ts",
+      "bytes": 1721,
+      "lines": 36,
+      "sha256": "bfe6f3dcf239235f81664da8def2e5e61c67aee1dc5934e7d3a39086c958676f"
+    },
+    {
+      "path": "src/compute/sliceEngine.ts",
+      "bytes": 3157,
+      "lines": 57,
+      "sha256": "9fb55abca489563306661739658c7ee22b1324af251dd881eccc3541481607ad"
+    },
+    {
+      "path": "src/compute/types.ts",
+      "bytes": 1259,
+      "lines": 29,
+      "sha256": "f52de09fa242be1a950161ab4e2f14fb083134626460c579301d7e510a061946"
+    },
+    {
+      "path": "src/compute/worker.ts",
+      "bytes": 731,
+      "lines": 12,
+      "sha256": "080f8469ec8ac1fe259a81dbf3be7c44edff6cb4a1b4ce7a99e869b1380ebcad"
+    }
+  ],
+  "current_domain_bytes": 27,
+  "design_examples": [
+    {
+      "V": 4,
+      "F": 4,
+      "S_buffer_bytes": 96,
+      "current_preimage_bytes": 162,
+      "current_capture_buffer_peak": 258,
+      "proposed_topology_arena_bytes": 272,
+      "proposed_spatial_arena_bytes": 3848,
+      "proposed_audit_arena_peak": 3848,
+      "proposed_S_plus_audit_arena": 3944,
+      "tree_nodes_upper": 7,
+      "tree_height_upper": 2,
+      "disclaimer": "Arithmetic for PROPOSED future layouts, not current audit memory, implemented bound, RSS or benchmark."
+    },
+    {
+      "V": 200000,
+      "F": 200000,
+      "S_buffer_bytes": 4800000,
+      "current_preimage_bytes": 4800066,
+      "current_capture_buffer_peak": 9600066,
+      "proposed_topology_arena_bytes": 13000000,
+      "proposed_spatial_arena_bytes": 40803608,
+      "proposed_audit_arena_peak": 40803608,
+      "proposed_S_plus_audit_arena": 45603608,
+      "tree_nodes_upper": 399999,
+      "tree_height_upper": 18,
+      "disclaimer": "Arithmetic for PROPOSED future layouts, not current audit memory, implemented bound, RSS or benchmark."
+    },
+    {
+      "V": 200000,
+      "F": 200000,
+      "S_buffer_bytes": 8800000,
+      "current_preimage_bytes": 8800066,
+      "current_capture_buffer_peak": 17600066,
+      "proposed_topology_arena_bytes": 13000000,
+      "proposed_spatial_arena_bytes": 40803608,
+      "proposed_audit_arena_peak": 40803608,
+      "proposed_S_plus_audit_arena": 49603608,
+      "tree_nodes_upper": 399999,
+      "tree_height_upper": 18,
+      "disclaimer": "Arithmetic for PROPOSED future layouts, not current audit memory, implemented bound, RSS or benchmark."
+    }
+  ],
+  "caps_proposed_only": {
+    "jobs": 134217728,
+    "history": 134217728,
+    "managed": 402653184
+  },
+  "executed_geometry_tests": false,
+  "memory_measured": false
+}

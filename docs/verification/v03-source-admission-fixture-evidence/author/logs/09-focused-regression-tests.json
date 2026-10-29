@@ -1,0 +1,15 @@
+{
+  "label": "09-focused-regression-tests",
+  "argv": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/test_fixture_regression.py"
+  ],
+  "cwd": "C:/Users/sandr",
+  "environmentOverrides": {
+    "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": "test_all_whole_source_native_digests_match_independent_hashlib (__main__.FixtureRegression.test_all_whole_source_native_digests_match_independent_hashlib) ... ok\r\ntest_fixed_metadata_local_order_bits_and_attributes_across_all_cases (__main__.FixtureRegression.test_fixed_metadata_local_order_bits_and_attributes_across_all_cases) ... ok\r\ntest_independent_exact_closed_cube_topology_and_signed_volume (__main__.FixtureRegression.test_independent_exact_closed_cube_topology_and_signed_volume) ... ok\r\ntest_independent_removed_duplicated_face_topology (__main__.FixtureRegression.test_independent_removed_duplicated_face_topology) ... ok\r\ntest_mutations_are_exactly_distant_and_do_not_rename_any_mesh (__main__.FixtureRegression.test_mutations_are_exactly_distant_and_do_not_rename_any_mesh) ... ok\r\ntest_positive_required_checks_complete_and_minimum_thickness_unknown (__main__.FixtureRegression.test_positive_required_checks_complete_and_minimum_thickness_unknown) ... ok\r\ntest_public_verifier_rejects_corrupted_control_not_blind_pass (__main__.FixtureRegression.test_public_verifier_rejects_corrupted_control_not_blind_pass) ... ok\r\ntest_selfcross_keeps_whole_topology_and_has_positive_exact_volume (__main__.FixtureRegression.test_selfcross_keeps_whole_topology_and_has_positive_exact_volume) ... ok\r\ntest_three_recomputed_digest_saved_old_pass_associations_are_untrusted (__main__.FixtureRegression.test_three_recomputed_digest_saved_old_pass_associations_are_untrusted) ... ok\r\ntest_unchanged_complete_public_local_proof_verifies_all_cases (__main__.FixtureRegression.test_unchanged_complete_public_local_proof_verifies_all_cases) ... ok\r\ntest_zero_pair_budget_is_unknown_not_auto_pass (__main__.FixtureRegression.test_zero_pair_budget_is_unknown_not_auto_pass) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 11 tests in 0.053s\r\n\r\nOK\r\n"
+}

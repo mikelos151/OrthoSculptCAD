@@ -1,0 +1,1 @@
+node node_modules/typescript/bin/tsc --target ES2022 --module ES2022 --moduleResolution bundler --strict --skipLibCheck --outDir C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-ts/compiled src/compute/resourceLedger.ts

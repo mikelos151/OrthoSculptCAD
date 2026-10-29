@@ -1,0 +1,18 @@
+{
+  "label": "06-strict-subset-compile",
+  "argv": [
+    "node",
+    "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+    "-p",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/tsconfig.json",
+    "--listEmittedFiles"
+  ],
+  "cwd": "C:/Users/sandr",
+  "environmentOverrides": {
+    "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 0,
+  "stdout": "TSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/types.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/geometry/auditTypes.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/geometry/core.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/geometry/intersections.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/geometry/audit.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/io/validation.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/trimline/numerics.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/trimline/bezier.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/trimline/face-cubic.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/trimline/source-candidate.js\r\n",
+  "stderr": ""
+}

@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "repository_files_unchanged": 2428,
+  "read_only_evidence_files_unchanged": 29,
+  "HEAD": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "git_status_unchanged": true,
+  "plan_sha256_start": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+  "plan_sha256_end": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+  "source_sha256": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+  "replay_results_byte_identical_to_fix": true,
+  "vector_count": 33,
+  "projection_graphs": 729,
+  "exit_codes": {
+    "witness": 0,
+    "negative_history_escape": 1,
+    "negative_sum_refs": 1,
+    "verify_artifacts": 0
+  },
+  "artifact_hashes": {
+    "artifact-verification.json": "f29bdd05b03c87ccf13c01579ccdbe5c1eb1451de87167ecee147935b0cb125c",
+    "contract_witness.py": "3dd9ffb99d939791c25f41705acf70b2878d839258cdb319e83faed9eefd4ad7",
+    "exit-codes.log": "e6964560c80cb8a26412c4ac3ff37e426740c13366d6503f7c403d09280caea4",
+    "final_review_checks.py": "a5556d2227aeedb96ae378d84cc5fa7208ac3acaae085a95f36797ad2422bba9",
+    "git-head-end.txt": "c9fd0cf539cda2c063f618dd1c1b3eedf0fe0019033cae78de0412eae1ee4fed",
+    "git-status-end.txt": "f922911dedcf7921c17be76161b15ff562ce0c86a96a577dec67fc937a27dab8",
+    "input-hashes-end.json": "e7251cae1e13c4947b3ece56c56ea35e8af81a438d27f3a777a59e07fd1a942c",
+    "input-hashes-start.json": "6769adff6b346faaa3bb60b158267092e5262f7a415424ff3f778eea9d624760",
+    "negative-history-escape.log": "60b3eeb780afe061c2cc411d73c58c8f98f9a653bc1a6457142982142032b40d",
+    "negative-sum-refs.log": "514236e2591af5c8760866ff9cb975e985a5b581468840bcaa7138b96f818d3d",
+    "plan-before.md": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+    "prepare.log": "f5890675cbe9dc8be31703161ad0d4c0dd4a8017b9ec87b9361b8be63644ca97",
+    "prepare_review.py": "5894af5e963df563af9d410c5833c9dff2cdf214177b5e68358f88970c4ab5a1",
+    "review-input-verification.json": "59f69bd5f6016d50aacdddd328514da423f8230dd7fe70a58a5c4bfd521db685",
+    "review.json": "e2ed0ca60b5db6b9a580eb69be31257c3d0f25894badef5bd3e247ac07eece22",
+    "targeted.patch": "240bab0e47bed84b5b73600de4f1aaf253d63641539f9030af902adfd35cfec3",
+    "verification.log": "f29bdd05b03c87ccf13c01579ccdbe5c1eb1451de87167ecee147935b0cb125c",
+    "verify_artifacts.py": "84e1aa17ba229ff434b335475c17d8e6a8146098137fb17d19152dbba88caf8d",
+    "witness-results.json": "2c3139b91f1b253b295d5ee8241211049ba1ac54abf85fb26a823854fd5a579b",
+    "witness.log": "d138b470228584ce972ca7fe3fda591d6c702ab2b8bf5b93cdbbc5fdd911381b"
+  }
+}

@@ -1,0 +1,149 @@
+PASS 01 matrix resident768 history512 refusal
+PASS 02 matrix resident768 history768 success
+PASS 03 matrix category overlap close one lease
+PASS 04 matrix oneRef reclassify with old category remaining
+PASS 05 matrix reclassify768 all-caps rollback
+PASS 06 matrix subviews whole intrinsic backing and repeated registration
+PASS 07 matrix exact1024 refusal before allocation
+PASS 08 matrix controlled ref is a real separate lease
+PASS 09 matrix retired h1 cannot free pending h2
+PASS 10 matrix logical sole-ref transfer alias and realm
+PASS 11 reserved/live/retired and closed priority
+PASS 12 malformed sparse and invalid plans rollback no lease consumed
+PASS 13 max-safe overflow reservation only no physical allocation
+PASS 14 zero byte records control slots and recycling
+PASS 15 allocator throw rolls back only its unmaterialized reservation
+PASS 16 allocator native validation and duplicate backing preserve live owner
+PASS 17 existing native identity versus distinct copies and cross-context buffer
+PASS 18 forged foreign cloned runtime capability boundaries
+PASS 19 receivers authenticate before closed state and snapshots immutable
+PASS 20 unauthorized external detach never silently frees charge
+PASS 21 proposed defaults reserved only not RSS proof
+PASS 22 default finite control limits zero-payload native-free witnesses
+PASS exhaustive actual-API category graphs 729
+{
+  "passed": true,
+  "scope": "G1aPrimitiveOnly",
+  "cases": [
+    {
+      "name": "01 matrix resident768 history512 refusal",
+      "passed": true,
+      "checks": 7
+    },
+    {
+      "name": "02 matrix resident768 history768 success",
+      "passed": true,
+      "checks": 8
+    },
+    {
+      "name": "03 matrix category overlap close one lease",
+      "passed": true,
+      "checks": 9
+    },
+    {
+      "name": "04 matrix oneRef reclassify with old category remaining",
+      "passed": true,
+      "checks": 11
+    },
+    {
+      "name": "05 matrix reclassify768 all-caps rollback",
+      "passed": true,
+      "checks": 8
+    },
+    {
+      "name": "06 matrix subviews whole intrinsic backing and repeated registration",
+      "passed": true,
+      "checks": 11
+    },
+    {
+      "name": "07 matrix exact1024 refusal before allocation",
+      "passed": true,
+      "checks": 10
+    },
+    {
+      "name": "08 matrix controlled ref is a real separate lease",
+      "passed": true,
+      "checks": 11
+    },
+    {
+      "name": "09 matrix retired h1 cannot free pending h2",
+      "passed": true,
+      "checks": 9
+    },
+    {
+      "name": "10 matrix logical sole-ref transfer alias and realm",
+      "passed": true,
+      "checks": 15
+    },
+    {
+      "name": "11 reserved/live/retired and closed priority",
+      "passed": true,
+      "checks": 23
+    },
+    {
+      "name": "12 malformed sparse and invalid plans rollback no lease consumed",
+      "passed": true,
+      "checks": 20
+    },
+    {
+      "name": "13 max-safe overflow reservation only no physical allocation",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "name": "14 zero byte records control slots and recycling",
+      "passed": true,
+      "checks": 15
+    },
+    {
+      "name": "15 allocator throw rolls back only its unmaterialized reservation",
+      "passed": true,
+      "checks": 12
+    },
+    {
+      "name": "16 allocator native validation and duplicate backing preserve live owner",
+      "passed": true,
+      "checks": 25
+    },
+    {
+      "name": "17 existing native identity versus distinct copies and cross-context buffer",
+      "passed": true,
+      "checks": 13
+    },
+    {
+      "name": "18 forged foreign cloned runtime capability boundaries",
+      "passed": true,
+      "checks": 68
+    },
+    {
+      "name": "19 receivers authenticate before closed state and snapshots immutable",
+      "passed": true,
+      "checks": 15
+    },
+    {
+      "name": "20 unauthorized external detach never silently frees charge",
+      "passed": true,
+      "checks": 10
+    },
+    {
+      "name": "21 proposed defaults reserved only not RSS proof",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "name": "22 default finite control limits zero-payload native-free witnesses",
+      "passed": true,
+      "checks": 1
+    }
+  ],
+  "caseCount": 22,
+  "projectionGraphs": 729,
+  "graphAssertions": 10517,
+  "managedNativeBytesAllocatedViaHarness": 41233,
+  "traceSha256": "c5626c7c75d690efb73fd993128aa9ed2ce60aa48a893c63b703aeaff6c980d4",
+  "node": "v24.19.0",
+  "v8": "13.6.233.17-node.51",
+  "logicalTransferOnly": true,
+  "nativeWorkerTested": false,
+  "RSSClaimed": false
+}

@@ -1,0 +1,292 @@
+[
+  {
+    "cycle": "01",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 01 reserves before a real exact-limit native allocation",
+      "AssertionError: expected { ok: false, code: 'BUDGET' } to not have property \"code\"",
+      "      Tests  1 failed (1)"
+    ],
+    "green_summary": [
+      "      Tests  1 passed (1)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": null,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "02199db044db765c2a1172ae01e6941dafcca69ce28ef4828377e03524f165c6",
+    "green_source_sha256": "1e2c0743a3c513e0ef4dc087863e226a7c893c28f6df99e5abef71f476f4a083"
+  },
+  {
+    "cycle": "02",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 02 atomically refuses managed/category excess and malformed plans before allocation",
+      "AssertionError: expected { ref: [Function ref], …(1) } to deeply equal { ok: false, code: 'BUDGET' }",
+      "      Tests  1 failed | 1 passed (2)"
+    ],
+    "green_summary": [
+      "      Tests  2 passed (2)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "1e2c0743a3c513e0ef4dc087863e226a7c893c28f6df99e5abef71f476f4a083",
+    "green_source_sha256": "e5d8f7fd50f7726c78414e3feb2ea3aa51f87aa28bd1f4e8b1bbe6bc1ad4ca16"
+  },
+  {
+    "cycle": "03",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 03 retains materialized backing once per category with atomic history refusal",
+      "      Tests  1 failed | 2 passed (3)"
+    ],
+    "green_summary": [
+      "      Tests  3 passed (3)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": false,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "d8b68647f39d6162433ddb0e3519522ede31cfc7e78d059458e6ea4b025e43d4",
+    "green_source_sha256": "5991299e86e7498c9d8997949ffaa8345c2e118daeb09446f36c4e0ed0b1bc24"
+  },
+  {
+    "cycle": "04",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 04 reclassifies only one owning ref and rolls back all categories on refusal",
+      "      Tests  1 failed | 3 passed (4)"
+    ],
+    "green_summary": [
+      "      Tests  4 passed (4)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "5991299e86e7498c9d8997949ffaa8345c2e118daeb09446f36c4e0ed0b1bc24",
+    "green_source_sha256": "fc1d1b3c83643039923fd5f636c20dda630e5c3865c4f406bb270ea973dc70a3"
+  },
+  {
+    "cycle": "05",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 05 closes only own refs, preserves controlled holds, ignores retired h1 while h2 pending",
+      "      Tests  1 failed | 4 passed (5)"
+    ],
+    "green_summary": [
+      "      Tests  5 passed (5)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "fc1d1b3c83643039923fd5f636c20dda630e5c3865c4f406bb270ea973dc70a3",
+    "green_source_sha256": "53e5774a21862f7f2c7d753f4302352ec62056fe8037601d70a0c26a28f0eace"
+  },
+  {
+    "cycle": "06",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 06 rolls back only the failed unmaterialized key and validates real fixed buffers intrinsically",
+      "AssertionError: expected [ 384, 384, 128 ] to deeply equal [ 256, 256, 128 ]",
+      "      Tests  1 failed | 5 passed (6)"
+    ],
+    "green_summary": [
+      "      Tests  6 passed (6)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "53e5774a21862f7f2c7d753f4302352ec62056fe8037601d70a0c26a28f0eace",
+    "green_source_sha256": "e3cca25e62a2ed8117a496e6ec3ea4cf2692d819f761c5fca33dd307880e2cfc"
+  },
+  {
+    "cycle": "07",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 07 registers native backing identity, not view lengths; independent copies need new reservations",
+      "      Tests  1 failed | 6 passed (7)"
+    ],
+    "green_summary": [
+      "      Tests  7 passed (7)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": false,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "813e8c27e8e8e7d6b0c01a1a7fcbd4666247873a2fac10e053f4b2e23714f27d",
+    "green_source_sha256": "71c8eb16097b3b707f49a394beb4d49106fbcb145c8c88b627a1e4cbc1063e4a"
+  },
+  {
+    "cycle": "08",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 08 checks logical sole-reference realm handoff without native detach or re-reservation",
+      "AssertionError: expected error to match asymmetric matcher",
+      "      Tests  1 failed | 7 passed (8)"
+    ],
+    "green_summary": [
+      "      Tests  8 passed (8)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "71c8eb16097b3b707f49a394beb4d49106fbcb145c8c88b627a1e4cbc1063e4a",
+    "green_source_sha256": "e2fc659fd49160f75c634c308c1a04286e6a3a08b41b5589fe97eaa62956d342"
+  },
+  {
+    "cycle": "09",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 09 authenticates every capability boundary before closed and rejects retired transfer sources",
+      "AssertionError: expected error to match asymmetric matcher",
+      "      Tests  1 failed | 8 passed (9)"
+    ],
+    "green_summary": [
+      "      Tests  9 passed (9)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "e2fc659fd49160f75c634c308c1a04286e6a3a08b41b5589fe97eaa62956d342",
+    "green_source_sha256": "d68426017270923937b37c9ce5189bd5ba84590067e702cb58d13e14544e3566"
+  },
+  {
+    "cycle": "10",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 10 bounds live control records including zero-byte reservations and empty leases",
+      "AssertionError: expected function to throw an error, but it didn't",
+      "      Tests  1 failed | 9 passed (10)"
+    ],
+    "green_summary": [
+      "      Tests  10 passed (10)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "d68426017270923937b37c9ce5189bd5ba84590067e702cb58d13e14544e3566",
+    "green_source_sha256": "e5c62c1db5d0924708f968ae027548fa2bceb11451ccdc48eb689080fe4fcc94"
+  },
+  {
+    "cycle": "11",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 11 rejects detached live backing and allocator reuse without corrupting another allocation",
+      "AssertionError: expected function to throw an error, but it didn't",
+      "      Tests  1 failed | 10 passed (11)"
+    ],
+    "green_summary": [
+      "      Tests  11 passed (11)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "e5c62c1db5d0924708f968ae027548fa2bceb11451ccdc48eb689080fe4fcc94",
+    "green_source_sha256": "4ef367fc94f7a1ff607148efee55d079209dce3212a38a9e5a668c33d8df3db2"
+  },
+  {
+    "cycle": "12",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 12 validates the entire dense plan before publishing any lease or reference",
+      "AssertionError: expected error to match asymmetric matcher",
+      "      Tests  1 failed | 11 passed (12)"
+    ],
+    "green_summary": [
+      "      Tests  12 passed (12)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "4ef367fc94f7a1ff607148efee55d079209dce3212a38a9e5a668c33d8df3db2",
+    "green_source_sha256": "503d08abaed1a760ef2731afd3ccff98eec0238c509b1967525da44b178a35fb"
+  },
+  {
+    "cycle": "13",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 13 keeps proposed 128/128/384 MiB defaults without allocating cap-sized payloads",
+      "TypeError: Cannot read properties of undefined (reading 'managed')",
+      "      Tests  1 failed | 12 passed (13)"
+    ],
+    "green_summary": [
+      "      Tests  13 passed (13)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": true,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "503d08abaed1a760ef2731afd3ccff98eec0238c509b1967525da44b178a35fb",
+    "green_source_sha256": "c661ebf7a7c179512891d2cf7d05fb694955c6a2f4349dd0b2de8c3a21a38abf"
+  },
+  {
+    "cycle": "14",
+    "red_exit": 1,
+    "green_exit": 0,
+    "red_summary": [
+      "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+      " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 14 distinguishes authentic reserved phase from closed target lease after authentication",
+      "AssertionError: expected error to match asymmetric matcher",
+      "      Tests  1 failed | 13 passed (14)"
+    ],
+    "green_summary": [
+      "      Tests  14 passed (14)"
+    ],
+    "unchanged_test_between_red_green": true,
+    "changed_source_red_green": true,
+    "prior_green_source_matches_next_red": false,
+    "red_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "green_command": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts --maxWorkers=1 --no-file-parallelism",
+    "red_source_sha256": "30811ee5cec1accdb9b5d4fec426b8e939462d6bcfccca9a4384c2099b4e83cb",
+    "green_source_sha256": "11ca6d4ae2cd918b7923805128fa4e25aabf99554197907e3cccc3fe789dbbfd"
+  }
+]

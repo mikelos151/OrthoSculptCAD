@@ -1,0 +1,18 @@
+{
+  "label": "10-final-head",
+  "argv": [
+    "C:/Users/sandr/AppData/Local/hermes/tools/git-2.53.0+3-win32-x64/mingw64/bin/git.exe",
+    "-C",
+    "C:/Users/sandr/OrthoSculptCAD",
+    "rev-parse",
+    "HEAD"
+  ],
+  "cwd": "C:/Users/sandr",
+  "environmentOverrides": {
+    "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 0,
+  "stdout": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db\n",
+  "stderr": ""
+}

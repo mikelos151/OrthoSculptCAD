@@ -1,0 +1,200 @@
+[
+  {
+    "label": "00-head",
+    "argv": [
+      "C:/Users/sandr/AppData/Local/hermes/tools/git-2.53.0+3-win32-x64/mingw64/bin/git.exe",
+      "-C",
+      "C:/Users/sandr/OrthoSculptCAD",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db\n",
+    "stderr": ""
+  },
+  {
+    "label": "01-initial-status",
+    "argv": [
+      "C:/Users/sandr/AppData/Local/hermes/tools/git-2.53.0+3-win32-x64/mingw64/bin/git.exe",
+      "-C",
+      "C:/Users/sandr/OrthoSculptCAD",
+      "status",
+      "--short"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "?? docs/plans/v03-source-admission-owner-design.md\n",
+    "stderr": ""
+  },
+  {
+    "label": "02-node-version",
+    "argv": [
+      "node",
+      "--version"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "v24.19.0\r\n",
+    "stderr": ""
+  },
+  {
+    "label": "03-python-version",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "--version"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "Python 3.14.9\r\n",
+    "stderr": ""
+  },
+  {
+    "label": "04-typescript-version",
+    "argv": [
+      "node",
+      "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+      "--version"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "Version 5.9.3\r\n",
+    "stderr": ""
+  },
+  {
+    "label": "05-exact-fixtures",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/exact_fixtures.py"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "{\"baseClosedConnectedVertexCycles\": true, \"cases\": 5, \"exactVolumes\": {\"TESTDATA-duplicate-distant-face2\": \"7/6\", \"TESTDATA-positive-S\": \"1\", \"TESTDATA-remove-distant-face2\": \"5/6\", \"TESTDATA-selfcross-remote-v6\": \"7/12\", \"TESTDATA-valid-distant-face-order\": \"1\"}, \"selfcrossWitness\": \"exact derived segment\"}\r\n",
+    "stderr": ""
+  },
+  {
+    "label": "06-strict-subset-compile",
+    "argv": [
+      "node",
+      "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+      "-p",
+      "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/tsconfig.json",
+      "--listEmittedFiles"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "TSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/types.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/geometry/auditTypes.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/geometry/core.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/geometry/intersections.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/geometry/audit.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/io/validation.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/trimline/numerics.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/trimline/bezier.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/trimline/face-cubic.js\r\nTSFILE: C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/build/trimline/source-candidate.js\r\n",
+    "stderr": ""
+  },
+  {
+    "label": "07-actual-existing-api-harness",
+    "argv": [
+      "node",
+      "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/actual_harness.mjs"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "{\n  \"caseCount\": 5,\n  \"localCandidatePass\": 5,\n  \"requiredAuditPass\": [\n    \"TESTDATA-positive-S\",\n    \"TESTDATA-valid-distant-face-order\"\n  ],\n  \"blockedByFreshAudit\": [\n    \"TESTDATA-remove-distant-face2\",\n    \"TESTDATA-duplicate-distant-face2\",\n    \"TESTDATA-selfcross-remote-v6\"\n  ],\n  \"budgetZero\": \"UNKNOWN\",\n  \"untrustedSavedPASSClaims\": 3,\n  \"rows\": [\n    {\n      \"id\": \"TESTDATA-positive-S\",\n      \"sourceDigest\": \"sha256:086f278b8281d0f5feac8e42b15ea880d7635800ff1532e24aeabc9ee38fa4c2\",\n      \"leaves\": 12,\n      \"complete\": true,\n      \"orientation\": \"outward\",\n      \"intersectionPairs\": [],\n      \"checkStatuses\": {\n        \"edge-manifold\": \"pass\",\n        \"watertight\": \"pass\",\n        \"vertex-manifold\": \"pass\",\n        \"components\": \"pass\",\n        \"degenerate-triangles\": \"pass\",\n        \"winding\": \"pass\",\n        \"self-intersections\": \"pass\",\n        \"outward\": \"pass\",\n        \"minimum-thickness\": \"unknown\"\n      }\n    },\n    {\n      \"id\": \"TESTDATA-remove-distant-face2\",\n      \"sourceDigest\": \"sha256:658f03d42a31950304d4b56b3fa21abf789297baa6872945cb96cf5115787dcb\",\n      \"leaves\": 12,\n      \"complete\": true,\n      \"orientation\": \"unknown\",\n      \"intersectionPairs\": [],\n      \"checkStatuses\": {\n        \"edge-manifold\": \"pass\",\n        \"watertight\": \"fail\",\n        \"vertex-manifold\": \"pass\",\n        \"components\": \"pass\",\n        \"degenerate-triangles\": \"pass\",\n        \"winding\": \"pass\",\n        \"self-intersections\": \"pass\",\n        \"outward\": \"unknown\",\n        \"minimum-thickness\": \"unknown\"\n      }\n    },\n    {\n      \"id\": \"TESTDATA-duplicate-distant-face2\",\n      \"sourceDigest\": \"sha256:9fa8eafaf3ed76330c78e25bdf95000fcb73492533f1710111d9d96664bb3847\",\n      \"leaves\": 12,\n      \"complete\": true,\n      \"orientation\": \"unknown\",\n      \"intersectionPairs\": [\n        [\n          2,\n          12\n        ]\n      ],\n      \"checkStatuses\": {\n        \"edge-manifold\": \"fail\",\n        \"watertight\": \"fail\",\n        \"vertex-manifold\": \"fail\",\n        \"components\": \"pass\",\n        \"degenerate-triangles\": \"pass\",\n        \"winding\": \"pass\",\n        \"self-intersections\": \"fail\",\n        \"outward\": \"unknown\",\n        \"minimum-thickness\": \"unknown\"\n      }\n    },\n    {\n      \"id\": \"TESTDATA-selfcross-remote-v6\",\n      \"sourceDigest\": \"sha256:f1b68196c981260e1e40b46b3bb42485cc384a4c90b792eb22b7e610a9ea0640\",\n      \"leaves\": 12,\n      \"complete\": false,\n      \"orientation\": \"unknown\",\n      \"intersectionPairs\": [\n        [\n          0,\n          2\n        ],\n        [\n          0,\n          7\n        ],\n        [\n          1,\n          3\n        ],\n        [\n          1,\n          9\n        ],\n        [\n          2,\n          6\n        ],\n        [\n          3,\n          8\n        ],\n        [\n          6,\n          7\n        ],\n        [\n          8,\n          9\n        ]\n      ],\n      \"checkStatuses\": {\n        \"edge-manifold\": \"pass\",\n        \"watertight\": \"pass\",\n        \"vertex-manifold\": \"pass\",\n        \"components\": \"pass\",\n        \"degenerate-triangles\": \"pass\",\n        \"winding\": \"pass\",\n        \"self-intersections\": \"fail\",\n        \"outward\": \"unknown\",\n        \"minimum-thickness\": \"unknown\"\n      }\n    },\n    {\n      \"id\": \"TESTDATA-valid-distant-face-order\",\n      \"sourceDigest\": \"sha256:77d7f12e041bfb97257470c2f83cf9a5f35455b7ea9a180bb9ef9e735a77e78d\",\n      \"leaves\": 12,\n      \"complete\": true,\n      \"orientation\": \"outward\",\n      \"intersectionPairs\": [],\n      \"checkStatuses\": {\n        \"edge-manifold\": \"pass\",\n        \"watertight\": \"pass\",\n        \"vertex-manifold\": \"pass\",\n        \"components\": \"pass\",\n        \"degenerate-triangles\": \"pass\",\n        \"winding\": \"pass\",\n        \"self-intersections\": \"pass\",\n        \"outward\": \"pass\",\n        \"minimum-thickness\": \"unknown\"\n      }\n    }\n  ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "label": "08-complete-public-verifier",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "C:/Users/sandr/OrthoSculptCAD/tests/reference/v03_face_cubic_verify.py",
+      "--input",
+      "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/actual-local-face-proof.json"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "{\"passed\": true, \"cases\": 5, \"leaves\": 60, \"samples\": 65}\r\n",
+    "stderr": ""
+  },
+  {
+    "label": "09-focused-regression-tests",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures/test_fixture_regression.py"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "test_all_whole_source_native_digests_match_independent_hashlib (__main__.FixtureRegression.test_all_whole_source_native_digests_match_independent_hashlib) ... ok\r\ntest_fixed_metadata_local_order_bits_and_attributes_across_all_cases (__main__.FixtureRegression.test_fixed_metadata_local_order_bits_and_attributes_across_all_cases) ... ok\r\ntest_independent_exact_closed_cube_topology_and_signed_volume (__main__.FixtureRegression.test_independent_exact_closed_cube_topology_and_signed_volume) ... ok\r\ntest_independent_removed_duplicated_face_topology (__main__.FixtureRegression.test_independent_removed_duplicated_face_topology) ... ok\r\ntest_mutations_are_exactly_distant_and_do_not_rename_any_mesh (__main__.FixtureRegression.test_mutations_are_exactly_distant_and_do_not_rename_any_mesh) ... ok\r\ntest_positive_required_checks_complete_and_minimum_thickness_unknown (__main__.FixtureRegression.test_positive_required_checks_complete_and_minimum_thickness_unknown) ... ok\r\ntest_public_verifier_rejects_corrupted_control_not_blind_pass (__main__.FixtureRegression.test_public_verifier_rejects_corrupted_control_not_blind_pass) ... ok\r\ntest_selfcross_keeps_whole_topology_and_has_positive_exact_volume (__main__.FixtureRegression.test_selfcross_keeps_whole_topology_and_has_positive_exact_volume) ... ok\r\ntest_three_recomputed_digest_saved_old_pass_associations_are_untrusted (__main__.FixtureRegression.test_three_recomputed_digest_saved_old_pass_associations_are_untrusted) ... ok\r\ntest_unchanged_complete_public_local_proof_verifies_all_cases (__main__.FixtureRegression.test_unchanged_complete_public_local_proof_verifies_all_cases) ... ok\r\ntest_zero_pair_budget_is_unknown_not_auto_pass (__main__.FixtureRegression.test_zero_pair_budget_is_unknown_not_auto_pass) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 11 tests in 0.053s\r\n\r\nOK\r\n"
+  },
+  {
+    "label": "10-final-head",
+    "argv": [
+      "C:/Users/sandr/AppData/Local/hermes/tools/git-2.53.0+3-win32-x64/mingw64/bin/git.exe",
+      "-C",
+      "C:/Users/sandr/OrthoSculptCAD",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db\n",
+    "stderr": ""
+  },
+  {
+    "label": "11-final-status",
+    "argv": [
+      "C:/Users/sandr/AppData/Local/hermes/tools/git-2.53.0+3-win32-x64/mingw64/bin/git.exe",
+      "-C",
+      "C:/Users/sandr/OrthoSculptCAD",
+      "status",
+      "--short"
+    ],
+    "cwd": "C:/Users/sandr",
+    "environmentOverrides": {
+      "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "exitCode": 0,
+    "stdout": "?? docs/plans/v03-source-admission-owner-design.md\n",
+    "stderr": ""
+  }
+]

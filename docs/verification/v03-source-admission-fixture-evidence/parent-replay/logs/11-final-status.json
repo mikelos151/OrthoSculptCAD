@@ -1,0 +1,18 @@
+{
+  "label": "11-final-status",
+  "argv": [
+    "C:/Users/sandr/AppData/Local/hermes/tools/git-2.53.0+3-win32-x64/mingw64/bin/git.exe",
+    "-C",
+    "C:/Users/sandr/OrthoSculptCAD",
+    "status",
+    "--short"
+  ],
+  "cwd": "C:/Users/sandr",
+  "environmentOverrides": {
+    "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 0,
+  "stdout": "?? docs/plans/v03-source-admission-owner-design.md\n?? docs/verification/v03-source-admission-design-evidence/\n",
+  "stderr": ""
+}

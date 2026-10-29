@@ -1,0 +1,192 @@
+{
+  "scope": "Existing code behavior only. No source admission/owner/token/Worker fence implemented.",
+  "nativeCrypto": {
+    "globalCrypto": "Crypto",
+    "subtle": "SubtleCrypto",
+    "monkeyPatched": false,
+    "algorithm": "SHA-256",
+    "implementation": "Actual source-candidate capture calls native Node WebCrypto; no injected digest."
+  },
+  "policy": {
+    "maxPairTests": 2000000,
+    "maxIntersections": 100
+  },
+  "auditResourceCapsUnchanged": {
+    "vertices": 200000,
+    "faces": 200000
+  },
+  "rows": [
+    {
+      "id": "TESTDATA-positive-S",
+      "sourceDigest": "sha256:086f278b8281d0f5feac8e42b15ea880d7635800ff1532e24aeabc9ee38fa4c2",
+      "runtimeSourceId": "source-candidate-1",
+      "faceCount": 12,
+      "localCandidate": "PASS (binding + actual sampleCubic only; not source authority)",
+      "leaves": 12,
+      "samples": 13,
+      "observedRequiredAuditPass": true,
+      "complete": true,
+      "orientation": "outward",
+      "signedVolume": 1,
+      "intersectionPairs": [],
+      "checkStatuses": {
+        "edge-manifold": "pass",
+        "watertight": "pass",
+        "vertex-manifold": "pass",
+        "components": "pass",
+        "degenerate-triangles": "pass",
+        "winding": "pass",
+        "self-intersections": "pass",
+        "outward": "pass",
+        "minimum-thickness": "unknown"
+      }
+    },
+    {
+      "id": "TESTDATA-remove-distant-face2",
+      "sourceDigest": "sha256:658f03d42a31950304d4b56b3fa21abf789297baa6872945cb96cf5115787dcb",
+      "runtimeSourceId": "source-candidate-2",
+      "faceCount": 11,
+      "localCandidate": "PASS (binding + actual sampleCubic only; not source authority)",
+      "leaves": 12,
+      "samples": 13,
+      "observedRequiredAuditPass": false,
+      "complete": true,
+      "orientation": "unknown",
+      "signedVolume": 0.8333333333333333,
+      "intersectionPairs": [],
+      "checkStatuses": {
+        "edge-manifold": "pass",
+        "watertight": "fail",
+        "vertex-manifold": "pass",
+        "components": "pass",
+        "degenerate-triangles": "pass",
+        "winding": "pass",
+        "self-intersections": "pass",
+        "outward": "unknown",
+        "minimum-thickness": "unknown"
+      }
+    },
+    {
+      "id": "TESTDATA-duplicate-distant-face2",
+      "sourceDigest": "sha256:9fa8eafaf3ed76330c78e25bdf95000fcb73492533f1710111d9d96664bb3847",
+      "runtimeSourceId": "source-candidate-3",
+      "faceCount": 13,
+      "localCandidate": "PASS (binding + actual sampleCubic only; not source authority)",
+      "leaves": 12,
+      "samples": 13,
+      "observedRequiredAuditPass": false,
+      "complete": true,
+      "orientation": "unknown",
+      "signedVolume": 1.1666666666666665,
+      "intersectionPairs": [
+        [
+          2,
+          12
+        ]
+      ],
+      "checkStatuses": {
+        "edge-manifold": "fail",
+        "watertight": "fail",
+        "vertex-manifold": "fail",
+        "components": "pass",
+        "degenerate-triangles": "pass",
+        "winding": "pass",
+        "self-intersections": "fail",
+        "outward": "unknown",
+        "minimum-thickness": "unknown"
+      }
+    },
+    {
+      "id": "TESTDATA-selfcross-remote-v6",
+      "sourceDigest": "sha256:f1b68196c981260e1e40b46b3bb42485cc384a4c90b792eb22b7e610a9ea0640",
+      "runtimeSourceId": "source-candidate-4",
+      "faceCount": 12,
+      "localCandidate": "PASS (binding + actual sampleCubic only; not source authority)",
+      "leaves": 12,
+      "samples": 13,
+      "observedRequiredAuditPass": false,
+      "complete": false,
+      "orientation": "unknown",
+      "signedVolume": 0.5833333333333333,
+      "intersectionPairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "checkStatuses": {
+        "edge-manifold": "pass",
+        "watertight": "pass",
+        "vertex-manifold": "pass",
+        "components": "pass",
+        "degenerate-triangles": "pass",
+        "winding": "pass",
+        "self-intersections": "fail",
+        "outward": "unknown",
+        "minimum-thickness": "unknown"
+      }
+    },
+    {
+      "id": "TESTDATA-valid-distant-face-order",
+      "sourceDigest": "sha256:77d7f12e041bfb97257470c2f83cf9a5f35455b7ea9a180bb9ef9e735a77e78d",
+      "runtimeSourceId": "source-candidate-5",
+      "faceCount": 12,
+      "localCandidate": "PASS (binding + actual sampleCubic only; not source authority)",
+      "leaves": 12,
+      "samples": 13,
+      "observedRequiredAuditPass": true,
+      "complete": true,
+      "orientation": "outward",
+      "signedVolume": 1,
+      "intersectionPairs": [],
+      "checkStatuses": {
+        "edge-manifold": "pass",
+        "watertight": "pass",
+        "vertex-manifold": "pass",
+        "components": "pass",
+        "degenerate-triangles": "pass",
+        "winding": "pass",
+        "self-intersections": "pass",
+        "outward": "pass",
+        "minimum-thickness": "unknown"
+      }
+    }
+  ],
+  "budgetZero": {
+    "complete": false,
+    "candidateTests": 0,
+    "selfIntersections": "unknown",
+    "outward": "unknown",
+    "observedRequiredAuditPass": false
+  },
+  "untrustedClaimCount": 3,
+  "boundary": "auditMesh ran on explicit public input mesh separate from Candidate private bytes. Even positive candidates are not authority; this does NOT close tracer4 admission."
+}

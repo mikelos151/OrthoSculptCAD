@@ -1,0 +1,15 @@
+{
+  "label": "02-node-version",
+  "argv": [
+    "node",
+    "--version"
+  ],
+  "cwd": "C:/Users/sandr",
+  "environmentOverrides": {
+    "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 0,
+  "stdout": "v24.19.0\r\n",
+  "stderr": ""
+}

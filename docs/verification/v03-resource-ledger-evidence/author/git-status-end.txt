@@ -1,0 +1,7 @@
+?? docs/plans/v03-source-admission-owner-design.md
+?? docs/verification/v03-source-admission-design-evidence/
+?? docs/verification/v03-source-admission-design-results.json
+?? docs/verification/v03-source-admission-fixture-evidence/
+?? docs/verification/v03-source-candidate-native-runtime-evidence/
+?? src/compute/resourceLedger.ts
+?? tests/v03-resource-ledger.test.ts

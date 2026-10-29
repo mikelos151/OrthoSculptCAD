@@ -1,0 +1,38 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (6 tests | 1 failed) 14ms
+     × 06 rolls back only the failed unmaterialized key and validates real fixed buffers intrinsically 8ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 06 rolls back only the failed unmaterialized key and validates real fixed buffers intrinsically
+AssertionError: expected [ 384, 384, 128 ] to deeply equal [ 256, 256, 128 ]
+
+- Expected
++ Received
+
+  [
+-   256,
+-   256,
++   384,
++   384,
+    128,
+  ]
+
+ ❯ tests/v03-resource-ledger.test.ts:23:22
+     21|     const b = accepted(l.reserve([])); b.retain(ok, 'history', owner);
+     22|     expect(() => a.allocateBuffer(fail)).toThrow('synthetic native fai…
+     23|     expect(tuple(l)).toEqual([256, 256, 128]);
+       |                      ^
+     24|     expect(a.ref('pending')).toBe(pending);
+     25|     a.release(fail); expect(tuple(l)).toEqual([256, 256, 128]);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 passed (6)
+   Start at  19:05:50
+   Duration  246ms (transform 32ms, setup 0ms, import 46ms, tests 14ms, environment 0ms)
+

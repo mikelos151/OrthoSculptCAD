@@ -1,0 +1,135 @@
+PASS 01 matrix resident768 history512 refusal
+PASS 02 matrix resident768 history768 success
+PASS 03 matrix category overlap close one lease
+PASS 04 matrix oneRef reclassify with old category remaining
+PASS 05 matrix reclassify768 all-caps rollback
+PASS 06 matrix subviews whole intrinsic backing and repeated registration
+PASS 07 matrix exact1024 refusal before allocation
+PASS 08 matrix controlled ref is a real separate lease
+PASS 09 matrix retired h1 cannot free pending h2
+PASS 10 matrix logical sole-ref transfer alias and realm
+PASS 11 reserved/live/retired and closed priority
+PASS 12 malformed sparse and invalid plans rollback no lease consumed
+PASS 13 max-safe overflow reservation only no physical allocation
+PASS 14 zero byte records control slots and recycling
+PASS 15 allocator throw rolls back only its unmaterialized reservation
+PASS 16 allocator native validation and duplicate backing preserve live owner
+PASS 17 existing native identity versus distinct copies and cross-context buffer
+DataCloneError: retain(from, c, owner) {
+                leaseState(this);
+                const s = refs.get(from);
+          ...<omitted>... } could not be cloned.
+    at new DOMException (node:internal/per_context/domexception:76:18)
+    at structuredClone (node:internal/worker/js_transferable:127:26)
+    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/witness.mjs:66:760
+    at test (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/witness.mjs:44:47)
+    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/witness.mjs:66:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+{
+  "passed": false,
+  "scope": "G1aPrimitiveOnly",
+  "cases": [
+    {
+      "name": "01 matrix resident768 history512 refusal",
+      "passed": true,
+      "checks": 7
+    },
+    {
+      "name": "02 matrix resident768 history768 success",
+      "passed": true,
+      "checks": 8
+    },
+    {
+      "name": "03 matrix category overlap close one lease",
+      "passed": true,
+      "checks": 9
+    },
+    {
+      "name": "04 matrix oneRef reclassify with old category remaining",
+      "passed": true,
+      "checks": 11
+    },
+    {
+      "name": "05 matrix reclassify768 all-caps rollback",
+      "passed": true,
+      "checks": 8
+    },
+    {
+      "name": "06 matrix subviews whole intrinsic backing and repeated registration",
+      "passed": true,
+      "checks": 11
+    },
+    {
+      "name": "07 matrix exact1024 refusal before allocation",
+      "passed": true,
+      "checks": 10
+    },
+    {
+      "name": "08 matrix controlled ref is a real separate lease",
+      "passed": true,
+      "checks": 11
+    },
+    {
+      "name": "09 matrix retired h1 cannot free pending h2",
+      "passed": true,
+      "checks": 9
+    },
+    {
+      "name": "10 matrix logical sole-ref transfer alias and realm",
+      "passed": true,
+      "checks": 15
+    },
+    {
+      "name": "11 reserved/live/retired and closed priority",
+      "passed": true,
+      "checks": 23
+    },
+    {
+      "name": "12 malformed sparse and invalid plans rollback no lease consumed",
+      "passed": true,
+      "checks": 20
+    },
+    {
+      "name": "13 max-safe overflow reservation only no physical allocation",
+      "passed": true,
+      "checks": 5
+    },
+    {
+      "name": "14 zero byte records control slots and recycling",
+      "passed": true,
+      "checks": 15
+    },
+    {
+      "name": "15 allocator throw rolls back only its unmaterialized reservation",
+      "passed": true,
+      "checks": 12
+    },
+    {
+      "name": "16 allocator native validation and duplicate backing preserve live owner",
+      "passed": true,
+      "checks": 25
+    },
+    {
+      "name": "17 existing native identity versus distinct copies and cross-context buffer",
+      "passed": true,
+      "checks": 13
+    },
+    {
+      "name": "18 forged foreign cloned runtime capability boundaries",
+      "passed": false,
+      "error": "DataCloneError: retain(from, c, owner) {\n                leaseState(this);\n                const s = refs.get(from);\n          ...<omitted>... } could not be cloned.\n    at new DOMException (node:internal/per_context/domexception:76:18)\n    at structuredClone (node:internal/worker/js_transferable:127:26)\n    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/witness.mjs:66:760\n    at test (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/witness.mjs:44:47)\n    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/witness.mjs:66:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+    }
+  ],
+  "caseCount": 18,
+  "projectionGraphs": 0,
+  "graphAssertions": 267,
+  "nativePayloadBytesCumulative": 6209,
+  "traceSha256": "c695e5b100aff45e5fa96275df825a6fbb7979447aee6ed9d729c84a08c4bf07",
+  "node": "v24.19.0",
+  "v8": "13.6.233.17-node.51",
+  "logicalTransferOnly": true,
+  "nativeWorkerTested": false,
+  "RSSClaimed": false
+}

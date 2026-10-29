@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
++   allocateBuffer: [Function: allocateBuffer],
++   ref: [Function: ref]
+-   code: 'BUDGET',
+-   ok: false
+  }
+
+    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs:14:87
+{"phase":"02-RED","passed":false,"kind":"UNCHANGED_HISTORICAL_PRODUCTION_BEHAVIOR"}

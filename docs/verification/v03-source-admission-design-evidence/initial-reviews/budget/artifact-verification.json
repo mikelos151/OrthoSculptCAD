@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "head_start_and_end": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "design_sha256_start_and_end": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+  "source_hash_count_checked": 14,
+  "source_hashes_unchanged": true,
+  "read_source_hashes_match_allowed_historical_inventory": true,
+  "git_tracked_diff_empty": true,
+  "git_staged_diff_empty": true,
+  "witness_exit_code": 0,
+  "review_json_validated": true,
+  "review_passed": false,
+  "blocking_findings": 1,
+  "security_findings": 0,
+  "artifacts_sha256": {
+    "review.json": "a9617865fdc999732a61385490f61f0526a3e0c38f861e6d3a66eb0cdb34f39d",
+    "review_witness.py": "c2ec67b800d01b188543a317d5bad1d933904094582e1e1641c0dfbc9ed60f11",
+    "witness-results.json": "b0e6584fe9278f4fc946d0aa8927b37c1a7f1303c7e65e68d77525173d340148"
+  },
+  "verification_command": "git -C C:/Users/sandr/OrthoSculptCAD rev-parse HEAD && git -C C:/Users/sandr/OrthoSculptCAD diff --quiet && git -C C:/Users/sandr/OrthoSculptCAD diff --cached --quiet; python final hashlib/json assertions",
+  "writes_confined_to": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-budget-review/",
+  "disclaimer": "Design review and small independent witnesses only. No production admission, G2 proof, browser/Worker run, RSS measurement, full tests or product approval."
+}

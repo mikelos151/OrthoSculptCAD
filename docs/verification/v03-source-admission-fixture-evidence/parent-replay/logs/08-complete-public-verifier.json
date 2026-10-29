@@ -1,0 +1,17 @@
+{
+  "label": "08-complete-public-verifier",
+  "argv": [
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+    "C:/Users/sandr/OrthoSculptCAD/tests/reference/v03_face_cubic_verify.py",
+    "--input",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures-parent/actual-local-face-proof.json"
+  ],
+  "cwd": "C:/Users/sandr",
+  "environmentOverrides": {
+    "NODE_OPTIONS": "--max-old-space-size=128 --max-semi-space-size=8",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 0,
+  "stdout": "{\"passed\": true, \"cases\": 5, \"leaves\": 60, \"samples\": 65}\r\n",
+  "stderr": ""
+}

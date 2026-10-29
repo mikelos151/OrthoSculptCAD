@@ -1,0 +1,126 @@
+{
+  "algorithm": "SHA-256",
+  "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-quality-review",
+  "excludes_self": true,
+  "inputs": {
+    "src/compute/resourceLedger.ts": {
+      "sha256": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+      "bytes": 11142
+    },
+    "tests/v03-resource-ledger.test.ts": {
+      "sha256": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+      "bytes": 25179
+    },
+    "docs/plans/v03-source-admission-owner-design.md": {
+      "sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+      "bytes": 53412
+    }
+  },
+  "artifacts": [
+    {
+      "path": "compile-isolated.json",
+      "bytes": 359,
+      "sha256": "23477b3d867307da502b85fc691a4f49795decdf57f261a2d5b3f0a20d6173db"
+    },
+    {
+      "path": "compile.json",
+      "bytes": 1813,
+      "sha256": "faa3e33b47acd83cd828a3c16744e63f9014f0368842eae437953d895ea3f478"
+    },
+    {
+      "path": "compiled/resourceLedger.js",
+      "bytes": 10939,
+      "sha256": "6ae0607fe24b8707fa8044ad47aac959bd0ac18f88ba9009a499067a55c21735"
+    },
+    {
+      "path": "finalize.py",
+      "bytes": 8403,
+      "sha256": "b1f7554d275d84248d5f786856f2c6d01da64d7efdf22d280a2873a9255f050e"
+    },
+    {
+      "path": "inputs-after.json",
+      "bytes": 466,
+      "sha256": "3b38ee4329e5841424bc50ed600a661d76dbafbbdba1c15dd24d8570cf728ce5"
+    },
+    {
+      "path": "inputs-before.json",
+      "bytes": 466,
+      "sha256": "3b38ee4329e5841424bc50ed600a661d76dbafbbdba1c15dd24d8570cf728ce5"
+    },
+    {
+      "path": "operational-issues.json",
+      "bytes": 1513,
+      "sha256": "e7e9b247dac8130c1548c5cd20b4ebc3232378cc89193284dedeae24ebda070a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5000,
+      "sha256": "0aee5183a830dc8983b7155a0edeef3b4f1a53ec5ca40fce5afb769fada4b785"
+    },
+    {
+      "path": "replay-compile.json",
+      "bytes": 472,
+      "sha256": "120db473ef7ff411179d359cbace5db4a78ed42c325f13788847af774af8c137"
+    },
+    {
+      "path": "replay-run.json",
+      "bytes": 4259,
+      "sha256": "cec2e60d9c094a16c3284683a9e639a016da02486a0aad7a572e94f0295c6f49"
+    },
+    {
+      "path": "replay-verification.json",
+      "bytes": 968,
+      "sha256": "5bc017b9b4f66e7edb4c4d61bc4995ebf6bbfea6aa626ab3d5574375c3174af6"
+    },
+    {
+      "path": "replay-witness.json",
+      "bytes": 2222,
+      "sha256": "c9df82b5b4e648001e054b06c0bf060a0fb0ae2fe033975b2ddbab2586cbc28d"
+    },
+    {
+      "path": "replay.log",
+      "bytes": 3668,
+      "sha256": "fbe79c70f736c9197e2bd37a0e31f51054a3f961744a54abb8d174ea2a4480d0"
+    },
+    {
+      "path": "replay.py",
+      "bytes": 2916,
+      "sha256": "b6e06d8d30385cbb95f5a02185424b56efa110b5bd4b47978d1c4d0d6a038741"
+    },
+    {
+      "path": "review.json",
+      "bytes": 8502,
+      "sha256": "71b5b8a53a19868ff6f6da3d0b3704089149f8bb5f491f67b0a08071aecd9173"
+    },
+    {
+      "path": "static-scan.json",
+      "bytes": 277,
+      "sha256": "148f3b5c536d40dd6746ab3173e4ea0ef38c6c7a38a2d8495378a55c98ef0238"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 270,
+      "sha256": "482aa9f79c761a554a9f44cc86d1435bfa5f53c3620b7d555899f6d8bc16369d"
+    },
+    {
+      "path": "witness-results.json",
+      "bytes": 3293,
+      "sha256": "d9c9c41222666b54f1977836e53cbdeed5771325e1ef385eb430cf02ee0124e7"
+    },
+    {
+      "path": "witness-run.json",
+      "bytes": 2116,
+      "sha256": "d70ded94489c5eb662985e029804998dabfc9b762bbef1d30bef277f9706f228"
+    },
+    {
+      "path": "witness.cjs",
+      "bytes": 20090,
+      "sha256": "a575c04efd09ca2f3ce8d3c11d7f55788cd0cddfdf5db6053f59d36bee8f645a"
+    },
+    {
+      "path": "witness.log",
+      "bytes": 1803,
+      "sha256": "972bc04922c4cccb42d08b9f337a8579d4694cca66a90ba75e57e553042f39a3"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "HARNESS-01",
+    "blocking": false,
+    "finding": "Pierwsza kompilacja tsc bez izolacji ambient types przekroczyła ustawiony limit heap 128 MiB; exit 134. Nie był to test fizycznego OOM ledgeru.",
+    "raw_command_and_output": "compile.json",
+    "correction": "Izolowany tsconfig: tylko ES2022, types: [], strict zachowany. Limitów Node 128/8 ani byte caps ledgeru nie podniesiono.",
+    "verified_recovery": [
+      "compile-isolated.json: exit 0",
+      "replay-compile.json: exit 0"
+    ]
+  },
+  {
+    "id": "HARNESS-02",
+    "blocking": false,
+    "finding": "Pierwsze odtworzenie ukończyło compile/witness z exit 0, ale Python subprocess nie mógł uruchomić spakowanego git.exe: PermissionError [WinError 5] Odmowa dostępu. Cały pierwszy replay: exit 1. Osobny probe z pełną ścieżką git.exe także exit 1.",
+    "provenance": "Rzeczywiste wyniki terminal tool w tej sesji; poniższy excerpt nie jest rekonstrukcją pełnego raw logu.",
+    "error_excerpt": "PermissionError: [WinError 5] Odmowa dostępu",
+    "first_command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-quality-review/replay.py",
+    "correction": "Replay odczytuje lokalne metadane Git readonly i nadal porównuje HEAD z zamrożonym hashem; git rev-parse uruchomiony oddzielnie w Git Bash także potwierdził ten HEAD z exit 0.",
+    "verified_recovery": [
+      "replay-run.json: exit 0",
+      "replay-verification.json: HEAD zgodny"
+    ]
+  }
+]

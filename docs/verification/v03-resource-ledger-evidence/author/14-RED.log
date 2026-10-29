@@ -1,0 +1,37 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (14 tests | 1 failed) 15ms
+     × 14 distinguishes authentic reserved phase from closed target lease after authentication 5ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 14 distinguishes authentic reserved phase from closed target lease after authentication
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "CLOSED",
++ Error {
++   "message": "Invalid ledger input",
++   "code": "INVALID_INPUT",
+  }
+
+ ❯ tests/v03-resource-ledger.test.ts:19:50
+     17|     const r = a.ref('a'), closed = accepted(l.reserve([])); closed.clo…
+     18|     const before = l.snapshot();
+     19|     expect(() => closed.retain(r, 'job', owner)).toThrowError(expect.o…
+       |                                                  ^
+     20|     expect(() => closed.retain({} as never, 'job', owner)).toThrowErro…
+     21|     const open = accepted(l.reserve([]));
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 13 passed (14)
+   Start at  19:14:29
+   Duration  221ms (transform 32ms, setup 0ms, import 43ms, tests 15ms, environment 0ms)
+

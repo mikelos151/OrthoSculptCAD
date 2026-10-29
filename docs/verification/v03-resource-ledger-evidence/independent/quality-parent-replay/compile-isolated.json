@@ -1,0 +1,13 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+    "--project",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-quality-review\\tsconfig.json"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

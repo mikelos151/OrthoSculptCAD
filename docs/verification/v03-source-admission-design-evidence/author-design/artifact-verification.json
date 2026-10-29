@@ -1,0 +1,20 @@
+{
+  "kind": "design-artifact-scope-verification",
+  "path": "C:\\Users\\sandr\\OrthoSculptCAD\\docs\\plans\\v03-source-admission-owner-design.md",
+  "sha256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+  "bytes": 44161,
+  "lines": 248,
+  "sections": 10,
+  "head": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "git_status": "?? docs/plans/v03-source-admission-owner-design.md",
+  "tracked_diff": "",
+  "staged_diff": "",
+  "inventory_source_files_unchanged": 21,
+  "historical_files_unchanged": [
+    "design_inventory.py",
+    "inventory-and-arithmetic.json",
+    "design-inventory.log"
+  ],
+  "witness_results_sha256": "3ccabbb18bada17c67bb816ce1295d2a0775a32b011af6e7f35b3a5a95c817cb",
+  "implementation_admission_pass_claimed": false
+}

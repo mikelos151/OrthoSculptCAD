@@ -1,0 +1,57 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-plan.md",
+      "sha256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+      "bytes": 44161
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/historical-inventory/design_inventory.py",
+      "sha256": "ad34edd4a859b10c05cd25d485fb6d2d080e3972756d38a97c78d251bc012646",
+      "bytes": 2929
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/historical-inventory/inventory-and-arithmetic.json",
+      "sha256": "1a7ef5914ef8cb27e4785c67a67a91060d773fd190e61b747cbfd2f2a4233125",
+      "bytes": 5959
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/historical-inventory/design-inventory.log",
+      "sha256": "d37818d7f09237a4fe9d996b8f2706223d755f35da34a4cfc3dcbb75af6a3f56",
+      "bytes": 2108
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/author-design/artifact-verification.json",
+      "sha256": "6eeb5d0c8f4bda114fe9297c7b86de48dcc5450a3e0acddd54c23ecc1e3a2322",
+      "bytes": 785
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/author-design/verify_artifact.py",
+      "sha256": "5320be9c94edd31bf790e88096651abe92d40346a0977512dcfd83127ce26f54",
+      "bytes": 2025
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/author-design/verify_design.py",
+      "sha256": "27d6d279771ce3577ea651ff5dd718e756abe5f9fbec9a56dd3ea4510d35e107",
+      "bytes": 6905
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/author-design/witness-results.json",
+      "sha256": "3ccabbb18bada17c67bb816ce1295d2a0775a32b011af6e7f35b3a5a95c817cb",
+      "bytes": 3419
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/author-design/witness-success.log",
+      "sha256": "3ccabbb18bada17c67bb816ce1295d2a0775a32b011af6e7f35b3a5a95c817cb",
+      "bytes": 3419
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/author-design/witness.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "count": 10,
+  "planSha256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+  "status": "Unaccepted design snapshot; independent plan reviews pending deleg_929c0b01. No source admission implementation."
+}

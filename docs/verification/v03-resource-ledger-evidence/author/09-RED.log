@@ -1,0 +1,38 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (9 tests | 1 failed) 23ms
+     × 09 authenticates every capability boundary before closed and rejects retired transfer sources 13ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 09 authenticates every capability boundary before closed and rejects retired transfer sources
+AssertionError: expected error to match asymmetric matcher
+
+- Expected
++ Received
+
+- ObjectContaining {
+-   "code": "INVALID_INPUT",
++ Error {
++   "message": "Closed lease",
++   "code": "CLOSED",
+  }
+
+ ❯ check tests/v03-resource-ledger.test.ts:23:75
+     21|     const foreignRef = foreignLease.ref('a'); foreignLease.allocateBuf…
+     22|     const badRefs = [{}, 'a', JSON.parse(JSON.stringify(r)), structure…
+     23|     const check = (f: () => unknown, code = 'INVALID_INPUT') => expect…
+       |                                                                           ^
+     24|     for (const bad of badRefs) {
+     25|       const before = l.snapshot();
+ ❯ tests/v03-resource-ledger.test.ts:54:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 passed (9)
+   Start at  19:08:48
+   Duration  293ms (transform 46ms, setup 0ms, import 64ms, tests 23ms, environment 0ms)
+

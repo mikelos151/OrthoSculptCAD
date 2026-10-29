@@ -1,0 +1,34 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (1 test | 1 failed) 7ms
+     × 01 reserves before a real exact-limit native allocation 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 01 reserves before a real exact-limit native allocation
+AssertionError: expected { ok: false, code: 'BUDGET' } to not have property "code"
+
+- Expected:
+undefined
+
++ Received:
+"BUDGET"
+
+ ❯ accepted tests/v03-resource-ledger.test.ts:6:21
+      4| const caps = { managed: 1024, job: 768, history: 512 };
+      5| function accepted(value: Lease | Refusal): Lease {
+      6|   expect(value).not.toHaveProperty('code');
+       |                     ^
+      7|   return value as Lease;
+      8| }
+ ❯ tests/v03-resource-ledger.test.ts:16:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  19:02:11
+   Duration  1.32s (transform 31ms, setup 0ms, import 53ms, tests 7ms, environment 0ms)
+

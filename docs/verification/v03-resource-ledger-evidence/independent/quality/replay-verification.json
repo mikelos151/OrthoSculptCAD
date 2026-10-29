@@ -1,0 +1,18 @@
+{
+  "before": {
+    "src/compute/resourceLedger.ts": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+    "tests/v03-resource-ledger.test.ts": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+    "docs/plans/v03-source-admission-owner-design.md": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+  },
+  "after": {
+    "src/compute/resourceLedger.ts": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+    "tests/v03-resource-ledger.test.ts": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+    "docs/plans/v03-source-admission-owner-design.md": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+  },
+  "unchanged": true,
+  "expected_match": true,
+  "git_head_source": "read-only git metadata; separate bash git verification also recorded",
+  "git_head": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "compile_exit": 0,
+  "witness_exit": 0
+}

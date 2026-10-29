@@ -1,0 +1,230 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/artifact-verification.json",
+      "sha256": "7efea89b000c036170480010ebdd81d6d5320cc2eeae2aae6f5b518603d37a5f",
+      "bytes": 3456
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/contract_witness.py",
+      "sha256": "3dd9ffb99d939791c25f41705acf70b2878d839258cdb319e83faed9eefd4ad7",
+      "bytes": 14807
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/exit-codes.log",
+      "sha256": "6f068c43c20a0f80fb6481b7dbd1712943546175262cb08c0982ffd1ce03b5b0",
+      "bytes": 71
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/git-head-end.txt",
+      "sha256": "c9fd0cf539cda2c063f618dd1c1b3eedf0fe0019033cae78de0412eae1ee4fed",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/git-status-end.txt",
+      "sha256": "f922911dedcf7921c17be76161b15ff562ce0c86a96a577dec67fc937a27dab8",
+      "bytes": 237
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/handoff.json",
+      "sha256": "6af5aec068367116d2c70412439881e6262a4b4278b7f5b2e17fbb8d863cef67",
+      "bytes": 4802
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/input-hashes-end.json",
+      "sha256": "e7251cae1e13c4947b3ece56c56ea35e8af81a438d27f3a777a59e07fd1a942c",
+      "bytes": 435504
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/input-hashes-start.json",
+      "sha256": "6769adff6b346faaa3bb60b158267092e5262f7a415424ff3f778eea9d624760",
+      "bytes": 435504
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/negative-history-escape.log",
+      "sha256": "3f8ff1f994d6a76dd98e48cdde26b0815642e233144953705165e6424069aa43",
+      "bytes": 528
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/negative-sum-refs.log",
+      "sha256": "e67192154cb6708f4525b41c15fb5519c2f310a8fcc5f74e1e9db64aff7da27c",
+      "bytes": 529
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/plan-before.md",
+      "sha256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+      "bytes": 44161
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/targeted.patch",
+      "sha256": "240bab0e47bed84b5b73600de4f1aaf253d63641539f9030af902adfd35cfec3",
+      "bytes": 22680
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/verification-first-failure.log",
+      "sha256": "59663f06875a09b33031911b2b59ac625683df8d484e91b82bd979d8bacfa289",
+      "bytes": 487
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/verification.log",
+      "sha256": "7efea89b000c036170480010ebdd81d6d5320cc2eeae2aae6f5b518603d37a5f",
+      "bytes": 3456
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/verify_artifacts.py",
+      "sha256": "84e1aa17ba229ff434b335475c17d8e6a8146098137fb17d19152dbba88caf8d",
+      "bytes": 4255
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/witness-results.json",
+      "sha256": "2c3139b91f1b253b295d5ee8241211049ba1ac54abf85fb26a823854fd5a579b",
+      "bytes": 18631
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/author/witness.log",
+      "sha256": "d138b470228584ce972ca7fe3fda591d6c702ab2b8bf5b93cdbbc5fdd911381b",
+      "bytes": 300
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/artifact-verification.json",
+      "sha256": "7efea89b000c036170480010ebdd81d6d5320cc2eeae2aae6f5b518603d37a5f",
+      "bytes": 3456
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/contract_witness.py",
+      "sha256": "3dd9ffb99d939791c25f41705acf70b2878d839258cdb319e83faed9eefd4ad7",
+      "bytes": 14807
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/exit-codes.log",
+      "sha256": "6f068c43c20a0f80fb6481b7dbd1712943546175262cb08c0982ffd1ce03b5b0",
+      "bytes": 71
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/git-head-end.txt",
+      "sha256": "c9fd0cf539cda2c063f618dd1c1b3eedf0fe0019033cae78de0412eae1ee4fed",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/git-status-end.txt",
+      "sha256": "f922911dedcf7921c17be76161b15ff562ce0c86a96a577dec67fc937a27dab8",
+      "bytes": 237
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/handoff.json",
+      "sha256": "6af5aec068367116d2c70412439881e6262a4b4278b7f5b2e17fbb8d863cef67",
+      "bytes": 4802
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/input-hashes-end.json",
+      "sha256": "e7251cae1e13c4947b3ece56c56ea35e8af81a438d27f3a777a59e07fd1a942c",
+      "bytes": 435504
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/input-hashes-start.json",
+      "sha256": "6769adff6b346faaa3bb60b158267092e5262f7a415424ff3f778eea9d624760",
+      "bytes": 435504
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/negative-history-escape.log",
+      "sha256": "3f8ff1f994d6a76dd98e48cdde26b0815642e233144953705165e6424069aa43",
+      "bytes": 528
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/negative-history-escape.parent.stderr.log",
+      "sha256": "98d01cb3b806a461cc6b4eca136a4b848e7eb18dfadf08b27d23aaca332a3bec",
+      "bytes": 542
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/negative-history-escape.parent.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/negative-sum-refs.log",
+      "sha256": "e67192154cb6708f4525b41c15fb5519c2f310a8fcc5f74e1e9db64aff7da27c",
+      "bytes": 529
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/negative-sum-refs.parent.stderr.log",
+      "sha256": "f8a372fad54f5a0d99df63fa4105efb345c37a5a3d2e928d1b529d977c64a034",
+      "bytes": 543
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/negative-sum-refs.parent.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/plan-before.md",
+      "sha256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+      "bytes": 44161
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/spec.parent.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/spec.parent.stdout.log",
+      "sha256": "d138b470228584ce972ca7fe3fda591d6c702ab2b8bf5b93cdbbc5fdd911381b",
+      "bytes": 300
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/targeted.patch",
+      "sha256": "240bab0e47bed84b5b73600de4f1aaf253d63641539f9030af902adfd35cfec3",
+      "bytes": 22680
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/verification-first-failure.log",
+      "sha256": "59663f06875a09b33031911b2b59ac625683df8d484e91b82bd979d8bacfa289",
+      "bytes": 487
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/verification.log",
+      "sha256": "7efea89b000c036170480010ebdd81d6d5320cc2eeae2aae6f5b518603d37a5f",
+      "bytes": 3456
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/verify_artifacts.py",
+      "sha256": "84e1aa17ba229ff434b335475c17d8e6a8146098137fb17d19152dbba88caf8d",
+      "bytes": 4255
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/witness-results.json",
+      "sha256": "2c3139b91f1b253b295d5ee8241211049ba1ac54abf85fb26a823854fd5a579b",
+      "bytes": 18631
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/parent-replay/witness.log",
+      "sha256": "d138b470228584ce972ca7fe3fda591d6c702ab2b8bf5b93cdbbc5fdd911381b",
+      "bytes": 300
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/ledger-01-fix/revised-plan.md",
+      "sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+      "bytes": 53412
+    }
+  ],
+  "count": 41,
+  "verifiedAuthorArtifacts": 14,
+  "scopeHunks": 6,
+  "modelRuns": [
+    {
+      "label": "spec",
+      "exit": 0
+    },
+    {
+      "label": "negative-history-escape",
+      "exit": 1
+    },
+    {
+      "label": "negative-sum-refs",
+      "exit": 1
+    }
+  ],
+  "modelVectors": 33,
+  "projectionGraphs": 729,
+  "newPlanSHA256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+  "status": "SPEC_ONLY verified replay, fresh rereview deleg_2ae6ed4f pending; not G1a implementation/Source admission"
+}

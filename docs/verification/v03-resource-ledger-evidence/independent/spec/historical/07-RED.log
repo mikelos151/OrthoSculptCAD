@@ -1,0 +1,5 @@
+Error: Invalid ledger input
+    at invalid (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical/07-RED.mjs:19:42)
+    at Object.registerExisting (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical/07-RED.mjs:181:72)
+    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs:19:124
+{"phase":"07-RED","passed":false,"kind":"UNCHANGED_HISTORICAL_PRODUCTION_BEHAVIOR"}

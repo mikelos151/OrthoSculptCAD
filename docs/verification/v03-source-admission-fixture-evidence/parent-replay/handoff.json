@@ -1,0 +1,147 @@
+{
+  "verdict": "VALIDATED existing local-candidate PASS versus whole-S audit FAIL/UNKNOWN; admission remains BLOCKED",
+  "scope": "scratch-only synthetic TESTDATA fixture/proof spike; no production changes, no admission implementation",
+  "repo": "C:/Users/sandr/OrthoSculptCAD",
+  "branch": "feature/trimline-v03",
+  "head": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "normativeSourcePlanSHA256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+  "scratch": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-fixtures-parent",
+  "exactPositive": {
+    "vertices": 8,
+    "faces": 12,
+    "edges": 18,
+    "components": 1,
+    "cyclicVertexLinks": 8,
+    "signedVolume": "1"
+  },
+  "cases": 5,
+  "localCandidatePass": 5,
+  "observedRequiredAuditPass": [
+    "TESTDATA-positive-S",
+    "TESTDATA-valid-distant-face-order"
+  ],
+  "freshAuditBlocks": [
+    {
+      "id": "TESTDATA-remove-distant-face2",
+      "complete": true,
+      "orientation": "unknown",
+      "checks": {
+        "edge-manifold": "pass",
+        "watertight": "fail",
+        "vertex-manifold": "pass",
+        "components": "pass",
+        "degenerate-triangles": "pass",
+        "winding": "pass",
+        "self-intersections": "pass",
+        "outward": "unknown",
+        "minimum-thickness": "unknown"
+      }
+    },
+    {
+      "id": "TESTDATA-duplicate-distant-face2",
+      "complete": true,
+      "orientation": "unknown",
+      "checks": {
+        "edge-manifold": "fail",
+        "watertight": "fail",
+        "vertex-manifold": "fail",
+        "components": "pass",
+        "degenerate-triangles": "pass",
+        "winding": "pass",
+        "self-intersections": "fail",
+        "outward": "unknown",
+        "minimum-thickness": "unknown"
+      }
+    },
+    {
+      "id": "TESTDATA-selfcross-remote-v6",
+      "complete": false,
+      "orientation": "unknown",
+      "checks": {
+        "edge-manifold": "pass",
+        "watertight": "pass",
+        "vertex-manifold": "pass",
+        "components": "pass",
+        "degenerate-triangles": "pass",
+        "winding": "pass",
+        "self-intersections": "fail",
+        "outward": "unknown",
+        "minimum-thickness": "unknown"
+      }
+    }
+  ],
+  "savedReportExperiment": "3 labeled synthetic untrusted old-report associations; no external API or production reload claim",
+  "selfcrossExactWitness": {
+    "faces": [
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        4,
+        5,
+        6
+      ]
+    ],
+    "segment": [
+      [
+        "4/5",
+        "4/5",
+        "0"
+      ],
+      [
+        "1",
+        "4/5",
+        "0"
+      ]
+    ],
+    "squaredLength": "1/25",
+    "signedVolume": "7/12",
+    "polynomialIdentity": true
+  },
+  "zeroPairBudget": "UNKNOWN; incomplete; no automatic PASS",
+  "minimumThickness": "UNKNOWN in every actual audit",
+  "completePublicProof": {
+    "passed": true,
+    "cases": 5,
+    "leaves": 60,
+    "samples": 65
+  },
+  "focusedUnittestCount": 11,
+  "nodeOptions": "--max-old-space-size=128 --max-semi-space-size=8",
+  "compile": "Actual strict ES2022/ESNext/bundler tsconfig subset; 10 emitted existing-code modules",
+  "actualNativeDigest": "Native Node WebCrypto SHA-256 agrees with independent Python hashlib for all 5 whole sources",
+  "noProductionCodeChanges": true,
+  "sourceHashesStable": true,
+  "repositoryStatusBefore": [
+    "?? docs/plans/v03-source-admission-owner-design.md",
+    "?? docs/verification/v03-source-admission-design-evidence/"
+  ],
+  "repositoryStatusAfter": [
+    "?? docs/plans/v03-source-admission-owner-design.md",
+    "?? docs/verification/v03-source-admission-design-evidence/"
+  ],
+  "blockers": [
+    "auditMesh exercised on public input mesh, NOT candidate-private bytes; positive candidate still lacks authority",
+    "No retained private audit owner/shared-ledger working-set proof or admission token",
+    "No cut/shell/export consumer admission gate or native Worker/stale-publication fences tested",
+    "Selfcross fresh audit has known intersection FAIL AND complete=false (numeric ambiguity), kept honest",
+    "Not tracer4 admission acceptance; only independently exercised fixtures for parent review"
+  ],
+  "entryPoints": [
+    "README.md",
+    "run_spike.py",
+    "catalog.json",
+    "exact-topology.json",
+    "exact-intersection-witness.json",
+    "actual-results.json",
+    "actual-positive-audit.json",
+    "actual-audit-reports.json",
+    "actual-local-face-proof.json",
+    "synthetic-untrusted-saved-PASS-claims.json",
+    "test_fixture_regression.py",
+    "commands-and-results.json",
+    "hashes.json"
+  ]
+}

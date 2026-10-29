@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "plan_sha256_before": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+  "plan_sha256_after": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+  "source_sha256_start": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+  "source_sha256_end": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+  "plan_lines_before": 248,
+  "plan_lines_after": 305,
+  "plan_bytes_before": 44161,
+  "plan_bytes_after": 53412,
+  "added_lines": 62,
+  "removed_lines": 5,
+  "diff_hunks": [
+    {
+      "kind": "replace",
+      "old_first_line": 134,
+      "old_end_exclusive": 135,
+      "new_first_line": 134,
+      "new_end_exclusive": 135
+    },
+    {
+      "kind": "replace",
+      "old_first_line": 136,
+      "old_end_exclusive": 137,
+      "new_first_line": 136,
+      "new_end_exclusive": 137
+    },
+    {
+      "kind": "insert",
+      "old_first_line": 143,
+      "old_end_exclusive": 143,
+      "new_first_line": 143,
+      "new_end_exclusive": 192
+    },
+    {
+      "kind": "replace",
+      "old_first_line": 189,
+      "old_end_exclusive": 190,
+      "new_first_line": 238,
+      "new_end_exclusive": 239
+    },
+    {
+      "kind": "replace",
+      "old_first_line": 222,
+      "old_end_exclusive": 223,
+      "new_first_line": 271,
+      "new_end_exclusive": 272
+    },
+    {
+      "kind": "replace",
+      "old_first_line": 232,
+      "old_end_exclusive": 233,
+      "new_first_line": 281,
+      "new_end_exclusive": 290
+    }
+  ],
+  "snapshot_files": 2428,
+  "changed_paths": [
+    "docs/plans/v03-source-admission-owner-design.md"
+  ],
+  "protected_section_hashes": {
+    "## 1.": "d5fe6bc7ddd13bf8747540abd51262d5f1a82ed6ad244734a9cff9df187be645",
+    "### 5.2.": "2dda2a6f3aa717aed5c897237fc7d5f3ddcaa300e2ac24fdd7028c2c7dc5338b",
+    "## 10.": "1dc8a138ee78b7b5edd917b7b5f9ed1c3db55ca8cfcacba20e827341c7724312"
+  },
+  "evidence_note": "Checks contract model and edit scope only; no production/native admission verification.",
+  "artifact_hashes": {
+    "contract_witness.py": "3dd9ffb99d939791c25f41705acf70b2878d839258cdb319e83faed9eefd4ad7",
+    "input-hashes-end.json": "e7251cae1e13c4947b3ece56c56ea35e8af81a438d27f3a777a59e07fd1a942c",
+    "input-hashes-start.json": "6769adff6b346faaa3bb60b158267092e5262f7a415424ff3f778eea9d624760",
+    "negative-history-escape.log": "60b3eeb780afe061c2cc411d73c58c8f98f9a653bc1a6457142982142032b40d",
+    "negative-sum-refs.log": "514236e2591af5c8760866ff9cb975e985a5b581468840bcaa7138b96f818d3d",
+    "plan-before.md": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+    "prepare.log": "f5890675cbe9dc8be31703161ad0d4c0dd4a8017b9ec87b9361b8be63644ca97",
+    "prepare_review.py": "5894af5e963df563af9d410c5833c9dff2cdf214177b5e68358f88970c4ab5a1",
+    "review-input-verification.json": "59f69bd5f6016d50aacdddd328514da423f8230dd7fe70a58a5c4bfd521db685",
+    "targeted.patch": "240bab0e47bed84b5b73600de4f1aaf253d63641539f9030af902adfd35cfec3",
+    "verify_artifacts.py": "84e1aa17ba229ff434b335475c17d8e6a8146098137fb17d19152dbba88caf8d",
+    "witness-results.json": "2c3139b91f1b253b295d5ee8241211049ba1ac54abf85fb26a823854fd5a579b",
+    "witness.log": "d138b470228584ce972ca7fe3fda591d6c702ab2b8bf5b93cdbbc5fdd911381b"
+  }
+}

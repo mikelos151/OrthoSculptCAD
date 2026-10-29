@@ -1,0 +1,28 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (7 tests | 1 failed) 18ms
+     × 07 registers native backing identity, not view lengths; independent copies need new reservations 7ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 07 registers native backing identity, not view lengths; independent copies need new reservations
+Error: Invalid ledger input
+ ❯ invalid src/compute/resourceLedger.ts:31:49
+     29| }
+     30| const BUDGET: Refusal = Object.freeze({ ok: false, code: 'BUDGET' });
+     31| function invalid(): never { throw Object.assign(new Error('Invalid led…
+       |                                                 ^
+     32| function category(c: unknown): asserts c is Category { if (c !== 'resi…
+     33| function size(n: unknown): asserts n is number { if (typeof n !== 'num…
+ ❯ Object.registerExisting src/compute/resourceLedger.ts:138:120
+ ❯ tests/v03-resource-ledger.test.ts:19:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 6 passed (7)
+   Start at  19:06:45
+   Duration  296ms (transform 43ms, setup 0ms, import 61ms, tests 18ms, environment 0ms)
+

@@ -1,0 +1,14 @@
+{
+  "src/compute/resourceLedger.ts": {
+    "credentials": [],
+    "dynamic_exec": [],
+    "network_process": [],
+    "io": []
+  },
+  "tests/v03-resource-ledger.test.ts": {
+    "credentials": [],
+    "dynamic_exec": [],
+    "network_process": [],
+    "io": []
+  }
+}

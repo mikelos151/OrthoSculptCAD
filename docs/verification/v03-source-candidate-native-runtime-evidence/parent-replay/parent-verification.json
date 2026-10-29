@@ -1,0 +1,64 @@
+{
+  "status": "SCOPED_PASS",
+  "cliExit": 0,
+  "acceptanceExit": 0,
+  "checks": [
+    {
+      "name": "independent-oracle",
+      "pass": true
+    },
+    {
+      "name": "worker-local-input-mutation",
+      "pass": true
+    },
+    {
+      "name": "pending-native-digest-dispose",
+      "pass": true
+    },
+    {
+      "name": "opaque-handle-authentication",
+      "pass": true
+    },
+    {
+      "name": "real-bind-cumulative-context",
+      "pass": true
+    }
+  ],
+  "oracle": {
+    "cases": 31,
+    "faces": 121,
+    "uniqueRuntimeIds": 31
+  },
+  "nativeDigests": 36,
+  "cleanup": {
+    "nativeWorkerConstructed": 1,
+    "nativeWorkerTerminated": 1,
+    "playwrightWorkerClosed": 1,
+    "browserDisconnected": true,
+    "serverStopped": true,
+    "serverPortRefused": true,
+    "playwrightWorkerCreated": 1,
+    "workerClosedBeforeContextClose": true
+  },
+  "errors": {
+    "externalRequests": [],
+    "pageErrors": [],
+    "workerErrors": []
+  },
+  "bundleComparison": {
+    "initialExtraIdentityAssertionFailed": true,
+    "cause": "Only one generated bundler source-path comment differs after copying the harness. Neither bundle nor source was rewritten. Both real executions and artifact acceptance exited 0.",
+    "authorSHA256": "9fb389d3260a92ad812774f862970dbc19fd265bb0776ffa8dd263b85111d6dd",
+    "parentSHA256": "994a5d161f72d84be5a19276035dcd0088d3a84f8f917170f6bb37aa7846b861",
+    "changedLines": 1,
+    "line": 554,
+    "authorLine": "// AppData/Local/hermes/cache/scratch/v03-source-candidate-native-runtime/worker.ts",
+    "parentLine": "// AppData/Local/hermes/cache/scratch/v03-source-candidate-native-runtime-parent/worker.ts"
+  },
+  "sourceHashesUnchanged": true,
+  "limitations": [
+    "Synthetic TESTDATA, one native Chromium Worker; not product retained owner, shared pool, source admission, audit, cut/shell/UI or application publication fences.",
+    "The real native SHA is fulfilled before the test gate opens; no native-crypto cancellation or RSS/GC claim.",
+    "SAB not tested."
+  ]
+}

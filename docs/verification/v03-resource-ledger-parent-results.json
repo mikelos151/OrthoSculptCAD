@@ -1,0 +1,71 @@
+{
+  "status": "G1A_PRIMITIVE_ACCEPTED",
+  "scope": "Full G1a logical managed-buffer primitive, NOT source admission/native worker integration",
+  "reviewedSourceHashes": {
+    "src/compute/resourceLedger.ts": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+    "tests/v03-resource-ledger.test.ts": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95"
+  },
+  "finalSourceSHA256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+  "formatOnlyCorrection": {
+    "delta": "Removed exactly one final LF after git diff --check rejected a blank line at EOF. No executable change.",
+    "proof": "docs/verification/v03-resource-ledger-evidence/format-only/format-only-proof.json",
+    "compiledModuleByteIdenticalToReviewedQualityModule": true,
+    "freshRegression": "1224 Node / 71 Python / full TypeScript / npm audit all PASS; no skips, no known npm vulnerabilities",
+    "originalReviewsAndInputsPreserved": true
+  },
+  "parentVerification": {
+    "unitExit": 0,
+    "typecheckExit": 0,
+    "pythonExit": 0,
+    "npmAuditExit": 0,
+    "inputHashesUnchanged": true,
+    "staticScan": {
+      "suspectedCredential": [],
+      "dynamicExecution": [],
+      "networkOrProcess": []
+    },
+    "scope": "G1a primitive regression only, not source admission/App/Worker integration",
+    "unit": {
+      "success": true,
+      "numTotalTests": 1224,
+      "numPassedTests": 1224,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0
+    },
+    "ledger": [
+      {
+        "status": "passed",
+        "assertions": 16,
+        "failed": []
+      }
+    ],
+    "unitExpectedTotal": 1224,
+    "pythonTests": 71,
+    "auditVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "status": "REGRESSION_PASS_REVIEWS_PENDING"
+  },
+  "independentReviews": {
+    "spec": "PASS G1aPrimitiveOnly; 22 independent cases / 729 actual-API graphs / 10517 checks; 14 archived TDD cycles independently replayed",
+    "quality": "PASS G1aPrimitiveOnly; 12 independent cases / 4254 assertions / 1600 actual-API steps",
+    "parentReplay": "Quality isolated compile and actual-API witness replay exit 0, unchanged source hashes",
+    "manifest": "docs/verification/v03-resource-ledger-evidence/independent/index.json"
+  },
+  "evidence": "docs/verification/v03-resource-ledger-evidence/index.json",
+  "initialAuthorAndParentEvidenceFiles": 203,
+  "notApproved": [
+    "G1b native broker/pool/transport/ACK",
+    "G2 arena auditor",
+    "G3 retained private source admission",
+    "G4 App/registry/mutation/publication fences",
+    "full cut/shell/collar/clinical/native EXE"
+  ],
+  "release020": "Unchanged"
+}

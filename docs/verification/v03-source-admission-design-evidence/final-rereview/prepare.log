@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "plan_sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+  "plan_bytes": 53412,
+  "plan_lines": 305,
+  "original_matches_archived": true,
+  "snapshot_files": 2428,
+  "changed_from_initial_fix_snapshot": [
+    "docs/plans/v03-source-admission-owner-design.md"
+  ],
+  "diff_hunks": [
+    {
+      "kind": "replace",
+      "old": [
+        134,
+        135
+      ],
+      "new": [
+        134,
+        135
+      ]
+    },
+    {
+      "kind": "replace",
+      "old": [
+        136,
+        137
+      ],
+      "new": [
+        136,
+        137
+      ]
+    },
+    {
+      "kind": "insert",
+      "old": [
+        143,
+        143
+      ],
+      "new": [
+        143,
+        192
+      ]
+    },
+    {
+      "kind": "replace",
+      "old": [
+        189,
+        190
+      ],
+      "new": [
+        238,
+        239
+      ]
+    },
+    {
+      "kind": "replace",
+      "old": [
+        222,
+        223
+      ],
+      "new": [
+        271,
+        272
+      ]
+    },
+    {
+      "kind": "replace",
+      "old": [
+        232,
+        233
+      ],
+      "new": [
+        281,
+        290
+      ]
+    }
+  ],
+  "added_lines": 62,
+  "removed_lines": 5,
+  "byte_identical_replay_copies": {
+    "contract_witness.py": "3dd9ffb99d939791c25f41705acf70b2878d839258cdb319e83faed9eefd4ad7",
+    "verify_artifacts.py": "84e1aa17ba229ff434b335475c17d8e6a8146098137fb17d19152dbba88caf8d",
+    "plan-before.md": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+    "input-hashes-start.json": "6769adff6b346faaa3bb60b158267092e5262f7a415424ff3f778eea9d624760"
+  },
+  "replay_output_directory": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-admission-ledger-contract-rereview"
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-source-admission-ledger-contract-fix\verify_artifacts.py", line 74, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-source-admission-ledger-contract-fix\verify_artifacts.py", line 28, in main
+    assert i + 1 in allowed_insert_before_lines, (tag, i + 1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('insert', 143)

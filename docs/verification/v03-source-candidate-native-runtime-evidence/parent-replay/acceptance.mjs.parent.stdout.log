@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "behaviorChecks": 5,
+  "oracleCases": 31,
+  "oracleFaces": 121,
+  "nativeDigests": 36,
+  "cleanup": {
+    "nativeWorkerConstructed": 1,
+    "nativeWorkerTerminated": 1,
+    "playwrightWorkerClosed": 1,
+    "browserDisconnected": true,
+    "serverStopped": true,
+    "serverPortRefused": true,
+    "playwrightWorkerCreated": 1,
+    "workerClosedBeforeContextClose": true
+  }
+}

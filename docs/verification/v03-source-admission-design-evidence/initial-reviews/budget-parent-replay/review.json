@@ -1,0 +1,93 @@
+{
+  "passed": false,
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "LEDGER-01",
+      "severity": "medium",
+      "location": "docs/plans/v03-source-admission-owner-design.md:134-136,189,232",
+      "finding": "Kontrakt najbliższego G1a nie zamraża semantyki zachowania tego samego allocation ID przez niezależne lease ani związku refcount z kategoriami. Wymaga współdzielenia S/history i testu retain/view, ale wyliczone API ma tylko reserve/allocateBuffer/transfer/reclassify/release/close: nie określa operacji tworzącej drugi owning reference, lease odpowiedzialnego za ten reference ani kategorii po jego dodaniu. Liczbowy świadek specyfikacji: managed=1024, job=768, history=512; resident backing 768 B jest następnie zachowany jako pełne Undo bez kopii. Managed pozostaje 768 B. Jeśli retain pozostawia wyłącznie kategorię resident, history pozostaje 0 i operacja przechodzi; jeśli historia musi obejmować ten sam backing, jej wymagane 768 B przekracza cap i operacja musi odmówić. Sam test reclassify(job768,history) nie określa wyniku dodania równoczesnego reference. Dodatkowo nie wiadomo, czy close pierwotnego lease może zdjąć charge przy nadal żyjącym reference drugiego lease. To brak reguły księgowej, nie znaleziony błąd nieistniejącej implementacji i nie żądanie ukończenia G2/CAD.",
+      "required_correction_AC": [
+        "Przed pełnym GREEN G1a dopisać niewielki techniczny kontrakt retain/adopt-reference: wejściem autentyczny allocation capability, wynik to reference przypisany do konkretnego lease; view nie tworzy danych, nowa kopia ma nowy allocation ID. Określić także sposób rozpoznania już istniejącego backing przy późniejszej rejestracji UI/history, zamiast reserve tworzącego drugi fikcyjny allocation.",
+        "Jawnie określić, czy kategorie są wyłączne dla allocation, czy wynikają z aktywnych references, oraz która operacja i kiedy musi obciążyć history/job przy współdzieleniu. Nie narzucam wyboru mechanizmu; nie wolno jednak dopuścić reference pełnego Undo bez należnego history charge ani przedwcześnie zdjąć job charge z nadal żyjących danych zadania. Zmiana wszystkich należnych liczników ma być atomowa przed nowym reference/reclassify; odmowa zachowuje poprzedni stan.",
+        "Zamrozić release/close względem references: zamknięcie jednego lease usuwa tylko jego references, globalny charge znika dopiero po ostatnim owning reference i zakończeniu kontrolowanego transfer/native lifecycle; double-close/release nie zmienia cudzej rezerwacji.",
+        "Dodać deterministyczne testy: dwa lease tego samego backing, close pierwszego przy drugim żywym, dodanie history reference przy history=512 i backing=768, powodzenie przy wystarczającym history, ponowne references tej samej kategorii, reclassify przy drugim reference oraz rollback po odmowie. Nie potrzeba do tego Workera, arena-audytu ani decyzji produktowej."
+      ]
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "G2-PROOF",
+      "blocking": false,
+      "location": "docs/plans/v03-source-admission-owner-design.md:156-169,191-193,230",
+      "finding": "Nie stwierdzam sprzeczności liczbowej ani koniecznego brakującego O(V/F) segmentu areny. T ma dane do sortowania triplets, odtworzenia kierunku z S/corner, twin, DSU oraz rotacji wachlarzy z head/incidence count i visited corner. P może budować bounding boxes bottom-up i przechowywać zakresy w node start/count, więc stack z samymi node IDs jest możliwy. Własny packed-T świadek wykrywa także vertex bow-tie na jednej edge-connected powierzchni z zamkniętymi manifold edges. To nie jest dowód kompletnego backendu ani jego obsługi wszystkich degeneracji.",
+      "recommendation": "Pozostawić offsety/lifetimes, degeneracy sentinels, postorder build, bounded append oraz konserwatywność portu predicates jako obowiązkowe dowody G2 przed GREEN. Nie blokować samego G1a dlatego, że te przyszłe dowody nie są już implementacją."
+    },
+    {
+      "id": "G2-STACK-SCRATCH",
+      "blocking": false,
+      "location": "docs/plans/v03-source-admission-owner-design.md:161,165-167",
+      "finding": "Cap para-stack 4H+3 jest konserwatywnie wykonalny dla opisanego traversal: rank=depth(a)+depth(b)<=2H; self push trzech potomków zwiększa pending najwyżej o 2 i rank o 2; cross push dwóch zwiększa pending o 1 i rank o 1. Ogólna luźna granica DFS 1+2*(2H) mieści się w capie. Abstrakcyjne próby na 20 rozmiarach i czterech strategiach splitterów dały max peak=13, ale nie zastępują dowodu future kodu. Niezależny statyczny capacity-layout mieści triangles, distances, dwa sections, dwa polygons po 16 xyz i temporaries dokładnie w 256 Float64; ten układ nie jest portem predykatów.",
+      "recommendation": "Instrumentować rzeczywisty G2 traversal i zapis każdego segmentu. Konstrukcja musi pozostać median-balanced; budżety nie dotyczą dowolnego BVH. Nie przenosić świadectwa pojemności scratch na twierdzenie o poprawności numerycznej."
+    },
+    {
+      "id": "G1-TRANSFER",
+      "blocking": false,
+      "location": "docs/plans/v03-source-admission-owner-design.md:115-122,136,190",
+      "finding": "Wymaganie braku premature release podczas transfer/native SHA jest poprawne. Przed integracją G1b trzeba przełożyć je na jednoznaczne przejścia: pre-postMessage, synchronous postMessage throw, detached/in-flight, receive ACK oraz terminate/crash. Samo transfer(key,realm) jest nazwą kontraktu, nie gotowym mechanizmem potwierdzania przejścia.",
+      "recommendation": "Zamrozić w G1a/G1b stan i settlement ticket albo równoważny prywatny protokół, a następnie sprawdzić brak double release i brak zmiany charge przy transferze. Nie wymagam dowodu native transport przed pierwszym izolowanym reserve/allocate testem."
+    },
+    {
+      "id": "G2C-OPTIONS",
+      "blocking": false,
+      "location": "docs/plans/v03-source-admission-owner-design.md:148,154,169,193; src/compute/copy.ts:76-88; src/geometry/audit.ts:10-12",
+      "finding": "Admission ma poprawnie stałą politykę 2 mln par / 100 świadków. Dotychczasowy legacy analyze przyjmuje jednak także opcje do 10 mln par / 10000 świadków, podczas gdy proponowane P ma miejsce na 100 par. Nie jest to dowód niemożności G2: resource-cap może legalnie odmówić, ale integracja musi jawnie rozdzielić opcje legacy od niezmiennej polityki ownera, bez cichego zwiększenia areny lub fixed policy.",
+      "recommendation": "Przed GREEN G2c ustalić zachowanie dla legacy options poza stałą pojemnością: bounded refusal/UNKNOWN z zachowaniem braku fallbacku albo oddzielnie policzony plan dla dopuszczonej ścieżki legacy. Utrzymać istniejące testy mniejszych budżetów. To doprecyzowanie następnej bramki, nie blocker pierwszego G1a."
+    }
+  ],
+  "summary": "Warunkowo wykonalna architektura i poprawna tabela aren; brak PASS całego review z powodu niedomkniętej semantyki retain/refcount/category najbliższego G1a. Potrzebny mały freeze techniczny, nie zmiana produktu ani ukończenie przyszłych G2/G3.",
+  "scope": {
+    "kind": "READONLY DESIGN independent budget/backend review",
+    "language": "pl",
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "branch": "feature/trimline-v03",
+    "head": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+    "architecture_status": "conditionally implementable; no arena mathematics blocker found",
+    "g1a_safe_to_implement": {
+      "isolated_reserve_allocate_first_scenario": true,
+      "full_G1a_contract_without_additional_semantic_freeze": false,
+      "reason": "Reserve/allocate exact-limit pion można rozpocząć bez decyzji produktowej. Przed testami pełnego refcount/reclassify/close i GREEN całego G1a zamknąć LEDGER-01."
+    },
+    "not_approved": ["source admission", "native owner implementation", "full product", "clinical use", "native EXE"],
+    "not_run": ["full tests", "browser", "native Worker", "RSS benchmark", "large allocations"],
+    "not_inspected": ["other live fixture/native/runtime/reviewer artifacts", "inflight cube or native worker logs"],
+    "writes": "Only C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-budget-review/; no repository/source/test/doc/config/skill/release writes, no git stage/commit/reset"
+  },
+  "evidence": {
+    "design_sha256_start_and_end": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+    "normative_source_bound_sha256": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "normative_integrated_sha256": "4874b8c83e5270750b06da4cc9b57834d816823872bd9ee86391da2ac995d8af",
+    "actual_command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-budget-review/review_witness.py",
+    "exit_code": 0,
+    "actual_output": {"ok":true,"table_rows_verified":3,"topology_fixture_count":6,"stack_fixture_count":20,"scratch_doubles":256},
+    "verified_table": [
+      {"V":4,"F":4,"attrs":"none","D":96,"J":162,"D_plus_J":258,"T":272,"P":3848,"D_plus_arena":3944},
+      {"V":200000,"F":200000,"attrs":"none","D":4800000,"J":4800066,"D_plus_J":9600066,"T":13000000,"P":40803608,"D_plus_arena":45603608},
+      {"V":200000,"F":200000,"attrs":"RGB+UV","D":8800000,"J":8800066,"D_plus_J":17600066,"T":13000000,"P":40803608,"D_plus_arena":49603608}
+    ],
+    "independent_witnesses": [
+      "Python stdlib integer align8 for all segments, including F=1 and nonmultiples of eight; no cap-sized arena allocation",
+      "Canonical tetra preimage reconstructed from fields: 162 B; no call to production digest implementation",
+      "Fraction tetra and midpoint-subdivided tetra volumes both 1/6",
+      "Packed T: tetra, subdivided tetra, hole, duplicate, disconnected pinched vertex and connected pinched vertex; independent edge/link graph comparison",
+      "Connected pinched vertex: boundary=0, nonmanifold edges=0, winding errors=0, components=1, bad vertex links=[0]",
+      "Small packed-T heap comparison/work counters below proposed caps; no claim these witnesses count every future production step",
+      "256-double candidate capacity layout and abstract balanced stack traversal; not production G2 proof",
+      "Numerical ledger contract ambiguity witness; not a fabricated run of nonexistent resourceLedger"
+    ],
+    "accounting_assessment": "Global managed plus job/history subsets is sound in principle. UI source and worker source are separate allocations; shared immutable backing once globally, copies separately. Plan explicitly includes both C parts, R, B/references, provenance, audit/hash, staging/serialization and full Undo, or blocks the missing operation. Logical text charge and bounded control/native/GPU/RSS exclusions are honest; no arbitrary JS Map overhead or RSS guarantee is claimed. LEDGER-01 is the remaining first-module semantics gap.",
+    "admission_assessment": "Fresh real audit on the same private S, complete/outward/finite positive volume, eight required PASS with thickness UNKNOWN, fixed caps and real retained owner are correctly gated. Existing Map-based audit cannot be wrapped and declared budgeted. No third pool, caller report authority, main fallback or all-UNKNOWN implementation is accepted by the plan.",
+    "files": ["review.json", "review_witness.py", "witness-results.json"],
+    "artifact_hashes": "artifact-verification.json (generated after final design/source hash verification)"
+  }
+}

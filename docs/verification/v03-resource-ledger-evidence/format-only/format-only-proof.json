@@ -1,0 +1,49 @@
+{
+  "scope": "EOF-only formatting correction; no executable change. Original reviews/input hashes preserved, not rewritten.",
+  "reviewedSourceSHA256": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+  "finalSourceSHA256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+  "exactSourceDelta": "Removed exactly one final LF; old bytes == new bytes + b\"\n\"",
+  "compiledByteEqualToReviewedQualityModule": true,
+  "compiledSHA256": "6ae0607fe24b8707fa8044ad47aac959bd0ac18f88ba9009a499067a55c21735",
+  "parentResults": {
+    "unitExit": 0,
+    "typecheckExit": 0,
+    "pythonExit": 0,
+    "npmAuditExit": 0,
+    "inputHashesUnchanged": true,
+    "staticScan": {
+      "suspectedCredential": [],
+      "dynamicExecution": [],
+      "networkOrProcess": []
+    },
+    "scope": "G1a primitive regression only, not source admission/App/Worker integration",
+    "unit": {
+      "success": true,
+      "numTotalTests": 1224,
+      "numPassedTests": 1224,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0
+    },
+    "ledger": [
+      {
+        "status": "passed",
+        "assertions": 16,
+        "failed": []
+      }
+    ],
+    "unitExpectedTotal": 1224,
+    "pythonTests": 71,
+    "auditVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "status": "REGRESSION_PASS_REVIEWS_PENDING"
+  },
+  "gitWhitespaceInitialExit": 2,
+  "gitWhitespaceInitialDiagnostic": "src/compute/resourceLedger.ts:193: new blank line at EOF."
+}

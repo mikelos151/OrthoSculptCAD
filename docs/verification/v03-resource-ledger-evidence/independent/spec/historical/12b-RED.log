@@ -1,0 +1,8 @@
+AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+
+Caught error:
+
+TypeError: Cannot read properties of undefined (reading 'bytes')
+    at err (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs:7:45)
+    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs:24:133
+{"phase":"12b-RED","passed":false,"kind":"UNCHANGED_HISTORICAL_PRODUCTION_BEHAVIOR"}

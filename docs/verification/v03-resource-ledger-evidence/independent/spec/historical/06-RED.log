@@ -1,0 +1,13 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
++   384,
++   384,
+-   256,
+-   256,
+    128
+  ]
+
+    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs:18:422
+{"phase":"06-RED","passed":false,"kind":"UNCHANGED_HISTORICAL_PRODUCTION_BEHAVIOR"}

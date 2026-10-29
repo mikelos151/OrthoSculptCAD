@@ -1,0 +1,445 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/actual-audit-reports.json",
+      "bytes": 11866,
+      "sha256": "185a78dcb0ea1445aaa5e3a94f7a13f1a3fab2423da65beeee393ef481130c3b"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/actual-local-face-proof.json",
+      "bytes": 138858,
+      "sha256": "7ba6bb75f0581800ad5959623ab851189593dc83b5275bfad4d42ea4be1ea16b"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/actual-positive-audit.json",
+      "bytes": 1691,
+      "sha256": "fc799fec79bb9195ea6858772eef2ef4e0fe7a4a2cde60b4940e6041fb9e538b"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/actual-results.json",
+      "bytes": 5600,
+      "sha256": "5210d239b3fe35f52c662b0103e347abe902bd74ee7a27549c4801ab11681007"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/actual_harness.mjs",
+      "bytes": 9988,
+      "sha256": "b9850f5eb25bd5ee62e5e91ce2c58362fda890f434e4e38bb6469b2f3d47c5ea"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/geometry/audit.js",
+      "bytes": 6557,
+      "sha256": "87b1290d205aa9e3f626200d26d149a2451cbf5a359ec44d4ab183764668dcf4"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/geometry/auditTypes.js",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/geometry/core.js",
+      "bytes": 7083,
+      "sha256": "1e5c37b7d2b55a6b20aab8f6566e01880a45839c5acfe4f1e5759cfa1da37873"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/geometry/intersections.js",
+      "bytes": 8284,
+      "sha256": "394aaaa08bd561b8b82fcc5903f055d7feca519774caab98ff73da92e9b34b19"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/io/validation.js",
+      "bytes": 2874,
+      "sha256": "7903cd0b8c0d07f095d31ce1c61e06a7e3cbdf493d836bdd3ac3c264d80c6481"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/trimline/bezier.js",
+      "bytes": 5622,
+      "sha256": "7aea06d9d03bce6cd32ce63b20b8ebede1f035a3c4e1d2b590464a129cd4ee7d"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/trimline/face-cubic.js",
+      "bytes": 3334,
+      "sha256": "79869b24f6a8b6a497ed4ad124bcc5851a418fea6cb3a748a8cadda46bb45f0f"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/trimline/numerics.js",
+      "bytes": 8584,
+      "sha256": "299809aa588ac03d89740b69e81eb622a0a39b362d8c193b2d9b36515fd3ff47"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/trimline/source-candidate.js",
+      "bytes": 12883,
+      "sha256": "755b001bb48fbb26a76354371da71a457af6b2044bdda29417025e312b66d0e6"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/build/types.js",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/catalog.json",
+      "bytes": 108357,
+      "sha256": "5b41a26dfaa53bede630ee0a74d5af5a11f81d97315246dd021306ca2c7bec37"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/commands-and-results.json",
+      "bytes": 13776,
+      "sha256": "f6301243abf920132e3f6f62ba9d58a8aec124ba096a17cd453cf459c3672aba"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/environment-note.md",
+      "bytes": 1270,
+      "sha256": "687ee7088886ba3c3d06d43aeceeffec11b4e5d4f46d8f9353a58a1d40819ce0"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/exact-intersection-witness.json",
+      "bytes": 2381,
+      "sha256": "d75e77a8615ae7aef58a3aae29a990e8eef8f7b6791b0d1b5a38b0cecbd7e14b"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/exact-topology.json",
+      "bytes": 40328,
+      "sha256": "6579deb8ea2483ffc33e11811034d6bf0016b751d56f72bafc3e3ac996f6d144"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/exact_fixtures.py",
+      "bytes": 11693,
+      "sha256": "a4ae596b35d9ad9e19ecf069b179c96e9f5bd48c25fa602761b247ec1c19038e"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/handoff.json",
+      "bytes": 4611,
+      "sha256": "7c6c9f4f5bccbb3afad9add4f6534c0b05506e4b7f32d29b89a0b928020db0bb"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/hashes.json",
+      "bytes": 10224,
+      "sha256": "bfdbc4a38d41a587ef9ffc111b1890ac9e5a6ba42b2b256a6f6addaaa1b6b74d"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/00-head.json",
+      "bytes": 485,
+      "sha256": "95fba2e14b3e22fa0c010b52c15aed1cbacc071dda7689ae9fd9ec6a13f1b4ba"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/01-initial-status.json",
+      "bytes": 505,
+      "sha256": "b9f21d6cb85b6e137998e071ff602b6b1cfef0506bf9229f269b93623df2854b"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/02-node-version.json",
+      "bytes": 321,
+      "sha256": "4f38b7d34e2faeb0c1b13de26d1c50df48ab72425ccae084b2bd339eb7057fe7"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/03-python-version.json",
+      "bytes": 417,
+      "sha256": "4741825c3f9492d18bc92aa6b45795dbb489e55de844a6a95cf997a827721aa7"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/04-typescript-version.json",
+      "bytes": 402,
+      "sha256": "3b9489cb4943596ab3b919b5b7b4abf791520cd2767b9fb7f13bb3d8df7f80f7"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/05-exact-fixtures.json",
+      "bytes": 831,
+      "sha256": "d1e6d589f5f052117e960abfd8a495d5b5c859717b70b9724d123a4c90338790"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/06-strict-subset-compile.json",
+      "bytes": 1682,
+      "sha256": "636c9c0bed4628ee4ad1453fc2b421985dced1a7f2470a2dbcde3280818cb313"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/07-actual-existing-api-harness.json",
+      "bytes": 4637,
+      "sha256": "001ee2295588b8f6b1eba48de5d685a04645debec7f444cf998b410cf22b6cc2"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/08-complete-public-verifier.json",
+      "bytes": 673,
+      "sha256": "edb660f7457e62b8288fffe9a1b4b722d3030202f6a882b15e8d7b8bba79cba3"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/09-focused-regression-tests.json",
+      "bytes": 2416,
+      "sha256": "0d9d11be1ad24a9044ffd9c5331a108ed655d7a01b1ade9009d06886b6963d94"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/10-final-head.json",
+      "bytes": 491,
+      "sha256": "c6aa6d68558df92936f6cc6dff46b74c992395bb98834bcb2c431bae57b932c4"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/logs/11-final-status.json",
+      "bytes": 503,
+      "sha256": "2c215979c3da2b26632ce4856309d14513a5062fbc53cdfb4681d2aba300b9cb"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/package.json",
+      "bytes": 125,
+      "sha256": "f00ccdfd3236154409f97d33797cd4b850a1cc930c77425a33943a913dfc45db"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/README.md",
+      "bytes": 8489,
+      "sha256": "1d16c058343af25d12ef4db908033335f609a518d6491a887200843b50214c35"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/run_spike.py",
+      "bytes": 8741,
+      "sha256": "cf195b57a87c3b6af7e41de77ab3000dfba8def059eaf3fa9a88f910ac5137e5"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/synthetic-untrusted-saved-PASS-claims.json",
+      "bytes": 8577,
+      "sha256": "6b7f606496d552ae25ac6c860b1a6e4d7abf62f661ca610e15d2cb217c55290c"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/test_fixture_regression.py",
+      "bytes": 8400,
+      "sha256": "63f0f31d0ac54e82c5badfd96d2b2e7546beada753a68448b83b03c6116d63bd"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/author/tsconfig.json",
+      "bytes": 454,
+      "sha256": "ba65977a506769b357c803ba0d5e83fb7c676f44c73e27b7b4238480c20b5a28"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/actual-audit-reports.json",
+      "bytes": 11868,
+      "sha256": "f679b57ed85f5fb76e07d00ef8ec9c25ff13d6a09029ef6e688a45bbac8b77f7"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/actual-local-face-proof.json",
+      "bytes": 138858,
+      "sha256": "7ba6bb75f0581800ad5959623ab851189593dc83b5275bfad4d42ea4be1ea16b"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/actual-positive-audit.json",
+      "bytes": 1690,
+      "sha256": "c001676b3fd089fb14547d24aca601f84e3f58209792910fe9d1cf0467983e2c"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/actual-results.json",
+      "bytes": 5600,
+      "sha256": "5210d239b3fe35f52c662b0103e347abe902bd74ee7a27549c4801ab11681007"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/actual_harness.mjs",
+      "bytes": 9988,
+      "sha256": "b9850f5eb25bd5ee62e5e91ce2c58362fda890f434e4e38bb6469b2f3d47c5ea"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/geometry/audit.js",
+      "bytes": 6557,
+      "sha256": "87b1290d205aa9e3f626200d26d149a2451cbf5a359ec44d4ab183764668dcf4"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/geometry/auditTypes.js",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/geometry/core.js",
+      "bytes": 7083,
+      "sha256": "1e5c37b7d2b55a6b20aab8f6566e01880a45839c5acfe4f1e5759cfa1da37873"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/geometry/intersections.js",
+      "bytes": 8284,
+      "sha256": "394aaaa08bd561b8b82fcc5903f055d7feca519774caab98ff73da92e9b34b19"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/io/validation.js",
+      "bytes": 2874,
+      "sha256": "7903cd0b8c0d07f095d31ce1c61e06a7e3cbdf493d836bdd3ac3c264d80c6481"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/trimline/bezier.js",
+      "bytes": 5622,
+      "sha256": "7aea06d9d03bce6cd32ce63b20b8ebede1f035a3c4e1d2b590464a129cd4ee7d"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/trimline/face-cubic.js",
+      "bytes": 3334,
+      "sha256": "79869b24f6a8b6a497ed4ad124bcc5851a418fea6cb3a748a8cadda46bb45f0f"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/trimline/numerics.js",
+      "bytes": 8584,
+      "sha256": "299809aa588ac03d89740b69e81eb622a0a39b362d8c193b2d9b36515fd3ff47"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/trimline/source-candidate.js",
+      "bytes": 12883,
+      "sha256": "755b001bb48fbb26a76354371da71a457af6b2044bdda29417025e312b66d0e6"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/build/types.js",
+      "bytes": 11,
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/catalog.json",
+      "bytes": 108357,
+      "sha256": "5b41a26dfaa53bede630ee0a74d5af5a11f81d97315246dd021306ca2c7bec37"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/commands-and-results.json",
+      "bytes": 14001,
+      "sha256": "e0e4bec155cf9d17e0b9f47cadb583286fbcd664a211d75e610683aca8968514"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/environment-note.md",
+      "bytes": 1270,
+      "sha256": "687ee7088886ba3c3d06d43aeceeffec11b4e5d4f46d8f9353a58a1d40819ce0"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/exact-intersection-witness.json",
+      "bytes": 2381,
+      "sha256": "d75e77a8615ae7aef58a3aae29a990e8eef8f7b6791b0d1b5a38b0cecbd7e14b"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/exact-topology.json",
+      "bytes": 40328,
+      "sha256": "6579deb8ea2483ffc33e11811034d6bf0016b751d56f72bafc3e3ac996f6d144"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/exact_fixtures.py",
+      "bytes": 11693,
+      "sha256": "a4ae596b35d9ad9e19ecf069b179c96e9f5bd48c25fa602761b247ec1c19038e"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/handoff.json",
+      "bytes": 4752,
+      "sha256": "ee85ec2a2f5e3deb76c9de1024645a9f5d83ba25a9d59b1cad77deaf4fe8be82"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/hashes.json",
+      "bytes": 10224,
+      "sha256": "ac7d990c2cbd0b71e6a78bb44e4a950c1bfd357acb6b7ae109228daa2604a5fe"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/00-head.json",
+      "bytes": 485,
+      "sha256": "95fba2e14b3e22fa0c010b52c15aed1cbacc071dda7689ae9fd9ec6a13f1b4ba"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/01-initial-status.json",
+      "bytes": 565,
+      "sha256": "3da489d0404f44307c5d7b3853bfb2267d716be3556d68c694e1a4bd1640a505"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/02-node-version.json",
+      "bytes": 321,
+      "sha256": "4f38b7d34e2faeb0c1b13de26d1c50df48ab72425ccae084b2bd339eb7057fe7"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/03-python-version.json",
+      "bytes": 417,
+      "sha256": "4741825c3f9492d18bc92aa6b45795dbb489e55de844a6a95cf997a827721aa7"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/04-typescript-version.json",
+      "bytes": 402,
+      "sha256": "3b9489cb4943596ab3b919b5b7b4abf791520cd2767b9fb7f13bb3d8df7f80f7"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/05-exact-fixtures.json",
+      "bytes": 838,
+      "sha256": "aa446101137b16b82014ce8c05bf3363cf949e4df204be52aa474bdf35b24896"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/06-strict-subset-compile.json",
+      "bytes": 1759,
+      "sha256": "8124eb209b8aa2be62f0190f6c031fac53f202ae79e3b3adfe1c66a30f8fe035"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/07-actual-existing-api-harness.json",
+      "bytes": 4644,
+      "sha256": "613d1a7b75207830d910ccd791abf650bd026ab3e67e79935d3d7b621e25196f"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/08-complete-public-verifier.json",
+      "bytes": 680,
+      "sha256": "fe3de7bd109d99706ed3055f6119b429b6f3d589cecb80a8151aa4f6330cf313"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/09-focused-regression-tests.json",
+      "bytes": 2423,
+      "sha256": "3722ce3b370b54927505eb4c7a5cd2b194c1c49a3cb33b66e28be72eed24817f"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/10-final-head.json",
+      "bytes": 491,
+      "sha256": "c6aa6d68558df92936f6cc6dff46b74c992395bb98834bcb2c431bae57b932c4"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/logs/11-final-status.json",
+      "bytes": 563,
+      "sha256": "ddd699f13c2ce6953cebca175edda7b8a7aa0f57d0e8f87be87b7bd0bbf8d738"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/package.json",
+      "bytes": 125,
+      "sha256": "f00ccdfd3236154409f97d33797cd4b850a1cc930c77425a33943a913dfc45db"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/parent-run.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/parent-run.stdout.log",
+      "bytes": 8500,
+      "sha256": "97718b6f97ced11600d78b8fed982ac88cfbcb1d1971e46e7e5a81751effee82"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/README.md",
+      "bytes": 8489,
+      "sha256": "1d16c058343af25d12ef4db908033335f609a518d6491a887200843b50214c35"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/run_spike.py",
+      "bytes": 8741,
+      "sha256": "cf195b57a87c3b6af7e41de77ab3000dfba8def059eaf3fa9a88f910ac5137e5"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/synthetic-untrusted-saved-PASS-claims.json",
+      "bytes": 8574,
+      "sha256": "1c31872661fddf9d0e893eeef310efdc2dbcdc351b6675f5081cc9e79cb63ac4"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/test_fixture_regression.py",
+      "bytes": 8400,
+      "sha256": "63f0f31d0ac54e82c5badfd96d2b2e7546beada753a68448b83b03c6116d63bd"
+    },
+    {
+      "path": "docs/verification/v03-source-admission-fixture-evidence/parent-replay/tsconfig.json",
+      "bytes": 454,
+      "sha256": "ba65977a506769b357c803ba0d5e83fb7c676f44c73e27b7b4238480c20b5a28"
+    }
+  ],
+  "count": 84,
+  "checks": {
+    "focusedTests": 11,
+    "wholeSourceCases": 5,
+    "actualLocalProof": {
+      "passed": true,
+      "cases": 5,
+      "leaves": 60,
+      "samples": 65
+    },
+    "freshAuditRejects": 3,
+    "sourceHashesStable": true
+  },
+  "limitations": [
+    "auditMesh exercised on public input mesh, NOT candidate-private bytes; positive candidate still lacks authority",
+    "No retained private audit owner/shared-ledger working-set proof or admission token",
+    "No cut/shell/export consumer admission gate or native Worker/stale-publication fences tested",
+    "Selfcross fresh audit has known intersection FAIL AND complete=false (numeric ambiguity), kept honest",
+    "Not tracer4 admission acceptance; only independently exercised fixtures for parent review"
+  ],
+  "scope": "Existing-code local proof versus public full-mesh audit regression fixture. No private-byte admission, owner, token, consumer fences or clinical validation."
+}

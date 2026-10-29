@@ -1,0 +1,2615 @@
+{
+  "TESTDATA-positive-S": {
+    "vertexCount": 8,
+    "faceCount": 12,
+    "edgeCount": 18,
+    "edgeIncidence": [
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "uses": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            4,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            0,
+            3
+          ],
+          [
+            10,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          4
+        ],
+        "uses": [
+          [
+            5,
+            4,
+            0
+          ],
+          [
+            10,
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            0,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            6,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            1,
+            5
+          ],
+          [
+            7,
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            6,
+            1
+          ],
+          [
+            7,
+            1,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            8,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            2,
+            6
+          ],
+          [
+            9,
+            6,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          7
+        ],
+        "uses": [
+          [
+            8,
+            7,
+            2
+          ],
+          [
+            9,
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          4
+        ],
+        "uses": [
+          [
+            10,
+            4,
+            3
+          ],
+          [
+            11,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          7
+        ],
+        "uses": [
+          [
+            8,
+            3,
+            7
+          ],
+          [
+            11,
+            7,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          5
+        ],
+        "uses": [
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            5,
+            5,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          6
+        ],
+        "uses": [
+          [
+            2,
+            6,
+            4
+          ],
+          [
+            3,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          7
+        ],
+        "uses": [
+          [
+            3,
+            7,
+            4
+          ],
+          [
+            11,
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          5,
+          6
+        ],
+        "uses": [
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            7,
+            6,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          6,
+          7
+        ],
+        "uses": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            9,
+            7,
+            6
+          ]
+        ]
+      }
+    ],
+    "edgeIncidenceHistogram": {
+      "2": 18
+    },
+    "boundaryEdges": [],
+    "nonManifoldEdges": [],
+    "inconsistentTwoUseEdges": [],
+    "faceComponents": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    ],
+    "vertexLinks": [
+      {
+        "vertex": 0,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 1,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "5": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            5,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 2,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "3": 2,
+          "6": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            1,
+            3,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 3,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "4": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            4,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 4,
+        "degrees": {
+          "0": 2,
+          "3": 2,
+          "5": 2,
+          "6": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            3,
+            5,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 5,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "4": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            0,
+            1,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 6,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "4": 2,
+          "5": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            4,
+            5,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 7,
+        "degrees": {
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      }
+    ],
+    "allNondegenerate": true,
+    "exactSignedVolume": "1"
+  },
+  "TESTDATA-remove-distant-face2": {
+    "vertexCount": 8,
+    "faceCount": 11,
+    "edgeCount": 18,
+    "edgeIncidence": [
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "uses": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            3,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            0,
+            3
+          ],
+          [
+            9,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          4
+        ],
+        "uses": [
+          [
+            4,
+            4,
+            0
+          ],
+          [
+            9,
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          5
+        ],
+        "uses": [
+          [
+            3,
+            5,
+            0
+          ],
+          [
+            4,
+            0,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            5,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          5
+        ],
+        "uses": [
+          [
+            3,
+            1,
+            5
+          ],
+          [
+            6,
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          6
+        ],
+        "uses": [
+          [
+            5,
+            6,
+            1
+          ],
+          [
+            6,
+            1,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            7,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          6
+        ],
+        "uses": [
+          [
+            5,
+            2,
+            6
+          ],
+          [
+            8,
+            6,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          7
+        ],
+        "uses": [
+          [
+            7,
+            7,
+            2
+          ],
+          [
+            8,
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          4
+        ],
+        "uses": [
+          [
+            9,
+            4,
+            3
+          ],
+          [
+            10,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          7
+        ],
+        "uses": [
+          [
+            7,
+            3,
+            7
+          ],
+          [
+            10,
+            7,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            5,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          6
+        ],
+        "uses": [
+          [
+            2,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          7
+        ],
+        "uses": [
+          [
+            2,
+            7,
+            4
+          ],
+          [
+            10,
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          5,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            6,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          6,
+          7
+        ],
+        "uses": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            8,
+            7,
+            6
+          ]
+        ]
+      }
+    ],
+    "edgeIncidenceHistogram": {
+      "1": 3,
+      "2": 15
+    },
+    "boundaryEdges": [
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "nonManifoldEdges": [],
+    "inconsistentTwoUseEdges": [],
+    "faceComponents": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "vertexLinks": [
+      {
+        "vertex": 0,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 1,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "5": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            5,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 2,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "3": 2,
+          "6": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            1,
+            3,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 3,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "4": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            4,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 4,
+        "degrees": {
+          "0": 2,
+          "3": 2,
+          "5": 1,
+          "6": 1,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            3,
+            5,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": false,
+        "isSinglePath": true
+      },
+      {
+        "vertex": 5,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "4": 1,
+          "6": 1
+        },
+        "components": [
+          [
+            0,
+            1,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": false,
+        "isSinglePath": true
+      },
+      {
+        "vertex": 6,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "4": 1,
+          "5": 1,
+          "7": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            4,
+            5,
+            7
+          ]
+        ],
+        "isSingleCycle": false,
+        "isSinglePath": true
+      },
+      {
+        "vertex": 7,
+        "degrees": {
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      }
+    ],
+    "allNondegenerate": true,
+    "exactSignedVolume": "5/6"
+  },
+  "TESTDATA-duplicate-distant-face2": {
+    "vertexCount": 8,
+    "faceCount": 13,
+    "edgeCount": 18,
+    "edgeIncidence": [
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "uses": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            4,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            0,
+            3
+          ],
+          [
+            10,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          4
+        ],
+        "uses": [
+          [
+            5,
+            4,
+            0
+          ],
+          [
+            10,
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            0,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            6,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            1,
+            5
+          ],
+          [
+            7,
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            6,
+            1
+          ],
+          [
+            7,
+            1,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            8,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            2,
+            6
+          ],
+          [
+            9,
+            6,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          7
+        ],
+        "uses": [
+          [
+            8,
+            7,
+            2
+          ],
+          [
+            9,
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          4
+        ],
+        "uses": [
+          [
+            10,
+            4,
+            3
+          ],
+          [
+            11,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          7
+        ],
+        "uses": [
+          [
+            8,
+            3,
+            7
+          ],
+          [
+            11,
+            7,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          5
+        ],
+        "uses": [
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            5,
+            5,
+            4
+          ],
+          [
+            12,
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          6
+        ],
+        "uses": [
+          [
+            2,
+            6,
+            4
+          ],
+          [
+            3,
+            4,
+            6
+          ],
+          [
+            12,
+            6,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          7
+        ],
+        "uses": [
+          [
+            3,
+            7,
+            4
+          ],
+          [
+            11,
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          5,
+          6
+        ],
+        "uses": [
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            7,
+            6,
+            5
+          ],
+          [
+            12,
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          6,
+          7
+        ],
+        "uses": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            9,
+            7,
+            6
+          ]
+        ]
+      }
+    ],
+    "edgeIncidenceHistogram": {
+      "2": 15,
+      "3": 3
+    },
+    "boundaryEdges": [],
+    "nonManifoldEdges": [
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "inconsistentTwoUseEdges": [],
+    "faceComponents": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    ],
+    "vertexLinks": [
+      {
+        "vertex": 0,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 1,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "5": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            5,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 2,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "3": 2,
+          "6": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            1,
+            3,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 3,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "4": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            4,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 4,
+        "degrees": {
+          "0": 2,
+          "3": 2,
+          "5": 3,
+          "6": 3,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            3,
+            5,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": false,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 5,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "4": 3,
+          "6": 3
+        },
+        "components": [
+          [
+            0,
+            1,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": false,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 6,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "4": 3,
+          "5": 3,
+          "7": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            4,
+            5,
+            7
+          ]
+        ],
+        "isSingleCycle": false,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 7,
+        "degrees": {
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      }
+    ],
+    "allNondegenerate": true,
+    "exactSignedVolume": "7/6"
+  },
+  "TESTDATA-selfcross-remote-v6": {
+    "vertexCount": 8,
+    "faceCount": 12,
+    "edgeCount": 18,
+    "edgeIncidence": [
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "uses": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            4,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            0,
+            3
+          ],
+          [
+            10,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          4
+        ],
+        "uses": [
+          [
+            5,
+            4,
+            0
+          ],
+          [
+            10,
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            0,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            6,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            1,
+            5
+          ],
+          [
+            7,
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            6,
+            1
+          ],
+          [
+            7,
+            1,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            8,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            2,
+            6
+          ],
+          [
+            9,
+            6,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          7
+        ],
+        "uses": [
+          [
+            8,
+            7,
+            2
+          ],
+          [
+            9,
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          4
+        ],
+        "uses": [
+          [
+            10,
+            4,
+            3
+          ],
+          [
+            11,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          7
+        ],
+        "uses": [
+          [
+            8,
+            3,
+            7
+          ],
+          [
+            11,
+            7,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          5
+        ],
+        "uses": [
+          [
+            2,
+            4,
+            5
+          ],
+          [
+            5,
+            5,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          6
+        ],
+        "uses": [
+          [
+            2,
+            6,
+            4
+          ],
+          [
+            3,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          7
+        ],
+        "uses": [
+          [
+            3,
+            7,
+            4
+          ],
+          [
+            11,
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          5,
+          6
+        ],
+        "uses": [
+          [
+            2,
+            5,
+            6
+          ],
+          [
+            7,
+            6,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          6,
+          7
+        ],
+        "uses": [
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            9,
+            7,
+            6
+          ]
+        ]
+      }
+    ],
+    "edgeIncidenceHistogram": {
+      "2": 18
+    },
+    "boundaryEdges": [],
+    "nonManifoldEdges": [],
+    "inconsistentTwoUseEdges": [],
+    "faceComponents": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    ],
+    "vertexLinks": [
+      {
+        "vertex": 0,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 1,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "5": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            5,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 2,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "3": 2,
+          "6": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            1,
+            3,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 3,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "4": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            4,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 4,
+        "degrees": {
+          "0": 2,
+          "3": 2,
+          "5": 2,
+          "6": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            3,
+            5,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 5,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "4": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            0,
+            1,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 6,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "4": 2,
+          "5": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            4,
+            5,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 7,
+        "degrees": {
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      }
+    ],
+    "allNondegenerate": true,
+    "exactSignedVolume": "7/12"
+  },
+  "TESTDATA-valid-distant-face-order": {
+    "vertexCount": 8,
+    "faceCount": 12,
+    "edgeCount": 18,
+    "edgeIncidence": [
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "uses": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            4,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            0,
+            3
+          ],
+          [
+            10,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          4
+        ],
+        "uses": [
+          [
+            5,
+            4,
+            0
+          ],
+          [
+            10,
+            0,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          0,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            5,
+            0
+          ],
+          [
+            5,
+            0,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "uses": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            6,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          5
+        ],
+        "uses": [
+          [
+            4,
+            1,
+            5
+          ],
+          [
+            7,
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "edge": [
+          1,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            6,
+            1
+          ],
+          [
+            7,
+            1,
+            6
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "uses": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            8,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          6
+        ],
+        "uses": [
+          [
+            6,
+            2,
+            6
+          ],
+          [
+            9,
+            6,
+            2
+          ]
+        ]
+      },
+      {
+        "edge": [
+          2,
+          7
+        ],
+        "uses": [
+          [
+            8,
+            7,
+            2
+          ],
+          [
+            9,
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          4
+        ],
+        "uses": [
+          [
+            10,
+            4,
+            3
+          ],
+          [
+            11,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          3,
+          7
+        ],
+        "uses": [
+          [
+            8,
+            3,
+            7
+          ],
+          [
+            11,
+            7,
+            3
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          5
+        ],
+        "uses": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            5,
+            5,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          6
+        ],
+        "uses": [
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            3,
+            6,
+            4
+          ]
+        ]
+      },
+      {
+        "edge": [
+          4,
+          7
+        ],
+        "uses": [
+          [
+            2,
+            7,
+            4
+          ],
+          [
+            11,
+            4,
+            7
+          ]
+        ]
+      },
+      {
+        "edge": [
+          5,
+          6
+        ],
+        "uses": [
+          [
+            3,
+            5,
+            6
+          ],
+          [
+            7,
+            6,
+            5
+          ]
+        ]
+      },
+      {
+        "edge": [
+          6,
+          7
+        ],
+        "uses": [
+          [
+            2,
+            6,
+            7
+          ],
+          [
+            9,
+            7,
+            6
+          ]
+        ]
+      }
+    ],
+    "edgeIncidenceHistogram": {
+      "2": 18
+    },
+    "boundaryEdges": [],
+    "nonManifoldEdges": [],
+    "inconsistentTwoUseEdges": [],
+    "faceComponents": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    ],
+    "vertexLinks": [
+      {
+        "vertex": 0,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 1,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "5": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            5,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 2,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "3": 2,
+          "6": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            1,
+            3,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 3,
+        "degrees": {
+          "0": 2,
+          "2": 2,
+          "4": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            2,
+            4,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 4,
+        "degrees": {
+          "0": 2,
+          "3": 2,
+          "5": 2,
+          "6": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            0,
+            3,
+            5,
+            6,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 5,
+        "degrees": {
+          "0": 2,
+          "1": 2,
+          "4": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            0,
+            1,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 6,
+        "degrees": {
+          "1": 2,
+          "2": 2,
+          "4": 2,
+          "5": 2,
+          "7": 2
+        },
+        "components": [
+          [
+            1,
+            2,
+            4,
+            5,
+            7
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      },
+      {
+        "vertex": 7,
+        "degrees": {
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "6": 2
+        },
+        "components": [
+          [
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "isSingleCycle": true,
+        "isSinglePath": false
+      }
+    ],
+    "allNondegenerate": true,
+    "exactSignedVolume": "1"
+  }
+}

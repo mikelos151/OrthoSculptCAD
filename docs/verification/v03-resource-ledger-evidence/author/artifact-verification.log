@@ -1,0 +1,1 @@
+{"passed": true, "unchanged_existing_src_tests": 147, "functional_cycles": 14, "ledger_tests": 16, "selected_regression_tests": 890, "hashes": {"src/compute/resourceLedger.ts": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254", "tests/v03-resource-ledger.test.ts": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95"}}

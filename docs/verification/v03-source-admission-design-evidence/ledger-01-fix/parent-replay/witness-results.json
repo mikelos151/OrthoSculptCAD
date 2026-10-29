@@ -1,0 +1,875 @@
+{
+  "kind": "SPEC_MODEL_NOT_IMPLEMENTATION",
+  "ok": true,
+  "vector_count": 33,
+  "projection_graphs": 729,
+  "results": [
+    {
+      "name": "reserve-job-exact",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        0,
+        0,
+        0
+      ],
+      "proposed": [
+        768,
+        768,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        768,
+        768,
+        0
+      ],
+      "before_graph_sha256": "856b14bb90cfe17abd36335dde91f7377bef18bc7c674e3c649cf16d7706ab82",
+      "after_graph_sha256": "04aa64fe8d2a7489248ae1507d9260c3226f9cd9950d21d805c6f832d6764aab"
+    },
+    {
+      "name": "allocate-no-new-charge",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        768,
+        768,
+        0
+      ],
+      "proposed": [
+        768,
+        768,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        768,
+        768,
+        0
+      ],
+      "before_graph_sha256": "04aa64fe8d2a7489248ae1507d9260c3226f9cd9950d21d805c6f832d6764aab",
+      "after_graph_sha256": "a55b86ad5038c108d77b2cad7b2c28e8c2af70e0f9a7c6671d1ccf5ce9bb960e"
+    },
+    {
+      "name": "resident-plus-one-refused",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        768,
+        768,
+        0
+      ],
+      "proposed": [
+        1025,
+        768,
+        0
+      ],
+      "code": "BUDGET",
+      "after": [
+        768,
+        768,
+        0
+      ],
+      "before_graph_sha256": "a55b86ad5038c108d77b2cad7b2c28e8c2af70e0f9a7c6671d1ccf5ce9bb960e",
+      "after_graph_sha256": "a55b86ad5038c108d77b2cad7b2c28e8c2af70e0f9a7c6671d1ccf5ce9bb960e"
+    },
+    {
+      "name": "resident-exact-remaining",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        768,
+        768,
+        0
+      ],
+      "proposed": [
+        1024,
+        768,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        1024,
+        768,
+        0
+      ],
+      "before_graph_sha256": "a55b86ad5038c108d77b2cad7b2c28e8c2af70e0f9a7c6671d1ccf5ce9bb960e",
+      "after_graph_sha256": "1d6707aee5ef2f7af14be6e8504b814af0e868458d3fc58a3c617280225d260e"
+    },
+    {
+      "name": "resident-undo-refused-512",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        768,
+        0,
+        0
+      ],
+      "proposed": [
+        768,
+        0,
+        768
+      ],
+      "code": "BUDGET",
+      "after": [
+        768,
+        0,
+        0
+      ],
+      "before_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d",
+      "after_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d"
+    },
+    {
+      "name": "resident-undo-accepted-768",
+      "caps": [
+        1024,
+        768,
+        768
+      ],
+      "before": [
+        768,
+        0,
+        0
+      ],
+      "proposed": [
+        768,
+        0,
+        768
+      ],
+      "code": "OK",
+      "after": [
+        768,
+        0,
+        768
+      ],
+      "before_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d",
+      "after_graph_sha256": "83caf495310101c02f2f0f682c4ac0aa6393536a2b6b75d0f4cc3dd23a62e2e5"
+    },
+    {
+      "name": "job-history-overlap",
+      "caps": [
+        1024,
+        768,
+        768
+      ],
+      "before": [
+        768,
+        768,
+        0
+      ],
+      "proposed": [
+        768,
+        768,
+        768
+      ],
+      "code": "OK",
+      "after": [
+        768,
+        768,
+        768
+      ],
+      "before_graph_sha256": "a55b86ad5038c108d77b2cad7b2c28e8c2af70e0f9a7c6671d1ccf5ce9bb960e",
+      "after_graph_sha256": "d86d4f341cc9060f6f96ab53e03ed0d1ae9b7b267e4d617362690a55be4475cb"
+    },
+    {
+      "name": "close-first-keeps-second",
+      "caps": [
+        1024,
+        768,
+        768
+      ],
+      "before": [
+        768,
+        768,
+        768
+      ],
+      "proposed": [
+        768,
+        0,
+        768
+      ],
+      "code": "OK",
+      "after": [
+        768,
+        0,
+        768
+      ],
+      "before_graph_sha256": "d86d4f341cc9060f6f96ab53e03ed0d1ae9b7b267e4d617362690a55be4475cb",
+      "after_graph_sha256": "9d718b01e6bd447437cb4957874c5d920f62d0eb9d8d2b0bf589027e21c821f8"
+    },
+    {
+      "name": "close-second-ends-all",
+      "caps": [
+        1024,
+        768,
+        768
+      ],
+      "before": [
+        768,
+        0,
+        768
+      ],
+      "proposed": [
+        0,
+        0,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        0,
+        0,
+        0
+      ],
+      "before_graph_sha256": "9d718b01e6bd447437cb4957874c5d920f62d0eb9d8d2b0bf589027e21c821f8",
+      "after_graph_sha256": "044bf3d834f65c3d6eb7d883eac47bb80ffe780e1b2ca088f1e4a025de4b981f"
+    },
+    {
+      "name": "same-category-ref-once",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "a411652f85c1d7c2c5abde6cbcfc066ea7a3690d4c941a3c41dbf4718a1af2c9",
+      "after_graph_sha256": "fb33b038025fe19799b15d2fcdbc88bbdd2af650164971f755e1a4837e22fa89"
+    },
+    {
+      "name": "reclassify-one-not-all",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        256
+      ],
+      "code": "OK",
+      "after": [
+        256,
+        256,
+        256
+      ],
+      "before_graph_sha256": "fb33b038025fe19799b15d2fcdbc88bbdd2af650164971f755e1a4837e22fa89",
+      "after_graph_sha256": "5607de82bcb8ec039fd38a4c74b8f0cda1f4933dfa9d32f1a5f38c0bfbb4d36c"
+    },
+    {
+      "name": "reclassify-overcap-rollback",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        768,
+        768,
+        0
+      ],
+      "proposed": [
+        768,
+        768,
+        768
+      ],
+      "code": "BUDGET",
+      "after": [
+        768,
+        768,
+        0
+      ],
+      "before_graph_sha256": "cfa49c3505b977adf871d1553a3add2a6a25e0112272899b0483c95966019751",
+      "after_graph_sha256": "cfa49c3505b977adf871d1553a3add2a6a25e0112272899b0483c95966019751"
+    },
+    {
+      "name": "whole-backing-not-view-lengths-16-32",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        768,
+        0,
+        0
+      ],
+      "proposed": [
+        768,
+        0,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        768,
+        0,
+        0
+      ],
+      "before_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d",
+      "after_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d"
+    },
+    {
+      "name": "tracked-ui-registration-same-id",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        768,
+        0,
+        0
+      ],
+      "proposed": [
+        768,
+        0,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        768,
+        0,
+        0
+      ],
+      "before_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d",
+      "after_graph_sha256": "7cd657eb8f46bed4f4e40efa6e217b1708839cddf8cb63cb35423ec83bdfe962"
+    },
+    {
+      "name": "tracked-history-registration-charged",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        768,
+        0,
+        0
+      ],
+      "proposed": [
+        768,
+        0,
+        768
+      ],
+      "code": "BUDGET",
+      "after": [
+        768,
+        0,
+        0
+      ],
+      "before_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d",
+      "after_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d"
+    },
+    {
+      "name": "untracked-mode-ingress-charged",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        0,
+        0,
+        0
+      ],
+      "proposed": [
+        768,
+        0,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        768,
+        0,
+        0
+      ],
+      "before_graph_sha256": "856b14bb90cfe17abd36335dde91f7377bef18bc7c674e3c649cf16d7706ab82",
+      "after_graph_sha256": "b929d4096a2c062bea07fd1c44d7d2d18e7b6bdadc80082054833cc11bd3f62d"
+    },
+    {
+      "name": "untracked-mode-ingress-overcap",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        1024,
+        768,
+        0
+      ],
+      "proposed": [
+        1025,
+        769,
+        0
+      ],
+      "code": "BUDGET",
+      "after": [
+        1024,
+        768,
+        0
+      ],
+      "before_graph_sha256": "1d6707aee5ef2f7af14be6e8504b814af0e868458d3fc58a3c617280225d260e",
+      "after_graph_sha256": "1d6707aee5ef2f7af14be6e8504b814af0e868458d3fc58a3c617280225d260e"
+    },
+    {
+      "name": "independent-copy-new-id-at-full",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        1024,
+        768,
+        0
+      ],
+      "proposed": [
+        1025,
+        769,
+        0
+      ],
+      "code": "BUDGET",
+      "after": [
+        1024,
+        768,
+        0
+      ],
+      "before_graph_sha256": "1d6707aee5ef2f7af14be6e8504b814af0e868458d3fc58a3c617280225d260e",
+      "after_graph_sha256": "1d6707aee5ef2f7af14be6e8504b814af0e868458d3fc58a3c617280225d260e"
+    },
+    {
+      "name": "full-job-to-history-refused",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        1024,
+        768,
+        0
+      ],
+      "proposed": [
+        1024,
+        0,
+        768
+      ],
+      "code": "BUDGET",
+      "after": [
+        1024,
+        768,
+        0
+      ],
+      "before_graph_sha256": "1d6707aee5ef2f7af14be6e8504b814af0e868458d3fc58a3c617280225d260e",
+      "after_graph_sha256": "1d6707aee5ef2f7af14be6e8504b814af0e868458d3fc58a3c617280225d260e"
+    },
+    {
+      "name": "caller-close-keeps-controlled-native-ref",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "14eee0559c16e176bd0acb64356683bafffe82e5b43b05bb4705b981ccb46483",
+      "after_graph_sha256": "27a38fa9df8da4175f8fe82b6528c70dd382c7e970103a7eec3621d919384152"
+    },
+    {
+      "name": "caller-cancel-again-not-settlement",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "27a38fa9df8da4175f8fe82b6528c70dd382c7e970103a7eec3621d919384152",
+      "after_graph_sha256": "27a38fa9df8da4175f8fe82b6528c70dd382c7e970103a7eec3621d919384152"
+    },
+    {
+      "name": "controlled-real-settle-spec-boundary",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        0,
+        0,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        0,
+        0,
+        0
+      ],
+      "before_graph_sha256": "27a38fa9df8da4175f8fe82b6528c70dd382c7e970103a7eec3621d919384152",
+      "after_graph_sha256": "7dbba8618f75048b24e170c692e24bd65e5065352aab497d07099cfac9f40e5d"
+    },
+    {
+      "name": "last-reference-without-hold",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        0,
+        0,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        0,
+        0,
+        0
+      ],
+      "before_graph_sha256": "a411652f85c1d7c2c5abde6cbcfc066ea7a3690d4c941a3c41dbf4718a1af2c9",
+      "after_graph_sha256": "12be1244f2443d920545a2ea31be043210ddeafdaad4c252f13052967388df1a"
+    },
+    {
+      "name": "retired-h1-release-preserves-pending-h2",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "16080413d8dcb41bc0bf287043b877f15baa7ec95b6dda4f92f2b8903dc8e60a",
+      "after_graph_sha256": "16080413d8dcb41bc0bf287043b877f15baa7ec95b6dda4f92f2b8903dc8e60a"
+    },
+    {
+      "name": "double-close-idempotent",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        0,
+        0,
+        0
+      ],
+      "proposed": [
+        0,
+        0,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        0,
+        0,
+        0
+      ],
+      "before_graph_sha256": "044bf3d834f65c3d6eb7d883eac47bb80ffe780e1b2ca088f1e4a025de4b981f",
+      "after_graph_sha256": "044bf3d834f65c3d6eb7d883eac47bb80ffe780e1b2ca088f1e4a025de4b981f"
+    },
+    {
+      "name": "foreign-release-even-after-close",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "INVALID_INPUT",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "16080413d8dcb41bc0bf287043b877f15baa7ec95b6dda4f92f2b8903dc8e60a",
+      "after_graph_sha256": "16080413d8dcb41bc0bf287043b877f15baa7ec95b6dda4f92f2b8903dc8e60a"
+    },
+    {
+      "name": "forged-json-not-new-reference",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "INVALID_INPUT",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "a411652f85c1d7c2c5abde6cbcfc066ea7a3690d4c941a3c41dbf4718a1af2c9",
+      "after_graph_sha256": "a411652f85c1d7c2c5abde6cbcfc066ea7a3690d4c941a3c41dbf4718a1af2c9"
+    },
+    {
+      "name": "other-lease-release-rejected",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "INVALID_INPUT",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "fb33b038025fe19799b15d2fcdbc88bbdd2af650164971f755e1a4837e22fa89",
+      "after_graph_sha256": "fb33b038025fe19799b15d2fcdbc88bbdd2af650164971f755e1a4837e22fa89"
+    },
+    {
+      "name": "closed-target-retain-rejected",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "CLOSED",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "16080413d8dcb41bc0bf287043b877f15baa7ec95b6dda4f92f2b8903dc8e60a",
+      "after_graph_sha256": "16080413d8dcb41bc0bf287043b877f15baa7ec95b6dda4f92f2b8903dc8e60a"
+    },
+    {
+      "name": "retired-not-retain-authority",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "INVALID_INPUT",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "16080413d8dcb41bc0bf287043b877f15baa7ec95b6dda4f92f2b8903dc8e60a",
+      "after_graph_sha256": "16080413d8dcb41bc0bf287043b877f15baa7ec95b6dda4f92f2b8903dc8e60a"
+    },
+    {
+      "name": "eligible-transfer-preserves-id-charges",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "OK",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "a411652f85c1d7c2c5abde6cbcfc066ea7a3690d4c941a3c41dbf4718a1af2c9",
+      "after_graph_sha256": "75f6b2bb3d6c8e0c52f08143f11b7b9e06f55703133520b7bd8cf9794c911c8c"
+    },
+    {
+      "name": "transfer-aliased-ui-rejected",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "TRANSFER_ALIASED",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "73f528f9a2eb5a513000611c15a6917f778fd1c375c48321a6cc78e011efbb13",
+      "after_graph_sha256": "73f528f9a2eb5a513000611c15a6917f778fd1c375c48321a6cc78e011efbb13"
+    },
+    {
+      "name": "transfer-aliased-sha-rejected",
+      "caps": [
+        1024,
+        768,
+        512
+      ],
+      "before": [
+        256,
+        256,
+        0
+      ],
+      "proposed": [
+        256,
+        256,
+        0
+      ],
+      "code": "TRANSFER_ALIASED",
+      "after": [
+        256,
+        256,
+        0
+      ],
+      "before_graph_sha256": "b0376759f415ae3ea53e8dc2ad152c5787186a0c2cc2c00a54d2f0ffee3b504c",
+      "after_graph_sha256": "b0376759f415ae3ea53e8dc2ad152c5787186a0c2cc2c00a54d2f0ffee3b504c"
+    }
+  ],
+  "not_verified": [
+    "production ResourceLedger",
+    "real JS authentication/WeakMap",
+    "real ArrayBuffer allocation",
+    "native SHA/transfer/ACK/thread/RSS",
+    "G1a GREEN",
+    "admission",
+    "future G1b/G2/G3/G4"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "status": "DESIGN_PASS_ONLY",
+  "plan": "docs/plans/v03-source-admission-owner-design.md",
+  "planSHA256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+  "originalDraftSHA256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+  "reviewedBaselineHEAD": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "reviews": {
+    "initialBudget": "FAIL: LEDGER-01, preserved in initial-reviews",
+    "initialOwnerArchitecture": "PASS with future G1b/G2/G3/G4 gates",
+    "freshContractRereview": "PASS, LEDGER-01 closed, full G1a contract ready",
+    "freshReviewSHA256": "e2ed0ca60b5db6b9a580eb69be31257c3d0f25894badef5bd3e247ac07eece22"
+  },
+  "parentChecks": {
+    "revisedPlanHashVerified": true,
+    "targetedFixSixHunksVerified": true,
+    "specVectors": 33,
+    "projectionGraphs": 729,
+    "positiveModelExit": 0,
+    "negativeModelExits": [
+      1,
+      1
+    ],
+    "finalReviewerArtifactsVerified": 20
+  },
+  "existingBehaviorOnly": {
+    "dirtySourceFixtureReplay": "11 unittest; actual local proof 5 cases / 60 leaves / 65 samples PASS; fresh public audits reject 3 invalid whole sources. Not private source admission.",
+    "nativeChromiumCandidateReplay": "5 controls; 31 cases / 121 faces / 36 native SHA, all PASS; one Worker, no page/worker/external-request errors. Not product retained owner or UI fences."
+  },
+  "implementation": {
+    "G1a": "In progress deleg_ff44cf28; src/compute/resourceLedger.ts and tests/v03-resource-ledger.test.ts, not yet accepted",
+    "G1b": "Pending shared native pool/mode gates/terminal lifecycle",
+    "G2": "Pending real arena auditor and migrated analyze",
+    "G3": "Pending retained private owner/source admission",
+    "G4": "Pending real registry/mutation/publication/consumer fences"
+  },
+  "notApproved": [
+    "Full CAD/cut/shell/collar/workspace v3",
+    "clinical use or minimum thickness/strength guarantees",
+    "native EXE/Tauri IPC",
+    "RSS/GC/native-thread bounds"
+  ],
+  "release020": "Unchanged; no replacement release/ZIP built",
+  "evidence": "docs/verification/v03-source-admission-design-evidence/final-rereview/index.json"
+}

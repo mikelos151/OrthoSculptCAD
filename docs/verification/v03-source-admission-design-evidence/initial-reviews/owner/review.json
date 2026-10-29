@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    {
+      "id": "OWNER-AC-LIFECYCLE",
+      "location": "docs/plans/v03-source-admission-owner-design.md:115-122,134-146,190,212,230",
+      "finding": "Dopuszczalny jest skończony lifecycle LOGICZNEJ własności po terminate; brak browser ACK zakończenia wątku/RSS nie czyni projektu niewykonalnym. Projekt jawnie pozostawia dowód resource ownership do GREEN. W G1b/G3 trzeba zamienić ten obowiązek na konkretną tabelę przejść, nie utożsamiać AbortSignal z końcem wszystkich alokacji.",
+      "required_correction_AC": [
+        "Zamknięcie synchronicznie blokuje nowy dispatch i publication, usuwa handlery/authority i jest idempotentne. Slot workerowy zwalnia dokładnie jeden terminal transition po kontrolowanym terminate (lub potwierdzonym normalnym zamknięciu); samo żądanie cancel nie jest terminal transition.",
+        "Normalny release wycofuje handle natychmiast, ale zachowuje worker-owned lease do prawidłowo skorelowanego ACK; brak ACK kończy się deadline/terminate, nie oczekiwaniem bez końca.",
+        "Rozdzielić worker-owned payload od nadal żywych main-owned copy/serialization/SHA continuations. Terminate nie zwalnia main allocation IDs nadal używanych przez te continuations. Dla SHA w żywym realm zachować preimage i rezerwację do rzeczywistego settle; pending dispose/cancel uniemożliwia handle także przy SHA rejection.",
+        "Transfer-in-flight zmienia właściciela tego samego allocation ID. Przy sealed transport + terminal worker lifecycle można zakończyć logiczną własność odłączonych/porzuconych worker payloads bez udawania pomiaru fizycznego RAM; nie naliczać ich drugi raz i nie zwalniać przedwcześnie main-side references.",
+        "Testować cancel/error/deadline/release-ACK w różnych kolejnościach, pending copy oraz SHA, late message i retired h1/pending h2. Weryfikować raz zwolniony slot/lease i zero późnej publikacji. Nie wymagać nieistniejącego browser join/RSS/GC API."
+      ],
+      "classification": "AC istniejącej otwartej bramki G1b/G3; nie blocker rozpoczęcia G1a ani zarzut braku implementacji"
+    },
+    {
+      "id": "OWNER-AC-PUBLIC-ERRORS",
+      "location": "docs/plans/v03-source-admission-owner-design.md:75-92,102-113,194-196",
+      "finding": "Union odmowy operacyjnej i semantyka opaque authority są spójne, ale fragment API nie zamraża jeszcze literalnego kanału błędów INVALID_INPUT i pierwszeństwa closed/auth/busy/abort. To należy zamknąć wraz z kontraktem G3 przed jego GREEN; nie ma potrzeby dodawać kryptograficznej warstwy uwierzytelniania ani rozszerzać zakresu G1a.",
+      "required_correction_AC": [
+        "Jedna mała tabela dla admit/describe/checkCurrent/release/dispose: które przypadki zwracają AdmissionResult, które rzucają/rejectują kontrolowany Error, oraz literalne name/code/message i brak echo danych.",
+        "Rozstrzygnąć closed versus forged dla operacji odczytu oraz closed/busy/aborted ticket dla admit. release musi zawsze uwierzytelniać także po dispose: foreign/forged INVALID_INPUT, autentyczny retired no-op; retired h1 nie dotyka pending h2.",
+        "Wybrać jawne odwzorowanie AbortSignal/deadline/worker loss/hash failure na zamknięte kody. Pending invalidate ma pierwszeństwo przed późnym sukcesem/hash error w sensie braku publication.",
+        "Strict decoder sprawdza dokładne 256 B, OSA1/version, enumy, liczniki, finite scalars, zero padding 17..19 i 50..255, bounded strings i pełną korelację przed handle. Wire report pozostaje prywatny i nie jest publicznym capability."
+      ],
+      "classification": "minimalny freeze kontraktu przed G3 GREEN, nie konieczność projektu dodatkowego auth"
+    },
+    {
+      "id": "OWNER-AC-MODE-TRANSITIONS",
+      "location": "docs/plans/v03-source-admission-owner-design.md:138-150,190,193,196",
+      "finding": "Granica migracji jest skończona i uczciwa: arena-analyze jest pierwszą dodatnią migrowaną operacją, a niezmigrowane display/index/geometrie są blokowane. Test wejścia/wyjścia musi objąć rzeczywiste już rozpoczęte kopie, cache oraz odmowę wejścia, a nie tylko flagę mode.",
+      "required_correction_AC": [
+        "Wejście rezerwuje/przejmuje istniejące UI/history allocations i kończy niedozwolone legacy jobs/cache przed aktywacją session; częściowe niepowodzenie nie pozostawia dostępnego ownera lub odblokowanych nieśledzonych kopii.",
+        "runGeometryTask/createWorkerSliceEngine/runDisplayTask oraz import/Undo/export adapters odmawiają niedozwolonej operacji PRZED copy/structuredClone/native upload. Brak rejestracji bufora oznacza odmowę całego wejścia, nie charge=0.",
+        "Mixed positive: real retained owner plus real arena-analyze, jedna pula <=2, owner idle nadal zajmuje slot. Trzeci Worker/BUSY i niedozwolony display/index mają zero kopii. Wyjście/dispose najpierw revoke/terminal cleanup, dopiero potem legacy re-entry."
+      ],
+      "classification": "konkretyzacja istniejącego G1b/G2c/G4 AC; bez żądania pełnej migracji legacy"
+    },
+    {
+      "id": "OWNER-AC-REAL-PUBLICATION",
+      "location": "docs/plans/v03-source-admission-owner-design.md:124-128,196,212,224",
+      "finding": "Projekt poprawnie wymaga rzeczywiście przyjętych zmian i synchronicznego final fence. Należy zachować szczególnie okno po checkCurrent ACK i okno przed download; test disabled UI albo ręcznej zmiany tuple tego nie dowodzi.",
+      "required_correction_AC": [
+        "Zatrzymać otrzymaną rzeczywistą odpowiedź audytu, przyjąć osobno import, Undo do tych samych bitów, frame/units/PCA/register, edit, params i cancel przez prawdziwy transition adapter, a następnie dostarczyć odpowiedź: zero commit/eligibility i zachowany nowy aktywny stan.",
+        "Osobno rzeczywisty checkCurrent ACK, potem invalidate przed użyciem wyniku: ACK nie pozwala ominąć final main-thread fence. Dodatni niezmieniony scope musi pozwolić commit.",
+        "Reload używa nowego staging ticket i świeżego full-S audit; R/B/JSON/wire clone/sourceDigest/saved PASS nie tworzą authority. Admission S nie instaluje projektu v3 ani nie uprawnia do shell STL/3MF."
+      ],
+      "classification": "utrzymanie jawnej przyszłej bramki G4, nie wymaganie gotowego shell/export w G1-G3"
+    }
+  ],
+  "summary": "PASS architektury/projektu do rozpoczęcia G1a. Nie znaleziono sprzeczności wymagającej zmiany zatwierdzonego zakresu lub architektury; lifecycle/error/mode/publication AC pozostają obowiązkami wyraźnie odrębnych przyszłych bramek. To nie jest odbiór audited API ani pełnego CAD.",
+  "readiness": {
+    "G1a_ready_to_start": true,
+    "G1a_implementation_verified": false,
+    "G1a_reason": "Samodzielny ledger primitive ma konkretne reserve-before-allocate, exact-limit/+1, refcount/transfer/reclassify/rollback/foreign-lease AC i spójny pierwszy fixture 1024/768/512. Nie wymaga rozwiązania przyszłych dowodów arena/kernel/UI.",
+    "G1b": "Po G1a; wspólny broker i mode gates muszą dostarczyć finite terminal lifecycle bez premature cleanup main continuations.",
+    "G2": "Otwarte: rzeczywisty bounded auditor, poprawność/konserwatywność topology/spatial i dodatni migrowany analyze; tabela pamięci nie jest dowodem algorytmu.",
+    "G3": "Zablokowane do G1/G2, private extraction bez zmiany M0c3a i native retained owner na tych samych prywatnych bajtach; minimalny freeze błędów/decoder/lifecycle przed GREEN.",
+    "G4": "Zablokowane do G3 i rzeczywistej integracji registry/mutation/publication fences, z przyjętymi zmianami pending state i dodatnią kontrolą.",
+    "full_CAD_or_clinical_or_native_EXE_acceptance": false
+  },
+  "evidence": [
+    {
+      "location": "docs/plans/v03-source-admission-owner-design.md:35-45,90-98,106-128,194-196",
+      "finding": "Stały full private-S audit 200000 V/F, 2000000 pairs/100 intersections, osiem PASS plus thickness UNKNOWN. Registry nie ufa roli z pliku, report ani digest nie jest authority; main i worker opaque identity/nonce; audit/digest/resolver jeden record; brak caller private hook i brak klonowania Rational/ctx API."
+    },
+    {
+      "location": "src/trimline/source-candidate.ts:79-120,133-168,181-204,207-264",
+      "finding": "Rzeczywisty M0c3a ma intrinsic preflight, synchroniczne bitowe kopie przed await, pełny canonical digest, WeakMap authority, ordered resolver przez publiczne fromFloat32Bits i certifyFaceCubic w jednym ctx; pending SHA cleanup dopiero po settle. Ekstrakcja musi zachować te bity/API/priorytety i nie nadaje candidate statusu audited."
+    },
+    {
+      "location": "src/compute/client.ts:17-37,55-62; index.ts:10-27; copy.ts:35-53; service.ts:6-35; worker.ts:7-11; sliceEngine.ts:9-56; src/hooks/runDisplayTask.ts:3-36",
+      "finding": "Aktualny compute kończy Worker, retained jest tylko SliceIndex, kopia legacy yield/chunk, display ma osobny limiter i structuredClone, worker generic clone/recursive transfers. Plan prawidłowo wymaga jednej puli, osobnego strict owner wire, bramki przed copies i migracji arena-analyze zamiast uznania obecnego kodu za spełniający nowe wymagania."
+    },
+    {
+      "location": "src/hooks/workbenchState.ts:5-14,25-34,49-85; src/App.tsx:181-202,280-307,318-389,401-414,502-599,645-714,748-833,1829-1864",
+      "finding": "Aktualny Undo kopiuje przed limitem i nie przyjmuje zmiany przy gate busy, qualitySummary wymaga thickness PASS, auditedMesh jest tylko referencją, final run fence to task ticket, param handlers zerują shell bez nowej generation. Plan nazywa te ograniczenia i zastępuje je realnym transition adapterem; nie zalicza ich jako wykonanych fences."
+    },
+    {
+      "location": "docs/plans/trimline-v03-integrated-design.md:32-49,68-95; docs/plans/v03-source-bound-spans-design.md:103-131,147-180; docs/plans/trimline-v03-m0-implementation-plan.md:73-82",
+      "finding": "Sprawdzono normatywne rozróżnienie S/B/C/R, pełny reload obu części przed instalacją, candidate-only status, lifetime pending SHA w żywym realm, wspólną pulę/ledger i publication fences. Nie dodano klinicznego minimum thickness ani exact-certificate gate do bounded numeric source admission."
+    },
+    {
+      "location": "verify_review.py; witness-results.json; input-hashes-start.json; input-hashes-end.json",
+      "finding": "Rzeczywisty Python stdlib exit0: układ wire 256 B bez overlap (47 bajtów pól, 209 zero padding), zgodność trzech proponowanych sum aren i arytmetyki G1a. 19 wejść niezmienionych na końcu. Świadek projektu, nie wynik produkcyjnego audytu/Worker/GC/RSS."
+    }
+  ],
+  "scope": {
+    "language": "pl",
+    "review_type": "independent READONLY architecture/lifecycle design review",
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "branch": "feature/trimline-v03",
+    "HEAD_start_and_end": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+    "plan_sha256_start_and_end": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+    "plan_lines": 248,
+    "plan_bytes": 44161,
+    "source_bound_sha256_start_and_end": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "writes_only": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-owner-review/",
+    "repository_writes": false,
+    "git_stage_commit_reset_stash": false,
+    "other_live_experiments_or_reviewer_work_inspected": false,
+    "runtime_admission_or_browser_suite_executed": false,
+    "new_API_responses_fabricated": false,
+    "dependencies_or_large_allocations": false
+  }
+}

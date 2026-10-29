@@ -1,0 +1,1 @@
+{"kind": "SPEC_MODEL_NOT_IMPLEMENTATION", "ok": true, "vector_count": 33, "projection_graphs": 729, "not_verified": ["production ResourceLedger", "real JS authentication/WeakMap", "real ArrayBuffer allocation", "native SHA/transfer/ACK/thread/RSS", "G1a GREEN", "admission", "future G1b/G2/G3/G4"]}

@@ -1,0 +1,4 @@
+TypeError: Cannot read properties of undefined (reading 'managed')
+    at createResourceLedger (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical/13-RED.mjs:26:29)
+    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs:25:19
+{"phase":"13-RED","passed":false,"kind":"UNCHANGED_HISTORICAL_PRODUCTION_BEHAVIOR"}

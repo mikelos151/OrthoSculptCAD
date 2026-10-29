@@ -1,0 +1,28 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (5 tests | 1 failed) 9ms
+     × 05 closes only own refs, preserves controlled holds, ignores retired h1 while h2 pending 5ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 05 closes only own refs, preserves controlled holds, ignores retired h1 while h2 pending
+Error: Invalid ledger input
+ ❯ invalid src/compute/resourceLedger.ts:19:49
+     17| export interface LedgerInternals { allocate?: (bytes: number) => Array…
+     18| const BUDGET: Refusal = Object.freeze({ ok: false, code: 'BUDGET' });
+     19| function invalid(): never { throw Object.assign(new Error('Invalid led…
+       |                                                 ^
+     20| function category(c: unknown): asserts c is Category { if (c !== 'resi…
+     21| function size(n: unknown): asserts n is number { if (typeof n !== 'num…
+ ❯ Object.close src/compute/resourceLedger.ts:78:30
+ ❯ tests/v03-resource-ledger.test.ts:21:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 4 passed (5)
+   Start at  19:05:05
+   Duration  234ms (transform 26ms, setup 0ms, import 37ms, tests 9ms, environment 0ms)
+

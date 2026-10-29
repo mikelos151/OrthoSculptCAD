@@ -1,0 +1,20 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+    "C:/Users/sandr/OrthoSculptCAD/src/compute/resourceLedger.ts",
+    "--target",
+    "ES2022",
+    "--module",
+    "commonjs",
+    "--strict",
+    "--skipLibCheck",
+    "--outDir",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-quality-review\\compiled"
+  ],
+  "exit_code": 134,
+  "stdout": "",
+  "stderr": "\n<--- Last few GCs --->\n\n[39180:000001BC21A1D000]      912 ms: Mark-Compact (reduce) 127.1 (131.6) -> 126.3 (128.6) MB, pooled: 0 MB, 30.63 / 0.00 ms  (+ 0.1 ms in 21 steps since start of marking, biggest step 0.0 ms, walltime since start of marking 34 ms) (average mu = 0.385, cu[39180:000001BC21A1D000]      949 ms: Mark-Compact (reduce) 127.5 (128.6) -> 127.0 (129.4) MB, pooled: 0 MB, 29.33 / 0.00 ms  (+ 0.0 ms in 15 steps since start of marking, biggest step 0.0 ms, walltime since start of marking 32 ms) (average mu = 0.309, cu\nFATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\n----- Native stack trace -----\n\n 1: 00007FF7EDAE50BF node::OnFatalError+1343\n 2: 00007FF7EC70DD27 v8::Function::NewInstance+423\n 3: 00007FF7EC50E567 X509_STORE_get_lookup_certs+54423\n 4: 00007FF7EC50C206 X509_STORE_get_lookup_certs+45366\n 5: 00007FF7EC52688A X509_STORE_set_cleanup+5098\n 6: 00007FF7EC532D26 uv_timer_set_repeat+20694\n 7: 00007FF7EC103937 v8::CodeEvent::GetFunctionName+131959\n 8: 00007FF7EDCB8E7A node::AsyncResource::CallbackScope::CallbackScope+752522\n 9: 00007FF7EDC7B200 node::AsyncResource::CallbackScope::CallbackScope+499472\n10: 00007FF7EDC0C106 node::AsyncResource::CallbackScope::CallbackScope+44566\n11: 000001BC3A48119E \n"
+}

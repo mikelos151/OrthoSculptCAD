@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["ES2022"],
+    "types": [],
+    "outDir": "./compiled"
+  },
+  "files": ["C:/Users/sandr/OrthoSculptCAD/src/compute/resourceLedger.ts"]
+}

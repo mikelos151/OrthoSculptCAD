@@ -1,0 +1,34 @@
+PASS weak-identity: serialized/cloned/foreign/diagnostic handles never gain authority (169 assertions)
+PASS borrowed-method receivers authenticate the ledger-local lease (116 assertions)
+PASS reserved/live/retired/closed phase and authentication-error priority (39 assertions)
+PASS budget refusals preserve entire graph, aliases and controlled references (17 assertions)
+PASS intrinsic native backing identity ignores forged/shadow getters and view lengths (24 assertions)
+PASS allocator seam: thrown native-style failure and invalid results roll back only failing key (78 assertions)
+PASS allocator duplicate existing/live native backing cannot replace another allocation (8 assertions)
+PASS observed native detach refuses ownership transitions without dropping charge; cleanup recovers (26 assertions)
+PASS zero-byte/empty/invalid-plan control slots are bounded and reusable; realms have lifetime cap (1081 assertions)
+PASS sole-live-ref handoff preserves identity/bytes and never pretends native transport (14 assertions)
+PASS deep-frozen diagnostics expose no buffer/capability/native authority; default caps unchanged (45 assertions)
+PASS deterministic mixed lifecycle graph witness against actual API (1600 steps) (2637 assertions)
+{
+  "passed": true,
+  "tests": 12,
+  "failed": 0,
+  "assertions": 4254,
+  "runtime": {
+    "node": "v24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "execArgv": [
+      "--max-old-space-size=128",
+      "--max-semi-space-size=8"
+    ],
+    "platform": "win32",
+    "nativeLengthGetter": "function get byteLength() { [native code] }",
+    "arrayBufferConstructor": "function ArrayBuffer() { [native code] }"
+  },
+  "payload": {
+    "maxNativePayloadBytes": 32,
+    "countedNativeAllocations": 252,
+    "capSizedAllocations": 0
+  }
+}

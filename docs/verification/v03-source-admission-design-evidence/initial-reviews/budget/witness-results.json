@@ -1,0 +1,759 @@
+{
+  "kind": "independent-design-only-budget-witness",
+  "design_sha256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+  "source_hashes": {
+    "docs/plans/v03-source-admission-owner-design.md": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+    "docs/plans/v03-source-bound-spans-design.md": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "docs/plans/trimline-v03-integrated-design.md": "4874b8c83e5270750b06da4cc9b57834d816823872bd9ee86391da2ac995d8af",
+    "src/geometry/audit.ts": "999f4db55936872025f14b0b07c6b9576bae6ea3b0199ad10b15d712cb9ac1e8",
+    "src/geometry/core.ts": "9fd28a791b77eddb8634e26512222e734e6452c06c9a06820a67ec7dfad6fc8d",
+    "src/geometry/intersections.ts": "9eaff6af519c7109b38610a1cf8780b499cb12c2e8276ba326b10561bf83ffd3",
+    "src/geometry/auditTypes.ts": "a6d76bfea63cad67f7df5ee8f3ce70641a39c5d71af3f0fad5eecc9a0084a8ee",
+    "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "src/compute/client.ts": "d129131af2ddc2f08700d53360ea2338cb06b45e616231c74c1a7bf9287c5296",
+    "src/compute/copy.ts": "003155329a220edfe46aed2cf946955a458fe5ac8d88bb00197b5d2d876993e8",
+    "src/compute/index.ts": "68f899bf90324bb24998d5d5f07bf64cdc796e9a6c5e664d9b75862c69b00ba1",
+    "src/compute/service.ts": "bfe6f3dcf239235f81664da8def2e5e61c67aee1dc5934e7d3a39086c958676f",
+    "src/compute/execute.ts": "cc5955ff799b2339e13409da12e1620d74f954891bf7e41c37ba6c71344e9311",
+    "src/hooks/workbenchState.ts": "051884f6b8a9c57143b3da5d66443f9ef12dc7e4416d7b113b1fc81a60727cf7"
+  },
+  "layouts": [
+    {
+      "V": 4,
+      "F": 4,
+      "attrs": false,
+      "E": 12,
+      "N": 7,
+      "H": 2,
+      "D": 96,
+      "J": 162,
+      "capture": 258,
+      "T": 272,
+      "P": 3848,
+      "arena": 3848,
+      "D_plus_arena": 3944,
+      "T_segments": [
+        {
+          "offset": 0,
+          "raw_bytes": 144,
+          "aligned_bytes": 144
+        },
+        {
+          "offset": 144,
+          "raw_bytes": 16,
+          "aligned_bytes": 16
+        },
+        {
+          "offset": 160,
+          "raw_bytes": 4,
+          "aligned_bytes": 8
+        },
+        {
+          "offset": 168,
+          "raw_bytes": 48,
+          "aligned_bytes": 48
+        },
+        {
+          "offset": 216,
+          "raw_bytes": 12,
+          "aligned_bytes": 16
+        },
+        {
+          "offset": 232,
+          "raw_bytes": 16,
+          "aligned_bytes": 16
+        },
+        {
+          "offset": 248,
+          "raw_bytes": 16,
+          "aligned_bytes": 16
+        },
+        {
+          "offset": 264,
+          "raw_bytes": 4,
+          "aligned_bytes": 8
+        }
+      ],
+      "P_segments": [
+        {
+          "offset": 0,
+          "raw_bytes": 96,
+          "aligned_bytes": 96
+        },
+        {
+          "offset": 96,
+          "raw_bytes": 192,
+          "aligned_bytes": 192
+        },
+        {
+          "offset": 288,
+          "raw_bytes": 16,
+          "aligned_bytes": 16
+        },
+        {
+          "offset": 304,
+          "raw_bytes": 336,
+          "aligned_bytes": 336
+        },
+        {
+          "offset": 640,
+          "raw_bytes": 28,
+          "aligned_bytes": 32
+        },
+        {
+          "offset": 672,
+          "raw_bytes": 28,
+          "aligned_bytes": 32
+        },
+        {
+          "offset": 704,
+          "raw_bytes": 28,
+          "aligned_bytes": 32
+        },
+        {
+          "offset": 736,
+          "raw_bytes": 28,
+          "aligned_bytes": 32
+        },
+        {
+          "offset": 768,
+          "raw_bytes": 16,
+          "aligned_bytes": 16
+        },
+        {
+          "offset": 784,
+          "raw_bytes": 88,
+          "aligned_bytes": 88
+        },
+        {
+          "offset": 872,
+          "raw_bytes": 2048,
+          "aligned_bytes": 2048
+        },
+        {
+          "offset": 2920,
+          "raw_bytes": 128,
+          "aligned_bytes": 128
+        },
+        {
+          "offset": 3048,
+          "raw_bytes": 800,
+          "aligned_bytes": 800
+        }
+      ]
+    },
+    {
+      "V": 200000,
+      "F": 200000,
+      "attrs": false,
+      "E": 600000,
+      "N": 399999,
+      "H": 18,
+      "D": 4800000,
+      "J": 4800066,
+      "capture": 9600066,
+      "T": 13000000,
+      "P": 40803608,
+      "arena": 40803608,
+      "D_plus_arena": 45603608,
+      "T_segments": [
+        {
+          "offset": 0,
+          "raw_bytes": 7200000,
+          "aligned_bytes": 7200000
+        },
+        {
+          "offset": 7200000,
+          "raw_bytes": 800000,
+          "aligned_bytes": 800000
+        },
+        {
+          "offset": 8000000,
+          "raw_bytes": 200000,
+          "aligned_bytes": 200000
+        },
+        {
+          "offset": 8200000,
+          "raw_bytes": 2400000,
+          "aligned_bytes": 2400000
+        },
+        {
+          "offset": 10600000,
+          "raw_bytes": 600000,
+          "aligned_bytes": 600000
+        },
+        {
+          "offset": 11200000,
+          "raw_bytes": 800000,
+          "aligned_bytes": 800000
+        },
+        {
+          "offset": 12000000,
+          "raw_bytes": 800000,
+          "aligned_bytes": 800000
+        },
+        {
+          "offset": 12800000,
+          "raw_bytes": 200000,
+          "aligned_bytes": 200000
+        }
+      ],
+      "P_segments": [
+        {
+          "offset": 0,
+          "raw_bytes": 4800000,
+          "aligned_bytes": 4800000
+        },
+        {
+          "offset": 4800000,
+          "raw_bytes": 9600000,
+          "aligned_bytes": 9600000
+        },
+        {
+          "offset": 14400000,
+          "raw_bytes": 800000,
+          "aligned_bytes": 800000
+        },
+        {
+          "offset": 15200000,
+          "raw_bytes": 19199952,
+          "aligned_bytes": 19199952
+        },
+        {
+          "offset": 34399952,
+          "raw_bytes": 1599996,
+          "aligned_bytes": 1600000
+        },
+        {
+          "offset": 35999952,
+          "raw_bytes": 1599996,
+          "aligned_bytes": 1600000
+        },
+        {
+          "offset": 37599952,
+          "raw_bytes": 1599996,
+          "aligned_bytes": 1600000
+        },
+        {
+          "offset": 39199952,
+          "raw_bytes": 1599996,
+          "aligned_bytes": 1600000
+        },
+        {
+          "offset": 40799952,
+          "raw_bytes": 80,
+          "aligned_bytes": 80
+        },
+        {
+          "offset": 40800032,
+          "raw_bytes": 600,
+          "aligned_bytes": 600
+        },
+        {
+          "offset": 40800632,
+          "raw_bytes": 2048,
+          "aligned_bytes": 2048
+        },
+        {
+          "offset": 40802680,
+          "raw_bytes": 128,
+          "aligned_bytes": 128
+        },
+        {
+          "offset": 40802808,
+          "raw_bytes": 800,
+          "aligned_bytes": 800
+        }
+      ]
+    },
+    {
+      "V": 200000,
+      "F": 200000,
+      "attrs": true,
+      "E": 600000,
+      "N": 399999,
+      "H": 18,
+      "D": 8800000,
+      "J": 8800066,
+      "capture": 17600066,
+      "T": 13000000,
+      "P": 40803608,
+      "arena": 40803608,
+      "D_plus_arena": 49603608,
+      "T_segments": [
+        {
+          "offset": 0,
+          "raw_bytes": 7200000,
+          "aligned_bytes": 7200000
+        },
+        {
+          "offset": 7200000,
+          "raw_bytes": 800000,
+          "aligned_bytes": 800000
+        },
+        {
+          "offset": 8000000,
+          "raw_bytes": 200000,
+          "aligned_bytes": 200000
+        },
+        {
+          "offset": 8200000,
+          "raw_bytes": 2400000,
+          "aligned_bytes": 2400000
+        },
+        {
+          "offset": 10600000,
+          "raw_bytes": 600000,
+          "aligned_bytes": 600000
+        },
+        {
+          "offset": 11200000,
+          "raw_bytes": 800000,
+          "aligned_bytes": 800000
+        },
+        {
+          "offset": 12000000,
+          "raw_bytes": 800000,
+          "aligned_bytes": 800000
+        },
+        {
+          "offset": 12800000,
+          "raw_bytes": 200000,
+          "aligned_bytes": 200000
+        }
+      ],
+      "P_segments": [
+        {
+          "offset": 0,
+          "raw_bytes": 4800000,
+          "aligned_bytes": 4800000
+        },
+        {
+          "offset": 4800000,
+          "raw_bytes": 9600000,
+          "aligned_bytes": 9600000
+        },
+        {
+          "offset": 14400000,
+          "raw_bytes": 800000,
+          "aligned_bytes": 800000
+        },
+        {
+          "offset": 15200000,
+          "raw_bytes": 19199952,
+          "aligned_bytes": 19199952
+        },
+        {
+          "offset": 34399952,
+          "raw_bytes": 1599996,
+          "aligned_bytes": 1600000
+        },
+        {
+          "offset": 35999952,
+          "raw_bytes": 1599996,
+          "aligned_bytes": 1600000
+        },
+        {
+          "offset": 37599952,
+          "raw_bytes": 1599996,
+          "aligned_bytes": 1600000
+        },
+        {
+          "offset": 39199952,
+          "raw_bytes": 1599996,
+          "aligned_bytes": 1600000
+        },
+        {
+          "offset": 40799952,
+          "raw_bytes": 80,
+          "aligned_bytes": 80
+        },
+        {
+          "offset": 40800032,
+          "raw_bytes": 600,
+          "aligned_bytes": 600
+        },
+        {
+          "offset": 40800632,
+          "raw_bytes": 2048,
+          "aligned_bytes": 2048
+        },
+        {
+          "offset": 40802680,
+          "raw_bytes": 128,
+          "aligned_bytes": 128
+        },
+        {
+          "offset": 40802808,
+          "raw_bytes": 800,
+          "aligned_bytes": 800
+        }
+      ]
+    }
+  ],
+  "canonical_tetra_preimage_bytes": 162,
+  "scratch_capacity_witness": {
+    "doubles_used": 256,
+    "doubles_cap": 256,
+    "fields": [
+      {
+        "field": "triangles_xyz",
+        "offset_doubles": 0,
+        "count_doubles": 18
+      },
+      {
+        "field": "normals",
+        "offset_doubles": 18,
+        "count_doubles": 6
+      },
+      {
+        "field": "plane_distances",
+        "offset_doubles": 24,
+        "count_doubles": 6
+      },
+      {
+        "field": "shared_indexed_vertices_xyz",
+        "offset_doubles": 30,
+        "count_doubles": 9
+      },
+      {
+        "field": "two_sections_six_xyz_each",
+        "offset_doubles": 39,
+        "count_doubles": 36
+      },
+      {
+        "field": "two_clipping_polygons_16_xyz_each",
+        "offset_doubles": 75,
+        "count_doubles": 96
+      },
+      {
+        "field": "vector_temporaries",
+        "offset_doubles": 171,
+        "count_doubles": 48
+      },
+      {
+        "field": "intervals_and_projection",
+        "offset_doubles": 219,
+        "count_doubles": 12
+      },
+      {
+        "field": "scalar_temporaries",
+        "offset_doubles": 231,
+        "count_doubles": 25
+      }
+    ],
+    "note": "Feasible capacity only; production offsets/lifetimes and conservative port remain G2 obligations."
+  },
+  "topology_fixtures": {
+    "tetra": {
+      "independent_oracle": {
+        "boundary": 0,
+        "nonmanifold": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [],
+        "volume": "1/6"
+      },
+      "packed_T_witness": {
+        "boundary": 0,
+        "nonmanifold": 0,
+        "winding": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [],
+        "topology_steps_in_small_witness": 45,
+        "step_cap": 512,
+        "heapsort_comparisons": 52,
+        "comparison_cap": 480,
+        "arena_bytes": 272
+      }
+    },
+    "subdivided_tetra": {
+      "independent_oracle": {
+        "boundary": 0,
+        "nonmanifold": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [],
+        "volume": "1/6"
+      },
+      "packed_T_witness": {
+        "boundary": 0,
+        "nonmanifold": 0,
+        "winding": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [],
+        "topology_steps_in_small_witness": 185,
+        "step_cap": 1952,
+        "heapsort_comparisons": 389,
+        "comparison_cap": 2688,
+        "arena_bytes": 992
+      }
+    },
+    "hole": {
+      "independent_oracle": {
+        "boundary": 3,
+        "nonmanifold": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [
+          1,
+          2,
+          3
+        ],
+        "volume": "0"
+      },
+      "packed_T_witness": {
+        "boundary": 3,
+        "nonmanifold": 0,
+        "winding": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [],
+        "topology_steps_in_small_witness": 19,
+        "step_cap": 400,
+        "heapsort_comparisons": 32,
+        "comparison_cap": 360,
+        "arena_bytes": 232
+      }
+    },
+    "duplicate": {
+      "independent_oracle": {
+        "boundary": 0,
+        "nonmanifold": 3,
+        "components": 1,
+        "bad_closed_vertex_links": [
+          1,
+          2,
+          3
+        ],
+        "volume": "1/3"
+      },
+      "packed_T_witness": {
+        "boundary": 0,
+        "nonmanifold": 3,
+        "winding": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [],
+        "topology_steps_in_small_witness": 47,
+        "step_cap": 624,
+        "heapsort_comparisons": 71,
+        "comparison_cap": 600,
+        "arena_bytes": 336
+      }
+    },
+    "pinched_vertex": {
+      "independent_oracle": {
+        "boundary": 0,
+        "nonmanifold": 0,
+        "components": 2,
+        "bad_closed_vertex_links": [
+          0
+        ],
+        "volume": "-7/6"
+      },
+      "packed_T_witness": {
+        "boundary": 0,
+        "nonmanifold": 0,
+        "winding": 0,
+        "components": 2,
+        "bad_closed_vertex_links": [
+          0
+        ],
+        "topology_steps_in_small_witness": 87,
+        "step_cap": 1008,
+        "heapsort_comparisons": 152,
+        "comparison_cap": 1152,
+        "arena_bytes": 520
+      }
+    },
+    "connected_pinched_vertex": {
+      "independent_oracle": {
+        "boundary": 0,
+        "nonmanifold": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [
+          0
+        ],
+        "volume": "5/32"
+      },
+      "packed_T_witness": {
+        "boundary": 0,
+        "nonmanifold": 0,
+        "winding": 0,
+        "components": 1,
+        "bad_closed_vertex_links": [
+          0
+        ],
+        "topology_steps_in_small_witness": 761,
+        "step_cap": 7696,
+        "heapsort_comparisons": 2349,
+        "comparison_cap": 13824,
+        "arena_bytes": 3896
+      }
+    }
+  },
+  "abstract_stack_traversals": [
+    {
+      "F": 1,
+      "H": 0,
+      "cap": 3,
+      "peak": 1,
+      "max_abstract_visits": 1
+    },
+    {
+      "F": 2,
+      "H": 1,
+      "cap": 7,
+      "peak": 1,
+      "max_abstract_visits": 1
+    },
+    {
+      "F": 3,
+      "H": 2,
+      "cap": 11,
+      "peak": 1,
+      "max_abstract_visits": 1
+    },
+    {
+      "F": 4,
+      "H": 2,
+      "cap": 11,
+      "peak": 1,
+      "max_abstract_visits": 1
+    },
+    {
+      "F": 5,
+      "H": 3,
+      "cap": 15,
+      "peak": 3,
+      "max_abstract_visits": 4
+    },
+    {
+      "F": 7,
+      "H": 3,
+      "cap": 15,
+      "peak": 3,
+      "max_abstract_visits": 4
+    },
+    {
+      "F": 8,
+      "H": 3,
+      "cap": 15,
+      "peak": 3,
+      "max_abstract_visits": 4
+    },
+    {
+      "F": 9,
+      "H": 4,
+      "cap": 19,
+      "peak": 5,
+      "max_abstract_visits": 9
+    },
+    {
+      "F": 15,
+      "H": 4,
+      "cap": 19,
+      "peak": 5,
+      "max_abstract_visits": 16
+    },
+    {
+      "F": 16,
+      "H": 4,
+      "cap": 19,
+      "peak": 5,
+      "max_abstract_visits": 16
+    },
+    {
+      "F": 17,
+      "H": 5,
+      "cap": 23,
+      "peak": 7,
+      "max_abstract_visits": 25
+    },
+    {
+      "F": 31,
+      "H": 5,
+      "cap": 23,
+      "peak": 7,
+      "max_abstract_visits": 64
+    },
+    {
+      "F": 32,
+      "H": 5,
+      "cap": 23,
+      "peak": 7,
+      "max_abstract_visits": 64
+    },
+    {
+      "F": 33,
+      "H": 6,
+      "cap": 27,
+      "peak": 9,
+      "max_abstract_visits": 81
+    },
+    {
+      "F": 63,
+      "H": 6,
+      "cap": 27,
+      "peak": 9,
+      "max_abstract_visits": 256
+    },
+    {
+      "F": 64,
+      "H": 6,
+      "cap": 27,
+      "peak": 9,
+      "max_abstract_visits": 256
+    },
+    {
+      "F": 65,
+      "H": 7,
+      "cap": 31,
+      "peak": 11,
+      "max_abstract_visits": 289
+    },
+    {
+      "F": 127,
+      "H": 7,
+      "cap": 31,
+      "peak": 11,
+      "max_abstract_visits": 1024
+    },
+    {
+      "F": 128,
+      "H": 7,
+      "cap": 31,
+      "peak": 11,
+      "max_abstract_visits": 1024
+    },
+    {
+      "F": 129,
+      "H": 8,
+      "cap": 35,
+      "peak": 13,
+      "max_abstract_visits": 1089
+    }
+  ],
+  "stack_reasoning": "Pair rank depth(a)+depth(b)<=2H; self expands by 3 with rank +2, cross by 2 with rank +1. Conservative DFS pending bound 1+2*(2H)<=4H+3.",
+  "ledger_spec_counterexample": {
+    "limits": {
+      "managed": 1024,
+      "job": 768,
+      "history": 512
+    },
+    "allocation_bytes": 768,
+    "references": [
+      "resident-source",
+      "history-undo"
+    ],
+    "interpretation_allocation_category_unchanged": {
+      "managed": 768,
+      "history": 0,
+      "retain": "accept"
+    },
+    "interpretation_history_membership_counts_backing": {
+      "managed": 768,
+      "history": 768,
+      "retain": "refuse"
+    },
+    "why_material": "No extra data allocation occurs, but opposite history-cap outcomes; retain and category interaction not specified."
+  },
+  "production_tests_run": false,
+  "rss_measured": false
+}

@@ -1,0 +1,227 @@
+{
+  "label": "SCRATCH EXPERIMENT; NEVER TRUST THESE ASSOCIATIONS",
+  "claims": [
+    {
+      "label": "SYNTHETIC UNTRUSTED CLAIM ONLY: mutated mesh + recomputed valid digest + unchanged old required-check PASS report. Not an API response, not a production project reload format, no trusted audit/admission token.",
+      "caseId": "TESTDATA-remove-distant-face2",
+      "meshCatalogCaseId": "TESTDATA-remove-distant-face2",
+      "recomputedSourceDigest": "sha256:658f03d42a31950304d4b56b3fa21abf789297baa6872945cb96cf5115787dcb",
+      "savedAuditOriginCaseId": "TESTDATA-positive-S",
+      "savedAuditOriginDigest": "sha256:086f278b8281d0f5feac8e42b15ea880d7635800ff1532e24aeabc9ee38fa4c2",
+      "savedAuditRequiredChecksClaim": "PASS for old positive S only; minimum-thickness remains UNKNOWN",
+      "unchangedSavedAudit": {
+        "checks": [
+          {
+            "id": "edge-manifold",
+            "label": "Edge manifold",
+            "status": "pass",
+            "detail": "0 non-manifold edge(s); 0 boundary edge(s)"
+          },
+          {
+            "id": "watertight",
+            "label": "Closed edge topology",
+            "status": "pass",
+            "detail": "Closed edges alone do not prove absence of intersections"
+          },
+          {
+            "id": "vertex-manifold",
+            "label": "Vertex manifold",
+            "status": "pass",
+            "detail": "0 invalid or isolated vertex link(s)"
+          },
+          {
+            "id": "components",
+            "label": "Single edge-connected surface",
+            "status": "pass",
+            "detail": "1 edge-connected component(s)"
+          },
+          {
+            "id": "degenerate-triangles",
+            "label": "Non-degenerate faces",
+            "status": "pass",
+            "detail": "0 degenerate triangle(s)"
+          },
+          {
+            "id": "winding",
+            "label": "Consistent winding",
+            "status": "pass",
+            "detail": "0 inconsistently oriented edge(s)"
+          },
+          {
+            "id": "self-intersections",
+            "label": "3D self-intersections",
+            "status": "pass",
+            "detail": "Complete bounded triangle/triangle audit; 0 witness pair(s), 66 candidate tests"
+          },
+          {
+            "id": "outward",
+            "label": "Outward orientation",
+            "status": "pass",
+            "detail": "outward"
+          },
+          {
+            "id": "minimum-thickness",
+            "label": "Minimum thickness",
+            "status": "unknown",
+            "detail": "Not computed. Normal-offset distance is not a minimum-wall-thickness guarantee."
+          }
+        ],
+        "triangleCount": 12,
+        "candidateTests": 66,
+        "complete": true,
+        "elapsedMs": 1.9501000000000062,
+        "intersections": [],
+        "orientation": "outward",
+        "signedVolume": 1
+      }
+    },
+    {
+      "label": "SYNTHETIC UNTRUSTED CLAIM ONLY: mutated mesh + recomputed valid digest + unchanged old required-check PASS report. Not an API response, not a production project reload format, no trusted audit/admission token.",
+      "caseId": "TESTDATA-duplicate-distant-face2",
+      "meshCatalogCaseId": "TESTDATA-duplicate-distant-face2",
+      "recomputedSourceDigest": "sha256:9fa8eafaf3ed76330c78e25bdf95000fcb73492533f1710111d9d96664bb3847",
+      "savedAuditOriginCaseId": "TESTDATA-positive-S",
+      "savedAuditOriginDigest": "sha256:086f278b8281d0f5feac8e42b15ea880d7635800ff1532e24aeabc9ee38fa4c2",
+      "savedAuditRequiredChecksClaim": "PASS for old positive S only; minimum-thickness remains UNKNOWN",
+      "unchangedSavedAudit": {
+        "checks": [
+          {
+            "id": "edge-manifold",
+            "label": "Edge manifold",
+            "status": "pass",
+            "detail": "0 non-manifold edge(s); 0 boundary edge(s)"
+          },
+          {
+            "id": "watertight",
+            "label": "Closed edge topology",
+            "status": "pass",
+            "detail": "Closed edges alone do not prove absence of intersections"
+          },
+          {
+            "id": "vertex-manifold",
+            "label": "Vertex manifold",
+            "status": "pass",
+            "detail": "0 invalid or isolated vertex link(s)"
+          },
+          {
+            "id": "components",
+            "label": "Single edge-connected surface",
+            "status": "pass",
+            "detail": "1 edge-connected component(s)"
+          },
+          {
+            "id": "degenerate-triangles",
+            "label": "Non-degenerate faces",
+            "status": "pass",
+            "detail": "0 degenerate triangle(s)"
+          },
+          {
+            "id": "winding",
+            "label": "Consistent winding",
+            "status": "pass",
+            "detail": "0 inconsistently oriented edge(s)"
+          },
+          {
+            "id": "self-intersections",
+            "label": "3D self-intersections",
+            "status": "pass",
+            "detail": "Complete bounded triangle/triangle audit; 0 witness pair(s), 66 candidate tests"
+          },
+          {
+            "id": "outward",
+            "label": "Outward orientation",
+            "status": "pass",
+            "detail": "outward"
+          },
+          {
+            "id": "minimum-thickness",
+            "label": "Minimum thickness",
+            "status": "unknown",
+            "detail": "Not computed. Normal-offset distance is not a minimum-wall-thickness guarantee."
+          }
+        ],
+        "triangleCount": 12,
+        "candidateTests": 66,
+        "complete": true,
+        "elapsedMs": 1.9501000000000062,
+        "intersections": [],
+        "orientation": "outward",
+        "signedVolume": 1
+      }
+    },
+    {
+      "label": "SYNTHETIC UNTRUSTED CLAIM ONLY: mutated mesh + recomputed valid digest + unchanged old required-check PASS report. Not an API response, not a production project reload format, no trusted audit/admission token.",
+      "caseId": "TESTDATA-selfcross-remote-v6",
+      "meshCatalogCaseId": "TESTDATA-selfcross-remote-v6",
+      "recomputedSourceDigest": "sha256:f1b68196c981260e1e40b46b3bb42485cc384a4c90b792eb22b7e610a9ea0640",
+      "savedAuditOriginCaseId": "TESTDATA-positive-S",
+      "savedAuditOriginDigest": "sha256:086f278b8281d0f5feac8e42b15ea880d7635800ff1532e24aeabc9ee38fa4c2",
+      "savedAuditRequiredChecksClaim": "PASS for old positive S only; minimum-thickness remains UNKNOWN",
+      "unchangedSavedAudit": {
+        "checks": [
+          {
+            "id": "edge-manifold",
+            "label": "Edge manifold",
+            "status": "pass",
+            "detail": "0 non-manifold edge(s); 0 boundary edge(s)"
+          },
+          {
+            "id": "watertight",
+            "label": "Closed edge topology",
+            "status": "pass",
+            "detail": "Closed edges alone do not prove absence of intersections"
+          },
+          {
+            "id": "vertex-manifold",
+            "label": "Vertex manifold",
+            "status": "pass",
+            "detail": "0 invalid or isolated vertex link(s)"
+          },
+          {
+            "id": "components",
+            "label": "Single edge-connected surface",
+            "status": "pass",
+            "detail": "1 edge-connected component(s)"
+          },
+          {
+            "id": "degenerate-triangles",
+            "label": "Non-degenerate faces",
+            "status": "pass",
+            "detail": "0 degenerate triangle(s)"
+          },
+          {
+            "id": "winding",
+            "label": "Consistent winding",
+            "status": "pass",
+            "detail": "0 inconsistently oriented edge(s)"
+          },
+          {
+            "id": "self-intersections",
+            "label": "3D self-intersections",
+            "status": "pass",
+            "detail": "Complete bounded triangle/triangle audit; 0 witness pair(s), 66 candidate tests"
+          },
+          {
+            "id": "outward",
+            "label": "Outward orientation",
+            "status": "pass",
+            "detail": "outward"
+          },
+          {
+            "id": "minimum-thickness",
+            "label": "Minimum thickness",
+            "status": "unknown",
+            "detail": "Not computed. Normal-offset distance is not a minimum-wall-thickness guarantee."
+          }
+        ],
+        "triangleCount": 12,
+        "candidateTests": 66,
+        "complete": true,
+        "elapsedMs": 1.9501000000000062,
+        "intersections": [],
+        "orientation": "outward",
+        "signedVolume": 1
+      }
+    }
+  ]
+}

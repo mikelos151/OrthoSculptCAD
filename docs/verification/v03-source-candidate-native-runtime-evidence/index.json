@@ -1,0 +1,240 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/acceptance-green.log",
+      "sha256": "3053de2e3f1e7e58b00d77573e8e163298a60d1dab3c3e1495a5090cff3d04fa",
+      "bytes": 400
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/acceptance-red.log",
+      "sha256": "b027c856cbcb0fa8464e5c134037c051d7e5ad2327a000465406b06a43269cc6",
+      "bytes": 644
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/acceptance.mjs",
+      "sha256": "2c9d43343f869e84366d7dbc9573b99245879b0ee7fbdfdbffe207e55db7141a",
+      "bytes": 2349
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/bundle/worker.js",
+      "sha256": "9fb389d3260a92ad812774f862970dbc19fd265bb0776ffa8dd263b85111d6dd",
+      "bytes": 34834
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/bundle/worker.js.map",
+      "sha256": "5ef8b90d9e6469c3e600319f72c28609c1251a2ccd0f8b89960c3483a33af2fc",
+      "bytes": 73284
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/cli.mjs",
+      "sha256": "d7bc5015d8f58aac93509e52fac05f9180073d316605c2fb028b64bc6eaf66d6",
+      "bytes": 21252
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/handoff.json",
+      "sha256": "84ee3719a0223a34a0bb071d6265db20bbe3731503200b76348d0341e52297c0",
+      "bytes": 1989
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/index.html",
+      "sha256": "30491275584f4abc767536a7b787de41c12ce0062c24c89cf0b9e4194b1dd9eb",
+      "bytes": 2798
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/manifest.json",
+      "sha256": "d7eb381fb2b65d2097ebfe72963bae8101418909585f1b55d9f3539d650f0ea5",
+      "bytes": 4497
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/raw-results.json",
+      "sha256": "f9339be756cc68ea12eff569d06fc46380a2e3251f30925fbd5c6d7a519efd91",
+      "bytes": 312294
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/README.md",
+      "sha256": "8ba622b290661e052fb17550910bc744b3f9ca6a2e01854f858b22e2a187978d",
+      "bytes": 5150
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/results.json",
+      "sha256": "097589045dcd50d4bc4a86fcc597f8769798a819fb3e851bfaa6dbc4d5a3004d",
+      "bytes": 45228
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/run.log",
+      "sha256": "cc9f3cbf5ec673161f7821dd11c901e5700519d8eb72cc35fb97f3a9a53d5430",
+      "bytes": 989
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/author/worker.ts",
+      "sha256": "d78914306e6e4a24197ab36fd212698aa0178bf5f5033238117f5c34f275ee35",
+      "bytes": 14138
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/acceptance-green.log",
+      "sha256": "3053de2e3f1e7e58b00d77573e8e163298a60d1dab3c3e1495a5090cff3d04fa",
+      "bytes": 400
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/acceptance-red.log",
+      "sha256": "b027c856cbcb0fa8464e5c134037c051d7e5ad2327a000465406b06a43269cc6",
+      "bytes": 644
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/acceptance.mjs",
+      "sha256": "2c9d43343f869e84366d7dbc9573b99245879b0ee7fbdfdbffe207e55db7141a",
+      "bytes": 2349
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/acceptance.mjs.parent.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/acceptance.mjs.parent.stdout.log",
+      "sha256": "3053de2e3f1e7e58b00d77573e8e163298a60d1dab3c3e1495a5090cff3d04fa",
+      "bytes": 400
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/bundle/worker.js",
+      "sha256": "994a5d161f72d84be5a19276035dcd0088d3a84f8f917170f6bb37aa7846b861",
+      "bytes": 34841
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/bundle/worker.js.map",
+      "sha256": "5ef8b90d9e6469c3e600319f72c28609c1251a2ccd0f8b89960c3483a33af2fc",
+      "bytes": 73284
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/cli.mjs",
+      "sha256": "d7bc5015d8f58aac93509e52fac05f9180073d316605c2fb028b64bc6eaf66d6",
+      "bytes": 21252
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/cli.mjs.parent.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/cli.mjs.parent.stdout.log",
+      "sha256": "700b2ce582e75fdf54051033c87dda37963a14a81781ad050ec0b504b47180d7",
+      "bytes": 1003
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/handoff.json",
+      "sha256": "a9cd06d467132a26b6f28932fd1ab7894920f98f9872a0271101fd50aa857fec",
+      "bytes": 1996
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/index.html",
+      "sha256": "30491275584f4abc767536a7b787de41c12ce0062c24c89cf0b9e4194b1dd9eb",
+      "bytes": 2798
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/initial-bundle-identity-failure.json",
+      "sha256": "bda9690620d45ef412696df0046d2dc485048ee1734b9f91e12ae2a5d739dd3d",
+      "bytes": 461
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/manifest.json",
+      "sha256": "14c3f16639d78001786a2285bc2a6cbb0c62f44a0917e76e29476138461f8bc5",
+      "bytes": 4560
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/parent-verification.json",
+      "sha256": "63dc966004e953bea2f60ea2f0db5e667ec4cff0904694ae234d593c79d660db",
+      "bytes": 2018
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/raw-results.json",
+      "sha256": "da983c2d5b6cfea22925cdad8e6119a927b8ef77f4cc26f7e1e8cd8f6fda1b33",
+      "bytes": 312472
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/README.md",
+      "sha256": "8ba622b290661e052fb17550910bc744b3f9ca6a2e01854f858b22e2a187978d",
+      "bytes": 5150
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/results.json",
+      "sha256": "6b2f79365b63704c855f02262ed4c8279bd5594ac4445710ed1ceec239525308",
+      "bytes": 45436
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/run.log",
+      "sha256": "cc9f3cbf5ec673161f7821dd11c901e5700519d8eb72cc35fb97f3a9a53d5430",
+      "bytes": 989
+    },
+    {
+      "path": "docs/verification/v03-source-candidate-native-runtime-evidence/parent-replay/worker.ts",
+      "sha256": "d78914306e6e4a24197ab36fd212698aa0178bf5f5033238117f5c34f275ee35",
+      "bytes": 14138
+    }
+  ],
+  "count": 34,
+  "parentVerification": {
+    "status": "SCOPED_PASS",
+    "cliExit": 0,
+    "acceptanceExit": 0,
+    "checks": [
+      {
+        "name": "independent-oracle",
+        "pass": true
+      },
+      {
+        "name": "worker-local-input-mutation",
+        "pass": true
+      },
+      {
+        "name": "pending-native-digest-dispose",
+        "pass": true
+      },
+      {
+        "name": "opaque-handle-authentication",
+        "pass": true
+      },
+      {
+        "name": "real-bind-cumulative-context",
+        "pass": true
+      }
+    ],
+    "oracle": {
+      "cases": 31,
+      "faces": 121,
+      "uniqueRuntimeIds": 31
+    },
+    "nativeDigests": 36,
+    "cleanup": {
+      "nativeWorkerConstructed": 1,
+      "nativeWorkerTerminated": 1,
+      "playwrightWorkerClosed": 1,
+      "browserDisconnected": true,
+      "serverStopped": true,
+      "serverPortRefused": true,
+      "playwrightWorkerCreated": 1,
+      "workerClosedBeforeContextClose": true
+    },
+    "errors": {
+      "externalRequests": [],
+      "pageErrors": [],
+      "workerErrors": []
+    },
+    "bundleComparison": {
+      "initialExtraIdentityAssertionFailed": true,
+      "cause": "Only one generated bundler source-path comment differs after copying the harness. Neither bundle nor source was rewritten. Both real executions and artifact acceptance exited 0.",
+      "authorSHA256": "9fb389d3260a92ad812774f862970dbc19fd265bb0776ffa8dd263b85111d6dd",
+      "parentSHA256": "994a5d161f72d84be5a19276035dcd0088d3a84f8f917170f6bb37aa7846b861",
+      "changedLines": 1,
+      "line": 554,
+      "authorLine": "// AppData/Local/hermes/cache/scratch/v03-source-candidate-native-runtime/worker.ts",
+      "parentLine": "// AppData/Local/hermes/cache/scratch/v03-source-candidate-native-runtime-parent/worker.ts"
+    },
+    "sourceHashesUnchanged": true,
+    "limitations": [
+      "Synthetic TESTDATA, one native Chromium Worker; not product retained owner, shared pool, source admission, audit, cut/shell/UI or application publication fences.",
+      "The real native SHA is fulfilled before the test gate opens; no native-crypto cancellation or RSS/GC claim.",
+      "SAB not tested."
+    ]
+  },
+  "acceptanceScope": "Existing SourceCandidate native-browser backend harness only; not admission/product owner/UI/cut/shell or physical native-thread/RSS proof."
+}

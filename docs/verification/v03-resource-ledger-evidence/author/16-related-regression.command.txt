@@ -1,0 +1,1 @@
+NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node node_modules/vitest/vitest.mjs run tests/v03-resource-ledger.test.ts tests/v03-source-candidate.test.ts tests/v03-numerics.test.ts tests/v03-numerics-oracle.test.ts tests/v03-face-cubic.test.ts tests/v03-bezier.test.ts --maxWorkers=1 --no-file-parallelism

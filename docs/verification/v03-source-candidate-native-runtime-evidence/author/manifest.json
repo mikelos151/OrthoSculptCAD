@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "testOnly": true,
+  "sourceHashes": {
+    "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "tests/v03-source-candidate.test.ts": "8939b5b676194c3b5bca29f9d0f2cd7b889ce2c4d22ccf06327309fb08a97188",
+    "tests/fixtures/v03-source-candidate-oracle.json": "cca26c881316cbebf35b0950483f00596dce8e02460ab2103180f0b987b10ac9",
+    "docs/plans/v03-source-bound-spans-design.md": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "src/trimline/numerics.ts": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25",
+    "src/trimline/face-cubic.ts": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1",
+    "src/io/validation.ts": "fc1c411d0a4c678d5b31db9df67864aff9d91705d605e8b1309e5f5396215832"
+  },
+  "modules": [
+    {
+      "path": "C:/Users/sandr/OrthoSculptCAD/src/trimline/numerics.ts",
+      "included": null,
+      "sha256": "543f25344bcf6b7c4f1139623c13a344e720e073c80eb243a38731d504999b25"
+    },
+    {
+      "path": "C:/Users/sandr/OrthoSculptCAD/src/trimline/source-candidate.ts",
+      "included": null,
+      "sha256": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b"
+    },
+    {
+      "path": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-native-runtime/worker.ts",
+      "included": null,
+      "sha256": "d78914306e6e4a24197ab36fd212698aa0178bf5f5033238117f5c34f275ee35"
+    },
+    {
+      "path": "C:/Users/sandr/OrthoSculptCAD/src/trimline/face-cubic.ts",
+      "included": null,
+      "sha256": "bc637b6f6274788cdc4395998f52930a23ac28885ce3a6a315a67ff07f61cfb1"
+    },
+    {
+      "path": "C:/Users/sandr/OrthoSculptCAD/src/io/validation.ts",
+      "included": null,
+      "sha256": "fc1c411d0a4c678d5b31db9df67864aff9d91705d605e8b1309e5f5396215832"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-native-runtime\\cli.mjs",
+      "bytes": 21252,
+      "sha256": "d7bc5015d8f58aac93509e52fac05f9180073d316605c2fb028b64bc6eaf66d6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-native-runtime\\worker.ts",
+      "bytes": 14138,
+      "sha256": "d78914306e6e4a24197ab36fd212698aa0178bf5f5033238117f5c34f275ee35"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-native-runtime\\index.html",
+      "bytes": 2798,
+      "sha256": "30491275584f4abc767536a7b787de41c12ce0062c24c89cf0b9e4194b1dd9eb"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-native-runtime\\acceptance.mjs",
+      "bytes": 2349,
+      "sha256": "2c9d43343f869e84366d7dbc9573b99245879b0ee7fbdfdbffe207e55db7141a"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-native-runtime\\bundle\\worker.js",
+      "bytes": 34834,
+      "sha256": "9fb389d3260a92ad812774f862970dbc19fd265bb0776ffa8dd263b85111d6dd"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-native-runtime\\bundle\\worker.js.map",
+      "bytes": 73284,
+      "sha256": "5ef8b90d9e6469c3e600319f72c28609c1251a2ccd0f8b89960c3483a33af2fc"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-native-runtime\\raw-results.json",
+      "bytes": 312294,
+      "sha256": "f9339be756cc68ea12eff569d06fc46380a2e3251f30925fbd5c6d7a519efd91"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-source-candidate-native-runtime\\results.json",
+      "bytes": 45228,
+      "sha256": "097589045dcd50d4bc4a86fcc597f8769798a819fb3e851bfaa6dbc4d5a3004d"
+    }
+  ],
+  "browser": {
+    "version": "156.0.8078.4",
+    "executable": "C:\\Users\\sandr\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe",
+    "playwrightVersion": "1.64.1",
+    "viteVersion": "8.3.5",
+    "node": "v24.19.0",
+    "nodeOptions": "--max-old-space-size=256 --max-semi-space-size=8",
+    "launch": "headless Chromium defaults; no added security flags",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36",
+    "nativeDigestFunction": "function digest() { [native code] }",
+    "crossOriginIsolated": false,
+    "sharedArrayBufferAvailable": false
+  }
+}

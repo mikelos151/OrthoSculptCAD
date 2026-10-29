@@ -1,0 +1,28 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (4 tests | 1 failed) 12ms
+     × 04 reclassifies only one owning ref and rolls back all categories on refusal 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 04 reclassifies only one owning ref and rolls back all categories on refusal
+Error: Invalid ledger input
+ ❯ invalid src/compute/resourceLedger.ts:19:49
+     17| export interface LedgerInternals { allocate?: (bytes: number) => Array…
+     18| const BUDGET: Refusal = Object.freeze({ ok: false, code: 'BUDGET' });
+     19| function invalid(): never { throw Object.assign(new Error('Invalid led…
+       |                                                 ^
+     20| function category(c: unknown): asserts c is Category { if (c !== 'resi…
+     21| function size(n: unknown): asserts n is number { if (typeof n !== 'num…
+ ❯ Object.reclassify src/compute/resourceLedger.ts:67:75
+ ❯ tests/v03-resource-ledger.test.ts:21:47
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 3 passed (4)
+   Start at  19:04:35
+   Duration  274ms (transform 39ms, setup 0ms, import 56ms, tests 12ms, environment 0ms)
+

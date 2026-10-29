@@ -1,0 +1,212 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    {
+      "id": "NB-G1B-01",
+      "severity": "info",
+      "location": "src/compute/resourceLedger.ts:147-149; przyszła kompozycja G1b",
+      "finding": "32 rejestracje realm są świadomie limitem lifetime ledgeru. Przyszły broker powinien ponownie używać tożsamości native realm zamiast rejestrować nową przy każdym job.",
+      "blocking": false,
+      "scope": "Przyszła integracja, nie wymagana poprawka G1a."
+    },
+    {
+      "id": "NB-BOUNDARY-02",
+      "severity": "info",
+      "location": "src/compute/resourceLedger.ts:22-24,151-162,171-181",
+      "finding": "Zachować prywatną granicę composition. reserve używa iteratora i odczytu pól JS, allocate/controls są zaufanym seam; ten moduł nie jest sanitizatorem dowolnych same-realm JS obiektów ani authority dla plików/JSON. Nie wykazano nieoczekiwanej reentrancy osiągalnej z dozwolonych zwykłych danych.",
+      "blocking": false,
+      "scope": "Przypomnienie granicy zaufania przed późniejszym udostępnieniem adapterów."
+    }
+  ],
+  "summary": "PASS dla niezależnego security/quality review prymitywu G1a: brak odtworzonych błędów blokujących; 12/12 real-API scenariuszy i 4254 asercje PASS, w tym graf 1600 kroków. Nie jest to akceptacja G1b ani source admission.",
+  "scope": {
+    "repo": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "branch": "feature/trimline-v03",
+    "head": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+    "reviewed_files": [
+      "src/compute/resourceLedger.ts",
+      "tests/v03-resource-ledger.test.ts"
+    ],
+    "normative_contract": "docs/plans/v03-source-admission-owner-design.md §5.1.1, lines 144-191",
+    "input_hashes": {
+      "src/compute/resourceLedger.ts": {
+        "sha256": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+        "bytes": 11142
+      },
+      "tests/v03-resource-ledger.test.ts": {
+        "sha256": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95",
+        "bytes": 25179
+      },
+      "docs/plans/v03-source-admission-owner-design.md": {
+        "sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+        "bytes": 53412
+      }
+    },
+    "author_handoff": "v03-resource-ledger-ts/handoff.json przeczytany wyłącznie jako dane, bez zaufania do samooceny; cudzych niezakończonych review nie czytano.",
+    "writes": "Wyłącznie C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-quality-review/",
+    "readonly_input_confirmation": "Trzy hashe wejściowe i HEAD identyczne przed/po. Nie twierdzę, że inne aktywne osoby nie dodały plików w repo.",
+    "trust_model": [
+      "Opaque ref/lease/realm mają ledger-local runtime WeakMap auth; numery i key są diagnostyką/lookup, nie capabilities.",
+      "allocate oraz controls są zaufanym composition/testing seam; arbitralny JS/sandbox i dalsze użycie bufora po release nie są obiecane.",
+      "Observed detached backing odmawia nowych przejść bez zdjęcia charge; cleanup jest jawny.",
+      "Kontrole ograniczają aktywne logiczne rekordy; weak bookkeeping/caller-retained capabilities nie są deklaracją bound RSS."
+    ],
+    "not_verified_or_claimed": [
+      "Full suite/serial regression rodzica",
+      "Browser/native Worker transport i rebinding",
+      "G1b ACK/terminate/timeout i main-SHA pending hold",
+      "Whole-object source admission/audit",
+      "App/full CAD integration",
+      "RSS/heap/GC/physical RAM guarantee",
+      "Clinical/native EXE acceptance"
+    ]
+  },
+  "evidence": {
+    "tests": 12,
+    "failed": 0,
+    "assertions": 4254,
+    "graph_steps": 1600,
+    "scenario_results": [
+      {
+        "name": "weak-identity: serialized/cloned/foreign/diagnostic handles never gain authority",
+        "passed": true,
+        "assertions": 169
+      },
+      {
+        "name": "borrowed-method receivers authenticate the ledger-local lease",
+        "passed": true,
+        "assertions": 116
+      },
+      {
+        "name": "reserved/live/retired/closed phase and authentication-error priority",
+        "passed": true,
+        "assertions": 39
+      },
+      {
+        "name": "budget refusals preserve entire graph, aliases and controlled references",
+        "passed": true,
+        "assertions": 17
+      },
+      {
+        "name": "intrinsic native backing identity ignores forged/shadow getters and view lengths",
+        "passed": true,
+        "assertions": 24,
+        "detail": {
+          "foreignRealmNativeBufferAccepted": true,
+          "shadowGetterCalls": 0
+        }
+      },
+      {
+        "name": "allocator seam: thrown native-style failure and invalid results roll back only failing key",
+        "passed": true,
+        "assertions": 78,
+        "detail": {
+          "injectedFailureModes": 7,
+          "physicalOOMAttempted": false
+        }
+      },
+      {
+        "name": "allocator duplicate existing/live native backing cannot replace another allocation",
+        "passed": true,
+        "assertions": 8
+      },
+      {
+        "name": "observed native detach refuses ownership transitions without dropping charge; cleanup recovers",
+        "passed": true,
+        "assertions": 26
+      },
+      {
+        "name": "zero-byte/empty/invalid-plan control slots are bounded and reusable; realms have lifetime cap",
+        "passed": true,
+        "assertions": 1081,
+        "detail": {
+          "recycleRounds": 40,
+          "lifetimeRealms": 32
+        }
+      },
+      {
+        "name": "sole-live-ref handoff preserves identity/bytes and never pretends native transport",
+        "passed": true,
+        "assertions": 14,
+        "detail": {
+          "logicalOnly": true,
+          "nativeDetach": false
+        }
+      },
+      {
+        "name": "deep-frozen diagnostics expose no buffer/capability/native authority; default caps unchanged",
+        "passed": true,
+        "assertions": 45
+      },
+      {
+        "name": "deterministic mixed lifecycle graph witness against actual API (1600 steps)",
+        "passed": true,
+        "assertions": 2637,
+        "detail": {
+          "seed": "0x41db7531",
+          "steps": 1600,
+          "eventCounts": {
+            "0": 226,
+            "1": 267,
+            "2": 228,
+            "3": 239,
+            "4": 213,
+            "5": 215,
+            "6": 212
+          },
+          "allocatedIdentities": 304,
+          "referenceIdentities": 444
+        }
+      }
+    ],
+    "native_runtime": {
+      "node": "v24.19.0",
+      "v8": "13.6.233.17-node.51",
+      "execArgv": [
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8"
+      ],
+      "platform": "win32",
+      "nativeLengthGetter": "function get byteLength() { [native code] }",
+      "arrayBufferConstructor": "function ArrayBuffer() { [native code] }"
+    },
+    "payload": {
+      "maxNativePayloadBytes": 32,
+      "countedNativeAllocations": 252,
+      "capSizedAllocations": 0
+    },
+    "installed_typescript_version": "5.9.3",
+    "static_scan": "static-scan.json: własny skan obu nowych plików, zero dopasowań wskazanych wzorców; nie jest to pełny dowód bezpieczeństwa.",
+    "replay_command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-quality-review/replay.py",
+    "runnable_witness": "witness.cjs + tsconfig.json + replay.py",
+    "actual_exit_codes": {
+      "initial_broad_compile": 134,
+      "isolated_compile": 0,
+      "first_witness": 0,
+      "initial_replay_environment_git_failure": 1,
+      "final_replay": 0,
+      "final_compile": 0,
+      "final_witness": 0
+    },
+    "raw_logs": [
+      "compile.json",
+      "compile-isolated.json",
+      "witness-run.json",
+      "witness.log",
+      "replay-run.json",
+      "replay.log",
+      "replay-compile.json",
+      "replay-witness.json"
+    ],
+    "hash_checks": [
+      "inputs-before.json",
+      "inputs-after.json",
+      "replay-verification.json",
+      "hashmanifest.json"
+    ],
+    "operational_issues": "operational-issues.json: jawnie zachowane OOM kompilatora i WinError 5 Git/Python, oba rozwiązane bez zmian produkcji/limitów.",
+    "tdd_claim": "Niezależne pokrycie istniejącego zachowania; nie przypisuję tym przebiegom nowych cykli RED/GREEN."
+  }
+}

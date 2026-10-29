@@ -1,0 +1,310 @@
+{
+  "status": "PASS_FINAL_SOURCE",
+  "finalRoundTrip": {
+    "testedFiles": 671,
+    "scope": "Final EOF-corrected source + curated evidence subset; not full-repo/browser checkout. Final transport metadata and this report are outside tested manifest.",
+    "bothModesByteEqual": true,
+    "realIndexUnchangedDuringFinalTempCheck": true,
+    "execution": [
+      {
+        "mode": "t",
+        "step": "compile",
+        "exit": 0
+      },
+      {
+        "mode": "t",
+        "step": "actual-exported-api",
+        "exit": 0
+      },
+      {
+        "mode": "f",
+        "step": "compile",
+        "exit": 0
+      },
+      {
+        "mode": "f",
+        "step": "actual-exported-api",
+        "exit": 0
+      }
+    ],
+    "nativeAPIPerMode": {
+      "tests": 12,
+      "assertions": 4254
+    },
+    "coreSourceSHA256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+    "manifest": "docs/verification/v03-resource-ledger-evidence/final-byte-transport/tested-manifest.json",
+    "firstRound": {
+      "testedFiles": 626,
+      "sourceSHA256": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+      "scope": "Preserved original reviewed source before final-LF formatting correction."
+    },
+    "preservedOriginalByteReport": "docs/verification/v03-resource-ledger-evidence/byte-transport/initial-byte-roundtrip-summary.json"
+  },
+  "originalRoundBeforeEOFCorrection": {
+    "status": "BYTE_SUBSET_AND_EXPORTED_API_PASS",
+    "testedFiles": 626,
+    "scope": "626 curated source/design/review/TDD files tested through a temporary Git index; not a full repository checkout or App/browser run. Transport metadata and this summary added afterwards are outside the tested manifest.",
+    "bothExportsByteEqual": true,
+    "realIndexUnchanged": true,
+    "globalAutocrlfUnchanged": true,
+    "execution": [
+      {
+        "mode": "t",
+        "step": "compile",
+        "exit": 0
+      },
+      {
+        "mode": "t",
+        "step": "actual-exported-api",
+        "exit": 0
+      },
+      {
+        "mode": "f",
+        "step": "compile",
+        "exit": 0
+      },
+      {
+        "mode": "f",
+        "step": "actual-exported-api",
+        "exit": 0
+      }
+    ],
+    "nativeResults": {
+      "t": {
+        "passed": true,
+        "tests": 12,
+        "failed": 0,
+        "assertions": 4254,
+        "runtime": {
+          "node": "v24.19.0",
+          "v8": "13.6.233.17-node.51",
+          "execArgv": [
+            "--max-old-space-size=128",
+            "--max-semi-space-size=8"
+          ],
+          "platform": "win32",
+          "nativeLengthGetter": "function get byteLength() { [native code] }",
+          "arrayBufferConstructor": "function ArrayBuffer() { [native code] }"
+        },
+        "payload": {
+          "maxNativePayloadBytes": 32,
+          "countedNativeAllocations": 252,
+          "capSizedAllocations": 0
+        },
+        "scope": "Actual unchanged G1a production API in Node/V8. No browser, full suite, geometry, native Worker, source audit, clinical or EXE acceptance.",
+        "results": [
+          {
+            "name": "weak-identity: serialized/cloned/foreign/diagnostic handles never gain authority",
+            "passed": true,
+            "assertions": 169
+          },
+          {
+            "name": "borrowed-method receivers authenticate the ledger-local lease",
+            "passed": true,
+            "assertions": 116
+          },
+          {
+            "name": "reserved/live/retired/closed phase and authentication-error priority",
+            "passed": true,
+            "assertions": 39
+          },
+          {
+            "name": "budget refusals preserve entire graph, aliases and controlled references",
+            "passed": true,
+            "assertions": 17
+          },
+          {
+            "name": "intrinsic native backing identity ignores forged/shadow getters and view lengths",
+            "passed": true,
+            "assertions": 24,
+            "detail": {
+              "foreignRealmNativeBufferAccepted": true,
+              "shadowGetterCalls": 0
+            }
+          },
+          {
+            "name": "allocator seam: thrown native-style failure and invalid results roll back only failing key",
+            "passed": true,
+            "assertions": 78,
+            "detail": {
+              "injectedFailureModes": 7,
+              "physicalOOMAttempted": false
+            }
+          },
+          {
+            "name": "allocator duplicate existing/live native backing cannot replace another allocation",
+            "passed": true,
+            "assertions": 8
+          },
+          {
+            "name": "observed native detach refuses ownership transitions without dropping charge; cleanup recovers",
+            "passed": true,
+            "assertions": 26
+          },
+          {
+            "name": "zero-byte/empty/invalid-plan control slots are bounded and reusable; realms have lifetime cap",
+            "passed": true,
+            "assertions": 1081,
+            "detail": {
+              "recycleRounds": 40,
+              "lifetimeRealms": 32
+            }
+          },
+          {
+            "name": "sole-live-ref handoff preserves identity/bytes and never pretends native transport",
+            "passed": true,
+            "assertions": 14,
+            "detail": {
+              "logicalOnly": true,
+              "nativeDetach": false
+            }
+          },
+          {
+            "name": "deep-frozen diagnostics expose no buffer/capability/native authority; default caps unchanged",
+            "passed": true,
+            "assertions": 45
+          },
+          {
+            "name": "deterministic mixed lifecycle graph witness against actual API (1600 steps)",
+            "passed": true,
+            "assertions": 2637,
+            "detail": {
+              "seed": "0x41db7531",
+              "steps": 1600,
+              "eventCounts": {
+                "0": 226,
+                "1": 267,
+                "2": 228,
+                "3": 239,
+                "4": 213,
+                "5": 215,
+                "6": 212
+              },
+              "allocatedIdentities": 304,
+              "referenceIdentities": 444
+            }
+          }
+        ]
+      },
+      "f": {
+        "passed": true,
+        "tests": 12,
+        "failed": 0,
+        "assertions": 4254,
+        "runtime": {
+          "node": "v24.19.0",
+          "v8": "13.6.233.17-node.51",
+          "execArgv": [
+            "--max-old-space-size=128",
+            "--max-semi-space-size=8"
+          ],
+          "platform": "win32",
+          "nativeLengthGetter": "function get byteLength() { [native code] }",
+          "arrayBufferConstructor": "function ArrayBuffer() { [native code] }"
+        },
+        "payload": {
+          "maxNativePayloadBytes": 32,
+          "countedNativeAllocations": 252,
+          "capSizedAllocations": 0
+        },
+        "scope": "Actual unchanged G1a production API in Node/V8. No browser, full suite, geometry, native Worker, source audit, clinical or EXE acceptance.",
+        "results": [
+          {
+            "name": "weak-identity: serialized/cloned/foreign/diagnostic handles never gain authority",
+            "passed": true,
+            "assertions": 169
+          },
+          {
+            "name": "borrowed-method receivers authenticate the ledger-local lease",
+            "passed": true,
+            "assertions": 116
+          },
+          {
+            "name": "reserved/live/retired/closed phase and authentication-error priority",
+            "passed": true,
+            "assertions": 39
+          },
+          {
+            "name": "budget refusals preserve entire graph, aliases and controlled references",
+            "passed": true,
+            "assertions": 17
+          },
+          {
+            "name": "intrinsic native backing identity ignores forged/shadow getters and view lengths",
+            "passed": true,
+            "assertions": 24,
+            "detail": {
+              "foreignRealmNativeBufferAccepted": true,
+              "shadowGetterCalls": 0
+            }
+          },
+          {
+            "name": "allocator seam: thrown native-style failure and invalid results roll back only failing key",
+            "passed": true,
+            "assertions": 78,
+            "detail": {
+              "injectedFailureModes": 7,
+              "physicalOOMAttempted": false
+            }
+          },
+          {
+            "name": "allocator duplicate existing/live native backing cannot replace another allocation",
+            "passed": true,
+            "assertions": 8
+          },
+          {
+            "name": "observed native detach refuses ownership transitions without dropping charge; cleanup recovers",
+            "passed": true,
+            "assertions": 26
+          },
+          {
+            "name": "zero-byte/empty/invalid-plan control slots are bounded and reusable; realms have lifetime cap",
+            "passed": true,
+            "assertions": 1081,
+            "detail": {
+              "recycleRounds": 40,
+              "lifetimeRealms": 32
+            }
+          },
+          {
+            "name": "sole-live-ref handoff preserves identity/bytes and never pretends native transport",
+            "passed": true,
+            "assertions": 14,
+            "detail": {
+              "logicalOnly": true,
+              "nativeDetach": false
+            }
+          },
+          {
+            "name": "deep-frozen diagnostics expose no buffer/capability/native authority; default caps unchanged",
+            "passed": true,
+            "assertions": 45
+          },
+          {
+            "name": "deterministic mixed lifecycle graph witness against actual API (1600 steps)",
+            "passed": true,
+            "assertions": 2637,
+            "detail": {
+              "seed": "0x41db7531",
+              "steps": 1600,
+              "eventCounts": {
+                "0": 226,
+                "1": 267,
+                "2": 228,
+                "3": 239,
+                "4": 213,
+                "5": 215,
+                "6": 212
+              },
+              "allocatedIdentities": 304,
+              "referenceIdentities": 444
+            }
+          }
+        ]
+      }
+    },
+    "manifest": "docs/verification/v03-resource-ledger-evidence/byte-transport/tested-manifest.json",
+    "coreSourceSHA256": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+    "release020BundleSHA256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd"
+  }
+}

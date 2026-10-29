@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8"><link rel="icon" href="data:,"><title>TEST ONLY SourceCandidate native runtime</title>
+<p>TEST ONLY — synthetic fixtures; no product owner, admission, app, cut, shell or export.</p>
+<script>
+(() => {
+  const trace = [], errors = [], pending = new Map(); let next = 0, live = false, token;
+  const record = (kind, details = {}) => trace.push({ kind, at: performance.now(), ...details });
+  const NativeWorker = Worker, nativePostMessage = Worker.prototype.postMessage, nativeTerminate = Worker.prototype.terminate;
+  const nativeFunctions = { constructor: Function.prototype.toString.call(NativeWorker), postMessage: Function.prototype.toString.call(nativePostMessage), terminate: Function.prototype.toString.call(nativeTerminate) };
+  for (const value of Object.values(nativeFunctions)) if (!value.includes('[native code]')) throw Error('Expected native Worker methods');
+  const worker = new NativeWorker('/worker.js', { type: 'module', name: 'TEST-ONLY-source-candidate-native-runtime' });
+  live = true; record('native-worker-constructed', { url: '/worker.js', type: 'module' });
+  worker.addEventListener('message', e => {
+    const { id, ok, result, error } = e.data; record('native-worker-message', { id, ok });
+    const entry = pending.get(id); if (!entry) { errors.push('Unexpected response id ' + id); return; }
+    clearTimeout(entry.timeout); pending.delete(id);
+    if (entry.name === 'auth-start' && ok) token = result.authHandle;
+    if (ok) entry.resolve(result); else entry.reject(Error(JSON.stringify(error)));
+  });
+  worker.addEventListener('error', e => { errors.push({ message: e.message, filename: e.filename, lineno: e.lineno }); });
+  const request = (name, payload) => new Promise((resolve, reject) => {
+    if (!live) return reject(Error('Test Worker terminated'));
+    const id = ++next;
+    const timeout = setTimeout(() => { pending.delete(id); reject(Error('Bounded test-only command timeout: ' + name)); }, 20000);
+    pending.set(id, { name, resolve, reject, timeout });
+    record('native-worker-postMessage', { id, name });
+    Reflect.apply(nativePostMessage, worker, [{ id, name, payload }]);
+  });
+  window.harness = {
+    request,
+    roundtripAuth: () => { if (!token) throw Error('Missing real Worker token clone'); return request('auth-return', { handle: token }); },
+    diagnostics: () => ({ trace, errors, nativeFunctions, pending: pending.size, live }),
+    stop: () => { if (live) { Reflect.apply(nativeTerminate, worker, []); live = false; record('native-worker-terminate'); }
+      for (const entry of pending.values()) { clearTimeout(entry.timeout); entry.reject(Error('Test harness cleanup')); } pending.clear(); return { trace, errors, nativeFunctions, pending: pending.size, live }; }
+  };
+})();
+</script>

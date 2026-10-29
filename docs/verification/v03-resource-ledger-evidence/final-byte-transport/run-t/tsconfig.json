@@ -1,0 +1,1 @@
+{"compilerOptions": {"target": "ES2022", "module": "commonjs", "strict": true, "skipLibCheck": true, "lib": ["ES2022"], "types": [], "outDir": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\g1-final\\run-t\\compiled"}, "files": ["C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\g1-final\\t\\src\\compute\\resourceLedger.ts"]}

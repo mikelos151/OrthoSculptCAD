@@ -1,0 +1,165 @@
+{
+  "kind": "design-witness-not-implementation-test",
+  "head": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "source_hashes_verified": {
+    "docs/plans/v03-source-bound-spans-design.md": "c17ba16b281b81239aeaf8e65bf828ad0ef9f545fcbfafda9646edbd6507acbf",
+    "src/trimline/source-candidate.ts": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b"
+  },
+  "historical_sha256": {
+    "design_inventory.py": "ad34edd4a859b10c05cd25d485fb6d2d080e3972756d38a97c78d251bc012646",
+    "inventory-and-arithmetic.json": "1a7ef5914ef8cb27e4785c67a67a91060d773fd190e61b747cbfd2f2a4233125",
+    "design-inventory.log": "d37818d7f09237a4fe9d996b8f2706223d755f35da34a4cfc3dcbb75af6a3f56"
+  },
+  "layouts": [
+    {
+      "D": 96,
+      "J": 162,
+      "T": 272,
+      "P": 3848,
+      "D_plus_arena": 3944,
+      "worker_payload_initial": 4394
+    },
+    {
+      "D": 4800000,
+      "J": 4800066,
+      "T": 13000000,
+      "P": 40803608,
+      "D_plus_arena": 45603608,
+      "worker_payload_initial": 50403962
+    },
+    {
+      "D": 8800000,
+      "J": 8800066,
+      "T": 13000000,
+      "P": 40803608,
+      "D_plus_arena": 49603608,
+      "worker_payload_initial": 58403962
+    }
+  ],
+  "tetra": {
+    "V": 4,
+    "F": 4,
+    "edges": 6,
+    "boundary": 0,
+    "nonmanifold": 0,
+    "bad_closed_links": 0,
+    "winding": 0,
+    "components": 1,
+    "signed_volume": "1/6"
+  },
+  "subdivided_tetra": {
+    "V": 10,
+    "F": 16,
+    "edges": 24,
+    "boundary": 0,
+    "nonmanifold": 0,
+    "bad_closed_links": 0,
+    "winding": 0,
+    "components": 1,
+    "signed_volume": "1/6"
+  },
+  "hole_mutant": {
+    "V": 10,
+    "F": 15,
+    "edges": 24,
+    "boundary": 3,
+    "nonmanifold": 0,
+    "bad_closed_links": 3,
+    "winding": 0,
+    "components": 1,
+    "signed_volume": "1/8"
+  },
+  "duplicate_mutant": {
+    "V": 10,
+    "F": 17,
+    "edges": 24,
+    "boundary": 0,
+    "nonmanifold": 3,
+    "bad_closed_links": 3,
+    "winding": 0,
+    "components": 1,
+    "signed_volume": "5/24"
+  },
+  "local_face_unchanged_and_disjoint_from_mutated_face": true,
+  "analytic_intersection": {
+    "segment": [
+      [
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "A_bary_at_start": [
+      "3/8",
+      "3/8",
+      "1/4"
+    ],
+    "A_bary_at_end": [
+      "1/8",
+      "1/8",
+      "3/4"
+    ]
+  },
+  "raw_S_B_volumes": {
+    "raw": "1/6",
+    "S": "4/3",
+    "B": "9/2"
+  },
+  "finite_abstract_stack_cases": [
+    {
+      "F": 1,
+      "peak": 1,
+      "bound": 3
+    },
+    {
+      "F": 4,
+      "peak": 1,
+      "bound": 11
+    },
+    {
+      "F": 5,
+      "peak": 3,
+      "bound": 15
+    },
+    {
+      "F": 8,
+      "peak": 3,
+      "bound": 15
+    },
+    {
+      "F": 16,
+      "peak": 5,
+      "bound": 19
+    },
+    {
+      "F": 31,
+      "peak": 7,
+      "bound": 23
+    },
+    {
+      "F": 64,
+      "peak": 9,
+      "bound": 27
+    },
+    {
+      "F": 127,
+      "peak": 11,
+      "bound": 31
+    },
+    {
+      "F": 256,
+      "peak": 13,
+      "bound": 35
+    }
+  ],
+  "error_budget_sum_mm": "1/50",
+  "git_status": "?? docs/plans/v03-source-admission-owner-design.md",
+  "implementation_tests_executed": false,
+  "native_workers_executed": false,
+  "rss_measured": false
+}

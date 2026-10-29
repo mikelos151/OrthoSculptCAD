@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "security_concerns": [],
+  "logic_errors": [],
+  "G1a_full_contract_ready": true,
+  "initial_LEDGER_01_closed": true,
+  "suggestions": [
+    {
+      "id": "G1A-PHASE-REGRESSION",
+      "blocking": false,
+      "location": "docs/plans/v03-source-admission-owner-design.md:150-153,159,163",
+      "finding": "Rozróżnienie reserved/live jest wystarczające do rozpoczęcia implementacji: reserve tworzy reserved ref, allocate materializuje backing, retain wymaga live ref. Nie traktować słowa live jako synonimu każdego aktywnego reference z R(a), które jawnie obejmuje także reserved. To wskazówka implementacyjna, nie kolejny brak freeze.",
+      "recommendation": "Dodać mały test odmowy retain przed materializacją i zachowania grafu; po throw allocator wycofać niezmaterializowaną rezerwację bez zmiany obcych refs. Retained live ref nie jest reserved i nie może ponownie allocate. registerExisting przyjmuje istniejący rzeczywisty backing, nie plan.bytes ani klucz rezerwacji; nie ma backing identity do powielenia przed materializacją. Nie wymaga to implementacji transportu G1b."
+    },
+    {
+      "id": "G1A-TDD-GUIDANCE",
+      "blocking": false,
+      "location": "docs/plans/v03-source-admission-owner-design.md:238,281",
+      "finding": "Zdanie o pierwszym RED wskazuje over-allocation/double-count/release, ale ten sam akapit dopuszcza scaffold odmawiający operacji. Nie odczytuję tego jako obowiązku celowego napisania błędnej produkcji. Jest to ograniczona nieostrość instrukcji TDD, nie sprzeczność modelu własności ani blocker implementera.",
+      "recommendation": "Uczciwie oddzielić bootstrap/import coverage od behawioralnego RED. Test poprawnego reserve/allocate, który zawodzi dlatego, że istniejący scaffold nadal odmawia prawidłowej operacji, jest prawidłowym pierwszym funkcjonalnym RED. Nie fabrykować dopuszczenia over-cap ani błędnego release, aby uzyskać taki log; kolejne testy rozwijać pionowo."
+    }
+  ],
+  "summary": "PASS WYŁĄCZNIE PROJEKTU: LEDGER-01 zamknięty; można rozpocząć pełne G1a według §5.1.1, nie tylko izolowany reserve/allocate. Nie jest to GREEN implementacji ani akceptacja source admission.",
+  "readiness": {
+    "G1a_full_contract_ready": true,
+    "G1a_implementation_GREEN": false,
+    "reason": "Zamrożono oddzielne allocation/reference/key identities, ownership konkretnego lease, per-category set charges, shared-backing registration, atomowe delty i rollback, close tylko własnych refs oraz controlled holds i sole-reference transfer eligibility. Nie ma potrzeby kolejnej decyzji produktowej przed rozpoczęciem G1a.",
+    "G1b": "Osobna przyszła bramka: rzeczywisty broker, sealed transport, pre-postMessage/throw/detached/in-flight/ACK/deadline/terminate oraz finite terminal transitions; symboliczny hold nie jest dowodem native lifecycle.",
+    "G2": "Osobna przyszła bramka: real bounded topology/spatial arenas, offsets/lifetimes/work/stack bounds, degeneracje i konserwatywne predicates, dodatnie/negatywne/UNKNOWN fixtures oraz migrowany analyze. Nie blokuje rozpoczęcia G1a.",
+    "G3": "Zależne od G1/G2: prywatna ekstrakcja bez zmiany candidate contract, rzeczywisty retained owner, audit tych samych prywatnych bajtów, authority/decoder/errors/lifecycle. Nie przyjęto AuditedSource.",
+    "G4": "Zależne od G3: rzeczywiste registry/mode/mutation/publication/consumer fences oraz native integration; brak akceptacji pełnego CAD/shell/export/reload/clinical/native EXE.",
+    "accepted_source_candidate_status": "Bez zmian; candidate-only, nie admitted S ani product owner."
+  },
+  "scope": {
+    "kind": "fresh independent READONLY targeted design rereview",
+    "language": "pl",
+    "repository": "C:/Users/sandr/OrthoSculptCAD",
+    "branch": "feature/trimline-v03",
+    "HEAD_start_and_end": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+    "reviewed": "§5.1/5.1.1, G1a row, §8 resource fixture, §9 start/evidence text; exact original-to-current diff and previous LEDGER-01 AC; fixer witness source and artifact verifier",
+    "writes_only": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-rereview/",
+    "repository_writes": false,
+    "original_evidence_writes": false,
+    "git_stage_commit_reset_stash": false,
+    "dependencies_global_settings_profiles_skills_modified": false,
+    "not_run": ["production tests", "browser", "native Worker", "native transfer/SHA/ACK", "RSS benchmark", "large geometry or cap-sized allocation"],
+    "not_claimed": ["production ResourceLedger exists or passes", "G1a GREEN", "native capability authentication proof", "G1b/G2/G3/G4 completion", "source admission", "complete CAD", "clinical acceptance", "native EXE acceptance"]
+  },
+  "evidence": {
+    "semantic_checks": [
+      {
+        "location": "plan:134,146-163,175-180,187-191",
+        "assessment": "LEDGER-01 AC1/AC2 zamknięte. Managed liczy backing raz przy co najmniej jednym aktywnym/reserved/controlled ref; job/history każdy raz dla własnej aktywnej kategorii, także jednocześnie 2D przy managed D. resident 768 + Undo history przy cap 512 musi odmówić bez zmiany grafu; cap 768 pozwala (768,0,768). Powtórne refs tej samej kategorii nie dublują charge, view liczy pełny backing, kopia otrzymuje nowy ID. reserve/retain/register/reclassify preflightują wszystkie delty, zachowując stary graf przy odmowie; safe integer/overflow wymagane w §5.1."
+      },
+      {
+        "location": "plan:146,150-157,163,165,187-191",
+        "assessment": "Autentyczny Ref należy do jednego lease; targetLease.retain tworzy nowy reference istniejącego allocation. Prywatny WeakMap intrinsic backing identity rozpoznaje ponowną rejestrację śledzonego bufora; payload JSON/string/TS brand nie daje authority. Nieśledzony istniejący payload jest naliczany przed mode entry, bez fikcyjnej deklaracji wcześniejszego reserve. Reserved nie jest materialized live; nie ma wymagania dopuszczenia retain przed allocate ani tworzenia dwóch backing dla jednego ID. Konkretna konstrukcja prywatnych map/factory nie musi być gotowa przed startem implementera."
+      },
+      {
+        "location": "plan:155,165-183",
+        "assessment": "LEDGER-01 AC3/AC4 zamknięte. close usuwa wyłącznie własne refs; drugi lease utrzymuje charge. Reclassify jednego ref nie zdejmuje kategorii drugiego; odmowa zachowuje oba. Retired release/double-close są no-op, foreign/forged/other-lease pozostają INVALID_INPUT także po close, autentyczna operacja w zamkniętym target lease ma CLOSED. Retired source nie daje authority retain/transfer. Controlled ref w oddzielnym broker lease przeżywa caller close/cancel do settle. Reguły są spójne na poziomie kontraktu, nie dowiedzione runtime."
+      },
+      {
+        "location": "plan:167-169,181-185,238,277-289",
+        "assessment": "Transfer zachowuje ID/bytes/category i wymaga jednego aktywnego ref całego backing, wliczając controlled refs. Alias daje TRANSFER_ALIASED przed detach; alternatywna kopia wymaga nowego reserve. Broker może zostać jedynym ref po release callera i utrzymać charge w locie. G1a wymaga testów tych logicznych reguł i real ArrayBuffer, a ACK/terminal transport pozostawia jawnie G1b. Nie znaleziono nowej sprzeczności wymagającej pełnego native backendu przed implementacją ledgeru."
+      }
+    ],
+    "plan_sha256_start_and_end": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+    "plan_bytes": 53412,
+    "plan_lines": 305,
+    "original_plan_sha256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+    "original_plan_matches_archived_initial_plan": true,
+    "source_candidate_sha256_start_and_end": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "fix_scope_verified": {
+      "added_lines": 62,
+      "removed_lines": 5,
+      "exact_patch_matches_fixer_targeted_patch": true,
+      "changed_since_fix_initial_snapshot": ["docs/plans/v03-source-admission-owner-design.md"],
+      "src_tests_docs_files_verified_unchanged_during_rereview": 2428,
+      "original_scratch_evidence_files_verified_unchanged": 29,
+      "protected_sections_byte_equal_original": ["§1–4", "§5.2", "§6", "§10"],
+      "git_status_unchanged": true
+    },
+    "actual_commands": [
+      {"command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-rereview/prepare_review.py", "exit_code": 0},
+      {"command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-rereview/contract_witness.py", "exit_code": 0, "result": {"kind": "SPEC_MODEL_NOT_IMPLEMENTATION", "vectors": 33, "projection_graphs": 729}},
+      {"command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-rereview/contract_witness.py --negative-control history-escape", "exit_code": 1, "expected": true, "assertion": "resident-undo-refused-512: OK versus BUDGET"},
+      {"command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-rereview/contract_witness.py --negative-control sum-refs", "exit_code": 1, "expected": true, "assertion": "resident-undo-accepted-768: BUDGET versus OK"},
+      {"command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-rereview/verify_artifacts.py", "exit_code": 0},
+      {"command": "git -C C:/Users/sandr/OrthoSculptCAD rev-parse HEAD; git -C C:/Users/sandr/OrthoSculptCAD status --short", "exit_code": 0},
+      {"command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-rereview/final_review_checks.py", "exit_code": 0}
+    ],
+    "replay_safety": "Przed wykonaniem przeczytano całe skrypty i miejsca zapisów. Skopiowano byte-identical do własnego scratch; __file__.parent kieruje wszystkie wyniki do katalogu rereview. Oryginałów nie uruchamiano i nie nadpisano. Wynik witness-results.json jest byte-identical do źródłowego artefaktu; liczniki/nazwy wektorów ponownie uzgodniono programowo.",
+    "witness_source_sha256": "3dd9ffb99d939791c25f41705acf70b2878d839258cdb319e83faed9eefd4ad7",
+    "verifier_source_sha256": "84e1aa17ba229ff434b335475c17d8e6a8146098137fb17d19152dbba88caf8d",
+    "artifacts": ["review-input-verification.json", "prepare.log", "contract_witness.py", "verify_artifacts.py", "witness-results.json", "witness.log", "negative-history-escape.log", "negative-sum-refs.log", "exit-codes.log", "artifact-verification.json", "verification.log", "final-verification.json", "git-head-end.txt", "git-status-end.txt"],
+    "artifact_hash_manifest": "final-verification.json",
+    "issues_encountered": ["Początkowa próba odpalenia git jako procesu potomnego Pythona zwróciła WinError 5/exit 1. Odczyty git wykonano następnie bezpośrednio przez bash terminal; exit 0, HEAD/status potwierdzone. Nie blokuje review."]
+  }
+}

@@ -1,0 +1,26 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (10 tests | 1 failed) 22ms
+     × 10 bounds live control records including zero-byte reservations and empty leases 5ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 10 bounds live control records including zero-byte reservations and empty leases
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-resource-ledger.test.ts:17:35
+     15|     const controls = { maxLeases: 2, maxRefs: 2, maxRealms: 1, maxPlan…
+     16|     const l = createResourceLedger(caps, { controls }), owner = l.crea…
+     17|     expect(() => l.createRealm()).toThrowError(expect.objectContaining…
+       |                                   ^
+     18|     expect(() => l.reserve([{ key: 'long-key', bytes: 0, category: 're…
+     19|     const a = accepted(l.reserve([{ key: 'a', bytes: 0, category: 'job…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 9 passed (10)
+   Start at  19:09:42
+   Duration  299ms (transform 53ms, setup 0ms, import 71ms, tests 22ms, environment 0ms)
+

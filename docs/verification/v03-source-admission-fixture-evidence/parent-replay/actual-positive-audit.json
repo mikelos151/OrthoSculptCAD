@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "id": "edge-manifold",
+      "label": "Edge manifold",
+      "status": "pass",
+      "detail": "0 non-manifold edge(s); 0 boundary edge(s)"
+    },
+    {
+      "id": "watertight",
+      "label": "Closed edge topology",
+      "status": "pass",
+      "detail": "Closed edges alone do not prove absence of intersections"
+    },
+    {
+      "id": "vertex-manifold",
+      "label": "Vertex manifold",
+      "status": "pass",
+      "detail": "0 invalid or isolated vertex link(s)"
+    },
+    {
+      "id": "components",
+      "label": "Single edge-connected surface",
+      "status": "pass",
+      "detail": "1 edge-connected component(s)"
+    },
+    {
+      "id": "degenerate-triangles",
+      "label": "Non-degenerate faces",
+      "status": "pass",
+      "detail": "0 degenerate triangle(s)"
+    },
+    {
+      "id": "winding",
+      "label": "Consistent winding",
+      "status": "pass",
+      "detail": "0 inconsistently oriented edge(s)"
+    },
+    {
+      "id": "self-intersections",
+      "label": "3D self-intersections",
+      "status": "pass",
+      "detail": "Complete bounded triangle/triangle audit; 0 witness pair(s), 66 candidate tests"
+    },
+    {
+      "id": "outward",
+      "label": "Outward orientation",
+      "status": "pass",
+      "detail": "outward"
+    },
+    {
+      "id": "minimum-thickness",
+      "label": "Minimum thickness",
+      "status": "unknown",
+      "detail": "Not computed. Normal-offset distance is not a minimum-wall-thickness guarantee."
+    }
+  ],
+  "triangleCount": 12,
+  "candidateTests": 66,
+  "complete": true,
+  "elapsedMs": 2.521000000000001,
+  "intersections": [],
+  "orientation": "outward",
+  "signedVolume": 1
+}

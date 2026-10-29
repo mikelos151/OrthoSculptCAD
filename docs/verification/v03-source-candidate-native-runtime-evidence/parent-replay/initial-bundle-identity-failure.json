@@ -1,0 +1,5 @@
+{
+  "output": "Traceback (most recent call last):\r\n  File \"<string>\", line 12, in <module>\r\n    d=json.loads((p/'results.json').read_text());assert d['bundle']['workerSha256']=='9fb389d3260a92ad812774f862970dbc19fd265bb0776ffa8dd263b85111d6dd'\r\n                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError",
+  "exit_code": 1,
+  "error": null
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "C:/Users/sandr/OrthoSculptCAD/tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/src",
+    "outDir": "./build"
+  },
+  "include": [
+    "C:/Users/sandr/OrthoSculptCAD/src/geometry/audit.ts",
+    "C:/Users/sandr/OrthoSculptCAD/src/trimline/source-candidate.ts",
+    "C:/Users/sandr/OrthoSculptCAD/src/trimline/bezier.ts"
+  ],
+  "exclude": []
+}

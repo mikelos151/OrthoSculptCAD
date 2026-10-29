@@ -1,0 +1,26 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (11 tests | 1 failed) 14ms
+     × 11 rejects detached live backing and allocator reuse without corrupting another allocation 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 11 rejects detached live backing and allocator reuse without corrupting another allocation
+AssertionError: expected function to throw an error, but it didn't
+ ❯ tests/v03-resource-ledger.test.ts:20:40
+     18|     const r = a.ref('a'), rb = a.ref('b'); a.allocateBuffer(r);
+     19|     const before = l.snapshot();
+     20|     expect(() => a.allocateBuffer(rb)).toThrowError(expect.objectConta…
+       |                                        ^
+     21|     expect(tuple(l)).toEqual([16, 16, 0]);
+     22|     expect(l.snapshot().allocations[0]).toEqual(before.allocations[0]);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 10 passed (11)
+   Start at  19:11:15
+   Duration  168ms (transform 30ms, setup 0ms, import 41ms, tests 14ms, environment 0ms)
+

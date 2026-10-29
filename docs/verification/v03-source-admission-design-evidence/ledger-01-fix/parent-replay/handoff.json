@@ -1,0 +1,62 @@
+{
+  "status": "LEDGER-01 technical correction delivered; pending fresh independent parent review",
+  "scope": "Only docs/plans/v03-source-admission-owner-design.md and this new owned scratch directory; no production implementation",
+  "repository": "C:/Users/sandr/OrthoSculptCAD",
+  "branch_observed_start": "feature/trimline-v03",
+  "head_start_and_end": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "plan": {
+    "path": "C:/Users/sandr/OrthoSculptCAD/docs/plans/v03-source-admission-owner-design.md",
+    "sha256_before": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+    "sha256_after": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+    "lines_before": 248,
+    "lines_after": 305,
+    "added_lines": 62,
+    "removed_lines": 5,
+    "targeted_changes": [
+      "§5.1 lines 134/136: overlapping category subsets and opaque-reference API cross-reference replace key-based ownership",
+      "New §5.1.1 lines 144–191: authentic ledger-scoped Ref/Lease/Realm, reserve/ref/allocate/retain/registerExisting/reclassify/release/close/transfer table",
+      "§5.1.1: unique-allocation global charge; full-backing charge once per referenced category including reserved/controlled refs; atomic refusal preserves full old graph",
+      "§5.1.1: same-backing private identity map at trusted UI/history ingress; untracked payload charged before mode entry; independent copies new IDs; no file/JSON authority",
+      "§5.1.1: own-lease-only close/release, retired idempotence, broker-controlled native/pending reference, sole-reference transfer eligibility and explicit alias refusal/copy alternative",
+      "§5.1.1: exact deterministic counter/error matrix and full G1a versus isolated reserve/allocate distinction",
+      "G1a row line 238, §8 resource fixture line 271, §9 first fixture line 281 refer to complete freeze; lines 283–289 record only executable SPEC-model evidence"
+    ]
+  },
+  "verification": {
+    "kind": "SPEC_MODEL_NOT_IMPLEMENTATION",
+    "command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-fix/contract_witness.py",
+    "exit_code": 0,
+    "vectors": 33,
+    "projection_graphs": 729,
+    "negative_controls": [
+      {"argument": "--negative-control history-escape", "exit_code": 1, "assertion": "resident-undo-refused-512: computed OK versus required BUDGET"},
+      {"argument": "--negative-control sum-refs", "exit_code": 1, "assertion": "resident-undo-accepted-768: computed BUDGET versus required OK"}
+    ],
+    "artifact_check_command": "python C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-admission-ledger-contract-fix/verify_artifacts.py",
+    "artifact_check_exit_code": 0,
+    "source_path": "src/trimline/source-candidate.ts",
+    "source_sha256_start": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "source_sha256_end": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+    "src_tests_docs_snapshot_files": 2428,
+    "snapshot_changed_paths": ["docs/plans/v03-source-admission-owner-design.md"],
+    "protected_sections_unchanged": ["§1–4", "§5.2", "§6 arena formulas and all contents", "§10 original historical verification"],
+    "git_tracked_and_staged_diff_empty": true,
+    "git_status_matches_initial_observation": true
+  },
+  "artifacts_relative_to_this_directory": [
+    "contract_witness.py", "witness-results.json", "witness.log", "exit-codes.log",
+    "negative-history-escape.log", "negative-sum-refs.log", "plan-before.md", "targeted.patch",
+    "input-hashes-start.json", "input-hashes-end.json", "verify_artifacts.py", "artifact-verification.json",
+    "verification.log", "verification-first-failure.log", "git-head-end.txt", "git-status-end.txt"
+  ],
+  "issues_encountered": [
+    "The first edit-scope verifier used line 144 for insertion; difflib places the inserted block at the preceding blank line 143. Preserved the initial assertion log, corrected that whitelist boundary only, reran to exit 0. No contract-vector failures on the non-mutated model."
+  ],
+  "not_claimed": [
+    "fresh independent review PASS", "G1a implemented or GREEN", "production ResourceLedger tests/RED",
+    "native ArrayBuffer/WeakMap/SHA/transfer/ACK/thread/RSS proof", "G1b/G2/G3/G4 completion",
+    "source admission acceptance", "clinical or native EXE acceptance"
+  ],
+  "next_owner_action": "Fresh independent review of LEDGER-01 correction and rerun contract_witness.py/verify_artifacts.py before any production coding. Other future-gate AC remain open, not blockers retroactively implemented here.",
+  "forbidden_actions_not_taken": ["stage", "commit", "reset", "stash", "dependency install", "global setting change", "other profile/skill edit", "source/test/config/release/dist edit"]
+}

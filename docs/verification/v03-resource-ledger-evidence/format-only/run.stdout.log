@@ -1,0 +1,5 @@
+full-unit: exit=0
+typecheck: exit=0
+python-reference: exit=0
+npm-audit: exit=0
+{"unitExit": 0, "typecheckExit": 0, "pythonExit": 0, "npmAuditExit": 0, "inputHashesUnchanged": true, "staticScan": {"suspectedCredential": [], "dynamicExecution": [], "networkOrProcess": []}, "scope": "G1a primitive regression only, not source admission/App/Worker integration", "unit": {"success": true, "numTotalTests": 1224, "numPassedTests": 1224, "numFailedTests": 0, "numPendingTests": 0, "numTodoTests": 0}, "ledger": [{"status": "passed", "assertions": 16, "failed": []}], "unitExpectedTotal": 1224, "pythonTests": 71, "auditVulnerabilities": {"info": 0, "low": 0, "moderate": 0, "high": 0, "critical": 0, "total": 0}, "status": "REGRESSION_PASS_REVIEWS_PENDING"}

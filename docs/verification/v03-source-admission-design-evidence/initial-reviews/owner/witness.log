@@ -1,0 +1,56 @@
+{
+  "kind": "independent-design-witness-only",
+  "input_files_unchanged": 19,
+  "plan_lines": 248,
+  "wire": {
+    "bytes": 256,
+    "nonoverlapping": true,
+    "specified_bytes": 47,
+    "zero_padding_bytes": 209,
+    "padding_ranges": [
+      [
+        17,
+        19
+      ],
+      [
+        50,
+        255
+      ]
+    ]
+  },
+  "proposed_arena_rows": [
+    {
+      "V": 4,
+      "F": 4,
+      "RGB_UV": false,
+      "D": 96,
+      "J": 162,
+      "T": 272,
+      "P": 3848,
+      "D_plus_arena": 3944
+    },
+    {
+      "V": 200000,
+      "F": 200000,
+      "RGB_UV": false,
+      "D": 4800000,
+      "J": 4800066,
+      "T": 13000000,
+      "P": 40803608,
+      "D_plus_arena": 45603608
+    },
+    {
+      "V": 200000,
+      "F": 200000,
+      "RGB_UV": true,
+      "D": 8800000,
+      "J": 8800066,
+      "T": 13000000,
+      "P": 40803608,
+      "D_plus_arena": 49603608
+    }
+  ],
+  "G1a_fixture_arithmetic_consistent": true,
+  "runtime_tests_executed": false,
+  "native_worker_or_GC_or_RSS_proof": false
+}

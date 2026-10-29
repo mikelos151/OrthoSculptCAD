@@ -1,0 +1,28 @@
+
+ RUN  v4.1.12 C:/Users/sandr/OrthoSculptCAD
+
+ ❯ tests/v03-resource-ledger.test.ts (3 tests | 1 failed) 9ms
+     × 03 retains materialized backing once per category with atomic history refusal 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 03 retains materialized backing once per category with atomic history refusal
+Error: Invalid ledger input
+ ❯ invalid src/compute/resourceLedger.ts:19:49
+     17| export interface LedgerInternals { allocate?: (bytes: number) => Array…
+     18| const BUDGET: Refusal = Object.freeze({ ok: false, code: 'BUDGET' });
+     19| function invalid(): never { throw Object.assign(new Error('Invalid led…
+       |                                                 ^
+     20| function category(c: unknown): asserts c is Category { if (c !== 'resi…
+     21| function size(n: unknown): asserts n is number { if (typeof n !== 'num…
+ ❯ Object.retain src/compute/resourceLedger.ts:57:86
+ ❯ tests/v03-resource-ledger.test.ts:23:20
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 2 passed (3)
+   Start at  19:04:09
+   Duration  262ms (transform 34ms, setup 0ms, import 49ms, tests 9ms, environment 0ms)
+

@@ -1,0 +1,118 @@
+{
+  "label": "EXACT ANALYTICAL WITNESS; not a numerical audit output",
+  "indexedFaces": [
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      4,
+      5,
+      6
+    ]
+  ],
+  "indexedDisjoint": true,
+  "derivation": "z=1-(5/4)*w6=0 forces w6=4/5; w4+w5=1/5. Thus intersection with z=0 is the entire segment x in [4/5,1], y=4/5. For every real s in (0,1), p(s)=((4+s)/5,4/5,0); face0 weights=((1-s)/5,4/5,s/5), face2 weights=((1-s)/5,s/5,4/5). All six weights strictly positive, each triple sums to 1. Both parameterizations equal p(s) identically by distributivity; therefore a continuum of relative-interior intersections, not legal shared incidence. Endpoints below checked by Fraction; midpoint is only a check, not the continuum proof.",
+  "exactPolynomialIdentityChecked": true,
+  "worldAffinePolynomialCoefficients": [
+    [
+      "4/5",
+      "1/5"
+    ],
+    [
+      "4/5",
+      "0"
+    ],
+    [
+      "0",
+      "0"
+    ]
+  ],
+  "face0WeightPolynomialCoefficients": [
+    [
+      "1/5",
+      "-1/5"
+    ],
+    [
+      "4/5",
+      "0"
+    ],
+    [
+      "0",
+      "1/5"
+    ]
+  ],
+  "face2WeightPolynomialCoefficients": [
+    [
+      "1/5",
+      "-1/5"
+    ],
+    [
+      "0",
+      "1/5"
+    ],
+    [
+      "4/5",
+      "0"
+    ]
+  ],
+  "continuumInteriorProof": "Every weight is affine with nonnegative endpoint values, not both zero; strict convex interpolation makes all weights positive for every real 0<s<1.",
+  "positiveLengthSquared": "1/25",
+  "witnesses": [
+    {
+      "s": "0",
+      "point": [
+        "4/5",
+        "4/5",
+        "0"
+      ],
+      "face0Barycentrics": [
+        "1/5",
+        "4/5",
+        "0"
+      ],
+      "face2Barycentrics": [
+        "1/5",
+        "0",
+        "4/5"
+      ]
+    },
+    {
+      "s": "1/2",
+      "point": [
+        "9/10",
+        "4/5",
+        "0"
+      ],
+      "face0Barycentrics": [
+        "1/10",
+        "4/5",
+        "1/10"
+      ],
+      "face2Barycentrics": [
+        "1/10",
+        "1/10",
+        "4/5"
+      ]
+    },
+    {
+      "s": "1",
+      "point": [
+        "1",
+        "4/5",
+        "0"
+      ],
+      "face0Barycentrics": [
+        "0",
+        "4/5",
+        "1/5"
+      ],
+      "face2Barycentrics": [
+        "0",
+        "1/5",
+        "4/5"
+      ]
+    }
+  ]
+}

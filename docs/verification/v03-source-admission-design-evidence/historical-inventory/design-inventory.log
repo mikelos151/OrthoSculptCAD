@@ -1,0 +1,57 @@
+{
+  "head": "f288ffccb0d1eb2f2f901d9a03e1daa408b289db",
+  "branch": "feature/trimline-v03",
+  "current_domain_bytes": 27,
+  "design_examples": [
+    {
+      "V": 4,
+      "F": 4,
+      "S_buffer_bytes": 96,
+      "current_preimage_bytes": 162,
+      "current_capture_buffer_peak": 258,
+      "proposed_topology_arena_bytes": 272,
+      "proposed_spatial_arena_bytes": 3848,
+      "proposed_audit_arena_peak": 3848,
+      "proposed_S_plus_audit_arena": 3944,
+      "tree_nodes_upper": 7,
+      "tree_height_upper": 2,
+      "disclaimer": "Arithmetic for PROPOSED future layouts, not current audit memory, implemented bound, RSS or benchmark."
+    },
+    {
+      "V": 200000,
+      "F": 200000,
+      "S_buffer_bytes": 4800000,
+      "current_preimage_bytes": 4800066,
+      "current_capture_buffer_peak": 9600066,
+      "proposed_topology_arena_bytes": 13000000,
+      "proposed_spatial_arena_bytes": 40803608,
+      "proposed_audit_arena_peak": 40803608,
+      "proposed_S_plus_audit_arena": 45603608,
+      "tree_nodes_upper": 399999,
+      "tree_height_upper": 18,
+      "disclaimer": "Arithmetic for PROPOSED future layouts, not current audit memory, implemented bound, RSS or benchmark."
+    },
+    {
+      "V": 200000,
+      "F": 200000,
+      "S_buffer_bytes": 8800000,
+      "current_preimage_bytes": 8800066,
+      "current_capture_buffer_peak": 17600066,
+      "proposed_topology_arena_bytes": 13000000,
+      "proposed_spatial_arena_bytes": 40803608,
+      "proposed_audit_arena_peak": 40803608,
+      "proposed_S_plus_audit_arena": 49603608,
+      "tree_nodes_upper": 399999,
+      "tree_height_upper": 18,
+      "disclaimer": "Arithmetic for PROPOSED future layouts, not current audit memory, implemented bound, RSS or benchmark."
+    }
+  ],
+  "caps_proposed_only": {
+    "jobs": 134217728,
+    "history": 134217728,
+    "managed": 402653184
+  },
+  "executed_geometry_tests": false,
+  "memory_measured": false
+}
+Inventory written: C:\Users\sandr\AppData\Local\hermes\cache\scratch\v03-source-admission-design\inventory-and-arithmetic.json

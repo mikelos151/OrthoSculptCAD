@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "scope": "NONPRODUCTION native Chromium Worker harness only; synthetic TESTDATA; no actual scans/PHI",
+  "checks": [
+    {
+      "name": "independent-oracle",
+      "pass": true
+    },
+    {
+      "name": "worker-local-input-mutation",
+      "pass": true
+    },
+    {
+      "name": "pending-native-digest-dispose",
+      "pass": true
+    },
+    {
+      "name": "opaque-handle-authentication",
+      "pass": true
+    },
+    {
+      "name": "real-bind-cumulative-context",
+      "pass": true
+    }
+  ],
+  "oracle": {
+    "cases": 31,
+    "faces": 121,
+    "uniqueRuntimeIds": 31
+  },
+  "nativeDigests": 36,
+  "cleanup": {
+    "nativeWorkerConstructed": 1,
+    "nativeWorkerTerminated": 1,
+    "playwrightWorkerClosed": 1,
+    "browserDisconnected": true,
+    "serverStopped": true,
+    "serverPortRefused": true,
+    "playwrightWorkerCreated": 1,
+    "workerClosedBeforeContextClose": true
+  },
+  "sourceSha256": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+  "evidence": [
+    "results.json",
+    "raw-results.json",
+    "manifest.json",
+    "bundle/worker.js",
+    "bundle/worker.js.map",
+    "run.log"
+  ],
+  "replay": "NODE_OPTIONS='--max-old-space-size=256 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-source-candidate-native-runtime/cli.mjs",
+  "limits": [
+    "Not product retained-owner/RPC authority/admission/pool integration; no audit/cut/shell/UI acceptance.",
+    "Only private S + SHA preimage buffer accounting; no total RAM/RSS/GC/native-thread measurement.",
+    "Gate delays return of actual native SHA bytes after JS-observed native promise fulfillment; no hash stub or native cancel claim.",
+    "SAB not tested; absence without cross-origin isolation is not a SAB-case PASS.",
+    "TESTDATA-source-imported-metadata-only is synthetic TESTDATA, not imported patient data.",
+    "Existing full product scope and budgets unchanged. No repository/config/skills/dependencies edits."
+  ]
+}

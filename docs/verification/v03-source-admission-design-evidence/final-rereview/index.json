@@ -1,0 +1,114 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/artifact-verification.json",
+      "sha256": "f29bdd05b03c87ccf13c01579ccdbe5c1eb1451de87167ecee147935b0cb125c",
+      "bytes": 3359
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/contract_witness.py",
+      "sha256": "3dd9ffb99d939791c25f41705acf70b2878d839258cdb319e83faed9eefd4ad7",
+      "bytes": 14807
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/exit-codes.log",
+      "sha256": "e6964560c80cb8a26412c4ac3ff37e426740c13366d6503f7c403d09280caea4",
+      "bytes": 75
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/final-verification.json",
+      "sha256": "370910f80756f5df9f56ae5c79dee26818eeb334538ef396d885d503b01405d7",
+      "bytes": 2637
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/final_review_checks.py",
+      "sha256": "a5556d2227aeedb96ae378d84cc5fa7208ac3acaae085a95f36797ad2422bba9",
+      "bytes": 2967
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/git-head-end.txt",
+      "sha256": "c9fd0cf539cda2c063f618dd1c1b3eedf0fe0019033cae78de0412eae1ee4fed",
+      "bytes": 41
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/git-status-end.txt",
+      "sha256": "f922911dedcf7921c17be76161b15ff562ce0c86a96a577dec67fc937a27dab8",
+      "bytes": 237
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/input-hashes-end.json",
+      "sha256": "e7251cae1e13c4947b3ece56c56ea35e8af81a438d27f3a777a59e07fd1a942c",
+      "bytes": 435504
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/input-hashes-start.json",
+      "sha256": "6769adff6b346faaa3bb60b158267092e5262f7a415424ff3f778eea9d624760",
+      "bytes": 435504
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/negative-history-escape.log",
+      "sha256": "60b3eeb780afe061c2cc411d73c58c8f98f9a653bc1a6457142982142032b40d",
+      "bytes": 538
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/negative-sum-refs.log",
+      "sha256": "514236e2591af5c8760866ff9cb975e985a5b581468840bcaa7138b96f818d3d",
+      "bytes": 539
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/plan-before.md",
+      "sha256": "1504d3ae9596fe6456b648972e7388a8d28c26dced926cf66be6e7c1088c23ea",
+      "bytes": 44161
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/prepare.log",
+      "sha256": "f5890675cbe9dc8be31703161ad0d4c0dd4a8017b9ec87b9361b8be63644ca97",
+      "bytes": 1826
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/prepare_review.py",
+      "sha256": "5894af5e963df563af9d410c5833c9dff2cdf214177b5e68358f88970c4ab5a1",
+      "bytes": 3282
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/review-input-verification.json",
+      "sha256": "59f69bd5f6016d50aacdddd328514da423f8230dd7fe70a58a5c4bfd521db685",
+      "bytes": 449210
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/review.json",
+      "sha256": "e2ed0ca60b5db6b9a580eb69be31257c3d0f25894badef5bd3e247ac07eece22",
+      "bytes": 10975
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/targeted.patch",
+      "sha256": "240bab0e47bed84b5b73600de4f1aaf253d63641539f9030af902adfd35cfec3",
+      "bytes": 22680
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/verification.log",
+      "sha256": "f29bdd05b03c87ccf13c01579ccdbe5c1eb1451de87167ecee147935b0cb125c",
+      "bytes": 3359
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/verify_artifacts.py",
+      "sha256": "84e1aa17ba229ff434b335475c17d8e6a8146098137fb17d19152dbba88caf8d",
+      "bytes": 4255
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/witness-results.json",
+      "sha256": "2c3139b91f1b253b295d5ee8241211049ba1ac54abf85fb26a823854fd5a579b",
+      "bytes": 18631
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/final-rereview/witness.log",
+      "sha256": "d138b470228584ce972ca7fe3fda591d6c702ab2b8bf5b93cdbbc5fdd911381b",
+      "bytes": 300
+    }
+  ],
+  "count": 21,
+  "verifiedReviewerArtifacts": 20,
+  "planSHA256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+  "reviewSHA256": "e2ed0ca60b5db6b9a580eb69be31257c3d0f25894badef5bd3e247ac07eece22",
+  "status": "DESIGN_PASS; LEDGER-01 CLOSED; G1a implementation started separately, no implementation acceptance"
+}

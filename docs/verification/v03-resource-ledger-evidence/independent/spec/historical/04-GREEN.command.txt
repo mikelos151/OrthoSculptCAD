@@ -1,0 +1,1 @@
+NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 04-GREEN

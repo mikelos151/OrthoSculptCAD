@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget/artifact-verification.json",
+      "sha256": "5ecd9a0f41cb174ae126310f19828270ba42dcfc963feb6ae1c9a0af051f6f2d",
+      "bytes": 1357
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget/review.json",
+      "sha256": "a9617865fdc999732a61385490f61f0526a3e0c38f861e6d3a66eb0cdb34f39d",
+      "bytes": 11465
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget/review_witness.py",
+      "sha256": "c2ec67b800d01b188543a317d5bad1d933904094582e1e1641c0dfbc9ed60f11",
+      "bytes": 15473
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget/witness-results.json",
+      "sha256": "b0e6584fe9278f4fc946d0aa8927b37c1a7f1303c7e65e68d77525173d340148",
+      "bytes": 18204
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/owner/artifact-hashes.json",
+      "sha256": "4ccb747b859ed7c6a432390b7dc997706d53d93a210ddc6decf66007e6cfc8a8",
+      "bytes": 641
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/owner/commands.md",
+      "sha256": "8ea59f7026a1615c677d4753350f160b36c706920a4a4f44bdf8e10b8230f610",
+      "bytes": 1879
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/owner/input-hashes-end.json",
+      "sha256": "00e3fd802a4974c9917a3dbdd037823f44a0199a2bfc771685b9f0339be16264",
+      "bytes": 2743
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/owner/input-hashes-start.json",
+      "sha256": "00e3fd802a4974c9917a3dbdd037823f44a0199a2bfc771685b9f0339be16264",
+      "bytes": 2743
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/owner/review.json",
+      "sha256": "4fa8a14a82d0cf606b0fce5e16fa1e29f4f26f63613e5a755b8b701eb5ffab1d",
+      "bytes": 11626
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/owner/verify_review.py",
+      "sha256": "872076c48483673dfc83518836be9c023ca49cceefe8b5174940097d186dd063",
+      "bytes": 3816
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/owner/witness-results.json",
+      "sha256": "12ab50d03016e1ca0a4da8fed91639acbdbcdc00d32253d00232d07af40f0e3b",
+      "bytes": 1069
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/owner/witness.log",
+      "sha256": "4fbd4ec7876394792e71890ce8463170aa5ffe7f1fc891659016d263d033bd1f",
+      "bytes": 1071
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget-parent-replay/artifact-verification.json",
+      "sha256": "5ecd9a0f41cb174ae126310f19828270ba42dcfc963feb6ae1c9a0af051f6f2d",
+      "bytes": 1357
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget-parent-replay/parent.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget-parent-replay/parent.stdout.log",
+      "sha256": "50c209150b98e29fe2e92965f87fcd3b84d555e8d243fc895865a0f092127d08",
+      "bytes": 255
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget-parent-replay/review.json",
+      "sha256": "a9617865fdc999732a61385490f61f0526a3e0c38f861e6d3a66eb0cdb34f39d",
+      "bytes": 11465
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget-parent-replay/review_witness.py",
+      "sha256": "c2ec67b800d01b188543a317d5bad1d933904094582e1e1641c0dfbc9ed60f11",
+      "bytes": 15473
+    },
+    {
+      "path": "docs/verification/v03-source-admission-design-evidence/initial-reviews/budget-parent-replay/witness-results.json",
+      "sha256": "b0e6584fe9278f4fc946d0aa8927b37c1a7f1303c7e65e68d77525173d340148",
+      "bytes": 18204
+    }
+  ],
+  "count": 18,
+  "verifiedSourceHashCounts": {
+    "budget": 14,
+    "owner": 19
+  },
+  "budgetParentReplay": {
+    "exit": 0,
+    "stdout": "{\"ok\": true, \"table_rows_verified\": 3, \"topology_fixture_count\": 6, \"stack_fixture_count\": 20, \"scratch_doubles\": 256, \"output\": \"C:\\\\Users\\\\sandr\\\\AppData\\\\Local\\\\hermes\\\\cache\\\\scratch\\\\v03-source-admission-budget-review-parent\\\\witness-results.json\"}\r\n"
+  },
+  "status": "DESIGN_HOLD_LEDGER-01; owner review PASS; no implementation acceptance"
+}

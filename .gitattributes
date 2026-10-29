@@ -134,3 +134,14 @@ tests/fixtures/v03-source-candidate-oracle.json -text
 docs/verification/v03-source-candidate-*.json -text
 docs/verification/v03-source-candidate-evidence/** -text whitespace=cr-at-eol
 docs/verification/v03-source-candidate-evidence/**/*.log whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+# G1a reviewed source and immutable admission/native/ledger evidence, raw before staging.
+src/compute/resourceLedger.ts -text
+tests/v03-resource-ledger.test.ts -text
+docs/plans/v03-source-admission-owner-design.md -text
+docs/verification/v03-source-admission-design-results.json -text
+docs/verification/v03-resource-ledger-parent-results.json -text
+docs/verification/v03-resource-ledger-byte-roundtrip.json -text
+docs/verification/v03-source-admission-design-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/verification/v03-source-admission-fixture-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/verification/v03-source-candidate-native-runtime-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/verification/v03-resource-ledger-evidence/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

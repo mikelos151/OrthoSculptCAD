@@ -1,0 +1,1008 @@
+{
+  "passed": true,
+  "cycles": [
+    {
+      "cycle": 1,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "01-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 01-RED",
+          "sourceSha256": "02199db044db765c2a1172ae01e6941dafcca69ce28ef4828377e03524f165c6",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 01 reserves before a real exact-limit native allocation",
+            "AssertionError: expected { ok: false, code: 'BUDGET' } to not have property \"code\"",
+            "      Tests  1 failed (1)"
+          ]
+        },
+        {
+          "phase": "01-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 01-GREEN",
+          "sourceSha256": "1e2c0743a3c513e0ef4dc087863e226a7c893c28f6df99e5abef71f476f4a083",
+          "rawFailureOrPassSummary": [
+            "      Tests  1 passed (1)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 2,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "02-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 02-RED",
+          "sourceSha256": "1e2c0743a3c513e0ef4dc087863e226a7c893c28f6df99e5abef71f476f4a083",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 02 atomically refuses managed/category excess and malformed plans before allocation",
+            "AssertionError: expected { ref: [Function ref], …(1) } to deeply equal { ok: false, code: 'BUDGET' }",
+            "      Tests  1 failed | 1 passed (2)"
+          ]
+        },
+        {
+          "phase": "02-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 02-GREEN",
+          "sourceSha256": "e5d8f7fd50f7726c78414e3feb2ea3aa51f87aa28bd1f4e8b1bbe6bc1ad4ca16",
+          "rawFailureOrPassSummary": [
+            "      Tests  2 passed (2)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 3,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "03-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 03-RED",
+          "sourceSha256": "d8b68647f39d6162433ddb0e3519522ede31cfc7e78d059458e6ea4b025e43d4",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 03 retains materialized backing once per category with atomic history refusal",
+            "      Tests  1 failed | 2 passed (3)"
+          ]
+        },
+        {
+          "phase": "03-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 03-GREEN",
+          "sourceSha256": "5991299e86e7498c9d8997949ffaa8345c2e118daeb09446f36c4e0ed0b1bc24",
+          "rawFailureOrPassSummary": [
+            "      Tests  3 passed (3)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 4,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "04-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 04-RED",
+          "sourceSha256": "5991299e86e7498c9d8997949ffaa8345c2e118daeb09446f36c4e0ed0b1bc24",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 04 reclassifies only one owning ref and rolls back all categories on refusal",
+            "      Tests  1 failed | 3 passed (4)"
+          ]
+        },
+        {
+          "phase": "04-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 04-GREEN",
+          "sourceSha256": "fc1d1b3c83643039923fd5f636c20dda630e5c3865c4f406bb270ea973dc70a3",
+          "rawFailureOrPassSummary": [
+            "      Tests  4 passed (4)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 5,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "05-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 05-RED",
+          "sourceSha256": "fc1d1b3c83643039923fd5f636c20dda630e5c3865c4f406bb270ea973dc70a3",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 05 closes only own refs, preserves controlled holds, ignores retired h1 while h2 pending",
+            "      Tests  1 failed | 4 passed (5)"
+          ]
+        },
+        {
+          "phase": "05-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 05-GREEN",
+          "sourceSha256": "53e5774a21862f7f2c7d753f4302352ec62056fe8037601d70a0c26a28f0eace",
+          "rawFailureOrPassSummary": [
+            "      Tests  5 passed (5)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 6,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "06-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 06-RED",
+          "sourceSha256": "53e5774a21862f7f2c7d753f4302352ec62056fe8037601d70a0c26a28f0eace",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 06 rolls back only the failed unmaterialized key and validates real fixed buffers intrinsically",
+            "AssertionError: expected [ 384, 384, 128 ] to deeply equal [ 256, 256, 128 ]",
+            "      Tests  1 failed | 5 passed (6)"
+          ]
+        },
+        {
+          "phase": "06-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 06-GREEN",
+          "sourceSha256": "e3cca25e62a2ed8117a496e6ec3ea4cf2692d819f761c5fca33dd307880e2cfc",
+          "rawFailureOrPassSummary": [
+            "      Tests  6 passed (6)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 7,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "07-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 07-RED",
+          "sourceSha256": "813e8c27e8e8e7d6b0c01a1a7fcbd4666247873a2fac10e053f4b2e23714f27d",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 07 registers native backing identity, not view lengths; independent copies need new reservations",
+            "      Tests  1 failed | 6 passed (7)"
+          ]
+        },
+        {
+          "phase": "07-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 07-GREEN",
+          "sourceSha256": "71c8eb16097b3b707f49a394beb4d49106fbcb145c8c88b627a1e4cbc1063e4a",
+          "rawFailureOrPassSummary": [
+            "      Tests  7 passed (7)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 8,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "08-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 08-RED",
+          "sourceSha256": "71c8eb16097b3b707f49a394beb4d49106fbcb145c8c88b627a1e4cbc1063e4a",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 08 checks logical sole-reference realm handoff without native detach or re-reservation",
+            "AssertionError: expected error to match asymmetric matcher",
+            "      Tests  1 failed | 7 passed (8)"
+          ]
+        },
+        {
+          "phase": "08-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 08-GREEN",
+          "sourceSha256": "e2fc659fd49160f75c634c308c1a04286e6a3a08b41b5589fe97eaa62956d342",
+          "rawFailureOrPassSummary": [
+            "      Tests  8 passed (8)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 9,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "09-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 09-RED",
+          "sourceSha256": "e2fc659fd49160f75c634c308c1a04286e6a3a08b41b5589fe97eaa62956d342",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 09 authenticates every capability boundary before closed and rejects retired transfer sources",
+            "AssertionError: expected error to match asymmetric matcher",
+            "      Tests  1 failed | 8 passed (9)"
+          ]
+        },
+        {
+          "phase": "09-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 09-GREEN",
+          "sourceSha256": "d68426017270923937b37c9ce5189bd5ba84590067e702cb58d13e14544e3566",
+          "rawFailureOrPassSummary": [
+            "      Tests  9 passed (9)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 10,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "10-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 10-RED",
+          "sourceSha256": "d68426017270923937b37c9ce5189bd5ba84590067e702cb58d13e14544e3566",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 10 bounds live control records including zero-byte reservations and empty leases",
+            "AssertionError: expected function to throw an error, but it didn't",
+            "      Tests  1 failed | 9 passed (10)"
+          ]
+        },
+        {
+          "phase": "10-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 10-GREEN",
+          "sourceSha256": "e5c62c1db5d0924708f968ae027548fa2bceb11451ccdc48eb689080fe4fcc94",
+          "rawFailureOrPassSummary": [
+            "      Tests  10 passed (10)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 11,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "11-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 11-RED",
+          "sourceSha256": "e5c62c1db5d0924708f968ae027548fa2bceb11451ccdc48eb689080fe4fcc94",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 11 rejects detached live backing and allocator reuse without corrupting another allocation",
+            "AssertionError: expected function to throw an error, but it didn't",
+            "      Tests  1 failed | 10 passed (11)"
+          ]
+        },
+        {
+          "phase": "11-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 11-GREEN",
+          "sourceSha256": "4ef367fc94f7a1ff607148efee55d079209dce3212a38a9e5a668c33d8df3db2",
+          "rawFailureOrPassSummary": [
+            "      Tests  11 passed (11)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 12,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "12b-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 12b-RED",
+          "sourceSha256": "4ef367fc94f7a1ff607148efee55d079209dce3212a38a9e5a668c33d8df3db2",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 12 validates the entire dense plan before publishing any lease or reference",
+            "AssertionError: expected error to match asymmetric matcher",
+            "      Tests  1 failed | 11 passed (12)"
+          ]
+        },
+        {
+          "phase": "12-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 12-GREEN",
+          "sourceSha256": "503d08abaed1a760ef2731afd3ccff98eec0238c509b1967525da44b178a35fb",
+          "rawFailureOrPassSummary": [
+            "      Tests  12 passed (12)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 13,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "13-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 13-RED",
+          "sourceSha256": "503d08abaed1a760ef2731afd3ccff98eec0238c509b1967525da44b178a35fb",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 13 keeps proposed 128/128/384 MiB defaults without allocating cap-sized payloads",
+            "TypeError: Cannot read properties of undefined (reading 'managed')",
+            "      Tests  1 failed | 12 passed (13)"
+          ]
+        },
+        {
+          "phase": "13-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 13-GREEN",
+          "sourceSha256": "c661ebf7a7c179512891d2cf7d05fb694955c6a2f4349dd0b2de8c3a21a38abf",
+          "rawFailureOrPassSummary": [
+            "      Tests  13 passed (13)"
+          ]
+        }
+      ]
+    },
+    {
+      "cycle": 14,
+      "testUnchangedRedToGreen": true,
+      "productionChangeRedToGreen": true,
+      "phases": [
+        {
+          "phase": "14-RED",
+          "archivedExit": 1,
+          "independentReplayExit": 1,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 14-RED",
+          "sourceSha256": "30811ee5cec1accdb9b5d4fec426b8e939462d6bcfccca9a4384c2099b4e83cb",
+          "rawFailureOrPassSummary": [
+            "⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯",
+            " FAIL  tests/v03-resource-ledger.test.ts > G1a resource ledger > 14 distinguishes authentic reserved phase from closed target lease after authentication",
+            "AssertionError: expected error to match asymmetric matcher",
+            "      Tests  1 failed | 13 passed (14)"
+          ]
+        },
+        {
+          "phase": "14-GREEN",
+          "archivedExit": 0,
+          "independentReplayExit": 0,
+          "command": "NODE_OPTIONS='--max-old-space-size=128 --max-semi-space-size=8' node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-resource-ledger-spec-review/historical-replay.mjs 14-GREEN",
+          "sourceSha256": "11ca6d4ae2cd918b7923805128fa4e25aabf99554197907e3cccc3fe789dbbfd",
+          "rawFailureOrPassSummary": [
+            "      Tests  14 passed (14)"
+          ]
+        }
+      ]
+    }
+  ],
+  "functionalRedGreenCycles": 14,
+  "historicalRuntimeProcesses": 28,
+  "unexpectedGreenExcluded": "12-RED",
+  "correctedRed": "12b-RED",
+  "lateConformanceTestsCountedAsTDD": false,
+  "redGreenTestsByteIdentical": true,
+  "chronologyEvidence": "Zachowane komendy/logi/exits i snapshoty faz; ponownie wykonano ich niezmienione zachowanie. Nie deklarujemy podpisanej/niezależnie utrwalonej historii czasu.",
+  "scaffoldBeforeFirstRed": "Prawidłowe reserve odrzucone przez niefunkcjonalny scaffold; nie import failure i nie celowe dodanie błędu over-cap.",
+  "betweenCycleSourceChanges": "03-RED i 07-RED dodają odmowne scaffolds; 14-RED zawiera naprawę kompilacji typed PlanEntry/snapshot pól po tsc-01.",
+  "rawArchiveInputs": [
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\01-RED\\resourceLedger.ts",
+      "sha256": "02199db044db765c2a1172ae01e6941dafcca69ce28ef4828377e03524f165c6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\01-RED\\v03-resource-ledger.test.ts",
+      "sha256": "56cc7566ea165f4aa5776e0ccd3962da772783d007581dae99fc73f104f701b8"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\01-RED.log",
+      "sha256": "2d3214da6709298ba7eb163d303e9d74f347ec78a34ab5c86f515f0778b067e2"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\01-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\01-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\01-GREEN\\resourceLedger.ts",
+      "sha256": "1e2c0743a3c513e0ef4dc087863e226a7c893c28f6df99e5abef71f476f4a083"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\01-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "56cc7566ea165f4aa5776e0ccd3962da772783d007581dae99fc73f104f701b8"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\01-GREEN.log",
+      "sha256": "5b097c1630e3a7e3d982fef6e93f6ab4502ba766927807a2037472ca45bccd5c"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\01-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\01-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\02-RED\\resourceLedger.ts",
+      "sha256": "1e2c0743a3c513e0ef4dc087863e226a7c893c28f6df99e5abef71f476f4a083"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\02-RED\\v03-resource-ledger.test.ts",
+      "sha256": "2d7269aaa73ce9ad545098d2ea74ad098b8e8ba6a4d76c608ed7c9d5a6721161"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\02-RED.log",
+      "sha256": "39a04ded9282a657381bb2407d8661ee7f134ef908f29433085f549c36ccedb3"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\02-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\02-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\02-GREEN\\resourceLedger.ts",
+      "sha256": "e5d8f7fd50f7726c78414e3feb2ea3aa51f87aa28bd1f4e8b1bbe6bc1ad4ca16"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\02-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "2d7269aaa73ce9ad545098d2ea74ad098b8e8ba6a4d76c608ed7c9d5a6721161"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\02-GREEN.log",
+      "sha256": "02d6368e7ac4ba4ee334c5a29b02018422c0e71a99b039ea262138dc6733e161"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\02-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\02-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\03-RED\\resourceLedger.ts",
+      "sha256": "d8b68647f39d6162433ddb0e3519522ede31cfc7e78d059458e6ea4b025e43d4"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\03-RED\\v03-resource-ledger.test.ts",
+      "sha256": "65e154fd4f9bbf0996a0f921d78353c88f82ddda9db072d5337eb5d3431f1b32"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\03-RED.log",
+      "sha256": "42c7ee28c07455c1ff08f8354d2fde80b3f6277fa17f6a04263236c803bb9d42"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\03-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\03-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\03-GREEN\\resourceLedger.ts",
+      "sha256": "5991299e86e7498c9d8997949ffaa8345c2e118daeb09446f36c4e0ed0b1bc24"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\03-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "65e154fd4f9bbf0996a0f921d78353c88f82ddda9db072d5337eb5d3431f1b32"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\03-GREEN.log",
+      "sha256": "21d86a68638a08e4f6d98ea8eeff507c51dda1c9cab2a239e1394a3a9e10c551"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\03-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\03-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\04-RED\\resourceLedger.ts",
+      "sha256": "5991299e86e7498c9d8997949ffaa8345c2e118daeb09446f36c4e0ed0b1bc24"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\04-RED\\v03-resource-ledger.test.ts",
+      "sha256": "6f5907ec54946aafd0be279ea294e9f2309227074b82f5405ded7097c4a8473d"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\04-RED.log",
+      "sha256": "3d244f9eca1b74d95d1df84a1a1f2f82324da26fbc4ee0fc2d20e079a9f86a2b"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\04-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\04-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\04-GREEN\\resourceLedger.ts",
+      "sha256": "fc1d1b3c83643039923fd5f636c20dda630e5c3865c4f406bb270ea973dc70a3"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\04-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "6f5907ec54946aafd0be279ea294e9f2309227074b82f5405ded7097c4a8473d"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\04-GREEN.log",
+      "sha256": "f2fd61be9d6517b779f9ad21dadffec7f91d7e9b9db669971d1661ed97d878ff"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\04-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\04-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\05-RED\\resourceLedger.ts",
+      "sha256": "fc1d1b3c83643039923fd5f636c20dda630e5c3865c4f406bb270ea973dc70a3"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\05-RED\\v03-resource-ledger.test.ts",
+      "sha256": "6f15f23f7feeb404d117e6659170d6a82ca02f7cd46beb0811f40ce8f160a1a6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\05-RED.log",
+      "sha256": "829f270d0ba72797074a41fd594a9cd98243a175c6648d63304299e8d514e1f9"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\05-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\05-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\05-GREEN\\resourceLedger.ts",
+      "sha256": "53e5774a21862f7f2c7d753f4302352ec62056fe8037601d70a0c26a28f0eace"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\05-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "6f15f23f7feeb404d117e6659170d6a82ca02f7cd46beb0811f40ce8f160a1a6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\05-GREEN.log",
+      "sha256": "cfc5aca3939a50d4b51cc5dd51169c76dfd848a7447045177ed0ff092d1ac825"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\05-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\05-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\06-RED\\resourceLedger.ts",
+      "sha256": "53e5774a21862f7f2c7d753f4302352ec62056fe8037601d70a0c26a28f0eace"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\06-RED\\v03-resource-ledger.test.ts",
+      "sha256": "9529890ceebea3972f20b05ed5972f92ae9cfa5b75d181a5b6f81e993bec2320"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\06-RED.log",
+      "sha256": "27d14cdacac0bbbb1e1b75c4bc1e4eff0d2bb147a055174b99a051f185066202"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\06-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\06-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\06-GREEN\\resourceLedger.ts",
+      "sha256": "e3cca25e62a2ed8117a496e6ec3ea4cf2692d819f761c5fca33dd307880e2cfc"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\06-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "9529890ceebea3972f20b05ed5972f92ae9cfa5b75d181a5b6f81e993bec2320"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\06-GREEN.log",
+      "sha256": "a392cdbe7c36b137f63f3caa5c122ed4d0164e1f41742f572b1802dff4548a41"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\06-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\06-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\07-RED\\resourceLedger.ts",
+      "sha256": "813e8c27e8e8e7d6b0c01a1a7fcbd4666247873a2fac10e053f4b2e23714f27d"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\07-RED\\v03-resource-ledger.test.ts",
+      "sha256": "48f16b30a0feb2b64049aecc3137412378a60762571fa14b5166ec6f2ceda5f5"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\07-RED.log",
+      "sha256": "67dfa984a2304db551cc38d9626dc68b15b76db137e991ad5d8552d021c504fe"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\07-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\07-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\07-GREEN\\resourceLedger.ts",
+      "sha256": "71c8eb16097b3b707f49a394beb4d49106fbcb145c8c88b627a1e4cbc1063e4a"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\07-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "48f16b30a0feb2b64049aecc3137412378a60762571fa14b5166ec6f2ceda5f5"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\07-GREEN.log",
+      "sha256": "b7f09180d83a34cb1359caa468d46ea18eeed67ae3896843d8953ea97e1bfa7c"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\07-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\07-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\08-RED\\resourceLedger.ts",
+      "sha256": "71c8eb16097b3b707f49a394beb4d49106fbcb145c8c88b627a1e4cbc1063e4a"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\08-RED\\v03-resource-ledger.test.ts",
+      "sha256": "0600aa597b40069248766ed7549a404aed04692312b0d3993ef1a5547738ada1"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\08-RED.log",
+      "sha256": "e7ed082fbb9fc8ba26c4ec7e850fecef6a8180c6bdf9cec001465ce0d608558e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\08-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\08-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\08-GREEN\\resourceLedger.ts",
+      "sha256": "e2fc659fd49160f75c634c308c1a04286e6a3a08b41b5589fe97eaa62956d342"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\08-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "0600aa597b40069248766ed7549a404aed04692312b0d3993ef1a5547738ada1"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\08-GREEN.log",
+      "sha256": "1d44cb75331e10308af8a8307d5012648ec1e182b7c23740afe8c2b8c91224e5"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\08-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\08-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\09-RED\\resourceLedger.ts",
+      "sha256": "e2fc659fd49160f75c634c308c1a04286e6a3a08b41b5589fe97eaa62956d342"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\09-RED\\v03-resource-ledger.test.ts",
+      "sha256": "1126565d3d2e1c43f9f433432c1dc523c84f0fddcea02b02b536a55d939a60c6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\09-RED.log",
+      "sha256": "d624d84a4923de4588421c0c8102ffbca1058b2ba4eec52b3e3b6d0993be032a"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\09-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\09-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\09-GREEN\\resourceLedger.ts",
+      "sha256": "d68426017270923937b37c9ce5189bd5ba84590067e702cb58d13e14544e3566"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\09-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "1126565d3d2e1c43f9f433432c1dc523c84f0fddcea02b02b536a55d939a60c6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\09-GREEN.log",
+      "sha256": "075cf3a362c62f897418842e59eac2452eeeb061e83d4d3468789aea85c15685"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\09-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\09-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\10-RED\\resourceLedger.ts",
+      "sha256": "d68426017270923937b37c9ce5189bd5ba84590067e702cb58d13e14544e3566"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\10-RED\\v03-resource-ledger.test.ts",
+      "sha256": "d0ab69ab710b9594149a1617fcc92a2df741d1bf8219d3d223ad9ec28f1ed520"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\10-RED.log",
+      "sha256": "ffe61787a357347cc38975f52e44f12f8eb07fab5bcb7a82ff23b8a092c6a5f6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\10-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\10-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\10-GREEN\\resourceLedger.ts",
+      "sha256": "e5c62c1db5d0924708f968ae027548fa2bceb11451ccdc48eb689080fe4fcc94"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\10-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "d0ab69ab710b9594149a1617fcc92a2df741d1bf8219d3d223ad9ec28f1ed520"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\10-GREEN.log",
+      "sha256": "3776505006baf39d057919f1053ac36736ddd65099a0781614866cf52b92de26"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\10-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\10-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\11-RED\\resourceLedger.ts",
+      "sha256": "e5c62c1db5d0924708f968ae027548fa2bceb11451ccdc48eb689080fe4fcc94"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\11-RED\\v03-resource-ledger.test.ts",
+      "sha256": "1e7915f023c5484161f4bddfae11138604fc29dfe693fe2dcb95d925be699718"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\11-RED.log",
+      "sha256": "aa6d0d33d2cc51516b73304c3c429b6546f98c74720aa8c2a0fe08c38ac6bd6c"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\11-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\11-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\11-GREEN\\resourceLedger.ts",
+      "sha256": "4ef367fc94f7a1ff607148efee55d079209dce3212a38a9e5a668c33d8df3db2"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\11-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "1e7915f023c5484161f4bddfae11138604fc29dfe693fe2dcb95d925be699718"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\11-GREEN.log",
+      "sha256": "3fc197551c85befc6288c8dc3595f60431f867da2ab2b91795505a44d289a255"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\11-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\11-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\12b-RED\\resourceLedger.ts",
+      "sha256": "4ef367fc94f7a1ff607148efee55d079209dce3212a38a9e5a668c33d8df3db2"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\12b-RED\\v03-resource-ledger.test.ts",
+      "sha256": "5fe7b96e78320bf689104438aac144a449e3617239215026740d3cd54f9effa0"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\12b-RED.log",
+      "sha256": "66b813cdcf95f5f8c99a86968221144b79e9b4cedc7d844c25f2fbb95f8eee6d"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\12b-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\12b-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\12-GREEN\\resourceLedger.ts",
+      "sha256": "503d08abaed1a760ef2731afd3ccff98eec0238c509b1967525da44b178a35fb"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\12-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "5fe7b96e78320bf689104438aac144a449e3617239215026740d3cd54f9effa0"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\12-GREEN.log",
+      "sha256": "f43599bdeca9b9fd5b17384b204ed70497aa7663da32e14eff660a25b0d55541"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\12-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\12-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\13-RED\\resourceLedger.ts",
+      "sha256": "503d08abaed1a760ef2731afd3ccff98eec0238c509b1967525da44b178a35fb"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\13-RED\\v03-resource-ledger.test.ts",
+      "sha256": "23c3acc7fe04ddc24f6cb7f13921647aa54ca30bd352d61fcc1fdc706032c9fd"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\13-RED.log",
+      "sha256": "b3ee1d5c7243d26f02fe7030ea228f4eb278a931a253212c5876aba1fabe8eca"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\13-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\13-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\13-GREEN\\resourceLedger.ts",
+      "sha256": "c661ebf7a7c179512891d2cf7d05fb694955c6a2f4349dd0b2de8c3a21a38abf"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\13-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "23c3acc7fe04ddc24f6cb7f13921647aa54ca30bd352d61fcc1fdc706032c9fd"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\13-GREEN.log",
+      "sha256": "905de704466d511cdb6bbbc4252b18fb0b9673a3e554838fecdbe8a6f05b94d6"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\13-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\13-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\14-RED\\resourceLedger.ts",
+      "sha256": "30811ee5cec1accdb9b5d4fec426b8e939462d6bcfccca9a4384c2099b4e83cb"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\14-RED\\v03-resource-ledger.test.ts",
+      "sha256": "142029e9eeca5d5f930990ea630a410d75526e13af55aec36113ec0251ac3b03"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\14-RED.log",
+      "sha256": "f50d850f9bebe7882a4d5eda4a79e7454f756694c4e50d34ee3e569230df3010"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\14-RED.exit.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\14-RED.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\14-GREEN\\resourceLedger.ts",
+      "sha256": "11ca6d4ae2cd918b7923805128fa4e25aabf99554197907e3cccc3fe789dbbfd"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\phases\\14-GREEN\\v03-resource-ledger.test.ts",
+      "sha256": "142029e9eeca5d5f930990ea630a410d75526e13af55aec36113ec0251ac3b03"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\14-GREEN.log",
+      "sha256": "225e1b8b019a43a61fffaa4a504aa66ed2b6996dae5bcf6ed7de808756aa4a91"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\14-GREEN.exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\14-GREEN.command.txt",
+      "sha256": "341f747c094351c3f22fef19e1d15d086a74e3d17e8b2bc3b4b47cc65db2195e"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\12-RED.log",
+      "sha256": "65a796d2c57ff6aa893cc9a0270086a82a7a879c9df423762deca91a19d3c20a"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\12b-RED.log",
+      "sha256": "66b813cdcf95f5f8c99a86968221144b79e9b4cedc7d844c25f2fbb95f8eee6d"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\handoff.json",
+      "sha256": "7529e60b042da7cd5367f2fc3972632a5ebc198581f52e96100e86cf95556b5d"
+    },
+    {
+      "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-resource-ledger-ts\\HANDOFF.md",
+      "sha256": "ac7a2550388c208cef5a1c84c2198c829999763f5adc4207b125cd3690f5bda0"
+    }
+  ]
+}

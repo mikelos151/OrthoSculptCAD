@@ -1,0 +1,208 @@
+{
+  "passed": true,
+  "scope": "G1a primitive implementation; pending parent replay and review; not source admission",
+  "owned_repository_files": [
+    "src/compute/resourceLedger.ts",
+    "tests/v03-resource-ledger.test.ts"
+  ],
+  "unchanged_existing_src_tests": 147,
+  "existing_src_tests_changed": [],
+  "repository_file_sha256": {
+    "src/compute/resourceLedger.ts": "075773df84d918336203a90079562c8eab141798c763e2b2b3a6571ce2e90254",
+    "tests/v03-resource-ledger.test.ts": "643b4b3f76e4b17dae52b59b3bece3148f8da960721b43f04b2729d9b8497a95"
+  },
+  "source_candidate_sha256_start_end": "983f07ae42f458e27a253b401e56838fb41c562c70524409510d1abe10b4254b",
+  "plan_sha256_start_end": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+  "functional_tdd_cycles": [
+    {
+      "behavior": 1,
+      "red": "01-RED",
+      "red_exit": 1,
+      "green": "01-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 2,
+      "red": "02-RED",
+      "red_exit": 1,
+      "green": "02-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 3,
+      "red": "03-RED",
+      "red_exit": 1,
+      "green": "03-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 4,
+      "red": "04-RED",
+      "red_exit": 1,
+      "green": "04-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 5,
+      "red": "05-RED",
+      "red_exit": 1,
+      "green": "05-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 6,
+      "red": "06-RED",
+      "red_exit": 1,
+      "green": "06-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 7,
+      "red": "07-RED",
+      "red_exit": 1,
+      "green": "07-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 8,
+      "red": "08-RED",
+      "red_exit": 1,
+      "green": "08-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 9,
+      "red": "09-RED",
+      "red_exit": 1,
+      "green": "09-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 10,
+      "red": "10-RED",
+      "red_exit": 1,
+      "green": "10-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 11,
+      "red": "11-RED",
+      "red_exit": 1,
+      "green": "11-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 12,
+      "red": "12b-RED",
+      "red_exit": 1,
+      "green": "12-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 13,
+      "red": "13-RED",
+      "red_exit": 1,
+      "green": "13-GREEN",
+      "green_exit": 0
+    },
+    {
+      "behavior": 14,
+      "red": "14-RED",
+      "red_exit": 1,
+      "green": "14-GREEN",
+      "green_exit": 0
+    }
+  ],
+  "unexpected_green": {
+    "phase": "12-RED",
+    "exit": 0,
+    "explanation": "Sparse fixture also duplicated a key, so existing duplicate validation masked the hole. Strengthened fixture to distinct second key; real 12b-RED then failed with unclassified TypeError/partial-publication risk. No code changed between the two attempts."
+  },
+  "compile_issue_fixed": {
+    "log": "tsc-01.log",
+    "exit": 2,
+    "issue": "TS7053 after Array.isArray narrowed iteration input to any[]",
+    "fix": "Typed PlanEntry callback and one field snapshot before validation",
+    "final_exit": 0
+  },
+  "final_ledger_tests": 16,
+  "final_selected_regression_tests": 890,
+  "final_selected_test_files": 6,
+  "tsc_no_emit": 0,
+  "tsc_standalone_emit": 0,
+  "native_smoke": {
+    "passed": true,
+    "node": "v24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "payloadBytes": 768,
+    "nativeArrayBuffer": true,
+    "logicalTransferOnly": true,
+    "nativeWorkerTested": false,
+    "RSSClaimed": false
+  },
+  "runtime_exports": [
+    "DEFAULT_RESOURCE_LIMITS",
+    "createResourceLedger"
+  ],
+  "type_exports": [
+    "Category",
+    "Refusal",
+    "Realm",
+    "Ref",
+    "PlanEntry",
+    "Lease",
+    "Limits",
+    "ControlLimits",
+    "LedgerInternals",
+    "ResourceLedger",
+    "ResourceLedgerSnapshot"
+  ],
+  "matrix_rows": {
+    "1": [
+      "03"
+    ],
+    "2": [
+      "05"
+    ],
+    "3": [
+      "04"
+    ],
+    "4": [
+      "04"
+    ],
+    "5": [
+      "07"
+    ],
+    "6": [
+      "02",
+      "conformance exact 1024"
+    ],
+    "7": [
+      "05",
+      "08"
+    ],
+    "8": [
+      "05",
+      "09"
+    ],
+    "9": [
+      "08",
+      "09"
+    ]
+  },
+  "not_run_or_claimed": [
+    "full project 1208-test suite",
+    "Python oracle test suite",
+    "App integration",
+    "native Worker/transfer/postMessage/SHA/ACK/terminate",
+    "source admission/audited S",
+    "RSS/heap/JS overhead proof",
+    "clinical/native EXE acceptance"
+  ],
+  "notes": [
+    "Native ArrayBuffer tests ran in Node/V8, not browser.",
+    "Two later conformance tests characterize existing green implementation; not counted as new RED/GREEN cycles.",
+    "Realm cap is lifetime per ledger; lease/ref caps count active records. Caller-retained retired identities are authenticated weakly, without retained payloads.",
+    "Parent-curated untracked docs were not written by this task."
+  ]
+}
