@@ -12,4 +12,6 @@ docs/verification/*-artifacts/
 *.tsbuildinfo
 backups/
 cost-controls/
+!cost-controls/algebraic-producer-evidence/producer-input.json
+!cost-controls/algebraic-producer-evidence/source.json
 *.zip
