@@ -8,6 +8,14 @@
 
 > **Open-source technical CAD suite for lower-limb prosthetics socket rectification, alignment, and biomechanical analysis.**
 
+<p align="center">
+  <img src="docs/screenshots/04-rectify.png" alt="OrthoSculpt CAD 3D Rectification Workspace" width="100%">
+</p>
+
+<p align="center">
+  <em>Stage 4 Socket Rectification: 3D interactive mesh brush sculpting, signed heatmaps, and biomechanical cross-sections.</em>
+</p>
+
 OrthoSculpt CAD is an independent, local-first 3D CAD application tailored for transtibial (TT) prosthetics socket design. It provides a structured five-stage workflow: 3D scan import/inspection (PLY/STL/OBJ), landmark-based anatomical alignment with principal component analysis (PCA), cross-sectional circumferential measurements, controlled socket rectification (relief/compression with Hermite falloff and signed displacement heatmaps), and verified STL/3MF production export.
 
 Designed to empower independent prosthetists, academic researchers, and clinical technicians by eliminating costly proprietary cloud CAD vendor lock-in.
