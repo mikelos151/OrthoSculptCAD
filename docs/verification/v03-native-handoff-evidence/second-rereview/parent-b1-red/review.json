@@ -1,0 +1,158 @@
+{
+  "passed": false,
+  "verdict": "HOLD",
+  "scope": "G1b1bInputOnly — świeży niezależny SECURITY/quality rereview finalnych czterech plików; wyłącznie READONLY repo",
+  "head": "25980b612ced5dc79ce966208cb7ce4edbb1546b",
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "B1",
+      "severity": "MEDIUM",
+      "kind": "UNIT quality — utrata tożsamości błędu terminalnego",
+      "locations": [
+        "src/compute/nativeHandoff.ts:91-95",
+        "src/compute/nativeHandoff.ts:111-114",
+        "src/compute/nativeHandoff.ts:160-164"
+      ],
+      "summary": "Reentrant dispose z removeEventListener uruchamia pool.dispose poza pierwotnym właścicielem completion. Jeżeli rzeczywiste wywołanie instrumentowanego terminate rzuci E, nowy catch cleanup pochłania E jako remove/revoke error; stopWorker widzi FAILED slot i zastępuje E nowym NATIVE_TERMINATE. wait odrzuca innym obiektem niż pierwotne E.",
+      "reproduction": "node run.mjs repro — 20 sprawdzeń: 18 PASS, 2 FAIL; release i RETURN. matrix: 18/124 przypadków FAIL (3 fazy × 3 miejsca cleanup × 2 warianty dodatkowego cleanup throw), wyłącznie ten sam problem identity.",
+      "observed_bounds": "Bez wykazanego premature release: slot FAILED/occupied=1, pending=1, controlled job=5 B pozostaje, niezależny history main=7 B nienaruszony; terminate wywołany raz, brak adoption/retry. To nie dowód natywnego exploita ani default reachability.",
+      "correction_criterion": "Zachować pierwotny obiekt E z faktycznie wykonanego terminate także przy dispose reentrant z każdego listener cleanup; oryginalny completion owner rozlicza wynik terminalny. Ponowne wait/release/dispose nie podmienia błędu i nie ponawia terminate. Przy nieudanym stop utrzymać exact charge/slot i odmowę publication; przy sukcesie nadal settle dokładnie raz."
+    }
+  ],
+  "Q1": {
+    "status": "CLOSED",
+    "meaning": "Oryginalny successful-terminate → reentrant dispose → RETURNED orphan zamknięty. Oryginalny świadek bez zmian PASS; dodatkowa macierz z cleanup i terminate nie wykazała resurrection/zerowania przed skutecznym stop."
+  },
+  "Q2": {
+    "status": "CLOSED",
+    "meaning": "Oryginalny message-remove throw pomijający terminate i orphaning prywatnego handoff zamknięty. Wszystkie 3 facade listener cleanup są best-effort i successful physical stop rozlicza exact ticket. Nowy B1 nadal blokuje pełny odbiór poprawki."
+  },
+  "tests": {
+    "strict_compile": {
+      "exit": 0,
+      "heap_old_MiB": 128,
+      "heap_semi_MiB": 8,
+      "target": "ES2022",
+      "lib": [
+        "ES2022",
+        "DOM"
+      ],
+      "types": [],
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "inputs": "ACTUAL final TS z repo, nowy izolowany outDir; nie stary compiled snapshot"
+    },
+    "suites": [
+      {
+        "name": "witness",
+        "total": 87,
+        "passed": 87,
+        "failed": 0,
+        "exit": 0
+      },
+      {
+        "name": "matrix",
+        "total": 124,
+        "passed": 106,
+        "failed": 18,
+        "exit": 1
+      },
+      {
+        "name": "repro",
+        "total": 20,
+        "passed": 18,
+        "failed": 2,
+        "exit": 1
+      }
+    ],
+    "first_matrix_attempt": {
+      "total": 124,
+      "passed": 104,
+      "failed": 20,
+      "explanation": "Zachowane attempt1-matrix.mjs i attempt1-matrix-results.json oraz matrix-1 logs. 18 realnych identity failures; 2 błędy oracle priorytetu wcześniejszego cleanup error względem późniejszego revoke poprawiono jawnie w drugiej wersji. Nie zmieniono ani nie osłabiono starych 87 świadków."
+    },
+    "foreign_holds": {
+      "cases": 16,
+      "passed": 16,
+      "meaning": "Podczas release/RETURN z fault każdego facade listener lub terminate-throw drugi active job=13 B, adopted consumer=11 B i main history=7 B zachowują exact IDs/refs/kategorie/bytes. Dispose z definicji zamyka aktywne joby, nie jest testem ich zachowania."
+    },
+    "retired_h1_new_h2": {
+      "cases": 3,
+      "passed": 3
+    },
+    "original_witness_unchanged": {
+      "original": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+      "copy": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d"
+    },
+    "evidence_kind": "UNIT EventTarget + rzeczywisty structuredClone transfer. Zero nowego native Worker/browser evidence."
+  },
+  "manual_audit": [
+    "Przeczytano całe resourceLedger.ts, nativeHandoff.ts, nativeHandoff.worker.ts oraz v03-native-handoff.test.ts; workerPool.ts tylko readonly i kontrakty §4-6 / owner §5.1.1-5.2.",
+    "Sprawdzono supported codec: stałe intrinsic długości, dense own-data envelope, schema przed exact tuple/nonce/plan, old captured binding przed decode.",
+    "Przejrzano privateCore PREPARED/sendThrew rollback, partial detach, controlled ownership, returned all-or-none preflight, authenticated publish/adoption i default legacy facade. Oryginalne świadki pokrywają te ścieżki bez zmian.",
+    "Nie znaleziono hardcoded secrets/exfiltration/eval/shell injection w odczytanym zakresie. Nie wykazano nowej luki SECURITY; B1 jest konkretnym defektem jakości wymaganym w tym review."
+  ],
+  "bounds": {
+    "caps_B": {
+      "managed": 1024,
+      "job": 1024,
+      "history": 1024
+    },
+    "max_workers_per_composition": 2,
+    "main_deadline_ms": 120000,
+    "claims_excluded": [
+      "App/global pool cap",
+      "admission ACTIVE",
+      "remote-new",
+      "G1b1c",
+      "main SHA holds",
+      "worker-clock propagation",
+      "full CAD",
+      "RSS/thread-join/GC",
+      "native exploit reachability"
+    ],
+    "not_run": "heavy/full suite/native/browser/replay — należy do rodzica; brak instalacji/stage/commit/zmian repo/skills/deps/profile"
+  },
+  "source_hashes": {
+    "start": {
+      "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "src/compute/nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "tests/v03-native-handoff.test.ts": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc"
+    },
+    "compiled_input": {
+      "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "src/compute/nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "tests/v03-native-handoff.test.ts": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc"
+    },
+    "end": {
+      "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "src/compute/nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "tests/v03-native-handoff.test.ts": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc"
+    },
+    "all_seven_unchanged": true
+  },
+  "compiled_hashes": {
+    "compiled/resourceLedger.js": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+    "compiled/nativeHandoff.js": "4cc50abef8f52d2bb63c1c277e5778da9d50abd313aeef7890db917a12a9950f",
+    "compiled/nativeHandoff.worker.js": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419",
+    "compiled/workerPool.js": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200"
+  },
+  "runnable": {
+    "cwd": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview",
+    "commands": [
+      "node run.mjs witness",
+      "node run.mjs matrix",
+      "node run.mjs repro"
+    ],
+    "fresh_compile": "node --max-old-space-size=128 --max-semi-space-size=8 C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc -p tsconfig.json",
+    "raw_evidence": "*-*.command.json, stdout.log, stderr.log; witness-results.json, matrix-results.json, repro-results.json",
+    "manifest": "artifact-manifest.json"
+  },
+  "suggestions": [],
+  "summary": "HOLD: pierwotne Q1/Q2 zamknięte i cudze holds zachowane, ale cleanup-reentrant dispose + terminate-throw gubi pierwotny Error (B1)."
+}

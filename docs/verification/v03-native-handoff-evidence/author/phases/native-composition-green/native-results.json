@@ -1,0 +1,220 @@
+{
+  "passed": true,
+  "hashes": {
+    "source": {
+      "resourceLedger.ts": "1a999bf2feca0ba92b260e2333947121ea33bc744a6fd4b2ba86518941b7ede5",
+      "workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "nativeHandoff.ts": "33876d1ec291d3a32d6325b23bc98e4a9a17633b2ebd8b06059a1821f6daef31",
+      "nativeHandoff.worker.ts": "7adfe908cf9e6679c6b58a53fd19b9864cee994e69288769e3188cbdda04e60b"
+    },
+    "served": {
+      "resourceLedger.js": "43846b41d1b626fb4d96d67b5bb75ef48b3fc17cb971aae7058f13ef02e8a5b6",
+      "workerPool.js": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200",
+      "nativeHandoff.js": "a2eca3320532e989a8aa40d833fa8a29f0d6347a67908f69a9b1f443b2691d8d",
+      "nativeHandoff.worker.js": "d1eda60c8d934062a3094853d5c2f8adeeadcbe4b8797120e62bacd3570e6122",
+      "fixture.mjs": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c"
+    }
+  },
+  "result": {
+    "checks": [
+      {
+        "name": "accepted native input",
+        "pass": true
+      },
+      {
+        "name": "native START detached actual G1a backing",
+        "pass": true
+      },
+      {
+        "name": "different JS RETURN wrapper same byteLength",
+        "pass": true
+      },
+      {
+        "name": "original exact payload bytes",
+        "pass": true
+      },
+      {
+        "name": "original exact SHA256",
+        "pass": true
+      },
+      {
+        "name": "same allocation ID/charge throughout native handoff",
+        "pass": true
+      },
+      {
+        "name": "same allocation ID/charge throughout native handoff",
+        "pass": true
+      },
+      {
+        "name": "same allocation ID/charge throughout native handoff",
+        "pass": true
+      },
+      {
+        "name": "actual native RECEIVED and RETURN",
+        "pass": true
+      },
+      {
+        "name": "one-shot native terminate before result adoption",
+        "pass": true
+      },
+      {
+        "name": "all result refs closed",
+        "pass": true
+      }
+    ],
+    "events": [
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:57148/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": []
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      }
+    ],
+    "snapshots": {
+      "before": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "sent": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 2,
+            "phase": "IN_FLIGHT",
+            "refs": [
+              {
+                "id": 2,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "returned": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 2,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "hash": "a6996db4e58c33aafa456f44fc0c3ac55e1ee2a97aa97a8015fe86637f8c64ec",
+    "browserVersion": "156.0.8078.4"
+  },
+  "errors": [],
+  "external": [],
+  "workers": [
+    {
+      "type": "created",
+      "id": 1,
+      "url": "http://127.0.0.1:57148/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 1
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:57148/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:57148/fixture.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:57148/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:57148/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:57148/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:57148/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:57148/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:57148/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:57148/workerPool.js",
+      "status": 200
+    }
+  ],
+  "closed": {
+    "context": true,
+    "browser": true,
+    "server": true,
+    "portRefuses": true
+  }
+}

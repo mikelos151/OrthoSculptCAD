@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "scope": "G1b1bInputOnly",
+  "verdict": "SCOPED PASS (SPEC/ownership review only; parent owns final acceptance)",
+  "security_concerns": [],
+  "logic_errors": [],
+  "suggestions": [
+    {
+      "blocking": false,
+      "locations": [
+        "tests/v03-native-handoff.test.ts",
+        "scratch witness.ts"
+      ],
+      "description": "Promote independent partial-detach and batch-publish/ref-cap witnesses into permanent regression tests after acceptance. Current API passed both."
+    }
+  ],
+  "summary": "Same-core input-only handoff preserves allocation identity, private ownership and exact charges; no concrete blocker found in delivered supported paths.",
+  "source_hashes_start": {
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.ts": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "tests/v03-native-handoff.test.ts": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6",
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "docs/plans/v03-native-broker-g1b-design.md": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+    "docs/plans/v03-source-admission-owner-design.md": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+  },
+  "source_hashes_end": {
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.ts": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "tests/v03-native-handoff.test.ts": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6",
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "docs/plans/v03-native-broker-g1b-design.md": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+    "docs/plans/v03-source-admission-owner-design.md": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+  },
+  "sources_unchanged": true,
+  "head": "25980b612ced5dc79ce966208cb7ce4edbb1546b",
+  "observed": {
+    "strict_compile": {
+      "exit": 0,
+      "strict": true,
+      "types": [],
+      "target": "ES2022",
+      "libs": [
+        "ES2022",
+        "DOM"
+      ],
+      "heapMiB": 128,
+      "semiMiB": 8
+    },
+    "actual_api_unit": {
+      "passed": true,
+      "scope": "G1b1bInputOnly",
+      "kind": "actual API UNIT, structuredClone; Worker double NOT native proof",
+      "assertions": 153,
+      "scenarios": 10,
+      "results": [
+        "same identity/charge through roundtrip resident",
+        "same identity/charge through roundtrip job",
+        "same identity/charge through roundtrip history",
+        "partial detach terminal restores attached subset only",
+        "returned batch conflicts atomic and consumer categories never evade cap",
+        "default ledger graph remains legacy and independent",
+        "consumer capacity refusal cannot partially adopt a batch",
+        "UNIT facade attached rollback + wait/accept ownership",
+        "UNIT facade cap2 and retired release isolation",
+        "UNIT facade malformed return fail closed"
+      ],
+      "unitWorkerConstructors": 5,
+      "unitWorkerTerminates": 5
+    },
+    "tdd": {
+      "verified_pairs": 6,
+      "legacy_gap_witness_separate": true,
+      "identical_tests_all_pairs": true,
+      "header_runner_identical": true,
+      "snapshot_hash_checks": 125,
+      "manifest_entries": 369,
+      "manifest_mismatches": 0,
+      "manifest_sha256": "4d84e1210ab8911966020b5beb264c656b444b05798edcfe01292b7e9f37480d",
+      "excluded_from_RED": [
+        "coverage immediately GREEN",
+        "TypeScript exit2 (two author phases)",
+        "author ambient types OOM exit134",
+        "reviewer harness type error",
+        "import/bootstrap failures and negative controls"
+      ]
+    },
+    "author_native_evidence_not_replayed": {
+      "checks": 71,
+      "passed_checks": 71,
+      "metrics": {
+        "constructors": 12,
+        "terminates": 12,
+        "peak": 2,
+        "live": 0
+      },
+      "closed": {
+        "context": true,
+        "browser": true,
+        "server": true,
+        "portRefuses": true
+      }
+    }
+  },
+  "handles": {
+    "report": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/REVIEW.md",
+    "witness": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/witness.ts",
+    "run_command": "bash C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/run-witness.sh <fresh-label>",
+    "raw_witness": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/witness-final.stdout.log",
+    "raw_commands": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/witness-final.command.log",
+    "tdd_audit": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/tdd-audit.json",
+    "raw_phase_logs_copy": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/phase-audit-raw.json",
+    "source_start": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/start-hashes.json",
+    "source_end": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/end-hashes.json",
+    "manifest": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/review-manifest.json"
+  },
+  "limitations": [
+    "No browser/native/full-suite executions by this reviewer; parent owns serial replay.",
+    "Worker constructor/postMessage/terminate double in witness is UNIT only, never native proof.",
+    "No approval of G1b1c, worker-clock, main-SHA holds, remote grants, App/global cap/G1b2, admission/G2/G3, CAD or RSS.",
+    "The first audit failure was observed in terminal tool history before raw redirection was installed; the saved diagnostic is explicitly a transcribed excerpt. All compile and API run attempts have full redirected raw streams."
+  ],
+  "issues_encountered": [
+    {
+      "attempt": "initial audit",
+      "exit": 1,
+      "cause": "Node child-process git produced no stdout, causing writeFileSync TypeError; shell git succeeded.",
+      "artifact": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/audit-attempt-1.failure.log"
+    },
+    {
+      "attempt": "compile-1",
+      "exit": 1,
+      "cause": "Reviewer generic narrowing helper retained refusal in inferred return union; corrected only scratch harness, no source weakening.",
+      "artifacts": [
+        "compile-1.stdout.log",
+        "compile-1.stderr.log",
+        "compile-1.command.log",
+        "witness-compile-1.ts"
+      ]
+    }
+  ],
+  "repository_mutations": [],
+  "created_files_scope": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review"
+}

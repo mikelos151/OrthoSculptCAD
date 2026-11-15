@@ -1,0 +1,106 @@
+{
+  "commands": [
+    {
+      "name": "full-tsc512",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "-p",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\tsconfig.json",
+        "--noEmit"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 0
+    },
+    {
+      "name": "native-pool",
+      "command": [
+        "node",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\native-pool\\native-cli.mjs"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 0
+    },
+    {
+      "name": "native-handoff",
+      "command": [
+        "node",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\native-handoff\\native-cli.mjs",
+        "candidate"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 0
+    }
+  ],
+  "serial": true,
+  "pool": {
+    "checks": 119,
+    "metrics": {
+      "attempts": 50,
+      "created": 49,
+      "terminated": 49,
+      "sends": 0,
+      "allocations": 0
+    },
+    "browser": {
+      "version": "156.0.8078.4",
+      "nativeCreated": 49,
+      "nativeCloseNotificationsBeforeContextClose": 49
+    },
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "hashes": {
+      "source": {
+        "src/compute/workerPool.ts": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+        "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b"
+      },
+      "served": {
+        "workerPool.js": "b39762a96a048fb9ee5d2e9f275d3fb1cccef5d3413e21e9b6978e7e27538459",
+        "resourceLedger.js": "12877161ed30b54a5603e11540fd0ab13fca63466287560f64c54ef1afe9b93a",
+        "fixture.mjs": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256"
+      }
+    }
+  },
+  "handoff": {
+    "checks": 71,
+    "metrics": {
+      "constructors": 12,
+      "terminates": 12,
+      "peak": 2,
+      "live": 0
+    },
+    "browser": "156.0.8078.4",
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "hashes": {
+      "source": {
+        "resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+        "workerPool.ts": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+        "nativeHandoff.ts": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70",
+        "nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990"
+      },
+      "served": {
+        "resourceLedger.js": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+        "workerPool.js": "97c9374c1157ac36c66a4a3a18a0561e19d74e39bc8bcf9b1105914cbdb5e25d",
+        "nativeHandoff.js": "1fa86e7204a1f416fb318263afbe004639bc0c7a2452d7d8c1584ce82bb3b050",
+        "nativeHandoff.worker.js": "fa95ed8c531a1873b91f787010e741e781acbf724877d3e6cd1bfd9ba488a2a9",
+        "fixture.mjs": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+        "fixture-base.mjs": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c"
+      }
+    }
+  }
+}

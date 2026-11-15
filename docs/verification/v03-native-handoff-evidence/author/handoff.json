@@ -1,0 +1,564 @@
+{
+  "status": "DELIVERED_FOR_PARENT_INDEPENDENT_REVIEW_NOT_ACCEPTANCE",
+  "scope": "G1b1b input-only same-core native START/RECEIVED/RETURN",
+  "sourceHashes": {
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.ts": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "tests/v03-native-handoff.test.ts": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6"
+  },
+  "trackedInputs": 2602,
+  "permittedTrackedChanges": [
+    "src/compute/resourceLedger.ts"
+  ],
+  "allOtherTrackedFilesUnchanged": 2601,
+  "unit": {
+    "passed": 68,
+    "failed": 0,
+    "skipped": 0,
+    "perFile": {
+      "v03-native-handoff.test.ts": 28,
+      "v03-resource-ledger.test.ts": 16,
+      "v03-worker-pool.test.ts": 24
+    }
+  },
+  "native": {
+    "checks": 71,
+    "metrics": {
+      "constructors": 12,
+      "terminates": 12,
+      "peak": 2,
+      "live": 0
+    },
+    "devtoolsCreated": 9,
+    "devtoolsClosedBeforeTeardown": 9,
+    "nativeReturnedGroups": 9,
+    "browser": "156.0.8078.4",
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "errors": [],
+    "externalRequests": []
+  },
+  "staticScan": {
+    "hardcodedCredentials": [],
+    "dynamicExecution": [],
+    "networkOrProcess": [],
+    "debugLoggingInProduction": []
+  },
+  "note": "12 actual constructors/terminate invocations; 3 workers stopped before DevTools attached (attached DataCloneError, alias, duplicate preflight); 9 observed native endpoint Workers closed. No fabricated native replies.",
+  "phaseCount": 28,
+  "releaseScopeCaveat": "dist and published ZIP are ignored/untracked and not included in start hash map; no build/replacement command was executed. All tracked inputs except explicitly permitted resourceLedger.ts match start.",
+  "notClaimed": [
+    "G1b1c full lifecycle/cancel/release/error/deadline/SHA holds",
+    "worker-clock propagation",
+    "App/global cap migration/G1b2",
+    "native-output or remote-new grants",
+    "source admission/ACTIVE/G2/G3/geometry/UI",
+    "whole-project regression (parent-owned)",
+    "thread join/GC/RSS bound",
+    "independent review/acceptance"
+  ],
+  "repository": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "head": "25980b612ced5dc79ce966208cb7ce4edbb1546b",
+  "modified": [
+    "src/compute/resourceLedger.ts"
+  ],
+  "created": [
+    "src/compute/nativeHandoff.ts",
+    "src/compute/nativeHandoff.worker.ts",
+    "tests/v03-native-handoff.test.ts"
+  ],
+  "HANDOFF": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\HANDOFF.md",
+  "artifactManifest": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\artifact-manifest.json",
+  "phaseIndex": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phase-index.json",
+  "finalPhases": {
+    "unit": "delivery-unit",
+    "strict128": "delivery-strict128",
+    "fullTsc512": "delivery-full-tsc512",
+    "native": "native-header-bound-green"
+  },
+  "commandsAndExits": [
+    {
+      "phase": "baseline",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\baseline\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\baseline\\stderr.log"
+    },
+    {
+      "phase": "native-legacy-red",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+        "native-legacy-red"
+      ],
+      "exit": 1,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-legacy-red\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-legacy-red\\stderr.log"
+    },
+    {
+      "phase": "core-prepare-red",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 1,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-prepare-red\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-prepare-red\\stderr.log"
+    },
+    {
+      "phase": "core-prepare-green",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-prepare-green\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-prepare-green\\stderr.log"
+    },
+    {
+      "phase": "core-roundtrip-red",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 1,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-roundtrip-red\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-roundtrip-red\\stderr.log"
+    },
+    {
+      "phase": "core-roundtrip-green",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-roundtrip-green\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-roundtrip-green\\stderr.log"
+    },
+    {
+      "phase": "native-composition-red",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+        "native-composition-red"
+      ],
+      "exit": 1,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-composition-red\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-composition-red\\stderr.log"
+    },
+    {
+      "phase": "native-composition-green",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+        "native-composition-green"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-composition-green\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-composition-green\\stderr.log"
+    },
+    {
+      "phase": "composition-types",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=512",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "exit": 2,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\composition-types\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\composition-types\\stderr.log"
+    },
+    {
+      "phase": "composition-types-fixed",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=512",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\composition-types-fixed\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\composition-types-fixed\\stderr.log"
+    },
+    {
+      "phase": "composition-unit",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\composition-unit\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\composition-unit\\stderr.log"
+    },
+    {
+      "phase": "core-codec-negative-coverage",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-codec-negative-coverage\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\core-codec-negative-coverage\\stderr.log"
+    },
+    {
+      "phase": "expanded-types",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=512",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "exit": 2,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\expanded-types\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\expanded-types\\stderr.log"
+    },
+    {
+      "phase": "native-matrix-coverage",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+        "native-matrix-coverage"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-matrix-coverage\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-matrix-coverage\\stderr.log"
+    },
+    {
+      "phase": "prepared-private-owner-red",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 1,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\prepared-private-owner-red\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\prepared-private-owner-red\\stderr.log"
+    },
+    {
+      "phase": "prepared-private-owner-green",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\prepared-private-owner-green\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\prepared-private-owner-green\\stderr.log"
+    },
+    {
+      "phase": "prepared-private-owner-native",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+        "prepared-private-owner-native"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\prepared-private-owner-native\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\prepared-private-owner-native\\stderr.log"
+    },
+    {
+      "phase": "native-reserved-phase-red",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+      ],
+      "exit": 1,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-reserved-phase-red\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-reserved-phase-red\\stderr.log"
+    },
+    {
+      "phase": "final-unit",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs",
+        "--reporter=default",
+        "--reporter=json",
+        "--outputFile=C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/final-unit/vitest-results.json"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-unit\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-unit\\stderr.log"
+    },
+    {
+      "phase": "final-strict128",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--target",
+        "ES2022",
+        "--module",
+        "ESNext",
+        "--moduleResolution",
+        "bundler",
+        "--lib",
+        "ES2022,DOM",
+        "--strict",
+        "--skipLibCheck",
+        "--noUnusedLocals",
+        "--noUnusedParameters",
+        "src/compute/resourceLedger.ts",
+        "src/compute/workerPool.ts",
+        "src/compute/nativeHandoff.ts",
+        "src/compute/nativeHandoff.worker.ts"
+      ],
+      "exit": 134,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-strict128\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-strict128\\stderr.log"
+    },
+    {
+      "phase": "final-strict128-types-isolated",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "-p",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/tsconfig.strict.json"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-strict128-types-isolated\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-strict128-types-isolated\\stderr.log"
+    },
+    {
+      "phase": "final-full-tsc512",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=512",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-full-tsc512\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-full-tsc512\\stderr.log"
+    },
+    {
+      "phase": "final-native",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+        "final-native"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-native\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\final-native\\stderr.log"
+    },
+    {
+      "phase": "native-header-bound-red",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+        "native-header-bound-red"
+      ],
+      "exit": 1,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-header-bound-red\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-header-bound-red\\stderr.log"
+    },
+    {
+      "phase": "native-header-bound-green",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+        "native-header-bound-green"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-header-bound-green\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\native-header-bound-green\\stderr.log"
+    },
+    {
+      "phase": "delivery-unit",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+        "run",
+        "--config",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs",
+        "--reporter=default",
+        "--reporter=json",
+        "--outputFile=C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/delivery-unit/vitest-results.json"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\delivery-unit\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\delivery-unit\\stderr.log"
+    },
+    {
+      "phase": "delivery-strict128",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "-p",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/tsconfig.strict.json"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\delivery-strict128\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\delivery-strict128\\stderr.log"
+    },
+    {
+      "phase": "delivery-full-tsc512",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=512",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "--incremental",
+        "false"
+      ],
+      "exit": 0,
+      "stdout": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\delivery-full-tsc512\\stdout.log",
+      "stderr": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\phases\\delivery-full-tsc512\\stderr.log"
+    }
+  ],
+  "behavioralCycles": [
+    {
+      "red": "native-legacy-red",
+      "green": "native-composition-green",
+      "kind": "native legacy gap to real input transport"
+    },
+    {
+      "red": "core-prepare-red",
+      "green": "core-prepare-green",
+      "kind": "UNIT legal private prepare"
+    },
+    {
+      "red": "core-roundtrip-red",
+      "green": "core-roundtrip-green",
+      "kind": "UNIT actual structuredClone transfer, not Worker"
+    },
+    {
+      "red": "native-composition-red",
+      "green": "native-composition-green",
+      "kind": "native legal START from nonfunctional scaffold"
+    },
+    {
+      "red": "prepared-private-owner-red",
+      "green": "prepared-private-owner-green",
+      "kind": "UNIT private PREPARED ownership/key suspension; native replay separate"
+    },
+    {
+      "red": "native-reserved-phase-red",
+      "green": "final-unit",
+      "kind": "UNIT native RESERVED versus MAIN"
+    },
+    {
+      "red": "native-header-bound-red",
+      "green": "native-header-bound-green",
+      "kind": "native received control identity reuse, four-header logical bound"
+    }
+  ],
+  "coverageCaveat": "Immediate GREEN negative/codec cases are coverage, not behavioral RED. Native malformed-return fixtures mutate control metadata around genuine native postMessage, never fabricate ACK/payload replies.",
+  "operationalFailuresPreserved": [
+    {
+      "phase": "composition-types",
+      "exit": 2,
+      "resolution": "TS narrowing fixed, then strict/full typecheck PASS"
+    },
+    {
+      "phase": "expanded-types",
+      "exit": 2,
+      "resolution": "RAB fixture uses Reflect.construct under ES2022; runtime assertion unchanged"
+    },
+    {
+      "phase": "final-strict128",
+      "exit": 134,
+      "resolution": "Scratch-only types:[] removes irrelevant ambient discovery from small browser compile; strict128 AND original full project tsc512 both PASS"
+    }
+  ],
+  "review": "Author checks only. Parent independent code/spec review and final full regression/commit required."
+}

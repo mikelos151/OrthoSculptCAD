@@ -1,0 +1,394 @@
+{
+  "q2-pool": {
+    "red": {
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "--config",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-pool-red\\vitest.config.mjs",
+        "--configLoader",
+        "native",
+        "--maxWorkers=1",
+        "--no-file-parallelism",
+        "--reporter=verbose",
+        "--reporter=json",
+        "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-pool-red\\tests.json",
+        "-t",
+        "Q2 pool-owned"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 1,
+      "numTotalTests": 81,
+      "numPassedTests": 0,
+      "numFailedTests": 8,
+      "numPendingTests": 73,
+      "failures": [
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+          "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":1,\"action\":\"release\",\"terminateFails\":false}",
+          "message": "AssertionError: expected [ 'error' ] to deeply equal [ 'error', 'messageerror' ]\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:327:21\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chun"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+          "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":1,\"action\":\"release\",\"terminateFails\":true}",
+          "message": "AssertionError: expected Error: pool cleanup to be Error: native terminate // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:326:20\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+          "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":1,\"action\":\"dispose\",\"terminateFails\":false}",
+          "message": "AssertionError: expected [ 'error' ] to deeply equal [ 'error', 'messageerror' ]\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:327:21\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chun"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+          "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":1,\"action\":\"dispose\",\"terminateFails\":true}",
+          "message": "AssertionError: expected Error: pool cleanup to be Error: native terminate // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:326:20\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+          "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":2,\"action\":\"release\",\"terminateFails\":false}",
+          "message": "AssertionError: expected +0 to be 1 // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:327:78\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2323:10)\n"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+          "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":2,\"action\":\"release\",\"terminateFails\":true}",
+          "message": "AssertionError: expected Error: pool cleanup to be Error: native terminate // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:326:20\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+          "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":2,\"action\":\"dispose\",\"terminateFails\":false}",
+          "message": "AssertionError: expected +0 to be 1 // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:327:78\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2323:10)\n"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+          "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":2,\"action\":\"dispose\",\"terminateFails\":true}",
+          "message": "AssertionError: expected Error: pool cleanup to be Error: native terminate // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:326:20\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/"
+        }
+      ]
+    },
+    "green": {
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "--config",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-pool-green\\vitest.config.mjs",
+        "--configLoader",
+        "native",
+        "--maxWorkers=1",
+        "--no-file-parallelism",
+        "--reporter=verbose",
+        "--reporter=json",
+        "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-pool-green\\tests.json",
+        "-t",
+        "Q2 pool-owned"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 0,
+      "numTotalTests": 81,
+      "numPassedTests": 8,
+      "numFailedTests": 0,
+      "numPendingTests": 73,
+      "failures": []
+    },
+    "identical_tests": {
+      "tests/v03-worker-pool.test.ts": true,
+      "tests/v03-native-handoff.test.ts": true
+    },
+    "production_pair": {
+      "src/compute/workerPool.ts": {
+        "red": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+        "green": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3"
+      },
+      "src/compute/nativeHandoff.ts": {
+        "red": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+        "green": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827"
+      }
+    }
+  },
+  "q2-composition": {
+    "red": {
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "--config",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-composition-red\\vitest.config.mjs",
+        "--configLoader",
+        "native",
+        "--maxWorkers=1",
+        "--no-file-parallelism",
+        "--reporter=verbose",
+        "--reporter=json",
+        "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-composition-red\\tests.json",
+        "-t",
+        "Q2 composition"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 1,
+      "numTotalTests": 96,
+      "numPassedTests": 9,
+      "numFailedTests": 6,
+      "numPendingTests": 81,
+      "failures": [
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"release\",\"registration\":1}",
+          "message": "AssertionError: expected { disposed: false, \u2026(3) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoS"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"release\",\"registration\":2}",
+          "message": "AssertionError: expected { disposed: false, \u2026(3) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoS"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"return\",\"registration\":1}",
+          "message": "AssertionError: expected { disposed: false, \u2026(3) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoS"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"return\",\"registration\":2}",
+          "message": "AssertionError: expected { disposed: false, \u2026(3) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoS"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"dispose\",\"registration\":1}",
+          "message": "AssertionError: expected { Object (disposed, pool, ...) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"dispose\",\"registration\":2}",
+          "message": "AssertionError: expected { Object (disposed, pool, ...) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr"
+        }
+      ]
+    },
+    "green": {
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "--config",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-composition-green\\vitest.config.mjs",
+        "--configLoader",
+        "native",
+        "--maxWorkers=1",
+        "--no-file-parallelism",
+        "--reporter=verbose",
+        "--reporter=json",
+        "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-composition-green\\tests.json"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 0,
+      "numTotalTests": 96,
+      "numPassedTests": 96,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failures": []
+    },
+    "identical_tests": {
+      "tests/v03-worker-pool.test.ts": true,
+      "tests/v03-native-handoff.test.ts": true
+    },
+    "production_pair": {
+      "src/compute/workerPool.ts": {
+        "red": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+        "green": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3"
+      },
+      "src/compute/nativeHandoff.ts": {
+        "red": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+        "green": "befcef1889526ee9b73b544b2494bafca12e2114e75a46d36686e39dec5bde1b"
+      }
+    }
+  },
+  "b1": {
+    "red": {
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "--config",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\b1-red\\vitest.config.mjs",
+        "--configLoader",
+        "native",
+        "--maxWorkers=1",
+        "--no-file-parallelism",
+        "--reporter=verbose",
+        "--reporter=json",
+        "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\b1-red\\tests.json",
+        "-t",
+        "B1 keeps"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 1,
+      "numTotalTests": 126,
+      "numPassedTests": 12,
+      "numFailedTests": 18,
+      "numPendingTests": 96,
+      "failures": [
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":3,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":3,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":4,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":4,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":5,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":5,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":3,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":3,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":4,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":4,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":5,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":5,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":3,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":3,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":4,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":4,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":5,\"cleanupThrow\":false}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        },
+        {
+          "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+          "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":5,\"cleanupThrow\":true}",
+          "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+        }
+      ]
+    },
+    "green": {
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+        "run",
+        "--config",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\b1-green\\vitest.config.mjs",
+        "--configLoader",
+        "native",
+        "--maxWorkers=1",
+        "--no-file-parallelism",
+        "--reporter=verbose",
+        "--reporter=json",
+        "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\b1-green\\tests.json"
+      ],
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+      "exit": 0,
+      "numTotalTests": 126,
+      "numPassedTests": 126,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "failures": []
+    },
+    "identical_tests": {
+      "tests/v03-worker-pool.test.ts": true,
+      "tests/v03-native-handoff.test.ts": true
+    },
+    "production_pair": {
+      "src/compute/workerPool.ts": {
+        "red": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+        "green": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3"
+      },
+      "src/compute/nativeHandoff.ts": {
+        "red": "befcef1889526ee9b73b544b2494bafca12e2114e75a46d36686e39dec5bde1b",
+        "green": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70"
+      }
+    }
+  },
+  "vertical_continuity": {
+    "q2poolgreen_to_compositionred": true,
+    "q2compositiongreen_to_b1red": true,
+    "b1green_to_final_coverage_production_unchanged": true
+  },
+  "classification": {
+    "pool_red": {
+      "selected": 8,
+      "failed": 8
+    },
+    "composition_red": {
+      "selected": 15,
+      "failed": 6,
+      "existing_coverage_passed": 9
+    },
+    "b1_red": {
+      "selected": 30,
+      "failed": 18,
+      "existing_coverage_passed": 12
+    },
+    "additional_existing_coverage": 80,
+    "no_manufactured_red": true
+  }
+}

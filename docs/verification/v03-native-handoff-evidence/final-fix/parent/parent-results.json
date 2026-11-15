@@ -1,0 +1,39 @@
+{
+  "unitExit": 0,
+  "typecheckExit": 0,
+  "pythonExit": 0,
+  "npmAuditExit": 0,
+  "inputHashesUnchanged": true,
+  "staticScan": {
+    "suspectedCredential": [],
+    "dynamicExecution": [],
+    "networkOrProcess": []
+  },
+  "scope": "G1b1b second/last correction candidate plus pool dependency regression; no full lifecycle/App/admission",
+  "unit": {
+    "success": true,
+    "numTotalTests": 1414,
+    "numPassedTests": 1414,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTodoTests": 0
+  },
+  "nativeHandoff": [
+    {
+      "status": "passed",
+      "assertions": 158,
+      "failed": []
+    }
+  ],
+  "unitExpectedTotal": 1414,
+  "pythonTests": 71,
+  "auditVulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "status": "REGRESSION_PASS_REVIEWS_PENDING"
+}

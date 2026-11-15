@@ -1,0 +1,64 @@
+{
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "-p",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-quality-parent\\tsconfig.json"
+      ],
+      "exit": 0,
+      "label": "compile"
+    },
+    {
+      "command": [
+        "node",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "--loader",
+        "file:///C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-quality-parent\\loader.mjs",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-quality-parent\\witness.mjs"
+      ],
+      "exit": 0,
+      "label": "witness"
+    },
+    {
+      "command": [
+        "node",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-native-parent\\native-cli.mjs",
+        "post-fix-parent-retry"
+      ],
+      "exit": 0,
+      "label": "native"
+    }
+  ],
+  "fullNode": 1281,
+  "python": 71,
+  "unitQuality": {
+    "total": 87,
+    "passed": 87,
+    "failed": 0,
+    "unchangedWitness": true
+  },
+  "native": {
+    "checks": 71,
+    "metrics": {
+      "constructors": 12,
+      "terminates": 12,
+      "peak": 2,
+      "live": 0
+    },
+    "devtoolsCreated": 9,
+    "closedBeforeTeardown": 9,
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "browser": "156.0.8078.4"
+  },
+  "previousAttempt": "Initial long python -c completed inner replays but enclosing Bash returned syntax error after summary. Preserved that attempt; reran all replay subprocesses from this saved script into new phase/logs with actual zero exits. Not production RED."
+}

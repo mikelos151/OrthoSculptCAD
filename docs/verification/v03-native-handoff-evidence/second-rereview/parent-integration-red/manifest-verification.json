@@ -1,0 +1,10 @@
+{
+  "sha256": "014be0ec611f2c561a77cfd5b0988c5ef98d91c0aec3a1d7367e7c5f4473c66b",
+  "entries": 68,
+  "actual_entries": 68,
+  "verified": true,
+  "excluded": [
+    "artifact-manifest.json",
+    "manifest-verification.json"
+  ]
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "label": "spec-compile",
+    "command": [
+      "node",
+      "--max-old-space-size=128",
+      "--max-semi-space-size=8",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+      "-p",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\spec\\tsconfig.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "spec-boundary",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\spec\\run.mjs",
+      "boundary"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "quality-compile",
+    "command": [
+      "node",
+      "--max-old-space-size=128",
+      "--max-semi-space-size=8",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+      "-p",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\tsconfig.json"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "quality-witness",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\run.mjs",
+      "witness"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "quality-repro",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\run.mjs",
+      "repro"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "quality-matrix",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\run.mjs",
+      "matrix"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "native-pool",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\native-pool\\native-cli.mjs"
+    ],
+    "exit": 0
+  },
+  {
+    "label": "native-handoff",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\native-handoff\\native-cli.mjs",
+      "final-parent"
+    ],
+    "exit": 0
+  }
+]

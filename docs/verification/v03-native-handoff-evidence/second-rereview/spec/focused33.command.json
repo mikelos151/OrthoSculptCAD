@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-spec-rereview/vitest.config.mjs",
+    "--configLoader",
+    "native",
+    "--reporter=verbose",
+    "--reporter=json",
+    "--outputFile.json=C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-spec-rereview/focused33-results.json"
+  ],
+  "cwd": "C:/Users/sandr/OrthoSculptCAD",
+  "actual_exit": 0,
+  "signal": null,
+  "error": null
+}

@@ -1,0 +1,11 @@
+{
+  "name": "native-pool",
+  "command": [
+    "node",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\native-pool\\native-cli.mjs"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit": 0
+}

@@ -1,0 +1,10 @@
+{
+  "name": "spec-boundary",
+  "command": [
+    "node",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec\\run.mjs",
+    "boundary"
+  ],
+  "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec",
+  "exit": 0
+}

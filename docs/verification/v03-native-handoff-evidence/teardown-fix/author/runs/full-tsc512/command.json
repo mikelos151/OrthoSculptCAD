@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=512",
+    "--max-semi-space-size=8",
+    "node_modules/typescript/bin/tsc",
+    "--noEmit"
+  ],
+  "cwd": "C:/Users/sandr/OrthoSculptCAD",
+  "env": {
+    "NODE_OPTIONS": ""
+  }
+}

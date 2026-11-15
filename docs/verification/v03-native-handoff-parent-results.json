@@ -1,0 +1,133 @@
+{
+  "status": "FINAL_CANDIDATE_REPLAYS_PASS_REVIEWS_PENDING",
+  "secondFixVerification": {
+    "cycle": "2/2, no third automatic correction authorized",
+    "poolSHA256": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+    "handoffSHA256": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70",
+    "poolTestSHA256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+    "handoffTestSHA256": "2f5bce9b8356884dbfc07a951cb8df62ad3ab63fc826b16c11120132c7fae687",
+    "parentFullNode": "1414/1414 PASS, 0 failure/skip",
+    "parentPython": "71 PASS",
+    "typecheckAndAudit": "Both actual exit0; zero dependency vulnerabilities reported",
+    "unchangedWitnesses": "Fresh compile and original87/boundary55/minimalB1repro20/B1matrix124 all PASS; prior failure outputs retained",
+    "serialNativeReplays": "Pool119 and handoff71 PASS; served/source hashes identical to actor candidate; all workers/browser/server resources closed, both ports refuse connections",
+    "evidence": "docs/verification/v03-native-handoff-evidence/final-fix/parent-summary.json",
+    "pending": "Fresh final spec+quality deleg_01c0c0ca; not accepted or committed"
+  },
+  "secondReviewHistory": {
+    "Q1": "CLOSED by both fresh reviews",
+    "Q2": "Original facade message-removal case fixed; INTEGRATION HOLD: pool-owned error/messageerror listener removal can still skip the native terminal attempt",
+    "B1": "HOLD: cleanup-reentrant dispose can replace actual native terminate error object E with a new NATIVE_TERMINATE; fail-closed slot/charge retention remains intact",
+    "parentReplays": "Fresh compile exit0; exact boundary55:51PASS4FAIL, repro20:18PASS2FAIL, matrix124:106PASS18FAIL; each expected exit1",
+    "evidenceBoundary": "All are explicit UNIT faults, not demonstrated native exploit/default reachability or payload/authority leakage",
+    "evidence": "docs/verification/v03-native-handoff-evidence/second-rereview/index.json",
+    "verifiedReviewerManifestEntries": "68 spec + 53 quality; 259 raw/source/replay files archived",
+    "scopeAmendment": "Parent explicitly authorizes narrowly correcting workerPool.ts and its tests alongside nativeHandoff.ts/tests; ledger, endpoint, norms and all other code remain frozen",
+    "correction": "deleg_ad108d3d/sa-0-c2a7344f second and LAST auto-fix cycle (2/2); no third automatic loop, final acceptance still blocked"
+  },
+  "firstFixVerification": {
+    "candidateNativeSHA256": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+    "candidateTestSHA256": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+    "fullNode": "1281/1281 PASS, 0 fail/skip",
+    "python": "71 PASS",
+    "typecheckAndDependencyAudit": "Both exit0, no known dependency vulnerabilities reported",
+    "unchangedOriginalQualityWitnesses": "87/87 PASS on fresh compilation; earlier exact 85/87 RED preserved",
+    "nativeReplay": "71/71 PASS; 12 constructors/12 terminate invocations; peak2/live0; 9 DevTools Workers closed before teardown; all browser/server resources closed",
+    "preservedTests": "Original 28 bodies unchanged except imports; 5 new cases; Q1 and Q2 vertical RED->GREEN histories preserved",
+    "archivedEvidence": "docs/verification/v03-native-handoff-evidence/teardown-fix/parent-summary.json",
+    "independentReviews": "Fresh spec+quality deleg_099abcad pending; no final acceptance/commit"
+  },
+  "initialReviewDecision": {
+    "spec": "Scoped PASS G1b1bInputOnly; 153 assertions / 10 scenarios, 6 authentic TDD pairs audited",
+    "quality": "HOLD: Q1 reentrant dispose resurrects RETURNED; Q2 listener removal failure prevents exact private handoff settlement after later successful terminal",
+    "parentReproduction": "Original unchanged UNIT witnesses replayed in isolated copy: exit1, 87 total, 85 PASS, exact Q1/Q2 FAIL; both leave pending1 and managed/job5 after pool occupied0",
+    "evidenceBoundary": "Explicit UNIT transport fault injection; no default native Worker reachability, payload/authority leak or security exploit demonstrated",
+    "previousGreenScope": "1276 Node/71 Python/fullTS/audit/native71 were pre-fix regression results, not acceptance and not overriding these concrete defects",
+    "archivedEvidence": "docs/verification/v03-native-handoff-evidence/initial-independent/index.json",
+    "verifiedArtifacts": "72 spec review entries + 39 quality entries; 163 original/replay files archived",
+    "correction": "Third-context fixer deleg_3f5cbd1f/sa-0-778d4d43 only nativeHandoff.ts and its tests; no acceptance/commit before fresh verification"
+  },
+  "scope": "G1b1bInputOnly; not full G1b1c or App/clinical/CAD acceptance",
+  "baseHEAD": "25980b612ced5dc79ce966208cb7ce4edbb1546b",
+  "sourceHashesAtInitialDelivery": {
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.ts": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "tests/v03-native-handoff.test.ts": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6"
+  },
+  "parentRegression": {
+    "unitExit": 0,
+    "typecheckExit": 0,
+    "pythonExit": 0,
+    "npmAuditExit": 0,
+    "inputHashesUnchanged": true,
+    "staticScan": {
+      "suspectedCredential": [],
+      "dynamicExecution": [],
+      "networkOrProcess": []
+    },
+    "scope": "G1b1b input-only native handoff regression; no full lifecycle/App/admission",
+    "unit": {
+      "success": true,
+      "numTotalTests": 1276,
+      "numPassedTests": 1276,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0
+    },
+    "nativeHandoff": [
+      {
+        "status": "passed",
+        "assertions": 28,
+        "failed": []
+      }
+    ],
+    "unitExpectedTotal": 1276,
+    "pythonTests": 71,
+    "auditVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "status": "REGRESSION_PASS_REVIEWS_PENDING"
+  },
+  "parentNative": {
+    "checks": 71,
+    "metrics": {
+      "constructors": 12,
+      "terminates": 12,
+      "peak": 2,
+      "live": 0
+    },
+    "devtoolsCreated": 9,
+    "devtoolsClosedBeforeTeardown": 9,
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "errors": [],
+    "externalRequests": [],
+    "browser": "156.0.8078.4",
+    "sourceAndServedHashesMatchAuthor": true
+  },
+  "childWriteWarningResolution": "fixture.mjs refused overwrite preserved SHA3fa1c305...; actual final native-cli reads fixture-matrix.mjs and fixture-roundtrip.mjs. Both were verified/replayed unchanged; final served/source hashes identical to author. Not claiming failed overwrite succeeded.",
+  "parentCheckerHistory": "Initial nested-string syntax error and then wrong root assumption in manifest checker were parent harness errors, NOT production RED. Inspected schema (roots scratch/repository); corrected checker verified all369 entries, four source hashes and manifestSHA4d84e121... .",
+  "independentReviews": "Initial d831aca0 and099abcad HOLD histories retained. Second/last fix delivered with all parent regression/native/frozen-witness replays PASS; final independent spec+quality01c0c0ca pending. No acceptance/commit yet.",
+  "evidence": "docs/verification/v03-native-handoff-evidence/index.json",
+  "authorNotClaimedAtDelivery": [
+    "G1b1c full lifecycle/cancel/release/error/deadline/SHA holds",
+    "worker-clock propagation",
+    "App/global cap migration/G1b2",
+    "native-output or remote-new grants",
+    "source admission/ACTIVE/G2/G3/geometry/UI",
+    "whole-project regression (parent-owned)",
+    "thread join/GC/RSS bound",
+    "independent review/acceptance"
+  ],
+  "release020BundleSHA256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd"
+}

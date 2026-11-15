@@ -1,0 +1,504 @@
+{
+  "evidence_kind": "UNIT actual freshly compiled final APIs, EventTarget + actual structuredClone; no native/security exploit claim",
+  "total": 124,
+  "passed": 124,
+  "failed": 0,
+  "results": [
+    {
+      "name": "UNIT matrix IN_FLIGHT/message/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/message/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/message/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/message/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/message/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/message/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/message/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/message/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/error/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/error/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/error/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/error/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/error/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/error/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/error/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/error/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/messageerror/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/messageerror/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/messageerror/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/messageerror/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/messageerror/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/messageerror/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/messageerror/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/messageerror/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/terminate/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/terminate/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/terminate/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/terminate/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/terminate/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/terminate/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/terminate/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix IN_FLIGHT/terminate/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/message/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/message/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/message/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/message/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/message/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/message/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/message/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/message/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/error/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/error/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/error/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/error/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/error/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/error/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/error/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/error/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/messageerror/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/messageerror/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/messageerror/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/messageerror/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/messageerror/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/messageerror/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/messageerror/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/messageerror/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/terminate/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/terminate/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/terminate/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/terminate/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/terminate/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/terminate/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/terminate/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix REMOTE/terminate/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/message/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/message/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/message/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/message/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/message/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/message/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/message/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/message/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/error/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/error/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/error/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/error/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/error/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/error/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/error/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/error/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/messageerror/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/messageerror/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/messageerror/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/messageerror/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/messageerror/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/messageerror/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/messageerror/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/messageerror/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/terminate/release/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/terminate/release/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/terminate/release/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/terminate/release/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/terminate/dispose/cleanup=false/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/terminate/dispose/cleanup=false/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/terminate/dispose/cleanup=true/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT matrix RETURN/terminate/dispose/cleanup=true/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only IN_FLIGHT/message",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only IN_FLIGHT/error",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only IN_FLIGHT/messageerror",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only REMOTE/message",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only REMOTE/error",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only REMOTE/messageerror",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only RETURN/message",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only RETURN/error",
+      "passed": true
+    },
+    {
+      "name": "UNIT cleanup-only RETURN/messageerror",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds release/undefined/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds release/undefined/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds release/message/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds release/message/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds release/error/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds release/error/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds release/messageerror/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds release/messageerror/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds return/undefined/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds return/undefined/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds return/message/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds return/message/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds return/error/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds return/error/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds return/messageerror/terminate=false",
+      "passed": true
+    },
+    {
+      "name": "UNIT foreign holds return/messageerror/terminate=true",
+      "passed": true
+    },
+    {
+      "name": "UNIT retired h1 vs new h2 after message cleanup",
+      "passed": true
+    },
+    {
+      "name": "UNIT retired h1 vs new h2 after error cleanup",
+      "passed": true
+    },
+    {
+      "name": "UNIT retired h1 vs new h2 after messageerror cleanup",
+      "passed": true
+    }
+  ]
+}

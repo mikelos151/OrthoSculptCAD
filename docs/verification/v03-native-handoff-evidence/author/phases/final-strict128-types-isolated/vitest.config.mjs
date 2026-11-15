@@ -1,0 +1,1 @@
+export default {test:{include:['tests/v03-resource-ledger.test.ts','tests/v03-worker-pool.test.ts','tests/v03-native-handoff.test.ts'],maxWorkers:1,fileParallelism:false,pool:'forks',execArgv:['--max-old-space-size=256','--max-semi-space-size=8']}};

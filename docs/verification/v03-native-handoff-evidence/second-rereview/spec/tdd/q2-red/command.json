@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=256",
+    "--max-semi-space-size=8",
+    "node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-fix/vitest.config.mjs",
+    "tests/v03-native-handoff.test.ts",
+    "--reporter=verbose"
+  ],
+  "cwd": "C:/Users/sandr/OrthoSculptCAD",
+  "env": {
+    "NODE_OPTIONS": ""
+  }
+}

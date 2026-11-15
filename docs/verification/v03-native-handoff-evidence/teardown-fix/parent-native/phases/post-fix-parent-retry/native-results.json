@@ -1,0 +1,3171 @@
+{
+  "passed": true,
+  "hashes": {
+    "source": {
+      "resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990"
+    },
+    "served": {
+      "resourceLedger.js": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+      "workerPool.js": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200",
+      "nativeHandoff.js": "803560cf0589c53348d5ec94b29b5bdc0a034c34f239f81f426967f885fa5bd5",
+      "nativeHandoff.worker.js": "fa95ed8c531a1873b91f787010e741e781acbf724877d3e6cd1bfd9ba488a2a9",
+      "fixture.mjs": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+      "fixture-base.mjs": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c"
+    }
+  },
+  "result": {
+    "checks": [
+      {
+        "name": "accepted native input",
+        "pass": true
+      },
+      {
+        "name": "native START detached actual G1a backing",
+        "pass": true
+      },
+      {
+        "name": "different JS RETURN wrapper same byteLength",
+        "pass": true
+      },
+      {
+        "name": "original exact payload bytes",
+        "pass": true
+      },
+      {
+        "name": "original exact SHA256",
+        "pass": true
+      },
+      {
+        "name": "same allocation ID/charge throughout native handoff",
+        "pass": true
+      },
+      {
+        "name": "same allocation ID/charge throughout native handoff",
+        "pass": true
+      },
+      {
+        "name": "same allocation ID/charge throughout native handoff",
+        "pass": true
+      },
+      {
+        "name": "actual native RECEIVED and RETURN",
+        "pass": true
+      },
+      {
+        "name": "one-shot native terminate before result adoption",
+        "pass": true
+      },
+      {
+        "name": "all result refs closed",
+        "pass": true
+      },
+      {
+        "name": "genuine Chromium DataCloneError preserves attached payload",
+        "pass": true
+      },
+      {
+        "name": "attached-send rollback exact ID/refs/owner/categories/charges",
+        "pass": true
+      },
+      {
+        "name": "failed native send terminates and releases pool slot",
+        "pass": true
+      },
+      {
+        "name": "no fabricated native response for DataCloneError",
+        "pass": true
+      },
+      {
+        "name": "bounded native submit accepted",
+        "pass": true
+      },
+      {
+        "name": "fresh physical binding retries original live ownership after atomic rollback",
+        "pass": true
+      },
+      {
+        "name": "bounded native submit accepted",
+        "pass": true
+      },
+      {
+        "name": "bounded native submit accepted",
+        "pass": true
+      },
+      {
+        "name": "third request BUSY before payload detach",
+        "pass": true
+      },
+      {
+        "name": "third request no constructor/send/ledger mutation",
+        "pass": true
+      },
+      {
+        "name": "accepted pool composition holds maximum two physical Workers",
+        "pass": true
+      },
+      {
+        "name": "retired h1 release does not touch newer native h2",
+        "pass": true
+      },
+      {
+        "name": "both one-shots terminated before adoption",
+        "pass": true
+      },
+      {
+        "name": "returned-but-not-adopted results bounded by the same two logical main holds",
+        "pass": true
+      },
+      {
+        "name": "closed consumer cannot publish",
+        "pass": true
+      },
+      {
+        "name": "consumer refusal atomic",
+        "pass": true
+      },
+      {
+        "name": "foreign composition handle lacks exact binding authority",
+        "pass": true
+      },
+      {
+        "name": "actual native MessageChannel-cloned handle has no authority",
+        "pass": true
+      },
+      {
+        "name": "forged diagnostic-ID/equal-bytes handle denied",
+        "pass": true
+      },
+      {
+        "name": "forged diagnostic-ID/equal-bytes handle denied",
+        "pass": true
+      },
+      {
+        "name": "forged diagnostic-ID/equal-bytes handle denied",
+        "pass": true
+      },
+      {
+        "name": "authentic accepted handle cannot publish twice",
+        "pass": true
+      },
+      {
+        "name": "actual UI/history alias refuses before detach",
+        "pass": true
+      },
+      {
+        "name": "alias refusal atomic and no native send",
+        "pass": true
+      },
+      {
+        "name": "duplicate allocation in one native group refused",
+        "pass": true
+      },
+      {
+        "name": "duplicate refusal atomic",
+        "pass": true
+      },
+      {
+        "name": "test-only server fault mode return-reserved",
+        "pass": true
+      },
+      {
+        "name": "bounded native submit accepted",
+        "pass": true
+      },
+      {
+        "name": "return-reserved: native RETURN fail-closed",
+        "pass": true
+      },
+      {
+        "name": "return-reserved: no rebind/publication, remote charges retire only after terminate",
+        "pass": true
+      },
+      {
+        "name": "return-reserved: no result authority",
+        "pass": true
+      },
+      {
+        "name": "test-only server fault mode return-envelope",
+        "pass": true
+      },
+      {
+        "name": "bounded native submit accepted",
+        "pass": true
+      },
+      {
+        "name": "return-envelope: native RETURN fail-closed",
+        "pass": true
+      },
+      {
+        "name": "return-envelope: no rebind/publication, remote charges retire only after terminate",
+        "pass": true
+      },
+      {
+        "name": "return-envelope: no result authority",
+        "pass": true
+      },
+      {
+        "name": "test-only server fault mode return-bytes",
+        "pass": true
+      },
+      {
+        "name": "bounded native submit accepted",
+        "pass": true
+      },
+      {
+        "name": "return-bytes: native RETURN fail-closed",
+        "pass": true
+      },
+      {
+        "name": "return-bytes: no rebind/publication, remote charges retire only after terminate",
+        "pass": true
+      },
+      {
+        "name": "return-bytes: no result authority",
+        "pass": true
+      },
+      {
+        "name": "test-only server fault mode return-nonce",
+        "pass": true
+      },
+      {
+        "name": "bounded native submit accepted",
+        "pass": true
+      },
+      {
+        "name": "return-nonce: native RETURN fail-closed",
+        "pass": true
+      },
+      {
+        "name": "return-nonce: no rebind/publication, remote charges retire only after terminate",
+        "pass": true
+      },
+      {
+        "name": "return-nonce: no result authority",
+        "pass": true
+      },
+      {
+        "name": "test-only server fault mode normal",
+        "pass": true
+      },
+      {
+        "name": "16-descriptor native boundary accepted",
+        "pass": true
+      },
+      {
+        "name": "all16 original native backings returned as new wrappers including zero-byte",
+        "pass": true
+      },
+      {
+        "name": "batch keeps every allocation ID and full bytes",
+        "pass": true
+      },
+      {
+        "name": "final logical charges and pending handles zero",
+        "pass": true
+      },
+      {
+        "name": "snapshots frozen and contain no transport/payload/nonce capabilities",
+        "pass": true
+      },
+      {
+        "name": "each native constructor matched exactly one terminate API invocation",
+        "pass": true
+      },
+      {
+        "name": "every observed native RETURN has a worker-side intrinsic detach observation",
+        "pass": true
+      },
+      {
+        "name": "all native worker returned fixed ABs are intrinsically detached including zero-byte",
+        "pass": true
+      },
+      {
+        "name": "worker reuses received header/descriptor controls for replies to enforce four-header logical bound",
+        "pass": true
+      },
+      {
+        "name": "all actual native constructor invocations matched one terminate invocation",
+        "pass": true
+      },
+      {
+        "name": "all DevTools-observed Workers closed before context teardown",
+        "pass": true
+      },
+      {
+        "name": "no unexpected native page errors or external network",
+        "pass": true
+      },
+      {
+        "name": "four malformed RETURN fault variants executed through native endpoint",
+        "pass": true
+      }
+    ],
+    "events": [
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": []
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "native-post-threw",
+        "name": "DataCloneError",
+        "lengths": [
+          16
+        ],
+        "genuineNativeCall": true
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": [],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 1,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 2,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 1,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 2,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 1,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 2,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 1,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 2,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 2
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": [],
+        "ledgerBefore": {
+          "managed": 48,
+          "job": 48,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 2,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 7,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "bytes": 16,
+              "realm": 3,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 8,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 6,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 48,
+          "job": 48,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 2,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 7,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "bytes": 16,
+              "realm": 3,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 8,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 6,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ],
+        "ledgerBefore": {
+          "managed": 48,
+          "job": 48,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 2,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 7,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "bytes": 16,
+              "realm": 3,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 8,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 6,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 48,
+          "job": 48,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 2,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 7,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "bytes": 16,
+              "realm": 3,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 8,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 6,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "terminate",
+        "live": 1
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": [],
+        "ledgerBefore": {
+          "managed": 48,
+          "job": 48,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 2,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 7,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "bytes": 16,
+              "realm": 3,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 8,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 6,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 48,
+          "job": 48,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 2,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 7,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "bytes": 16,
+              "realm": 3,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 8,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 6,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ],
+        "ledgerBefore": {
+          "managed": 48,
+          "job": 48,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 2,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 7,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "bytes": 16,
+              "realm": 3,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 8,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 6,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 48,
+          "job": 48,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 2,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 7,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "bytes": 16,
+              "realm": 3,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 8,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "bytes": 16,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 6,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": [],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 6,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 14,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 6,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 14,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 6,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 14,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 6,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 14,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": [],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 7,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 16,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 7,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 16,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 7,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 16,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 7,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 16,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": [],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 8,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 18,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 8,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 18,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 8,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 18,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 8,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 18,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          16
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": [],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 9,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 20,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 9,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 20,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          16
+        ],
+        "ledgerBefore": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 9,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 20,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 16,
+          "job": 16,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 9,
+              "bytes": 16,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 20,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      },
+      {
+        "native": "constructor",
+        "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+        "live": 1
+      },
+      {
+        "native": "send-before",
+        "type": 1,
+        "lengths": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "native": "send-after",
+        "lengths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "native": "receive",
+        "type": 2,
+        "lengths": [],
+        "ledgerBefore": {
+          "managed": 15,
+          "job": 15,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 10,
+              "bytes": 0,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 37,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 38,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 12,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 39,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 13,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 40,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 14,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 41,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 15,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 42,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 16,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 43,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 17,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 44,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 45,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 19,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 46,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 20,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 47,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 21,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 48,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 22,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 49,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 23,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 50,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 24,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 51,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 25,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 52,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 15,
+          "job": 15,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 10,
+              "bytes": 0,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 37,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 38,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 12,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 39,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 13,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 40,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 14,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 41,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 15,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 42,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 16,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 43,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 17,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 44,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 45,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 19,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 46,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 20,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 47,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 21,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 48,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 22,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 49,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 23,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 50,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 24,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 51,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 25,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "IN_FLIGHT",
+              "refs": [
+                {
+                  "id": 52,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "receive",
+        "type": 3,
+        "lengths": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "ledgerBefore": {
+          "managed": 15,
+          "job": 15,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 10,
+              "bytes": 0,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 37,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 38,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 12,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 39,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 13,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 40,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 14,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 41,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 15,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 42,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 16,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 43,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 17,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 44,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 45,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 19,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 46,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 20,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 47,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 21,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 48,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 22,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 49,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 23,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 50,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 24,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 51,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 25,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 52,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "after-receive",
+        "ledger": {
+          "managed": 15,
+          "job": 15,
+          "history": 0,
+          "allocations": [
+            {
+              "id": 10,
+              "bytes": 0,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 37,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 38,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 12,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 39,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 13,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 40,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 14,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 41,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 15,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 42,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 16,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 43,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 17,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 44,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 45,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 19,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 46,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 20,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 47,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 21,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 48,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 22,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 49,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 23,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 50,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 24,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 51,
+                  "category": "job"
+                }
+              ]
+            },
+            {
+              "id": 25,
+              "bytes": 1,
+              "realm": 2,
+              "phase": "REMOTE",
+              "refs": [
+                {
+                  "id": 52,
+                  "category": "job"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "native": "terminate",
+        "live": 0
+      }
+    ],
+    "snapshots": {
+      "before": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "sent": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 2,
+            "phase": "IN_FLIGHT",
+            "refs": [
+              {
+                "id": 2,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "returned": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 2,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "return-reserved": {
+        "originalAllocationId": 6,
+        "final": {
+          "managed": 0,
+          "job": 0,
+          "history": 0,
+          "allocations": []
+        },
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 6,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        }
+      },
+      "return-envelope": {
+        "originalAllocationId": 7,
+        "final": {
+          "managed": 0,
+          "job": 0,
+          "history": 0,
+          "allocations": []
+        },
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 7,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        }
+      },
+      "return-bytes": {
+        "originalAllocationId": 8,
+        "final": {
+          "managed": 0,
+          "job": 0,
+          "history": 0,
+          "allocations": []
+        },
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 8,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        }
+      },
+      "return-nonce": {
+        "originalAllocationId": 9,
+        "final": {
+          "managed": 0,
+          "job": 0,
+          "history": 0,
+          "allocations": []
+        },
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 9,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        }
+      }
+    },
+    "hash": "a6996db4e58c33aafa456f44fc0c3ac55e1ee2a97aa97a8015fe86637f8c64ec",
+    "metrics": {
+      "constructors": 12,
+      "terminates": 12,
+      "peak": 2,
+      "live": 0
+    },
+    "browserVersion": "156.0.8078.4"
+  },
+  "errors": [],
+  "external": [],
+  "workers": [
+    {
+      "type": "created",
+      "id": 1,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 1
+    },
+    {
+      "type": "created",
+      "id": 2,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 2
+    },
+    {
+      "type": "created",
+      "id": 3,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "created",
+      "id": 4,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 3
+    },
+    {
+      "type": "closed",
+      "id": 4
+    },
+    {
+      "type": "created",
+      "id": 5,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 5
+    },
+    {
+      "type": "created",
+      "id": 6,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 6
+    },
+    {
+      "type": "created",
+      "id": 7,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 7
+    },
+    {
+      "type": "created",
+      "id": 8,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 8
+    },
+    {
+      "type": "created",
+      "id": 9,
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts"
+    },
+    {
+      "type": "closed",
+      "id": 9
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:51619/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/fixture.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/fixture-base.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/__mode/return-reserved",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/__mode/return-envelope",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/__mode/return-bytes",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/__mode/return-nonce",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/__mode/normal",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.worker.ts",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:51619/workerPool.js",
+      "status": 200
+    }
+  ],
+  "workerConsole": [
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        16
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0
+      ],
+      "detached": [
+        true
+      ]
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        16
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0
+      ],
+      "detached": [
+        true
+      ]
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        16
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0
+      ],
+      "detached": [
+        true
+      ]
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        16
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0
+      ],
+      "detached": [
+        true
+      ]
+    },
+    {
+      "mode": "return-reserved",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "return-reserved",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "return-reserved",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        16
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "return-reserved",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0
+      ],
+      "detached": [
+        true
+      ]
+    },
+    {
+      "mode": "return-envelope",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "return-envelope",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "return-envelope",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        16
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "return-envelope",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0
+      ],
+      "detached": [
+        true
+      ]
+    },
+    {
+      "mode": "return-bytes",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "return-bytes",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "return-bytes",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        16
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "return-bytes",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0
+      ],
+      "detached": [
+        true
+      ]
+    },
+    {
+      "mode": "return-nonce",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "return-nonce",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "return-nonce",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        16
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "return-nonce",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0
+      ],
+      "detached": [
+        true
+      ]
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 2,
+      "lengths": [],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 2,
+      "lengths": [],
+      "detached": []
+    },
+    {
+      "mode": "normal",
+      "stage": "before-post",
+      "type": 3,
+      "lengths": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "headerSame": true,
+      "descriptorsSame": true
+    },
+    {
+      "mode": "normal",
+      "stage": "after-post",
+      "type": 3,
+      "lengths": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "detached": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "servedVariants": [
+    {
+      "name": "worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a"
+    },
+    {
+      "name": "worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a"
+    },
+    {
+      "name": "worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a"
+    },
+    {
+      "name": "worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a"
+    },
+    {
+      "name": "worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a"
+    },
+    {
+      "name": "worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a"
+    },
+    {
+      "name": "worker-return-reserved.js",
+      "sha256": "2caa280ae9d4ea6230ff93937a92e7ab251bb031237ca72bc0f48293d3ca7061"
+    },
+    {
+      "name": "worker-return-reserved.js",
+      "sha256": "2caa280ae9d4ea6230ff93937a92e7ab251bb031237ca72bc0f48293d3ca7061"
+    },
+    {
+      "name": "worker-return-envelope.js",
+      "sha256": "dab48e10ad02026c719cac53a2c555cbbc8b64b8aa0c96a48f56bbb168a50974"
+    },
+    {
+      "name": "worker-return-bytes.js",
+      "sha256": "ea57e83349f05bb09723ce3cb708db21b258ccc9967d581e5382e0b334c863a3"
+    },
+    {
+      "name": "worker-return-nonce.js",
+      "sha256": "a221e14e1b31928bbe4bd5d88115d70165d8dc4f079a3d6e097bb37b72e172d3"
+    },
+    {
+      "name": "worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a"
+    }
+  ],
+  "closed": {
+    "context": true,
+    "browser": true,
+    "server": true,
+    "portRefuses": true
+  }
+}

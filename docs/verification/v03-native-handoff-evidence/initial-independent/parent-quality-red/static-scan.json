@@ -1,0 +1,11 @@
+{
+  "scope": "ALL four delivered files, not just added lines",
+  "rules": {
+    "credentials": "/\\b(?:api_key|secret|password|passwd|token)\\s*=\\s*['\"][^'\"]{6,}['\"]/i",
+    "dynamic_execution": "/\\b(?:eval|exec)\\s*\\(|new\\s+Function\\s*\\(/",
+    "network": "/\\bfetch\\s*\\(|XMLHttpRequest|WebSocket|https?:\\/\\//",
+    "process_execution": "/child_process|os\\.system|shell\\s*:\\s*true/",
+    "sql_interpolation": "/execute\\s*\\(\\s*(?:f[\"']|.*\\.format\\()/"
+  },
+  "findings": []
+}

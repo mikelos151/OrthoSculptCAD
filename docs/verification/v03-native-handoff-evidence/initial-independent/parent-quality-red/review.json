@@ -1,0 +1,201 @@
+{
+  "passed": false,
+  "review_scope": "G1b1b input-only API/codec/private same-core ownership quality + requested UNIT exceptional transport fault matrix",
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "Q1",
+      "severity": "medium",
+      "title": "Reentrant dispose during successful terminal resurrects RETURNED and orphans local controlled refs",
+      "locations": [
+        "src/compute/nativeHandoff.ts:84-94",
+        "src/compute/nativeHandoff.ts:96-112",
+        "src/compute/nativeHandoff.ts:148-150"
+      ],
+      "evidence_kind": "UNIT fault injection into actual compiled composition; NOT native/browser evidence",
+      "precondition": "An instrumented Worker.terminate invokes the public broker.dispose synchronously, once, during normal RETURN handling. This is a test-only transport-method callback, not a public transport seam.",
+      "reproduction": "Run node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/run.mjs witness; see scenario \"UNIT reentrant dispose during termination never leaves a RETURNED orphan after closed\" and observations.reentrantTerminate in witness-results.json.",
+      "observed": {
+        "disposed": true,
+        "poolOccupied": 0,
+        "pending": 1,
+        "phase": "RETURNED",
+        "managed": 5,
+        "job": 5,
+        "terminateInvocations": 1,
+        "waitRejectedWith": "NATIVE_TERMINATE",
+        "secondDispose": "no cleanup"
+      },
+      "cause": "stopAttempted is treated as terminal failure even while the first stop is still in progress. Recursive drop fails, but the outer RETURN handler resumes after stopWorker and unconditionally sets phase RETURNED/resolves without checking disposed or revoked state. The caller source is closed and there is no pending main continuation.",
+      "correction_criterion": "Separate terminal-in-progress from terminal-success/failure; make recursive revoke latch-only and preserve original completion ownership. After successful termination, settle the exact private handoff once even if disposed during teardown. Never overwrite revoke/dispose with RETURNED. This witness must end disposed, pool occupied=0, pending=0 and managed/job=0; accept remains STALE and terminate is called once.",
+      "boundary": "No security exploit or default-native reachability demonstrated. Standard native terminate does not synchronously invoke arbitrary callbacks. This is a robustness defect in the explicitly requested reentrancy fault-injection matrix, not a sandbox requirement."
+    },
+    {
+      "id": "Q2",
+      "severity": "medium",
+      "title": "Listener-removal failure poisons handoff settlement even after later successful pool termination",
+      "locations": [
+        "src/compute/nativeHandoff.ts:84-94",
+        "src/compute/nativeHandoff.ts:96-112",
+        "src/compute/nativeHandoff.ts:155"
+      ],
+      "evidence_kind": "UNIT fault injection into actual compiled composition; NOT native/browser evidence",
+      "precondition": "The first removeEventListener(\"message\") throws once in the Unit Worker. The fault is then removed before calling public dispose; pool termination subsequently succeeds.",
+      "reproduction": "Run node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/run.mjs witness; see scenario \"UNIT listener cleanup throw then successful pool dispose does not orphan handoff\" and observations.removeThrow.afterSuccessfulPoolDispose in witness-results.json.",
+      "observed": {
+        "initialTerminateInvocations": 0,
+        "initialOccupied": 1,
+        "afterDispose": {
+          "disposed": true,
+          "poolOccupied": 0,
+          "pending": 1,
+          "phase": "FAILED",
+          "managed": 5,
+          "job": 5,
+          "allocationPhase": "IN_FLIGHT",
+          "terminateInvocations": 1
+        }
+      },
+      "cause": "r.remove executes outside the try/catch after stopAttempted=true. Its throw skips pool.release and never records stopError. Later drop refuses to re-enter stopWorker, so handoff.terminated is unreachable. dispose independently frees the physical pool slot but never reconciles the same private handoff, retaining remote refs/charges without a worker.",
+      "correction_criterion": "Make listener cleanup best-effort per listener and ensure it cannot bypass the terminal attempt. Retain charges until termination success, preserve failure information, and run the exact-ticket handoff settlement once after success even if an earlier removal failed. Do not retry/clear charges on actual terminate failure. The refined witness must end occupied=0,pending=0,managed/job=0 with exactly one successful terminal invocation.",
+      "boundary": "No malicious-JS sandbox guarantee or native exception reachability claimed. Standard removeEventListener does not throw in this fixture without injection; the observed flaw is exception-path lifecycle bookkeeping in the requested quality matrix."
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "S1",
+      "text": "Keep the two teardown regressions as isolated UNIT faults, explicitly separate from real native Worker acceptance. They must not be reported as a native security exploit or proof of native failure reachability."
+    },
+    {
+      "id": "S2",
+      "text": "The caller-facing supported input-getter reentrancy witness passes: disposing during input-copy yields CLOSED before construction with an unchanged ownership graph. No Proxy/same-realm malicious-code sandbox requirement was imposed."
+    },
+    {
+      "id": "S3",
+      "text": "Full lifecycle native cancel/release/deadline/main-SHA holds, remote-new/output grants, worker clock, App/global shared cap migration, source ACTIVE, G2/G3 and CAD cut/shell/collar remain later gates. They are not additional blockers in this review."
+    }
+  ],
+  "summary": "HOLD w zadanej macierzy UNIT awarii/reentrancy: 85/87 świadków przechodzi; dwa defekty wyjątkowego teardown pozostawiają owning refs po faktycznie udanym zakończeniu puli. Brak wykazanej luki auth/codec lub wycieku payload/authority.",
+  "verification": {
+    "strict_compile": {
+      "actual_exit": 0,
+      "config": "tsconfig.json",
+      "heapMiB": 128,
+      "semiSpaceMiB": 8,
+      "types": [],
+      "lib": [
+        "ES2022",
+        "DOM"
+      ],
+      "outputOnly": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/compiled"
+    },
+    "witness": {
+      "actual_exit": 1,
+      "total": 87,
+      "passed": 85,
+      "failed": 2,
+      "skip": 0,
+      "evidence_kind": "UNIT actual compiled APIs + EventTarget/structuredClone; ZERO native Worker evidence",
+      "replay_command": "node C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/run.mjs witness",
+      "source": "witness.mjs",
+      "results": "witness-results.json"
+    },
+    "native": {
+      "executed_by_this_reviewer": false,
+      "reason": "Parent owns serial native browser replay. Author 71 checks inspected as data, not inherited independent PASS."
+    },
+    "full_suite": {
+      "executed_by_this_reviewer": false,
+      "reason": "Parent owns serial full regression."
+    },
+    "static_scan": {
+      "findings": 0,
+      "artifact": "static-scan.json"
+    },
+    "diff_check": {
+      "actual_exit": 0,
+      "stdout": "diff-check.stdout.log",
+      "stderr": "diff-check.stderr.log"
+    },
+    "input_hashes_unchanged": true,
+    "input_start_hashes": {
+      "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "src/compute/nativeHandoff.ts": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0",
+      "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "tests/v03-native-handoff.test.ts": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6"
+    },
+    "input_end_hashes": {
+      "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "src/compute/nativeHandoff.ts": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0",
+      "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "tests/v03-native-handoff.test.ts": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6"
+    },
+    "readonly_dependency_and_norms": {
+      "src/compute/workerPool.ts": {
+        "start": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+        "end": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64"
+      },
+      "docs/plans/v03-native-broker-g1b-design.md": {
+        "start": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+        "end": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3"
+      },
+      "docs/plans/v03-source-admission-owner-design.md": {
+        "start": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+        "end": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+      }
+    }
+  },
+  "author_harness_inspection": {
+    "read": [
+      "HANDOFF.md",
+      "phase.mjs",
+      "native-cli.mjs",
+      "fixture-matrix.mjs",
+      "fixture-roundtrip.mjs"
+    ],
+    "observations": [
+      "Native instrumentation delegates to the captured real postMessage/terminate methods; DataCloneError adds an uncloneable function before the real call.",
+      "Malformed RETURN instrumentation alters only control metadata immediately before the real endpoint postMessage, retaining actual returned payload buffers.",
+      "No fake RPC replies were found in inspected native harnesses. Their reported checks are not this reviewers native approval.",
+      "native-cli transpiles unchanged sources and records source/served hashes, checks worker close events before context teardown, and closes its server/browser. No browser replay was run here."
+    ]
+  },
+  "failed_attempts": [
+    {
+      "command_artifact": "witness.command.json",
+      "actual_exit": 1,
+      "classification": "Harness bootstrap: Windows ESM loader requires a file:// URL. Preserved, then fixed only in own scratch runner."
+    },
+    {
+      "command_artifact": "witness-1.command.json",
+      "actual_exit": 1,
+      "scenarios": 64,
+      "passed": 61,
+      "failed": 3,
+      "classification": "Two teardown failures plus one incorrect new-harness expectation (retired authentic allocate against closed source returns CLOSED, not INVALID_INPUT). Corrected only own harness to match unchanged legacy error precedence; source/test files untouched.",
+      "source": "witness-attempt1.mjs",
+      "results": "witness-results-attempt1.json"
+    },
+    {
+      "command_artifact": "witness-2.command.json",
+      "actual_exit": 1,
+      "scenarios": 74,
+      "passed": 72,
+      "failed": 2,
+      "classification": "Same two teardown faults; preserved before expanding codec/return/capacity coverage and refining listener-fault probe through later successful pool.dispose.",
+      "source": "witness-attempt2.mjs",
+      "results": "witness-results-attempt2.json"
+    },
+    {
+      "command_artifact": "witness-3.command.json",
+      "actual_exit": 1,
+      "scenarios": 87,
+      "passed": 85,
+      "failed": 2,
+      "classification": "Final independent witnesses; production never changed."
+    }
+  ],
+  "files_created_or_modified": "Only this reviewer scratch tree. No production/tests/docs/index/config/skills/dependencies/settings edits; no git index or HEAD changes.",
+  "artifact_manifest": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/artifact-manifest.json",
+  "final_acceptance_owner": "Parent"
+}

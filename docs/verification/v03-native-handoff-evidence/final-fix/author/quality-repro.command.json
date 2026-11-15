@@ -1,0 +1,10 @@
+{
+  "name": "quality-repro",
+  "command": [
+    "node",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\run.mjs",
+    "repro"
+  ],
+  "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality",
+  "exit": 0
+}

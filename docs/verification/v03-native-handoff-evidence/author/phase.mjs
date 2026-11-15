@@ -1,0 +1,23 @@
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const dir='C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core';
+const root='C:/Users/sandr/OrthoSculptCAD';
+const [phase,kind='unit']=process.argv.slice(2);
+if(!/^[a-z0-9-]+$/.test(phase??'')) throw Error('phase');
+const files=['src/compute/resourceLedger.ts','src/compute/workerPool.ts','src/compute/nativeHandoff.ts','src/compute/nativeHandoff.worker.ts','tests/v03-native-handoff.test.ts'];
+const out=dir+'/phases/'+phase; mkdirSync(out,{recursive:true});
+if(existsSync(out+'/command.json'))throw Error('immutable phase exists');
+const hashes={};
+for(const p of files)if(existsSync(root+'/'+p)){const b=readFileSync(root+'/'+p);writeFileSync(out+'/'+p.split('/').at(-1),b);hashes[p]=createHash('sha256').update(b).digest('hex');}
+for (const name of ['phase.mjs','native-cli.mjs','vitest.config.mjs','tsconfig.strict.json','fixture-matrix.mjs','fixture-roundtrip.mjs']) if (existsSync(dir+'/'+name)) writeFileSync(out+'/'+name,readFileSync(dir+'/'+name));
+let args;
+if(kind==='unit')args=['--max-old-space-size=256','--max-semi-space-size=8',root+'/node_modules/vitest/vitest.mjs','run','--config',dir+'/vitest.config.mjs','--reporter=default','--reporter=json','--outputFile='+out+'/vitest-results.json',...process.argv.slice(4)];
+else if(kind==='strict')args=['--max-old-space-size=128','--max-semi-space-size=8',root+'/node_modules/typescript/bin/tsc','-p',dir+'/tsconfig.strict.json'];
+else if(kind==='ts')args=['--max-old-space-size=512','--max-semi-space-size=8',root+'/node_modules/typescript/bin/tsc','--noEmit','--incremental','false'];
+else if(kind==='native')args=['--max-old-space-size=256','--max-semi-space-size=8',dir+'/native-cli.mjs',phase];
+else throw Error('kind');
+const r=spawnSync(process.execPath,args,{cwd:root,encoding:'utf8',env:{...process.env,NODE_OPTIONS:'--max-old-space-size=256 --max-semi-space-size=8'},timeout:120000});
+writeFileSync(out+'/command.json',JSON.stringify({command:[process.execPath,...args],exit:r.status,error:String(r.error??''),signal:r.signal,hashes},null,2));
+writeFileSync(out+'/stdout.log',r.stdout??''); writeFileSync(out+'/stderr.log',r.stderr??'');
+console.log(r.stdout,r.stderr,'ACTUAL_EXIT',r.status);process.exitCode=r.status??1;

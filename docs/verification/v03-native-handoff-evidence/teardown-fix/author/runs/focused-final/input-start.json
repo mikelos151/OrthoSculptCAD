@@ -1,0 +1,7 @@
+{
+  "src/compute/nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+  "tests/v03-native-handoff.test.ts": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+  "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+  "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+  "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64"
+}

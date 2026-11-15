@@ -1,0 +1,219 @@
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { createNativeLedger } from '../src/compute/resourceLedger';
+import { createNativeHandoff, decodeInputPacket, encodeInputPacket } from '../src/compute/nativeHandoff';
+import type { Lease } from '../src/compute/resourceLedger';
+const caps = { managed: 1024, job: 1024, history: 1024 };
+describe('G1b1b same-private-core handoff (structuredClone unit, not native proof)', () => {
+  it('distinguishes native RESERVED from MAIN without changing legacy reserved/live', () => {
+    const { ledger: l } = createNativeLedger(caps), owner = l.createRealm();
+    const lease = l.reserve([{ key: 'a', bytes: 4, category: 'job', owner }]) as Lease;
+    expect(l.snapshot().allocations[0].phase).toBe('RESERVED');
+    lease.allocateBuffer(lease.ref('a')); expect(l.snapshot().allocations[0].phase).toBe('MAIN'); lease.close();
+  });
+  it('prepares a sole real G1a materialized backing without changing its ID or charge', () => {
+    const { ledger, handoff } = createNativeLedger(caps);
+    const main = ledger.createRealm(), remote = ledger.createRealm();
+    const lease = ledger.reserve([{ key: 'input', bytes: 16, category: 'job', owner: main }]) as Lease;
+    const ref = lease.ref('input'), backing = lease.allocateBuffer(ref);
+    new Uint8Array(backing).set([7, 11, 13, 17]);
+    const before = ledger.snapshot(), binding = Object.freeze({});
+    const ticket = handoff.prepare(lease, [ref], main, remote, binding);
+    expect(ticket).toEqual({}); expect(backing.byteLength).toBe(16);
+    expect(ledger.snapshot().managed).toBe(16);
+    expect(ledger.snapshot().allocations.map(a => [a.id, a.bytes, a.refs])).toEqual(before.allocations.map(a => [a.id, a.bytes, a.refs]));
+    handoff.sendThrew(ticket, binding); lease.close();
+  });
+  it('rebinds the actual transferred RETURN wrapper to the same allocation and publishes only to a new owning lease', () => {
+    const { ledger, handoff } = createNativeLedger(caps), main = ledger.createRealm(), remote = ledger.createRealm();
+    const lease = ledger.reserve([]) as Lease, old = new ArrayBuffer(16);
+    new Uint8Array(old).set([7, 11, 13, 17]);
+    const ref = ledger.registerExisting(old, lease, 'history', main) as import('../src/compute/resourceLedger').Ref;
+    const before = ledger.snapshot(), binding = Object.freeze({}), t = handoff.prepare(lease, [ref], main, remote, binding);
+    const packet = handoff.packet(t, binding), worker = structuredClone(packet.buffers, { transfer: packet.buffers });
+    expect(old.byteLength).toBe(0); handoff.sent(t, binding);
+    expect(ledger.snapshot().allocations[0].phase).toBe('IN_FLIGHT');
+    lease.close(); expect(ledger.snapshot().history).toBe(16);
+    handoff.received(t, binding); expect(ledger.snapshot().allocations[0].phase).toBe('REMOTE');
+    const back = structuredClone(worker, { transfer: worker }); handoff.returned(t, binding, back);
+    const consumer = ledger.reserve([]) as Lease, result = handoff.publish(t, binding, consumer);
+    expect(result.buffers[0]).toBe(back[0]); expect(result.buffers[0]).not.toBe(old);
+    expect([...new Uint8Array(result.buffers[0])]).toEqual([7, 11, 13, 17, ...Array(12).fill(0)]);
+    expect(ledger.snapshot().allocations.map(a => [a.id, a.bytes, a.realm])).toEqual(before.allocations.map(a => [a.id, a.bytes, a.realm]));
+    expect([ledger.snapshot().managed, ledger.snapshot().job, ledger.snapshot().history]).toEqual([16, 0, 16]);
+    expect(() => consumer.retain(ref, 'history', main)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' }));
+    consumer.close(); expect(ledger.snapshot().managed).toBe(0);
+  });
+  it('rolls actual Node structuredClone DataCloneError back atomically with original refs and owner', () => {
+    const { ledger: l, handoff: h } = createNativeLedger(caps), main = l.createRealm(), remote = l.createRealm();
+    const source = l.reserve([{ key: 'a', bytes: 16, category: 'job', owner: main }]) as Lease;
+    const r = source.ref('a'), b = source.allocateBuffer(r), before = l.snapshot(), binding = {};
+    const t = h.prepare(source, [r], main, remote, binding), p = h.packet(t, binding);
+    expect(() => structuredClone({ buffers: p.buffers, bad: () => 0 }, { transfer: p.buffers })).toThrowError(expect.objectContaining({ name: 'DataCloneError' }));
+    expect(b.byteLength).toBe(16); h.sendThrew(t, binding);
+    expect(l.snapshot()).toEqual(before); expect(source.ref('a')).toBe(r);
+    expect(() => h.sent(t, binding)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' }));
+    const other = l.reserve([]) as Lease; const retained = other.retain(r, 'job', main);
+    expect(retained).not.toHaveProperty('code'); other.close(); source.close();
+  });
+  it('refuses aliased, duplicate, sparse, reserved, forged and foreign sources without changing any graph', () => {
+    const { ledger: l, handoff: h } = createNativeLedger(caps), main = l.createRealm(), remote = l.createRealm();
+    const source = l.reserve([{ key: 'a', bytes: 16, category: 'job', owner: main }, { key: 'reserved', bytes: 4, category: 'job', owner: main }]) as Lease;
+    const r = source.ref('a'), b = source.allocateBuffer(r), other = l.reserve([]) as Lease;
+    const alias = other.retain(r, 'history', main); expect(alias).not.toHaveProperty('code');
+    let before = l.snapshot(); expect(() => h.prepare(source, [r], main, remote, {})).toThrowError(expect.objectContaining({ code: 'TRANSFER_ALIASED' }));
+    expect(l.snapshot()).toEqual(before); other.close(); before = l.snapshot();
+    const foreign = createNativeLedger(caps), fm = foreign.ledger.createRealm(), fl = foreign.ledger.reserve([{ key: 'f', bytes: 16, category: 'job', owner: fm }]) as Lease;
+    const fr = fl.ref('f'); fl.allocateBuffer(fr);
+    const invalid = [[r, r], Array(1), [source.ref('reserved')], [{}], [fr], [structuredClone(r)], [{ id: before.allocations[0].id, bytes: 16 }]];
+    for (const rr of invalid) {
+      expect(() => h.prepare(source, rr as never, main, remote, {})).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' }));
+      expect(l.snapshot()).toEqual(before); expect(b.byteLength).toBe(16);
+    }
+    source.close(); fl.close();
+  });
+  it('locks PREPARED and authenticates tickets/exact bindings before every private transition', () => {
+    const { ledger: l, handoff: h } = createNativeLedger(caps), main = l.createRealm(), remote = l.createRealm();
+    const source = l.reserve([{ key: 'a', bytes: 16, category: 'job', owner: main }]) as Lease, r = source.ref('a'), b = source.allocateBuffer(r);
+    const binding = {}, t = h.prepare(source, [r], main, remote, binding), other = l.reserve([]) as Lease, before = l.snapshot();
+    for (const op of [() => source.ref('a'), () => source.release(r), () => source.close(), () => other.retain(r, 'job', main), () => source.reclassify(r, 'history'), () => source.allocateBuffer(r), () => source.transfer(r, remote), () => l.registerExisting(b, other, 'job', main), () => h.sent(t, binding), () => h.packet({}, binding), () => h.packet(structuredClone(t), binding), () => h.packet(t, {}), () => h.returned(t, binding, [new ArrayBuffer(16)])]) {
+      expect(op).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' })); expect(l.snapshot()).toEqual(before);
+    }
+    h.sendThrew(t, binding); source.close(); other.close();
+  });
+  it('preflights all returned buffers atomically and refuses duplicate or registered backing conflicts', () => {
+    const { ledger: l, handoff: h } = createNativeLedger(caps), main = l.createRealm(), remote = l.createRealm();
+    const source = l.reserve([0, 1].map(i => ({ key: String(i), bytes: 16, category: 'job' as const, owner: main }))) as Lease;
+    const rr = [source.ref('0'), source.ref('1')], old = rr.map(r => source.allocateBuffer(r)), binding = {}, t = h.prepare(source, rr, main, remote, binding);
+    const worker = structuredClone(old, { transfer: old }); h.sent(t, binding); h.received(t, binding);
+    const returned = structuredClone(worker, { transfer: worker }), other = l.reserve([]) as Lease, conflict = new ArrayBuffer(16);
+    l.registerExisting(conflict, other, 'job', main); const before = l.snapshot();
+    for (const bad of [[returned[0], new ArrayBuffer(7)], [returned[0], returned[0]], [returned[0], conflict], [returned[0]], [returned[0], old[1]], [returned[0], new SharedArrayBuffer(16)], [returned[0], Reflect.construct(ArrayBuffer, [16, { maxByteLength: 32 }])]]) {
+      expect(() => h.returned(t, binding, bad as never)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' })); expect(l.snapshot()).toEqual(before);
+    }
+    h.returned(t, binding, returned); const consumer = l.reserve([]) as Lease; h.publish(t, binding, consumer);
+    expect(() => h.returned(t, binding, returned)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' }));
+    h.terminated(t, binding); consumer.close(); source.close(); other.close(); expect(l.snapshot().managed).toBe(0);
+  });
+  it('keeps zero-byte detached buffers distinct from reserved and retires remote refs only via controlled cleanup', () => {
+    const { ledger: l, handoff: h } = createNativeLedger(caps), main = l.createRealm(), remote = l.createRealm();
+    const source = l.reserve([{ key: 'zero', bytes: 0, category: 'job', owner: main }]) as Lease, r = source.ref('zero'), b = source.allocateBuffer(r), binding = {};
+    const t = h.prepare(source, [r], main, remote, binding); structuredClone(b, { transfer: [b] }); h.sent(t, binding);
+    expect(l.snapshot().allocations[0].phase).toBe('IN_FLIGHT'); source.close(); expect(l.snapshot().allocations).toHaveLength(1);
+    h.terminated(t, binding); h.terminated(t, binding); expect(l.snapshot().allocations).toHaveLength(0);
+  });
+});
+
+describe('G1b1b bounded input codec and opaque facade coverage (not native Worker)', () => {
+  const tuple = [0, 1, 1, 1, 1, 1, 1], nonce = [1, 2, 3, 4];
+  const packet = () => encodeInputPacket(3, tuple, nonce, [[0, 1, 16]], [new ArrayBuffer(16)]);
+  it('encodes normative offsets, zero padding, exact descriptors and full fixed backing lengths', () => {
+    const p = packet(), h = new DataView(p.header), d = new DataView(p.descriptors);
+    expect(p.header.byteLength).toBe(64); expect(p.descriptors.byteLength).toBe(12);
+    expect(Array.from({ length: 16 }, (_, i) => h.getUint32(4 * i, true))).toEqual([0x3142474e, 1, 3, ...tuple, ...nonce, 0, 0]);
+    expect([d.getUint32(0, true), d.getUint32(4, true), d.getUint32(8, true)]).toEqual([0, 1, 16]);
+    expect(decodeInputPacket(p).buffers[0]).toBe(p.buffers[0]);
+    const many = Array.from({ length: 16 }, (_, i) => [i, (i % 9) + 1, 1] as [number, import('../src/compute/nativeHandoff').InputRole, number]);
+    expect(decodeInputPacket(encodeInputPacket(1, tuple, nonce, many, many.map(() => new ArrayBuffer(1)))).plan).toHaveLength(16);
+  });
+  it.each([
+    ['extra envelope', (p: ReturnType<typeof packet>) => Object.assign(p, { extra: 0 })],
+    ['header short', (p: ReturnType<typeof packet>) => { p.header = new ArrayBuffer(63); }],
+    ['magic', (p: ReturnType<typeof packet>) => new DataView(p.header).setUint32(0, 0, true)],
+    ['version', (p: ReturnType<typeof packet>) => new DataView(p.header).setUint32(4, 2, true)],
+    ['unknown operation', (p: ReturnType<typeof packet>) => new DataView(p.header).setUint32(8, 99, true)],
+    ['padding56', (p: ReturnType<typeof packet>) => new DataView(p.header).setUint32(56, 1, true)],
+    ['padding60', (p: ReturnType<typeof packet>) => new DataView(p.header).setUint32(60, 1, true)],
+    ['bad descriptor length', (p: ReturnType<typeof packet>) => { p.descriptors = new ArrayBuffer(13); }],
+    ['too many descriptors', (p: ReturnType<typeof packet>) => { p.descriptors = new ArrayBuffer(204); }],
+    ['unknown role', (p: ReturnType<typeof packet>) => new DataView(p.descriptors).setUint32(4, 10, true)],
+    ['bad ordinal', (p: ReturnType<typeof packet>) => new DataView(p.descriptors).setUint32(0, 16, true)],
+    ['wrong intrinsic payload bytes', (p: ReturnType<typeof packet>) => { p.buffers[0] = new ArrayBuffer(15); }],
+    ['RAB', (p: ReturnType<typeof packet>) => { p.buffers[0] = Reflect.construct(ArrayBuffer, [16, { maxByteLength: 32 }]); }],
+    ['SAB', (p: ReturnType<typeof packet>) => { p.buffers[0] = new SharedArrayBuffer(16) as never; }],
+    ['view instead of AB', (p: ReturnType<typeof packet>) => { p.buffers[0] = new Uint8Array(16) as never; }],
+    ['detached', (p: ReturnType<typeof packet>) => { structuredClone(p.buffers[0], { transfer: p.buffers }); }],
+    ['sparse buffers', (p: ReturnType<typeof packet>) => { p.buffers = Array(1); }],
+    ['ACK carrying payload', (p: ReturnType<typeof packet>) => new DataView(p.header).setUint32(8, 2, true)],
+  ])('rejects %s without authorizing an allocation', (_name, mutate) => {
+    const p = packet(); mutate(p); expect(() => decodeInputPacket(p)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' }));
+  });
+  it('rejects forged, diagnostic/equal-bytes, cloned and foreign public handles even after dispose', () => {
+    const a = createNativeHandoff(caps), b = createNativeHandoff(caps), consumer = a.ledger.reserve([]) as Lease;
+    for (const bad of [{}, Object.freeze({}), { id: 1, bytes: new ArrayBuffer(16) }, structuredClone({})]) {
+      expect(() => a.wait(bad as never)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' }));
+      expect(() => a.accept(bad as never, consumer)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' }));
+      expect(() => b.release(bad as never)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' }));
+    }
+    a.dispose(); expect(() => a.release({} as never)).toThrowError(expect.objectContaining({ code: 'INVALID_INPUT' })); b.dispose(); consumer.close();
+    expect(a.snapshot().pool.ownershipDomains).toBe(3); expect(a.snapshot().pool.occupied).toBe(0);
+  });
+});
+
+describe('G1b1b exceptional teardown regressions (UNIT faults, not native Worker)', () => {
+  const controllers: ReturnType<typeof createNativeHandoff>[] = [];
+  afterEach(() => {
+    for (const c of controllers.splice(0)) { try { c.dispose(); } catch { /* Injected native failure stays held. */ } }
+    vi.unstubAllGlobals();
+  });
+  function fixture() {
+    let worker!: UnitWorker;
+    class UnitWorker extends EventTarget {
+      actual!: ReturnType<typeof encodeInputPacket>;
+      captured?: EventListenerOrEventListenerObject;
+      terminates = 0;
+      onTerminate?: () => void;
+      constructor() { super(); worker = this; }
+      override addEventListener(type: string, fn: EventListenerOrEventListenerObject | null, options?: boolean | AddEventListenerOptions) {
+        if (type === 'message' && fn) this.captured = fn;
+        super.addEventListener(type, fn, options);
+      }
+      postMessage(packet: ReturnType<typeof encodeInputPacket>, transfer: Transferable[]) { this.actual = structuredClone(packet, { transfer }); }
+      terminate() { this.terminates++; this.onTerminate?.(); }
+      stale() {
+        const event = new MessageEvent('message', { data: { malformed: true } });
+        if (typeof this.captured === 'function') this.captured(event); else this.captured?.handleEvent(event);
+      }
+      finish() {
+        const f = decodeInputPacket(this.actual);
+        this.dispatchEvent(new MessageEvent('message', { data: encodeInputPacket(2, f.tuple, f.nonce, f.plan, []) }));
+        const back = structuredClone(f.buffers, { transfer: f.buffers });
+        this.dispatchEvent(new MessageEvent('message', { data: encodeInputPacket(3, f.tuple, f.nonce, f.plan, back) }));
+      }
+    }
+    vi.stubGlobal('Worker', UnitWorker);
+    const c = createNativeHandoff(caps); controllers.push(c);
+    const source = c.ledger.reserve([2, 3].map((bytes, i) => ({ key: String(i), bytes, category: 'job' as const, owner: c.mainRealm }))) as Lease;
+    const refs = [source.ref('0'), source.ref('1')], old = refs.map(r => source.allocateBuffer(r));
+    old.forEach((b, i) => new Uint8Array(b).fill(i + 7));
+    const h = c.submit(source, refs.map(ref => ({ ref, role: 1 as const })));
+    if ('code' in h) throw Error(h.code);
+    source.close();
+    return { c, source, h, w: worker, old };
+  }
+  it('Q1 reentrant dispose during successful RETURN termination cannot resurrect publication or orphan controlled refs', async () => {
+    const { c, h, w, old } = fixture(), consumer = c.ledger.reserve([]) as Lease;
+    const outcome = c.wait(h).then(() => 'resolved', (e: { code: string }) => e.code);
+    let fired = false;
+    w.onTerminate = () => {
+      if (fired) return; fired = true;
+      expect(c.snapshot().pool.occupied).toBe(1);
+      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job]).toEqual([5, 5]);
+      c.dispose();
+      expect(c.snapshot().disposed).toBe(true);
+      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job]).toEqual([5, 5]);
+      expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
+      const before = c.ledger.snapshot(); w.stale(); expect(c.ledger.snapshot()).toEqual(before);
+    };
+    try {
+      w.finish();
+      expect(c.snapshot()).toMatchObject({ disposed: true, pending: 0, pool: { occupied: 0 } });
+      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job]).toEqual([0, 0]);
+      expect(c.ledger.snapshot().allocations).toHaveLength(0);
+      expect(await outcome).toBe('CLOSED');
+      expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
+      c.release(h); c.dispose(); w.stale();
+      expect(w.terminates).toBe(1); expect(old.map(b => b.byteLength)).toEqual([0, 0]);
+      expect(c.snapshot().pending).toBe(0); expect(c.ledger.snapshot().managed).toBe(0);
+    } finally { consumer.close(); }
+  });
+});

@@ -1,0 +1,4 @@
+{
+ "compilerOptions":{"strict":true,"types":[],"target":"ES2022","lib":["ES2022","DOM"],"module":"ES2022","moduleResolution":"Bundler","rootDir":"C:/Users/sandr","outDir":"C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/compiled","noEmitOnError":true,"skipLibCheck":false},
+ "files":["C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/witness.ts","C:/Users/sandr/OrthoSculptCAD/src/compute/nativeHandoff.worker.ts"]
+}

@@ -1,0 +1,16 @@
+{
+  "src/compute/client.ts": "d129131af2ddc2f08700d53360ea2338cb06b45e616231c74c1a7bf9287c5296",
+  "src/compute/copy.ts": "003155329a220edfe46aed2cf946955a458fe5ac8d88bb00197b5d2d876993e8",
+  "src/compute/execute.ts": "cc5955ff799b2339e13409da12e1620d74f954891bf7e41c37ba6c71344e9311",
+  "src/compute/index.ts": "68f899bf90324bb24998d5d5f07bf64cdc796e9a6c5e664d9b75862c69b00ba1",
+  "src/compute/measureAt.ts": "c85b55987335dc47b0a7892b016501c7e0c49fe70adccdfafefd0c3b7ce69c21",
+  "src/compute/nativeHandoff.ts": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70",
+  "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+  "src/compute/protocol.ts": "2484c88d207781b7bb1a4c7c8c7c0f634258646380a1f734d6c8995542eb67af",
+  "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+  "src/compute/service.ts": "bfe6f3dcf239235f81664da8def2e5e61c67aee1dc5934e7d3a39086c958676f",
+  "src/compute/sliceEngine.ts": "9fb55abca489563306661739658c7ee22b1324af251dd881eccc3541481607ad",
+  "src/compute/types.ts": "f52de09fa242be1a950161ab4e2f14fb083134626460c579301d7e510a061946",
+  "src/compute/worker.ts": "080f8469ec8ac1fe259a81dbf3be7c44edff6cb4a1b4ce7a99e869b1380ebcad",
+  "src/compute/workerPool.ts": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3"
+}

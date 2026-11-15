@@ -1,0 +1,208 @@
+{
+  "status": "FINAL_CANDIDATE_REGRESSION_NATIVE_WITNESSES_PASS_REVIEWS_PENDING",
+  "cycle": "2/2; no third automatic correction authorized",
+  "scope": "G1b1bInputOnly and narrow pool cleanup amendment; notG1b1c/App/sourceAdmission/clinical/fullCAD",
+  "sourceHashes": {
+    "src/compute/workerPool.ts": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+    "src/compute/nativeHandoff.ts": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70",
+    "tests/v03-worker-pool.test.ts": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+    "tests/v03-native-handoff.test.ts": "2f5bce9b8356884dbfc07a951cb8df62ad3ab63fc826b16c11120132c7fae687",
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "docs/plans/v03-native-broker-g1b-design.md": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+    "docs/plans/v03-source-admission-owner-design.md": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+  },
+  "parentFullRegression": {
+    "unitExit": 0,
+    "typecheckExit": 0,
+    "pythonExit": 0,
+    "npmAuditExit": 0,
+    "inputHashesUnchanged": true,
+    "staticScan": {
+      "suspectedCredential": [],
+      "dynamicExecution": [],
+      "networkOrProcess": []
+    },
+    "scope": "G1b1b second/last correction candidate plus pool dependency regression; no full lifecycle/App/admission",
+    "unit": {
+      "success": true,
+      "numTotalTests": 1414,
+      "numPassedTests": 1414,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0
+    },
+    "nativeHandoff": [
+      {
+        "status": "passed",
+        "assertions": 158,
+        "failed": []
+      }
+    ],
+    "unitExpectedTotal": 1414,
+    "pythonTests": 71,
+    "auditVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "status": "REGRESSION_PASS_REVIEWS_PENDING"
+  },
+  "parentReplays": {
+    "fullNode": 1414,
+    "python": 71,
+    "UNITWitnesses": {
+      "original": 87,
+      "boundary": 55,
+      "minimalB1": 20,
+      "matrixB1": 124
+    },
+    "native": [
+      {
+        "kind": "pool",
+        "checks": 119,
+        "metrics": {
+          "attempts": 50,
+          "created": 49,
+          "terminated": 49,
+          "sends": 0,
+          "allocations": 0
+        },
+        "closed": {
+          "context": true,
+          "browser": true,
+          "server": true,
+          "portRefuses": true
+        },
+        "sourceAndServedHashesMatchAuthor": true
+      },
+      {
+        "kind": "handoff",
+        "checks": 71,
+        "metrics": {
+          "constructors": 12,
+          "terminates": 12,
+          "peak": 2,
+          "live": 0
+        },
+        "closed": {
+          "context": true,
+          "browser": true,
+          "server": true,
+          "portRefuses": true
+        },
+        "sourceAndServedHashesMatchAuthor": true
+      }
+    ],
+    "commands": [
+      {
+        "label": "spec-compile",
+        "command": [
+          "node",
+          "--max-old-space-size=128",
+          "--max-semi-space-size=8",
+          "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+          "-p",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\spec\\tsconfig.json"
+        ],
+        "exit": 0
+      },
+      {
+        "label": "spec-boundary",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\spec\\run.mjs",
+          "boundary"
+        ],
+        "exit": 0
+      },
+      {
+        "label": "quality-compile",
+        "command": [
+          "node",
+          "--max-old-space-size=128",
+          "--max-semi-space-size=8",
+          "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+          "-p",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\tsconfig.json"
+        ],
+        "exit": 0
+      },
+      {
+        "label": "quality-witness",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\run.mjs",
+          "witness"
+        ],
+        "exit": 0
+      },
+      {
+        "label": "quality-repro",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\run.mjs",
+          "repro"
+        ],
+        "exit": 0
+      },
+      {
+        "label": "quality-matrix",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\run.mjs",
+          "matrix"
+        ],
+        "exit": 0
+      },
+      {
+        "label": "native-pool",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\native-pool\\native-cli.mjs"
+        ],
+        "exit": 0
+      },
+      {
+        "label": "native-handoff",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\native-handoff\\native-cli.mjs",
+          "final-parent"
+        ],
+        "exit": 0
+      }
+    ],
+    "reviews": "Final independent reviewers pending; no acceptance/commit"
+  },
+  "oldPool24Handoff33PreservedBytePrefix": true,
+  "actorTDD": {
+    "pool_red": {
+      "selected": 8,
+      "failed": 8
+    },
+    "composition_red": {
+      "selected": 15,
+      "failed": 6,
+      "existing_coverage_passed": 9
+    },
+    "b1_red": {
+      "selected": 30,
+      "failed": 18,
+      "existing_coverage_passed": 12
+    },
+    "additional_existing_coverage": 80,
+    "no_manufactured_red": true
+  },
+  "pendingReviews": "deleg_01c0c0ca independent finalspecandquality; finalacceptanceNOTgranted",
+  "evidence": "docs/verification/v03-native-handoff-evidence/final-fix/index.json",
+  "historicalFailuresPreserved": [
+    "initial-independent",
+    "second-rereview",
+    "teardown-fix"
+  ],
+  "release020BundleSHA256": "08b834a1b18f73ec18e9017daca67a271dbab44d1e7492eed5c5ab320293d3dd"
+}

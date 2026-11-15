@@ -1,0 +1,9 @@
+{
+  "scope": "added lines only, baseline-to-candidate four-file diff",
+  "results": {
+    "secret": [],
+    "shell_injection": [],
+    "eval_exec": [],
+    "pickle": []
+  }
+}

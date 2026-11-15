@@ -1,0 +1,37 @@
+{
+  "native-pool": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-worker-pool-core",
+    "files": {
+      "native-cli.mjs": {
+        "original": "2097fbb9f89a773430c8f9a2b181cf83449bf13bce7d16fff92866312761ff9e",
+        "copy": "2097fbb9f89a773430c8f9a2b181cf83449bf13bce7d16fff92866312761ff9e",
+        "path_only_change": false
+      },
+      "fixture.mjs": {
+        "original": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256",
+        "copy": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256",
+        "path_only_change": false
+      }
+    }
+  },
+  "native-handoff": {
+    "source": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core",
+    "files": {
+      "native-cli.mjs": {
+        "original": "6b87a3b0ad01479245a66c9d00b514e0dc3c38abcfb3a5210ff1f17624be2ad8",
+        "copy": "ccfe5a1a735b43d10e3ef168e14862f3db4f8dd280b103ad6166b7dadac8ce66",
+        "path_only_change": true
+      },
+      "fixture-matrix.mjs": {
+        "original": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+        "copy": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+        "path_only_change": false
+      },
+      "fixture-roundtrip.mjs": {
+        "original": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c",
+        "copy": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c",
+        "path_only_change": false
+      }
+    }
+  }
+}

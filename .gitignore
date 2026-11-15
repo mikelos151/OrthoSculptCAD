@@ -10,3 +10,6 @@ docs/screenshots/v02-e2e/*-results/
 docs/verification/*-artifacts/
 *.log
 *.tsbuildinfo
+backups/
+cost-controls/
+*.zip

@@ -1,0 +1,39 @@
+{
+  "unitExit": 0,
+  "typecheckExit": 0,
+  "pythonExit": 0,
+  "npmAuditExit": 0,
+  "inputHashesUnchanged": true,
+  "staticScan": {
+    "suspectedCredential": [],
+    "dynamicExecution": [],
+    "networkOrProcess": []
+  },
+  "scope": "G1b1b input-only native handoff regression; no full lifecycle/App/admission",
+  "unit": {
+    "success": true,
+    "numTotalTests": 1276,
+    "numPassedTests": 1276,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTodoTests": 0
+  },
+  "nativeHandoff": [
+    {
+      "status": "passed",
+      "assertions": 28,
+      "failed": []
+    }
+  ],
+  "unitExpectedTotal": 1276,
+  "pythonTests": 71,
+  "auditVulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "status": "REGRESSION_PASS_REVIEWS_PENDING"
+}

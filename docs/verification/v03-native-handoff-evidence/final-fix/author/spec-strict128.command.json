@@ -1,0 +1,13 @@
+{
+  "name": "spec-strict128",
+  "command": [
+    "node",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+    "-p",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec\\tsconfig.json"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit": 0
+}

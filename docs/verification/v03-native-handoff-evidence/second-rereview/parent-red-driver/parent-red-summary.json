@@ -1,0 +1,65 @@
+{
+  "verifiedManifestEntries": {
+    "spec": 68,
+    "quality": 53
+  },
+  "replays": [
+    {
+      "kind": "spec",
+      "phase": "boundary",
+      "compileExit": 0,
+      "exit": 1,
+      "total": 55,
+      "passed": 51,
+      "failed": 4,
+      "failureNames": [
+        "listener throw action=release removal=4",
+        "listener throw action=release removal=5",
+        "listener throw action=return removal=4",
+        "listener throw action=return removal=5"
+      ]
+    },
+    {
+      "kind": "quality",
+      "phase": "repro",
+      "compileExit": 0,
+      "exit": 1,
+      "total": 20,
+      "passed": 18,
+      "failed": 2,
+      "failureNames": [
+        "release: original terminate error identity survives cleanup reentrancy",
+        "return: original terminate error identity survives cleanup reentrancy"
+      ]
+    },
+    {
+      "kind": "quality",
+      "phase": "matrix",
+      "compileExit": 0,
+      "exit": 1,
+      "total": 124,
+      "passed": 106,
+      "failed": 18,
+      "failureNames": [
+        "UNIT matrix IN_FLIGHT/message/dispose/cleanup=false/terminate=true",
+        "UNIT matrix IN_FLIGHT/message/dispose/cleanup=true/terminate=true",
+        "UNIT matrix IN_FLIGHT/error/dispose/cleanup=false/terminate=true",
+        "UNIT matrix IN_FLIGHT/error/dispose/cleanup=true/terminate=true",
+        "UNIT matrix IN_FLIGHT/messageerror/dispose/cleanup=false/terminate=true",
+        "UNIT matrix IN_FLIGHT/messageerror/dispose/cleanup=true/terminate=true",
+        "UNIT matrix REMOTE/message/dispose/cleanup=false/terminate=true",
+        "UNIT matrix REMOTE/message/dispose/cleanup=true/terminate=true",
+        "UNIT matrix REMOTE/error/dispose/cleanup=false/terminate=true",
+        "UNIT matrix REMOTE/error/dispose/cleanup=true/terminate=true",
+        "UNIT matrix REMOTE/messageerror/dispose/cleanup=false/terminate=true",
+        "UNIT matrix REMOTE/messageerror/dispose/cleanup=true/terminate=true",
+        "UNIT matrix RETURN/message/dispose/cleanup=false/terminate=true",
+        "UNIT matrix RETURN/message/dispose/cleanup=true/terminate=true",
+        "UNIT matrix RETURN/error/dispose/cleanup=false/terminate=true",
+        "UNIT matrix RETURN/error/dispose/cleanup=true/terminate=true",
+        "UNIT matrix RETURN/messageerror/dispose/cleanup=false/terminate=true",
+        "UNIT matrix RETURN/messageerror/dispose/cleanup=true/terminate=true"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "roots": {
+    "scratch": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview",
+    "repository": "C:/Users/sandr/OrthoSculptCAD"
+  },
+  "total": 53,
+  "scratch": 46,
+  "repository": 7,
+  "entries": [
+    {
+      "root": "scratch",
+      "path": "attempt1-matrix-results.json",
+      "bytes": 52858,
+      "sha256": "659646e33c6da34cef7a0502fe0041c417562fdfc215a3f701abfbd1081b104a"
+    },
+    {
+      "root": "scratch",
+      "path": "attempt1-matrix.mjs",
+      "bytes": 9171,
+      "sha256": "e4593a1057f998fb6534bff76e5046e834df198e5ea37d25762912a2d1bc91ce"
+    },
+    {
+      "root": "scratch",
+      "path": "compiled/nativeHandoff.js",
+      "bytes": 13298,
+      "sha256": "4cc50abef8f52d2bb63c1c277e5778da9d50abd313aeef7890db917a12a9950f"
+    },
+    {
+      "root": "scratch",
+      "path": "compiled/nativeHandoff.worker.js",
+      "bytes": 1701,
+      "sha256": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419"
+    },
+    {
+      "root": "scratch",
+      "path": "compiled/resourceLedger.js",
+      "bytes": 19824,
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43"
+    },
+    {
+      "root": "scratch",
+      "path": "compiled/workerPool.js",
+      "bytes": 5589,
+      "sha256": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200"
+    },
+    {
+      "root": "scratch",
+      "path": "compiled-input-hashes.json",
+      "bytes": 758,
+      "sha256": "f940b8a99dab478790d0fd3a632c3e9eba4f5707ecb97638feea19e2454ed193"
+    },
+    {
+      "root": "scratch",
+      "path": "finalize.mjs",
+      "bytes": 8383,
+      "sha256": "7643e78d5ec3ff5e3558b8aa2c4f5d3b4db9e366695d577223918ec10188e796"
+    },
+    {
+      "root": "scratch",
+      "path": "git-head.log",
+      "bytes": 41,
+      "sha256": "705080b95919456bd2922fc30a8f0eb569f4c5acd6358b164a8f34b2e132a159"
+    },
+    {
+      "root": "scratch",
+      "path": "git-scope-status.log",
+      "bytes": 140,
+      "sha256": "9ab07431c9024a7871eaa83c6c292f2996ce3288ca340677248722e631c8e03e"
+    },
+    {
+      "root": "scratch",
+      "path": "input-end.json",
+      "bytes": 758,
+      "sha256": "f940b8a99dab478790d0fd3a632c3e9eba4f5707ecb97638feea19e2454ed193"
+    },
+    {
+      "root": "scratch",
+      "path": "input-start.json",
+      "bytes": 758,
+      "sha256": "f940b8a99dab478790d0fd3a632c3e9eba4f5707ecb97638feea19e2454ed193"
+    },
+    {
+      "root": "scratch",
+      "path": "loader.mjs",
+      "bytes": 259,
+      "sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0"
+    },
+    {
+      "root": "scratch",
+      "path": "matrix-1.command.json",
+      "bytes": 537,
+      "sha256": "fbdcf4f5c425c6b2b73020eb51f9ef560bf2026522e14ed64490ca5594d19fd1"
+    },
+    {
+      "root": "scratch",
+      "path": "matrix-1.stderr.log",
+      "bytes": 452,
+      "sha256": "e55a7f9871af2e08134e08fdc60d2385bdf2f0507820b6fabcc56d52b4352352"
+    },
+    {
+      "root": "scratch",
+      "path": "matrix-1.stdout.log",
+      "bytes": 41091,
+      "sha256": "56a74d4d2bf8b18bcf6f08da995de67d453be778f0a53ddb2585a43028e3239a"
+    },
+    {
+      "root": "scratch",
+      "path": "matrix-2.command.json",
+      "bytes": 537,
+      "sha256": "fbdcf4f5c425c6b2b73020eb51f9ef560bf2026522e14ed64490ca5594d19fd1"
+    },
+    {
+      "root": "scratch",
+      "path": "matrix-2.stderr.log",
+      "bytes": 452,
+      "sha256": "875c2cb2903ae7e5f9fe020164c1089961b568942fb17ee1978515cca5912572"
+    },
+    {
+      "root": "scratch",
+      "path": "matrix-2.stdout.log",
+      "bytes": 39603,
+      "sha256": "05dbeab4b8db8c2ab293bf8f70f171cb22e6c622ff6115c22ccd448149c0acec"
+    },
+    {
+      "root": "scratch",
+      "path": "matrix-results.json",
+      "bytes": 51604,
+      "sha256": "92f15e85653c8de55a075c0f98248f9f6a47237a47b4f1b89bce4dd0b83b3757"
+    },
+    {
+      "root": "scratch",
+      "path": "matrix.mjs",
+      "bytes": 9335,
+      "sha256": "3524229cc02a2f89b944bf7ce37d99e95cdf4ee5c9e7f83fbca0d24bb8cd456e"
+    },
+    {
+      "root": "scratch",
+      "path": "package.json",
+      "bytes": 17,
+      "sha256": "6dc1b06d6b093e9cccb20bee06a93836eee0420ae26803ca2ce4065d82f070d1"
+    },
+    {
+      "root": "scratch",
+      "path": "repro-1.command.json",
+      "bytes": 536,
+      "sha256": "87165b3c303f90620593fe970dc5ab5c138a53aa19eb6627895916d71409da41"
+    },
+    {
+      "root": "scratch",
+      "path": "repro-1.stderr.log",
+      "bytes": 452,
+      "sha256": "e6abd15883c32f6291b25b07d6c02ca96f7d81577536ddabe9949ee63639180b"
+    },
+    {
+      "root": "scratch",
+      "path": "repro-1.stdout.log",
+      "bytes": 7509,
+      "sha256": "48831862096b1beebf8b9f97fb5b315eea44c6f1dac125939cbc25895cd5af38"
+    },
+    {
+      "root": "scratch",
+      "path": "repro-results.json",
+      "bytes": 7508,
+      "sha256": "967108cfa26afabc40feb88287e44972c7132cf7746f095659fad56d8c1abb17"
+    },
+    {
+      "root": "scratch",
+      "path": "repro.mjs",
+      "bytes": 4027,
+      "sha256": "58eb35d08ba1b1cca7111d8060b5713133d9b31bf0057330569486925bcf887d"
+    },
+    {
+      "root": "scratch",
+      "path": "review.json",
+      "bytes": 8397,
+      "sha256": "e7a1c07706d108fe83b83729f54f3dc87d1e1496ac35c39d64845e0971507d3f"
+    },
+    {
+      "root": "scratch",
+      "path": "run.mjs",
+      "bytes": 3774,
+      "sha256": "bc5a55d3a25e972f0605e2fe80e6bbeb859419adc2ace44a5af4c4b03f80c563"
+    },
+    {
+      "root": "scratch",
+      "path": "source/docs/plans/v03-native-broker-g1b-design.md",
+      "bytes": 27918,
+      "sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3"
+    },
+    {
+      "root": "scratch",
+      "path": "source/docs/plans/v03-source-admission-owner-design.md",
+      "bytes": 53412,
+      "sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+    },
+    {
+      "root": "scratch",
+      "path": "source/src/compute/nativeHandoff.ts",
+      "bytes": 12573,
+      "sha256": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827"
+    },
+    {
+      "root": "scratch",
+      "path": "source/src/compute/nativeHandoff.worker.ts",
+      "bytes": 1795,
+      "sha256": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990"
+    },
+    {
+      "root": "scratch",
+      "path": "source/src/compute/resourceLedger.ts",
+      "bytes": 18891,
+      "sha256": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b"
+    },
+    {
+      "root": "scratch",
+      "path": "source/src/compute/workerPool.ts",
+      "bytes": 6048,
+      "sha256": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64"
+    },
+    {
+      "root": "scratch",
+      "path": "source/tests/v03-native-handoff.test.ts",
+      "bytes": 22718,
+      "sha256": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc"
+    },
+    {
+      "root": "scratch",
+      "path": "strict128-1.command.json",
+      "bytes": 482,
+      "sha256": "973891e0800c9812bf135cd914619235183d6a61ba9e5b96742397bf5c44ced0"
+    },
+    {
+      "root": "scratch",
+      "path": "strict128-1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "scratch",
+      "path": "strict128-1.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "scratch",
+      "path": "tsconfig.json",
+      "bytes": 750,
+      "sha256": "d4c110820d12552d318b78d12d3087f7a5e684a9cfd9c3850432c884c0363450"
+    },
+    {
+      "root": "scratch",
+      "path": "witness-1.command.json",
+      "bytes": 538,
+      "sha256": "50defe98b6db9a1afe014c614968f2ad24305019e892a867db3dee33a6028978"
+    },
+    {
+      "root": "scratch",
+      "path": "witness-1.stderr.log",
+      "bytes": 452,
+      "sha256": "bb97590a0c63cdf298739c185d1c486f35c1677b82f01bcb011d2fbdcce6af6b"
+    },
+    {
+      "root": "scratch",
+      "path": "witness-1.stdout.log",
+      "bytes": 12322,
+      "sha256": "7f3e08c83b11ce262a17955c0395e4a7b72c412aaca166f58547cc2f68c72460"
+    },
+    {
+      "root": "scratch",
+      "path": "witness-original-hashes.json",
+      "bytes": 375,
+      "sha256": "50326cc248fc1d1f41551097568c61b64ed0dc65b027e87ab0aa3bed2d7a6212"
+    },
+    {
+      "root": "scratch",
+      "path": "witness-results.json",
+      "bytes": 12321,
+      "sha256": "29b7cc33f9a484d5396caef9fac01bc9ac0767574be2279e46489711ada714be"
+    },
+    {
+      "root": "scratch",
+      "path": "witness.mjs",
+      "bytes": 25179,
+      "sha256": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d"
+    },
+    {
+      "root": "repository",
+      "path": "src/compute/resourceLedger.ts",
+      "bytes": 18891,
+      "sha256": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b"
+    },
+    {
+      "root": "repository",
+      "path": "src/compute/nativeHandoff.ts",
+      "bytes": 12573,
+      "sha256": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827"
+    },
+    {
+      "root": "repository",
+      "path": "src/compute/nativeHandoff.worker.ts",
+      "bytes": 1795,
+      "sha256": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990"
+    },
+    {
+      "root": "repository",
+      "path": "tests/v03-native-handoff.test.ts",
+      "bytes": 22718,
+      "sha256": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc"
+    },
+    {
+      "root": "repository",
+      "path": "src/compute/workerPool.ts",
+      "bytes": 6048,
+      "sha256": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64"
+    },
+    {
+      "root": "repository",
+      "path": "docs/plans/v03-native-broker-g1b-design.md",
+      "bytes": 27918,
+      "sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3"
+    },
+    {
+      "root": "repository",
+      "path": "docs/plans/v03-source-admission-owner-design.md",
+      "bytes": 53412,
+      "sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "source_actual_exit": 1,
+  "test_actual_exit": 1,
+  "command": "git diff --no-index --check <runs/baseline/file> <current/file>"
+}

@@ -1,0 +1,378 @@
+{
+  "status": "CANDIDATE_FOR_PARENT_FRESH_REVIEW_NOT_ACCEPTED",
+  "scope": "G1b1b input-only; final authorized auto-fix cycle 2/2: Q2-INTEGRATION and B1 only",
+  "repo": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "head": "25980b612ced5dc79ce966208cb7ce4edbb1546b",
+  "branch": "feature/trimline-v03",
+  "scratch": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix",
+  "changes": {
+    "Q2": "Pool removes both owned listeners best-effort, invokes native terminate exactly once, preserves native error priority. On native success the pool closes only its reservation and frees only its binding, then reports first cleanup error. Facade distinguishes this proven FREE success from occupied native failure and settles only its ticket.",
+    "B1": "Reentrant dispose immediately revokes and drops active requests but defers pool.dispose while an original stopWorker owns completion. Last stopping owner flushes the pending pool disposal; actual native E reaches the original stopError/wait unchanged. No retry, no early free or RETURNED resurrection.",
+    "files": {
+      "src/compute/workerPool.ts": {
+        "before": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+        "after": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3"
+      },
+      "src/compute/nativeHandoff.ts": {
+        "before": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+        "after": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70"
+      },
+      "tests/v03-worker-pool.test.ts": {
+        "before": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7",
+        "after": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1"
+      },
+      "tests/v03-native-handoff.test.ts": {
+        "before": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+        "after": "2f5bce9b8356884dbfc07a951cb8df62ad3ab63fc826b16c11120132c7fae687"
+      },
+      "src/compute/resourceLedger.ts": {
+        "before": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+        "after": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b"
+      },
+      "src/compute/nativeHandoff.worker.ts": {
+        "before": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+        "after": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990"
+      },
+      "docs/plans/v03-native-broker-g1b-design.md": {
+        "before": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+        "after": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3"
+      },
+      "docs/plans/v03-source-admission-owner-design.md": {
+        "before": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+        "after": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+      }
+    }
+  },
+  "verification": {
+    "focusedUnit": {
+      "exit": 0,
+      "total": 206,
+      "passed": 206,
+      "failed": 0,
+      "pending": 0,
+      "files": {
+        "v03-native-handoff.test.ts": {
+          "total": 158,
+          "passed": 158
+        },
+        "v03-resource-ledger.test.ts": {
+          "total": 16,
+          "passed": 16
+        },
+        "v03-worker-pool.test.ts": {
+          "total": 32,
+          "passed": 32
+        }
+      },
+      "baseline": {
+        "handoff": 33,
+        "pool": 24,
+        "G1a": 16,
+        "existing_assertions_byte_preserved": true
+      },
+      "appended": {
+        "pool": 8,
+        "handoff": 125,
+        "total": 133,
+        "red_capable_cases": 32,
+        "existing_behavior_coverage_cases": 101
+      },
+      "evidence": "UNIT EventTarget + actual structuredClone transfers, not native exploit evidence"
+    },
+    "verticalTDD": {
+      "pool_red": {
+        "selected": 8,
+        "failed": 8
+      },
+      "composition_red": {
+        "selected": 15,
+        "failed": 6,
+        "existing_coverage_passed": 9
+      },
+      "b1_red": {
+        "selected": 30,
+        "failed": 18,
+        "existing_coverage_passed": 12
+      },
+      "additional_existing_coverage": 80,
+      "no_manufactured_red": true
+    },
+    "witnesses": [
+      {
+        "name": "spec-strict128",
+        "command": [
+          "node",
+          "--max-old-space-size=128",
+          "--max-semi-space-size=8",
+          "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+          "-p",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec\\tsconfig.json"
+        ],
+        "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+        "exit": 0
+      },
+      {
+        "name": "spec-boundary",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec\\run.mjs",
+          "boundary"
+        ],
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec",
+        "exit": 0,
+        "total": 55,
+        "passed": 55,
+        "failed": 0
+      },
+      {
+        "name": "quality-strict128",
+        "command": [
+          "node",
+          "--max-old-space-size=128",
+          "--max-semi-space-size=8",
+          "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+          "-p",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\tsconfig.json"
+        ],
+        "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+        "exit": 0
+      },
+      {
+        "name": "quality-witness",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\run.mjs",
+          "witness"
+        ],
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality",
+        "exit": 0,
+        "total": 87,
+        "passed": 87,
+        "failed": 0
+      },
+      {
+        "name": "quality-repro",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\run.mjs",
+          "repro"
+        ],
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality",
+        "exit": 0,
+        "total": 20,
+        "passed": 20,
+        "failed": 0
+      },
+      {
+        "name": "quality-matrix",
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\run.mjs",
+          "matrix"
+        ],
+        "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality",
+        "exit": 0,
+        "total": 124,
+        "passed": 124,
+        "failed": 0
+      }
+    ],
+    "strict128": "spec-strict128 and quality-strict128 exit 0; actual candidate production, ES2022+DOM, types:[], strict/noUnused; relocated own compiled dirs",
+    "fullProjectTypes512": {
+      "exit": 0,
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "-p",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\tsconfig.json",
+        "--noEmit"
+      ]
+    },
+    "unchangedPublicApiDeclarations": true,
+    "native": {
+      "commands": [
+        {
+          "name": "full-tsc512",
+          "command": [
+            "node",
+            "--max-old-space-size=512",
+            "--max-semi-space-size=8",
+            "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+            "-p",
+            "C:\\Users\\sandr\\OrthoSculptCAD\\tsconfig.json",
+            "--noEmit"
+          ],
+          "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+          "exit": 0
+        },
+        {
+          "name": "native-pool",
+          "command": [
+            "node",
+            "--max-old-space-size=128",
+            "--max-semi-space-size=8",
+            "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\native-pool\\native-cli.mjs"
+          ],
+          "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+          "exit": 0
+        },
+        {
+          "name": "native-handoff",
+          "command": [
+            "node",
+            "--max-old-space-size=128",
+            "--max-semi-space-size=8",
+            "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\native-handoff\\native-cli.mjs",
+            "candidate"
+          ],
+          "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+          "exit": 0
+        }
+      ],
+      "serial": true,
+      "pool": {
+        "checks": 119,
+        "metrics": {
+          "attempts": 50,
+          "created": 49,
+          "terminated": 49,
+          "sends": 0,
+          "allocations": 0
+        },
+        "browser": {
+          "version": "156.0.8078.4",
+          "nativeCreated": 49,
+          "nativeCloseNotificationsBeforeContextClose": 49
+        },
+        "closed": {
+          "context": true,
+          "browser": true,
+          "server": true,
+          "portRefuses": true
+        },
+        "hashes": {
+          "source": {
+            "src/compute/workerPool.ts": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+            "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b"
+          },
+          "served": {
+            "workerPool.js": "b39762a96a048fb9ee5d2e9f275d3fb1cccef5d3413e21e9b6978e7e27538459",
+            "resourceLedger.js": "12877161ed30b54a5603e11540fd0ab13fca63466287560f64c54ef1afe9b93a",
+            "fixture.mjs": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256"
+          }
+        }
+      },
+      "handoff": {
+        "checks": 71,
+        "metrics": {
+          "constructors": 12,
+          "terminates": 12,
+          "peak": 2,
+          "live": 0
+        },
+        "browser": "156.0.8078.4",
+        "closed": {
+          "context": true,
+          "browser": true,
+          "server": true,
+          "portRefuses": true
+        },
+        "hashes": {
+          "source": {
+            "resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+            "workerPool.ts": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+            "nativeHandoff.ts": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70",
+            "nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990"
+          },
+          "served": {
+            "resourceLedger.js": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+            "workerPool.js": "97c9374c1157ac36c66a4a3a18a0561e19d74e39bc8bcf9b1105914cbdb5e25d",
+            "nativeHandoff.js": "1fa86e7204a1f416fb318263afbe004639bc0c7a2452d7d8c1584ce82bb3b050",
+            "nativeHandoff.worker.js": "fa95ed8c531a1873b91f787010e741e781acbf724877d3e6cd1bfd9ba488a2a9",
+            "fixture.mjs": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+            "fixture-base.mjs": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c"
+          }
+        }
+      }
+    },
+    "nativeTotalChecks": 190,
+    "allNativeClosed": true,
+    "originalEvidence": [
+      {
+        "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-spec-rereview",
+        "manifestSHA256": "014be0ec611f2c561a77cfd5b0988c5ef98d91c0aec3a1d7367e7c5f4473c66b",
+        "totalEntries": 68,
+        "rootCounts": {
+          "scratch": 68
+        },
+        "scratchEntriesReverifiedAfter": 68,
+        "repositoryEntries": "verified at start; candidate deltas are intentional and separately bound in scope-proof.json"
+      },
+      {
+        "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-quality-rereview",
+        "manifestSHA256": "4f3dd29dbc307548bb0650e4269714ea1ab38a998a29be067d1f3e3e165ee797",
+        "totalEntries": 53,
+        "rootCounts": {
+          "scratch": 46,
+          "repository": 7
+        },
+        "scratchEntriesReverifiedAfter": 46,
+        "repositoryEntries": "verified at start; candidate deltas are intentional and separately bound in scope-proof.json"
+      }
+    ],
+    "scope": {
+      "frozen": 2605,
+      "changedOnly": [
+        "src/compute/nativeHandoff.ts",
+        "src/compute/workerPool.ts",
+        "tests/v03-native-handoff.test.ts",
+        "tests/v03-worker-pool.test.ts"
+      ],
+      "coverage": "all existing tracked paths plus every production/test/norm path under src, tests, docs/plans; excludes untracked docs/verification parent-owned metadata/evidence, .git and node_modules",
+      "parentOwnedExclusion": "untracked docs/verification/v03-native-handoff-parent-results.json and other untracked verification evidence were never overwritten; not claimed identical by whole-repo hash",
+      "trackedPathSetUnchanged": true
+    },
+    "staticScan": "added-lines static scan clean; git diff --check exit 0; not an independent approval"
+  },
+  "issuesEncountered": [
+    "Expected production REDs preserved: Q2 pool 8/8 failed, Q2 composition 6/15 failed, B1 18/30 failed. No operational blocker or manufactured RED."
+  ],
+  "remaining": [
+    "Parent fresh independent rereview",
+    "Parent-owned full Node/Python regression; deliberately not run here",
+    "No acceptance, stage, commit, root-scope migration or task closure"
+  ],
+  "artifacts": [
+    "HANDOFF.md",
+    "handoff.json",
+    "minimal.diff",
+    "artifact-manifest.json",
+    "scope-proof.json",
+    "tdd-audit.json",
+    "public-api-proof.json",
+    "original-evidence-proof.json",
+    "replay-summary.json",
+    "native-summary.json",
+    "runs/",
+    "before/",
+    "final/"
+  ],
+  "manifest": {
+    "path": "artifact-manifest.json",
+    "roots": {
+      "scratch": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix",
+      "repository": "C:\\Users\\sandr\\OrthoSculptCAD"
+    },
+    "totalEntries": 224,
+    "rootCounts": {
+      "scratch": 216,
+      "repository": 8
+    },
+    "exclusions": [
+      "artifact-manifest.json itself (self hash excluded)",
+      "vite-cache/** (ephemeral Vitest transform cache)"
+    ]
+  }
+}

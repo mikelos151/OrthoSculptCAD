@@ -1,0 +1,1 @@
+export default {root:'C:/Users/sandr/OrthoSculptCAD',cacheDir:'C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-spec-rereview/vite-cache',test:{include:['tests/v03-native-handoff.test.ts'],environment:'node',maxWorkers:1,fileParallelism:false,execArgv:['--max-old-space-size=128','--max-semi-space-size=8']}};

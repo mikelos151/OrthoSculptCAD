@@ -1,0 +1,14 @@
+{
+  "name": "full-tsc512",
+  "command": [
+    "node",
+    "--max-old-space-size=512",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+    "-p",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\tsconfig.json",
+    "--noEmit"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit": 0
+}

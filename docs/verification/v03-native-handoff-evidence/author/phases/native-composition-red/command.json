@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=256",
+    "--max-semi-space-size=8",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/native-cli.mjs",
+    "native-composition-red"
+  ],
+  "exit": 1,
+  "error": "",
+  "signal": null,
+  "hashes": {
+    "src/compute/resourceLedger.ts": "1a999bf2feca0ba92b260e2333947121ea33bc744a6fd4b2ba86518941b7ede5",
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "src/compute/nativeHandoff.ts": "0110544d87c9cc5850e2c60cc09bdc366291f34b70e34956e3e6afd92954a529",
+    "tests/v03-native-handoff.test.ts": "ff32f4d06f39a34342a3859a0b29c7dedf1262f89275d183f3667638ed4b7273"
+  }
+}

@@ -1,28 +1,32 @@
 import { ownedMeshTransfers } from './copy';
+import { acquireLegacyWorker } from './legacyBroker';
 import { WORKER_FAILURE_MESSAGE, ZONE_NO_CHANGE_MESSAGE, type WorkerCommand, type WorkerResponse } from './protocol';
 
 export const WORKER_TIMEOUT_MS = 120_000;
 export const MAX_WORKERS = 2;
-let activeWorkers = 0;
+
 let generation = 0;
 
 /** Each client owns one worker and at most one in-flight request. No hidden queue. */
 export class WorkerClient {
-  private worker: Worker;
+  private worker: ReturnType<typeof acquireLegacyWorker>['worker'];
+  private release: () => void;
   private readonly generation = ++generation;
   private nextId = 0;
   private closed = false;
+  private deadline = performance.now() + WORKER_TIMEOUT_MS;
+  private firstRequest = true;
   private startupTimer: ReturnType<typeof setTimeout>;
   private pending?: { id: number; allowNoChange: boolean; resolve: (value: unknown) => void; reject: (error: Error) => void; timer: ReturnType<typeof setTimeout> };
   constructor() {
-    if (activeWorkers >= MAX_WORKERS) throw new Error('Silnik zajęty: osiągnięto limit obliczeń.');
-    try { this.worker = new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' }); }
-    catch { throw new Error('Nie udało się uruchomić silnika Worker.'); }
-    activeWorkers++;
+    const binding = acquireLegacyWorker('compute');
+    this.worker = binding.worker; this.release = binding.release;
+    binding.onRevoke(() => this.dispose(new Error('Silnik Worker został zamknięty.')));
     this.startupTimer = setTimeout(() => this.dispose(new Error('Przekroczono czas inicjalizacji Worker.')), WORKER_TIMEOUT_MS);
     this.worker.onmessage = event => {
       const response = event.data as WorkerResponse;
       if (this.closed || !this.pending || !response || response.generation !== this.generation || response.id !== this.pending.id) return;
+      if (performance.now() >= this.deadline) { this.dispose(new Error('Przekroczono czas obliczenia.')); return; }
       const pending = this.pending!;
       this.pending = undefined;
       clearTimeout(pending.timer);
@@ -39,10 +43,13 @@ export class WorkerClient {
   request(command: WorkerCommand): Promise<unknown> {
     if (this.closed) return Promise.reject(new Error('Silnik Worker został zamknięty.'));
     if (this.pending) return Promise.reject(new Error('Silnik Worker jest zajęty.'));
+    if (!this.firstRequest) this.deadline = performance.now() + WORKER_TIMEOUT_MS;
+    this.firstRequest = false;
+    if (performance.now() >= this.deadline) { this.dispose(new Error('Przekroczono czas obliczenia.')); return Promise.reject(new Error('Przekroczono czas obliczenia.')); }
     clearTimeout(this.startupTimer);
     return new Promise((resolve, reject) => {
       const id = ++this.nextId;
-      const timer = setTimeout(() => this.dispose(new Error('Przekroczono czas obliczenia.')), WORKER_TIMEOUT_MS);
+      const timer = setTimeout(() => this.dispose(new Error('Przekroczono czas obliczenia.')), Math.max(0, this.deadline - performance.now()));
       this.pending = { id, allowNoChange: command.kind === 'task' && command.op === 'zone', resolve, reject, timer };
       try {
         // Request parameters are untrusted: never recursively discover transferables in them.
@@ -57,8 +64,8 @@ export class WorkerClient {
     this.closed = true;
     clearTimeout(this.startupTimer);
     this.worker.onmessage = this.worker.onerror = this.worker.onmessageerror = null;
-    this.worker.terminate();
-    activeWorkers--;
-    if (this.pending) { clearTimeout(this.pending.timer); this.pending.reject(error); this.pending = undefined; }
+    try { this.release(); } finally {
+      if (this.pending) { clearTimeout(this.pending.timer); this.pending.reject(error); this.pending = undefined; }
+    }
   }
 }

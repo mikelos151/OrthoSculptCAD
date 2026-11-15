@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+    "-p",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/tsconfig.json"
+  ],
+  "cwd": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview",
+  "actual_exit": 0,
+  "signal": null,
+  "error": ""
+}

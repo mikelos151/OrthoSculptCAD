@@ -1,0 +1,49 @@
+{
+  "frozen_count": 2605,
+  "changed_only_allowed": [
+    "src/compute/nativeHandoff.ts",
+    "src/compute/workerPool.ts",
+    "tests/v03-native-handoff.test.ts",
+    "tests/v03-worker-pool.test.ts"
+  ],
+  "coverage": "all existing tracked paths plus every production/test/norm path under src, tests, docs/plans; excludes untracked docs/verification parent-owned metadata/evidence, .git and node_modules",
+  "tracked_path_set_unchanged": true,
+  "sha256": {
+    "src/compute/workerPool.ts": {
+      "before": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "after": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3"
+    },
+    "src/compute/nativeHandoff.ts": {
+      "before": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "after": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70"
+    },
+    "tests/v03-worker-pool.test.ts": {
+      "before": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7",
+      "after": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1"
+    },
+    "tests/v03-native-handoff.test.ts": {
+      "before": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+      "after": "2f5bce9b8356884dbfc07a951cb8df62ad3ab63fc826b16c11120132c7fae687"
+    },
+    "src/compute/resourceLedger.ts": {
+      "before": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "after": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b"
+    },
+    "src/compute/nativeHandoff.worker.ts": {
+      "before": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "after": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990"
+    },
+    "docs/plans/v03-native-broker-g1b-design.md": {
+      "before": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+      "after": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3"
+    },
+    "docs/plans/v03-source-admission-owner-design.md": {
+      "before": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+      "after": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+    }
+  },
+  "tests_append_only": {
+    "tests/v03-worker-pool.test.ts": true,
+    "tests/v03-native-handoff.test.ts": true
+  }
+}

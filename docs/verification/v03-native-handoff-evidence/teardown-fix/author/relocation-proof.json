@@ -1,0 +1,34 @@
+{
+  "native": {
+    "original_root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core",
+    "replay_root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-fix\\native",
+    "runner_original_sha256": "6b87a3b0ad01479245a66c9d00b514e0dc3c38abcfb3a5210ff1f17624be2ad8",
+    "runner_relocated_sha256": "40bd087c90abb61d3fe94effc44d17688116880bcdabb86673c4df472c1689dd",
+    "only_change": "one output/fixture dir literal; root repository and assertions unchanged",
+    "normalized_bytes_equal": true,
+    "fixtures": {
+      "fixture-matrix.mjs": {
+        "original_sha256": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+        "replay_sha256": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+        "bytes_identical": true
+      },
+      "fixture-roundtrip.mjs": {
+        "original_sha256": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c",
+        "replay_sha256": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c",
+        "bytes_identical": true
+      }
+    }
+  },
+  "quality": {
+    "witness.mjs": {
+      "original_sha256": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+      "replay_sha256": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+      "bytes_identical": true
+    },
+    "loader.mjs": {
+      "original_sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+      "replay_sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+      "bytes_identical": true
+    }
+  }
+}

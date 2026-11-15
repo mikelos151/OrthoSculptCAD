@@ -1,0 +1,76 @@
+diff --git a/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/core-roundtrip-red/resourceLedger.ts b/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/core-roundtrip-green/resourceLedger.ts
+index 6cab35e..5106202 100644
+--- a/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/core-roundtrip-red/resourceLedger.ts
++++ b/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/core-roundtrip-green/resourceLedger.ts
+@@ -35,6 +35,9 @@ function backingBytes(b: ArrayBuffer): number {
+     size(n); return n;
+   } catch { return invalid(); }
+ }
++function detached(b: ArrayBuffer): boolean {
++  try { new Uint8Array(b, 0, 0); return false; } catch { return true; }
++}
+ const BUDGET: Refusal = Object.freeze({ ok: false, code: 'BUDGET' });
+ function invalid(): never { throw Object.assign(new Error('Invalid ledger input'), { code: 'INVALID_INPUT' }); }
+ function category(c: unknown): asserts c is Category { if (c !== 'resident' && c !== 'job' && c !== 'history') invalid(); }
+@@ -77,11 +80,56 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+     const s = tickets.get(t); if (!s || s.binding !== binding || (phase && s.phase !== phase)) invalid(); return s;
+   }
+   const handoff = Object.freeze({
+-    sent(_t: object, _binding: object): void { throw Object.assign(new Error('Native send unavailable'), { code: 'UNAVAILABLE' }); },
+-    received(_t: object, _binding: object): void { throw Object.assign(new Error('Native receive unavailable'), { code: 'UNAVAILABLE' }); },
+-    returned(_t: object, _binding: object, _buffers: readonly ArrayBuffer[]): void { throw Object.assign(new Error('Native rebind unavailable'), { code: 'UNAVAILABLE' }); },
+-    publish(_t: object, _binding: object, _consumer: Lease): { refs: readonly Ref[]; buffers: readonly ArrayBuffer[] } { throw Object.assign(new Error('Native publication unavailable'), { code: 'UNAVAILABLE' }); },
+-    terminated(_t: object, _binding: object): void { throw Object.assign(new Error('Native cleanup unavailable'), { code: 'UNAVAILABLE' }); },
++    sent(t: object, binding: object): void {
++      const s = ticket(t, binding, 'PREPARED');
++      for (const b of s.buffers) if (!detached(b)) invalid();
++      for (let i = 0; i < s.allocations.length; i++) {
++        const a = s.allocations[i], old = s.input[i], c = refs.get(old)!.category;
++        backings.delete(s.buffers[i]); a.buffer = undefined; a.owner = s.target; a.phase = 'IN_FLIGHT';
++        s.controlledRefs.push(issue(s.controlled, a, c)); retire(old);
++      }
++      s.buffers = []; s.input = []; s.phase = 'IN_FLIGHT';
++    },
++    received(t: object, binding: object): void {
++      const s = ticket(t, binding, 'IN_FLIGHT');
++      for (const a of s.allocations) a.phase = 'REMOTE'; s.phase = 'REMOTE';
++    },
++    returned(t: object, binding: object, buffers: readonly ArrayBuffer[]): void {
++      const s = ticket(t, binding, 'REMOTE');
++      if (!Array.isArray(buffers) || buffers.length !== s.allocations.length) invalid();
++      const seen = new Set<ArrayBuffer>();
++      Array.from(buffers, (b, i) => {
++        if (backingBytes(b) !== s.allocations[i].bytes || seen.has(b) || backings.has(b)) invalid();
++        seen.add(b);
++      });
++      // No mutation until the entire authenticated expected group passed preflight.
++      for (let i = 0; i < buffers.length; i++) {
++        const a = s.allocations[i]; a.phase = 'RETURNING';
++        a.buffer = buffers[i]; a.owner = s.main; backings.set(buffers[i], a); a.phase = 'MAIN';
++      }
++      s.phase = 'MAIN';
++    },
++    publish(t: object, binding: object, consumer: Lease): { refs: readonly Ref[]; buffers: readonly ArrayBuffer[] } {
++      const s = ticket(t, binding, 'MAIN'); open(consumer);
++      if (!room(s.allocations.length)) throw Object.assign(new Error('Ref capacity'), { code: 'BUDGET' });
++      const rr = s.allocations.map((a, i) => issue(consumer, a, refs.get(s.controlledRefs[i])!.category));
++      const buffers = s.allocations.map(a => a.buffer!);
++      for (const r of s.controlledRefs) retire(r);
++      s.controlled.close(); s.controlledRefs = []; s.allocations = []; s.phase = 'RETIRED';
++      return Object.freeze({ refs: Object.freeze(rr), buffers: Object.freeze(buffers) });
++    },
++    /** Only the owned native composition calls this AFTER successful terminate. */
++    terminated(t: object, binding: object): void {
++      const s = ticket(t, binding); if (s.phase === 'RETIRED') return;
++      if (s.phase === 'PREPARED') {
++        for (let i = 0; i < s.allocations.length; i++) {
++          const a = s.allocations[i];
++          if (detached(s.buffers[i])) { backings.delete(s.buffers[i]); a.buffer = undefined; retire(s.input[i]); }
++          else a.phase = 'MAIN';
++        }
++      } else for (const r of s.controlledRefs) retire(r);
++      s.controlled.close(); s.buffers = []; s.input = []; s.controlledRefs = []; s.allocations = []; s.phase = 'RETIRED';
++    },
+     prepare(source: Lease, input: readonly Ref[], main: Realm, target: Realm, binding: object): object {
+       if (!native) invalid();
+       open(source); realm(main); realm(target);

@@ -1,0 +1,215 @@
+--- before/src/compute/nativeHandoff.ts
++++ after/src/compute/nativeHandoff.ts
+@@ -65,7 +65,7 @@
+ interface RequestState {
+   slot: number; phase: RequestPhase; deadline: number; nonce: number[]; tuple: number[]; plan: Descriptor[];
+   poolLease?: PoolLease; worker?: Worker; ticket?: object; timer?: ReturnType<typeof setTimeout>;
+-  remove?: () => void; stopAttempted?: boolean; stopped?: boolean; stopError?: unknown;
++  remove?: () => void; removeError?: unknown; stopAttempted?: boolean; stopping?: boolean; stopped?: boolean; stopError?: unknown; revokeError?: unknown;
+   done: Promise<void>; resolve: () => void; reject: (error: unknown) => void;
+ }
+ /** No caller Worker/URL/transport/nonce/deadline/ACK hooks. Not re-exported by compute/index. */
+@@ -84,23 +84,26 @@
+   function stopWorker(r: RequestState) {
+     if (r.stopped) return;
+     if (r.stopAttempted) throw r.stopError ?? failure('NATIVE_TERMINATE');
+-    r.stopAttempted = true; clearTimeout(r.timer);
+-    if (current.get(r.slot) === r) current.delete(r.slot);
+-    r.remove?.(); r.remove = undefined;
++    r.stopAttempted = true; r.stopping = true;
+     try {
++      clearTimeout(r.timer);
++      if (current.get(r.slot) === r) current.delete(r.slot);
++      r.remove?.(); r.remove = undefined;
+       if (!r.poolLease) invalid(); pool.release(r.poolLease);
+       if (pool.snapshot().slots[r.slot].phase !== 'FREE') throw failure('NATIVE_TERMINATE');
+       r.stopped = true; r.worker = undefined;
+     } catch (error) { r.stopError = error; r.phase = 'FAILED'; throw error; }
++    finally { r.stopping = false; }
+   }
+   function drop(r: RequestState, error: unknown) {
+     if (r.phase === 'RETIRED') return;
+-    r.phase = 'REVOKED';
++    r.phase = 'REVOKED'; r.revokeError ??= error;
++    if (r.stopping) return; // Latch revoke; the original terminal call owns completion.
+     try {
+       stopWorker(r); if (r.ticket) handoff.terminated(r.ticket, r);
+       r.phase = 'RETIRED'; r.plan = []; r.nonce = []; active.delete(r);
+     } catch (stopError) { r.phase = 'FAILED'; r.reject(stopError); return; }
+-    r.reject(error);
++    r.reject(r.revokeError);
+   }
+   function timely(r: RequestState) {
+     if (performance.now() >= r.deadline) { drop(r, failure('DEADLINE')); throw failure('DEADLINE'); }
+@@ -146,13 +149,20 @@
+             if (!equal(f.tuple, r.tuple) || !equal(f.nonce, r.nonce) || !samePlan(f.plan, r.plan)) invalid();
+             if (f.type === 2 && r.phase === 'IN_FLIGHT') { handoff.received(r.ticket!, r); r.phase = 'REMOTE'; }
+             else if (f.type === 3 && r.phase === 'REMOTE') {
+-              handoff.returned(r.ticket!, r, f.buffers); stopWorker(r); timely(r);
++              handoff.returned(r.ticket!, r, f.buffers); stopWorker(r);
++              if (r.revokeError !== undefined) { drop(r, r.revokeError); return; }
++              timely(r);
+               r.phase = 'RETURNED'; r.resolve();
+             } else invalid();
+           } catch (error) { drop(r, error); }
+         };
+         const onError = () => { if (current.get(r.slot) === r && r.worker === worker) drop(r, failure('NATIVE_ERROR')); };
+-        r.remove = () => { worker.removeEventListener('message', onMessage); worker.removeEventListener('error', onError); worker.removeEventListener('messageerror', onError); };
++        r.remove = () => {
++          for (const remove of [() => worker.removeEventListener('message', onMessage), () => worker.removeEventListener('error', onError), () => worker.removeEventListener('messageerror', onError)]) {
++            try { remove(); }
++            catch (error) { r.removeError ??= error; r.revokeError ??= error; } // Cleanup failure is not terminate failure.
++          }
++        };
+         current.set(r.slot, r);
+         worker.addEventListener('message', onMessage); worker.addEventListener('error', onError); worker.addEventListener('messageerror', onError);
+         r.timer = setTimeout(() => drop(r, failure('DEADLINE')), Math.max(0, r.deadline - performance.now()));
+--- before/tests/v03-native-handoff.test.ts
++++ after/tests/v03-native-handoff.test.ts
+@@ -1,4 +1,4 @@
+-import { describe, expect, it } from 'vitest';
++import { afterEach, describe, expect, it, vi } from 'vitest';
+ import { createNativeLedger } from '../src/compute/resourceLedger';
+ import { createNativeHandoff, decodeInputPacket, encodeInputPacket } from '../src/compute/nativeHandoff';
+ import type { Lease } from '../src/compute/resourceLedger';
+@@ -148,3 +148,140 @@
+     expect(a.snapshot().pool.ownershipDomains).toBe(3); expect(a.snapshot().pool.occupied).toBe(0);
+   });
+ });
++
++describe('G1b1b exceptional teardown regressions (UNIT faults, not native Worker)', () => {
++  const controllers: ReturnType<typeof createNativeHandoff>[] = [];
++  afterEach(() => {
++    for (const c of controllers.splice(0)) { try { c.dispose(); } catch { /* Injected native failure stays held. */ } }
++    vi.unstubAllGlobals();
++  });
++  function fixture() {
++    let worker!: UnitWorker;
++    class UnitWorker extends EventTarget {
++      actual!: ReturnType<typeof encodeInputPacket>;
++      captured?: EventListenerOrEventListenerObject;
++      terminates = 0;
++      onTerminate?: () => void;
++      removed: string[] = [];
++      removeThrowOnce = false;
++      readonly removeFailure = new Error('listener removal injected');
++      constructor() { super(); worker = this; }
++      override addEventListener(type: string, fn: EventListenerOrEventListenerObject | null, options?: boolean | AddEventListenerOptions) {
++        if (type === 'message' && fn) this.captured = fn;
++        super.addEventListener(type, fn, options);
++      }
++      postMessage(packet: ReturnType<typeof encodeInputPacket>, transfer: Transferable[]) { this.actual = structuredClone(packet, { transfer }); }
++      override removeEventListener(type: string, fn: EventListenerOrEventListenerObject | null, options?: boolean | EventListenerOptions) {
++        this.removed.push(type);
++        if (type === 'message' && this.removeThrowOnce) { this.removeThrowOnce = false; throw this.removeFailure; }
++        super.removeEventListener(type, fn, options);
++      }
++      terminate() { this.terminates++; this.onTerminate?.(); }
++      stale() {
++        const event = new MessageEvent('message', { data: { malformed: true } });
++        if (typeof this.captured === 'function') this.captured(event); else this.captured?.handleEvent(event);
++      }
++      finish() {
++        const f = decodeInputPacket(this.actual);
++        this.dispatchEvent(new MessageEvent('message', { data: encodeInputPacket(2, f.tuple, f.nonce, f.plan, []) }));
++        const back = structuredClone(f.buffers, { transfer: f.buffers });
++        this.dispatchEvent(new MessageEvent('message', { data: encodeInputPacket(3, f.tuple, f.nonce, f.plan, back) }));
++      }
++    }
++    vi.stubGlobal('Worker', UnitWorker);
++    const c = createNativeHandoff(caps); controllers.push(c);
++    const source = c.ledger.reserve([2, 3].map((bytes, i) => ({ key: String(i), bytes, category: 'job' as const, owner: c.mainRealm }))) as Lease;
++    const refs = [source.ref('0'), source.ref('1')], old = refs.map(r => source.allocateBuffer(r));
++    old.forEach((b, i) => new Uint8Array(b).fill(i + 7));
++    const h = c.submit(source, refs.map(ref => ({ ref, role: 1 as const })));
++    if ('code' in h) throw Error(h.code);
++    source.close();
++    return { c, source, h, w: worker, old };
++  }
++  it('Q1 reentrant dispose during successful RETURN termination cannot resurrect publication or orphan controlled refs', async () => {
++    const { c, h, w, old } = fixture(), consumer = c.ledger.reserve([]) as Lease;
++    const outcome = c.wait(h).then(() => 'resolved', (e: { code: string }) => e.code);
++    let fired = false;
++    w.onTerminate = () => {
++      if (fired) return; fired = true;
++      expect(c.snapshot().pool.occupied).toBe(1);
++      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job]).toEqual([5, 5]);
++      c.dispose();
++      expect(c.snapshot().disposed).toBe(true);
++      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job]).toEqual([5, 5]);
++      expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++      const before = c.ledger.snapshot(); w.stale(); expect(c.ledger.snapshot()).toEqual(before);
++    };
++    try {
++      w.finish();
++      expect(c.snapshot()).toMatchObject({ disposed: true, pending: 0, pool: { occupied: 0 } });
++      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job]).toEqual([0, 0]);
++      expect(c.ledger.snapshot().allocations).toHaveLength(0);
++      expect(await outcome).toBe('CLOSED');
++      expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++      c.release(h); c.dispose(); w.stale();
++      expect(w.terminates).toBe(1); expect(old.map(b => b.byteLength)).toEqual([0, 0]);
++      expect(c.snapshot().pending).toBe(0); expect(c.ledger.snapshot().managed).toBe(0);
++    } finally { consumer.close(); }
++  });
++  it.each(['release', 'return'] as const)('Q2 %s attempts every listener and settles only its ticket after successful termination despite cleanup throw', async action => {
++    const { c, h, w } = fixture(), consumer = c.ledger.reserve([]) as Lease;
++    const mainHold = c.ledger.reserve([{ key: 'main', bytes: 7, category: 'history', owner: c.mainRealm }]) as Lease;
++    const mainRef = mainHold.ref('main'), main = mainHold.allocateBuffer(mainRef); new Uint8Array(main).fill(23);
++    const outcome = c.wait(h).then(() => 'resolved', (e: Error & { code?: string }) => e.code ?? e.message);
++    w.removeThrowOnce = true;
++    w.onTerminate = () => {
++      expect(w.removed).toEqual(expect.arrayContaining(['message', 'error', 'messageerror']));
++      expect(c.snapshot().pool.occupied).toBe(1);
++      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job, c.ledger.snapshot().history]).toEqual([12, 5, 7]);
++      const before = c.ledger.snapshot(); w.stale(); expect(c.ledger.snapshot()).toEqual(before);
++      expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++    };
++    try {
++      if (action === 'release') c.release(h); else w.finish();
++      expect(w.terminates).toBe(1);
++      expect(c.snapshot()).toMatchObject({ pending: 0, pool: { occupied: 0 } });
++      expect(await outcome).toBe(action === 'release' ? 'RELEASED' : w.removeFailure.message);
++      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job, c.ledger.snapshot().history]).toEqual([7, 0, 7]);
++      expect(mainHold.ref('main')).toBe(mainRef); expect([...new Uint8Array(main)]).toEqual(Array(7).fill(23));
++      const source2 = c.ledger.reserve([{ key: 'next', bytes: 3, category: 'job', owner: c.mainRealm }]) as Lease;
++      const r2 = source2.ref('next'), b2 = source2.allocateBuffer(r2); new Uint8Array(b2).fill(31);
++      const h2 = c.submit(source2, [{ ref: r2, role: 1 }]); if ('code' in h2) throw Error(h2.code); source2.close();
++      const before = c.ledger.snapshot(), state = c.snapshot();
++      w.stale(); c.release(h);
++      expect(c.ledger.snapshot()).toEqual(before); expect(c.snapshot()).toEqual(state);
++      c.release(h2); c.dispose(); c.dispose(); c.release(h);
++      expect(w.terminates).toBe(1); expect(c.snapshot()).toMatchObject({ pending: 0, pool: { occupied: 0 } });
++      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job]).toEqual([7, 0]);
++    } finally { consumer.close(); mainHold.close(); }
++    expect(c.ledger.snapshot().managed).toBe(0);
++  });
++  it.each([false, true])('retains the exact controlled charge after actual terminate failure plus reentrant dispose (cleanup throw=%s), without retry', async cleanupThrow => {
++    const { c, h, w } = fixture(), consumer = c.ledger.reserve([]) as Lease;
++    const mainHold = c.ledger.reserve([{ key: 'main', bytes: 7, category: 'history', owner: c.mainRealm }]) as Lease;
++    const ref = mainHold.ref('main'), main = mainHold.allocateBuffer(ref); new Uint8Array(main).fill(29);
++    const terminateFailure = new Error('native terminate injected');
++    w.removeThrowOnce = cleanupThrow;
++    w.onTerminate = () => {
++      expect(w.removed).toEqual(expect.arrayContaining(['message', 'error', 'messageerror']));
++      c.dispose();
++      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job]).toEqual([12, 5]);
++      expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++      throw terminateFailure;
++    };
++    try {
++      w.finish();
++      await expect(c.wait(h)).rejects.toBe(terminateFailure);
++      expect(c.snapshot()).toMatchObject({ disposed: true, pending: 1, requests: [{ phase: 'FAILED' }], pool: { occupied: 1 } });
++      expect(c.snapshot().pool.slots[0].phase).toBe('FAILED');
++      expect([c.ledger.snapshot().managed, c.ledger.snapshot().job, c.ledger.snapshot().history]).toEqual([12, 5, 7]);
++      expect(mainHold.ref('main')).toBe(ref); expect([...new Uint8Array(main)]).toEqual(Array(7).fill(29));
++      const before = c.ledger.snapshot(), state = c.snapshot();
++      c.release(h); c.release(h); c.dispose(); c.dispose(); w.stale();
++      expect(c.ledger.snapshot()).toEqual(before); expect(c.snapshot()).toEqual(state);
++      expect(w.terminates).toBe(1);
++      await expect(c.wait(h)).rejects.toBe(terminateFailure);
++    } finally { consumer.close(); mainHold.close(); }
++    expect([c.ledger.snapshot().managed, c.ledger.snapshot().job, c.ledger.snapshot().history]).toEqual([5, 5, 0]);
++  });
++});

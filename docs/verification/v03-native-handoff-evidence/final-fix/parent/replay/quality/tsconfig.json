@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "types": [],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "outDir": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\replay\\quality\\compiled",
+    "rootDir": "C:/Users/sandr/OrthoSculptCAD/src/compute"
+  },
+  "files": [
+    "C:/Users/sandr/OrthoSculptCAD/src/compute/resourceLedger.ts",
+    "C:/Users/sandr/OrthoSculptCAD/src/compute/nativeHandoff.ts",
+    "C:/Users/sandr/OrthoSculptCAD/src/compute/nativeHandoff.worker.ts",
+    "C:/Users/sandr/OrthoSculptCAD/src/compute/workerPool.ts"
+  ]
+}

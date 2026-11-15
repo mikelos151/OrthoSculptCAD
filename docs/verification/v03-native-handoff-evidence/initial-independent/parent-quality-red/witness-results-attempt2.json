@@ -1,0 +1,470 @@
+{
+  "evidence_kind": "UNIT actual compiled APIs + EventTarget/structuredClone; ZERO native Worker evidence",
+  "total": 74,
+  "passed": 72,
+  "failed": 2,
+  "observations": {
+    "reentrantTerminate": {
+      "broker": {
+        "disposed": true,
+        "pool": {
+          "disposed": true,
+          "ownershipDomains": 3,
+          "occupied": 0,
+          "slots": [
+            {
+              "ordinal": 0,
+              "incarnation": 1,
+              "generation": 0,
+              "phase": "FREE"
+            },
+            {
+              "ordinal": 1,
+              "incarnation": 0,
+              "generation": 0,
+              "phase": "FREE"
+            }
+          ]
+        },
+        "pending": 1,
+        "requests": [
+          {
+            "slot": 0,
+            "phase": "RETURNED"
+          }
+        ]
+      },
+      "ledger": {
+        "managed": 5,
+        "job": 5,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 2,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 3,
+                "category": "job"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "bytes": 3,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 4,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "terminates": 1,
+      "waitError": "NATIVE_TERMINATE",
+      "afterIdempotentDispose": {
+        "disposed": true,
+        "pool": {
+          "disposed": true,
+          "ownershipDomains": 3,
+          "occupied": 0,
+          "slots": [
+            {
+              "ordinal": 0,
+              "incarnation": 1,
+              "generation": 0,
+              "phase": "FREE"
+            },
+            {
+              "ordinal": 1,
+              "incarnation": 0,
+              "generation": 0,
+              "phase": "FREE"
+            }
+          ]
+        },
+        "pending": 1,
+        "requests": [
+          {
+            "slot": 0,
+            "phase": "RETURNED"
+          }
+        ]
+      }
+    },
+    "removeThrow": {
+      "broker": {
+        "disposed": false,
+        "pool": {
+          "disposed": false,
+          "ownershipDomains": 3,
+          "occupied": 1,
+          "slots": [
+            {
+              "ordinal": 0,
+              "incarnation": 1,
+              "generation": 1,
+              "phase": "IDLE"
+            },
+            {
+              "ordinal": 1,
+              "incarnation": 0,
+              "generation": 0,
+              "phase": "FREE"
+            }
+          ]
+        },
+        "pending": 1,
+        "requests": [
+          {
+            "slot": 0,
+            "phase": "FAILED"
+          }
+        ]
+      },
+      "ledger": {
+        "managed": 5,
+        "job": 5,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 2,
+            "realm": 2,
+            "phase": "IN_FLIGHT",
+            "refs": [
+              {
+                "id": 3,
+                "category": "job"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "bytes": 3,
+            "realm": 2,
+            "phase": "IN_FLIGHT",
+            "refs": [
+              {
+                "id": 4,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "terminates": 0,
+      "waitError": "remove injected",
+      "removed": [
+        "message",
+        "error",
+        "messageerror"
+      ]
+    }
+  },
+  "results": [
+    {
+      "name": "default factory surface and legacy phase remain compatible",
+      "passed": true
+    },
+    {
+      "name": "PREPARED denies all public refs keys realms and backing aliases without mutation",
+      "passed": true
+    },
+    {
+      "name": "private tickets and exact binding authenticate every transition",
+      "passed": true
+    },
+    {
+      "name": "real structuredClone DataCloneError rolls full batch graph back to identical ref/key",
+      "passed": true
+    },
+    {
+      "name": "partial detach is terminal and never reauthorizes detached source",
+      "passed": true
+    },
+    {
+      "name": "after detach retired refs cannot allocate retain transfer or register stale zero wrappers",
+      "passed": true
+    },
+    {
+      "name": "return batch rejects every malformed second member before ANY first rebind",
+      "passed": true
+    },
+    {
+      "name": "same allocation ID charge owner and returned identity preserved; original ref retired",
+      "passed": true
+    },
+    {
+      "name": "closed/foreign consumer adoption is all-or-none and retryable with no raw leak",
+      "passed": true
+    },
+    {
+      "name": "codec rejects reserved56",
+      "passed": true
+    },
+    {
+      "name": "codec rejects reserved60",
+      "passed": true
+    },
+    {
+      "name": "codec rejects magic",
+      "passed": true
+    },
+    {
+      "name": "codec rejects version",
+      "passed": true
+    },
+    {
+      "name": "codec rejects type0",
+      "passed": true
+    },
+    {
+      "name": "codec rejects type8",
+      "passed": true
+    },
+    {
+      "name": "codec rejects header-short",
+      "passed": true
+    },
+    {
+      "name": "codec rejects header-long",
+      "passed": true
+    },
+    {
+      "name": "codec rejects descriptors-odd",
+      "passed": true
+    },
+    {
+      "name": "codec rejects descriptors-over16",
+      "passed": true
+    },
+    {
+      "name": "codec rejects role0",
+      "passed": true
+    },
+    {
+      "name": "codec rejects role10",
+      "passed": true
+    },
+    {
+      "name": "codec rejects ordinal16",
+      "passed": true
+    },
+    {
+      "name": "codec rejects ordinal-duplicate",
+      "passed": true
+    },
+    {
+      "name": "codec rejects wrong-length",
+      "passed": true
+    },
+    {
+      "name": "codec rejects SAB",
+      "passed": true
+    },
+    {
+      "name": "codec rejects RAB",
+      "passed": true
+    },
+    {
+      "name": "codec rejects view",
+      "passed": true
+    },
+    {
+      "name": "codec rejects detached",
+      "passed": true
+    },
+    {
+      "name": "codec rejects empty",
+      "passed": true
+    },
+    {
+      "name": "codec rejects sparse",
+      "passed": true
+    },
+    {
+      "name": "codec rejects extra-buffer-key",
+      "passed": true
+    },
+    {
+      "name": "codec rejects extra-envelope",
+      "passed": true
+    },
+    {
+      "name": "codec rejects symbol-envelope",
+      "passed": true
+    },
+    {
+      "name": "codec rejects accessor-envelope",
+      "passed": true
+    },
+    {
+      "name": "codec rejects ACK-has-payload",
+      "passed": true
+    },
+    {
+      "name": "codec rejects header-is-payload",
+      "passed": true
+    },
+    {
+      "name": "codec rejects descriptor-is-payload",
+      "passed": true
+    },
+    {
+      "name": "codec rejects duplicate-payload",
+      "passed": true
+    },
+    {
+      "name": "codec permits fixed zero and16 descriptors with bounded exact LE ABI",
+      "passed": true
+    },
+    {
+      "name": "UNIT happy roundtrip wait contains no payload; adoption same-core before release",
+      "passed": true
+    },
+    {
+      "name": "UNIT factory has no public Worker URL hook and rejects forged clone foreign handles",
+      "passed": true
+    },
+    {
+      "name": "UNIT send throw attached rolls back exact refs and closes slot",
+      "passed": true
+    },
+    {
+      "name": "UNIT send partial detach throw retires rather than restoring old refs",
+      "passed": true
+    },
+    {
+      "name": "UNIT constructor error neither consumes caller graph nor pending/slot",
+      "passed": true
+    },
+    {
+      "name": "UNIT partial listener registration failure 1 releases slot and caller graph",
+      "passed": true
+    },
+    {
+      "name": "UNIT partial listener registration failure 2 releases slot and caller graph",
+      "passed": true
+    },
+    {
+      "name": "UNIT partial listener registration failure 3 releases slot and caller graph",
+      "passed": true
+    },
+    {
+      "name": "UNIT partial listener registration failure 4 releases slot and caller graph",
+      "passed": true
+    },
+    {
+      "name": "UNIT partial listener registration failure 5 releases slot and caller graph",
+      "passed": true
+    },
+    {
+      "name": "UNIT current wrong-nonce faults before unsafe rebind",
+      "passed": true
+    },
+    {
+      "name": "UNIT current wrong-tuple faults before unsafe rebind",
+      "passed": true
+    },
+    {
+      "name": "UNIT current wrong-plan faults before unsafe rebind",
+      "passed": true
+    },
+    {
+      "name": "UNIT current padding faults before unsafe rebind",
+      "passed": true
+    },
+    {
+      "name": "UNIT current RETURN-before-ACK faults before unsafe rebind",
+      "passed": true
+    },
+    {
+      "name": "UNIT current duplicate-ACK faults before unsafe rebind",
+      "passed": true
+    },
+    {
+      "name": "UNIT current unexpected-START faults before unsafe rebind",
+      "passed": true
+    },
+    {
+      "name": "UNIT stale exact old event and retired release do not touch newer lease",
+      "passed": true
+    },
+    {
+      "name": "UNIT two pending results block third despite physical slots free",
+      "passed": true
+    },
+    {
+      "name": "UNIT closed consumer refused atomically, then dispose after wait precludes acceptance",
+      "passed": true
+    },
+    {
+      "name": "UNIT terminate throw retains charge and occupied slot with revoked result",
+      "passed": true
+    },
+    {
+      "name": "UNIT snapshot recursively frozen without payload Worker ticket nonce or authority",
+      "passed": true
+    },
+    {
+      "name": "UNIT reentrant dispose from supported input getter closes admission without ownership leak",
+      "passed": true
+    },
+    {
+      "name": "UNIT reentrant dispose during termination never leaves a RETURNED orphan after closed",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: closed composition must retire local returned payload\n\n1 !== 0\n\n    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:150:93\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:97:110\n    at async test (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:8:34)\n    at async unit (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:97:30)\n    at async file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:147:1"
+    },
+    {
+      "name": "UNIT listener cleanup throw still attempts terminate and releases after successful terminal",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: listener removal failure must not skip controlled termination\n\n0 !== 1\n\n    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:155:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:97:110\n    at async test (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:8:34)\n    at async unit (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:97:30)\n    at async file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review/witness.mjs:152:1"
+    },
+    {
+      "name": "UNIT actual endpoint valid validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint wrong-slot validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint incarnation-zero validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint generation-two validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint job-zero validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint request-two validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint transfer-zero validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint window-two validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint nonsequential-ordinal validates before ACK",
+      "passed": true
+    },
+    {
+      "name": "UNIT actual endpoint invalid-type validates before ACK",
+      "passed": true
+    }
+  ]
+}

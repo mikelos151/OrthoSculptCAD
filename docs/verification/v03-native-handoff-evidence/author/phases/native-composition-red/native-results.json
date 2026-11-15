@@ -1,0 +1,70 @@
+{
+  "passed": false,
+  "failure": "page.evaluate: Error: Native START unavailable\n    at Object.submit (http://127.0.0.1:50191/nativeHandoff.js:7:33)\n    at run (http://127.0.0.1:50191/fixture.mjs:9:13)\n    at eval (eval at evaluate (:370:30), <anonymous>:1:64)\n    at async <anonymous>:396:30\n    at C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\native-cli.mjs:28:24",
+  "hashes": {
+    "source": {
+      "resourceLedger.ts": "1a999bf2feca0ba92b260e2333947121ea33bc744a6fd4b2ba86518941b7ede5",
+      "workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "nativeHandoff.ts": "0110544d87c9cc5850e2c60cc09bdc366291f34b70e34956e3e6afd92954a529"
+    },
+    "served": {
+      "resourceLedger.js": "43846b41d1b626fb4d96d67b5bb75ef48b3fc17cb971aae7058f13ef02e8a5b6",
+      "workerPool.js": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200",
+      "nativeHandoff.js": "67101c45cbdfb8ac2bb9b4d29518e33d868c5c08c9d64e793eb1d79af81f91e4",
+      "fixture.mjs": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c"
+    }
+  },
+  "result": {
+    "checks": [],
+    "events": [],
+    "snapshots": {
+      "before": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "browserVersion": "156.0.8078.4"
+  },
+  "errors": [],
+  "external": [],
+  "workers": [],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:50191/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:50191/fixture.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:50191/nativeHandoff.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:50191/resourceLedger.js",
+      "status": 200
+    }
+  ],
+  "closed": {
+    "context": true,
+    "browser": true,
+    "server": true,
+    "portRefuses": true
+  }
+}

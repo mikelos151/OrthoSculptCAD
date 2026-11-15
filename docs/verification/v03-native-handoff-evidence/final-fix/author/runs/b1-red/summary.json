@@ -1,0 +1,118 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=256",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+    "run",
+    "--config",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\b1-red\\vitest.config.mjs",
+    "--configLoader",
+    "native",
+    "--maxWorkers=1",
+    "--no-file-parallelism",
+    "--reporter=verbose",
+    "--reporter=json",
+    "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\b1-red\\tests.json",
+    "-t",
+    "B1 keeps"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit": 1,
+  "numTotalTests": 126,
+  "numPassedTests": 12,
+  "numFailedTests": 18,
+  "numPendingTests": 96,
+  "failures": [
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":3,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":3,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":4,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":4,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":5,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"IN_FLIGHT\",\"registration\":5,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":3,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":3,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":4,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":4,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":5,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"REMOTE\",\"registration\":5,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":3,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":3,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":4,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":4,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":5,\"cleanupThrow\":false}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) B1 keeps original native error through cleanup-reentrant dispose: {\"stage\":\"RETURN\",\"registration\":5,\"cleanupThrow\":true}",
+      "message": "AssertionError: expected Error: NATIVE_TERMINATE { code: 'NAT\u2026' } to be Error: first exact native error // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:384:57\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20"
+    }
+  ]
+}

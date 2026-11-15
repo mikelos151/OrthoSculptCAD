@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "--loader",
+    "file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/loader.mjs",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/repro.mjs"
+  ],
+  "cwd": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview",
+  "actual_exit": 1,
+  "signal": null,
+  "error": ""
+}

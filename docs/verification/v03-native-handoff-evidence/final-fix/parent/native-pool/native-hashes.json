@@ -1,0 +1,11 @@
+{
+  "source": {
+    "src/compute/workerPool.ts": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b"
+  },
+  "served": {
+    "workerPool.js": "b39762a96a048fb9ee5d2e9f275d3fb1cccef5d3413e21e9b6978e7e27538459",
+    "resourceLedger.js": "12877161ed30b54a5603e11540fd0ab13fca63466287560f64c54ef1afe9b93a",
+    "fixture.mjs": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256"
+  }
+}

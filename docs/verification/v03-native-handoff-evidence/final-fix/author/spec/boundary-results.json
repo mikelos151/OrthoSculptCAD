@@ -1,0 +1,1655 @@
+{
+  "kind": "UNIT actual compiled final APIs, EventTarget and structuredClone; no native exploit or reachability proof",
+  "total": 55,
+  "passed": 55,
+  "failed": 0,
+  "results": [
+    {
+      "name": "reentrancy action=release hook=1 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=1 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=2 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=2 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=3 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=3 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=4 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=4 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=5 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=5 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=terminate revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=release hook=terminate revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=1 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=1 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=2 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=2 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=3 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=3 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=4 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=4 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=5 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=5 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=terminate revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=dispose hook=terminate revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=1 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=1 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=2 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=2 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=3 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=3 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=4 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=4 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=5 revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=5 revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=terminate revoke=release",
+      "passed": true
+    },
+    {
+      "name": "reentrancy action=return hook=terminate revoke=dispose",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=release removal=1",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=release removal=2",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=release removal=3",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=release removal=4",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=release removal=5",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=return removal=1",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=return removal=2",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=return removal=3",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=return removal=4",
+      "passed": true
+    },
+    {
+      "name": "listener throw action=return removal=5",
+      "passed": true
+    },
+    {
+      "name": "terminate failure action=release cleanup=false dispose=false",
+      "passed": true
+    },
+    {
+      "name": "terminate failure action=release cleanup=false dispose=true",
+      "passed": true
+    },
+    {
+      "name": "terminate failure action=release cleanup=true dispose=false",
+      "passed": true
+    },
+    {
+      "name": "terminate failure action=release cleanup=true dispose=true",
+      "passed": true
+    },
+    {
+      "name": "terminate failure action=return cleanup=false dispose=false",
+      "passed": true
+    },
+    {
+      "name": "terminate failure action=return cleanup=false dispose=true",
+      "passed": true
+    },
+    {
+      "name": "terminate failure action=return cleanup=true dispose=false",
+      "passed": true
+    },
+    {
+      "name": "terminate failure action=return cleanup=true dispose=true",
+      "passed": true
+    },
+    {
+      "name": "private adoption preserves ids and category union; retired h1 cannot release pending h2",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "cleanup-release-1": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "code": "RELEASED",
+          "message": "RELEASED"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-release-2": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "code": "RELEASED",
+          "message": "RELEASED"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-release-3": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "code": "RELEASED",
+          "message": "RELEASED"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-release-4": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "code": "RELEASED",
+          "message": "RELEASED"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-release-5": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "code": "RELEASED",
+          "message": "RELEASED"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-return-1": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "message": "cleanup injected 1"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-return-2": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "message": "cleanup injected 2"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-return-3": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "message": "cleanup injected 3"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-return-4": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "message": "cleanup injected 4"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    },
+    "cleanup-return-5": {
+      "first": {
+        "broker": {
+          "disposed": false,
+          "pool": {
+            "disposed": false,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ],
+        "outcome": {
+          "resolved": false,
+          "message": "cleanup injected 5"
+        }
+      },
+      "afterRetry": {
+        "broker": {
+          "disposed": true,
+          "pool": {
+            "disposed": true,
+            "ownershipDomains": 3,
+            "occupied": 0,
+            "slots": [
+              {
+                "ordinal": 0,
+                "incarnation": 1,
+                "generation": 0,
+                "phase": "FREE"
+              },
+              {
+                "ordinal": 1,
+                "incarnation": 0,
+                "generation": 0,
+                "phase": "FREE"
+              }
+            ]
+          },
+          "pending": 0,
+          "requests": []
+        },
+        "ledger": {
+          "managed": 7,
+          "job": 0,
+          "history": 7,
+          "allocations": [
+            {
+              "id": 3,
+              "bytes": 7,
+              "realm": 1,
+              "phase": "MAIN",
+              "refs": [
+                {
+                  "id": 5,
+                  "category": "history"
+                }
+              ]
+            }
+          ]
+        },
+        "terminates": 1,
+        "removed": [
+          {
+            "type": "message",
+            "registration": 3
+          },
+          {
+            "type": "error",
+            "registration": 4
+          },
+          {
+            "type": "messageerror",
+            "registration": 5
+          },
+          {
+            "type": "error",
+            "registration": 1
+          },
+          {
+            "type": "messageerror",
+            "registration": 2
+          }
+        ]
+      }
+    }
+  }
+}

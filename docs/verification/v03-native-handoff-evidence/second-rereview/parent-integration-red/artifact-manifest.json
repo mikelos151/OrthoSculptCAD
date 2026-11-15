@@ -1,0 +1,346 @@
+{
+  "root": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-spec-rereview",
+  "entries": 68,
+  "files": [
+    {
+      "path": "boundary-results.json",
+      "bytes": 44999,
+      "sha256": "452290c7c95ac7aa625f01b3df43b62c5e50fcecd93d3ccd00de07f7b877877f"
+    },
+    {
+      "path": "boundary.command.json",
+      "bytes": 470,
+      "sha256": "531516f4edc597a71c026062de67b64413cb0db23b1c6c78006964fb7af2be7d"
+    },
+    {
+      "path": "boundary.mjs",
+      "bytes": 8293,
+      "sha256": "6849b664ca92a80813d3b34a75ea8d24a27047fe4a59a07cd72e2aca7476e51f"
+    },
+    {
+      "path": "boundary.stderr.log",
+      "bytes": 449,
+      "sha256": "05f35867f57f1f87db65b392d69864676a6d19624d88c4df2dac3998c8b6bdb1"
+    },
+    {
+      "path": "boundary.stdout.log",
+      "bytes": 2839,
+      "sha256": "c460a0c28e63db68840dcbc06dd206c6e5219a4b0d78674cc20558e0691c3e0a"
+    },
+    {
+      "path": "compiled/nativeHandoff.js",
+      "bytes": 13298,
+      "sha256": "4cc50abef8f52d2bb63c1c277e5778da9d50abd313aeef7890db917a12a9950f"
+    },
+    {
+      "path": "compiled/nativeHandoff.worker.js",
+      "bytes": 1701,
+      "sha256": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419"
+    },
+    {
+      "path": "compiled/resourceLedger.js",
+      "bytes": 19824,
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43"
+    },
+    {
+      "path": "compiled/workerPool.js",
+      "bytes": 5589,
+      "sha256": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200"
+    },
+    {
+      "path": "finalize.mjs",
+      "bytes": 12328,
+      "sha256": "5268a01b502660002ad2b312ddd95cf68810661797783dba3a8023f3e6907dad"
+    },
+    {
+      "path": "fix-manifest-verification.json",
+      "bytes": 299,
+      "sha256": "4abcfe283755fa9fae679a2caf3421858a4e0089b46d223faef3ea322d3de021"
+    },
+    {
+      "path": "focused33-results.json",
+      "bytes": 15002,
+      "sha256": "34501a0dcc097e07e12ef95ce8115356e7d86053bc14f1f38f11f6f9cabd9b36"
+    },
+    {
+      "path": "focused33.command.json",
+      "bytes": 661,
+      "sha256": "54f5e5e256d304c210ebf1b33bb8099c195e282d72c360c623178665c72c2e9b"
+    },
+    {
+      "path": "focused33.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "focused33.stdout.log",
+      "bytes": 6811,
+      "sha256": "1584d408443a78f701d0319f3eb9614db38b497acbcae14adaa7a14278caf4c5"
+    },
+    {
+      "path": "hashes-after.json",
+      "bytes": 758,
+      "sha256": "f940b8a99dab478790d0fd3a632c3e9eba4f5707ecb97638feea19e2454ed193"
+    },
+    {
+      "path": "hashes-before.json",
+      "bytes": 758,
+      "sha256": "f940b8a99dab478790d0fd3a632c3e9eba4f5707ecb97638feea19e2454ed193"
+    },
+    {
+      "path": "loader.mjs",
+      "bytes": 259,
+      "sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0"
+    },
+    {
+      "path": "ownership-matrix.json",
+      "bytes": 2252,
+      "sha256": "538cad8468c1a65b63f218597f900f768ba5eea4d0c9f4765868c01ffe18a9cc"
+    },
+    {
+      "path": "package.json",
+      "bytes": 22,
+      "sha256": "d2aaf324399446516b42d82624be18adcd6465fddf100b7ba79f57323f63da52"
+    },
+    {
+      "path": "quality87.command.json",
+      "bytes": 469,
+      "sha256": "eaed6126a566b56edfe253e210c9773f83f9fd87cbc77880ab85b6276f6ccff7"
+    },
+    {
+      "path": "quality87.stderr.log",
+      "bytes": 449,
+      "sha256": "f7dae0ad51148e2e2ce7eec1c6dad2ecaff368d7adf7f37482993f3ed3d3aa9e"
+    },
+    {
+      "path": "quality87.stdout.log",
+      "bytes": 12322,
+      "sha256": "7f3e08c83b11ce262a17955c0395e4a7b72c412aaca166f58547cc2f68c72460"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 3114,
+      "sha256": "1e0fd0d15269a6880addbc6849541add141e78ab6b237fc29d7f498b995a4292"
+    },
+    {
+      "path": "review.json",
+      "bytes": 6570,
+      "sha256": "697bc1e7792fca2959d84bc9ddc6605c7b380519830930ecd62c3a813c3df0cb"
+    },
+    {
+      "path": "run.mjs",
+      "bytes": 5240,
+      "sha256": "2a5a9ab7b0473e54d499e5a1cee7eed238a4ec5dec400cfe742d3de8033d0ffd"
+    },
+    {
+      "path": "strict128.command.json",
+      "bytes": 416,
+      "sha256": "1355b804a80b0d6ab7f91ff98594435afbe2f543dfd992652aee1612a0c0ce74"
+    },
+    {
+      "path": "strict128.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "strict128.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tdd-audit.json",
+      "bytes": 1825,
+      "sha256": "44f3191067c4159574d3c9f4fb48346fbfdc6e742e65eb92761ceaa13d614e88"
+    },
+    {
+      "path": "tdd/q1-green/command.json",
+      "bytes": 406,
+      "sha256": "4118a8cb9f02ed97e55f3deda1f267d28bb3f048bb50550e7ad874995f8117d5"
+    },
+    {
+      "path": "tdd/q1-green/input-end.json",
+      "bytes": 521,
+      "sha256": "d01b0978676605610afddc70da5227667c4bf1cc9e950709a572488b16cb8fe7"
+    },
+    {
+      "path": "tdd/q1-green/input-start.json",
+      "bytes": 521,
+      "sha256": "d01b0978676605610afddc70da5227667c4bf1cc9e950709a572488b16cb8fe7"
+    },
+    {
+      "path": "tdd/q1-green/nativeHandoff.ts",
+      "bytes": 12322,
+      "sha256": "0b03548d82f9e4d38e93707496ed5ac040d1ac8254b4d0ab4e73eef06fed3f1e"
+    },
+    {
+      "path": "tdd/q1-green/result.json",
+      "bytes": 57,
+      "sha256": "da8ede5b52fabb28374d411a4fa4e590aa0cda710c9bb60e2353874a95df17da"
+    },
+    {
+      "path": "tdd/q1-green/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tdd/q1-green/stdout.log",
+      "bytes": 11961,
+      "sha256": "675c8bf0be73c6a60e812566d341f82b8ce0cdb973cd7b9a8d424e00283e142e"
+    },
+    {
+      "path": "tdd/q1-green/v03-native-handoff.test.ts",
+      "bytes": 17764,
+      "sha256": "5dfbca66ef1740e1367d29aa37466588e6611a3834a0fdbb410b5126295f55ea"
+    },
+    {
+      "path": "tdd/q1-red/command.json",
+      "bytes": 446,
+      "sha256": "85c6075f8b9299718165718c67418da67c85ebb4f2faefdaa4faf0d3533a98c7"
+    },
+    {
+      "path": "tdd/q1-red/input-end.json",
+      "bytes": 521,
+      "sha256": "cc2690339dd4abab307e49613132afb91c8cb80c6c832aec4ca31a7b351386fa"
+    },
+    {
+      "path": "tdd/q1-red/input-start.json",
+      "bytes": 521,
+      "sha256": "cc2690339dd4abab307e49613132afb91c8cb80c6c832aec4ca31a7b351386fa"
+    },
+    {
+      "path": "tdd/q1-red/nativeHandoff.ts",
+      "bytes": 11995,
+      "sha256": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0"
+    },
+    {
+      "path": "tdd/q1-red/result.json",
+      "bytes": 57,
+      "sha256": "72f58727cc4ddccd0cd96be662e32d0ccd18678d95fcf98659b7859ddef674b5"
+    },
+    {
+      "path": "tdd/q1-red/stderr.log",
+      "bytes": 1029,
+      "sha256": "f9868f290e823bddb9680b793318245bc9adf0cac39f4f12cb463bd4fe79b462"
+    },
+    {
+      "path": "tdd/q1-red/stdout.log",
+      "bytes": 5879,
+      "sha256": "44c24b08feaa175ecb0deedb2046076ee2c5c5c5ce8f7b85779799b7322e3b2f"
+    },
+    {
+      "path": "tdd/q1-red/v03-native-handoff.test.ts",
+      "bytes": 17764,
+      "sha256": "5dfbca66ef1740e1367d29aa37466588e6611a3834a0fdbb410b5126295f55ea"
+    },
+    {
+      "path": "tdd/q2-green/command.json",
+      "bytes": 406,
+      "sha256": "4118a8cb9f02ed97e55f3deda1f267d28bb3f048bb50550e7ad874995f8117d5"
+    },
+    {
+      "path": "tdd/q2-green/input-end.json",
+      "bytes": 521,
+      "sha256": "608ea5b97eb41f6402e00adace38e6f2b87ca70d7c15c48c766ef7376cc3f49d"
+    },
+    {
+      "path": "tdd/q2-green/input-start.json",
+      "bytes": 521,
+      "sha256": "608ea5b97eb41f6402e00adace38e6f2b87ca70d7c15c48c766ef7376cc3f49d"
+    },
+    {
+      "path": "tdd/q2-green/nativeHandoff.ts",
+      "bytes": 12530,
+      "sha256": "1a531e9c6e232e92372a1ae32f5baef9de2487712578c272117d17fdc7eea963"
+    },
+    {
+      "path": "tdd/q2-green/result.json",
+      "bytes": 57,
+      "sha256": "da8ede5b52fabb28374d411a4fa4e590aa0cda710c9bb60e2353874a95df17da"
+    },
+    {
+      "path": "tdd/q2-green/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tdd/q2-green/stdout.log",
+      "bytes": 12423,
+      "sha256": "daafa8c4e6b4bf883610b1c849a2fc5a8296f221dc81ab420f731534b28ed222"
+    },
+    {
+      "path": "tdd/q2-green/v03-native-handoff.test.ts",
+      "bytes": 20761,
+      "sha256": "cad0d379601a03ee6d67018170d70a426cec1bb972aba72caac4e2f8ce747993"
+    },
+    {
+      "path": "tdd/q2-red/command.json",
+      "bytes": 446,
+      "sha256": "85c6075f8b9299718165718c67418da67c85ebb4f2faefdaa4faf0d3533a98c7"
+    },
+    {
+      "path": "tdd/q2-red/input-end.json",
+      "bytes": 521,
+      "sha256": "68fbc1977fb776de6c93f0c59f985f7ebe55c19a824e300bf98c93e8bab629da"
+    },
+    {
+      "path": "tdd/q2-red/input-start.json",
+      "bytes": 521,
+      "sha256": "68fbc1977fb776de6c93f0c59f985f7ebe55c19a824e300bf98c93e8bab629da"
+    },
+    {
+      "path": "tdd/q2-red/nativeHandoff.ts",
+      "bytes": 12322,
+      "sha256": "0b03548d82f9e4d38e93707496ed5ac040d1ac8254b4d0ab4e73eef06fed3f1e"
+    },
+    {
+      "path": "tdd/q2-red/result.json",
+      "bytes": 57,
+      "sha256": "72f58727cc4ddccd0cd96be662e32d0ccd18678d95fcf98659b7859ddef674b5"
+    },
+    {
+      "path": "tdd/q2-red/stderr.log",
+      "bytes": 1079,
+      "sha256": "b15df3ce25fb56485081920937dc8f4478ecbd8b313a42ffac7fc65cd5097b1c"
+    },
+    {
+      "path": "tdd/q2-red/stdout.log",
+      "bytes": 6291,
+      "sha256": "9f7fcdea1f38511c888a40442d1c676cb9acc368c3d360bfe036c1c7952bad21"
+    },
+    {
+      "path": "tdd/q2-red/v03-native-handoff.test.ts",
+      "bytes": 20761,
+      "sha256": "cad0d379601a03ee6d67018170d70a426cec1bb972aba72caac4e2f8ce747993"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 747,
+      "sha256": "80a4ae8e416508cf87c55c51442e98b4bd7bae4f2bbf9894015b5ae7a82b9155"
+    },
+    {
+      "path": "vite-cache/vitest/da39a3ee5e6b4b0d3255bfef95601890afd80709/results.json",
+      "bytes": 117,
+      "sha256": "a375811a664873d1f404f382ecf7567c82874943554045c10997aa09c7dfb458"
+    },
+    {
+      "path": "vitest.config.mjs",
+      "bytes": 339,
+      "sha256": "4ec887286c8eef431a415d05f5707b9e77b95b470d2f98ad5580514487e910df"
+    },
+    {
+      "path": "witness-copy-proof.json",
+      "bytes": 503,
+      "sha256": "a66bf74571d9b013747988893479b3b753e5a1d43c733d574c109ad9bcb4708f"
+    },
+    {
+      "path": "witness-results.json",
+      "bytes": 12321,
+      "sha256": "29b7cc33f9a484d5396caef9fac01bc9ac0767574be2279e46489711ada714be"
+    },
+    {
+      "path": "witness.mjs",
+      "bytes": 25179,
+      "sha256": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d"
+    }
+  ]
+}

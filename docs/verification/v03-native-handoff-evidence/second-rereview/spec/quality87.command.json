@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "--loader",
+    "file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-spec-rereview/loader.mjs",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-spec-rereview/witness.mjs"
+  ],
+  "cwd": "C:/Users/sandr/OrthoSculptCAD",
+  "actual_exit": 0,
+  "signal": null,
+  "error": null
+}

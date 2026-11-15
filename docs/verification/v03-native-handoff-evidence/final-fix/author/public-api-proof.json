@@ -1,0 +1,34 @@
+{
+  "unchanged": true,
+  "declaration_hashes": {
+    "workerPool.d.ts": "8ff0e1bb1505bb457cb61c90b92f9d04f30145a41425b6518375af094d854252",
+    "nativeHandoff.d.ts": "21a8a0485b30f38b39966f58b412725222ff21da288adc464080257a53e37a66",
+    "resourceLedger.d.ts": "482764fdc9967a3e278d5667e86cd509f143416ed71173c5bc01cafeae1071c0"
+  },
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "-p",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\api-before.json"
+      ],
+      "exit": 0,
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD"
+    },
+    {
+      "command": [
+        "node",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+        "-p",
+        "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\api-candidate.json"
+      ],
+      "exit": 0,
+      "cwd": "C:\\Users\\sandr\\OrthoSculptCAD"
+    }
+  ]
+}

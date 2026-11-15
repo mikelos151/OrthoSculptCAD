@@ -1,0 +1,154 @@
+{
+  "status": "FIX_REPLAY_PASS_REREVIEWS_PENDING",
+  "sourceHashes": {
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "tests/v03-native-handoff.test.ts": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc"
+  },
+  "fullRegression": {
+    "unitExit": 0,
+    "typecheckExit": 0,
+    "pythonExit": 0,
+    "npmAuditExit": 0,
+    "inputHashesUnchanged": true,
+    "staticScan": {
+      "suspectedCredential": [],
+      "dynamicExecution": [],
+      "networkOrProcess": []
+    },
+    "scope": "G1b1b post-Q1/Q2 input-only native handoff regression; no full lifecycle/App/admission",
+    "unit": {
+      "success": true,
+      "numTotalTests": 1281,
+      "numPassedTests": 1281,
+      "numFailedTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0
+    },
+    "nativeHandoff": [
+      {
+        "status": "passed",
+        "assertions": 33,
+        "failed": []
+      }
+    ],
+    "unitExpectedTotal": 1281,
+    "pythonTests": 71,
+    "auditVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "status": "REGRESSION_PASS_REVIEWS_PENDING"
+  },
+  "replay": {
+    "commands": [
+      {
+        "command": [
+          "node",
+          "--max-old-space-size=128",
+          "--max-semi-space-size=8",
+          "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+          "-p",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-quality-parent\\tsconfig.json"
+        ],
+        "exit": 0,
+        "label": "compile"
+      },
+      {
+        "command": [
+          "node",
+          "--max-old-space-size=128",
+          "--max-semi-space-size=8",
+          "--loader",
+          "file:///C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-quality-parent\\loader.mjs",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-quality-parent\\witness.mjs"
+        ],
+        "exit": 0,
+        "label": "witness"
+      },
+      {
+        "command": [
+          "node",
+          "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-native-parent\\native-cli.mjs",
+          "post-fix-parent-retry"
+        ],
+        "exit": 0,
+        "label": "native"
+      }
+    ],
+    "fullNode": 1281,
+    "python": 71,
+    "unitQuality": {
+      "total": 87,
+      "passed": 87,
+      "failed": 0,
+      "unchangedWitness": true
+    },
+    "native": {
+      "checks": 71,
+      "metrics": {
+        "constructors": 12,
+        "terminates": 12,
+        "peak": 2,
+        "live": 0
+      },
+      "devtoolsCreated": 9,
+      "closedBeforeTeardown": 9,
+      "closed": {
+        "context": true,
+        "browser": true,
+        "server": true,
+        "portRefuses": true
+      },
+      "browser": "156.0.8078.4"
+    },
+    "previousAttempt": "Initial long python -c completed inner replays but enclosing Bash returned syntax error after summary. Preserved that attempt; reran all replay subprocesses from this saved script into new phase/logs with actual zero exits. Not production RED."
+  },
+  "original28TestsPreservedExceptImport": true,
+  "addedTests": 5,
+  "fixTDD": {
+    "q1": {
+      "red_exit": 1,
+      "red": "28 PASS / 1 FAIL; pending 1 zamiast 0",
+      "green_exit": 0,
+      "green": "69/69 focused",
+      "tests_identical_red_to_green": true
+    },
+    "q2": {
+      "red_exit": 1,
+      "red": "29 PASS / 2 FAIL; terminate 0 zamiast 1 (release i RETURN)",
+      "green_exit": 0,
+      "green": "71/71 focused",
+      "tests_identical_red_to_green": true
+    },
+    "additional_controls": {
+      "classification": "existing-behavior coverage after correction; no artificial RED or further production change",
+      "cases": 2,
+      "scope": "actual terminate failure + reentrant dispose, with/without listener throw; exact error identity, charge/slot retention, no retry"
+    }
+  },
+  "nativeSourceAndServedHashes": {
+    "source": {
+      "resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990"
+    },
+    "served": {
+      "resourceLedger.js": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+      "workerPool.js": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200",
+      "nativeHandoff.js": "803560cf0589c53348d5ec94b29b5bdc0a034c34f239f81f426967f885fa5bd5",
+      "nativeHandoff.worker.js": "fa95ed8c531a1873b91f787010e741e781acbf724877d3e6cd1bfd9ba488a2a9",
+      "fixture.mjs": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+      "fixture-base.mjs": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c"
+    }
+  },
+  "reviews": "deleg_099abcad freshspec+qualitypending, no finalacceptance/commit",
+  "evidence": "docs/verification/v03-native-handoff-evidence/teardown-fix/index.json",
+  "scope": "Q1/Q2 UNIT fault correction; native71 ordinary endpoint acceptance regression, not proof of injected failure native reachability"
+}

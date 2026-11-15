@@ -1,0 +1,10 @@
+import {readFileSync} from 'node:fs';
+import {it,expect} from 'vitest';
+import {produceAlgebraicBridge} from '../src/trimline/algebraic-bridge-producer';
+import {createArithmeticContext} from '../src/trimline/numerics';
+import {verifyAlgebraicCertificate} from '../src/trimline/algebraic-certificate';
+const a=(x:string)=>[x,'0','0','0'];
+export const fixture=()=>{const source=[[[a('0'),a('0'),a('0')],[a('1'),a('0'),a('0')],[a('0'),a('1'),a('0')]]];return {source,input:{field:'Qsqrt2sqrt3-positive',maxDepth:8,maxSegments:256,roundingSteps:1024,spans:[{sourceFace:0,regularAxis:0,weights:[['3/4','0','1/4'],['1/2','1/4','1/4'],['1/4','1/2','1/4'],['0','3/4','1/4']].map(w=>w.map(a))}]}};};
+const ctx=()=>createArithmeticContext({maxBits:512,maxOperations:2000000});
+it('constructs the curved three-face algebraic reference in one shared context',()=>{const base='cost-controls/algebraic-producer-evidence/';const input=JSON.parse(readFileSync(base+'producer-input.json','utf8'));const source=JSON.parse(readFileSync(base+'source.json','utf8'));const result=produceAlgebraicBridge(input,source,ctx());expect(result.status,result.reason).toBe('PASS');});
+it('constructs and verifies a source-authoritative curved dyadic bridge',()=>{const {source,input}=fixture();input.spans[0].weights[1]=['1/2','1/4','1/4'].map(a);input.spans[0].weights[2]=['3/8','1/2','1/8'].map(a);const result=produceAlgebraicBridge(input,source,ctx());expect(result.status,result.reason).toBe('PASS');expect(verifyAlgebraicCertificate(result.certificate,source,ctx()).status).toBe('PASS');expect((result.certificate as {segments:unknown[]}).segments.length).toBeGreaterThan(1);});

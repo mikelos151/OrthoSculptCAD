@@ -1,0 +1,12 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+    "-p",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\api-candidate.json"
+  ],
+  "exit": 0,
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD"
+}

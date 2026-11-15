@@ -1,0 +1,13 @@
+{
+  "source": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review",
+  "files": {
+    "witness.mjs": {
+      "source": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+      "copy": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d"
+    },
+    "loader.mjs": {
+      "source": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+      "copy": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0"
+    }
+  }
+}

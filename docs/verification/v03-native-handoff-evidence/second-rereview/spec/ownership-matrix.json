@@ -1,0 +1,42 @@
+[
+  {
+    "case": "Q1 original reentrant dispose during RETURN terminate",
+    "result": "PASS/CLOSED",
+    "ownership": "controlled refs job 2+3 B remain during terminate; original completion retires exact ticket after success; no RETURNED resurrection"
+  },
+  {
+    "case": "36 reentrant cleanup combinations: release/dispose/RETURN x 5 removals+terminate x release/dispose",
+    "result": "36 PASS",
+    "ownership": "all five exact registered listeners attempted; pending0/slotFREE only after successful terminal; wait rejects stable first revoke; history MAIN7 B preserved"
+  },
+  {
+    "case": "Q2 cleanup throw at broker removals 1/2/3, release or RETURN",
+    "result": "6 PASS",
+    "ownership": "native terminate1; controlled ticket retired; managed/job/history12/5/7 ->7/0/7; no authority regained"
+  },
+  {
+    "case": "Q2 cleanup throw at pool removals4/5, release or RETURN",
+    "result": "4 FAIL/HOLD",
+    "ownership": "native terminate0; pending1/FAILED; slotREVOKING occupied1; controlled allocations IDs1/2 refs3/4 retained5 B; independent MAIN/history ID3 ref5 remains7 B; later release/dispose does not settle"
+  },
+  {
+    "case": "actual terminate throw, release/RETURN x cleanup throw/no throw x reentrant dispose/no dispose",
+    "result": "8 PASS",
+    "ownership": "original terminate Error identity; native call once; failed slot and exact5 B retained, no retry; unrelated h2 11 B survives h1-only release and is released only on its own/global dispose; MAIN/history7 B preserved"
+  },
+  {
+    "case": "actual private adoption and shared-category union with pending h2",
+    "result": "1 PASS",
+    "ownership": "original allocation IDs preserved, returned wrapper distinct, values preserved; managed counts backing once, job/history union correct; stale h1 release/callback has zero h2 delta"
+  },
+  {
+    "case": "unchanged original87 actual compiled witnesses including source/ref/private tickets and endpoint",
+    "result": "87 PASS",
+    "ownership": "full original assertions preserved byte-for-byte; UNIT only, no native proof"
+  },
+  {
+    "case": "final repository supporting tests",
+    "result": "33 PASS",
+    "ownership": "old28 bodies unchanged except import; new1 Q1+2 Q2+2 terminate-failure coverage"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "entries": 53,
+  "scratch": 46,
+  "repository": 7,
+  "manifest_sha256": "4f3dd29dbc307548bb0650e4269714ea1ab38a998a29be067d1f3e3e165ee797",
+  "excludes": [
+    "artifact-manifest.json",
+    "manifest-verification.json"
+  ]
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "spec-strict128",
+    "command": [
+      "node",
+      "--max-old-space-size=128",
+      "--max-semi-space-size=8",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+      "-p",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec\\tsconfig.json"
+    ],
+    "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "exit": 0
+  },
+  {
+    "name": "spec-boundary",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec\\run.mjs",
+      "boundary"
+    ],
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\spec",
+    "exit": 0,
+    "total": 55,
+    "passed": 55,
+    "failed": 0
+  },
+  {
+    "name": "quality-strict128",
+    "command": [
+      "node",
+      "--max-old-space-size=128",
+      "--max-semi-space-size=8",
+      "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\typescript\\bin\\tsc",
+      "-p",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\tsconfig.json"
+    ],
+    "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+    "exit": 0
+  },
+  {
+    "name": "quality-witness",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\run.mjs",
+      "witness"
+    ],
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality",
+    "exit": 0,
+    "total": 87,
+    "passed": 87,
+    "failed": 0
+  },
+  {
+    "name": "quality-repro",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\run.mjs",
+      "repro"
+    ],
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality",
+    "exit": 0,
+    "total": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  {
+    "name": "quality-matrix",
+    "command": [
+      "node",
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality\\run.mjs",
+      "matrix"
+    ],
+    "cwd": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\quality",
+    "exit": 0,
+    "total": 124,
+    "passed": 124,
+    "failed": 0
+  }
+]

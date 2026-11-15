@@ -1,0 +1,58 @@
+{
+  "q1": {
+    "identical_whole_tests": true,
+    "red_tests_sha256": "5dfbca66ef1740e1367d29aa37466588e6611a3834a0fdbb410b5126295f55ea",
+    "green_tests_sha256": "5dfbca66ef1740e1367d29aa37466588e6611a3834a0fdbb410b5126295f55ea",
+    "red_result": {
+      "actual_exit": 1,
+      "signal": null,
+      "error": null
+    },
+    "green_result": {
+      "actual_exit": 0,
+      "signal": null,
+      "error": null
+    },
+    "red_production_sha256": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0",
+    "green_production_sha256": "0b03548d82f9e4d38e93707496ed5ac040d1ac8254b4d0ab4e73eef06fed3f1e"
+  },
+  "q2": {
+    "identical_whole_tests": true,
+    "red_tests_sha256": "cad0d379601a03ee6d67018170d70a426cec1bb972aba72caac4e2f8ce747993",
+    "green_tests_sha256": "cad0d379601a03ee6d67018170d70a426cec1bb972aba72caac4e2f8ce747993",
+    "red_result": {
+      "actual_exit": 1,
+      "signal": null,
+      "error": null
+    },
+    "green_result": {
+      "actual_exit": 0,
+      "signal": null,
+      "error": null
+    },
+    "red_production_sha256": "0b03548d82f9e4d38e93707496ed5ac040d1ac8254b4d0ab4e73eef06fed3f1e",
+    "green_production_sha256": "1a531e9c6e232e92372a1ae32f5baef9de2487712578c272117d17fdc7eea963"
+  },
+  "old28": {
+    "body_identical_except_import": true,
+    "original_sha256": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6"
+  },
+  "final_counts": {
+    "total": 73,
+    "passed": 73,
+    "failed": 0,
+    "files": {
+      "v03-native-handoff.test.ts": 33,
+      "v03-resource-ledger.test.ts": 16,
+      "v03-worker-pool.test.ts": 24
+    }
+  },
+  "coverage_only": {
+    "classification": "existing-behavior coverage, not additional TDD",
+    "actual_exit": 0,
+    "production_unchanged_from_q2green": true
+  },
+  "vertical": {
+    "q1green_equals_q2red": true
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "scratch": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-quality-review",
+  "repository": "C:/Users/sandr/OrthoSculptCAD",
+  "head": "25980b612ced5dc79ce966208cb7ce4edbb1546b",
+  "entries": 39,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1562,
+      "sha256": "017d17647b0a2646245e20d5f4971e6528c60bd94c68bc0e07db1935f644ca9e"
+    },
+    {
+      "path": "compiled/nativeHandoff.js",
+      "bytes": 12444,
+      "sha256": "77555c9b661563c20fcb8bccae133c49ba5d669353c69697c97f4b73d0b57944"
+    },
+    {
+      "path": "compiled/nativeHandoff.worker.js",
+      "bytes": 1701,
+      "sha256": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419"
+    },
+    {
+      "path": "compiled/resourceLedger.js",
+      "bytes": 19824,
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43"
+    },
+    {
+      "path": "compiled/workerPool.js",
+      "bytes": 5589,
+      "sha256": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200"
+    },
+    {
+      "path": "diff-check.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diff-check.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "finalize.mjs",
+      "bytes": 12740,
+      "sha256": "b5b53a4f751df45f14ec2f7a03f3c4d57b6ea6c9d2626b336b81e187b0ce4deb"
+    },
+    {
+      "path": "git-status-scoped.log",
+      "bytes": 140,
+      "sha256": "9ab07431c9024a7871eaa83c6c292f2996ce3288ca340677248722e631c8e03e"
+    },
+    {
+      "path": "input-end.json",
+      "bytes": 758,
+      "sha256": "54a34fdc3887564f96f595d8d15a0b9964c124b4cefaa3ce96ace987568650dd"
+    },
+    {
+      "path": "input-start.json",
+      "bytes": 758,
+      "sha256": "54a34fdc3887564f96f595d8d15a0b9964c124b4cefaa3ce96ace987568650dd"
+    },
+    {
+      "path": "loader.mjs",
+      "bytes": 259,
+      "sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0"
+    },
+    {
+      "path": "package.json",
+      "bytes": 17,
+      "sha256": "6dc1b06d6b093e9cccb20bee06a93836eee0420ae26803ca2ce4065d82f070d1"
+    },
+    {
+      "path": "resourceLedger.diff",
+      "bytes": 15265,
+      "sha256": "95241c5b32872c243d76252a4b375ab3dae424d697624a75d2d082646412e3f3"
+    },
+    {
+      "path": "review.json",
+      "bytes": 11748,
+      "sha256": "60f0afa96d72fb5f14e7b0a6629ff41a34d8d3443256cd8728f4fed3f22aa58b"
+    },
+    {
+      "path": "run.mjs",
+      "bytes": 3115,
+      "sha256": "92fdb13838eebad2afaccaf596e462e3336b4d91aae5e62d2cd9bdce8205d2e5"
+    },
+    {
+      "path": "static-scan.json",
+      "bytes": 497,
+      "sha256": "24fefed7897542d84b033c6c48c45796db78e0e29b3a2d5dadece9c56f53298a"
+    },
+    {
+      "path": "strict128.command.json",
+      "bytes": 408,
+      "sha256": "af553a0b798c6bb2a5959e013b561ae2ee848e7ad92c7619ac28c634a5a8591e"
+    },
+    {
+      "path": "strict128.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "strict128.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 739,
+      "sha256": "dddeaacebe8b69deb4f06b43083307fff00c5492ec58bd1f9fa3cdfa4135e78f"
+    },
+    {
+      "path": "witness-1.command.json",
+      "bytes": 507,
+      "sha256": "50141b62d564f90b613b41836faaceeae62d2394cf0afa566dbc4f5e0aeadb27"
+    },
+    {
+      "path": "witness-1.stderr.log",
+      "bytes": 441,
+      "sha256": "7ed4602c1ee97b36930053a32dd2f2cac89738b52040c47d70bb0a4d85e15bcf"
+    },
+    {
+      "path": "witness-1.stdout.log",
+      "bytes": 9113,
+      "sha256": "eeb44a32e3dd6fb5d39dcc5eac297a7fa3293d4ac330a3d947c27be27d1933c0"
+    },
+    {
+      "path": "witness-2.command.json",
+      "bytes": 507,
+      "sha256": "50141b62d564f90b613b41836faaceeae62d2394cf0afa566dbc4f5e0aeadb27"
+    },
+    {
+      "path": "witness-2.stderr.log",
+      "bytes": 441,
+      "sha256": "336edc0b45ca1dd1da9fc0cc0727ab253b7d868d6641ed0c6a1958b4f30ac7c6"
+    },
+    {
+      "path": "witness-2.stdout.log",
+      "bytes": 12906,
+      "sha256": "19bdfe72878c575c050f9932e20752bf8c81f34d034a4a47205f1e5734f4c94c"
+    },
+    {
+      "path": "witness-3.command.json",
+      "bytes": 507,
+      "sha256": "50141b62d564f90b613b41836faaceeae62d2394cf0afa566dbc4f5e0aeadb27"
+    },
+    {
+      "path": "witness-3.stderr.log",
+      "bytes": 441,
+      "sha256": "a786b4aba1810112e6b41c59651707fde647bd22d6a38fbee27b1f5b3e1bb085"
+    },
+    {
+      "path": "witness-3.stdout.log",
+      "bytes": 15923,
+      "sha256": "80b3e8d27d912546349151afd9f58efef3162889bf2a690dfdc4572b93a520e4"
+    },
+    {
+      "path": "witness-attempt1.mjs",
+      "bytes": 19755,
+      "sha256": "638367f4a316045728630cd006f06377de41027032152cdf52f8c77b568e7872"
+    },
+    {
+      "path": "witness-attempt2.mjs",
+      "bytes": 22088,
+      "sha256": "e52bfb141aea73267c5178d511cfee67fa6acb7ce14d9601a4854be4bffc3663"
+    },
+    {
+      "path": "witness-results-attempt1.json",
+      "bytes": 9112,
+      "sha256": "5ea61e5bc27975aec49df28d871f8949d09f3c9ee049f45f7363043a9963efee"
+    },
+    {
+      "path": "witness-results-attempt2.json",
+      "bytes": 12905,
+      "sha256": "a1bc780c02cd60bb87ad3bd00dde00a3e35d948ce1d92f7824d4c9e09fe260c8"
+    },
+    {
+      "path": "witness-results.json",
+      "bytes": 15922,
+      "sha256": "6e74810b3be0054587e8537ea2594b8ee40e398c40df0b481f61d00618e5cb93"
+    },
+    {
+      "path": "witness.command.json",
+      "bytes": 499,
+      "sha256": "a3cb543ab2e98ef583598e166616cde8961a85bab0deadfd352d072c8d603ade"
+    },
+    {
+      "path": "witness.mjs",
+      "bytes": 25179,
+      "sha256": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d"
+    },
+    {
+      "path": "witness.stderr.log",
+      "bytes": 1066,
+      "sha256": "4ec880732ea4b1e107bc0b6fd8baaeefab7717863f069da3dfa98536006a0f01"
+    },
+    {
+      "path": "witness.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

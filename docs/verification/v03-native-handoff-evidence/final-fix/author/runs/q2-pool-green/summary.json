@@ -1,0 +1,27 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=256",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+    "run",
+    "--config",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-pool-green\\vitest.config.mjs",
+    "--configLoader",
+    "native",
+    "--maxWorkers=1",
+    "--no-file-parallelism",
+    "--reporter=verbose",
+    "--reporter=json",
+    "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-pool-green\\tests.json",
+    "-t",
+    "Q2 pool-owned"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit": 0,
+  "numTotalTests": 81,
+  "numPassedTests": 8,
+  "numFailedTests": 0,
+  "numPendingTests": 73,
+  "failures": []
+}

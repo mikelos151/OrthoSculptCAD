@@ -1,0 +1,65 @@
+{
+  "status": "DELIVERED_FOR_PARENT_INDEPENDENT_REVIEW_NOT_ACCEPTANCE",
+  "scope": "G1b1b input-only same-core native START/RECEIVED/RETURN",
+  "sourceHashes": {
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.ts": "2827085fbdba645fe5dc07e804b5132bb016fccebfcb14e4885ffaf00d90bee0",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "tests/v03-native-handoff.test.ts": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6"
+  },
+  "trackedInputs": 2602,
+  "permittedTrackedChanges": [
+    "src/compute/resourceLedger.ts"
+  ],
+  "allOtherTrackedFilesUnchanged": 2601,
+  "unit": {
+    "passed": 68,
+    "failed": 0,
+    "skipped": 0,
+    "perFile": {
+      "v03-native-handoff.test.ts": 28,
+      "v03-resource-ledger.test.ts": 16,
+      "v03-worker-pool.test.ts": 24
+    }
+  },
+  "native": {
+    "checks": 71,
+    "metrics": {
+      "constructors": 12,
+      "terminates": 12,
+      "peak": 2,
+      "live": 0
+    },
+    "devtoolsCreated": 9,
+    "devtoolsClosedBeforeTeardown": 9,
+    "nativeReturnedGroups": 9,
+    "browser": "156.0.8078.4",
+    "closed": {
+      "context": true,
+      "browser": true,
+      "server": true,
+      "portRefuses": true
+    },
+    "errors": [],
+    "externalRequests": []
+  },
+  "staticScan": {
+    "hardcodedCredentials": [],
+    "dynamicExecution": [],
+    "networkOrProcess": [],
+    "debugLoggingInProduction": []
+  },
+  "note": "12 actual constructors/terminate invocations; 3 workers stopped before DevTools attached (attached DataCloneError, alias, duplicate preflight); 9 observed native endpoint Workers closed. No fabricated native replies.",
+  "phaseCount": 28,
+  "releaseScopeCaveat": "dist and published ZIP are ignored/untracked and not included in start hash map; no build/replacement command was executed. All tracked inputs except explicitly permitted resourceLedger.ts match start.",
+  "notClaimed": [
+    "G1b1c full lifecycle/cancel/release/error/deadline/SHA holds",
+    "worker-clock propagation",
+    "App/global cap migration/G1b2",
+    "native-output or remote-new grants",
+    "source admission/ACTIVE/G2/G3/geometry/UI",
+    "whole-project regression (parent-owned)",
+    "thread join/GC/RSS bound",
+    "independent review/acceptance"
+  ]
+}

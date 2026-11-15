@@ -1,0 +1,168 @@
+{
+  "passed": false,
+  "failure": "page.evaluate: Error: G1b1b requires same-core rebind of returned wrapper; legacy detached G1a cannot perform it\n    at check (http://127.0.0.1:58379/fixture.mjs:4:68)\n    at run (http://127.0.0.1:58379/fixture.mjs:17:3)\n    at async eval (eval at evaluate (:370:30), <anonymous>:1:58)\n    at async <anonymous>:396:30\n    at C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-core\\native-cli.mjs:28:24",
+  "hashes": {
+    "source": {
+      "resourceLedger.ts": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109",
+      "workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64"
+    },
+    "served": {
+      "resourceLedger.js": "83b87cd0b610e77aebfb2a11fb4ccc7d8653f9b10fb38061e98979a6e77f350b",
+      "workerPool.js": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200",
+      "fixture.mjs": "3fa1c3055f2dcf68db3504860bcc8c1c0eb69f5715783109c7b0f28712123b79"
+    }
+  },
+  "result": {
+    "checks": [
+      {
+        "name": "native START detaches main wrapper",
+        "pass": true
+      },
+      {
+        "name": "native RETURN new wrapper original bytes",
+        "pass": true
+      },
+      {
+        "name": "native Worker RETURN detached",
+        "pass": true
+      },
+      {
+        "name": "legacy G1a refuses detached original",
+        "pass": true
+      },
+      {
+        "name": "naive returned ingress doubles charge",
+        "pass": true
+      },
+      {
+        "name": "G1b1b requires same-core rebind of returned wrapper; legacy detached G1a cannot perform it",
+        "pass": false
+      }
+    ],
+    "events": [
+      {
+        "native": "constructor"
+      },
+      {
+        "native": "send",
+        "detached": true
+      },
+      {
+        "native": "RECEIVED",
+        "bytes": 16
+      },
+      {
+        "native": "RETURN"
+      },
+      {
+        "native": "DETACHED",
+        "bytes": 0
+      },
+      {
+        "native": "terminate"
+      }
+    ],
+    "snapshots": {
+      "before": {
+        "managed": 16,
+        "job": 16,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "live",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "naive": {
+        "managed": 32,
+        "job": 32,
+        "history": 0,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "live",
+            "refs": [
+              {
+                "id": 1,
+                "category": "job"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "bytes": 16,
+            "realm": 1,
+            "phase": "live",
+            "refs": [
+              {
+                "id": 2,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      },
+      "closed": {
+        "managed": 0,
+        "job": 0,
+        "history": 0,
+        "allocations": []
+      }
+    },
+    "legacyDetachedRefusals": {
+      "retain": "INVALID_INPUT",
+      "reclassify": "INVALID_INPUT",
+      "transfer": "INVALID_INPUT"
+    },
+    "missingRebindCode": "INVALID_INPUT",
+    "browserVersion": "156.0.8078.4"
+  },
+  "errors": [],
+  "external": [],
+  "workers": [
+    {
+      "type": "created",
+      "id": 1,
+      "url": "blob:http://127.0.0.1:58379/e5d095ee-751e-42f4-8dc2-40a124c78ee6"
+    },
+    {
+      "type": "closed",
+      "id": 1
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:58379/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:58379/fixture.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:58379/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:58379/e5d095ee-751e-42f4-8dc2-40a124c78ee6",
+      "status": 200
+    }
+  ],
+  "closed": {
+    "context": true,
+    "browser": true,
+    "server": true,
+    "portRefuses": true
+  }
+}

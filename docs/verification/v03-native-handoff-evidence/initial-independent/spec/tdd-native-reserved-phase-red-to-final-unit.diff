@@ -1,0 +1,13 @@
+diff --git a/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/native-reserved-phase-red/resourceLedger.ts b/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/final-unit/resourceLedger.ts
+index f8ef380..271285a 100644
+--- a/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/native-reserved-phase-red/resourceLedger.ts
++++ b/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/final-unit/resourceLedger.ts
+@@ -310,7 +310,7 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+     },
+     snapshot() {
+       return Object.freeze({ ...counts(), allocations: Object.freeze([...allocations].map(a => Object.freeze({
+-        id: a.id, bytes: a.bytes, realm: realms.get(a.owner)!, phase: native ? (a.phase ?? (a.buffer ? 'MAIN' as const : 'reserved' as const)) : (a.buffer ? 'live' as const : 'reserved' as const),
++        id: a.id, bytes: a.bytes, realm: realms.get(a.owner)!, phase: native ? (a.phase ?? (a.buffer ? 'MAIN' as const : 'RESERVED' as const)) : (a.buffer ? 'live' as const : 'reserved' as const),
+         refs: Object.freeze([...a.refs].map(r => { const s = refs.get(r)!; return Object.freeze({ id: s.id, category: s.category }); })),
+       }))) });
+     },

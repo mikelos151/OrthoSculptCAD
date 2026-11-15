@@ -1,0 +1,6 @@
+ M src/compute/resourceLedger.ts
+?? docs/verification/v03-native-handoff-evidence/
+?? docs/verification/v03-native-handoff-parent-results.json
+?? src/compute/nativeHandoff.ts
+?? src/compute/nativeHandoff.worker.ts
+?? tests/v03-native-handoff.test.ts

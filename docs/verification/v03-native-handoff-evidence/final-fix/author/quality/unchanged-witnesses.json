@@ -1,0 +1,18 @@
+{
+  "loader.mjs": {
+    "original": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+    "copy": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0"
+  },
+  "witness.mjs": {
+    "original": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+    "copy": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d"
+  },
+  "repro.mjs": {
+    "original": "58eb35d08ba1b1cca7111d8060b5713133d9b31bf0057330569486925bcf887d",
+    "copy": "58eb35d08ba1b1cca7111d8060b5713133d9b31bf0057330569486925bcf887d"
+  },
+  "matrix.mjs": {
+    "original": "3524229cc02a2f89b944bf7ce37d99e95cdf4ee5c9e7f83fbca0d24bb8cd456e",
+    "copy": "3524229cc02a2f89b944bf7ce37d99e95cdf4ee5c9e7f83fbca0d24bb8cd456e"
+  }
+}

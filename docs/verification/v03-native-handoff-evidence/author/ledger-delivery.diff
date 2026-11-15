@@ -1,0 +1,242 @@
+diff --git a/src/compute/resourceLedger.ts b/src/compute/resourceLedger.ts
+index 1b184ca..271285a 100644
+--- a/src/compute/resourceLedger.ts
++++ b/src/compute/resourceLedger.ts
+@@ -35,16 +35,32 @@ function backingBytes(b: ArrayBuffer): number {
+     size(n); return n;
+   } catch { return invalid(); }
+ }
++function detached(b: ArrayBuffer): boolean {
++  try { new Uint8Array(b, 0, 0); return false; } catch { return true; }
++}
+ const BUDGET: Refusal = Object.freeze({ ok: false, code: 'BUDGET' });
+ function invalid(): never { throw Object.assign(new Error('Invalid ledger input'), { code: 'INVALID_INPUT' }); }
+ function category(c: unknown): asserts c is Category { if (c !== 'resident' && c !== 'job' && c !== 'history') invalid(); }
+ function size(n: unknown): asserts n is number { if (typeof n !== 'number' || !Number.isSafeInteger(n) || n < 0) invalid(); }
+-interface Allocation { id: number; bytes: number; owner: Realm; buffer?: ArrayBuffer; refs: Set<Ref> }
++type NativePhase = 'MAIN' | 'PREPARED' | 'IN_FLIGHT' | 'REMOTE' | 'RETURNING';
++interface Allocation { id: number; bytes: number; owner: Realm; buffer?: ArrayBuffer; phase?: NativePhase; refs: Set<Ref> }
++interface HandoffState {
++  binding: object; phase: 'PREPARED' | 'IN_FLIGHT' | 'REMOTE' | 'MAIN' | 'RETIRED';
++  source: Lease; sourceKeys: (string | undefined)[]; controlled: Lease; input: Ref[]; allocations: Allocation[];
++  main: Realm; target: Realm; buffers: ArrayBuffer[]; controlledRefs: Ref[];
++}
+ interface RefState { id: number; lease: Lease; category: Category; allocation?: Allocation; key?: string }
+-interface LeaseState { closed: boolean; refs: Set<Ref>; keys: Map<string, Ref> }
++interface LeaseState { closed: boolean; prepared: number; refs: Set<Ref>; keys: Map<string, Ref> }
+ /** Proposed managed-payload policy; not a process/JS heap/RSS limit. */
+ export const DEFAULT_RESOURCE_LIMITS: Readonly<Limits> = Object.freeze({ managed: 402653184, job: 134217728, history: 134217728 });
+ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, internals: LedgerInternals = {}) {
++  return createLedgerCore(limits, internals).ledger;
++}
++/** Internal composition only; never re-export from the public compute API. */
++export function createNativeLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS) {
++  return Object.freeze(createLedgerCore(limits, {}, true));
++}
++function createLedgerCore(limits: Limits, internals: LedgerInternals, native = false) {
+   for (const n of [limits.managed, limits.job, limits.history]) size(n);
+   const caps = Object.freeze({ ...limits });
+   const controls = Object.freeze({ ...DEFAULT_CONTROLS, ...internals.controls });
+@@ -58,6 +74,116 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+   const leases = new WeakMap<Lease, LeaseState>();
+   const allocations = new Set<Allocation>();
+   const backings = new WeakMap<ArrayBuffer, Allocation>();
++  const tickets = new WeakMap<object, HandoffState>();
++  function accessible(a: Allocation) { if (a.phase && a.phase !== 'MAIN') invalid(); }
++  function ticket(t: object, binding: object, phase?: HandoffState['phase']) {
++    const s = tickets.get(t); if (!s || s.binding !== binding || (phase && s.phase !== phase)) invalid(); return s;
++  }
++  function sourceAuth(s: HandoffState, i: number) {
++    const state = refs.get(s.input[i])!; state.lease = s.source; state.key = s.sourceKeys[i]; return state;
++  }
++  function restorePrepared(s: HandoffState, i: number) {
++    const r = s.input[i]; leases.get(s.controlled)!.refs.delete(r);
++    const state = sourceAuth(s, i), original = leases.get(s.source)!;
++    original.refs.add(r); if (state.key !== undefined) original.keys.set(state.key, r);
++    state.allocation!.phase = 'MAIN';
++  }
++  const handoff = Object.freeze({
++    sent(t: object, binding: object): void {
++      const s = ticket(t, binding, 'PREPARED');
++      for (const b of s.buffers) if (!detached(b)) invalid();
++      for (let i = 0; i < s.allocations.length; i++) {
++        const a = s.allocations[i], old = s.input[i], c = refs.get(old)!.category;
++        backings.delete(s.buffers[i]); a.buffer = undefined; a.owner = s.target; a.phase = 'IN_FLIGHT';
++        s.controlledRefs.push(issue(s.controlled, a, c)); retire(old); sourceAuth(s, i);
++      }
++      leases.get(s.source)!.prepared--;
++      s.buffers = []; s.input = []; s.phase = 'IN_FLIGHT';
++    },
++    received(t: object, binding: object): void {
++      const s = ticket(t, binding, 'IN_FLIGHT');
++      for (const a of s.allocations) a.phase = 'REMOTE'; s.phase = 'REMOTE';
++    },
++    returned(t: object, binding: object, buffers: readonly ArrayBuffer[]): void {
++      const s = ticket(t, binding, 'REMOTE');
++      if (!Array.isArray(buffers) || buffers.length !== s.allocations.length) invalid();
++      const seen = new Set<ArrayBuffer>();
++      Array.from(buffers, (b, i) => {
++        if (backingBytes(b) !== s.allocations[i].bytes || seen.has(b) || backings.has(b)) invalid();
++        seen.add(b);
++      });
++      // No mutation until the entire authenticated expected group passed preflight.
++      for (let i = 0; i < buffers.length; i++) {
++        const a = s.allocations[i]; a.phase = 'RETURNING';
++        a.buffer = buffers[i]; a.owner = s.main; backings.set(buffers[i], a); a.phase = 'MAIN';
++      }
++      s.phase = 'MAIN';
++    },
++    publish(t: object, binding: object, consumer: Lease): { refs: readonly Ref[]; buffers: readonly ArrayBuffer[] } {
++      const s = ticket(t, binding, 'MAIN'); open(consumer);
++      if (!room(s.allocations.length)) throw Object.assign(new Error('Ref capacity'), { code: 'BUDGET' });
++      const rr = s.allocations.map((a, i) => issue(consumer, a, refs.get(s.controlledRefs[i])!.category));
++      const buffers = s.allocations.map(a => a.buffer!);
++      for (const r of s.controlledRefs) retire(r);
++      s.controlled.close(); s.controlledRefs = []; s.allocations = []; s.phase = 'RETIRED';
++      return Object.freeze({ refs: Object.freeze(rr), buffers: Object.freeze(buffers) });
++    },
++    /** Only the owned native composition calls this AFTER successful terminate. */
++    terminated(t: object, binding: object): void {
++      const s = ticket(t, binding); if (s.phase === 'RETIRED') return;
++      if (s.phase === 'PREPARED') {
++        for (let i = 0; i < s.allocations.length; i++) {
++          const a = s.allocations[i];
++          if (detached(s.buffers[i])) { backings.delete(s.buffers[i]); a.buffer = undefined; retire(s.input[i]); sourceAuth(s, i); }
++          else restorePrepared(s, i);
++        }
++        leases.get(s.source)!.prepared--;
++      } else for (const r of s.controlledRefs) retire(r);
++      s.controlled.close(); s.buffers = []; s.input = []; s.controlledRefs = []; s.allocations = []; s.phase = 'RETIRED';
++    },
++    prepare(source: Lease, input: readonly Ref[], main: Realm, target: Realm, binding: object): object {
++      if (!native) invalid();
++      open(source); realm(main); realm(target);
++      if (!binding || typeof binding !== 'object' || main === target || !Array.isArray(input) || !input.length || input.length > 16) invalid();
++      const seen = new Set<Allocation>();
++      const aa = Array.from(input, r => {
++        const s = refs.get(r), a = s?.allocation;
++        if (!s || s.lease !== source || !a || a.owner !== main || !a.buffer) invalid();
++        accessible(a); if (seen.has(a)) invalid(); seen.add(a);
++        if (a.refs.size !== 1) throw Object.assign(new Error('Aliased backing'), { code: 'TRANSFER_ALIASED' });
++        if (backingBytes(a.buffer) !== a.bytes) invalid();
++        return a;
++      });
++      if (activeLeases >= controls.maxLeases || !room(input.length)) throw Object.assign(new Error('Handoff capacity'), { code: 'BUDGET' });
++      const controlled = makeLease(), t = Object.freeze({}), sourceState = leases.get(source)!;
++      const buffers = aa.map(a => a.buffer!);
++      const sourceKeys = input.map(r => refs.get(r)!.key);
++      // Suspend caller authority before native dispatch. The sole owning ref moves
++      // into the private lease without changing diagnostic identity or charges.
++      // PREPARED denies all ordinary ref use; successful detach retires that old
++      // public capability and rotates to a new private controlled ref.
++      for (const r of input) {
++        const state = refs.get(r)!; sourceState.refs.delete(r);
++        if (state.key !== undefined) sourceState.keys.delete(state.key);
++        state.lease = controlled; state.key = undefined; leases.get(controlled)!.refs.add(r);
++      }
++      sourceState.prepared++;
++      for (const a of aa) a.phase = 'PREPARED';
++      tickets.set(t, { binding, phase: 'PREPARED', source, sourceKeys, controlled, input: [...input], allocations: aa, main, target, buffers, controlledRefs: [] });
++      return t;
++    },
++    packet(t: object, binding: object) {
++      const s = ticket(t, binding, 'PREPARED');
++      return { buffers: [...s.buffers], bytes: s.allocations.map(a => a.bytes) };
++    },
++    sendThrew(t: object, binding: object) {
++      const s = ticket(t, binding, 'PREPARED');
++      for (let i = 0; i < s.buffers.length; i++) if (backingBytes(s.buffers[i]) !== s.allocations[i].bytes) invalid();
++      for (let i = 0; i < s.input.length; i++) restorePrepared(s, i);
++      leases.get(s.source)!.prepared--;
++      s.phase = 'RETIRED'; s.buffers = []; s.input = []; s.allocations = []; s.controlled.close();
++    },
++  });
+   let allocationId = 0, refId = 0;
+   function realm(r: Realm) { if (!realms.has(r)) invalid(); }
+   function counts() {
+@@ -95,7 +221,7 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+         leaseState(this);
+         const s = refs.get(from); if (!s?.allocation) invalid();
+         category(c); realm(owner); if (owner !== s.allocation.owner) invalid();
+-        open(this); if (!s.allocation.buffer) invalid();
++        open(this); accessible(s.allocation); if (!s.allocation.buffer) invalid();
+         backingBytes(s.allocation.buffer);
+         const a = s.allocation, n = counts();
+         if (c !== 'resident' && ![...a.refs].some(r => refs.get(r)!.category === c)) n[c] += a.bytes;
+@@ -104,7 +230,7 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+       },
+       reclassify(this: Lease, r: Ref, c: Category): void | Refusal {
+         const s = refs.get(r); if (!s || s.lease !== this) invalid();
+-        category(c); open(this); if (!s.allocation) invalid();
++        category(c); open(this); if (!s.allocation) invalid(); accessible(s.allocation);
+         if (s.allocation.buffer) backingBytes(s.allocation.buffer);
+         const a = s.allocation, n = counts();
+         const other = [...a.refs].filter(x => x !== r).map(x => refs.get(x)!.category);
+@@ -114,10 +240,12 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+         s.category = c;
+       },
+       release(this: Lease, r: Ref): void {
+-        leaseState(this); const s = refs.get(r); if (!s || s.lease !== this) invalid(); retire(r);
++        leaseState(this); const s = refs.get(r); if (!s || s.lease !== this) invalid();
++        if (s.allocation) accessible(s.allocation); retire(r);
+       },
+       close(this: Lease): void {
+-        const s = leaseState(this); if (s.closed) return;
++        const s = leaseState(this); if (s.closed) return; if (s.prepared) invalid();
++        for (const r of s.refs) accessible(refs.get(r)!.allocation!);
+         for (const r of s.refs) retire(r);
+         s.closed = true; activeLeases--;
+       },
+@@ -125,7 +253,7 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+       transfer(this: Lease, r: Ref, target: Realm): void {
+         const s = refs.get(r); if (!s || s.lease !== this) invalid(); realm(target);
+         if (!s.allocation) invalid(); // A retired transfer source never regains authority.
+-        open(this); if (!s.allocation.buffer) invalid();
++        open(this); accessible(s.allocation); if (!s.allocation.buffer) invalid();
+         backingBytes(s.allocation.buffer);
+         if (s.allocation.refs.size !== 1) throw Object.assign(new Error('Aliased backing'), { code: 'TRANSFER_ALIASED' });
+         s.allocation.owner = target;
+@@ -133,7 +261,7 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+       ref(this: Lease, key: string) { const r = open(this).keys.get(key); if (!r) invalid(); return r; },
+       allocateBuffer(this: Lease, r: Ref) {
+         const s = refs.get(r); if (!s || s.lease !== this) invalid();
+-        open(this); if (!s.allocation || s.allocation.buffer) invalid();
++        open(this); if (!s.allocation || s.allocation.buffer) invalid(); accessible(s.allocation);
+         try {
+           const b = allocate(s.allocation.bytes);
+           if (backingBytes(b) !== s.allocation.bytes || backings.has(b)) invalid();
+@@ -141,9 +269,9 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+         } catch (error) { retire(r); throw error; }
+       },
+     });
+-    leases.set(l, { closed: false, refs: new Set(), keys: new Map() }); activeLeases++; return l;
++    leases.set(l, { closed: false, prepared: 0, refs: new Set(), keys: new Map() }); activeLeases++; return l;
+   }
+-  return Object.freeze({
++  return { ledger: Object.freeze({
+     createRealm(): Realm {
+       if (realmId >= controls.maxRealms || realmId >= Number.MAX_SAFE_INTEGER) throw Object.assign(new Error('Realm capacity'), { code: 'BUDGET' });
+       const r = Object.freeze({}) as Realm; realms.set(r, ++realmId); return r;
+@@ -172,7 +300,7 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+     registerExisting(backing: ArrayBuffer, lease: Lease, c: Category, owner: Realm): Ref | Refusal {
+       leaseState(lease); category(c); realm(owner); const bytes = backingBytes(backing);
+       const known = backings.get(backing);
+-      if (known?.refs.size && known.owner !== owner) invalid();
++      if (known?.refs.size) { accessible(known); if (known.owner !== owner) invalid(); }
+       open(lease);
+       if (known?.refs.size) return lease.retain(known.refs.values().next().value!, c, owner);
+       const n = counts(); n.managed += bytes; if (c !== 'resident') n[c] += bytes;
+@@ -182,11 +310,11 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+     },
+     snapshot() {
+       return Object.freeze({ ...counts(), allocations: Object.freeze([...allocations].map(a => Object.freeze({
+-        id: a.id, bytes: a.bytes, realm: realms.get(a.owner)!, phase: a.buffer ? 'live' as const : 'reserved' as const,
++        id: a.id, bytes: a.bytes, realm: realms.get(a.owner)!, phase: native ? (a.phase ?? (a.buffer ? 'MAIN' as const : 'RESERVED' as const)) : (a.buffer ? 'live' as const : 'reserved' as const),
+         refs: Object.freeze([...a.refs].map(r => { const s = refs.get(r)!; return Object.freeze({ id: s.id, category: s.category }); })),
+       }))) });
+     },
+-  });
++  }), handoff };
+ }
+ export type ResourceLedger = ReturnType<typeof createResourceLedger>;
+ export type ResourceLedgerSnapshot = ReturnType<ResourceLedger['snapshot']>;

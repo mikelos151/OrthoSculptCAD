@@ -299,3 +299,35 @@ describe('G1b1a isolated internal pool', () => {
     external.close(); expect(ledger.snapshot().managed).toBe(0);
   });
 });
+
+describe('Q2 pool-owned cleanup UNIT regressions (not native Worker)', () => {
+  it.each([1, 2].flatMap(removal => ['release', 'dispose'].flatMap(action => [false, true].map(terminateFails => ({ removal, action, terminateFails })))))
+  ('attempts both removals and native stop: %j', ({ removal, action, terminateFails }) => {
+    const ledger = createResourceLedger(limits), w = new TestWorker(), removed: string[] = [];
+    const cleanupError = new Error('pool cleanup'), nativeError = new Error('native terminate');
+    const pool = createWorkerPool(ledger, () => w as unknown as Worker);
+    const h = accepted(pool.acquire('compute', plan)), before = ledger.snapshot();
+    const remove = w.removeEventListener.bind(w);
+    w.removeEventListener = (type, fn, options) => {
+      removed.push(type);
+      expect(pool.snapshot().slots[0].phase).toBe('REVOKING');
+      expect(ledger.snapshot()).toEqual(before);
+      if (removed.length === removal) throw cleanupError;
+      remove(type, fn, options);
+    };
+    w.terminate = () => {
+      w.terminated++;
+      expect(removed).toEqual(['error', 'messageerror']);
+      expect(ledger.snapshot()).toEqual(before);
+      if (terminateFails) throw nativeError;
+    };
+    let thrown: unknown;
+    try { if (action === 'release') pool.release(h); else pool.dispose(); } catch (e) { thrown = e; }
+    expect(thrown).toBe(terminateFails ? nativeError : cleanupError);
+    expect(removed).toEqual(['error', 'messageerror']); expect(w.terminated).toBe(1);
+    expect(pool.snapshot().occupied).toBe(terminateFails ? 1 : 0);
+    if (terminateFails) { expect(pool.snapshot().slots[0].phase).toBe('FAILED'); expect(ledger.snapshot()).toEqual(before); }
+    else expect(ledger.snapshot().managed).toBe(0);
+    pool.release(h); pool.dispose(); pool.release(h); expect(w.terminated).toBe(1);
+  });
+});

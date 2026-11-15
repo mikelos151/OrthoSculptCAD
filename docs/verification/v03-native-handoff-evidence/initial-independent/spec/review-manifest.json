@@ -1,0 +1,446 @@
+{
+  "algorithm": "SHA-256",
+  "roots": {
+    "reviewScratch": "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review"
+  },
+  "excluded": [
+    "review-manifest.json",
+    "review-manifest.sha256",
+    "finalize.stdout.log",
+    "finalize.stderr.log"
+  ],
+  "files": [
+    {
+      "root": "reviewScratch",
+      "path": "audit-attempt-1.failure.log",
+      "bytes": 906,
+      "sha256": "17a7ba1104d0b151cea59b6a5a093e01963e47dc6e1418509bf90be926570a35"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "audit.mjs",
+      "bytes": 1860,
+      "sha256": "509bbd32fbee10d2bf9566abfd78ae482f526c7315c50ba1fa91f09e75dc35fd"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "audit.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "audit.stdout.log",
+      "bytes": 23285,
+      "sha256": "ce463ac54a64d042bfbd7f6198c4616fdf027ad24cd79d1637d4f4ad1a2f97c8"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compile-1.command.log",
+      "bytes": 221,
+      "sha256": "4c425b93f165ace111a669698b69f12dd46b424b20e247a104c16666a3bf8f7a"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compile-1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compile-1.stdout.log",
+      "bytes": 23022,
+      "sha256": "1662544151ed3cc31813d33fd50faf1e30ab4ed7574b086032604639d587588e"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compile-2.command.log",
+      "bytes": 221,
+      "sha256": "32ca0794795ccc5e5b7b6282baba73313b1e494c2c91d53a0d9df79a7805a3ce"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compile-2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compile-2.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compiled/AppData/Local/hermes/cache/scratch/v03-native-handoff-spec-review/witness.js",
+      "bytes": 13754,
+      "sha256": "3f9521781273c57ca3086b97bb3caa168840ea4a045f40d9eae263d444c7e7e5"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compiled/OrthoSculptCAD/src/compute/nativeHandoff.js",
+      "bytes": 12450,
+      "sha256": "daca7f013e74df4b8f7bb8fe16a5487523cc95cde260f367f202a17b0c1b4e95"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compiled/OrthoSculptCAD/src/compute/nativeHandoff.worker.js",
+      "bytes": 1704,
+      "sha256": "fa95ed8c531a1873b91f787010e741e781acbf724877d3e6cd1bfd9ba488a2a9"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compiled/OrthoSculptCAD/src/compute/resourceLedger.js",
+      "bytes": 19824,
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compiled/OrthoSculptCAD/src/compute/workerPool.js",
+      "bytes": 5589,
+      "sha256": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "compiled/package.json",
+      "bytes": 17,
+      "sha256": "6dc1b06d6b093e9cccb20bee06a93836eee0420ae26803ca2ce4065d82f070d1"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "emitted-import-relink.json",
+      "bytes": 1873,
+      "sha256": "b98db1716e6cd704b2f24694ee046004b71631f1b0f48bf51342da2d55559243"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "end-hashes.json",
+      "bytes": 758,
+      "sha256": "54a34fdc3887564f96f595d8d15a0b9964c124b4cefaa3ce96ace987568650dd"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "end.command.log",
+      "bytes": 26,
+      "sha256": "a8304ada42fcf67c8aad403934303f49d526c9b6e92f447323ef733085cda61c"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "end.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "end.stdout.log",
+      "bytes": 812,
+      "sha256": "a901f37f6c47b65220ac81a6d6979638f63f5cb4da9d8482a68a37e1098b4891"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "finalize.mjs",
+      "bytes": 5807,
+      "sha256": "974a6a2f0d8a825490f562b27687e8dce8b91e7d71229f1f48f318b4e3b78e24"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "git-diff-check.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "git-diff-check.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "git-head-end.log",
+      "bytes": 41,
+      "sha256": "705080b95919456bd2922fc30a8f0eb569f4c5acd6358b164a8f34b2e132a159"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "git-original.command.log",
+      "bytes": 51,
+      "sha256": "f42b51a5a05d6175f15391071fd190ecb2968b873ba5eecc1fbbe5af31f22086"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "git-original.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "git-status-end.log",
+      "bytes": 250,
+      "sha256": "49e2b8a21d3d089200604db5181c54b84f247bab28a31e51fcf2711bf351e739"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "original-resourceLedger.ts",
+      "bytes": 11141,
+      "sha256": "f7b098fd05c129862226f2af75994017f273727bdfbb3a1c3911d1051cb49109"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "phase-audit-raw.json",
+      "bytes": 36352,
+      "sha256": "040e1632c6e078ddfa3a11653b6449eeb5ccd9164706f0eb7e04bcd0a93c2dbd"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "relink.command.log",
+      "bytes": 23,
+      "sha256": "87507e61292b7c9b84464764d75d89c3eb744f7ba80809b9237cb557ce0faee7"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "relink.mjs",
+      "bytes": 1227,
+      "sha256": "ff06421bd9af2061c74ea1a945b746463e18a0908b6bd269581cecfecccc2a84"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "relink.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "relink.stdout.log",
+      "bytes": 95,
+      "sha256": "eb808202a7668f2a1e33e239de17751003678afbd479ae0081532ea7ad7d1fb0"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "review.json",
+      "bytes": 7164,
+      "sha256": "5a25b9be80504444df59bde4bbe4cd28a21d3ed122ffbfb11a3e1c9acd24e26f"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "REVIEW.md",
+      "bytes": 4995,
+      "sha256": "d397bf0e09ea38c90c4da1015a4d8776278f796dcbe4a19def5cb6f64120dec9"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "run-witness.sh",
+      "bytes": 1597,
+      "sha256": "29797b8c37c9738c6b6f47642765b6bdf311b407770f1cefbaaba99540cb9403"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "start-hashes.json",
+      "bytes": 758,
+      "sha256": "54a34fdc3887564f96f595d8d15a0b9964c124b4cefaa3ce96ace987568650dd"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-audit.command.log",
+      "bytes": 75,
+      "sha256": "d6f011bc99f267ebb992aaa9aa06bc14d082c07a230b829142c06e2333df3983"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-audit.json",
+      "bytes": 61030,
+      "sha256": "f5a59532e5f99124c3715bdddf062d97cc06e4535db7136932f5203321cc0157"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-audit.mjs",
+      "bytes": 2684,
+      "sha256": "ec68385645c9ce93bfea8cc8cb773d20c46f44ded39b9549208b3098eae8d4fc"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-audit.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-audit.stdout.log",
+      "bytes": 4612,
+      "sha256": "d266d22a4e2cacb62b91eee2c17c0aebf7a04ad501152a976544b96853119c8a"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-core-prepare-red-to-core-prepare-green.command.log",
+      "bytes": 264,
+      "sha256": "2019bfecd9f5ca964b66ac06754bdd9b29d827d3b7b9b59e689fa672ecc8ebca"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-core-prepare-red-to-core-prepare-green.diff",
+      "bytes": 10236,
+      "sha256": "bb3063239f7a53e3e356ba4a8ab6d86e0088ac818a4c988a5b29adfd95acb40d"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-core-prepare-red-to-core-prepare-green.stderr.log",
+      "bytes": 418,
+      "sha256": "f951a21bd6f447ad1c6c27811dc4aca0ecd5f64ebb1fa092ef9093ad266ef19e"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-core-roundtrip-red-to-core-roundtrip-green.command.log",
+      "bytes": 268,
+      "sha256": "7c2996c78354f9c5a2e8d07186b8ce26d7ebbdf0b1120dd87d24e005557106d6"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-core-roundtrip-red-to-core-roundtrip-green.diff",
+      "bytes": 5250,
+      "sha256": "f7a318b2b20327da1ed04531bc2b0a413dbd4477cef7c1e6b4bf268e132796b3"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-core-roundtrip-red-to-core-roundtrip-green.stderr.log",
+      "bytes": 422,
+      "sha256": "590fcd0bbb75b556ecbf6a9cc1c236a63ba3752bd18d09b37a70dc87cb1314c7"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-native-header-bound-red-to-native-header-bound-green.command.log",
+      "bytes": 290,
+      "sha256": "0b5c67ae19a0ee0f1d9700e59d9721b01d3e072c9e2d66805494e6ba00f00351"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-native-header-bound-red-to-native-header-bound-green.diff",
+      "bytes": 2410,
+      "sha256": "f74474ca80c4d647734c0ea6bd0db02cc6379aca8436b58be87451d97022cb77"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-native-header-bound-red-to-native-header-bound-green.stderr.log",
+      "bytes": 444,
+      "sha256": "bdb473a687c3dd549fdc48a62af1a31e7dc1e924d571017fd5678408d230206f"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-native-reserved-phase-red-to-final-unit.command.log",
+      "bytes": 265,
+      "sha256": "096f31087775b9f46c0c4709027debad69acff4a95404f96dd6d131449d5773f"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-native-reserved-phase-red-to-final-unit.diff",
+      "bytes": 1325,
+      "sha256": "5adc04afd274516423ce0fd4280c6d6fcc87e495c9d637c71a119019b033f650"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-native-reserved-phase-red-to-final-unit.stderr.log",
+      "bytes": 419,
+      "sha256": "2ca40362a6574d7a509790bd0b016abcc0224235c10f440b85855b012c790891"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-prepared-private-owner-red-to-prepared-private-owner-green.command.log",
+      "bytes": 284,
+      "sha256": "99e57b41de05a7cda04917e9359eb9fa6cd599b8dd16061465b18187bfb3a89d"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-prepared-private-owner-red-to-prepared-private-owner-green.diff",
+      "bytes": 7462,
+      "sha256": "b74ab785a902311155207b1a48ae577a307858fd06de39ee33fbf50ddc4def1f"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tdd-prepared-private-owner-red-to-prepared-private-owner-green.stderr.log",
+      "bytes": 438,
+      "sha256": "33f6950c4efc9168e7bdf348f7ec04c1b11e0d2c58c64c46872d12e2915c11b9"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "tsconfig.json",
+      "bytes": 482,
+      "sha256": "ea90c2bd6dca68e379ede6488fbf4716b0ffc3375214973b73093faeddc1d459"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-1.command.log",
+      "bytes": 147,
+      "sha256": "c775efcdf7b61867fc21b3f17ee472cc10dd9c888a80e65854ed0b0bda452043"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-1.stdout.log",
+      "bytes": 767,
+      "sha256": "7e8817b4ff31ce3ac2317fb50dd1b12c0afae8117892db52d2c4658b836fa894"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-compile-1.ts",
+      "bytes": 11041,
+      "sha256": "7555ab92141f23c9bdc41c99ab9251939ef6378f453dd8d2f4dd6cd4bbf0846a"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-compile-2.ts",
+      "bytes": 11074,
+      "sha256": "1364329f60d3965f7ef275cbec3a287aadc24e16987889d925e2b3e64206fc52"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-final.command.log",
+      "bytes": 488,
+      "sha256": "ffe2155a2b0ab9b86f5a7b174e935fe682445481a7762fdc2c6d13219248b8fc"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-final.compile.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-final.compile.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-final.relink.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-final.relink.stdout.log",
+      "bytes": 95,
+      "sha256": "eb808202a7668f2a1e33e239de17751003678afbd479ae0081532ea7ad7d1fb0"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-final.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness-final.stdout.log",
+      "bytes": 832,
+      "sha256": "e4c87aaf841dce4b7260c4a385365a3829b16a4e046d63ff888e6a2ea8e1cdc0"
+    },
+    {
+      "root": "reviewScratch",
+      "path": "witness.ts",
+      "bytes": 12245,
+      "sha256": "c8cf4c0c5a1283c4eaaf0a9e021fa1089367cddc7e16235c4a5bd58e52befdaa"
+    }
+  ]
+}

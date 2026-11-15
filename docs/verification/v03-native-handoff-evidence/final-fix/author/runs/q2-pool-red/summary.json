@@ -1,0 +1,68 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=256",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+    "run",
+    "--config",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-pool-red\\vitest.config.mjs",
+    "--configLoader",
+    "native",
+    "--maxWorkers=1",
+    "--no-file-parallelism",
+    "--reporter=verbose",
+    "--reporter=json",
+    "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-pool-red\\tests.json",
+    "-t",
+    "Q2 pool-owned"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit": 1,
+  "numTotalTests": 81,
+  "numPassedTests": 0,
+  "numFailedTests": 8,
+  "numPendingTests": 73,
+  "failures": [
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+      "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":1,\"action\":\"release\",\"terminateFails\":false}",
+      "message": "AssertionError: expected [ 'error' ] to deeply equal [ 'error', 'messageerror' ]\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:327:21\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chun"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+      "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":1,\"action\":\"release\",\"terminateFails\":true}",
+      "message": "AssertionError: expected Error: pool cleanup to be Error: native terminate // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:326:20\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+      "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":1,\"action\":\"dispose\",\"terminateFails\":false}",
+      "message": "AssertionError: expected [ 'error' ] to deeply equal [ 'error', 'messageerror' ]\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:327:21\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chun"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+      "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":1,\"action\":\"dispose\",\"terminateFails\":true}",
+      "message": "AssertionError: expected Error: pool cleanup to be Error: native terminate // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:326:20\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+      "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":2,\"action\":\"release\",\"terminateFails\":false}",
+      "message": "AssertionError: expected +0 to be 1 // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:327:78\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2323:10)\n"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+      "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":2,\"action\":\"release\",\"terminateFails\":true}",
+      "message": "AssertionError: expected Error: pool cleanup to be Error: native terminate // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:326:20\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+      "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":2,\"action\":\"dispose\",\"terminateFails\":false}",
+      "message": "AssertionError: expected +0 to be 1 // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:327:78\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2323:10)\n"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts",
+      "name": "Q2 pool-owned cleanup UNIT regressions (not native Worker) attempts both removals and native stop: {\"removal\":2,\"action\":\"dispose\",\"terminateFails\":true}",
+      "message": "AssertionError: expected Error: pool cleanup to be Error: native terminate // Object.is equality\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-worker-pool.test.ts:326:20\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/"
+    }
+  ]
+}

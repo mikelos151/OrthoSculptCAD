@@ -1,0 +1,153 @@
+diff --git a/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/core-prepare-red/resourceLedger.ts b/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/core-prepare-green/resourceLedger.ts
+index 47438d7..a358e75 100644
+--- a/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/core-prepare-red/resourceLedger.ts
++++ b/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/core-prepare-green/resourceLedger.ts
+@@ -39,7 +39,13 @@ const BUDGET: Refusal = Object.freeze({ ok: false, code: 'BUDGET' });
+ function invalid(): never { throw Object.assign(new Error('Invalid ledger input'), { code: 'INVALID_INPUT' }); }
+ function category(c: unknown): asserts c is Category { if (c !== 'resident' && c !== 'job' && c !== 'history') invalid(); }
+ function size(n: unknown): asserts n is number { if (typeof n !== 'number' || !Number.isSafeInteger(n) || n < 0) invalid(); }
+-interface Allocation { id: number; bytes: number; owner: Realm; buffer?: ArrayBuffer; refs: Set<Ref> }
++type NativePhase = 'MAIN' | 'PREPARED' | 'IN_FLIGHT' | 'REMOTE' | 'RETURNING';
++interface Allocation { id: number; bytes: number; owner: Realm; buffer?: ArrayBuffer; phase?: NativePhase; refs: Set<Ref> }
++interface HandoffState {
++  binding: object; phase: 'PREPARED' | 'IN_FLIGHT' | 'REMOTE' | 'MAIN' | 'RETIRED';
++  source: Lease; controlled: Lease; input: Ref[]; allocations: Allocation[];
++  main: Realm; target: Realm; buffers: ArrayBuffer[]; controlledRefs: Ref[];
++}
+ interface RefState { id: number; lease: Lease; category: Category; allocation?: Allocation; key?: string }
+ interface LeaseState { closed: boolean; refs: Set<Ref>; keys: Map<string, Ref> }
+ /** Proposed managed-payload policy; not a process/JS heap/RSS limit. */
+@@ -49,14 +55,9 @@ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, i
+ }
+ /** Internal composition only; never re-export from the public compute API. */
+ export function createNativeLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS) {
+-  const core = createLedgerCore(limits, {});
+-  return Object.freeze({ ledger: core.ledger, handoff: Object.freeze({
+-    prepare(_lease: Lease, _refs: readonly Ref[], _main: Realm, _target: Realm, _binding: object): object {
+-      throw Object.assign(new Error('Native rebind unavailable'), { code: 'UNAVAILABLE' });
+-    },
+-  }) });
++  return Object.freeze(createLedgerCore(limits, {}, true));
+ }
+-function createLedgerCore(limits: Limits, internals: LedgerInternals) {
++function createLedgerCore(limits: Limits, internals: LedgerInternals, native = false) {
+   for (const n of [limits.managed, limits.job, limits.history]) size(n);
+   const caps = Object.freeze({ ...limits });
+   const controls = Object.freeze({ ...DEFAULT_CONTROLS, ...internals.controls });
+@@ -70,6 +71,43 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals) {
+   const leases = new WeakMap<Lease, LeaseState>();
+   const allocations = new Set<Allocation>();
+   const backings = new WeakMap<ArrayBuffer, Allocation>();
++  const tickets = new WeakMap<object, HandoffState>();
++  function accessible(a: Allocation) { if (a.phase && a.phase !== 'MAIN') invalid(); }
++  function ticket(t: object, binding: object, phase?: HandoffState['phase']) {
++    const s = tickets.get(t); if (!s || s.binding !== binding || (phase && s.phase !== phase)) invalid(); return s;
++  }
++  const handoff = Object.freeze({
++    prepare(source: Lease, input: readonly Ref[], main: Realm, target: Realm, binding: object): object {
++      if (!native) invalid();
++      open(source); realm(main); realm(target);
++      if (!binding || typeof binding !== 'object' || main === target || !Array.isArray(input) || !input.length || input.length > 16) invalid();
++      const seen = new Set<Allocation>();
++      const aa = Array.from(input, r => {
++        const s = refs.get(r), a = s?.allocation;
++        if (!s || s.lease !== source || !a || a.owner !== main || !a.buffer) invalid();
++        accessible(a); if (seen.has(a)) invalid(); seen.add(a);
++        if (a.refs.size !== 1) throw Object.assign(new Error('Aliased backing'), { code: 'TRANSFER_ALIASED' });
++        if (backingBytes(a.buffer) !== a.bytes) invalid();
++        return a;
++      });
++      if (activeLeases >= controls.maxLeases || !room(input.length)) throw Object.assign(new Error('Handoff capacity'), { code: 'BUDGET' });
++      const controlled = makeLease(), t = Object.freeze({});
++      const buffers = aa.map(a => a.buffer!);
++      for (const a of aa) a.phase = 'PREPARED';
++      tickets.set(t, { binding, phase: 'PREPARED', source, controlled, input: [...input], allocations: aa, main, target, buffers, controlledRefs: [] });
++      return t;
++    },
++    packet(t: object, binding: object) {
++      const s = ticket(t, binding, 'PREPARED');
++      return { buffers: [...s.buffers], bytes: s.allocations.map(a => a.bytes) };
++    },
++    sendThrew(t: object, binding: object) {
++      const s = ticket(t, binding, 'PREPARED');
++      for (let i = 0; i < s.buffers.length; i++) if (backingBytes(s.buffers[i]) !== s.allocations[i].bytes) invalid();
++      for (const a of s.allocations) a.phase = 'MAIN';
++      s.phase = 'RETIRED'; s.buffers = []; s.controlled.close();
++    },
++  });
+   let allocationId = 0, refId = 0;
+   function realm(r: Realm) { if (!realms.has(r)) invalid(); }
+   function counts() {
+@@ -107,7 +145,7 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals) {
+         leaseState(this);
+         const s = refs.get(from); if (!s?.allocation) invalid();
+         category(c); realm(owner); if (owner !== s.allocation.owner) invalid();
+-        open(this); if (!s.allocation.buffer) invalid();
++        open(this); accessible(s.allocation); if (!s.allocation.buffer) invalid();
+         backingBytes(s.allocation.buffer);
+         const a = s.allocation, n = counts();
+         if (c !== 'resident' && ![...a.refs].some(r => refs.get(r)!.category === c)) n[c] += a.bytes;
+@@ -116,7 +154,7 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals) {
+       },
+       reclassify(this: Lease, r: Ref, c: Category): void | Refusal {
+         const s = refs.get(r); if (!s || s.lease !== this) invalid();
+-        category(c); open(this); if (!s.allocation) invalid();
++        category(c); open(this); if (!s.allocation) invalid(); accessible(s.allocation);
+         if (s.allocation.buffer) backingBytes(s.allocation.buffer);
+         const a = s.allocation, n = counts();
+         const other = [...a.refs].filter(x => x !== r).map(x => refs.get(x)!.category);
+@@ -126,10 +164,12 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals) {
+         s.category = c;
+       },
+       release(this: Lease, r: Ref): void {
+-        leaseState(this); const s = refs.get(r); if (!s || s.lease !== this) invalid(); retire(r);
++        leaseState(this); const s = refs.get(r); if (!s || s.lease !== this) invalid();
++        if (s.allocation) accessible(s.allocation); retire(r);
+       },
+       close(this: Lease): void {
+         const s = leaseState(this); if (s.closed) return;
++        for (const r of s.refs) accessible(refs.get(r)!.allocation!);
+         for (const r of s.refs) retire(r);
+         s.closed = true; activeLeases--;
+       },
+@@ -137,7 +177,7 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals) {
+       transfer(this: Lease, r: Ref, target: Realm): void {
+         const s = refs.get(r); if (!s || s.lease !== this) invalid(); realm(target);
+         if (!s.allocation) invalid(); // A retired transfer source never regains authority.
+-        open(this); if (!s.allocation.buffer) invalid();
++        open(this); accessible(s.allocation); if (!s.allocation.buffer) invalid();
+         backingBytes(s.allocation.buffer);
+         if (s.allocation.refs.size !== 1) throw Object.assign(new Error('Aliased backing'), { code: 'TRANSFER_ALIASED' });
+         s.allocation.owner = target;
+@@ -145,7 +185,7 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals) {
+       ref(this: Lease, key: string) { const r = open(this).keys.get(key); if (!r) invalid(); return r; },
+       allocateBuffer(this: Lease, r: Ref) {
+         const s = refs.get(r); if (!s || s.lease !== this) invalid();
+-        open(this); if (!s.allocation || s.allocation.buffer) invalid();
++        open(this); if (!s.allocation || s.allocation.buffer) invalid(); accessible(s.allocation);
+         try {
+           const b = allocate(s.allocation.bytes);
+           if (backingBytes(b) !== s.allocation.bytes || backings.has(b)) invalid();
+@@ -184,7 +224,7 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals) {
+     registerExisting(backing: ArrayBuffer, lease: Lease, c: Category, owner: Realm): Ref | Refusal {
+       leaseState(lease); category(c); realm(owner); const bytes = backingBytes(backing);
+       const known = backings.get(backing);
+-      if (known?.refs.size && known.owner !== owner) invalid();
++      if (known?.refs.size) { accessible(known); if (known.owner !== owner) invalid(); }
+       open(lease);
+       if (known?.refs.size) return lease.retain(known.refs.values().next().value!, c, owner);
+       const n = counts(); n.managed += bytes; if (c !== 'resident') n[c] += bytes;
+@@ -194,11 +234,11 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals) {
+     },
+     snapshot() {
+       return Object.freeze({ ...counts(), allocations: Object.freeze([...allocations].map(a => Object.freeze({
+-        id: a.id, bytes: a.bytes, realm: realms.get(a.owner)!, phase: a.buffer ? 'live' as const : 'reserved' as const,
++        id: a.id, bytes: a.bytes, realm: realms.get(a.owner)!, phase: native ? (a.phase ?? (a.buffer ? 'MAIN' as const : 'reserved' as const)) : (a.buffer ? 'live' as const : 'reserved' as const),
+         refs: Object.freeze([...a.refs].map(r => { const s = refs.get(r)!; return Object.freeze({ id: s.id, category: s.category }); })),
+       }))) });
+     },
+-  }) };
++  }), handoff };
+ }
+ export type ResourceLedger = ReturnType<typeof createResourceLedger>;
+ export type ResourceLedgerSnapshot = ReturnType<ResourceLedger['snapshot']>;

@@ -1,0 +1,42 @@
+{
+  "repository": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "snapshot_scope": "all regular repository files excluding .git and node_modules; no dependency writes/install",
+  "start_count": 7230,
+  "end_count": 7230,
+  "changed": [
+    "src/compute/nativeHandoff.ts",
+    "tests/v03-native-handoff.test.ts"
+  ],
+  "added": [],
+  "deleted": [],
+  "unchanged_count": 7228,
+  "named_protected": {
+    "src/compute/resourceLedger.ts": {
+      "start": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "end": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "unchanged": true
+    },
+    "src/compute/nativeHandoff.worker.ts": {
+      "start": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "end": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "unchanged": true
+    },
+    "src/compute/workerPool.ts": {
+      "start": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "end": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "unchanged": true
+    },
+    "docs/plans/v03-native-broker-g1b-design.md": {
+      "start": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+      "end": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+      "unchanged": true
+    },
+    "docs/plans/v03-source-admission-owner-design.md": {
+      "start": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+      "end": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+      "unchanged": true
+    }
+  },
+  "original_quality_entries_verified_unchanged": 39,
+  "original_review_hashes_unchanged": true
+}

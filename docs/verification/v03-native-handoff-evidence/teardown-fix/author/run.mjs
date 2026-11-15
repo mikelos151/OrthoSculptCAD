@@ -1,0 +1,17 @@
+import {readFileSync,writeFileSync,mkdirSync,copyFileSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const root='C:/Users/sandr/OrthoSculptCAD',dir='C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-fix';
+const [label,...args]=process.argv.slice(2),out=dir+'/runs/'+label;
+if(existsSync(out))throw Error('immutable run already exists');mkdirSync(out,{recursive:true});
+const files=['src/compute/nativeHandoff.ts','tests/v03-native-handoff.test.ts','src/compute/resourceLedger.ts','src/compute/nativeHandoff.worker.ts','src/compute/workerPool.ts'];
+const freeze=()=>Object.fromEntries(files.map(p=>[p,createHash('sha256').update(readFileSync(root+'/'+p)).digest('hex')]));
+writeFileSync(out+'/input-start.json',JSON.stringify(freeze(),null,2));
+for(const p of files.slice(0,2))copyFileSync(root+'/'+p,out+'/'+p.split('/').at(-1));
+const command={command:[process.execPath,...args],cwd:root,env:{NODE_OPTIONS:''}};
+writeFileSync(out+'/command.json',JSON.stringify(command,null,2));
+const r=spawnSync(process.execPath,args,{cwd:root,encoding:'utf8',timeout:300000,env:{...process.env,NODE_OPTIONS:''}});
+writeFileSync(out+'/stdout.log',r.stdout??'');writeFileSync(out+'/stderr.log',r.stderr??'');
+const result={actual_exit:r.status,signal:r.signal,error:r.error?String(r.error):null};
+writeFileSync(out+'/result.json',JSON.stringify(result,null,2));writeFileSync(out+'/input-end.json',JSON.stringify(freeze(),null,2));
+console.log(JSON.stringify({...command,...result}));console.log((r.stdout??'').slice(-7000));console.log((r.stderr??'').slice(-3000));process.exitCode=r.status??1;

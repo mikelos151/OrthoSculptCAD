@@ -1,0 +1,14 @@
+{
+  "loader.mjs": {
+    "original": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+    "copy": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0"
+  },
+  "witness.mjs": {
+    "original": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+    "copy": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d"
+  },
+  "boundary.mjs": {
+    "original": "6849b664ca92a80813d3b34a75ea8d24a27047fe4a59a07cd72e2aca7476e51f",
+    "copy": "6849b664ca92a80813d3b34a75ea8d24a27047fe4a59a07cd72e2aca7476e51f"
+  }
+}

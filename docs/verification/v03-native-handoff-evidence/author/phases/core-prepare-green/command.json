@@ -1,0 +1,19 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--max-old-space-size=256",
+    "--max-semi-space-size=8",
+    "C:/Users/sandr/OrthoSculptCAD/node_modules/vitest/vitest.mjs",
+    "run",
+    "--config",
+    "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/vitest.config.mjs"
+  ],
+  "exit": 0,
+  "error": "",
+  "signal": null,
+  "hashes": {
+    "src/compute/resourceLedger.ts": "fc9d6f1b31e6e0cebeca97bf7e2938d07c6cd6910b66afebd7ec709f879855b2",
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "tests/v03-native-handoff.test.ts": "63b809b5453372efb3bac2fd0a588da9fc5d2fe4b7c951583833fa39cfd72f32"
+  }
+}

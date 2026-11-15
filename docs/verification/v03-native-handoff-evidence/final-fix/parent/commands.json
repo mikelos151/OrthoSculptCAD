@@ -1,0 +1,59 @@
+[
+  {
+    "label": "full-unit",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "--no-file-parallelism",
+      "--reporter=json",
+      "--outputFile=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-final-parent\\full-unit.json"
+    ],
+    "exit": 0,
+    "nodeOptions": "--max-old-space-size=256 --max-semi-space-size=8",
+    "timeout": 360
+  },
+  {
+    "label": "typecheck",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit",
+      "--incremental",
+      "false"
+    ],
+    "exit": 0,
+    "nodeOptions": "--max-old-space-size=512 --max-semi-space-size=8",
+    "timeout": 300
+  },
+  {
+    "label": "python-reference",
+    "argv": [
+      "C:\\Users\\sandr\\AppData\\Local\\hermes\\tools\\python-3.14.9+20261021-win32-x64\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/reference",
+      "-p",
+      "test_*.py"
+    ],
+    "exit": 0,
+    "nodeOptions": "--max-old-space-size=256 --max-semi-space-size=8",
+    "timeout": 300
+  },
+  {
+    "label": "npm-audit",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+      "audit",
+      "--json"
+    ],
+    "exit": 0,
+    "nodeOptions": "--max-old-space-size=128 --max-semi-space-size=8",
+    "timeout": 180
+  }
+]

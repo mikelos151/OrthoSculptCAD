@@ -1,0 +1,124 @@
+{
+  "passed": false,
+  "scope": "G1b1bInputOnly",
+  "Q1": "CLOSED",
+  "Q2": "HOLD",
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "id": "Q2-INTEGRATION",
+      "severity": "blocking",
+      "locations": [
+        "src/compute/workerPool.ts:29-38",
+        "src/compute/workerPool.ts:99-101",
+        "src/compute/nativeHandoff.ts:91-105",
+        "tests/v03-native-handoff.test.ts:174-176"
+      ],
+      "summary": "Per-listener best-effort cleanup covers only the broker listeners, not the pool-owned error/messageerror listeners. A removal exception in pool binding.stop prevents terminate and permanently strands the same ticket.",
+      "reproduction": "Run node run.mjs boundary; cases listener throw action=release|return removal=4|5 inject a throw only at a pool-owned listener removal on the actual compiled final composition. Successful terminate implementation is never called.",
+      "observed": "4 FAIL: terminate0, pending1/FAILED, occupied1/REVOKING; managed/job/history12/5/7, controlled refs3/4 on allocations1/2. Removing the injection then release/dispose leaves these unchanged. At removal4 the fifth listener is never attempted.",
+      "norm": "v03-native-broker-g1b-design.md:118-120 and Q2 correction requirement: listener-removal failures must not block required terminal attempt; exact ticket settles only after successful native termination.",
+      "criterion": "Every listener cleanup across the real composition must be best-effort and must not prevent the one required native terminate attempt. On successful terminate retire only the exact ticket and free the slot; on genuine terminate failure retain exact slot/charge, preserve original error, and do not retry. Keep frozen pool readonly unless parent explicitly authorizes a separately scoped correction.",
+      "evidence_kind": "UNIT fault injection; no native reachability, exploit, authentication failure or payload leak demonstrated"
+    }
+  ],
+  "suggestions": [
+    "Extend final Q2 regression fixtures to identify each of the five listener registrations, not only a throw for type message. Existing fault only reaches broker-owned cleanup."
+  ],
+  "summary": "Q1 and original Q2 witnesses now pass, but Q2 integration closure remains HOLD because pool-owned listener removal exceptions prevent native termination.",
+  "verification": {
+    "strict128": {
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=8",
+        "C:/Users/sandr/OrthoSculptCAD/node_modules/typescript/bin/tsc",
+        "-p",
+        "C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-spec-rereview/tsconfig.json"
+      ],
+      "cwd": "C:/Users/sandr/OrthoSculptCAD",
+      "actual_exit": 0,
+      "signal": null,
+      "error": null
+    },
+    "original_quality87": {
+      "actual_exit": 0,
+      "total": 87,
+      "passed": 87,
+      "failed": 0
+    },
+    "boundary55": {
+      "actual_exit": 1,
+      "total": 55,
+      "passed": 51,
+      "failed": 4
+    },
+    "supporting33": {
+      "actual_exit": 0,
+      "total": 33,
+      "passed": 33,
+      "failed": 0
+    },
+    "tdd": {
+      "q1_same_tests": true,
+      "q1_red_exit": 1,
+      "q1_green_exit": 0,
+      "q2_same_tests": true,
+      "q2_red_exit": 1,
+      "q2_green_exit": 0,
+      "vertical": {
+        "q1green_equals_q2red": true
+      },
+      "old28": {
+        "body_identical_except_import": true,
+        "original_sha256": "3da8372450ab1330388fb9d50960c79d5d009e114c6019ab6c98b74ac18511e6"
+      },
+      "extra_two": {
+        "classification": "existing-behavior coverage, not additional TDD",
+        "actual_exit": 0,
+        "production_unchanged_from_q2green": true
+      }
+    }
+  },
+  "hashes_before": {
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "tests/v03-native-handoff.test.ts": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "docs/plans/v03-native-broker-g1b-design.md": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+    "docs/plans/v03-source-admission-owner-design.md": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+  },
+  "hashes_after": {
+    "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+    "src/compute/nativeHandoff.ts": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+    "src/compute/nativeHandoff.worker.ts": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+    "tests/v03-native-handoff.test.ts": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+    "src/compute/workerPool.ts": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+    "docs/plans/v03-native-broker-g1b-design.md": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+    "docs/plans/v03-source-admission-owner-design.md": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce"
+  },
+  "unchanged": true,
+  "fix_manifest": {
+    "expected_sha256": "1c397953bb38c787c3d5262fafbefe6c4d6fed3f0fa72995383e52132d8e19df",
+    "actual_sha256": "1c397953bb38c787c3d5262fafbefe6c4d6fed3f0fa72995383e52132d8e19df",
+    "declared_entries": 148,
+    "actual_entries": 148,
+    "scratch_entries": 146,
+    "repository_entries": 2,
+    "errors": []
+  },
+  "acceptance": false,
+  "limits": "No browser/full-suite/native replay run here; those belong to parent. No inference from EventTarget/structuredClone to native Worker fault reachability. No global cap, source admission, G1b1c, remote-new, graceful lifecycle, G2/G3 or CAD-product approval.",
+  "files_written": "Only this declared scratch directory; repository/source/tests/docs/config/skills/profile/index/dependencies unchanged.",
+  "encountered": [
+    {
+      "issue": "Audit initial source-snapshot lookup used nonexistent before/tests path; ENOENT, corrected to runs/baseline after discovery.",
+      "impact": "Harness-only; no repository change. TDD audit completed successfully using actual saved baseline."
+    },
+    {
+      "issue": "Original Node experimental-loader warning retained.",
+      "impact": "No test failure; stderr preserved."
+    }
+  ]
+}

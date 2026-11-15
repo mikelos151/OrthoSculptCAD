@@ -1,6 +1,7 @@
 import type { ComputePayloads, ComputeResults, TaskOptions } from './types';
 import { executeGeometry } from './execute';
 import { WorkerClient } from './client';
+import { assertLegacyAdmission, beginLegacyMain } from './legacyBroker';
 export type { ComputePayloads, ComputeResults, TaskOptions } from './types';
 export { createWorkerSliceEngine } from './sliceEngine';
 export type { WorkerSliceEngine } from './sliceEngine';
@@ -12,14 +13,18 @@ export async function runGeometryTask<K extends keyof ComputePayloads>(op: K, pa
   if (signal?.aborted) throw abortError();
   const appearance = needsAppearance(op);
   preflightMesh(payload.mesh, appearance);
-  const parameters = copyParameters(op, payload);
+
   const nodeOnly = typeof window === 'undefined' && typeof Worker === 'undefined';
+  assertLegacyAdmission();
+  const parameters = copyParameters(op, payload);
   // Reserve the worker before allocating any copies: at most two cold uploads/jobs.
   const client = nodeOnly ? undefined : new WorkerClient();
+  const settleMain = beginLegacyMain();
   const abort = () => client?.dispose(abortError());
   signal?.addEventListener('abort', abort, { once: true });
   try {
-    const mesh = await copyMeshForWorker(payload.mesh, appearance, signal);
+    let mesh;
+    try { mesh = await copyMeshForWorker(payload.mesh, appearance, signal); } finally { settleMain(); }
     if (signal?.aborted) throw abortError();
     const owned = { ...parameters, mesh } as ComputePayloads[K];
     if (!client) return await executeGeometry(op, owned);

@@ -1,3 +1,4 @@
+import { beginLegacyMain } from './legacyBroker';
 import type { MeshData, SliceResult } from '../types';
 import type { TaskOptions } from './types';
 import { WorkerClient, WORKER_TIMEOUT_MS } from './client';
@@ -32,7 +33,9 @@ export async function createWorkerSliceEngine(mesh: MeshData, opts?: TaskOptions
     }, () => dispose(new Error('Nie udało się odczytać przekroju.')));
   };
   try {
-    const owned = await copyMeshForWorker(mesh, false, opts?.signal);
+    const settleMain = beginLegacyMain();
+    let owned;
+    try { owned = await copyMeshForWorker(mesh, false, opts?.signal); } finally { settleMain(); }
     if (opts?.signal?.aborted) throw abortError();
     await client.request({ kind: 'init', mesh: owned });
     return { kind: 'worker', slice: (z, readOptions) => {

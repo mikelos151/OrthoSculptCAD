@@ -1,0 +1,25 @@
+{
+  "exact_baseline_diff": {
+    "src/compute/nativeHandoff.ts": {
+      "added": 18,
+      "removed": 8
+    },
+    "tests/v03-native-handoff.test.ts": {
+      "added": 138,
+      "removed": 1
+    }
+  },
+  "added_line_trailing_whitespace": [],
+  "original_28_test_behaviors_byte_preserved_except_import": true,
+  "security_self_review": {
+    "hardcoded_credentials": false,
+    "dynamic_execution": false,
+    "external_IO_added": false,
+    "API_changes": false
+  },
+  "git_no_index_check": {
+    "actual_exit": 1,
+    "meaning": "files differ; both stdout logs empty, stderr contains only LF/CRLF warnings; no attributes/config changed"
+  },
+  "python_whitespace_check_exit": 0
+}

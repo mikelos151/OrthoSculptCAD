@@ -1,0 +1,9 @@
+{
+  "expected_sha256": "1c397953bb38c787c3d5262fafbefe6c4d6fed3f0fa72995383e52132d8e19df",
+  "actual_sha256": "1c397953bb38c787c3d5262fafbefe6c4d6fed3f0fa72995383e52132d8e19df",
+  "declared_entries": 148,
+  "actual_entries": 148,
+  "scratch_entries": 146,
+  "repository_entries": 2,
+  "errors": []
+}

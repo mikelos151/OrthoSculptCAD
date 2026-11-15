@@ -1,0 +1,2160 @@
+{
+  "passed": true,
+  "hashes": {
+    "source": {
+      "src/compute/workerPool.ts": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+      "src/compute/resourceLedger.ts": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b"
+    },
+    "served": {
+      "workerPool.js": "b39762a96a048fb9ee5d2e9f275d3fb1cccef5d3413e21e9b6978e7e27538459",
+      "resourceLedger.js": "12877161ed30b54a5603e11540fd0ab13fca63466287560f64c54ef1afe9b93a",
+      "fixture.mjs": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256"
+    }
+  },
+  "result": {
+    "checks": [
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "two real idle workers hold two slots",
+        "pass": true
+      },
+      {
+        "name": "third role BUSY",
+        "pass": true
+      },
+      {
+        "name": "BUSY has zero constructors, sends, allocation, reservation or binding deltas",
+        "pass": true
+      },
+      {
+        "name": "controlled native terminate h1 once",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "retired h1 cannot terminate or free h3",
+        "pass": true
+      },
+      {
+        "name": "native-context forged handle rejected",
+        "pass": true
+      },
+      {
+        "name": "native-context forged handle rejected",
+        "pass": true
+      },
+      {
+        "name": "native-context forged handle rejected",
+        "pass": true
+      },
+      {
+        "name": "native-context forged handle rejected",
+        "pass": true
+      },
+      {
+        "name": "native-context forged handle rejected",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "forty actual serial incarnations reuse two domains under maxRealms=3",
+        "pass": true,
+        "domains": [
+          2,
+          3
+        ],
+        "serialIncarnations": 40
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "actual native constructor SyntaxError rolls back reservation and slot",
+        "pass": true,
+        "ctorFailure": {
+          "name": "SyntaxError",
+          "message": "Failed to construct 'Worker': 'http://[' is not a valid URL."
+        }
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "actual trusted native worker error performs one controlled terminal",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "error-retired lease cannot touch replacement",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "reservation precedes native constructor",
+        "pass": true
+      },
+      {
+        "name": "acquire accepted",
+        "pass": true
+      },
+      {
+        "name": "dispose is terminal and closes both native workers once",
+        "pass": true
+      },
+      {
+        "name": "all created native objects have exactly one successful terminate invocation",
+        "pass": true
+      },
+      {
+        "name": "native object peak is at most two (not an OS-thread or RSS measurement)",
+        "pass": true
+      },
+      {
+        "name": "primitive never sent or materialized payload",
+        "pass": true
+      },
+      {
+        "name": "all native worker close notifications observed before context teardown",
+        "pass": true
+      },
+      {
+        "name": "no external requests or unexpected page errors",
+        "pass": true
+      }
+    ],
+    "events": [
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 1
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 1,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 2
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 2,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 1
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 3
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 3,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 3
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 2
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 4
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 4,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 5
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 5,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 5
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 6
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 6,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 6
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 7
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 7,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 7
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 8
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 8,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 8
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 9
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 9,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 9
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 10
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 10,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 10
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 11
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 11,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 11
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 12
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 12,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 12
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 13
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 13,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 13
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 14
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 14,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 14
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 15
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 15,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 15
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 16
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 16,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 16
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 17
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 17,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 17
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 18
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 18,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 18
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 19
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 19,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 19
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 20
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 20,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 20
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 21
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 21,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 21
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 22
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 22,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 22
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 23
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 23,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 23
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 24
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 24,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 24
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 25
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 25,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 25
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 26
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 26,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 26
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 27
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 27,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 27
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 28
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 28,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 28
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 29
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 29,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 29
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 30
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 30,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 30
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 31
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 31,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 31
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 32
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 32,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 32
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 33
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 33,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 33
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 34
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 34,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 34
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 35
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 35,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 35
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 36
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 36,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 36
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 37
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 37,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 37
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 38
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 38,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 38
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 39
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 39,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 39
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 40
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 40,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 40
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 41
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 41,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 41
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 42
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 42,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 42
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 43
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 43,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 43
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 44
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 44,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 44
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 4
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "invalid"
+      },
+      {
+        "type": "constructor-threw",
+        "name": "SyntaxError"
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 45
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 45,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 45
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "error"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 46
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 46,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 46
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 47
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 47,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 47
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 48
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 48,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "constructor-attempt",
+        "mode": "idle"
+      },
+      {
+        "type": "constructor-success",
+        "ordinal": 49
+      },
+      {
+        "type": "native-worker-message",
+        "ordinal": 49,
+        "data": {
+          "fixture": "idle-ready"
+        }
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 48
+      },
+      {
+        "type": "terminate-invoked",
+        "ordinal": 49
+      }
+    ],
+    "expectedErrors": [
+      {
+        "message": "Uncaught Error: G1B_EXPECTED_WORKER_ERROR",
+        "trusted": true,
+        "ordinal": 46
+      }
+    ],
+    "metrics": {
+      "attempts": 50,
+      "created": 49,
+      "terminated": 49,
+      "sends": 0,
+      "allocations": 0
+    },
+    "maximumLiveObjects": 2,
+    "ledger": {
+      "managed": 0,
+      "job": 0,
+      "history": 0,
+      "allocations": []
+    },
+    "pool": {
+      "disposed": true,
+      "ownershipDomains": 3,
+      "occupied": 0,
+      "slots": [
+        {
+          "ordinal": 0,
+          "incarnation": 8,
+          "generation": 0,
+          "phase": "FREE"
+        },
+        {
+          "ordinal": 1,
+          "incarnation": 42,
+          "generation": 0,
+          "phase": "FREE"
+        }
+      ]
+    },
+    "limitations": [
+      "Pool primitive only; App/WorkerClient/runDisplayTask remain legacy.",
+      "Native delayed old binding event after terminate was not forced; captured late-listener guard is TEST unit coverage.",
+      "Worker close notification and terminate invocation are not physical thread join/GC/RSS proof.",
+      "No ACK/handoff/transport/main-SHA/admission/publication or audited-source capability."
+    ],
+    "browser": {
+      "version": "156.0.8078.4",
+      "nativeCreated": 49,
+      "nativeCloseNotificationsBeforeContextClose": 49
+    }
+  },
+  "pageErrors": [],
+  "externalRequests": [],
+  "workerEvents": [
+    {
+      "type": "created",
+      "id": 1,
+      "url": "blob:http://127.0.0.1:55846/d3701d09-f3e7-4a81-95eb-ad78ee141b16"
+    },
+    {
+      "type": "created",
+      "id": 2,
+      "url": "blob:http://127.0.0.1:55846/3aaba705-b47b-4c9c-a2e0-7a88c05d8d01"
+    },
+    {
+      "type": "close-notification",
+      "id": 1
+    },
+    {
+      "type": "created",
+      "id": 3,
+      "url": "blob:http://127.0.0.1:55846/90186397-e216-49db-9cba-3da151606572"
+    },
+    {
+      "type": "close-notification",
+      "id": 3
+    },
+    {
+      "type": "close-notification",
+      "id": 2
+    },
+    {
+      "type": "created",
+      "id": 4,
+      "url": "blob:http://127.0.0.1:55846/312da6b6-8f59-4ef1-9b66-03e7cd2c25f6"
+    },
+    {
+      "type": "created",
+      "id": 5,
+      "url": "blob:http://127.0.0.1:55846/52dce9f4-acec-4c36-8d52-49fa7072532e"
+    },
+    {
+      "type": "close-notification",
+      "id": 5
+    },
+    {
+      "type": "created",
+      "id": 6,
+      "url": "blob:http://127.0.0.1:55846/ed7ee6ca-bd85-4643-bb35-67648e9e5657"
+    },
+    {
+      "type": "close-notification",
+      "id": 6
+    },
+    {
+      "type": "created",
+      "id": 7,
+      "url": "blob:http://127.0.0.1:55846/cece52a2-2991-4dae-871b-30d9b8abc66d"
+    },
+    {
+      "type": "close-notification",
+      "id": 7
+    },
+    {
+      "type": "created",
+      "id": 8,
+      "url": "blob:http://127.0.0.1:55846/ccff55aa-718d-4af4-9da6-94f5650cf818"
+    },
+    {
+      "type": "close-notification",
+      "id": 8
+    },
+    {
+      "type": "created",
+      "id": 9,
+      "url": "blob:http://127.0.0.1:55846/abdf82c0-a083-4fa4-ac0e-3edeb2e2b368"
+    },
+    {
+      "type": "close-notification",
+      "id": 9
+    },
+    {
+      "type": "created",
+      "id": 10,
+      "url": "blob:http://127.0.0.1:55846/a34698e4-74e4-4cae-acc2-3531f8d212e4"
+    },
+    {
+      "type": "close-notification",
+      "id": 10
+    },
+    {
+      "type": "created",
+      "id": 11,
+      "url": "blob:http://127.0.0.1:55846/6994faec-09a0-415e-8e9b-96bca51f6869"
+    },
+    {
+      "type": "close-notification",
+      "id": 11
+    },
+    {
+      "type": "created",
+      "id": 12,
+      "url": "blob:http://127.0.0.1:55846/606dabf9-fd29-4f9c-b4bd-d808e8eab320"
+    },
+    {
+      "type": "close-notification",
+      "id": 12
+    },
+    {
+      "type": "created",
+      "id": 13,
+      "url": "blob:http://127.0.0.1:55846/6171ab72-b323-4f30-acaf-737328825d52"
+    },
+    {
+      "type": "close-notification",
+      "id": 13
+    },
+    {
+      "type": "created",
+      "id": 14,
+      "url": "blob:http://127.0.0.1:55846/088dedac-bce7-4ef7-8aed-5fde0a8d4e0c"
+    },
+    {
+      "type": "close-notification",
+      "id": 14
+    },
+    {
+      "type": "created",
+      "id": 15,
+      "url": "blob:http://127.0.0.1:55846/e5accba0-b528-473a-80b4-257b22126de2"
+    },
+    {
+      "type": "close-notification",
+      "id": 15
+    },
+    {
+      "type": "created",
+      "id": 16,
+      "url": "blob:http://127.0.0.1:55846/8ac49937-d820-4393-97ec-6bf2c7134416"
+    },
+    {
+      "type": "close-notification",
+      "id": 16
+    },
+    {
+      "type": "created",
+      "id": 17,
+      "url": "blob:http://127.0.0.1:55846/d8b06464-065e-4180-878a-311a9e2e87f9"
+    },
+    {
+      "type": "close-notification",
+      "id": 17
+    },
+    {
+      "type": "created",
+      "id": 18,
+      "url": "blob:http://127.0.0.1:55846/1dca51b1-bfa6-4144-b008-b01e81ef4928"
+    },
+    {
+      "type": "close-notification",
+      "id": 18
+    },
+    {
+      "type": "created",
+      "id": 19,
+      "url": "blob:http://127.0.0.1:55846/c916b3e3-9514-4009-a139-e99a11fb20c9"
+    },
+    {
+      "type": "close-notification",
+      "id": 19
+    },
+    {
+      "type": "created",
+      "id": 20,
+      "url": "blob:http://127.0.0.1:55846/8f84e9db-0718-41db-9d60-cfc157851f7e"
+    },
+    {
+      "type": "close-notification",
+      "id": 20
+    },
+    {
+      "type": "created",
+      "id": 21,
+      "url": "blob:http://127.0.0.1:55846/15c9f598-3763-4578-9cf3-c78c0bfbeac0"
+    },
+    {
+      "type": "close-notification",
+      "id": 21
+    },
+    {
+      "type": "created",
+      "id": 22,
+      "url": "blob:http://127.0.0.1:55846/6433ccb2-c89b-4989-b1aa-f1a452647f64"
+    },
+    {
+      "type": "close-notification",
+      "id": 22
+    },
+    {
+      "type": "created",
+      "id": 23,
+      "url": "blob:http://127.0.0.1:55846/16853f6a-5332-4346-aae7-d3f07e181e83"
+    },
+    {
+      "type": "close-notification",
+      "id": 23
+    },
+    {
+      "type": "created",
+      "id": 24,
+      "url": "blob:http://127.0.0.1:55846/d35c6519-710a-4f20-bc3d-2962b88710df"
+    },
+    {
+      "type": "close-notification",
+      "id": 24
+    },
+    {
+      "type": "created",
+      "id": 25,
+      "url": "blob:http://127.0.0.1:55846/ef7a7b00-fe06-4f13-b15f-d5f7c6b699ca"
+    },
+    {
+      "type": "close-notification",
+      "id": 25
+    },
+    {
+      "type": "created",
+      "id": 26,
+      "url": "blob:http://127.0.0.1:55846/d0325a74-fd14-4b22-ac1c-e3d5ea24aace"
+    },
+    {
+      "type": "close-notification",
+      "id": 26
+    },
+    {
+      "type": "created",
+      "id": 27,
+      "url": "blob:http://127.0.0.1:55846/5cf94fc6-bde6-447c-acef-d0868aac8a69"
+    },
+    {
+      "type": "close-notification",
+      "id": 27
+    },
+    {
+      "type": "created",
+      "id": 28,
+      "url": "blob:http://127.0.0.1:55846/e8855355-843d-459b-842c-23d7c53bb891"
+    },
+    {
+      "type": "close-notification",
+      "id": 28
+    },
+    {
+      "type": "created",
+      "id": 29,
+      "url": "blob:http://127.0.0.1:55846/b5056e2a-4757-405a-b303-e4fd79f2dfd0"
+    },
+    {
+      "type": "close-notification",
+      "id": 29
+    },
+    {
+      "type": "created",
+      "id": 30,
+      "url": "blob:http://127.0.0.1:55846/98da291e-d90d-4443-a004-328d4568581e"
+    },
+    {
+      "type": "close-notification",
+      "id": 30
+    },
+    {
+      "type": "created",
+      "id": 31,
+      "url": "blob:http://127.0.0.1:55846/1f2a0cf2-7a30-43c2-8d83-5e0af52bc1dc"
+    },
+    {
+      "type": "close-notification",
+      "id": 31
+    },
+    {
+      "type": "created",
+      "id": 32,
+      "url": "blob:http://127.0.0.1:55846/7c1b014b-d6de-4acb-9a60-f260351d4166"
+    },
+    {
+      "type": "close-notification",
+      "id": 32
+    },
+    {
+      "type": "created",
+      "id": 33,
+      "url": "blob:http://127.0.0.1:55846/6cfce78a-9bd1-4966-850e-b1ad2ec2f0d1"
+    },
+    {
+      "type": "close-notification",
+      "id": 33
+    },
+    {
+      "type": "created",
+      "id": 34,
+      "url": "blob:http://127.0.0.1:55846/a5cb3705-9210-487f-a286-24c585c9ed70"
+    },
+    {
+      "type": "close-notification",
+      "id": 34
+    },
+    {
+      "type": "created",
+      "id": 35,
+      "url": "blob:http://127.0.0.1:55846/d5ae780b-03df-43a6-af61-75ab70e57de9"
+    },
+    {
+      "type": "close-notification",
+      "id": 35
+    },
+    {
+      "type": "created",
+      "id": 36,
+      "url": "blob:http://127.0.0.1:55846/d85282e2-f4dd-4175-b449-12b717f1372a"
+    },
+    {
+      "type": "close-notification",
+      "id": 36
+    },
+    {
+      "type": "created",
+      "id": 37,
+      "url": "blob:http://127.0.0.1:55846/daeba322-864b-410c-95d9-8ed4a34d1bee"
+    },
+    {
+      "type": "close-notification",
+      "id": 37
+    },
+    {
+      "type": "created",
+      "id": 38,
+      "url": "blob:http://127.0.0.1:55846/6ac0e246-f5a1-41bd-bc88-9121544f0cf3"
+    },
+    {
+      "type": "close-notification",
+      "id": 38
+    },
+    {
+      "type": "created",
+      "id": 39,
+      "url": "blob:http://127.0.0.1:55846/21861911-1401-40b5-94fd-44258691eeb7"
+    },
+    {
+      "type": "close-notification",
+      "id": 39
+    },
+    {
+      "type": "created",
+      "id": 40,
+      "url": "blob:http://127.0.0.1:55846/ebec0f7a-a4f9-4933-963f-a94283eb4131"
+    },
+    {
+      "type": "close-notification",
+      "id": 40
+    },
+    {
+      "type": "created",
+      "id": 41,
+      "url": "blob:http://127.0.0.1:55846/ecbefb82-e519-413b-9b38-7411b67adf43"
+    },
+    {
+      "type": "close-notification",
+      "id": 41
+    },
+    {
+      "type": "created",
+      "id": 42,
+      "url": "blob:http://127.0.0.1:55846/8704b230-9b78-453f-af7d-bda06a8ef4d2"
+    },
+    {
+      "type": "close-notification",
+      "id": 42
+    },
+    {
+      "type": "created",
+      "id": 43,
+      "url": "blob:http://127.0.0.1:55846/4ee0a4cd-5576-4605-91dd-7f0797534c59"
+    },
+    {
+      "type": "close-notification",
+      "id": 43
+    },
+    {
+      "type": "created",
+      "id": 44,
+      "url": "blob:http://127.0.0.1:55846/ccdfd709-42e4-4933-9cca-5d57eaedd4bc"
+    },
+    {
+      "type": "close-notification",
+      "id": 44
+    },
+    {
+      "type": "close-notification",
+      "id": 4
+    },
+    {
+      "type": "created",
+      "id": 45,
+      "url": "blob:http://127.0.0.1:55846/3e5ac722-2b1d-4c41-9b4d-873f8dec3730"
+    },
+    {
+      "type": "close-notification",
+      "id": 45
+    },
+    {
+      "type": "created",
+      "id": 46,
+      "url": "blob:http://127.0.0.1:55846/b9c70fe7-8cc8-4824-b629-618d79aa555e"
+    },
+    {
+      "type": "close-notification",
+      "id": 46
+    },
+    {
+      "type": "created",
+      "id": 47,
+      "url": "blob:http://127.0.0.1:55846/abb9293e-f14c-436c-97b5-fa95c1489796"
+    },
+    {
+      "type": "close-notification",
+      "id": 47
+    },
+    {
+      "type": "created",
+      "id": 48,
+      "url": "blob:http://127.0.0.1:55846/fe8e7a2b-d9fb-43ca-8d7c-76720961e84f"
+    },
+    {
+      "type": "created",
+      "id": 49,
+      "url": "blob:http://127.0.0.1:55846/a14e48dc-792d-4b44-9133-09dfa08cce15"
+    },
+    {
+      "type": "close-notification",
+      "id": 48
+    },
+    {
+      "type": "close-notification",
+      "id": 49
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:55846/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55846/fixture.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55846/resourceLedger.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:55846/workerPool.js",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/d3701d09-f3e7-4a81-95eb-ad78ee141b16",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/3aaba705-b47b-4c9c-a2e0-7a88c05d8d01",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/90186397-e216-49db-9cba-3da151606572",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/312da6b6-8f59-4ef1-9b66-03e7cd2c25f6",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/52dce9f4-acec-4c36-8d52-49fa7072532e",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/ed7ee6ca-bd85-4643-bb35-67648e9e5657",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/cece52a2-2991-4dae-871b-30d9b8abc66d",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/ccff55aa-718d-4af4-9da6-94f5650cf818",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/abdf82c0-a083-4fa4-ac0e-3edeb2e2b368",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/a34698e4-74e4-4cae-acc2-3531f8d212e4",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/6994faec-09a0-415e-8e9b-96bca51f6869",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/606dabf9-fd29-4f9c-b4bd-d808e8eab320",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/6171ab72-b323-4f30-acaf-737328825d52",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/088dedac-bce7-4ef7-8aed-5fde0a8d4e0c",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/e5accba0-b528-473a-80b4-257b22126de2",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/8ac49937-d820-4393-97ec-6bf2c7134416",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/d8b06464-065e-4180-878a-311a9e2e87f9",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/1dca51b1-bfa6-4144-b008-b01e81ef4928",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/c916b3e3-9514-4009-a139-e99a11fb20c9",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/8f84e9db-0718-41db-9d60-cfc157851f7e",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/15c9f598-3763-4578-9cf3-c78c0bfbeac0",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/6433ccb2-c89b-4989-b1aa-f1a452647f64",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/16853f6a-5332-4346-aae7-d3f07e181e83",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/d35c6519-710a-4f20-bc3d-2962b88710df",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/ef7a7b00-fe06-4f13-b15f-d5f7c6b699ca",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/d0325a74-fd14-4b22-ac1c-e3d5ea24aace",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/5cf94fc6-bde6-447c-acef-d0868aac8a69",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/e8855355-843d-459b-842c-23d7c53bb891",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/b5056e2a-4757-405a-b303-e4fd79f2dfd0",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/98da291e-d90d-4443-a004-328d4568581e",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/1f2a0cf2-7a30-43c2-8d83-5e0af52bc1dc",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/7c1b014b-d6de-4acb-9a60-f260351d4166",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/6cfce78a-9bd1-4966-850e-b1ad2ec2f0d1",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/a5cb3705-9210-487f-a286-24c585c9ed70",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/d5ae780b-03df-43a6-af61-75ab70e57de9",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/d85282e2-f4dd-4175-b449-12b717f1372a",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/daeba322-864b-410c-95d9-8ed4a34d1bee",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/6ac0e246-f5a1-41bd-bc88-9121544f0cf3",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/21861911-1401-40b5-94fd-44258691eeb7",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/ebec0f7a-a4f9-4933-963f-a94283eb4131",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/ecbefb82-e519-413b-9b38-7411b67adf43",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/8704b230-9b78-453f-af7d-bda06a8ef4d2",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/4ee0a4cd-5576-4605-91dd-7f0797534c59",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/ccdfd709-42e4-4933-9cca-5d57eaedd4bc",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/3e5ac722-2b1d-4c41-9b4d-873f8dec3730",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/b9c70fe7-8cc8-4824-b629-618d79aa555e",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/abb9293e-f14c-436c-97b5-fa95c1489796",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/fe8e7a2b-d9fb-43ca-8d7c-76720961e84f",
+      "status": 200
+    },
+    {
+      "url": "blob:http://127.0.0.1:55846/a14e48dc-792d-4b44-9133-09dfa08cce15",
+      "status": 200
+    }
+  ],
+  "closed": {
+    "context": true,
+    "browser": true,
+    "server": true,
+    "portRefuses": true
+  }
+}

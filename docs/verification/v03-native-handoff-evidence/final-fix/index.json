@@ -1,0 +1,1578 @@
+{
+  "files": [
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api/before/nativeHandoff.d.ts",
+      "sha256": "21a8a0485b30f38b39966f58b412725222ff21da288adc464080257a53e37a66",
+      "bytes": 3189
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api/before/nativeHandoff.worker.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "bytes": 11
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api/before/resourceLedger.d.ts",
+      "sha256": "482764fdc9967a3e278d5667e86cd509f143416ed71173c5bc01cafeae1071c0",
+      "bytes": 4476
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api/before/workerPool.d.ts",
+      "sha256": "8ff0e1bb1505bb457cb61c90b92f9d04f30145a41425b6518375af094d854252",
+      "bytes": 1699
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api/candidate/nativeHandoff.d.ts",
+      "sha256": "21a8a0485b30f38b39966f58b412725222ff21da288adc464080257a53e37a66",
+      "bytes": 3189
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api/candidate/nativeHandoff.worker.d.ts",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+      "bytes": 11
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api/candidate/resourceLedger.d.ts",
+      "sha256": "482764fdc9967a3e278d5667e86cd509f143416ed71173c5bc01cafeae1071c0",
+      "bytes": 4476
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api/candidate/workerPool.d.ts",
+      "sha256": "8ff0e1bb1505bb457cb61c90b92f9d04f30145a41425b6518375af094d854252",
+      "bytes": 1699
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api-before.command.json",
+      "sha256": "98e07c3cd6fdee4780d913bbaae6cb81f6d805c7877a234107077c5ac4199f55",
+      "bytes": 370
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api-before.json",
+      "sha256": "b97b662e1d442dbb59289e9aed622602a091b62d37c0512d2b8c5dcb811cca21",
+      "bytes": 1137
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api-before.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api-before.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api-candidate.command.json",
+      "sha256": "105956f9fcff8e3a5779c7879f76ab65412fb5d7da7978d051e625ae4bb28678",
+      "bytes": 373
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api-candidate.json",
+      "sha256": "d9d68d74f61877e72405c7d452672eb7dbb317fd148cffcbd98a04d9ca17bbaa",
+      "bytes": 830
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api-candidate.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api-candidate.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/api_proof.py",
+      "sha256": "0d28b31f186d8c00a7f59f1ca83ecfa7f8fe88f2876c194f5c7c5774f17b43a8",
+      "bytes": 1696
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/artifact-manifest.json",
+      "sha256": "6493d5f6e2b433161e48314e6123f29cc16d5b3b311c292d710d4c79867eb43a",
+      "bytes": 44489
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/audit.py",
+      "sha256": "ee107639c372892d1889ad81742a64de847c036aca147d05afab45aceaf1520e",
+      "bytes": 4748
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before/docs/plans/v03-native-broker-g1b-design.md",
+      "sha256": "45cc11a03a92218670bff1fdf77d5fcd1c8f089a318044bdfe9269cecd1285a3",
+      "bytes": 27918
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before/docs/plans/v03-source-admission-owner-design.md",
+      "sha256": "800d85f0f368d76b3c7e8ae4ed908ebc9dec6b11f51c5c5eaf0c5112374ad3ce",
+      "bytes": 53412
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before/src/compute/nativeHandoff.ts",
+      "sha256": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "bytes": 12573
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before/src/compute/nativeHandoff.worker.ts",
+      "sha256": "792a3636e58318c367615ea01179860959a80d5b11aeb97cd02d5e1e6292f990",
+      "bytes": 1795
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before/src/compute/resourceLedger.ts",
+      "sha256": "166bc37f421313aeef899cd12c89681d5c4997774ad91187a65dd5a884aecf0b",
+      "bytes": 18891
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before/src/compute/workerPool.ts",
+      "sha256": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "bytes": 6048
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before/tests/v03-native-handoff.test.ts",
+      "sha256": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+      "bytes": 22718
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before/tests/v03-worker-pool.test.ts",
+      "sha256": "0f977cb7b128492ec33667f805c553de074d1417c60c08bacd6316c0190bc5a7",
+      "bytes": 19370
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/before.json",
+      "sha256": "3644cef874b62fd4e6f60ed5d6ce6de25c98042883803e34f0b8960f2ce7b9ec",
+      "bytes": 872
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/final/src/compute/nativeHandoff.ts",
+      "sha256": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70",
+      "bytes": 13192
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/final/src/compute/workerPool.ts",
+      "sha256": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+      "bytes": 6378
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/final/tests/v03-native-handoff.test.ts",
+      "sha256": "2f5bce9b8356884dbfc07a951cb8df62ad3ab63fc826b16c11120132c7fae687",
+      "bytes": 35148
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/final/tests/v03-worker-pool.test.ts",
+      "sha256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+      "bytes": 21213
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/finalize.py",
+      "sha256": "57665e6b96421bf78836e3e8f1df66492bda380b5aff23cd27ef01901cae0397",
+      "bytes": 9620
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/freeze_scope.py",
+      "sha256": "2b2692a1290e0095de429d6106d786f7280337b24d248dbaeb8031e8b99b2ccf",
+      "bytes": 839
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/full-tsc512.command.json",
+      "sha256": "11cbbeabd5403dca18e5655800094a82811bf82744eaf438fe59671d08aea1b6",
+      "bytes": 351
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/full-tsc512.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/full-tsc512.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/git-after.txt",
+      "sha256": "af170356153b8c266627fb89d2403119a88763ff8c30b65958f2fec8bf1b1167",
+      "bytes": 312
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/git-before.txt",
+      "sha256": "49e2b8a21d3d089200604db5181c54b84f247bab28a31e51fcf2711bf351e739",
+      "bytes": 250
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/git-diff-check.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/git-diff-check.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/handoff.json",
+      "sha256": "7c761e680a2ac6eb2b21a970869287698ec73776c3965e053149790db210a9e8",
+      "bytes": 14881
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/HANDOFF.md",
+      "sha256": "eaef189108c61e5ff38fb42b2bc20f7dcdb455270282fca57e248f1e9f9fc568",
+      "bytes": 4973
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/manifest.py",
+      "sha256": "39badfe21a71ab3784c4a77da6ef4d7d91f1fe3ff2941824a1d4f82d8d87f395",
+      "bytes": 2214
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/minimal.diff",
+      "sha256": "f5b51cee7ae4a27a30d9c94baef2df5c152f797315214270febc5f236d84d2c9",
+      "bytes": 19459
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-copy-proof.json",
+      "sha256": "d6aee8ea1848379d00970317129e43de7f8f0c62ff00ec8cdd1f1225b1811af4",
+      "bytes": 1538
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/fixture-matrix.mjs",
+      "sha256": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+      "bytes": 9298
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/fixture-roundtrip.mjs",
+      "sha256": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c",
+      "bytes": 2802
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/native-cli.mjs",
+      "sha256": "ccfe5a1a735b43d10e3ef168e14862f3db4f8dd280b103ad6166b7dadac8ce66",
+      "bytes": 7551
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/fixture.mjs",
+      "sha256": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+      "bytes": 9298
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/native-results.json",
+      "sha256": "919ba017657afdaed253dbf594807a49bfe1c6561903df5d1ff9f57acbaa9ba7",
+      "bytes": 69347
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/fixture-base.mjs",
+      "sha256": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c",
+      "bytes": 2802
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/nativeHandoff.js",
+      "sha256": "1fa86e7204a1f416fb318263afbe004639bc0c7a2452d7d8c1584ce82bb3b050",
+      "bytes": 14051
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/nativeHandoff.worker.js",
+      "sha256": "fa95ed8c531a1873b91f787010e741e781acbf724877d3e6cd1bfd9ba488a2a9",
+      "bytes": 1704
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/resourceLedger.js",
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+      "bytes": 19824
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a",
+      "bytes": 2795
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/worker-return-bytes.js",
+      "sha256": "ea57e83349f05bb09723ce3cb708db21b258ccc9967d581e5382e0b334c863a3",
+      "bytes": 2801
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/worker-return-envelope.js",
+      "sha256": "dab48e10ad02026c719cac53a2c555cbbc8b64b8aa0c96a48f56bbb168a50974",
+      "bytes": 2804
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/worker-return-nonce.js",
+      "sha256": "a221e14e1b31928bbe4bd5d88115d70165d8dc4f079a3d6e097bb37b72e172d3",
+      "bytes": 2801
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/worker-return-reserved.js",
+      "sha256": "2caa280ae9d4ea6230ff93937a92e7ab251bb031237ca72bc0f48293d3ca7061",
+      "bytes": 2804
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff/phases/candidate/served/workerPool.js",
+      "sha256": "97c9374c1157ac36c66a4a3a18a0561e19d74e39bc8bcf9b1105914cbdb5e25d",
+      "bytes": 6045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff.command.json",
+      "sha256": "7dd80c26a8331ca4537741475cc1798d1bd898bad8132ed0bc27b3d4c99bf225",
+      "bytes": 344
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-handoff.stdout.log",
+      "sha256": "a4ddcdce99712b9a3917798e59be81a4c843eca7732b4ee85986dca9aac7a407",
+      "bytes": 158
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool/fixture.mjs",
+      "sha256": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256",
+      "bytes": 8204
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool/native-cli.mjs",
+      "sha256": "2097fbb9f89a773430c8f9a2b181cf83449bf13bce7d16fff92866312761ff9e",
+      "bytes": 5038
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool/native-hashes.json",
+      "sha256": "fe983985b47261609ce24b12468c6388e7651046d464c16100df50b7dadb4a7d",
+      "bytes": 513
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool/native-results.json",
+      "sha256": "157eea7911b85a1b2c84795164d66650c295b8f294967413992380ff74b6f195",
+      "bytes": 47227
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool/served/resourceLedger.js",
+      "sha256": "12877161ed30b54a5603e11540fd0ab13fca63466287560f64c54ef1afe9b93a",
+      "bytes": 15301
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool/served/workerPool.js",
+      "sha256": "b39762a96a048fb9ee5d2e9f275d3fb1cccef5d3413e21e9b6978e7e27538459",
+      "bytes": 4489
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool.command.json",
+      "sha256": "18c9cde971241ab804e77dd13e32cb1d3e725192083796d93e7b36146a7d39e7",
+      "bytes": 320
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-pool.stdout.log",
+      "sha256": "8cb2f5bb0f187584df167f28e4fc301be8f0c06eeb2bf8f2d53ff6d2e2917b0a",
+      "bytes": 458
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native-summary.json",
+      "sha256": "e90cbdeb29c8fcef21bba388a980b8b997c6719bae013409053699801fd85371",
+      "bytes": 3599
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/native_and_types.py",
+      "sha256": "2904e4988eee7b1482331d72934a34c9a22be9a8f286896967089c8ec7c48a6b",
+      "bytes": 3106
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/original-evidence-proof.json",
+      "sha256": "d8cecda0f57a3d6253a6fdff814fec0294229ace345f84d0bad029bd163b75cd",
+      "bytes": 944
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/prepare.py",
+      "sha256": "5497cf57382e5a455876d821fc7c33a2e62c577bea7b88a14fe317af7db6dae9",
+      "bytes": 3143
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/public-api-proof.json",
+      "sha256": "acdf819c04519a9f26797f1549ef8149caddd982df71a242f89f36b305c585c5",
+      "bytes": 1205
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/compiled/nativeHandoff.js",
+      "sha256": "caa42e22c45b9a888623ace9d41d9a67b928cf95409555d38022447f71a36ef1",
+      "bytes": 14045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/compiled/nativeHandoff.worker.js",
+      "sha256": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419",
+      "bytes": 1701
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/compiled/resourceLedger.js",
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+      "bytes": 19824
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/compiled/workerPool.js",
+      "sha256": "97c9374c1157ac36c66a4a3a18a0561e19d74e39bc8bcf9b1105914cbdb5e25d",
+      "bytes": 6045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/fresh-compile-inputs.json",
+      "sha256": "c8344d28866d42f353c66d337a810a2820de8a6e6eb898aff01d351cbcd15253",
+      "bytes": 1390
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/loader.mjs",
+      "sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+      "bytes": 259
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/matrix-1.command.json",
+      "sha256": "ab615055a6a75323cc61decb0c888da2be08c7897cf642313d71cecc2cad34fc",
+      "bytes": 531
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/matrix-1.stderr.log",
+      "sha256": "125b123ed70e2973af444e1aaad6f7fbb9c390204786df7b3bf4054dd78a40a2",
+      "bytes": 450
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/matrix-1.stdout.log",
+      "sha256": "7d301860ecb938adb105987ae8ae150098f0251a2af9133f08efeb1aa58c7dcf",
+      "bytes": 69
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/matrix-results.json",
+      "sha256": "6176f95b1bbd65f87bdd118f070e551e3b4a2537636f382025303a551966f133",
+      "bytes": 14169
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/matrix.mjs",
+      "sha256": "3524229cc02a2f89b944bf7ce37d99e95cdf4ee5c9e7f83fbca0d24bb8cd456e",
+      "bytes": 9335
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/package.json",
+      "sha256": "6dc1b06d6b093e9cccb20bee06a93836eee0420ae26803ca2ce4065d82f070d1",
+      "bytes": 17
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/repro-1.command.json",
+      "sha256": "05374fbbedab840758f2c39553b11aee63bee530a1dee5ecfdc9c3e4d07cf3b5",
+      "bytes": 530
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/repro-1.stderr.log",
+      "sha256": "082e1d29868a32b836e21b7403e68a049f2b7b77641bbfab5f6468b1a20f5513",
+      "bytes": 449
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/repro-1.stdout.log",
+      "sha256": "5a8e131de0f2bc347d30850de71675502898337f5964a9902e57b0a143f13338",
+      "bytes": 6031
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/repro-results.json",
+      "sha256": "81fd06fbc95b33e54d20c3a613cd8302159afd1d442758b23d55a6e47b5e4265",
+      "bytes": 6030
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/repro.mjs",
+      "sha256": "58eb35d08ba1b1cca7111d8060b5713133d9b31bf0057330569486925bcf887d",
+      "bytes": 4027
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/run.mjs",
+      "sha256": "bc5a55d3a25e972f0605e2fe80e6bbeb859419adc2ace44a5af4c4b03f80c563",
+      "bytes": 3774
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/tsconfig.json",
+      "sha256": "ac11dea31bc028a85d1ee1a345e9434523a76d94d4aa120b1ef48af909ff14ef",
+      "bytes": 773
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/unchanged-witnesses.json",
+      "sha256": "5626c1e166b722e2647b49c0ec0d9faf270d561f180f0479aef848bc02c69c84",
+      "bytes": 765
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/witness-1.command.json",
+      "sha256": "3d2e0b8aa339a52e2971d6f69c80842b80c498ced009cfc92c4ed119754e2a3d",
+      "bytes": 532
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/witness-1.stderr.log",
+      "sha256": "194a591b1366bd3aa2e0fd8e28bd8ab6eeffcf9a344522f62e78bb3a5c3f3df5",
+      "bytes": 450
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/witness-1.stdout.log",
+      "sha256": "7f3e08c83b11ce262a17955c0395e4a7b72c412aaca166f58547cc2f68c72460",
+      "bytes": 12322
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/witness-results.json",
+      "sha256": "29b7cc33f9a484d5396caef9fac01bc9ac0767574be2279e46489711ada714be",
+      "bytes": 12321
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality/witness.mjs",
+      "sha256": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+      "bytes": 25179
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-matrix.command.json",
+      "sha256": "5ae4824266aea137f379aebf971f70bc781e2f333326c9118b19a50c9b5c58a5",
+      "bytes": 331
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-matrix.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-matrix.stdout.log",
+      "sha256": "519b573f4d5d05ffd337324dcc8984a9113a010a5a3b209b53225028c9310742",
+      "bytes": 106
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-repro.command.json",
+      "sha256": "6baa2f14a5f4334bcdd382ad6d1982fb67edf5f5cb917665ac87764add9b79ea",
+      "bytes": 329
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-repro.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-repro.stdout.log",
+      "sha256": "ca058584b2e8146f5c552105a88338ce4897fdc740e09cead4f14abb9746bd57",
+      "bytes": 103
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-strict128.command.json",
+      "sha256": "b5313818c6984a02e4da1a9a68d379dfe6a901018956669ca4100617e3cdb45a",
+      "bytes": 409
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-strict128.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-strict128.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-witness.command.json",
+      "sha256": "a68d8387babed67b8a5043190e79affd0f5a0c21eaadb18b1d78d75368d27c57",
+      "bytes": 333
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-witness.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/quality-witness.stdout.log",
+      "sha256": "081a3897a00ce8387e63ea26a9205150e193118c8d56b909067264cc21fed886",
+      "bytes": 105
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/replay-summary.json",
+      "sha256": "0d54ce78aca9f16fc2cc52b412c3c284e9fbdcef210ddeb355dc7e8869952172",
+      "bytes": 2496
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/replay.py",
+      "sha256": "8c4b8ba8a6c43a90fe9fbe2f2c5882a6462a21a5ff738d2384438cf010d0be81",
+      "bytes": 1744
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/root-cause.md",
+      "sha256": "c2df3423785155389a3604405f21cb4c9fb343edc69cf4ddf352078c74c32402",
+      "bytes": 778
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/command.json",
+      "sha256": "7be2fbe2bfe332660399fc218f4e0307f453a5f892b7305cf29ba1d9ce11cc2f",
+      "bytes": 693
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/src/compute/nativeHandoff.ts",
+      "sha256": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70",
+      "bytes": 13192
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/src/compute/workerPool.ts",
+      "sha256": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+      "bytes": 6378
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/stdout.log",
+      "sha256": "b9885af0bb76642fb2633023a95de19c651628bbec09a43c972e050fb791255a",
+      "bytes": 25242
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/summary.json",
+      "sha256": "79167cb4b19c5b6780dd2a28677d168f4bb73643acc3dc9137e64877629a4568",
+      "bytes": 812
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/tests/v03-native-handoff.test.ts",
+      "sha256": "f8f8cd3e23069d84ff6d58cf95e5ec614365edf04ba352854c3fdf90d6e6ee95",
+      "bytes": 30274
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/tests/v03-worker-pool.test.ts",
+      "sha256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+      "bytes": 21213
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/tests.json",
+      "sha256": "9be65649ffb0eb49acae91c16fb630c344921747b4f0c9f5617ba292d0e40c8e",
+      "bytes": 57199
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-green/vitest.config.mjs",
+      "sha256": "cb5632178d8c122ac57225430a0ec1a15c17a03177fe819416c35e59c0edf79c",
+      "bytes": 434
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/command.json",
+      "sha256": "0392fc0a25973497baa1d52fded09a952478b04722b997033de3c16d72109d33",
+      "bytes": 717
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/src/compute/nativeHandoff.ts",
+      "sha256": "befcef1889526ee9b73b544b2494bafca12e2114e75a46d36686e39dec5bde1b",
+      "bytes": 12849
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/src/compute/workerPool.ts",
+      "sha256": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+      "bytes": 6378
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/stderr.log",
+      "sha256": "d1eb72680cf8c8441e273458fe53aab735db249e41674471c4f94eb7b5600b82",
+      "bytes": 5184
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/stdout.log",
+      "sha256": "8d6dabb9a82916b02a5f86ed86652f3be8aa39d2b023caa12094b46e056a09be",
+      "bytes": 27016
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/summary.json",
+      "sha256": "6d63dde90770710d96e911838ee0683fa26133b869fd53340518fbc606797164",
+      "bytes": 14133
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/tests/v03-native-handoff.test.ts",
+      "sha256": "f8f8cd3e23069d84ff6d58cf95e5ec614365edf04ba352854c3fdf90d6e6ee95",
+      "bytes": 30274
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/tests/v03-worker-pool.test.ts",
+      "sha256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+      "bytes": 21213
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/tests.json",
+      "sha256": "be74386d992e1aa1e5db094b48235ef6935529583d88868ac33ffeb61089956e",
+      "bytes": 61615
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/b1-red/vitest.config.mjs",
+      "sha256": "cb5632178d8c122ac57225430a0ec1a15c17a03177fe819416c35e59c0edf79c",
+      "bytes": 434
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/command.json",
+      "sha256": "10b41648a8117496ec4490679003219f1b187a29029a65ab408e39349b093350",
+      "bytes": 703
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/src/compute/nativeHandoff.ts",
+      "sha256": "6685e73f5e1f46b4881259d2cd348f764a048f7aca7be82ed8a92c41f97adb70",
+      "bytes": 13192
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/src/compute/workerPool.ts",
+      "sha256": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+      "bytes": 6378
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/stdout.log",
+      "sha256": "903444ecd0b16cee9217c94c4c6c6c35f9f1c427fd7daea254d398909077ec0f",
+      "bytes": 47439
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/summary.json",
+      "sha256": "e12c38630c1da349ad4e4fc3ff6f2714399652e37dadc232dbae8be055386f77",
+      "bytes": 822
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/tests/v03-native-handoff.test.ts",
+      "sha256": "2f5bce9b8356884dbfc07a951cb8df62ad3ab63fc826b16c11120132c7fae687",
+      "bytes": 35148
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/tests/v03-worker-pool.test.ts",
+      "sha256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+      "bytes": 21213
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/tests.json",
+      "sha256": "fe5831a0013ce7ffdb9107ada58e3d9f9147b3d4c16926b2c3f908d662b6276a",
+      "bytes": 106762
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/final-focused/vitest.config.mjs",
+      "sha256": "cb5632178d8c122ac57225430a0ec1a15c17a03177fe819416c35e59c0edf79c",
+      "bytes": 434
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/command.json",
+      "sha256": "73747ef66558b962ceea4229e4b31f46aac8de4921a41583ebbe2c53a7224745",
+      "bytes": 717
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/src/compute/nativeHandoff.ts",
+      "sha256": "befcef1889526ee9b73b544b2494bafca12e2114e75a46d36686e39dec5bde1b",
+      "bytes": 12849
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/src/compute/workerPool.ts",
+      "sha256": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+      "bytes": 6378
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/stdout.log",
+      "sha256": "4b4f1b43b5f1cfcf29db6c28c480fffdbc66c39020001d0e0a14d9e9b7184bab",
+      "bytes": 18097
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/summary.json",
+      "sha256": "84f4528cfa33216bb1d05f125f05b616a822bc2ede8153df3f233c5ba399ce1a",
+      "bytes": 834
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/tests/v03-native-handoff.test.ts",
+      "sha256": "de6af4bfe74e481a698e51be00a9bb8799f6f5b5840c4eecee6f2afd254db186",
+      "bytes": 27894
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/tests/v03-worker-pool.test.ts",
+      "sha256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+      "bytes": 21213
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/tests.json",
+      "sha256": "27622836c0ff0f5670ec0c5b0d4f5ba7b2b828e59c1ca9471653bf587a26fee5",
+      "bytes": 41096
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-green/vitest.config.mjs",
+      "sha256": "cb5632178d8c122ac57225430a0ec1a15c17a03177fe819416c35e59c0edf79c",
+      "bytes": 434
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/command.json",
+      "sha256": "68222565e00576aa81eb1e7deee9554f849099e59575101ac682d5ae80182e35",
+      "bytes": 747
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/src/compute/nativeHandoff.ts",
+      "sha256": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "bytes": 12573
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/src/compute/workerPool.ts",
+      "sha256": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+      "bytes": 6378
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/stderr.log",
+      "sha256": "7ce47159c4d4bec5a24fc9640c86f8232f6d54bc4a99f10484a24ffa93d1b416",
+      "bytes": 3042
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/stdout.log",
+      "sha256": "f29e2f590b887b8631bb0a2a6317380f641a35a2bae6420a041b0839b5c25991",
+      "bytes": 18676
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/summary.json",
+      "sha256": "1e2702866143ce4990cfa6b1c0050e457c2347b85c31c96ef88048c1435f2c74",
+      "bytes": 7083
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/tests/v03-native-handoff.test.ts",
+      "sha256": "de6af4bfe74e481a698e51be00a9bb8799f6f5b5840c4eecee6f2afd254db186",
+      "bytes": 27894
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/tests/v03-worker-pool.test.ts",
+      "sha256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+      "bytes": 21213
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/tests.json",
+      "sha256": "dac58088e1422703a46f5b8d750b717870fb83b3f295a72e1eae7f22310671cd",
+      "bytes": 45594
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-composition-red/vitest.config.mjs",
+      "sha256": "cb5632178d8c122ac57225430a0ec1a15c17a03177fe819416c35e59c0edf79c",
+      "bytes": 434
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/command.json",
+      "sha256": "09c67d516ac7eac4b5200cbb4f99b2fd2939870ba56e5e1329b653619ef1e90d",
+      "bytes": 736
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/src/compute/nativeHandoff.ts",
+      "sha256": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "bytes": 12573
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/src/compute/workerPool.ts",
+      "sha256": "592b17fb09d38aac44dcab847a0083ca62b6456a1f1d2f43919fc7aa1aaefff3",
+      "bytes": 6378
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/stdout.log",
+      "sha256": "6e623ab1e3b1a2a9533b6a00a5886899834f7e749f051e292adb3fd82ea91d68",
+      "bytes": 14362
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/summary.json",
+      "sha256": "972078f3fb329e5ab7790ad70597da1901b8d983de49569c14b4aa7a03d8ee88",
+      "bytes": 853
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/tests/v03-native-handoff.test.ts",
+      "sha256": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+      "bytes": 22718
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/tests/v03-worker-pool.test.ts",
+      "sha256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+      "bytes": 21213
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/tests.json",
+      "sha256": "fc753efee6563af57a82742a9e42f06553a4ce33e558ae85cc0f8838ae235680",
+      "bytes": 31222
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-green/vitest.config.mjs",
+      "sha256": "cb5632178d8c122ac57225430a0ec1a15c17a03177fe819416c35e59c0edf79c",
+      "bytes": 434
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/command.json",
+      "sha256": "e7ac4a43099a2fe37847137d7c0093da5d04bbcb801964ee353a3931e7adfb2b",
+      "bytes": 732
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/src/compute/nativeHandoff.ts",
+      "sha256": "c57931244eb8a3b885fef9f55a9398417f16148a100ad3be9269de2f9a46a827",
+      "bytes": 12573
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/src/compute/workerPool.ts",
+      "sha256": "b5a7457bde19616b61247ca690bf2b1bc5f387cd3067db3ad56cb9c115878e64",
+      "bytes": 6048
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/stderr.log",
+      "sha256": "1a5d3a25962bc59255d82115d0c0b34aa2594a54b93056ab6cf43aef04bf4dc4",
+      "bytes": 3752
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/stdout.log",
+      "sha256": "a42319a6217a787f4ad293ede7f8a64e71afd1d455792b3402cf7ace1bbb616b",
+      "bytes": 14945
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/summary.json",
+      "sha256": "eadd8d8365799cae681ac1b174f0effd2959f2999f1344ebbb134b029ab56e1c",
+      "bytes": 8866
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/tests/v03-native-handoff.test.ts",
+      "sha256": "ca275490a8514f139afb32b838b9572bc16a34336b8b4e6de37073eea49d86bc",
+      "bytes": 22718
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/tests/v03-worker-pool.test.ts",
+      "sha256": "70f4b987c62babb11b4843de26eb13f5cf1814921ecc2de529d376ac181bb3b1",
+      "bytes": 21213
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/tests.json",
+      "sha256": "2d19c0806c6698ad93eeca564c2ddeefb6c587115ecc5ac2c099a3aaae1c375d",
+      "bytes": 39176
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/runs/q2-pool-red/vitest.config.mjs",
+      "sha256": "cb5632178d8c122ac57225430a0ec1a15c17a03177fe819416c35e59c0edf79c",
+      "bytes": 434
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/scope-before.json",
+      "sha256": "fdd87e84b9d7bd395764b9dcbcb4f911bdaa97c2a426613625b63fdcb264a627",
+      "bytes": 407115
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/scope-proof.json",
+      "sha256": "512f2897ddebbd7fb50788b129d063a360f788ce0ef382c22ba61d6242d50a66",
+      "bytes": 2361
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/boundary-results.json",
+      "sha256": "5f146484c55c124cb7c8535f09d8cf4556fe45cc80428952af3b93b45c6960b9",
+      "bytes": 37763
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/boundary.command.json",
+      "sha256": "e9faddac3b702e45bc9969ffd7c52dd93856ef6e565763c6cd02d2ed37ccdf0f",
+      "bytes": 466
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/boundary.mjs",
+      "sha256": "6849b664ca92a80813d3b34a75ea8d24a27047fe4a59a07cd72e2aca7476e51f",
+      "bytes": 8293
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/boundary.stderr.log",
+      "sha256": "e5cfb902824c125826c1f3dba408f7c6070e7c55e8bb774510abd744a376e396",
+      "bytes": 447
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/boundary.stdout.log",
+      "sha256": "2eafc40214083671b1944fc5e42e00c14cc2d74aa4b265de07aa8f4eb213b899",
+      "bytes": 67
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/compiled/nativeHandoff.js",
+      "sha256": "caa42e22c45b9a888623ace9d41d9a67b928cf95409555d38022447f71a36ef1",
+      "bytes": 14045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/compiled/nativeHandoff.worker.js",
+      "sha256": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419",
+      "bytes": 1701
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/compiled/resourceLedger.js",
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+      "bytes": 19824
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/compiled/workerPool.js",
+      "sha256": "97c9374c1157ac36c66a4a3a18a0561e19d74e39bc8bcf9b1105914cbdb5e25d",
+      "bytes": 6045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/fresh-compile-inputs.json",
+      "sha256": "c8344d28866d42f353c66d337a810a2820de8a6e6eb898aff01d351cbcd15253",
+      "bytes": 1390
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/loader.mjs",
+      "sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+      "bytes": 259
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/package.json",
+      "sha256": "d2aaf324399446516b42d82624be18adcd6465fddf100b7ba79f57323f63da52",
+      "bytes": 22
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/run.mjs",
+      "sha256": "ea08dde5439870ae383874c872f398ebfa07f4e25ca8a12f94c0f0c25c7dc24d",
+      "bytes": 5274
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/tsconfig.json",
+      "sha256": "07d13eafed596de160544b32bce3a67194ce079515e935d34ad6a17194d30e14",
+      "bytes": 770
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/unchanged-witnesses.json",
+      "sha256": "4a72cc089d9537bad8a17c5b841e1655b2c9bc55861f2605098ea6b963cc28a2",
+      "bytes": 578
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec/witness.mjs",
+      "sha256": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+      "bytes": 25179
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec-boundary.command.json",
+      "sha256": "23aaec356ff9e72e0ba5d0479c57c99b829c0ed17a2e312b45ee80773fa65bd7",
+      "bytes": 326
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec-boundary.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec-boundary.stdout.log",
+      "sha256": "708cc7a9001a458d9cb8d0796e223f7a68ce02befab1c0601bf650fc6d020250",
+      "bytes": 413
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec-strict128.command.json",
+      "sha256": "ee05e3457fefebc97440e7be8b369bc0c14ec9dab23a7925d8243a8ccc181c34",
+      "bytes": 403
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec-strict128.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/spec-strict128.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/static-scan.json",
+      "sha256": "ca408b8b39b7cb0ea8a0273cb2a7772fc5175cb47f8bb0459c0a094794edb62b",
+      "bytes": 184
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/tdd-audit.json",
+      "sha256": "98bf81e484afee1e4dd8c0567fd7bb2f31f6b73d929f02e7212154a1650a02ab",
+      "bytes": 36355
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/test_phase.py",
+      "sha256": "e054f51008de141d138aed6bdd25cadda8852989bfe4e81869233872351b98ca",
+      "bytes": 2145
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/tracked-after.bin",
+      "sha256": "a6d6793d27643be3dff5c3f44dc9203a467cd5aa8993c5327febd11d70bd3d17",
+      "bytes": 208742
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/tracked-before.bin",
+      "sha256": "a6d6793d27643be3dff5c3f44dc9203a467cd5aa8993c5327febd11d70bd3d17",
+      "bytes": 208742
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/author/vite-cache/vitest/da39a3ee5e6b4b0d3255bfef95601890afd80709/results.json",
+      "sha256": "e022b6fb8e3908e272a95a7168c8e98691999de035ab792aeba604a6b433cd34",
+      "bytes": 285
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/archive_final.py",
+      "sha256": "39beaf74642dd26a4c9d2a917ab21ffb8c9b98acd36590aacf7ea85a18ba21bf",
+      "bytes": 2715
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/commands.json",
+      "sha256": "7b8c06325c26e4e594c9dd789f9535cb84e2a8b93a1a84af22a133bf3cb5edf2",
+      "bytes": 1535
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/full-unit.json",
+      "sha256": "cf25895035b650b23c059b474de630660eae4d3872b731b8fa223e74b01512c8",
+      "bytes": 541449
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/full-unit.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/full-unit.stdout.log",
+      "sha256": "dceee3b0d3dda97a53b45c972a111d605c061df9416e8d96e67d5a0efc1442e7",
+      "bytes": 1301
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/input-hashes-end.json",
+      "sha256": "eeb2d1bcd5a91efca618f8f819aa10c7ac323e9a30f7ccc367d51244b4f9c566",
+      "bytes": 16242
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/input-hashes-start.json",
+      "sha256": "eeb2d1bcd5a91efca618f8f819aa10c7ac323e9a30f7ccc367d51244b4f9c566",
+      "bytes": 16242
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/fixture-matrix.mjs",
+      "sha256": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+      "bytes": 9298
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/fixture-roundtrip.mjs",
+      "sha256": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c",
+      "bytes": 2802
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/native-cli.mjs",
+      "sha256": "183cbf4445004be03924458c07b465a7b59b2b03d4f98afbcc2984bba8301593",
+      "bytes": 7548
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/fixture.mjs",
+      "sha256": "189df9c452a3a49ea1e9e38c60bb4c627626d1d9db13bf2a62753032f8aa4cbc",
+      "bytes": 9298
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/native-results.json",
+      "sha256": "90f9123fa9d28707bd7d7656ad3633b9be6251d2887c1accf5a52af8ded002f2",
+      "bytes": 69347
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/fixture-base.mjs",
+      "sha256": "5b5043247fcf35064df02b342ff97c16a649237f032afa5dce1abc8ae991910c",
+      "bytes": 2802
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/nativeHandoff.js",
+      "sha256": "1fa86e7204a1f416fb318263afbe004639bc0c7a2452d7d8c1584ce82bb3b050",
+      "bytes": 14051
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/nativeHandoff.worker.js",
+      "sha256": "fa95ed8c531a1873b91f787010e741e781acbf724877d3e6cd1bfd9ba488a2a9",
+      "bytes": 1704
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/resourceLedger.js",
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+      "bytes": 19824
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/worker-normal.js",
+      "sha256": "dbbd98e4510a08cd2dbdcf764680a1249229a46e4b880788efd47ed28742987a",
+      "bytes": 2795
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/worker-return-bytes.js",
+      "sha256": "ea57e83349f05bb09723ce3cb708db21b258ccc9967d581e5382e0b334c863a3",
+      "bytes": 2801
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/worker-return-envelope.js",
+      "sha256": "dab48e10ad02026c719cac53a2c555cbbc8b64b8aa0c96a48f56bbb168a50974",
+      "bytes": 2804
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/worker-return-nonce.js",
+      "sha256": "a221e14e1b31928bbe4bd5d88115d70165d8dc4f079a3d6e097bb37b72e172d3",
+      "bytes": 2801
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/worker-return-reserved.js",
+      "sha256": "2caa280ae9d4ea6230ff93937a92e7ab251bb031237ca72bc0f48293d3ca7061",
+      "bytes": 2804
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff/phases/final-parent/served/workerPool.js",
+      "sha256": "97c9374c1157ac36c66a4a3a18a0561e19d74e39bc8bcf9b1105914cbdb5e25d",
+      "bytes": 6045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-handoff.stdout.log",
+      "sha256": "a4ddcdce99712b9a3917798e59be81a4c843eca7732b4ee85986dca9aac7a407",
+      "bytes": 158
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-pool/fixture.mjs",
+      "sha256": "c2aebccdc77f691d3dcf2a970feab10d30c2220c40b07e0662182a0c2f735256",
+      "bytes": 8204
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-pool/native-cli.mjs",
+      "sha256": "2097fbb9f89a773430c8f9a2b181cf83449bf13bce7d16fff92866312761ff9e",
+      "bytes": 5038
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-pool/native-hashes.json",
+      "sha256": "fe983985b47261609ce24b12468c6388e7651046d464c16100df50b7dadb4a7d",
+      "bytes": 513
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-pool/native-results.json",
+      "sha256": "a4382414021ccaee636f3e865ed35c40816addec3ac8868ef672a4e7cfa154ff",
+      "bytes": 47227
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-pool/served/resourceLedger.js",
+      "sha256": "12877161ed30b54a5603e11540fd0ab13fca63466287560f64c54ef1afe9b93a",
+      "bytes": 15301
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-pool/served/workerPool.js",
+      "sha256": "b39762a96a048fb9ee5d2e9f275d3fb1cccef5d3413e21e9b6978e7e27538459",
+      "bytes": 4489
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-pool.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/native-pool.stdout.log",
+      "sha256": "8cb2f5bb0f187584df167f28e4fc301be8f0c06eeb2bf8f2d53ff6d2e2917b0a",
+      "bytes": 458
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/npm-audit.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/npm-audit.stdout.log",
+      "sha256": "6a588c8f87dfffd67e33533606b8c87c3adfb394c0d1e7e3d3bf63448700d022",
+      "bytes": 364
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/parent-results.json",
+      "sha256": "eec5a4ae31b00ee203bce3a08357e48d758ec3dc37554c62248615c97e71dfc4",
+      "bytes": 881
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/python-reference.stderr.log",
+      "sha256": "f126b15f9271646fa44502b27cdaa573c50fb1c07fb476a8e9bf4e1bb3da09cb",
+      "bytes": 175
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/python-reference.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/quality-compile.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/quality-compile.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/quality-matrix.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/quality-matrix.stdout.log",
+      "sha256": "519b573f4d5d05ffd337324dcc8984a9113a010a5a3b209b53225028c9310742",
+      "bytes": 106
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/quality-repro.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/quality-repro.stdout.log",
+      "sha256": "ca058584b2e8146f5c552105a88338ce4897fdc740e09cead4f14abb9746bd57",
+      "bytes": 103
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/quality-witness.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/quality-witness.stdout.log",
+      "sha256": "081a3897a00ce8387e63ea26a9205150e193118c8d56b909067264cc21fed886",
+      "bytes": 105
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/compiled/nativeHandoff.js",
+      "sha256": "caa42e22c45b9a888623ace9d41d9a67b928cf95409555d38022447f71a36ef1",
+      "bytes": 14045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/compiled/nativeHandoff.worker.js",
+      "sha256": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419",
+      "bytes": 1701
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/compiled/resourceLedger.js",
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+      "bytes": 19824
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/compiled/workerPool.js",
+      "sha256": "97c9374c1157ac36c66a4a3a18a0561e19d74e39bc8bcf9b1105914cbdb5e25d",
+      "bytes": 6045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/loader.mjs",
+      "sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+      "bytes": 259
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/matrix-1.command.json",
+      "sha256": "8ca1398b9aee7b0d7eb3d4bda03a0a81cf8f4384832b92bfadbfff0d1290f4b2",
+      "bytes": 543
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/matrix-1.stderr.log",
+      "sha256": "64b1c878169e71194fbc51e9ed27cc04b5a823a9fd6743d60a6c38ab9901afcf",
+      "bytes": 454
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/matrix-1.stdout.log",
+      "sha256": "7d301860ecb938adb105987ae8ae150098f0251a2af9133f08efeb1aa58c7dcf",
+      "bytes": 69
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/matrix-results.json",
+      "sha256": "6176f95b1bbd65f87bdd118f070e551e3b4a2537636f382025303a551966f133",
+      "bytes": 14169
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/matrix.mjs",
+      "sha256": "3524229cc02a2f89b944bf7ce37d99e95cdf4ee5c9e7f83fbca0d24bb8cd456e",
+      "bytes": 9335
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/package.json",
+      "sha256": "6dc1b06d6b093e9cccb20bee06a93836eee0420ae26803ca2ce4065d82f070d1",
+      "bytes": 17
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/repro-1.command.json",
+      "sha256": "b771a08f5fe8d15ec9b8cd273042a00979b255475b9c6db9f5b658dbb2caba49",
+      "bytes": 542
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/repro-1.stderr.log",
+      "sha256": "f5c7afed2c157a9c3a33d9482dbf5e362ef66cb14094bf62208ea4ada931ac37",
+      "bytes": 454
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/repro-1.stdout.log",
+      "sha256": "5a8e131de0f2bc347d30850de71675502898337f5964a9902e57b0a143f13338",
+      "bytes": 6031
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/repro-results.json",
+      "sha256": "81fd06fbc95b33e54d20c3a613cd8302159afd1d442758b23d55a6e47b5e4265",
+      "bytes": 6030
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/repro.mjs",
+      "sha256": "58eb35d08ba1b1cca7111d8060b5713133d9b31bf0057330569486925bcf887d",
+      "bytes": 4027
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/run.mjs",
+      "sha256": "bc5a55d3a25e972f0605e2fe80e6bbeb859419adc2ace44a5af4c4b03f80c563",
+      "bytes": 3774
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/tsconfig.json",
+      "sha256": "0f5cfcb3f8d38f17f4a43b5b50eba73cf9b4d353d77101f16e061139609cc275",
+      "bytes": 788
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/witness-1.command.json",
+      "sha256": "f6a482419f21d70c9e199e493c0e80ed4aa51c434bcce6ba5956302a195f910d",
+      "bytes": 544
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/witness-1.stderr.log",
+      "sha256": "ce840fd64b5f9fed720d62a62c9f6af37b280930aa7500d4e1f69aa083cfca89",
+      "bytes": 454
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/witness-1.stdout.log",
+      "sha256": "7f3e08c83b11ce262a17955c0395e4a7b72c412aaca166f58547cc2f68c72460",
+      "bytes": 12322
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/witness-results.json",
+      "sha256": "29b7cc33f9a484d5396caef9fac01bc9ac0767574be2279e46489711ada714be",
+      "bytes": 12321
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/quality/witness.mjs",
+      "sha256": "d177abc08b79d164685287e659d9a1d7685942c2c4cb37deb5921f4d9c391e9d",
+      "bytes": 25179
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/boundary-results.json",
+      "sha256": "5f146484c55c124cb7c8535f09d8cf4556fe45cc80428952af3b93b45c6960b9",
+      "bytes": 37763
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/boundary.command.json",
+      "sha256": "1b855292b21d9bd9d87212a45249a7f7f148cda7ce81d9e7735fc9a0372d98c0",
+      "bytes": 474
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/boundary.mjs",
+      "sha256": "6849b664ca92a80813d3b34a75ea8d24a27047fe4a59a07cd72e2aca7476e51f",
+      "bytes": 8293
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/boundary.stderr.log",
+      "sha256": "3fd3fac5e9871741b49c820d050749b3b069be6e994ef6850f8dc7cd1fd0dbfa",
+      "bytes": 451
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/boundary.stdout.log",
+      "sha256": "2eafc40214083671b1944fc5e42e00c14cc2d74aa4b265de07aa8f4eb213b899",
+      "bytes": 67
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/compiled/nativeHandoff.js",
+      "sha256": "caa42e22c45b9a888623ace9d41d9a67b928cf95409555d38022447f71a36ef1",
+      "bytes": 14045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/compiled/nativeHandoff.worker.js",
+      "sha256": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419",
+      "bytes": 1701
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/compiled/resourceLedger.js",
+      "sha256": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+      "bytes": 19824
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/compiled/workerPool.js",
+      "sha256": "97c9374c1157ac36c66a4a3a18a0561e19d74e39bc8bcf9b1105914cbdb5e25d",
+      "bytes": 6045
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/loader.mjs",
+      "sha256": "6b2d6c0e73b5f3273bfa30f85b2e83630c7c6206abd78bf43e0bf44629bd10a0",
+      "bytes": 259
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/package.json",
+      "sha256": "d2aaf324399446516b42d82624be18adcd6465fddf100b7ba79f57323f63da52",
+      "bytes": 22
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/run.mjs",
+      "sha256": "44f021b3a8c97f75477066e4e5cd84306cfc286f5f36459732cd391faa7e7e4e",
+      "bytes": 5278
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay/spec/tsconfig.json",
+      "sha256": "20dba9a2e730b875029ad13bd232b4f9e1a87fcd3403e118ce83a32aed2c252b",
+      "bytes": 785
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay-commands.json",
+      "sha256": "322c10bf09011bed718ec59b132d84f8e0ab886b41a5584b59d36e62dd755c6d",
+      "bytes": 2222
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay-results.json",
+      "sha256": "f3236e9c846ac1cec231f0da2eec94d3c13dbdb00ee412c1187af255b01a6ef9",
+      "bytes": 3410
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay_all.initial-syntax.py",
+      "sha256": "e20062ac908b9951e2e9884f132c9c10351d85f9edc34099ed3b6af6cd5b7513",
+      "bytes": 4054
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/replay_all.py",
+      "sha256": "577f10cfbc5b9b9620194158d78bcc9d6dcf000208703f69737f23060abb1ee5",
+      "bytes": 4056
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/run.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/run.stdout.log",
+      "sha256": "397108fef0f4e163a78be8a86a606cb0205b807888ad10bb22da7652bfb91301",
+      "bytes": 794
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/spec-boundary.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/spec-boundary.stdout.log",
+      "sha256": "8b9ac0278d3818532cf93719a4d28fc115643106d39689d46cf0571b0bea1c78",
+      "bytes": 421
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/spec-compile.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/spec-compile.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/static-scan.json",
+      "sha256": "543a3a192a92e77f9d5c03143fdaf95835a23164d6ade703a3a3e97c6fb4c1eb",
+      "bytes": 89
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/typecheck.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/typecheck.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/verify_delivery.py",
+      "sha256": "112ea56a6c4c7c54abe46466bf83d4b3f212d8e920d9a840dff817f14313fb33",
+      "bytes": 2106
+    },
+    {
+      "path": "docs/verification/v03-native-handoff-evidence/final-fix/parent/verify_parent.py",
+      "sha256": "00f8cb17d52d07ef97bc2f27f10dbd95bde2d84f933082f80a4648f0f9cc08a8",
+      "bytes": 5647
+    }
+  ],
+  "count": 314,
+  "actorManifestSHA256": "6493d5f6e2b433161e48314e6123f29cc16d5b3b311c292d710d4c79867eb43a",
+  "verifiedActorEntries": 224,
+  "statusAtCapture": "Parent full1414Node/71Python/TSaudit0, original87+boundary55+B1repro20+matrix124allPASS, nativepool119andhandoff71PASS; finalreadonlyreviews01c0c0capending, notaccepted"
+}

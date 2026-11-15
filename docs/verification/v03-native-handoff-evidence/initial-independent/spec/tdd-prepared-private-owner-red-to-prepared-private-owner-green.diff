@@ -1,0 +1,112 @@
+diff --git a/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/prepared-private-owner-red/resourceLedger.ts b/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/prepared-private-owner-green/resourceLedger.ts
+index 5106202..f8ef380 100644
+--- a/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/prepared-private-owner-red/resourceLedger.ts
++++ b/C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-core/phases/prepared-private-owner-green/resourceLedger.ts
+@@ -46,11 +46,11 @@ type NativePhase = 'MAIN' | 'PREPARED' | 'IN_FLIGHT' | 'REMOTE' | 'RETURNING';
+ interface Allocation { id: number; bytes: number; owner: Realm; buffer?: ArrayBuffer; phase?: NativePhase; refs: Set<Ref> }
+ interface HandoffState {
+   binding: object; phase: 'PREPARED' | 'IN_FLIGHT' | 'REMOTE' | 'MAIN' | 'RETIRED';
+-  source: Lease; controlled: Lease; input: Ref[]; allocations: Allocation[];
++  source: Lease; sourceKeys: (string | undefined)[]; controlled: Lease; input: Ref[]; allocations: Allocation[];
+   main: Realm; target: Realm; buffers: ArrayBuffer[]; controlledRefs: Ref[];
+ }
+ interface RefState { id: number; lease: Lease; category: Category; allocation?: Allocation; key?: string }
+-interface LeaseState { closed: boolean; refs: Set<Ref>; keys: Map<string, Ref> }
++interface LeaseState { closed: boolean; prepared: number; refs: Set<Ref>; keys: Map<string, Ref> }
+ /** Proposed managed-payload policy; not a process/JS heap/RSS limit. */
+ export const DEFAULT_RESOURCE_LIMITS: Readonly<Limits> = Object.freeze({ managed: 402653184, job: 134217728, history: 134217728 });
+ export function createResourceLedger(limits: Limits = DEFAULT_RESOURCE_LIMITS, internals: LedgerInternals = {}) {
+@@ -79,6 +79,15 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+   function ticket(t: object, binding: object, phase?: HandoffState['phase']) {
+     const s = tickets.get(t); if (!s || s.binding !== binding || (phase && s.phase !== phase)) invalid(); return s;
+   }
++  function sourceAuth(s: HandoffState, i: number) {
++    const state = refs.get(s.input[i])!; state.lease = s.source; state.key = s.sourceKeys[i]; return state;
++  }
++  function restorePrepared(s: HandoffState, i: number) {
++    const r = s.input[i]; leases.get(s.controlled)!.refs.delete(r);
++    const state = sourceAuth(s, i), original = leases.get(s.source)!;
++    original.refs.add(r); if (state.key !== undefined) original.keys.set(state.key, r);
++    state.allocation!.phase = 'MAIN';
++  }
+   const handoff = Object.freeze({
+     sent(t: object, binding: object): void {
+       const s = ticket(t, binding, 'PREPARED');
+@@ -86,8 +95,9 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+       for (let i = 0; i < s.allocations.length; i++) {
+         const a = s.allocations[i], old = s.input[i], c = refs.get(old)!.category;
+         backings.delete(s.buffers[i]); a.buffer = undefined; a.owner = s.target; a.phase = 'IN_FLIGHT';
+-        s.controlledRefs.push(issue(s.controlled, a, c)); retire(old);
++        s.controlledRefs.push(issue(s.controlled, a, c)); retire(old); sourceAuth(s, i);
+       }
++      leases.get(s.source)!.prepared--;
+       s.buffers = []; s.input = []; s.phase = 'IN_FLIGHT';
+     },
+     received(t: object, binding: object): void {
+@@ -124,9 +134,10 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+       if (s.phase === 'PREPARED') {
+         for (let i = 0; i < s.allocations.length; i++) {
+           const a = s.allocations[i];
+-          if (detached(s.buffers[i])) { backings.delete(s.buffers[i]); a.buffer = undefined; retire(s.input[i]); }
+-          else a.phase = 'MAIN';
++          if (detached(s.buffers[i])) { backings.delete(s.buffers[i]); a.buffer = undefined; retire(s.input[i]); sourceAuth(s, i); }
++          else restorePrepared(s, i);
+         }
++        leases.get(s.source)!.prepared--;
+       } else for (const r of s.controlledRefs) retire(r);
+       s.controlled.close(); s.buffers = []; s.input = []; s.controlledRefs = []; s.allocations = []; s.phase = 'RETIRED';
+     },
+@@ -144,10 +155,21 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+         return a;
+       });
+       if (activeLeases >= controls.maxLeases || !room(input.length)) throw Object.assign(new Error('Handoff capacity'), { code: 'BUDGET' });
+-      const controlled = makeLease(), t = Object.freeze({});
++      const controlled = makeLease(), t = Object.freeze({}), sourceState = leases.get(source)!;
+       const buffers = aa.map(a => a.buffer!);
++      const sourceKeys = input.map(r => refs.get(r)!.key);
++      // Suspend caller authority before native dispatch. The sole owning ref moves
++      // into the private lease without changing diagnostic identity or charges.
++      // PREPARED denies all ordinary ref use; successful detach retires that old
++      // public capability and rotates to a new private controlled ref.
++      for (const r of input) {
++        const state = refs.get(r)!; sourceState.refs.delete(r);
++        if (state.key !== undefined) sourceState.keys.delete(state.key);
++        state.lease = controlled; state.key = undefined; leases.get(controlled)!.refs.add(r);
++      }
++      sourceState.prepared++;
+       for (const a of aa) a.phase = 'PREPARED';
+-      tickets.set(t, { binding, phase: 'PREPARED', source, controlled, input: [...input], allocations: aa, main, target, buffers, controlledRefs: [] });
++      tickets.set(t, { binding, phase: 'PREPARED', source, sourceKeys, controlled, input: [...input], allocations: aa, main, target, buffers, controlledRefs: [] });
+       return t;
+     },
+     packet(t: object, binding: object) {
+@@ -157,8 +179,9 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+     sendThrew(t: object, binding: object) {
+       const s = ticket(t, binding, 'PREPARED');
+       for (let i = 0; i < s.buffers.length; i++) if (backingBytes(s.buffers[i]) !== s.allocations[i].bytes) invalid();
+-      for (const a of s.allocations) a.phase = 'MAIN';
+-      s.phase = 'RETIRED'; s.buffers = []; s.controlled.close();
++      for (let i = 0; i < s.input.length; i++) restorePrepared(s, i);
++      leases.get(s.source)!.prepared--;
++      s.phase = 'RETIRED'; s.buffers = []; s.input = []; s.allocations = []; s.controlled.close();
+     },
+   });
+   let allocationId = 0, refId = 0;
+@@ -221,7 +244,7 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+         if (s.allocation) accessible(s.allocation); retire(r);
+       },
+       close(this: Lease): void {
+-        const s = leaseState(this); if (s.closed) return;
++        const s = leaseState(this); if (s.closed) return; if (s.prepared) invalid();
+         for (const r of s.refs) accessible(refs.get(r)!.allocation!);
+         for (const r of s.refs) retire(r);
+         s.closed = true; activeLeases--;
+@@ -246,7 +269,7 @@ function createLedgerCore(limits: Limits, internals: LedgerInternals, native = f
+         } catch (error) { retire(r); throw error; }
+       },
+     });
+-    leases.set(l, { closed: false, refs: new Set(), keys: new Map() }); activeLeases++; return l;
++    leases.set(l, { closed: false, prepared: 0, refs: new Set(), keys: new Map() }); activeLeases++; return l;
+   }
+   return { ledger: Object.freeze({
+     createRealm(): Realm {

@@ -1,0 +1,23 @@
+[
+  {
+    "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-spec-rereview",
+    "manifestSHA256": "014be0ec611f2c561a77cfd5b0988c5ef98d91c0aec3a1d7367e7c5f4473c66b",
+    "totalEntries": 68,
+    "rootCounts": {
+      "scratch": 68
+    },
+    "scratchEntriesReverifiedAfter": 68,
+    "repositoryEntries": "verified at start; candidate deltas are intentional and separately bound in scope-proof.json"
+  },
+  {
+    "root": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-teardown-quality-rereview",
+    "manifestSHA256": "4f3dd29dbc307548bb0650e4269714ea1ab38a998a29be067d1f3e3e165ee797",
+    "totalEntries": 53,
+    "rootCounts": {
+      "scratch": 46,
+      "repository": 7
+    },
+    "scratchEntriesReverifiedAfter": 46,
+    "repositoryEntries": "verified at start; candidate deltas are intentional and separately bound in scope-proof.json"
+  }
+]

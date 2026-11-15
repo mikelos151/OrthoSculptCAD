@@ -1,0 +1,287 @@
+--- a/src/compute/workerPool.ts
++++ b/src/compute/workerPool.ts
+@@ -15,7 +15,7 @@
+ interface Binding {
+   slot: Slot; generation: number; phase: Phase; nonce?: Uint32Array;
+   resources: Lease; worker?: Worker; auth?: { binding?: Binding };
+-  stop?: () => void; terminalAttempted?: boolean;
++  stop?: () => unknown[]; terminalAttempted?: boolean;
+ }
+ function invalid(): never { throw Object.assign(new Error('Invalid pool input'), { code: 'INVALID_INPUT' }); }
+ /** Trusted internal composition only; not a user/provider/URL extension point. */
+@@ -32,10 +32,11 @@
+     if (binding.auth) binding.auth.binding = undefined;
+     if (!binding.worker) return; // STARTING is still occupied until the trusted constructor returns.
+     binding.terminalAttempted = true;
+-    binding.stop?.();
++    const cleanupErrors = binding.stop?.() ?? [];
+     try { binding.worker.terminate(); }
+     catch (error) { binding.phase = 'FAILED'; throw error; } // Occupied slot and charge stay fail-closed.
+     binding.resources.close(); binding.slot.current = undefined;
++    if (cleanupErrors.length) throw cleanupErrors[0]; // Native success still frees this exact binding.
+   }
+   function dispose(): void {
+     if (disposed) return;
+@@ -97,7 +98,11 @@
+         try { terminal(binding); } catch { /* Native terminate failed: retain slot/charge. */ }
+       };
+       binding.stop = () => {
+-        native.removeEventListener('error', onError); native.removeEventListener('messageerror', onError);
++        const errors: unknown[] = [];
++        for (const type of ['error', 'messageerror']) {
++          try { native.removeEventListener(type, onError); } catch (error) { errors.push(error); }
++        }
++        return errors; // Cleanup cannot prevent the native terminal attempt or another removal.
+       };
+       try { native.addEventListener('error', onError); native.addEventListener('messageerror', onError); }
+       catch (error) { terminal(binding); throw error; }
+--- a/src/compute/nativeHandoff.ts
++++ b/src/compute/nativeHandoff.ts
+@@ -73,7 +73,7 @@
+   const { ledger, handoff } = createNativeLedger(limits), domains: Realm[] = [];
+   const building: RequestState[] = [], current = new Map<number, RequestState>(), active = new Set<RequestState>();
+   const handles = new WeakMap<NativeRequest, RequestState>();
+-  let disposed = false;
++  let disposed = false, poolDisposePending = false;
+   // Same private core; this facade only captures the accepted pool's three domains.
+   const pool = createWorkerPool(Object.freeze({ ...ledger, createRealm() { const r = ledger.createRealm(); domains.push(r); return r; } }), () => {
+     const r = building[building.length - 1]; if (!r) invalid();
+@@ -89,11 +89,21 @@
+       clearTimeout(r.timer);
+       if (current.get(r.slot) === r) current.delete(r.slot);
+       r.remove?.(); r.remove = undefined;
+-      if (!r.poolLease) invalid(); pool.release(r.poolLease);
++      if (!r.poolLease) invalid();
++      try { pool.release(r.poolLease); }
++      catch (error) {
++        if (pool.snapshot().slots[r.slot].phase !== 'FREE') throw error; // A genuine native failure keeps its exact error.
++        r.revokeError ??= error; // Pool listener cleanup failed, but this binding's native stop succeeded.
++      }
+       if (pool.snapshot().slots[r.slot].phase !== 'FREE') throw failure('NATIVE_TERMINATE');
+       r.stopped = true; r.worker = undefined;
+     } catch (error) { r.stopError = error; r.phase = 'FAILED'; throw error; }
+-    finally { r.stopping = false; }
++    finally {
++      r.stopping = false;
++      if (poolDisposePending && ![...active].some(request => request.stopping)) {
++        poolDisposePending = false; pool.dispose();
++      }
++    }
+   }
+   function drop(r: RequestState, error: unknown) {
+     if (r.phase === 'RETIRED') return;
+@@ -111,7 +121,9 @@
+   function dispose() {
+     if (disposed) return; disposed = true;
+     for (const r of [...active]) drop(r, failure('CLOSED'));
+-    pool.dispose();
++    // An in-progress stop owns native completion, including its original thrown error.
++    if ([...active].some(r => r.stopping)) poolDisposePending = true;
++    else pool.dispose();
+   }
+   return Object.freeze({ ledger, mainRealm,
+     snapshot() { return Object.freeze({ disposed, pool: pool.snapshot(), pending: active.size,
+--- a/tests/v03-worker-pool.test.ts
++++ b/tests/v03-worker-pool.test.ts
+@@ -299,3 +299,35 @@
+     external.close(); expect(ledger.snapshot().managed).toBe(0);
+   });
+ });
++
++describe('Q2 pool-owned cleanup UNIT regressions (not native Worker)', () => {
++  it.each([1, 2].flatMap(removal => ['release', 'dispose'].flatMap(action => [false, true].map(terminateFails => ({ removal, action, terminateFails })))))
++  ('attempts both removals and native stop: %j', ({ removal, action, terminateFails }) => {
++    const ledger = createResourceLedger(limits), w = new TestWorker(), removed: string[] = [];
++    const cleanupError = new Error('pool cleanup'), nativeError = new Error('native terminate');
++    const pool = createWorkerPool(ledger, () => w as unknown as Worker);
++    const h = accepted(pool.acquire('compute', plan)), before = ledger.snapshot();
++    const remove = w.removeEventListener.bind(w);
++    w.removeEventListener = (type, fn, options) => {
++      removed.push(type);
++      expect(pool.snapshot().slots[0].phase).toBe('REVOKING');
++      expect(ledger.snapshot()).toEqual(before);
++      if (removed.length === removal) throw cleanupError;
++      remove(type, fn, options);
++    };
++    w.terminate = () => {
++      w.terminated++;
++      expect(removed).toEqual(['error', 'messageerror']);
++      expect(ledger.snapshot()).toEqual(before);
++      if (terminateFails) throw nativeError;
++    };
++    let thrown: unknown;
++    try { if (action === 'release') pool.release(h); else pool.dispose(); } catch (e) { thrown = e; }
++    expect(thrown).toBe(terminateFails ? nativeError : cleanupError);
++    expect(removed).toEqual(['error', 'messageerror']); expect(w.terminated).toBe(1);
++    expect(pool.snapshot().occupied).toBe(terminateFails ? 1 : 0);
++    if (terminateFails) { expect(pool.snapshot().slots[0].phase).toBe('FAILED'); expect(ledger.snapshot()).toEqual(before); }
++    else expect(ledger.snapshot().managed).toBe(0);
++    pool.release(h); pool.dispose(); pool.release(h); expect(w.terminated).toBe(1);
++  });
++});
+--- a/tests/v03-native-handoff.test.ts
++++ b/tests/v03-native-handoff.test.ts
+@@ -285,3 +285,163 @@
+     expect([c.ledger.snapshot().managed, c.ledger.snapshot().job, c.ledger.snapshot().history]).toEqual([5, 5, 0]);
+   });
+ });
++
++describe('five-registration composed teardown (UNIT faults, not native Worker)', () => {
++  const controllers: ReturnType<typeof createNativeHandoff>[] = [];
++  afterEach(() => {
++    for (const c of controllers.splice(0)) { try { c.dispose(); } catch { /* A failed native stop remains charged. */ } }
++    vi.unstubAllGlobals();
++  });
++  function fixture() {
++    const workers: FiveWorker[] = [];
++    class FiveWorker extends EventTarget {
++      actual!: ReturnType<typeof encodeInputPacket>;
++      added: { type: string; fn: EventListenerOrEventListenerObject | null }[] = [];
++      removed: number[] = [];
++      observations: { occupied: number; managed: number }[] = [];
++      onRemove?: (registration: number) => void;
++      onTerminate?: () => void;
++      terminates = 0;
++      constructor() { super(); workers.push(this); }
++      override addEventListener(type: string, fn: EventListenerOrEventListenerObject | null, options?: boolean | AddEventListenerOptions) {
++        this.added.push({ type, fn }); super.addEventListener(type, fn, options);
++      }
++      override removeEventListener(type: string, fn: EventListenerOrEventListenerObject | null, options?: boolean | EventListenerOptions) {
++        const registration = this.added.findIndex(x => x.type === type && x.fn === fn) + 1;
++        this.removed.push(registration);
++        this.observations.push({ occupied: c.snapshot().pool.occupied, managed: c.ledger.snapshot().managed });
++        this.onRemove?.(registration); super.removeEventListener(type, fn, options);
++      }
++      postMessage(packet: ReturnType<typeof encodeInputPacket>, transfer: Transferable[]) { this.actual = structuredClone(packet, { transfer }); }
++      terminate() { this.terminates++; this.onTerminate?.(); }
++      ack() {
++        const f = decodeInputPacket(this.actual);
++        this.dispatchEvent(new MessageEvent('message', { data: encodeInputPacket(2, f.tuple, f.nonce, f.plan, []) }));
++      }
++      back() {
++        const f = decodeInputPacket(this.actual), buffers = structuredClone(f.buffers, { transfer: f.buffers });
++        this.dispatchEvent(new MessageEvent('message', { data: encodeInputPacket(3, f.tuple, f.nonce, f.plan, buffers) }));
++      }
++      stale() {
++        const fn = this.added.find(x => x.type === 'message')?.fn, event = new MessageEvent('message', { data: {} });
++        if (typeof fn === 'function') fn(event); else fn?.handleEvent(event);
++      }
++    }
++    vi.stubGlobal('Worker', FiveWorker);
++    const c = createNativeHandoff(caps); controllers.push(c);
++    function material(sizes: number[], category: 'job' | 'history' = 'job') {
++      const s = c.ledger.reserve(sizes.map((bytes, i) => ({ key: String(i), bytes, category, owner: c.mainRealm }))) as Lease;
++      const refs = sizes.map((_, i) => s.ref(String(i))), buffers = refs.map(r => s.allocateBuffer(r));
++      buffers.forEach(b => new Uint8Array(b).fill(37)); return { s, refs, buffers };
++    }
++    function submit(x: ReturnType<typeof material>) {
++      const h = c.submit(x.s, x.refs.map(ref => ({ ref, role: 1 as const }))); if ('code' in h) throw Error(h.code);
++      x.s.close(); return h;
++    }
++    const x = material([2, 3]), h = submit(x), w = workers[0];
++    return { c, x, h, w, workers, material, submit };
++  }
++  const counters = (c: ReturnType<typeof createNativeHandoff>) => { const s = c.ledger.snapshot(); return [s.managed, s.job, s.history]; };
++  it.each(['release', 'return', 'dispose'].flatMap(action => [1, 2, 3, 4, 5].map(registration => ({ action, registration }))))
++  ('Q2 composition retires exactly after successful stop despite cleanup failure: %j', async ({ action, registration }) => {
++    const { c, h, w, material } = fixture(), hold = material([7], 'history'), consumer = c.ledger.reserve([]) as Lease;
++    const cleanupError = new Error('exact cleanup'), outcome = c.wait(h).then(() => null, e => e);
++    w.onRemove = n => { if (n === registration) throw cleanupError; };
++    w.onTerminate = () => {
++      expect([...w.removed].sort()).toEqual([1, 2, 3, 4, 5]);
++      expect(counters(c)).toEqual([12, 5, 7]); expect(c.snapshot().pool.occupied).toBe(1);
++    };
++    if (action === 'return') { w.ack(); w.back(); } else if (action === 'release') c.release(h); else c.dispose();
++    expect(w.terminates).toBe(1); expect([...w.removed].sort()).toEqual([1, 2, 3, 4, 5]);
++    expect(w.observations).toEqual(Array(5).fill({ occupied: 1, managed: 12 }));
++    expect(c.snapshot()).toMatchObject({ pending: 0, pool: { occupied: 0 } }); expect(counters(c)).toEqual([7, 0, 7]);
++    const error = await outcome;
++    if (action === 'return') expect(error).toBe(cleanupError); else expect(error.code).toBe(action === 'dispose' ? 'CLOSED' : 'RELEASED');
++    expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++    const before = c.ledger.snapshot(); c.release(h); w.stale(); c.dispose(); c.dispose();
++    expect(c.ledger.snapshot()).toEqual(before); expect(w.terminates).toBe(1);
++    expect(hold.s.ref('0')).toBe(hold.refs[0]); expect([...new Uint8Array(hold.buffers[0])]).toEqual(Array(7).fill(37));
++    consumer.close(); hold.s.close(); expect(counters(c)).toEqual([0, 0, 0]);
++  });
++  it.each(['IN_FLIGHT', 'REMOTE', 'RETURN'].flatMap(stage => [1, 2, 3, 4, 5].flatMap(registration => [false, true].map(cleanupThrow => ({ stage, registration, cleanupThrow })))))
++  ('B1 keeps original native error through cleanup-reentrant dispose: %j', async ({ stage, registration, cleanupThrow }) => {
++    const { c, h, w, material } = fixture(), hold = material([7], 'history'), consumer = c.ledger.reserve([]) as Lease;
++    const nativeError = new Error('first exact native error'), cleanupError = new Error('extra cleanup');
++    const outcome = c.wait(h).then(() => null, e => e), before = c.ledger.snapshot();
++    const identities = () => c.ledger.snapshot().allocations.map(({ id, bytes, refs }) => ({ id, bytes, refs }));
++    const exact = identities();
++    if (stage !== 'IN_FLIGHT') w.ack();
++    let reentered = false;
++    w.onRemove = n => {
++      if (n !== registration) return;
++      reentered = true; c.dispose();
++      expect(counters(c)).toEqual([12, 5, 7]);
++      expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++      if (cleanupThrow) throw cleanupError;
++    };
++    w.onTerminate = () => { expect(counters(c)).toEqual([12, 5, 7]); throw nativeError; };
++    if (stage === 'RETURN') w.back(); else c.release(h);
++    expect(reentered).toBe(true); expect(await outcome).toBe(nativeError);
++    expect([...w.removed].sort()).toEqual([1, 2, 3, 4, 5]); expect(w.terminates).toBe(1);
++    expect(c.snapshot()).toMatchObject({ disposed: true, pending: 1, requests: [{ phase: 'FAILED' }], pool: { disposed: true, occupied: 1 } });
++    expect(c.snapshot().pool.slots[0].phase).toBe('FAILED'); expect(counters(c)).toEqual([12, 5, 7]);
++    expect(identities()).toEqual(exact); expect(before.allocations).toHaveLength(3);
++    expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++    const retained = c.ledger.snapshot(), state = c.snapshot();
++    c.release(h); c.dispose(); w.stale(); c.release(h); c.dispose();
++    expect(c.ledger.snapshot()).toEqual(retained); expect(c.snapshot()).toEqual(state); expect(w.terminates).toBe(1);
++    await expect(c.wait(h)).rejects.toBe(nativeError);
++    expect(hold.s.ref('0')).toBe(hold.refs[0]); expect([...new Uint8Array(hold.buffers[0])]).toEqual(Array(7).fill(37));
++    consumer.close(); hold.s.close(); expect(counters(c)).toEqual([5, 5, 0]);
++  });
++  it.each(['release', 'return', 'dispose'].flatMap(action => [1, 2, 3, 4, 5].flatMap(registration => ['release', 'dispose'].flatMap(reentry => [false, true].map(terminateFails => ({ action, registration, reentry, terminateFails }))))))
++  ('coverage: all five cleanup callbacks latch reentry without early free or native retry: %j', async ({ action, registration, reentry, terminateFails }) => {
++    const { c, h, w } = fixture(), consumer = c.ledger.reserve([]) as Lease;
++    const cleanupError = new Error('extra cleanup'), nativeError = new Error('exact failed stop'), outcome = c.wait(h).then(() => null, e => e);
++    const ids = c.ledger.snapshot().allocations.map(({ id, bytes, refs }) => ({ id, bytes, refs }));
++    let reentered = false;
++    w.onRemove = n => {
++      if (n !== registration) return;
++      reentered = true;
++      if (reentry === 'release') c.release(h); else c.dispose();
++      expect(c.snapshot().pool.occupied).toBe(1); expect(counters(c)).toEqual([5, 5, 0]);
++      expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++      throw cleanupError;
++    };
++    w.onTerminate = () => { expect(c.snapshot().pool.occupied).toBe(1); expect(counters(c)).toEqual([5, 5, 0]); if (terminateFails) throw nativeError; };
++    if (action === 'return') { w.ack(); w.back(); } else if (action === 'release') c.release(h); else c.dispose();
++    expect(reentered).toBe(true); expect([...w.removed].sort()).toEqual([1, 2, 3, 4, 5]); expect(w.terminates).toBe(1);
++    const error = await outcome;
++    if (terminateFails) {
++      expect(error).toBe(nativeError); expect(c.snapshot().requests[0].phase).toBe('FAILED'); expect(c.snapshot().pool.slots[0].phase).toBe('FAILED');
++      expect(c.ledger.snapshot().allocations.map(({ id, bytes, refs }) => ({ id, bytes, refs }))).toEqual(ids);
++    } else expect(error.code).toBe(action === 'dispose' || action === 'return' && reentry === 'dispose' ? 'CLOSED' : 'RELEASED');
++    expect(c.snapshot().pool.occupied).toBe(terminateFails ? 1 : 0); expect(c.snapshot().pending).toBe(terminateFails ? 1 : 0);
++    expect(counters(c)).toEqual(terminateFails ? [5, 5, 0] : [0, 0, 0]);
++    expect(() => c.accept(h, consumer)).toThrowError(expect.objectContaining({ code: 'STALE' }));
++    const before = c.ledger.snapshot(); c.release(h); c.dispose(); c.dispose(); c.release(h); w.stale();
++    expect(c.ledger.snapshot()).toEqual(before); expect(w.terminates).toBe(1); await expect(c.wait(h)).rejects.toBe(error); consumer.close();
++  });
++  it.each(['release', 'return'].flatMap(action => [1, 2, 3, 4, 5].flatMap(registration => [false, true].map(terminateFails => ({ action, registration, terminateFails })))))
++  ('coverage: cleanup/native faults preserve unrelated h2, adopted consumer and main holds: %j', async ({ action, registration, terminateFails }) => {
++    const { c, h, w, material, submit, workers } = fixture(), consumer = c.ledger.reserve([]) as Lease;
++    const hold = material([7], 'history'), adoptedSource = material([11], 'history'), adoptedHandle = submit(adoptedSource), adoptedWorker = workers[1];
++    adoptedWorker.ack(); adoptedWorker.back(); await c.wait(adoptedHandle); const adopted = c.accept(adoptedHandle, consumer);
++    const other = material([13]), h2 = submit(other), w2 = workers[2];
++    const foreign = c.ledger.snapshot().allocations.filter(a => a.bytes >= 7), cleanupError = new Error('cleanup'), nativeError = new Error('exact native failure');
++    const outcome = c.wait(h).then(() => null, e => e);
++    w.onRemove = n => { if (n === registration) throw cleanupError; };
++    w.onTerminate = () => { expect(counters(c)).toEqual([36, 18, 18]); if (terminateFails) throw nativeError; };
++    if (action === 'return') { w.ack(); w.back(); } else c.release(h);
++    const error = await outcome;
++    if (terminateFails) expect(error).toBe(nativeError); else if (action === 'return') expect(error).toBe(cleanupError); else expect(error.code).toBe('RELEASED');
++    expect(c.ledger.snapshot().allocations.filter(a => a.bytes >= 7)).toEqual(foreign); expect(w2.terminates).toBe(0);
++    expect(counters(c)).toEqual(terminateFails ? [36, 18, 18] : [31, 13, 18]);
++    expect(hold.s.ref('0')).toBe(hold.refs[0]); expect([...new Uint8Array(hold.buffers[0])]).toEqual(Array(7).fill(37));
++    expect([...new Uint8Array(adopted.buffers[0])]).toEqual(Array(11).fill(37));
++    const before = c.ledger.snapshot(), state = c.snapshot(); c.release(h); c.release(adoptedHandle); w.stale();
++    expect(c.ledger.snapshot()).toEqual(before); expect(c.snapshot()).toEqual(state); expect(w.terminates).toBe(1);
++    c.release(h2); await c.wait(h2).catch(() => {}); expect(counters(c)).toEqual(terminateFails ? [23, 5, 18] : [18, 0, 18]);
++    consumer.close(); hold.s.close(); c.dispose(); expect(counters(c)).toEqual(terminateFails ? [5, 5, 0] : [0, 0, 0]); expect(w.terminates).toBe(1);
++  });
++});

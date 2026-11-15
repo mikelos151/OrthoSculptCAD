@@ -1,0 +1,58 @@
+{
+  "command": [
+    "node",
+    "--max-old-space-size=256",
+    "--max-semi-space-size=8",
+    "C:\\Users\\sandr\\OrthoSculptCAD\\node_modules\\vitest\\vitest.mjs",
+    "run",
+    "--config",
+    "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-composition-red\\vitest.config.mjs",
+    "--configLoader",
+    "native",
+    "--maxWorkers=1",
+    "--no-file-parallelism",
+    "--reporter=verbose",
+    "--reporter=json",
+    "--outputFile.json=C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-integration-fix\\runs\\q2-composition-red\\tests.json",
+    "-t",
+    "Q2 composition"
+  ],
+  "cwd": "C:\\Users\\sandr\\OrthoSculptCAD",
+  "exit": 1,
+  "numTotalTests": 96,
+  "numPassedTests": 9,
+  "numFailedTests": 6,
+  "numPendingTests": 81,
+  "failures": [
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"release\",\"registration\":1}",
+      "message": "AssertionError: expected { disposed: false, \u2026(3) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoS"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"release\",\"registration\":2}",
+      "message": "AssertionError: expected { disposed: false, \u2026(3) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoS"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"return\",\"registration\":1}",
+      "message": "AssertionError: expected { disposed: false, \u2026(3) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoS"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"return\",\"registration\":2}",
+      "message": "AssertionError: expected { disposed: false, \u2026(3) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr/OrthoS"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"dispose\",\"registration\":1}",
+      "message": "AssertionError: expected { Object (disposed, pool, ...) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr"
+    },
+    {
+      "file": "C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts",
+      "name": "five-registration composed teardown (UNIT faults, not native Worker) Q2 composition retires exactly after successful stop despite cleanup failure: {\"action\":\"dispose\",\"registration\":2}",
+      "message": "AssertionError: expected { Object (disposed, pool, ...) } to match object { pending: +0, pool: { occupied: +0 } }\n(2 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1283:10)\n    at Proxy.<anonymous> (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/expect/dist/index.js:1156:15)\n    at Proxy.methodWrapper (file:///C:/Users/sandr/OrthoSculptCAD/node_modules/chai/index.js:1737:25)\n    at C:/Users/sandr/OrthoSculptCAD/tests/v03-native-handoff.test.ts:357:26\n    at file:///C:/Users/sandr/OrthoSculptCAD/node_modules/@vitest/runner/dist/chunk-artifact.js:2027:60\n    at file:///C:/Users/sandr"
+    }
+  ]
+}

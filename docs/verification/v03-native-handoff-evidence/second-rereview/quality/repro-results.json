@@ -1,0 +1,270 @@
+{
+  "evidence_kind": "UNIT EventTarget/structuredClone fault injection; final production APIs freshly compiled; NOT native reachability",
+  "total": 20,
+  "passed": 18,
+  "failed": 2,
+  "observations": [
+    {
+      "action": "release",
+      "actualError": {
+        "message": "NATIVE_TERMINATE",
+        "code": "NATIVE_TERMINATE"
+      },
+      "expectedError": "original native terminate failure",
+      "sameError": false,
+      "terminates": 1,
+      "removed": [
+        "message",
+        "error",
+        "messageerror",
+        "error",
+        "messageerror"
+      ],
+      "broker": {
+        "disposed": true,
+        "pool": {
+          "disposed": true,
+          "ownershipDomains": 3,
+          "occupied": 1,
+          "slots": [
+            {
+              "ordinal": 0,
+              "incarnation": 1,
+              "generation": 1,
+              "phase": "FAILED"
+            },
+            {
+              "ordinal": 1,
+              "incarnation": 0,
+              "generation": 0,
+              "phase": "FREE"
+            }
+          ]
+        },
+        "pending": 1,
+        "requests": [
+          {
+            "slot": 0,
+            "phase": "FAILED"
+          }
+        ]
+      },
+      "ledger": {
+        "managed": 12,
+        "job": 5,
+        "history": 7,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 7,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 1,
+                "category": "history"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "bytes": 2,
+            "realm": 2,
+            "phase": "IN_FLIGHT",
+            "refs": [
+              {
+                "id": 4,
+                "category": "job"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "bytes": 3,
+            "realm": 2,
+            "phase": "IN_FLIGHT",
+            "refs": [
+              {
+                "id": 5,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "action": "return",
+      "actualError": {
+        "message": "NATIVE_TERMINATE",
+        "code": "NATIVE_TERMINATE"
+      },
+      "expectedError": "original native terminate failure",
+      "sameError": false,
+      "terminates": 1,
+      "removed": [
+        "message",
+        "error",
+        "messageerror",
+        "error",
+        "messageerror"
+      ],
+      "broker": {
+        "disposed": true,
+        "pool": {
+          "disposed": true,
+          "ownershipDomains": 3,
+          "occupied": 1,
+          "slots": [
+            {
+              "ordinal": 0,
+              "incarnation": 1,
+              "generation": 1,
+              "phase": "FAILED"
+            },
+            {
+              "ordinal": 1,
+              "incarnation": 0,
+              "generation": 0,
+              "phase": "FREE"
+            }
+          ]
+        },
+        "pending": 1,
+        "requests": [
+          {
+            "slot": 0,
+            "phase": "FAILED"
+          }
+        ]
+      },
+      "ledger": {
+        "managed": 12,
+        "job": 5,
+        "history": 7,
+        "allocations": [
+          {
+            "id": 1,
+            "bytes": 7,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 1,
+                "category": "history"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "bytes": 2,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 4,
+                "category": "job"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "bytes": 3,
+            "realm": 1,
+            "phase": "MAIN",
+            "refs": [
+              {
+                "id": 5,
+                "category": "job"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "results": [
+    {
+      "name": "release: dispose reentered from message listener cleanup",
+      "passed": true
+    },
+    {
+      "name": "release: required native termination attempted once",
+      "passed": true
+    },
+    {
+      "name": "release: all three facade cleanup types attempted",
+      "passed": true
+    },
+    {
+      "name": "release: failed slot remains occupied",
+      "passed": true
+    },
+    {
+      "name": "release: controlled bytes and unrelated main bytes remain charged",
+      "passed": true
+    },
+    {
+      "name": "release: public result cannot be adopted",
+      "passed": true
+    },
+    {
+      "name": "release: main hold identity and bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "release: repeated cleanup never retries terminate",
+      "passed": true
+    },
+    {
+      "name": "release: repeat wait preserves same rejection",
+      "passed": true
+    },
+    {
+      "name": "release: original terminate error identity survives cleanup reentrancy",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be reference-equal to \"expected\":\n+ actual - expected\n\n+ [Error: NATIVE_TERMINATE] {\n+   code: 'NATIVE_TERMINATE'\n+ }\n- [Error: original native terminate failure]\n\n    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/repro.mjs:31:83\n    at check (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/repro.mjs:19:30)\n    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/repro.mjs:31:2\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+    },
+    {
+      "name": "return: dispose reentered from message listener cleanup",
+      "passed": true
+    },
+    {
+      "name": "return: required native termination attempted once",
+      "passed": true
+    },
+    {
+      "name": "return: all three facade cleanup types attempted",
+      "passed": true
+    },
+    {
+      "name": "return: failed slot remains occupied",
+      "passed": true
+    },
+    {
+      "name": "return: controlled bytes and unrelated main bytes remain charged",
+      "passed": true
+    },
+    {
+      "name": "return: public result cannot be adopted",
+      "passed": true
+    },
+    {
+      "name": "return: main hold identity and bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "return: repeated cleanup never retries terminate",
+      "passed": true
+    },
+    {
+      "name": "return: repeat wait preserves same rejection",
+      "passed": true
+    },
+    {
+      "name": "return: original terminate error identity survives cleanup reentrancy",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be reference-equal to \"expected\":\n+ actual - expected\n\n+ [Error: NATIVE_TERMINATE] {\n+   code: 'NATIVE_TERMINATE'\n+ }\n- [Error: original native terminate failure]\n\n    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/repro.mjs:31:83\n    at check (file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/repro.mjs:19:30)\n    at file:///C:/Users/sandr/AppData/Local/hermes/cache/scratch/v03-native-handoff-teardown-quality-rereview/repro.mjs:31:2\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+    }
+  ]
+}

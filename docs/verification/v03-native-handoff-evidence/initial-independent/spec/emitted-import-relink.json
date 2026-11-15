@@ -1,0 +1,32 @@
+[
+  {
+    "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-spec-review\\compiled\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-spec-review\\witness.js",
+    "before": "0d4f6fbdc5f8d2645e7ae9069780a696dce8506ff56b1ab4d2fcbda970281742",
+    "after": "3f9521781273c57ca3086b97bb3caa168840ea4a045f40d9eae263d444c7e7e5",
+    "onlyImportRelinking": true
+  },
+  {
+    "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-spec-review\\compiled\\OrthoSculptCAD\\src\\compute\\nativeHandoff.js",
+    "before": "77555c9b661563c20fcb8bccae133c49ba5d669353c69697c97f4b73d0b57944",
+    "after": "daca7f013e74df4b8f7bb8fe16a5487523cc95cde260f367f202a17b0c1b4e95",
+    "onlyImportRelinking": true
+  },
+  {
+    "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-spec-review\\compiled\\OrthoSculptCAD\\src\\compute\\nativeHandoff.worker.js",
+    "before": "1b58678d72a7aa8e2f1a5abfb8e570159c2736cdf4a06cf3d062d4c909684419",
+    "after": "fa95ed8c531a1873b91f787010e741e781acbf724877d3e6cd1bfd9ba488a2a9",
+    "onlyImportRelinking": true
+  },
+  {
+    "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-spec-review\\compiled\\OrthoSculptCAD\\src\\compute\\resourceLedger.js",
+    "before": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+    "after": "78eab3ff81f399de47dab0bec10f740be072249b5c78e613fe5b23096bfdac43",
+    "onlyImportRelinking": true
+  },
+  {
+    "path": "C:\\Users\\sandr\\AppData\\Local\\hermes\\cache\\scratch\\v03-native-handoff-spec-review\\compiled\\OrthoSculptCAD\\src\\compute\\workerPool.js",
+    "before": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200",
+    "after": "d9c09a57d437dbaa23aa85b32b36b2b8f8bc1d3981f662218c3dc7eac8757200",
+    "onlyImportRelinking": true
+  }
+]
