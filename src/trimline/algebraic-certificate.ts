@@ -23,9 +23,9 @@ export function verifyAlgebraicCertificate(input:unknown, sourceInput:unknown, c
  const z=rational(0n,1n,ctx);
  const isQ=(a:Algebraic)=>a.coefficients.slice(1).every(c=>c.n===0n);
  const lift=(r:ReturnType<typeof rational>)=>algebraic([r,z,z,z],ctx);
- const add=(a:Algebraic,b:Algebraic)=>isQ(a)&&isQ(b)?lift(qadd(a.coefficients[0],b.coefficients[0],ctx)):k.add(a,b);
- const sub=(a:Algebraic,b:Algebraic)=>isQ(a)&&isQ(b)?lift(qsub(a.coefficients[0],b.coefficients[0],ctx)):k.subtract(a,b);
- const mul=(a:Algebraic,b:Algebraic)=>isQ(a)&&isQ(b)?lift(qmul(a.coefficients[0],b.coefficients[0],ctx)):k.multiply(a,b);
+ const add=(a:Algebraic,b:Algebraic)=>isQ(a)&&isQ(b)?lift(qadd(a.coefficients[0],b.coefficients[0],ctx)):isQ(a)?algebraic([qadd(a.coefficients[0],b.coefficients[0],ctx),b.coefficients[1],b.coefficients[2],b.coefficients[3]],ctx):isQ(b)?algebraic([qadd(a.coefficients[0],b.coefficients[0],ctx),a.coefficients[1],a.coefficients[2],a.coefficients[3]],ctx):k.add(a,b);
+ const sub=(a:Algebraic,b:Algebraic)=>isQ(a)&&isQ(b)?lift(qsub(a.coefficients[0],b.coefficients[0],ctx)):isQ(b)?algebraic([qsub(a.coefficients[0],b.coefficients[0],ctx),a.coefficients[1],a.coefficients[2],a.coefficients[3]],ctx):isQ(a)?algebraic([qsub(a.coefficients[0],b.coefficients[0],ctx),qsub(z,b.coefficients[1],ctx),qsub(z,b.coefficients[2],ctx),qsub(z,b.coefficients[3],ctx)],ctx):k.subtract(a,b);
+ const mul=(a:Algebraic,b:Algebraic)=>isQ(a)&&isQ(b)?lift(qmul(a.coefficients[0],b.coefficients[0],ctx)):isQ(a)?(a.coefficients[0].n===0n?zero:a.coefficients[0].n===a.coefficients[0].d?b:algebraic([qmul(a.coefficients[0],b.coefficients[0],ctx),qmul(a.coefficients[0],b.coefficients[1],ctx),qmul(a.coefficients[0],b.coefficients[2],ctx),qmul(a.coefficients[0],b.coefficients[3],ctx)],ctx)):isQ(b)?(b.coefficients[0].n===0n?zero:b.coefficients[0].n===b.coefficients[0].d?a:algebraic([qmul(a.coefficients[0],b.coefficients[0],ctx),qmul(a.coefficients[1],b.coefficients[0],ctx),qmul(a.coefficients[2],b.coefficients[0],ctx),qmul(a.coefficients[3],b.coefficients[0],ctx)],ctx)):k.multiply(a,b);
  const eq=k.equal;
  // Reuse the SAME certified 60-step positive-radical enclosures within this
  // verification; no budget reset, epsilon predicates or weakened residuals.

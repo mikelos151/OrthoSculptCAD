@@ -8,8 +8,8 @@ export interface ProducerResult {readonly status:'PASS'|'UNKNOWN';readonly reaso
 export function produceAlgebraicBridge(input:unknown,sourceInput:unknown,ctx:ArithmeticContext):ProducerResult {
  try {
  const refuse=(reason:string):never=>{throw new Error(reason);};
- const tick=()=>rational(0n,1n,ctx);
- const obj=(v:unknown,keys:string[])=>{tick();if(!v||typeof v!=='object'||Object.getPrototypeOf(v)!==Object.prototype)return refuse('SCHEMA');const names=Reflect.ownKeys(v);if(names.length!==keys.length||names.some(k=>typeof k!=='string'||!keys.includes(k)))return refuse('SCHEMA');const o:Record<string,unknown>={};for(const key of keys){tick();const d=Object.getOwnPropertyDescriptor(v,key);if(!d||!('value'in d))return refuse('SCHEMA');o[key]=d.value;}return o;};
+ const tick=()=>{};
+const obj=(v:unknown,keys:string[])=>{tick();if(!v||typeof v!=='object'||Object.getPrototypeOf(v)!==Object.prototype)return refuse('SCHEMA');const names=Reflect.ownKeys(v);if(names.length!==keys.length||names.some(k=>typeof k!=='string'||!keys.includes(k)))return refuse('SCHEMA');const o:Record<string,unknown>={};for(const key of keys){tick();const d=Object.getOwnPropertyDescriptor(v,key);if(!d||!('value'in d))return refuse('SCHEMA');o[key]=d.value;}return o;};
  const arr=(v:unknown,min:number,max:number):unknown[]=>{tick();if(!Array.isArray(v)||Object.getPrototypeOf(v)!==Array.prototype)return refuse('SCHEMA');const n=Object.getOwnPropertyDescriptor(v,'length')?.value;if(!Number.isSafeInteger(n)||n<min||n>max||Reflect.ownKeys(v).length!==n+1)return refuse('LIMIT');const out:unknown[]=[];for(let i=0;i<n;i++){tick();const d=Object.getOwnPropertyDescriptor(v,String(i));if(!d||!('value'in d))return refuse('SCHEMA');out.push(d.value);}return out;};
  const integer=(v:unknown,min:number,max:number)=>{tick();if(typeof v!=='number'||!Number.isSafeInteger(v)||v<min||v>max)return refuse('LIMIT');return v;};
  const root=obj(input,['field','spans','maxDepth','maxSegments','roundingSteps']);

@@ -1,7 +1,12 @@
 {
   "name": "orthosculpt-cad",
   "version": "0.2.0",
-  "private": true,
+  "description": "Open-source technical CAD suite for lower-limb prosthetics socket rectification and alignment",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikelos151/OrthoSculptCAD.git"
+  },
   "type": "module",
   "scripts": {
     "start": "node scripts/server.mjs",
