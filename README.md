@@ -1,3 +1,43 @@
+# OrthoSculpt CAD 0.2
+
+[![CI](https://github.com/mikelos151/OrthoSculptCAD/actions/workflows/ci.yml/badge.svg)](https://github.com/mikelos151/OrthoSculptCAD/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
+[![Three.js](https://img.shields.io/badge/Three.js-r186-black.svg)](https://threejs.org/)
+[![Local-First](https://img.shields.io/badge/Local--First-100%25-green.svg)](#local-first-architecture)
+
+> **Open-source technical CAD suite for lower-limb prosthetics socket rectification, alignment, and biomechanical analysis.**
+
+OrthoSculpt CAD is an independent, local-first 3D CAD application tailored for transtibial (TT) prosthetics socket design. It provides a structured five-stage workflow: 3D scan import/inspection (PLY/STL/OBJ), landmark-based anatomical alignment with principal component analysis (PCA), cross-sectional circumferential measurements, controlled socket rectification (relief/compression with Hermite falloff and signed displacement heatmaps), and verified STL/3MF production export.
+
+Designed to empower independent prosthetists, academic researchers, and clinical technicians by eliminating costly proprietary cloud CAD vendor lock-in.
+
+### Key Capabilities
+- **Local-First & Zero Telemetry:** Runs entirely on `127.0.0.1`. No mandatory cloud accounts, external network requests, or tracking.
+- **Five-Stage Rectification Pipeline:**
+  1. *Import & Diagnostics:* Mesh edge checking, normal ordering, and flat boundary patching via Earcut.
+  2. *Alignment (PCA):* Surface-moment based geometric axis calculation with right-handed anatomical coordinates.
+  3. *Circumferential Measurement:* Section slice contours every 10/20 mm with real-time perimeter, AP/ML diameters, and volume approximation.
+  4. *Socket Rectification:* Non-destructive raycasted relief/compression brush strokes with signed displacement delta maps.
+  5. *Export:* Watertight binary STL, measurement tables (CSV), and encrypted revision archives.
+- **Robust Concurrent Architecture:** Heavy geometric slice queries, topological inspections, and algebraic certifications execute in dedicated WebWorkers with transferable TypedArrays to ensure smooth UI responsiveness.
+- **Provable Algebraic Verification:** Exact polynomial containment, dyadic splines, and B-spline seam continuity verified via custom arithmetic kernels without floating-point drift.
+
+### Quick Start (Local Run)
+1. **Requirements:** Node.js 22 or newer.
+2. **Install & Run:**
+   ```bash
+   git clone https://github.com/mikelos151/OrthoSculptCAD.git
+   cd OrthoSculptCAD
+   npm install
+   npm start
+   ```
+3. Open `http://127.0.0.1:4174` in your browser.
+
+---
+
+## Dokumentacja w języku polskim
+
 # OrthoSculpt CAD 0.2 — pracownia TT do oceny technicznej
 
 Lokalne narzędzie do kolorowych skanów i projektów lejów podudzia: orientacja, pomiary, kontrolowane korekty, porównanie z referencją i raport konkretnej rewizji. Polski pięcioetapowy kreator React/Three.js, rzeczywiste WebWorkers, testowalny rdzeń Rust oraz źródła powłoki Tauri 2. Zakres wytwarzania uzgodniony dla 0.2: STL/3MF do dalszego przygotowania produkcji; bez adaptera i CNC.
